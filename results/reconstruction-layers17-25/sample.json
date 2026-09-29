@@ -1,0 +1,407 @@
+{
+  "dataset": "HuggingFaceH4/ultrachat_200k",
+  "dataset_revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+  "split": "test_sft",
+  "seed": 20260908,
+  "sampling": "64 random conversations without replacement from indices 192 onward; matches historical report selection",
+  "max_length": 1024,
+  "formatting": "native Qwen chat template; no manually inserted BOS; add_generation_prompt=False",
+  "layers_zero_based": [
+    17,
+    25
+  ],
+  "llm_dtype": "bfloat16",
+  "attention": "sdpa",
+  "input_location": "before post_attention_layernorm",
+  "target_location": "raw MLP output",
+  "total_tokens": 58424,
+  "conversations": [
+    {
+      "ordinal": 0,
+      "dataset_index": 7239,
+      "tokens": 1024,
+      "token_sha256": "803708694ee6e94def5a4f8cca98be2cf0c90e2dea014fd2d66474bf14f2194e"
+    },
+    {
+      "ordinal": 1,
+      "dataset_index": 22018,
+      "tokens": 388,
+      "token_sha256": "5f7658cacd7869dac2da303988dc05c1b4e168e14790fcd3eaa0e05af9b4ff88"
+    },
+    {
+      "ordinal": 2,
+      "dataset_index": 15014,
+      "tokens": 1024,
+      "token_sha256": "e985b3202605963d8e3daf2633914ba08b34b479d3eced3b814a1f06e9c6acfd"
+    },
+    {
+      "ordinal": 3,
+      "dataset_index": 4741,
+      "tokens": 1024,
+      "token_sha256": "d4ea6f3c3b2997e95797d845d824ef057ee5f32b1ff0f52c829e4d6a37647d66"
+    },
+    {
+      "ordinal": 4,
+      "dataset_index": 8869,
+      "tokens": 1024,
+      "token_sha256": "8c26540618630f4c3869885a036d3203d2836e464b774050c4869fe22ac6d070"
+    },
+    {
+      "ordinal": 5,
+      "dataset_index": 12887,
+      "tokens": 608,
+      "token_sha256": "abcf56ae022745276bb532b83c4687a4c407fd541d100d9805f670e2f3d2f7b5"
+    },
+    {
+      "ordinal": 6,
+      "dataset_index": 14780,
+      "tokens": 1024,
+      "token_sha256": "f78e410b1d8a24bb914d3d49d53ac92bc90006a8c8cd60e49a25081cc57bf9f7"
+    },
+    {
+      "ordinal": 7,
+      "dataset_index": 5186,
+      "tokens": 1024,
+      "token_sha256": "15173ba53a1ea442170ee790ff418ae9bdff4433a8028c091dc0e4b3d5bb4491"
+    },
+    {
+      "ordinal": 8,
+      "dataset_index": 19883,
+      "tokens": 424,
+      "token_sha256": "6dc6ed80b7148e5479ed7892cd21d7623ba32ea691ec33a17e9d6505929ec823"
+    },
+    {
+      "ordinal": 9,
+      "dataset_index": 12688,
+      "tokens": 1024,
+      "token_sha256": "dae4f674a8d319f87cbb160401a332999bc5b664cfc6c4affc8c76265b67c4a8"
+    },
+    {
+      "ordinal": 10,
+      "dataset_index": 4079,
+      "tokens": 1024,
+      "token_sha256": "63308cd46da667985e6005e6a245571576416052be039dfc770dc32f3d3a7864"
+    },
+    {
+      "ordinal": 11,
+      "dataset_index": 12035,
+      "tokens": 708,
+      "token_sha256": "edc52e93254be48fde1db7bfcb34e0fd52aea3531480f40693745cc9d1c29f41"
+    },
+    {
+      "ordinal": 12,
+      "dataset_index": 6681,
+      "tokens": 1024,
+      "token_sha256": "8d9aee10eab3667f69fbdb1fd26c5c5d6a129a91e1b097cd24475a9fcdfbd706"
+    },
+    {
+      "ordinal": 13,
+      "dataset_index": 17870,
+      "tokens": 729,
+      "token_sha256": "85b75b1864a73a87b58884165cc52ff8de22d05162501dc5249f8e87beaa81a9"
+    },
+    {
+      "ordinal": 14,
+      "dataset_index": 10218,
+      "tokens": 1024,
+      "token_sha256": "37c6130262fe9d3e97977ae0809119be6af49d18c91a441bf4c6ca5c928f6863"
+    },
+    {
+      "ordinal": 15,
+      "dataset_index": 7769,
+      "tokens": 1024,
+      "token_sha256": "84aa9487b44865b5d114380f90f6e9ddc6ab6ee632ab9fea9ef2254cfee2af7c"
+    },
+    {
+      "ordinal": 16,
+      "dataset_index": 15260,
+      "tokens": 1024,
+      "token_sha256": "700e41ea1c014cc1811f075eb5fcaa9e896234d91306defc64724470c9021307"
+    },
+    {
+      "ordinal": 17,
+      "dataset_index": 9606,
+      "tokens": 503,
+      "token_sha256": "c67d7065f8afc8e614b32ead2d750014b07529847c3dbb61143105dd7034f71d"
+    },
+    {
+      "ordinal": 18,
+      "dataset_index": 4045,
+      "tokens": 1010,
+      "token_sha256": "cb984ba8f17ab1ed4de97011fe6e78dfaaa7b62818b10637f93ce0c7eaf3c1d9"
+    },
+    {
+      "ordinal": 19,
+      "dataset_index": 1861,
+      "tokens": 1024,
+      "token_sha256": "f020238597109ef442a7c7b8f4f3bd93c70f283b760c43f09ec886c39ecc041c"
+    },
+    {
+      "ordinal": 20,
+      "dataset_index": 7176,
+      "tokens": 299,
+      "token_sha256": "fa046261ff192415af5d30608086081106e189c36976d21042d4d81ecb6bc1e7"
+    },
+    {
+      "ordinal": 21,
+      "dataset_index": 17488,
+      "tokens": 1024,
+      "token_sha256": "ab4b1a8b71f221259d076d7b988449d05ccae9278e3a354006a5f876f8fc3b21"
+    },
+    {
+      "ordinal": 22,
+      "dataset_index": 18650,
+      "tokens": 426,
+      "token_sha256": "c37503515701e98bfc4289432eb6e217ca251f3c899fa4becb80460a15f68585"
+    },
+    {
+      "ordinal": 23,
+      "dataset_index": 4949,
+      "tokens": 1024,
+      "token_sha256": "d498c03acefd9016d6585b16c348d394b6b1940744f95f9cdb1486dab6b47bc3"
+    },
+    {
+      "ordinal": 24,
+      "dataset_index": 11227,
+      "tokens": 1024,
+      "token_sha256": "11eae8253e2ec26488af0cfa9d116cc9691cc61a762675592d69a53e9f11df4a"
+    },
+    {
+      "ordinal": 25,
+      "dataset_index": 5636,
+      "tokens": 1024,
+      "token_sha256": "93264268b2c509185fccf0c739bd36da0f812351909d1876694c7ab69c2fe34d"
+    },
+    {
+      "ordinal": 26,
+      "dataset_index": 9349,
+      "tokens": 1024,
+      "token_sha256": "e6caa72f828f94f5c8fe3c553d57686a7676052497425b529dd33cdaf6139b48"
+    },
+    {
+      "ordinal": 27,
+      "dataset_index": 5066,
+      "tokens": 1024,
+      "token_sha256": "73780cc9363508a6d07d38443e9a70b5e185796e0e3aa66df8ac74a5bcf64860"
+    },
+    {
+      "ordinal": 28,
+      "dataset_index": 4570,
+      "tokens": 1024,
+      "token_sha256": "6ee1abb84077b0bdd9d3085f369e0cf8b8728cbe55b8c3ad042f9a3f852004e8"
+    },
+    {
+      "ordinal": 29,
+      "dataset_index": 8721,
+      "tokens": 1024,
+      "token_sha256": "6cfd651e60212e01dc4fa32457ba15040e728887c31dbbed0e418a439bcaaa4c"
+    },
+    {
+      "ordinal": 30,
+      "dataset_index": 12371,
+      "tokens": 1024,
+      "token_sha256": "3673ca489e7e177333117d12c107ba9afab0babd12e66f01bad96ca0fe86cef6"
+    },
+    {
+      "ordinal": 31,
+      "dataset_index": 17592,
+      "tokens": 1024,
+      "token_sha256": "48b91e5e483524d31fb2b669568dfd43fc5ff80bfa7d04af785d02f465f2fbdf"
+    },
+    {
+      "ordinal": 32,
+      "dataset_index": 14888,
+      "tokens": 1024,
+      "token_sha256": "44a3def5c49898596b13821e83f6ec69de2fe0d1401e2d2de21611b1786903b5"
+    },
+    {
+      "ordinal": 33,
+      "dataset_index": 12900,
+      "tokens": 765,
+      "token_sha256": "4ff4151c711cadcbe82c3b64193f4b1b8281c7b3ecf4fbf6defdde592ce7658a"
+    },
+    {
+      "ordinal": 34,
+      "dataset_index": 3882,
+      "tokens": 1024,
+      "token_sha256": "cbd0a87d38db71588fd48780e9bb8e0d490be39879431e7c2dad2ecce219ef1b"
+    },
+    {
+      "ordinal": 35,
+      "dataset_index": 9550,
+      "tokens": 996,
+      "token_sha256": "969ebb1e0b8c327184c010ed3deda87fbaf3670ee7cde7d562c782b95872d1e9"
+    },
+    {
+      "ordinal": 36,
+      "dataset_index": 12709,
+      "tokens": 1024,
+      "token_sha256": "0289f279e4ba67d4ae41c681a954cd17eb46e5c0d2b76fde71f845cf2bbf6588"
+    },
+    {
+      "ordinal": 37,
+      "dataset_index": 15854,
+      "tokens": 613,
+      "token_sha256": "d7d0b32a87b34dc2cf89683a6f0cd798c8a5752771c7e099634e934e0c39cfab"
+    },
+    {
+      "ordinal": 38,
+      "dataset_index": 20490,
+      "tokens": 1024,
+      "token_sha256": "f798a99deda66056ccdd979ee7db0b320412da612ca02eb54a7f4a4a0257429b"
+    },
+    {
+      "ordinal": 39,
+      "dataset_index": 8159,
+      "tokens": 1024,
+      "token_sha256": "22bb6e824d9aadca3d019b4816ebfe18b60cbd5fedc972c5cbeb5e48575210e9"
+    },
+    {
+      "ordinal": 40,
+      "dataset_index": 21069,
+      "tokens": 1024,
+      "token_sha256": "2449baeb11e06ec3efbe4e12b217737f105d25cbba800756c2ec40eec0d0cf1c"
+    },
+    {
+      "ordinal": 41,
+      "dataset_index": 20187,
+      "tokens": 608,
+      "token_sha256": "4ddddbbbde95b16f0f07d25f88785fd71daf9140858446a89717225b96106c49"
+    },
+    {
+      "ordinal": 42,
+      "dataset_index": 10905,
+      "tokens": 1024,
+      "token_sha256": "cbdbeda3cca2c24c54f09c874acf2f8ee6d885b036724f738a37b351aba4480c"
+    },
+    {
+      "ordinal": 43,
+      "dataset_index": 6897,
+      "tokens": 1024,
+      "token_sha256": "e335b65afaa4733d55e0f088c32507d7b10ba6b67479900bb84cbb6e33def0c7"
+    },
+    {
+      "ordinal": 44,
+      "dataset_index": 19515,
+      "tokens": 1024,
+      "token_sha256": "727714976603f1e2b9658055199af27f76a681a3d0d473552e20ca00b30ffe52"
+    },
+    {
+      "ordinal": 45,
+      "dataset_index": 2630,
+      "tokens": 915,
+      "token_sha256": "5c3265668d8e1cb1c3835e2bddd2162e799a56feb7d058b0b2b7e451e14bfe76"
+    },
+    {
+      "ordinal": 46,
+      "dataset_index": 18316,
+      "tokens": 746,
+      "token_sha256": "263f1bfa7adedb7259a58d0c432e76152d7f0775893c887057c1185948cc89dd"
+    },
+    {
+      "ordinal": 47,
+      "dataset_index": 21084,
+      "tokens": 1024,
+      "token_sha256": "047478fe9bf1a7c6e3ea0d210a2ca6f5e0885d17e4ee43d5c1c8de53753a40ba"
+    },
+    {
+      "ordinal": 48,
+      "dataset_index": 9014,
+      "tokens": 443,
+      "token_sha256": "843667b7f7c14ac1a446b0aee43040e81e05a59b1acf914e3fbb2b35cf774b9a"
+    },
+    {
+      "ordinal": 49,
+      "dataset_index": 5914,
+      "tokens": 967,
+      "token_sha256": "1ea7c907efad53be833d97902ae8408e014eb1aacec2d1af6a3db82c8fe05055"
+    },
+    {
+      "ordinal": 50,
+      "dataset_index": 6227,
+      "tokens": 1024,
+      "token_sha256": "8c3281eecff26d6d66df2d3180f0e63716c0ad3b9044750240c27fe29b4c832b"
+    },
+    {
+      "ordinal": 51,
+      "dataset_index": 13772,
+      "tokens": 1024,
+      "token_sha256": "640f50b86c15c84ca1abf7c1112f92d871ce14481d446bbdf0c984b497ae401f"
+    },
+    {
+      "ordinal": 52,
+      "dataset_index": 10676,
+      "tokens": 672,
+      "token_sha256": "3c5dc7512d7e3cf735e0972be9936bcee3cdd7880d3afa3b4af277e36363751e"
+    },
+    {
+      "ordinal": 53,
+      "dataset_index": 4195,
+      "tokens": 1019,
+      "token_sha256": "36d22f8f7b494541cc490f7ed279aa88bc0ee72442bd752998ee9fa45f043fc5"
+    },
+    {
+      "ordinal": 54,
+      "dataset_index": 11718,
+      "tokens": 1024,
+      "token_sha256": "5330b0f17236e5f2b59421a65138179bf9baa02a05f889976c6b6bbc191614b9"
+    },
+    {
+      "ordinal": 55,
+      "dataset_index": 8620,
+      "tokens": 1024,
+      "token_sha256": "370660e88773efadf557323fdfa99a2b0b5db7aa7b1f803d395929f0f1bb6c65"
+    },
+    {
+      "ordinal": 56,
+      "dataset_index": 16072,
+      "tokens": 856,
+      "token_sha256": "9c6201144927c1eed41892e4a5e6e39b1c3f6414f7afdaffb2218cf778c06148"
+    },
+    {
+      "ordinal": 57,
+      "dataset_index": 22168,
+      "tokens": 697,
+      "token_sha256": "4ab863c6e70e575956c231f2a988d165e9c73b6b9b6a68392f8f3ca08882e210"
+    },
+    {
+      "ordinal": 58,
+      "dataset_index": 11987,
+      "tokens": 1024,
+      "token_sha256": "fd19717f0e0f466e1a67eaa514a6880aa24547fceab6e4e6c31b7949bb95f121"
+    },
+    {
+      "ordinal": 59,
+      "dataset_index": 17220,
+      "tokens": 1024,
+      "token_sha256": "7e13f42a323375f14e02afa6a36880e794d84b6f5cb0f692d2796bd66c6e565a"
+    },
+    {
+      "ordinal": 60,
+      "dataset_index": 1398,
+      "tokens": 1024,
+      "token_sha256": "a2c263398f9cbde9eb3c4dd3ca03687b59a317bb31bf5db33ef38dfde24b5897"
+    },
+    {
+      "ordinal": 61,
+      "dataset_index": 6686,
+      "tokens": 1024,
+      "token_sha256": "f0b6d949ee0acabfdabd9edc0a15d1e8e2a3867ae2ebf8d45e0a68e420c0353c"
+    },
+    {
+      "ordinal": 62,
+      "dataset_index": 18405,
+      "tokens": 1024,
+      "token_sha256": "89a62ac8796c6db699d9ff2b123557e967d19b0f7802b54dee6be7cd535aed6a"
+    },
+    {
+      "ordinal": 63,
+      "dataset_index": 20650,
+      "tokens": 1024,
+      "token_sha256": "4a705442cb1c25380f79b8026881d5a5884fad6505e2c932ea9aae156c3b175b"
+    }
+  ],
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_revision": "eed10292a96521837f5d65b36fdfa3bf5bea0037",
+  "code_commit": "2611214e6cf46cd96d4d689bcee369dd4fb27b30"
+}

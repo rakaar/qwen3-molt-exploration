@@ -1,0 +1,866 @@
+{
+  "protocol": {
+    "status": "Public reproduction candidate; not independently rerun by us",
+    "repository": "https://github.com/wdk0082/llm-circuits",
+    "observed_revision": "af8a37ad836dc401a0ec5dbb71307d8d7ab68028",
+    "model": "Qwen/Qwen3-4B",
+    "transcoders": "mwhanna/qwen3-4b-transcoders",
+    "recipient_user_prompt": "What is the opposite of \"small\"? Reply with only the word, nothing else.",
+    "donor_user_prompt": "What is the opposite of \"hot\"? Reply with only the word, nothing else.",
+    "enable_thinking": false,
+    "recipient_operand_position": 9,
+    "readout_position": 28,
+    "patch_end_layer": 22,
+    "freeze_attention_patterns": true,
+    "protocol": "Pin real MLP outputs to clean values through layer 22 plus selected decoder deltas; real downstream MLPs; attention patterns frozen across all layers",
+    "strength_convention": "For strength s: source small features target (1-s) times clean activation; donor hot features target s times stored donor activation. Negative source activations are signed decoder interventions, not natural ReLU activations.",
+    "selection": {
+      "small (multilingual)": [
+        {
+          "layer": 22,
+          "feature": 113890,
+          "position": 9,
+          "act": 9.6875,
+          "acts": {
+            "antonym_en": 9.6875,
+            "antonym_fr": 7.1875
+          },
+          "positions": {
+            "antonym_en": 9,
+            "antonym_fr": 12
+          }
+        },
+        {
+          "layer": 22,
+          "feature": 42644,
+          "position": 9,
+          "act": 6.0,
+          "acts": {
+            "antonym_en": 6.0,
+            "antonym_zh": 4.75
+          },
+          "positions": {
+            "antonym_en": 9,
+            "antonym_zh": 4
+          }
+        },
+        {
+          "layer": 0,
+          "feature": 133356,
+          "position": 9,
+          "act": 5.9688,
+          "acts": {
+            "antonym_en": 5.9688,
+            "antonym_zh": 4.25
+          },
+          "positions": {
+            "antonym_en": 9,
+            "antonym_zh": 4
+          }
+        },
+        {
+          "layer": 22,
+          "feature": 38866,
+          "position": 9,
+          "act": 5.625,
+          "acts": {
+            "antonym_en": 5.625,
+            "antonym_zh": 4.2188
+          },
+          "positions": {
+            "antonym_en": 9,
+            "antonym_zh": 4
+          }
+        },
+        {
+          "layer": 21,
+          "feature": 120516,
+          "position": 9,
+          "act": 5.4688,
+          "acts": {
+            "antonym_en": 5.4688,
+            "antonym_zh": 4.125
+          },
+          "positions": {
+            "antonym_en": 9,
+            "antonym_zh": 4
+          }
+        },
+        {
+          "layer": 19,
+          "feature": 77492,
+          "position": 9,
+          "act": 4.1562,
+          "acts": {
+            "antonym_en": 4.1562,
+            "antonym_zh": 3.4844
+          },
+          "positions": {
+            "antonym_en": 9,
+            "antonym_zh": 4
+          }
+        }
+      ],
+      "hot (multilingual)": [
+        {
+          "layer": 5,
+          "feature": 134029,
+          "position": 9,
+          "act": 4.7188,
+          "acts": {
+            "hot_en": 4.7188
+          },
+          "positions": {
+            "hot_en": 9
+          }
+        },
+        {
+          "layer": 4,
+          "feature": 32249,
+          "position": 9,
+          "act": 3.2344,
+          "acts": {
+            "hot_en": 3.2344
+          },
+          "positions": {
+            "hot_en": 9
+          }
+        },
+        {
+          "layer": 3,
+          "feature": 75392,
+          "position": 9,
+          "act": 3.0625,
+          "acts": {
+            "hot_en": 3.0625
+          },
+          "positions": {
+            "hot_en": 9
+          }
+        },
+        {
+          "layer": 5,
+          "feature": 18203,
+          "position": 9,
+          "act": 2.9844,
+          "acts": {
+            "hot_en": 2.9844
+          },
+          "positions": {
+            "hot_en": 9
+          }
+        },
+        {
+          "layer": 3,
+          "feature": 131394,
+          "position": 9,
+          "act": 2.8125,
+          "acts": {
+            "hot_en": 2.8125
+          },
+          "positions": {
+            "hot_en": 9
+          }
+        },
+        {
+          "layer": 5,
+          "feature": 51825,
+          "position": 9,
+          "act": 2.1562,
+          "acts": {
+            "hot_en": 2.1562
+          },
+          "positions": {
+            "hot_en": 9
+          }
+        }
+      ]
+    },
+    "saved_results": [
+      {
+        "strength": 0,
+        "P_large": 0.8988096117973328,
+        "P_cold": 2.7852483774210013e-12,
+        "top_tokens": [
+          [
+            "large",
+            0.899
+          ],
+          [
+            "Large",
+            0.095
+          ],
+          [
+            "big",
+            0.005
+          ],
+          [
+            "Big",
+            0.002
+          ]
+        ]
+      },
+      {
+        "strength": 1.5,
+        "P_large": 0.9156407713890076,
+        "P_cold": 2.521349597373046e-05,
+        "top_tokens": [
+          [
+            "large",
+            0.916
+          ],
+          [
+            "Large",
+            0.04
+          ],
+          [
+            "big",
+            0.04
+          ],
+          [
+            "Big",
+            0.002
+          ]
+        ]
+      },
+      {
+        "strength": 2.25,
+        "P_large": 0.0017318626632913947,
+        "P_cold": 0.5441350340843201,
+        "top_tokens": [
+          [
+            "cold",
+            0.544
+          ],
+          [
+            "low",
+            0.2
+          ],
+          [
+            "bad",
+            0.051
+          ],
+          [
+            "heavy",
+            0.051
+          ]
+        ]
+      },
+      {
+        "strength": 3,
+        "P_large": 8.405798723742919e-09,
+        "P_cold": 0.9686576128005981,
+        "top_tokens": [
+          [
+            "cold",
+            0.969
+          ],
+          [
+            "low",
+            0.016
+          ],
+          [
+            "Cold",
+            0.004
+          ],
+          [
+            "bad",
+            0.004
+          ]
+        ]
+      },
+      {
+        "strength": 4.5,
+        "P_large": 1.5732811985158003e-14,
+        "P_cold": 0.9982237219810486,
+        "top_tokens": [
+          [
+            "cold",
+            0.998
+          ],
+          [
+            "Cold",
+            0.002
+          ],
+          [
+            "low",
+            0.0
+          ],
+          [
+            "hot",
+            0.0
+          ]
+        ]
+      }
+    ]
+  },
+  "transcoder_revision": "94d176260ac39ce2f882b8b09aba8c118df29bb3",
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "implementation": "Verbatim upstream _steer_base_model and frozen-attention helpers; adapters load only the 12 selected features. Baseline features encoded on captured real MLP inputs.",
+  "recipient_token_ids": [
+    151644,
+    872,
+    198,
+    3838,
+    374,
+    279,
+    14002,
+    315,
+    330,
+    9004,
+    43869,
+    17841,
+    448,
+    1172,
+    279,
+    3409,
+    11,
+    4302,
+    770,
+    13,
+    151645,
+    198,
+    151644,
+    77091,
+    198,
+    151667,
+    271,
+    151668,
+    271
+  ],
+  "donor_token_ids": [
+    151644,
+    872,
+    198,
+    3838,
+    374,
+    279,
+    14002,
+    315,
+    330,
+    10622,
+    43869,
+    17841,
+    448,
+    1172,
+    279,
+    3409,
+    11,
+    4302,
+    770,
+    13,
+    151645,
+    198,
+    151644,
+    77091,
+    198,
+    151667,
+    271,
+    151668,
+    271
+  ],
+  "baseline": {
+    "P_large": 0.8761488795280457,
+    "P_cold": 1.866009083362208e-12,
+    "top_token": "large",
+    "top_tokens": [
+      {
+        "id": 16767,
+        "text": "large",
+        "probability": 0.8761488795280457
+      },
+      {
+        "id": 34253,
+        "text": "Large",
+        "probability": 0.118573859333992
+      },
+      {
+        "id": 16154,
+        "text": "big",
+        "probability": 0.003580620512366295
+      },
+      {
+        "id": 15636,
+        "text": "Big",
+        "probability": 0.001691365265287459
+      },
+      {
+        "id": 3460,
+        "text": " large",
+        "probability": 2.8814433790103067e-06
+      },
+      {
+        "id": 45228,
+        "text": "_large",
+        "probability": 7.285430001502391e-07
+      },
+      {
+        "id": 26897,
+        "text": "larg",
+        "probability": 3.037019098428573e-07
+      },
+      {
+        "id": 26288,
+        "text": "\u5927",
+        "probability": 2.680159809642646e-07
+      }
+    ]
+  },
+  "donor_baseline": {
+    "P_large": 1.5730590853012066e-15,
+    "P_cold": 0.9770140051841736,
+    "top_token": "cold",
+    "top_tokens": [
+      {
+        "id": 87072,
+        "text": "cold",
+        "probability": 0.9770140051841736
+      },
+      {
+        "id": 76418,
+        "text": "Cold",
+        "probability": 0.02297716774046421
+      },
+      {
+        "id": 99476,
+        "text": "\u51b7",
+        "probability": 6.802269126637839e-06
+      },
+      {
+        "id": 9255,
+        "text": " cold",
+        "probability": 1.3394462712312816e-06
+      },
+      {
+        "id": 42196,
+        "text": "cool",
+        "probability": 4.348544848653546e-07
+      },
+      {
+        "id": 66,
+        "text": "c",
+        "probability": 1.099484450151067e-07
+      },
+      {
+        "id": 56750,
+        "text": "Cool",
+        "probability": 5.885116394210854e-08
+      },
+      {
+        "id": 23185,
+        "text": " Cold",
+        "probability": 2.1650132353556728e-08
+      }
+    ]
+  },
+  "feature_checks": [
+    {
+      "group": "small (multilingual)",
+      "layer": 22,
+      "feature": 113890,
+      "recipient_activation": 9.75,
+      "donor_activation": 0.0,
+      "published_reference_activation": 9.6875
+    },
+    {
+      "group": "small (multilingual)",
+      "layer": 22,
+      "feature": 42644,
+      "recipient_activation": 5.96875,
+      "donor_activation": 0.0,
+      "published_reference_activation": 6.0
+    },
+    {
+      "group": "small (multilingual)",
+      "layer": 0,
+      "feature": 133356,
+      "recipient_activation": 5.96875,
+      "donor_activation": 0.0,
+      "published_reference_activation": 5.9688
+    },
+    {
+      "group": "small (multilingual)",
+      "layer": 22,
+      "feature": 38866,
+      "recipient_activation": 5.59375,
+      "donor_activation": 0.0,
+      "published_reference_activation": 5.625
+    },
+    {
+      "group": "small (multilingual)",
+      "layer": 21,
+      "feature": 120516,
+      "recipient_activation": 5.46875,
+      "donor_activation": 0.0,
+      "published_reference_activation": 5.4688
+    },
+    {
+      "group": "small (multilingual)",
+      "layer": 19,
+      "feature": 77492,
+      "recipient_activation": 4.1875,
+      "donor_activation": 0.0,
+      "published_reference_activation": 4.1562
+    },
+    {
+      "group": "hot (multilingual)",
+      "layer": 5,
+      "feature": 134029,
+      "recipient_activation": 0.0,
+      "donor_activation": 4.6875,
+      "published_reference_activation": 4.7188
+    },
+    {
+      "group": "hot (multilingual)",
+      "layer": 4,
+      "feature": 32249,
+      "recipient_activation": 0.0,
+      "donor_activation": 3.234375,
+      "published_reference_activation": 3.2344
+    },
+    {
+      "group": "hot (multilingual)",
+      "layer": 3,
+      "feature": 75392,
+      "recipient_activation": 0.0,
+      "donor_activation": 3.0625,
+      "published_reference_activation": 3.0625
+    },
+    {
+      "group": "hot (multilingual)",
+      "layer": 5,
+      "feature": 18203,
+      "recipient_activation": 0.0,
+      "donor_activation": 2.96875,
+      "published_reference_activation": 2.9844
+    },
+    {
+      "group": "hot (multilingual)",
+      "layer": 3,
+      "feature": 131394,
+      "recipient_activation": 0.0,
+      "donor_activation": 2.8125,
+      "published_reference_activation": 2.8125
+    },
+    {
+      "group": "hot (multilingual)",
+      "layer": 5,
+      "feature": 51825,
+      "recipient_activation": 0.0,
+      "donor_activation": 2.171875,
+      "published_reference_activation": 2.1562
+    }
+  ],
+  "runs": [
+    {
+      "strength": 0,
+      "P_large": 0.8761488795280457,
+      "P_cold": 1.866009083362208e-12,
+      "top_token": "large",
+      "top_tokens": [
+        {
+          "id": 16767,
+          "text": "large",
+          "probability": 0.8761488795280457
+        },
+        {
+          "id": 34253,
+          "text": "Large",
+          "probability": 0.118573859333992
+        },
+        {
+          "id": 16154,
+          "text": "big",
+          "probability": 0.003580620512366295
+        },
+        {
+          "id": 15636,
+          "text": "Big",
+          "probability": 0.001691365265287459
+        },
+        {
+          "id": 3460,
+          "text": " large",
+          "probability": 2.8814433790103067e-06
+        },
+        {
+          "id": 45228,
+          "text": "_large",
+          "probability": 7.285430001502391e-07
+        },
+        {
+          "id": 26897,
+          "text": "larg",
+          "probability": 3.037019098428573e-07
+        },
+        {
+          "id": 26288,
+          "text": "\u5927",
+          "probability": 2.680159809642646e-07
+        }
+      ],
+      "published_P_cold": 2.7852483774210013e-12,
+      "published_P_large": 0.8988096117973328,
+      "seconds": 1.898000482469797e-05
+    },
+    {
+      "strength": 1.5,
+      "P_large": 0.9086983799934387,
+      "P_cold": 2.835401210177224e-05,
+      "top_token": "large",
+      "top_tokens": [
+        {
+          "id": 16767,
+          "text": "large",
+          "probability": 0.9086983799934387
+        },
+        {
+          "id": 34253,
+          "text": "Large",
+          "probability": 0.051265254616737366
+        },
+        {
+          "id": 16154,
+          "text": "big",
+          "probability": 0.035234060138463974
+        },
+        {
+          "id": 9004,
+          "text": "small",
+          "probability": 0.0017542005516588688
+        },
+        {
+          "id": 15636,
+          "text": "Big",
+          "probability": 0.0017542005516588688
+        },
+        {
+          "id": 88845,
+          "text": "heavy",
+          "probability": 0.0007312595844268799
+        },
+        {
+          "id": 25307,
+          "text": "Small",
+          "probability": 0.00014399354404304177
+        },
+        {
+          "id": 9150,
+          "text": "wide",
+          "probability": 6.00254388700705e-05
+        }
+      ],
+      "published_P_cold": 2.521349597373046e-05,
+      "published_P_large": 0.9156407713890076,
+      "seconds": 0.03043264406733215
+    },
+    {
+      "strength": 2.25,
+      "P_large": 0.001365531119517982,
+      "P_cold": 0.550894558429718,
+      "top_token": "cold",
+      "top_tokens": [
+        {
+          "id": 87072,
+          "text": "cold",
+          "probability": 0.550894558429718
+        },
+        {
+          "id": 10303,
+          "text": "low",
+          "probability": 0.22964701056480408
+        },
+        {
+          "id": 13855,
+          "text": "bad",
+          "probability": 0.04522017762064934
+        },
+        {
+          "id": 88845,
+          "text": "heavy",
+          "probability": 0.03990666940808296
+        },
+        {
+          "id": 35211,
+          "text": "slow",
+          "probability": 0.03107934631407261
+        },
+        {
+          "id": 9004,
+          "text": "small",
+          "probability": 0.018850574269890785
+        },
+        {
+          "id": 3849,
+          "text": "false",
+          "probability": 0.014680842868983746
+        },
+        {
+          "id": 13150,
+          "text": "weak",
+          "probability": 0.008904380723834038
+        }
+      ],
+      "published_P_cold": 0.5441350340843201,
+      "published_P_large": 0.0017318626632913947,
+      "seconds": 0.029244571924209595
+    },
+    {
+      "strength": 3,
+      "P_large": 5.129370705958536e-09,
+      "P_cold": 0.9745466113090515,
+      "top_token": "cold",
+      "top_tokens": [
+        {
+          "id": 87072,
+          "text": "cold",
+          "probability": 0.9745466113090515
+        },
+        {
+          "id": 10303,
+          "text": "low",
+          "probability": 0.012267732061445713
+        },
+        {
+          "id": 76418,
+          "text": "Cold",
+          "probability": 0.004513046704232693
+        },
+        {
+          "id": 13855,
+          "text": "bad",
+          "probability": 0.0031017684377729893
+        },
+        {
+          "id": 35211,
+          "text": "slow",
+          "probability": 0.0021318120416253805
+        },
+        {
+          "id": 3849,
+          "text": "false",
+          "probability": 0.0007842498598620296
+        },
+        {
+          "id": 22624,
+          "text": "dark",
+          "probability": 0.0004197786911390722
+        },
+        {
+          "id": 10622,
+          "text": "hot",
+          "probability": 0.0004197786911390722
+        }
+      ],
+      "published_P_cold": 0.9686576128005981,
+      "published_P_large": 8.405798723742919e-09,
+      "seconds": 0.02838502696249634
+    },
+    {
+      "strength": 4.5,
+      "P_large": 1.1504796206961328e-14,
+      "P_cold": 0.9977401494979858,
+      "top_token": "cold",
+      "top_tokens": [
+        {
+          "id": 87072,
+          "text": "cold",
+          "probability": 0.9977401494979858
+        },
+        {
+          "id": 76418,
+          "text": "Cold",
+          "probability": 0.002182547701522708
+        },
+        {
+          "id": 10622,
+          "text": "hot",
+          "probability": 1.4705889952892903e-05
+        },
+        {
+          "id": 10303,
+          "text": "low",
+          "probability": 1.2977902770217042e-05
+        },
+        {
+          "id": 13855,
+          "text": "bad",
+          "probability": 7.871495654399041e-06
+        },
+        {
+          "id": 42196,
+          "text": "cool",
+          "probability": 6.946570920263184e-06
+        },
+        {
+          "id": 66,
+          "text": "c",
+          "probability": 6.130327165010385e-06
+        },
+        {
+          "id": 35211,
+          "text": "slow",
+          "probability": 5.409994628280401e-06
+        }
+      ],
+      "published_P_cold": 0.9982237219810486,
+      "published_P_large": 1.5732811985158003e-14,
+      "seconds": 0.028306298074312508
+    }
+  ],
+  "zero_delta_control": {
+    "P_large": 0.8761488795280457,
+    "P_cold": 1.866009083362208e-12,
+    "top_token": "large",
+    "top_tokens": [
+      {
+        "id": 16767,
+        "text": "large",
+        "probability": 0.8761488795280457
+      },
+      {
+        "id": 34253,
+        "text": "Large",
+        "probability": 0.118573859333992
+      },
+      {
+        "id": 16154,
+        "text": "big",
+        "probability": 0.003580620512366295
+      },
+      {
+        "id": 15636,
+        "text": "Big",
+        "probability": 0.001691365265287459
+      },
+      {
+        "id": 3460,
+        "text": " large",
+        "probability": 2.8814433790103067e-06
+      },
+      {
+        "id": 45228,
+        "text": "_large",
+        "probability": 7.285430001502391e-07
+      },
+      {
+        "id": 26897,
+        "text": "larg",
+        "probability": 3.037019098428573e-07
+      },
+      {
+        "id": 26288,
+        "text": "\u5927",
+        "probability": 2.680159809642646e-07
+      }
+    ],
+    "max_abs_logit_difference": 0.0
+  },
+  "restoration_max_abs_logit_difference": 0.0,
+  "peak_gpu_allocated_gib": 7.625388145446777
+}

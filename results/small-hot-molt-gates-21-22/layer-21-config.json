@@ -1,0 +1,49 @@
+{
+  "model_class": "crosslayer_transcoder.model.molt.Molt",
+  "target_model": "Qwen/Qwen3-4B",
+  "layer": 21,
+  "global_step": 100000,
+  "d_acts": 2560,
+  "n_features": 2480,
+  "N": 80,
+  "ranks": [
+    512,
+    256,
+    128,
+    64,
+    32
+  ],
+  "nonlinearity": "JumpReLU",
+  "input_location": "pre_norm",
+  "output_location": "raw",
+  "input_standardizer": "DimensionwiseInputStandardizer",
+  "output_standardizer": "DimensionwiseOutputStandardizer",
+  "standardizer_n_layers": 36,
+  "tensor_dtypes": {
+    "nonlinearity.theta": "float32",
+    "nonlinearity.bandwidth": "float32",
+    "input_standardizer.mean": "bfloat16",
+    "input_standardizer.std": "bfloat16",
+    "output_standardizer.mean": "bfloat16",
+    "output_standardizer.std": "bfloat16",
+    "e.weight": "float32",
+    "e.bias": "float32",
+    "Us.0": "float32",
+    "Us.1": "float32",
+    "Us.2": "float32",
+    "Us.3": "float32",
+    "Us.4": "float32",
+    "Vs.0": "float32",
+    "Vs.1": "float32",
+    "Vs.2": "float32",
+    "Vs.3": "float32",
+    "Vs.4": "float32"
+  },
+  "training": {
+    "learning_rate": 4e-05,
+    "lambda_sparsity": 7.5e-05,
+    "sparsity_ramp_fraction": 0.8,
+    "lr_decay_start_fraction": 0.8
+  },
+  "tensor_names": "Molt.state_dict() names, with the Lightning model. prefix removed"
+}

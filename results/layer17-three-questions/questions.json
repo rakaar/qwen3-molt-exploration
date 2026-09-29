@@ -1,0 +1,44 @@
+{
+  "layer_zero_based": 17,
+  "seed": 20260929,
+  "selection": "one seeded random choice per category from a fixed pool, before generating any responses",
+  "question_pools": {
+    "arithmetic": [
+      "A shop sells notebooks for $4 each. I buy 3 notebooks and pay with a $20 note. How much change should I get?",
+      "Maya has 12 apples, gives 5 to a friend, then buys twice as many apples as she has left. How many apples does she have now?",
+      "A train travels at 60 kilometres per hour for 90 minutes. How far does it travel?"
+    ],
+    "everyday explanation": [
+      "Why does a metal spoon feel colder than a wooden spoon in the same room?",
+      "Why do we see lightning before we hear thunder?",
+      "Why does a wet shirt dry faster on a windy day?"
+    ],
+    "two-hop factual": [
+      "What is the capital of the country where Kyoto is located?",
+      "What currency is used in the country whose capital is Rome?",
+      "Which continent contains the country whose capital is Nairobi?"
+    ]
+  },
+  "system_prompt": "Answer concisely in at most three sentences.",
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 160,
+    "enable_thinking": false,
+    "use_cache": true
+  },
+  "intervention": "Replace only layer 17 raw MLP output with MOLT(pre-post-attention-normalization residual); apply throughout prompt and generation; no reconstruction-error add-back",
+  "results": [
+    {
+      "category": "arithmetic",
+      "question": "Maya has 12 apples, gives 5 to a friend, then buys twice as many apples as she has left. How many apples does she have now?"
+    },
+    {
+      "category": "everyday explanation",
+      "question": "Why does a wet shirt dry faster on a windy day?"
+    },
+    {
+      "category": "two-hop factual",
+      "question": "Which continent contains the country whose capital is Nairobi?"
+    }
+  ]
+}
