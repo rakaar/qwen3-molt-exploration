@@ -73,7 +73,7 @@ python plot_texas_features.py
 python plot_dallas_molts.py
 ```
 
-The two full MOLT checkpoints add about 8.44 GB. Reconstruction activations can be regenerated from the pinned dataset and sample seed; they are not in Git. A complete raw-results/cache archive was also backed up locally before GPU teardown. Large public model weights were excluded from the archive because their exact revisions are pinned and downloadable.
+The two full MOLT checkpoints add about 8.44 GB. Reconstruction activations can be regenerated from the pinned dataset and sample seed; they are not in Git. A compact raw-results/code archive was also backed up locally before GPU teardown. The user chose to regenerate the large reconstruction activation cache later; that cache and redownloadable model weights are intentionally excluded. Small prompt activations and gate tensors are preserved.
 
 For a CPU-only rebuild of the HTML:
 

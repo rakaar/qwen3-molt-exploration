@@ -1,8 +1,28 @@
 {
-  "status": "Public experiment archive prepared; raw-cache transfer and GPU teardown pending.",
+  "status": "Results and code backed up and verified; GPU deletion awaiting required confirmation.",
   "experiment_date": "2026-09-29",
   "public_repo": "https://github.com/rakaar/qwen3-molt-exploration",
   "gpu_destroyed": false,
   "ongoing_compute_storage_usd_hour": null,
-  "full_raw_archive_sha256": "e6786df85ae41c1849dbe80b7e38bfa56cadbfd7de3637b700f42e64f00929ac"
+  "backup_verified_utc": "2026-09-29T17:11:50.079537+00:00",
+  "github_fresh_clone_verified_commit": "4f0c0173b2d7225d4cdbffbe66e5a812629e517c",
+  "compact_local_backup": {
+    "file": "molt-results-code-2026-09-29.tar.gz",
+    "bytes": 7834388,
+    "files": 297,
+    "sha256": "810cde4436e4a5ce2d9b01af8846f5da6936094ad95c31afcd22c2305bf37d51"
+  },
+  "intentionally_excluded": [
+    "Large reconstruction activation cache: user chose regeneration from pinned test_sft sample",
+    "Public pretrained model weights and MOLT gate checkpoint subsets: redownload from pinned revisions"
+  ],
+  "preserved": [
+    "Code and upstream source snapshot",
+    "All experiment measurements",
+    "Small prompt activation tensors",
+    "Gate tensors",
+    "Figures and self-contained HTML",
+    "Pinned model and dataset revisions",
+    "Selected test conversation indices and seed"
+  ]
 }
