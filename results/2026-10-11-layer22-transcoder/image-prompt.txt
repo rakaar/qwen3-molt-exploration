@@ -1,0 +1,44 @@
+Use case: scientific-educational infographic-diagram.
+Create a polished, highly readable landscape research infographic about a VERIFIED two-feature transcoder intervention. Cream-white background, restrained navy, violet and warm orange accents, clear thin arrows, generous whitespace, crisp typeset text. No decorative fake charts, no invented features or findings.
+
+TITLE: "Two transcoder features turn the answer into cold"
+SUBTITLE: "Qwen3-4B · Layer 22 · Attention unfrozen"
+
+Show two prompt cards at the top:
+RECEIVER — exact prompt:
+What is the opposite of "small"? Reply with only the word, nothing else.
+Highlight only the word small. Annotation: "Edited token: position 9 (zero-based)".
+DONOR — exact prompt:
+What is the opposite of "hot"? Reply with only the word, nothing else.
+Highlight only the word hot. Annotation: "Donor token: position 9".
+The receiver prompt stays unchanged; DO NOT show its text being replaced by hot.
+
+Below, a central diagram showing the native receiver "Layer 22 MLP output" plus two ADDITIVE CONTRIBUTION edits, with small suppression in violet and hot injection in orange. The two feature boxes must have exact IDs:
+"SMALL feature: L22-F38866"
+"Clean activation: 5.59375"
+"Contribution = 5.59375 × decoder[38866]"
+connect via arrow labeled "subtract 19.5×" to the MLP output addition.
+"HOT feature: L22-F85454"
+"Donor activation: 9.0"
+"Contribution = 9.0 × decoder[85454]"
+connect via arrow labeled "add 19.5×" to the same receiver MLP output addition.
+
+Prominent equation panel, typeset in readable plain Unicode, exact text:
+"MLP output[position 9] += −19.5 × clean small contribution"
+"                         +19.5 × donor hot contribution"
+
+Large result panel:
+"large → cold"
+"P(cold) = 99.75234%"
+"Same receiver prompt"
+
+Small explanatory labels:
+"Only layer 22, position 9 is edited"
+"Attention recomputes normally"
+"Decoder vectors and model weights stay fixed"
+"Effective clean-reference small multiplier: −18.5×"
+"Hot donor multiplier: +19.5×"
+
+Footnote: "Measured next-token probability on this prompt, not accuracy across prompts."
+
+Scientific correctness: These are scalar activation times fixed transcoder decoder vector contributions, not MOLT low-rank transforms. The input x is not multiplied or transplanted. Do not draw the donor answer or the word cold being fed into the receiver. Do not claim the small contribution is zeroed. Subtracting 19.5× from the native clean contribution leaves a conceptual clean-reference multiplier of 1 − 19.5 = −18.5. Keep mathematical signs, IDs, digits, and prompts exact. Design it as a self-contained explanatory image suitable for sharing.

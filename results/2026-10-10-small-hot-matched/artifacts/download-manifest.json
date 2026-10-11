@@ -1,0 +1,1229 @@
+{
+  "base": {
+    "repo": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "files": [
+      {
+        "file": "LICENSE",
+        "bytes": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "hub_hash_verified": false
+      },
+      {
+        "file": "config.json",
+        "bytes": 726,
+        "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+        "hub_hash_verified": false
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 239,
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+        "hub_hash_verified": false
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "hub_hash_verified": false
+      },
+      {
+        "file": "model-00001-of-00003.safetensors",
+        "bytes": 3957900840,
+        "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+        "hub_hash_verified": true
+      },
+      {
+        "file": "model-00002-of-00003.safetensors",
+        "bytes": 3987450520,
+        "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+        "hub_hash_verified": true
+      },
+      {
+        "file": "model-00003-of-00003.safetensors",
+        "bytes": 99630640,
+        "sha256": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+        "hub_hash_verified": true
+      },
+      {
+        "file": "model.safetensors.index.json",
+        "bytes": 32819,
+        "sha256": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+        "hub_hash_verified": false
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "hub_hash_verified": true
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+        "hub_hash_verified": false
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "hub_hash_verified": false
+      }
+    ]
+  },
+  "full_molt22": {
+    "repo": "georglange/qwen3-4b-molt",
+    "revision": "eed10292a96521837f5d65b36fdfa3bf5bea0037",
+    "files": [
+      {
+        "file": "layer-22/checkpoint.safetensors",
+        "bytes": 4221195324,
+        "sha256": "3ff9d426621c4ddaca45ba57d08e4ed196e96e39647b993c209d9ce91b153b34",
+        "hub_hash_verified": true
+      },
+      {
+        "file": "layer-22/config.json",
+        "bytes": 1277,
+        "sha256": "2a413a46c87dfd41565228521306f9ff7b1dbad91925702e65d5f5bb0e4f0fc2",
+        "hub_hash_verified": false
+      }
+    ]
+  },
+  "selected_molt": [
+    {
+      "layer": 3,
+      "ids": [
+        1427
+      ],
+      "file": "molt-3-selected.safetensors",
+      "sha256": "393b576de4c5ad4cab3a8adbbf84a271a65037e6ccf671ef3445ee6cd1ed2c75",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "index": null,
+          "saved_tensor": "e.weight",
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "bytes": 25395200,
+          "sha256": "530e3f9fceaed34c616641f2c5679994a3ad11eb326a234b41edca2a45551509"
+        },
+        {
+          "source_tensor": "e.bias",
+          "index": null,
+          "saved_tensor": "e.bias",
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "bytes": 9920,
+          "sha256": "2f5defa4a5394dd85c9bb70956b59f851dab4c08b3f6c8398a6c3ee65d2ff283"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "index": null,
+          "saved_tensor": "nonlinearity.theta",
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "bytes": 9920,
+          "sha256": "7f26d4437e54e2e9253daffa3ce7e5b401f838c2a34d1225fd9fd4932f80a56d"
+        },
+        {
+          "source_tensor": "nonlinearity.bandwidth",
+          "index": null,
+          "saved_tensor": "nonlinearity.bandwidth",
+          "shape": [],
+          "source_dtype": "F32",
+          "range": [
+            4219710848,
+            4219710851
+          ],
+          "bytes": 4,
+          "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "index": null,
+          "saved_tensor": "input_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4219720772,
+            4219905091
+          ],
+          "bytes": 184320,
+          "sha256": "328d054cbff6f60787b53f97766c4896c4891e8267f00f0fbe1265db150fb030"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "index": null,
+          "saved_tensor": "input_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4219905092,
+            4220089411
+          ],
+          "bytes": 184320,
+          "sha256": "a4c8b6fd6392e29a28156783647ce533615e7d586c1ad2a155470b07f320fc61"
+        },
+        {
+          "source_tensor": "output_standardizer.mean",
+          "index": null,
+          "saved_tensor": "output_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4220089412,
+            4220273731
+          ],
+          "bytes": 184320,
+          "sha256": "c9628f9fbe862eeba49ee5f36a3ce5e74ab001e771765facd3865ef978cd39d9"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "index": null,
+          "saved_tensor": "output_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4220273732,
+            4220458051
+          ],
+          "bytes": 184320,
+          "sha256": "01f573542cdb43063701da009d4d87380f60255d302292b5d9ad67c878b18a24"
+        },
+        {
+          "source_tensor": "Us.4",
+          "index": 227,
+          "saved_tensor": "U_1427",
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            1752106688,
+            1752434367
+          ],
+          "bytes": 327680,
+          "sha256": "e11c2b98e0f9b70dd77f8095b72ef1fe54d5053ae1789fac8b8ca8567221887a"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "index": 227,
+          "saved_tensor": "V_1427",
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "range": [
+            3849258688,
+            3849586367
+          ],
+          "bytes": 327680,
+          "sha256": "7e26cf917a05b3a9470433ce7e97951513846de61a3060bf4ea91704d2de6107"
+        }
+      ]
+    },
+    {
+      "layer": 4,
+      "ids": [
+        612,
+        1025,
+        2049
+      ],
+      "file": "molt-4-selected.safetensors",
+      "sha256": "cfb6227f41e3214b7374cc86288e8efc38f0fc77c91f47c28e04ac9ea66a864c",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "index": null,
+          "saved_tensor": "e.weight",
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194315640,
+            4219710839
+          ],
+          "bytes": 25395200,
+          "sha256": "0990d712c4d404099bcb54f47ce4f260a25d18313aecca60e2477b78d8aa3343"
+        },
+        {
+          "source_tensor": "e.bias",
+          "index": null,
+          "saved_tensor": "e.bias",
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194305720,
+            4194315639
+          ],
+          "bytes": 9920,
+          "sha256": "6d4de3e218eb392235b2678a696144ce6d7ab3dd574e3a45fbc6ba81647f9421"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "index": null,
+          "saved_tensor": "nonlinearity.theta",
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4220448124,
+            4220458043
+          ],
+          "bytes": 9920,
+          "sha256": "beea5c40141986a8f66ff7718a5435b89d5e2ba54e1e815bdc16810f9eb24169"
+        },
+        {
+          "source_tensor": "nonlinearity.bandwidth",
+          "index": null,
+          "saved_tensor": "nonlinearity.bandwidth",
+          "shape": [],
+          "source_dtype": "F32",
+          "range": [
+            4220448120,
+            4220448123
+          ],
+          "bytes": 4,
+          "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "index": null,
+          "saved_tensor": "input_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4219710840,
+            4220079479
+          ],
+          "bytes": 368640,
+          "sha256": "8559f39caade8600ba57051e3b883a1e22c8d40cfef6be839fd96bf3327cba46"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "index": null,
+          "saved_tensor": "input_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4220079480,
+            4220448119
+          ],
+          "bytes": 368640,
+          "sha256": "be3efd94b5a71d22fc7e30d40e5c655a6d74b49440b2d32f8c72b8154c934fce"
+        },
+        {
+          "source_tensor": "output_standardizer.mean",
+          "index": null,
+          "saved_tensor": "output_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4220458044,
+            4220826683
+          ],
+          "bytes": 368640,
+          "sha256": "49e3cc8a995e67374041aa883f77207831be4134e605cf21598434c3852658fe"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "index": null,
+          "saved_tensor": "output_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4220826684,
+            4221195323
+          ],
+          "bytes": 368640,
+          "sha256": "fba2de040a42589c62ffbb7044c009f671b2a25cef39eb045fce30d85cb643de"
+        },
+        {
+          "source_tensor": "Us.3",
+          "index": 52,
+          "saved_tensor": "U_612",
+          "shape": [
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            1292371640,
+            1293026999
+          ],
+          "bytes": 655360,
+          "sha256": "cb7d2793a70ddfe87fa2dd465ae64fb2c6f042c1a793c811d41a829625f9e8f8"
+        },
+        {
+          "source_tensor": "Vs.3",
+          "index": 52,
+          "saved_tensor": "V_612",
+          "shape": [
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "range": [
+            3389523640,
+            3390178999
+          ],
+          "bytes": 655360,
+          "sha256": "691faa2a729cc1d04f20eda2006e4655685ea8f9a877968c6592e1468075f124"
+        },
+        {
+          "source_tensor": "Us.3",
+          "index": 465,
+          "saved_tensor": "U_1025",
+          "shape": [
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            1563035320,
+            1563690679
+          ],
+          "bytes": 655360,
+          "sha256": "94a03718ccddd546f228b71c2bff81de935a22bccd39be8fd165644817e4fbb3"
+        },
+        {
+          "source_tensor": "Vs.3",
+          "index": 465,
+          "saved_tensor": "V_1025",
+          "shape": [
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "range": [
+            3660187320,
+            3660842679
+          ],
+          "bytes": 655360,
+          "sha256": "bc2ff73577251cb1b64af21e7632f69f29bed793d4a365176b91d2e4a1a19edd"
+        },
+        {
+          "source_tensor": "Us.4",
+          "index": 849,
+          "saved_tensor": "U_2049",
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            1955923640,
+            1956251319
+          ],
+          "bytes": 327680,
+          "sha256": "136421b72e5e1958ce4ea481ef859f7a510924c2397dad3148a3b92ccee6a40a"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "index": 849,
+          "saved_tensor": "V_2049",
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4053075640,
+            4053403319
+          ],
+          "bytes": 327680,
+          "sha256": "126ac7833ea08e9a9365379199c6a91e3b9a0b8eafc9363383dee7b22eed463e"
+        }
+      ]
+    },
+    {
+      "layer": 5,
+      "ids": [
+        612,
+        2101
+      ],
+      "file": "molt-5-selected.safetensors",
+      "sha256": "b25f0341810c6318d9c27e2ae787f0ea78f34b9ffd54fbc2bb4875e3a7e32fe5",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "index": null,
+          "saved_tensor": "e.weight",
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "bytes": 25395200,
+          "sha256": "cb5b1a774d57dfef7520cdf6405bfe069b20f9da5a9ca2cb29bc0e2ceccb922b"
+        },
+        {
+          "source_tensor": "e.bias",
+          "index": null,
+          "saved_tensor": "e.bias",
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "bytes": 9920,
+          "sha256": "aaceba9b8a4322f43cd44eb1b369e440deaeaa2fa3f1f198343fd44c9363b8fe"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "index": null,
+          "saved_tensor": "nonlinearity.theta",
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "bytes": 9920,
+          "sha256": "0813bfc3c0710546505578df67332165c740070d9c2c13ad07b5c57b34b26263"
+        },
+        {
+          "source_tensor": "nonlinearity.bandwidth",
+          "index": null,
+          "saved_tensor": "nonlinearity.bandwidth",
+          "shape": [],
+          "source_dtype": "F32",
+          "range": [
+            4219710848,
+            4219710851
+          ],
+          "bytes": 4,
+          "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "index": null,
+          "saved_tensor": "input_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4219720772,
+            4219905091
+          ],
+          "bytes": 184320,
+          "sha256": "d8ab461aa10c16a32114f0e13fbcde0149db8eea7dff7df2fccbc1a3232cc6ea"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "index": null,
+          "saved_tensor": "input_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4219905092,
+            4220089411
+          ],
+          "bytes": 184320,
+          "sha256": "37760b7cbe0edb6ef12ab4720d3040d35832c4f8b78536615b07dc89fe61abf7"
+        },
+        {
+          "source_tensor": "output_standardizer.mean",
+          "index": null,
+          "saved_tensor": "output_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4220089412,
+            4220273731
+          ],
+          "bytes": 184320,
+          "sha256": "4ea96a0c15cc2e226c53994d51729e2db24e05dfecd1c943ef3267c684e14ba3"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "index": null,
+          "saved_tensor": "output_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4220273732,
+            4220458051
+          ],
+          "bytes": 184320,
+          "sha256": "07caebfef0202acf63e204c53a12204e1e7c5fb7085e15d0661d77b9c2cbb8fa"
+        },
+        {
+          "source_tensor": "Us.3",
+          "index": 52,
+          "saved_tensor": "U_612",
+          "shape": [
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            1292371648,
+            1293027007
+          ],
+          "bytes": 655360,
+          "sha256": "33a17b0b157408a4993a11784ec0abaf1bebf7afd1e379262a44dc7ffd9cd394"
+        },
+        {
+          "source_tensor": "Vs.3",
+          "index": 52,
+          "saved_tensor": "V_612",
+          "shape": [
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "range": [
+            3389523648,
+            3390179007
+          ],
+          "bytes": 655360,
+          "sha256": "17fb6920f91639fa4b11c14abd714005ea9fd2e1660f5f9adaee0adc0226daaa"
+        },
+        {
+          "source_tensor": "Us.4",
+          "index": 901,
+          "saved_tensor": "U_2101",
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            1972963008,
+            1973290687
+          ],
+          "bytes": 327680,
+          "sha256": "af5b0253f3680218743deeaec31c0973797e0ce06ee19ba183b1d6c931cafa6f"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "index": 901,
+          "saved_tensor": "V_2101",
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4070115008,
+            4070442687
+          ],
+          "bytes": 327680,
+          "sha256": "2ccac2e4fed5f5c6b44bdb973318c065209718a7bf465e8c3d0e6756484fcc3f"
+        }
+      ]
+    },
+    {
+      "layer": 17,
+      "ids": [
+        459
+      ],
+      "file": "molt-17-selected.safetensors",
+      "sha256": "07f70c56b70285246f21d7e2d600691ab6bea5901b3def4dbce8a04f4288b3c7",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "index": null,
+          "saved_tensor": "e.weight",
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "bytes": 25395200,
+          "sha256": "1d27ad10ab3be37a6bf0e821f05f49ddab56d860adb0aaf24af45234f4abfa32"
+        },
+        {
+          "source_tensor": "e.bias",
+          "index": null,
+          "saved_tensor": "e.bias",
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "bytes": 9920,
+          "sha256": "a826d43a0d4a09307293ef5608fe942b2aa585cbac0f561aaaeb3b626f3ecde6"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "index": null,
+          "saved_tensor": "nonlinearity.theta",
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "bytes": 9920,
+          "sha256": "59f2ed5ec9563e8f69e0628d92066170780cb3250ab58981de27360ae35595ac"
+        },
+        {
+          "source_tensor": "nonlinearity.bandwidth",
+          "index": null,
+          "saved_tensor": "nonlinearity.bandwidth",
+          "shape": [],
+          "source_dtype": "F32",
+          "range": [
+            4219710848,
+            4219710851
+          ],
+          "bytes": 4,
+          "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "index": null,
+          "saved_tensor": "input_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4219720772,
+            4219905091
+          ],
+          "bytes": 184320,
+          "sha256": "2195c5156999cf65ff2c8dbaf1d6f81571843a89a907b64d6a2acccbff671823"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "index": null,
+          "saved_tensor": "input_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4219905092,
+            4220089411
+          ],
+          "bytes": 184320,
+          "sha256": "bd3939805088dcb379f603a7edf6072608465c78b48b96e6610b6a5b7775747e"
+        },
+        {
+          "source_tensor": "output_standardizer.mean",
+          "index": null,
+          "saved_tensor": "output_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4220089412,
+            4220273731
+          ],
+          "bytes": 184320,
+          "sha256": "6f5240ce54fece9a9891bce7fefa43ce75ec2e38d9743beaf686799d2d1b9d65"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "index": null,
+          "saved_tensor": "output_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4220273732,
+            4220458051
+          ],
+          "bytes": 184320,
+          "sha256": "4a3e9d52de94ac0a39bc79870aa096576fcf206cc530df1916217b1903742abc"
+        },
+        {
+          "source_tensor": "Us.2",
+          "index": 219,
+          "saved_tensor": "U_459",
+          "shape": [
+            128,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            1125910208,
+            1127220927
+          ],
+          "bytes": 1310720,
+          "sha256": "5ceb0a533ff791736b574e5fe604dd64d347ba1e97bceed70bbedf5aa5903fc2"
+        },
+        {
+          "source_tensor": "Vs.2",
+          "index": 219,
+          "saved_tensor": "V_459",
+          "shape": [
+            2560,
+            128
+          ],
+          "source_dtype": "F32",
+          "range": [
+            3223062208,
+            3224372927
+          ],
+          "bytes": 1310720,
+          "sha256": "b369198186c247e54319c260252d272bae14839e2ed5a70da96a668f77365e09"
+        }
+      ]
+    },
+    {
+      "layer": 21,
+      "ids": [
+        2232
+      ],
+      "file": "molt-21-selected.safetensors",
+      "sha256": "1c1886c5bdb1e9de25f101597fd7921eb143e8025864b7b853356c7b4c754a27",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "index": null,
+          "saved_tensor": "e.weight",
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "bytes": 25395200,
+          "sha256": "860818e726073242ca49c63a906b0aec9d7594bd32139c9b5f510daca47bae82"
+        },
+        {
+          "source_tensor": "e.bias",
+          "index": null,
+          "saved_tensor": "e.bias",
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "bytes": 9920,
+          "sha256": "ae5c02d1cc9ce40e9d9f3028f3a2c9d473f6babb6c353cb5750a74feef75ec32"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "index": null,
+          "saved_tensor": "nonlinearity.theta",
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "bytes": 9920,
+          "sha256": "8a89879b0449cbd79e0c8e0c62649b11c0afa2c184ca313e8910286934bc5e38"
+        },
+        {
+          "source_tensor": "nonlinearity.bandwidth",
+          "index": null,
+          "saved_tensor": "nonlinearity.bandwidth",
+          "shape": [],
+          "source_dtype": "F32",
+          "range": [
+            4219710848,
+            4219710851
+          ],
+          "bytes": 4,
+          "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "index": null,
+          "saved_tensor": "input_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4219720772,
+            4219905091
+          ],
+          "bytes": 184320,
+          "sha256": "ad598218ce2314989c64ef9ed7d7f6f4e167fd5542199adab0dac48f5bb55794"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "index": null,
+          "saved_tensor": "input_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4219905092,
+            4220089411
+          ],
+          "bytes": 184320,
+          "sha256": "07bf31f8cafd5e14d12799722c23094a863d1a0651a90d60688bdadd0d165636"
+        },
+        {
+          "source_tensor": "output_standardizer.mean",
+          "index": null,
+          "saved_tensor": "output_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4220089412,
+            4220273731
+          ],
+          "bytes": 184320,
+          "sha256": "b613dfb00e370329babd1b400f7ed5de5b41644dd460c70033a1d5794cbc8db0"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "index": null,
+          "saved_tensor": "output_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "range": [
+            4220273732,
+            4220458051
+          ],
+          "bytes": 184320,
+          "sha256": "316f7e334e1f6950978086066980fc816fa07cb5aad0ddd8b1ee3018dc2467e9"
+        },
+        {
+          "source_tensor": "Us.4",
+          "index": 1032,
+          "saved_tensor": "U_2232",
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            2015889088,
+            2016216767
+          ],
+          "bytes": 327680,
+          "sha256": "1c4f7a2669ef992dfd02612879e73155982a1d57ab8778b562d94fc267dd1bb5"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "index": 1032,
+          "saved_tensor": "V_2232",
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4113041088,
+            4113368767
+          ],
+          "bytes": 327680,
+          "sha256": "ba5aaf30885ed3206e487c80008eece3f418a9d29310bb3eb06200ac757b555b"
+        }
+      ]
+    },
+    {
+      "layer": 22,
+      "ids": [
+        941,
+        2339
+      ],
+      "file": "molt-22-selected.safetensors",
+      "sha256": "cff6543981e529a6185ba456031cd42e3c5f7dc9570d66bbdd3a57de80d5070e",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "index": null,
+          "saved_tensor": "e.weight",
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194315640,
+            4219710839
+          ],
+          "bytes": 25395200,
+          "sha256": "d99ea21d6d69c7ab90fbc779ac769376909b86c91c3e6f33897085cf53bbdcb1"
+        },
+        {
+          "source_tensor": "e.bias",
+          "index": null,
+          "saved_tensor": "e.bias",
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4194305720,
+            4194315639
+          ],
+          "bytes": 9920,
+          "sha256": "9170235954f7e4ef5e84031b68ecfff17c0d57305430f6dabcae075e76183036"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "index": null,
+          "saved_tensor": "nonlinearity.theta",
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4220448124,
+            4220458043
+          ],
+          "bytes": 9920,
+          "sha256": "798899c3fe9809d593a59389145fc39f60a454ceb5b3279bf97d273bed210be8"
+        },
+        {
+          "source_tensor": "nonlinearity.bandwidth",
+          "index": null,
+          "saved_tensor": "nonlinearity.bandwidth",
+          "shape": [],
+          "source_dtype": "F32",
+          "range": [
+            4220448120,
+            4220448123
+          ],
+          "bytes": 4,
+          "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "index": null,
+          "saved_tensor": "input_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4219710840,
+            4220079479
+          ],
+          "bytes": 368640,
+          "sha256": "c513fbab1c4cae0ab685764b198010a00ac82518586d09029e74d73fb6c3210d"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "index": null,
+          "saved_tensor": "input_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4220079480,
+            4220448119
+          ],
+          "bytes": 368640,
+          "sha256": "7f47746bfe6370616a2666c1ad338cbdf7834d486e21cd4a6607881f87df2697"
+        },
+        {
+          "source_tensor": "output_standardizer.mean",
+          "index": null,
+          "saved_tensor": "output_standardizer.mean",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4220458044,
+            4220826683
+          ],
+          "bytes": 368640,
+          "sha256": "0c1dc184dc5dfb911f20293e35a4372b9e616db832cba69940150cb5c33f559b"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "index": null,
+          "saved_tensor": "output_standardizer.std",
+          "shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4220826684,
+            4221195323
+          ],
+          "bytes": 368640,
+          "sha256": "cc2e75ec7acb71d5dedcf8d6cfdb94461af39fb430b9d58b4a500bd207890273"
+        },
+        {
+          "source_tensor": "Us.3",
+          "index": 381,
+          "saved_tensor": "U_941",
+          "shape": [
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            1507985080,
+            1508640439
+          ],
+          "bytes": 655360,
+          "sha256": "df15930f74bd1f709bd02a46a37e1d1993e1fad623bdb27c7c7fa0e44193c43f"
+        },
+        {
+          "source_tensor": "Vs.3",
+          "index": 381,
+          "saved_tensor": "V_941",
+          "shape": [
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "range": [
+            3605137080,
+            3605792439
+          ],
+          "bytes": 655360,
+          "sha256": "b674d1013fc17f1b01573ac9584606742c229854f63c4324993f247dc02cc06a"
+        },
+        {
+          "source_tensor": "Us.4",
+          "index": 1139,
+          "saved_tensor": "U_2339",
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "range": [
+            2050950840,
+            2051278519
+          ],
+          "bytes": 327680,
+          "sha256": "83473c1a96b6fbcee096bffbc85fc12aad53bcd89b03d6fcbc16130547f9a378"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "index": 1139,
+          "saved_tensor": "V_2339",
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "range": [
+            4148102840,
+            4148430519
+          ],
+          "bytes": 327680,
+          "sha256": "5c340ea58cb6ec28d12c7cb0bd118e03b503c29ddb0477ede159205ec3cc7559"
+        }
+      ]
+    }
+  ],
+  "seconds": 536.7744839289226,
+  "source_files": {
+    "jumprelu.py": "d631347f17db9073c0d5acca5bb6013741140c869e59d18b83668d357deb0a11",
+    "molt.py": "59b5c9184b01afbfb56517c0c9a44fc3afdd2666e1e8267e02056f47e9f6378e",
+    "serializable_module.py": "aeb567c944a78c55586d2bdb70c42ba539cab4ab1c3e397fe287b1aed233dd20",
+    "standardize.py": "7aa72e0f941f29867e6b6d80f8f27361a7a77cf23729f4ba8d7801e8652f65af"
+  }
+}

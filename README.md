@@ -1,6 +1,16 @@
 # Qwen3-4B MOLT exploration
 
-Results, figures, and code from a small exploratory session on 2026-09-29.
+Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new matched intervention experiments were run on 10–11 October 2026.
+
+## New experiments: 10–11 October 2026
+
+- [10 October: matched transcoder and MOLT manipulation](experiments/small-hot-matched/) — executed code, pinned preparation, 205 trials, 78 generations, and independent tensor audit. Includes both constrained execution and native execution with unfrozen attention.
+- [11 October: single-layer-22 transcoder strength search](experiments/layer22-transcoder/) — 463 trials with unfrozen attention. Two features reach **99.75234% P(cold)** at 19.5×; six reach **99.80232%** at 4.5× and **99.92866%** at about 6.10417×. The same-run two-transform MOLT control reaches **99.82693%** at 4.5×.
+- [Interactive matched report](https://small-hot-molt-experiment.rakaar.chatgpt.site/) · [Layer-22 follow-up](https://small-hot-molt-experiment.rakaar.chatgpt.site/layer22-transcoder/) · [Two-feature explanatory image](results/2026-10-11-layer22-transcoder/two-feature-intervention.png).
+
+The new outcome is next-token probability on the original prompt, not accuracy across prompts. Both scientific runners preserve the executed computation; added preparation helpers regenerate ignored selected-weight assets. Read each experiment's README and saved runtime before rerunning.
+
+## Original session: 29 September 2026
 
 **[Open the HTML results summary](https://rakaar.github.io/qwen3-molt-exploration/)** · [Downloadable summary](index.html)
 

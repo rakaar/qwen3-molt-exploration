@@ -1,0 +1,65 @@
+{
+  "status": "prespecified_before_new_gpu_inference",
+  "date": "2026-10-10",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "eed10292a96521837f5d65b36fdfa3bf5bea0037",
+  "transcoder_repo": "mwhanna/qwen3-4b-transcoders",
+  "transcoder_revision": "94d176260ac39ce2f882b8b09aba8c118df29bb3",
+  "molt_source_revision": "2611214e6cf46cd96d4d689bcee369dd4fb27b30",
+  "transcoder_intervention_source_revision": "af8a37ad836dc401a0ec5dbb71307d8d7ab68028",
+  "indices": "zero_based",
+  "recipient": "What is the opposite of \"small\"? Reply with only the word, nothing else.",
+  "donor": "What is the opposite of \"hot\"? Reply with only the word, nothing else.",
+  "system_message": null,
+  "thinking": false,
+  "primary_operand_token_position": 9,
+  "primary_next_token_readout_position": 28,
+  "primary_sequence_length": 29,
+  "patch_end_layer": 22,
+  "constrained": {
+    "attention_patterns": "recipient clean patterns frozen in all 36 layers",
+    "attention_value_and_output": "recomputed on perturbed residuals",
+    "mlp_outputs_0_through_22": "recipient clean outputs plus selected deltas",
+    "mlp_outputs_23_through_35": "normal recomputation",
+    "rmsnorm": "not frozen"
+  },
+  "propagated": {
+    "attention_patterns": "normal recomputation",
+    "mlp_outputs": "normal original MLP computation plus fixed clean selected deltas",
+    "rmsnorm": "not frozen"
+  },
+  "strengths": [0, 0.5, 1, 1.5, 2.25, 3, 4.5],
+  "transcoder_control": "published 6 small and 6 hot features from assets/recipe.json; reproduce stored donor values, then compare both methods using freshly measured native donors",
+  "molt_groups": {
+    "pair22": {
+      "small": [[22, 2339]],
+      "hot": [[22, 941]]
+    },
+    "late21_22": {
+      "small": [[21, 2232], [22, 2339]],
+      "hot": [[22, 941]]
+    },
+    "expanded": {
+      "small": [[4, 612], [5, 612], [17, 459], [21, 2232], [22, 2339]],
+      "hot": [[3, 1427], [4, 1025], [4, 2049], [5, 2101], [22, 941]]
+    }
+  },
+  "molt_contribution_definition": "gate(x) * ((standardized prenorm residual x times V) times U) * output_std; output_mean is shared and cancels in delta",
+  "full_contribution_swap": "move every selected contribution strength of the way from recipient to natural donor contribution; small features with zero donor contribution are suppressed",
+  "scalar_gate_swap": "same gate targets, but keep each transform's low-rank output computed on recipient input; no donor input-vector transfer",
+  "weights": "U, V, gate encoder, thresholds, and normalization statistics are never edited",
+  "primary_baseline": "original Qwen plus deltas for BOTH decompositions; no wholesale transcoder or MOLT replacement",
+  "secondary_replacement": "full layer-22 MOLT replacing native MLP, separately labeled, with no reconstruction-error addback",
+  "controls": ["native recipient", "native donor", "zero delta", "self patch", "suppress only", "inject only", "combined", "random direction matched to MOLT delta norm", "MOLT combined matched to total transcoder delta norm", "full layer-22 donor MLP output patch", "restored model"],
+  "heldout_prompts": [
+    "Give the antonym of \"small\". Answer with one word.",
+    "One word only: what is the opposite of small?",
+    "What word means the opposite of small? Answer with a single word.",
+    "Return only the antonym of the adjective \"small\"."
+  ],
+  "extensions": ["reverse hot-to-small at strength 3", "small-to-hot on synonym request at strength 3"],
+  "measurements": ["next-token large and cold probabilities", "top next token", "candidate answer log probabilities", "free greedy answers for representative conditions", "per-layer delta norms", "native gates and contribution norms", "exact edited positions", "zero/self/restoration checks", "full layer-22 reconstruction at operand and prompt"],
+  "limits": "Feature counts and selected layers differ between decompositions; same context/strength/protocol is not equal intervention magnitude. Norm-matched conditions are diagnostic. This is a semantic operand intervention, not a multi-hop reasoning test."
+}

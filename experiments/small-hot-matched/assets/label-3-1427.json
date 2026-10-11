@@ -1,0 +1,97 @@
+{
+  "id": 1427,
+  "rank": 32,
+  "count": 3213,
+  "frequency": 0.0003213,
+  "maximum": 3.921875,
+  "mean_active": 2.396790027618408,
+  "fingerprint": "9df759a78802db7f7706ddfbf71b54e5d58228fb36de080b39084516908eab18",
+  "status": "complete",
+  "evidence_counts": {
+    "train": 32,
+    "test": 50,
+    "negatives": 50,
+    "active_fuzz_positives": 50,
+    "short_windows": 0,
+    "full_budget": true
+  },
+  "sampling_exceptions": [],
+  "updated_at": "2026-09-30T10:28:02.386334+00:00",
+  "explanation": "The gate activates on tokens representing high temperature, heat, or thermal energy, including literal cooking instructions, physical states, and metaphorical intensity. It also fires on specific substrings like \"hot\" within compound words or unrelated contexts, suggesting a broad association with the phonetic or semantic concept of heat rather than a single strict definition.",
+  "title": "Thermal and Heat Token Activation",
+  "label": "Thermal and Heat Token Activation",
+  "methods": {
+    "intruder": {
+      "status": "complete",
+      "metrics": {
+        "total": 20,
+        "valid": 20,
+        "parse_failures": 0,
+        "correct": 8,
+        "accuracy": 0.4,
+        "accuracy_ci95": [
+          0.21880653237281705,
+          0.6134184992377469
+        ],
+        "chance": 0.2
+      }
+    },
+    "detection": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 31,
+        "tn": 47,
+        "fp": 3,
+        "fn": 19,
+        "accuracy": 0.78,
+        "f1": 0.7380952380952381,
+        "balanced_accuracy": 0.78,
+        "accuracy_ci95": [
+          0.6892964648501421,
+          0.8499871761539459
+        ]
+      }
+    },
+    "fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 31,
+        "tn": 50,
+        "fp": 0,
+        "fn": 19,
+        "accuracy": 0.81,
+        "f1": 0.7654320987654321,
+        "balanced_accuracy": 0.81,
+        "accuracy_ci95": [
+          0.7222115462093562,
+          0.8748524849023126
+        ]
+      }
+    },
+    "active_fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 31,
+        "tn": 49,
+        "fp": 1,
+        "fn": 19,
+        "accuracy": 0.8,
+        "f1": 0.7560975609756098,
+        "balanced_accuracy": 0.8,
+        "accuracy_ci95": [
+          0.7111708344068411,
+          0.8666330666689676
+        ]
+      }
+    }
+  }
+}

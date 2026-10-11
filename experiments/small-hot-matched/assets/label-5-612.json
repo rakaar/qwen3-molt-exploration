@@ -1,0 +1,97 @@
+{
+  "id": 612,
+  "rank": 64,
+  "count": 16369,
+  "frequency": 0.0016369,
+  "maximum": 3.671875,
+  "mean_active": 2.1737964153289795,
+  "fingerprint": "92afeb1de1a888d9043950ee614d78a4410ec31865a1b344b94565839c4288ba",
+  "status": "complete",
+  "evidence_counts": {
+    "train": 32,
+    "test": 50,
+    "negatives": 50,
+    "active_fuzz_positives": 50,
+    "short_windows": 0,
+    "full_budget": true
+  },
+  "sampling_exceptions": [],
+  "updated_at": "2026-10-03T01:19:08.381661+00:00",
+  "explanation": "Adjectives describing the physical size or scale of an entity, such as \"small,\" \"large,\" \"big,\" or \"entire,\" often modifying nouns like businesses, spaces, or objects.",
+  "title": "Size and Scale Adjectives",
+  "label": "Size and Scale Adjectives",
+  "methods": {
+    "intruder": {
+      "status": "complete",
+      "metrics": {
+        "total": 20,
+        "valid": 20,
+        "parse_failures": 0,
+        "correct": 15,
+        "accuracy": 0.75,
+        "accuracy_ci95": [
+          0.531299122381256,
+          0.8881382985923343
+        ],
+        "chance": 0.2
+      }
+    },
+    "active_fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 39,
+        "tn": 50,
+        "fp": 0,
+        "fn": 11,
+        "accuracy": 0.89,
+        "f1": 0.8764044943820225,
+        "balanced_accuracy": 0.89,
+        "accuracy_ci95": [
+          0.8136870349691969,
+          0.9374580364293543
+        ]
+      }
+    },
+    "fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 38,
+        "tn": 50,
+        "fp": 0,
+        "fn": 12,
+        "accuracy": 0.88,
+        "f1": 0.8636363636363636,
+        "balanced_accuracy": 0.88,
+        "accuracy_ci95": [
+          0.8018790057328857,
+          0.9300059356298052
+        ]
+      }
+    },
+    "detection": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 39,
+        "tn": 50,
+        "fp": 0,
+        "fn": 11,
+        "accuracy": 0.89,
+        "f1": 0.8764044943820225,
+        "balanced_accuracy": 0.89,
+        "accuracy_ci95": [
+          0.8136870349691969,
+          0.9374580364293543
+        ]
+      }
+    }
+  }
+}

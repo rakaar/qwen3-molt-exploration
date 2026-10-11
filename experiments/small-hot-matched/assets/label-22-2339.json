@@ -1,0 +1,97 @@
+{
+  "id": 2339,
+  "rank": 32,
+  "count": 18538,
+  "frequency": 0.0018538,
+  "maximum": 3.0625,
+  "mean_active": 1.3787816762924194,
+  "fingerprint": "13d6419597ba18593c511c276ea35a55ddda0ae1575eae79864bd92ca573f545",
+  "status": "complete",
+  "evidence_counts": {
+    "train": 32,
+    "test": 50,
+    "negatives": 50,
+    "active_fuzz_positives": 50,
+    "short_windows": 0,
+    "full_budget": true
+  },
+  "sampling_exceptions": [],
+  "updated_at": "2026-09-19T01:06:07.502976+00:00",
+  "explanation": "Adjectives describing small size, brevity, or minor quantity, often modifying nouns or appearing in idiomatic phrases.",
+  "title": "Small-Size Adjectives and Idiomatic Phrases",
+  "label": "Small-Size Adjectives and Idiomatic Phrases",
+  "methods": {
+    "intruder": {
+      "status": "complete",
+      "metrics": {
+        "total": 20,
+        "valid": 20,
+        "parse_failures": 0,
+        "correct": 12,
+        "accuracy": 0.6,
+        "accuracy_ci95": [
+          0.3865815007622531,
+          0.781193467627183
+        ],
+        "chance": 0.2
+      }
+    },
+    "active_fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 37,
+        "tn": 50,
+        "fp": 0,
+        "fn": 13,
+        "accuracy": 0.87,
+        "f1": 0.8505747126436781,
+        "balanced_accuracy": 0.87,
+        "accuracy_ci95": [
+          0.7901964855992357,
+          0.9224283257275948
+        ]
+      }
+    },
+    "detection": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 28,
+        "tn": 50,
+        "fp": 0,
+        "fn": 22,
+        "accuracy": 0.78,
+        "f1": 0.717948717948718,
+        "balanced_accuracy": 0.78,
+        "accuracy_ci95": [
+          0.6892964648501421,
+          0.8499871761539459
+        ]
+      }
+    },
+    "fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 36,
+        "tn": 50,
+        "fp": 0,
+        "fn": 14,
+        "accuracy": 0.86,
+        "f1": 0.8372093023255814,
+        "balanced_accuracy": 0.86,
+        "accuracy_ci95": [
+          0.7786281178903616,
+          0.9147365634006086
+        ]
+      }
+    }
+  }
+}

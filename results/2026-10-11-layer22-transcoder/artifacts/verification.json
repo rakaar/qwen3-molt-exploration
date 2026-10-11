@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "audited_trace_count": 13,
+  "traces": [
+    {
+      "key": "zero_delta",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 2.042612823674461e-12
+    },
+    {
+      "key": "self_patch",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 2.042612823674461e-12
+    },
+    {
+      "key": "primary/whole-native-mlp22/control/combined/1/0",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 5.439965752168652e-12
+    },
+    {
+      "key": "primary/whole-tc22-features/control/combined/1/1",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 7.834025962660807e-12
+    },
+    {
+      "key": "primary/molt22-pair/control/combined/4.5/2",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 0.9982694387435913
+    },
+    {
+      "key": "chosen_repeat",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 0.9914159178733826
+    },
+    {
+      "key": "primary/pair-38866-85454/control/suppress_only/13.5/456",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 1.125084025943579e-07
+    },
+    {
+      "key": "primary/pair-38866-85454/control/inject_only/13.5/457",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 0.00018283857207279652
+    },
+    {
+      "key": "primary/random-norm-matched/control/combined/13.5/458",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 3.972235301102911e-12
+    },
+    {
+      "key": "heldout-0/pair-38866-85454/coupled/combined/13.5/459",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 0.679171085357666
+    },
+    {
+      "key": "heldout-1/pair-38866-85454/coupled/combined/13.5/460",
+      "position": 12,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 0.14804650843143463
+    },
+    {
+      "key": "heldout-2/pair-38866-85454/coupled/combined/13.5/461",
+      "position": 9,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 0.0011695083230733871
+    },
+    {
+      "key": "heldout-3/pair-38866-85454/coupled/combined/13.5/462",
+      "position": 12,
+      "other_positions_exactly_unchanged": true,
+      "written_delta_exact_after_dtype_rounding": true,
+      "P_cold_recomputed_from_logits": 0.9819964170455933
+    }
+  ],
+  "selected_delta_independently_reconstructed": true,
+  "selected_delta_max_fp32_difference": 0.0,
+  "zero_and_self_logits_bitwise_equal_to_native": true,
+  "downstream_attention_patterns_changed": true,
+  "source_code_sha256": "61d4937d129c87d42ba10235ef36b48ce7f7c9a6f2230fd444b0c1d02c3acff0"
+}

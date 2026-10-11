@@ -1,0 +1,97 @@
+{
+  "id": 612,
+  "rank": 64,
+  "count": 6946,
+  "frequency": 0.0006946,
+  "maximum": 2.296875,
+  "mean_active": 1.0081363916397095,
+  "fingerprint": "cd112ef0d111d832521e69a026e384599a480e8d61ded56a9cf47567f015005f",
+  "status": "complete",
+  "evidence_counts": {
+    "train": 32,
+    "test": 50,
+    "negatives": 50,
+    "active_fuzz_positives": 50,
+    "short_windows": 0,
+    "full_budget": true
+  },
+  "sampling_exceptions": [],
+  "updated_at": "2026-10-01T21:31:03.452889+00:00",
+  "explanation": "The token \"small\" or \"smaller\" appears frequently, often modifying nouns related to business, physical objects, or tasks.",
+  "title": "Frequent \"small\" or \"smaller\" noun modification",
+  "label": "Frequent \"small\" or \"smaller\" noun modification",
+  "methods": {
+    "intruder": {
+      "status": "complete",
+      "metrics": {
+        "total": 20,
+        "valid": 20,
+        "parse_failures": 0,
+        "correct": 12,
+        "accuracy": 0.6,
+        "accuracy_ci95": [
+          0.3865815007622531,
+          0.781193467627183
+        ],
+        "chance": 0.2
+      }
+    },
+    "active_fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 22,
+        "tn": 50,
+        "fp": 0,
+        "fn": 28,
+        "accuracy": 0.72,
+        "f1": 0.6111111111111112,
+        "balanced_accuracy": 0.72,
+        "accuracy_ci95": [
+          0.6251197129007884,
+          0.7986031478881379
+        ]
+      }
+    },
+    "fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 22,
+        "tn": 50,
+        "fp": 0,
+        "fn": 28,
+        "accuracy": 0.72,
+        "f1": 0.6111111111111112,
+        "balanced_accuracy": 0.72,
+        "accuracy_ci95": [
+          0.6251197129007884,
+          0.7986031478881379
+        ]
+      }
+    },
+    "detection": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 22,
+        "tn": 49,
+        "fp": 1,
+        "fn": 28,
+        "accuracy": 0.71,
+        "f1": 0.6027397260273972,
+        "balanced_accuracy": 0.71,
+        "accuracy_ci95": [
+          0.6146110882442888,
+          0.7898516425087772
+        ]
+      }
+    }
+  }
+}

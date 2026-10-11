@@ -1,0 +1,256 @@
+{
+  "verdict": "Yes: a single layer can reach at least 99% P(cold).",
+  "best": {
+    "key": "primary/ranked-small3-hot3/coupled/combined/6.104166507720947/392",
+    "prompt_id": "primary",
+    "group": "ranked-small3-hot3",
+    "mode": "coupled",
+    "component": "combined",
+    "strength": 6.104166507720947,
+    "layer": 22,
+    "position": 9,
+    "delta_norm": 101.96025848388672,
+    "P_cold": 0.9992865920066833,
+    "P_large": 8.526960242511854e-17,
+    "P_Cold": 0.0007096677436493337,
+    "P_space_cold": 1.5523919500992633e-06,
+    "top_token": "cold",
+    "top_tokens": [
+      {
+        "id": 87072,
+        "text": "cold",
+        "probability": 0.9992865920066833
+      },
+      {
+        "id": 76418,
+        "text": "Cold",
+        "probability": 0.0007096677436493337
+      },
+      {
+        "id": 9255,
+        "text": " cold",
+        "probability": 1.5523919500992633e-06
+      },
+      {
+        "id": 42196,
+        "text": "cool",
+        "probability": 1.2090040399925783e-06
+      },
+      {
+        "id": 99476,
+        "text": "\u51b7",
+        "probability": 8.309355052915635e-07
+      },
+      {
+        "id": 66,
+        "text": "c",
+        "probability": 6.820734199664003e-08
+      },
+      {
+        "id": 10303,
+        "text": "low",
+        "probability": 2.2143680666886212e-08
+      },
+      {
+        "id": 56750,
+        "text": "Cool",
+        "probability": 2.3339268295785587e-09
+      }
+    ],
+    "stage": "local_peak_refinement"
+  },
+  "best_pair": {
+    "key": "primary/pair-38866-85454/coupled/combined/19.5/446",
+    "prompt_id": "primary",
+    "group": "pair-38866-85454",
+    "mode": "coupled",
+    "component": "combined",
+    "strength": 19.5,
+    "layer": 22,
+    "position": 9,
+    "delta_norm": 187.6070556640625,
+    "P_cold": 0.9975233674049377,
+    "P_large": 8.682389253085801e-15,
+    "P_Cold": 0.002472613239660859,
+    "P_space_cold": 2.2547314983967226e-06,
+    "top_token": "cold",
+    "top_tokens": [
+      {
+        "id": 87072,
+        "text": "cold",
+        "probability": 0.9975233674049377
+      },
+      {
+        "id": 76418,
+        "text": "Cold",
+        "probability": 0.002472613239660859
+      },
+      {
+        "id": 9255,
+        "text": " cold",
+        "probability": 2.2547314983967226e-06
+      },
+      {
+        "id": 99476,
+        "text": "\u51b7",
+        "probability": 1.5496528931180364e-06
+      },
+      {
+        "id": 42196,
+        "text": "cool",
+        "probability": 2.0972268544028339e-07
+      },
+      {
+        "id": 66,
+        "text": "c",
+        "probability": 2.5047802054700696e-08
+      },
+      {
+        "id": 10622,
+        "text": "hot",
+        "probability": 1.0441477904521435e-08
+      },
+      {
+        "id": 23185,
+        "text": " Cold",
+        "probability": 3.389851732649163e-09
+      }
+    ],
+    "stage": "local_peak_refinement"
+  },
+  "selected": {
+    "key": "primary/pair-38866-85454/coupled/combined/13.5/434",
+    "prompt_id": "primary",
+    "group": "pair-38866-85454",
+    "mode": "coupled",
+    "component": "combined",
+    "strength": 13.5,
+    "layer": 22,
+    "position": 9,
+    "delta_norm": 129.88180541992188,
+    "P_cold": 0.9914160370826721,
+    "P_large": 8.8020546797421e-13,
+    "P_Cold": 0.008577429689466953,
+    "P_space_cold": 4.744042144011473e-06,
+    "top_token": "cold",
+    "top_tokens": [
+      {
+        "id": 87072,
+        "text": "cold",
+        "probability": 0.9914160370826721
+      },
+      {
+        "id": 76418,
+        "text": "Cold",
+        "probability": 0.008577429689466953
+      },
+      {
+        "id": 9255,
+        "text": " cold",
+        "probability": 4.744042144011473e-06
+      },
+      {
+        "id": 99476,
+        "text": "\u51b7",
+        "probability": 1.745235522321309e-06
+      },
+      {
+        "id": 42196,
+        "text": "cool",
+        "probability": 8.689016084417744e-08
+      },
+      {
+        "id": 23185,
+        "text": " Cold",
+        "probability": 1.5099246297722857e-08
+      },
+      {
+        "id": 66,
+        "text": "c",
+        "probability": 1.0377550374585098e-08
+      },
+      {
+        "id": 10622,
+        "text": "hot",
+        "probability": 6.294302412612751e-09
+      }
+    ],
+    "stage": "local_peak_refinement"
+  },
+  "selected_group": {
+    "name": "pair-38866-85454",
+    "small": [
+      38866
+    ],
+    "hot": [
+      85454
+    ],
+    "n_features": 2
+  },
+  "molt_control": {
+    "key": "primary/molt22-pair/control/combined/4.5/2",
+    "prompt_id": "primary",
+    "group": "molt22-pair",
+    "mode": "control",
+    "component": "combined",
+    "strength": 4.5,
+    "layer": 22,
+    "position": 9,
+    "delta_norm": 64.57957458496094,
+    "P_cold": 0.9982693195343018,
+    "P_large": 1.3153710065605395e-10,
+    "P_Cold": 0.0005521271377801895,
+    "P_space_cold": 6.950255283300066e-06,
+    "top_token": "cold",
+    "top_tokens": [
+      {
+        "id": 87072,
+        "text": "cold",
+        "probability": 0.9982693195343018
+      },
+      {
+        "id": 10303,
+        "text": "low",
+        "probability": 0.0011688531376421452
+      },
+      {
+        "id": 76418,
+        "text": "Cold",
+        "probability": 0.0005521271377801895
+      },
+      {
+        "id": 9255,
+        "text": " cold",
+        "probability": 6.950255283300066e-06
+      },
+      {
+        "id": 42196,
+        "text": "cool",
+        "probability": 1.2077732662874041e-06
+      },
+      {
+        "id": 99476,
+        "text": "\u51b7",
+        "probability": 1.0658561677701073e-06
+      },
+      {
+        "id": 24187,
+        "text": "Low",
+        "probability": 8.749080393499753e-08
+      },
+      {
+        "id": 13855,
+        "text": "bad",
+        "probability": 8.749080393499753e-08
+      }
+    ],
+    "small_ids": [
+      2339
+    ],
+    "hot_ids": [
+      941
+    ]
+  },
+  "trial_count": 463,
+  "group_count": 14
+}
