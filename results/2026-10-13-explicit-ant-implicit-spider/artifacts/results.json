@@ -1,0 +1,6383 @@
+{
+  "protocol": {
+    "base_repo": "Qwen/Qwen3-4B",
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_repo": "georglange/qwen3-4b-molt",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "attention": "unfrozen eager",
+    "dtype": "BF16",
+    "patch": "original receiver MLP output + strength * (full donor MOLT contribution - full receiver MOLT contribution)",
+    "gate_only": "original receiver MLP output + strength * (donor gate - receiver gate) * receiver low-rank output",
+    "ablation": "original receiver MLP output - strength * receiver MOLT contribution",
+    "interpretation": "Shared arthropod/animal labels are hypotheses, not dedicated spider or ant representations. All direct edits are confined to one layer and one position per trial.",
+    "features": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "role": "ant_insect",
+        "label": "Small Invertebrate and Insect Token Gate",
+        "rank": 32,
+        "summary_sha256": "72f684dd0d556504fd6730bffeac9f6e97b8927a4f8b3f5300914e5c6af03f3b",
+        "dashboard_checkpoint_step": 100000
+      }
+    ],
+    "primary_pair": "implicit_spider_explicit_ant",
+    "pairs": [
+      {
+        "id": "implicit_spider_explicit_ant",
+        "split": "primary",
+        "receiver": "How many legs does the animal that weaves webs have? Reply with only one digit.",
+        "donor": "How many legs does an ant have? Reply with only one digit.",
+        "receiver_cue": "webs",
+        "donor_cue": "ant"
+      },
+      {
+        "id": "explicit_spider_ant",
+        "split": "diagnostic",
+        "receiver": "How many legs does a spider have? Reply with only one digit.",
+        "donor": "How many legs does an ant have? Reply with only one digit.",
+        "receiver_cue": "spider",
+        "donor_cue": "ant"
+      },
+      {
+        "id": "web_anthill",
+        "split": "diagnostic",
+        "receiver": "How many legs does the animal that weaves webs have? Reply with only one digit.",
+        "donor": "How many legs does the animal that builds anthills have? Reply with only one digit.",
+        "receiver_cue": "webs",
+        "donor_cue": "anthills"
+      },
+      {
+        "id": "silk_spider_explicit_ant",
+        "split": "heldout",
+        "receiver": "How many legs does the animal that spins silk webs have? Reply with only one digit.",
+        "donor": "How many legs does an ant have? Reply with only one digit.",
+        "receiver_cue": "webs",
+        "donor_cue": "ant"
+      }
+    ],
+    "controls": [
+      {
+        "id": "bee",
+        "text": "How many legs does a bee have? Reply with only one digit.",
+        "cue": "bee",
+        "expected": "6"
+      },
+      {
+        "id": "scorpion",
+        "text": "How many legs does a scorpion have? Reply with only one digit.",
+        "cue": "scorpion",
+        "expected": "8"
+      },
+      {
+        "id": "cow",
+        "text": "How many legs does a cow have? Reply with only one digit.",
+        "cue": "cow",
+        "expected": "4"
+      },
+      {
+        "id": "antique",
+        "text": "Explain the meaning of the word antique.",
+        "cue": "antique",
+        "expected": null
+      }
+    ],
+    "strengths": [
+      0,
+      1,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      64
+    ],
+    "control_strengths": [
+      1,
+      32
+    ],
+    "sites": [
+      "cue_end"
+    ],
+    "heldout_policy": "Fixed strengths 1 and 32 plus best primary strength, selected without observing heldout outcomes.",
+    "feature_selection": "L3-T2309 fixed by user request before observing this cross-prompt result.",
+    "pause_after_baseline": false,
+    "budget_ceiling_usd": 5,
+    "max_runtime_minutes": 20,
+    "random_controls": {
+      "strength": 32,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "attention": "unfrozen eager",
+    "dtype": "BF16"
+  },
+  "code_sha256": "6850782c54bf6cd0b27b7d328309a55b11c214c547dd98794d3f6b75fc1b3fa7",
+  "number_token_ids": {
+    "6": 21,
+    "8": 23,
+    "4": 19
+  },
+  "baselines": {
+    "implicit_spider_explicit_ant_receiver": {
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 12,
+        "readout": 29,
+        "question_end": 14,
+        "have": 13
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 8,
+          "id": 9864,
+          "text": " animal"
+        },
+        {
+          "position": 9,
+          "id": 429,
+          "text": " that"
+        },
+        {
+          "position": 10,
+          "id": 582,
+          "text": " we"
+        },
+        {
+          "position": 11,
+          "id": 4693,
+          "text": "aves"
+        },
+        {
+          "position": 12,
+          "id": 80920,
+          "text": " webs"
+        },
+        {
+          "position": 13,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 14,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 15,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 16,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 17,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 18,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 19,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 20,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 21,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 24,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 25,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 26,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 27,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 28,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 29,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does the animal that weaves webs have? Reply with only one digit.",
+      "logits_index": 0
+    },
+    "implicit_spider_explicit_ant_donor": {
+      "P6": 0.9999996423721313,
+      "P8": 1.8553907921159407e-07,
+      "P4": 7.734418971949708e-08,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999996423721313
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.8553907921159407e-07
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 7.734418971949708e-08
+        },
+        {
+          "id": 20335,
+          "text": "Hex",
+          "probability": 5.602794228565244e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 4.944448406263291e-09
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 458,
+          "text": " an"
+        },
+        {
+          "position": 8,
+          "id": 3196,
+          "text": " ant"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does an ant have? Reply with only one digit.",
+      "logits_index": 1
+    },
+    "explicit_spider_ant_receiver": {
+      "P6": 1.9555681518568235e-08,
+      "P8": 1.0,
+      "P4": 1.1861120086109622e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 1.9555681518568235e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.1861120086109622e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.646573848963385e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 2.061153470123145e-09
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 34354,
+          "text": " spider"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a spider have? Reply with only one digit.",
+      "logits_index": 2
+    },
+    "explicit_spider_ant_donor": {
+      "P6": 0.9999996423721313,
+      "P8": 1.8553907921159407e-07,
+      "P4": 7.734418971949708e-08,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999996423721313
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.8553907921159407e-07
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 7.734418971949708e-08
+        },
+        {
+          "id": 20335,
+          "text": "Hex",
+          "probability": 5.602794228565244e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 4.944448406263291e-09
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 458,
+          "text": " an"
+        },
+        {
+          "position": 8,
+          "id": 3196,
+          "text": " ant"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does an ant have? Reply with only one digit.",
+      "logits_index": 3
+    },
+    "web_anthill_receiver": {
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 12,
+        "readout": 29,
+        "question_end": 14,
+        "have": 13
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 8,
+          "id": 9864,
+          "text": " animal"
+        },
+        {
+          "position": 9,
+          "id": 429,
+          "text": " that"
+        },
+        {
+          "position": 10,
+          "id": 582,
+          "text": " we"
+        },
+        {
+          "position": 11,
+          "id": 4693,
+          "text": "aves"
+        },
+        {
+          "position": 12,
+          "id": 80920,
+          "text": " webs"
+        },
+        {
+          "position": 13,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 14,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 15,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 16,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 17,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 18,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 19,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 20,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 21,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 24,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 25,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 26,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 27,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 28,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 29,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does the animal that weaves webs have? Reply with only one digit.",
+      "logits_index": 4
+    },
+    "web_anthill_donor": {
+      "P6": 0.9819040894508362,
+      "P8": 0.00047926275874488056,
+      "P4": 0.0035412991419434547,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9819040894508362
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.007496929727494717
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0035412991419434547
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.003125185612589121
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.0027579667512327433
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 12,
+        "readout": 29,
+        "question_end": 14,
+        "have": 13
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 8,
+          "id": 9864,
+          "text": " animal"
+        },
+        {
+          "position": 9,
+          "id": 429,
+          "text": " that"
+        },
+        {
+          "position": 10,
+          "id": 22111,
+          "text": " builds"
+        },
+        {
+          "position": 11,
+          "id": 22268,
+          "text": " anth"
+        },
+        {
+          "position": 12,
+          "id": 3305,
+          "text": "ills"
+        },
+        {
+          "position": 13,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 14,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 15,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 16,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 17,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 18,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 19,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 20,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 21,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 24,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 25,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 26,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 27,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 28,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 29,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does the animal that builds anthills have? Reply with only one digit.",
+      "logits_index": 5
+    },
+    "silk_spider_explicit_ant_receiver": {
+      "P6": 6.825602838489431e-08,
+      "P8": 0.9999998807907104,
+      "P4": 2.06115324807854e-09,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999998807907104
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 6.825602838489431e-08
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 1.7257827167327378e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 1.7257827167327378e-08
+        },
+        {
+          "id": 785,
+          "text": "The",
+          "probability": 1.3440407897746809e-08
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 12,
+        "readout": 29,
+        "question_end": 14,
+        "have": 13
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 8,
+          "id": 9864,
+          "text": " animal"
+        },
+        {
+          "position": 9,
+          "id": 429,
+          "text": " that"
+        },
+        {
+          "position": 10,
+          "id": 44758,
+          "text": " spins"
+        },
+        {
+          "position": 11,
+          "id": 39944,
+          "text": " silk"
+        },
+        {
+          "position": 12,
+          "id": 80920,
+          "text": " webs"
+        },
+        {
+          "position": 13,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 14,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 15,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 16,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 17,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 18,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 19,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 20,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 21,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 24,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 25,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 26,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 27,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 28,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 29,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does the animal that spins silk webs have? Reply with only one digit.",
+      "logits_index": 6
+    },
+    "silk_spider_explicit_ant_donor": {
+      "P6": 0.9999996423721313,
+      "P8": 1.8553907921159407e-07,
+      "P4": 7.734418971949708e-08,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999996423721313
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.8553907921159407e-07
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 7.734418971949708e-08
+        },
+        {
+          "id": 20335,
+          "text": "Hex",
+          "probability": 5.602794228565244e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 4.944448406263291e-09
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 458,
+          "text": " an"
+        },
+        {
+          "position": 8,
+          "id": 3196,
+          "text": " ant"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does an ant have? Reply with only one digit.",
+      "logits_index": 7
+    },
+    "control_bee": {
+      "P6": 0.9999988079071045,
+      "P8": 2.6995752477887436e-07,
+      "P4": 9.422443554285564e-07,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999988079071045
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 9.422443554285564e-07
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 2.6995752477887436e-07
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 3.8507375066387795e-09
+        },
+        {
+          "id": 20335,
+          "text": "Hex",
+          "probability": 3.3982638925067477e-09
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 37228,
+          "text": " bee"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a bee have? Reply with only one digit.",
+      "logits_index": 8
+    },
+    "control_scorpion": {
+      "P6": 2.998960413336249e-09,
+      "P8": 0.9999998807907104,
+      "P4": 4.691163724146463e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999998807907104
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 4.691163724146463e-08
+        },
+        {
+          "id": 99568,
+          "text": "\u516b",
+          "probability": 2.8453344569356886e-08
+        },
+        {
+          "id": 59085,
+          "text": "Eight",
+          "probability": 2.510998697857758e-08
+        },
+        {
+          "id": 31459,
+          "text": "August",
+          "probability": 2.510998697857758e-08
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 9,
+        "readout": 26,
+        "question_end": 11,
+        "have": 10
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 1136,
+          "text": " sc"
+        },
+        {
+          "position": 9,
+          "id": 72475,
+          "text": "orpion"
+        },
+        {
+          "position": 10,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 11,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 12,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 13,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 14,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 15,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 16,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 17,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 18,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 19,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 20,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 21,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 24,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 25,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 26,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a scorpion have? Reply with only one digit.",
+      "logits_index": 9
+    },
+    "control_cow": {
+      "P6": 7.582560135332983e-10,
+      "P8": 5.4927885156930145e-11,
+      "P4": 1.0,
+      "top_token": "4",
+      "top_tokens": [
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.0
+        },
+        {
+          "id": 26972,
+          "text": "Four",
+          "probability": 1.7257828943684217e-08
+        },
+        {
+          "id": 34024,
+          "text": "four",
+          "probability": 8.152020392060422e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 4.363462480228009e-09
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 4.363462480228009e-09
+        }
+      ],
+      "generation": "4",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 19362,
+          "text": " cow"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a cow have? Reply with only one digit.",
+      "logits_index": 10
+    },
+    "control_antique": {
+      "P6": 2.2040171586784075e-18,
+      "P8": 2.3230170676602995e-19,
+      "P4": 4.383211454354711e-18,
+      "top_token": "The",
+      "top_tokens": [
+        {
+          "id": 785,
+          "text": "The",
+          "probability": 1.0
+        },
+        {
+          "id": 95456,
+          "text": "Certainly",
+          "probability": 5.315785500670245e-08
+        },
+        {
+          "id": 334,
+          "text": "**",
+          "probability": 1.1861120086109622e-08
+        },
+        {
+          "id": 10022,
+          "text": "\"The",
+          "probability": 2.646573848963385e-09
+        },
+        {
+          "id": 576,
+          "text": " The",
+          "probability": 2.646573848963385e-09
+        }
+      ],
+      "generation": null,
+      "sites": {
+        "cue_end": 10,
+        "readout": 20
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 840,
+          "text": "Ex"
+        },
+        {
+          "position": 4,
+          "id": 20772,
+          "text": "plain"
+        },
+        {
+          "position": 5,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 6,
+          "id": 7290,
+          "text": " meaning"
+        },
+        {
+          "position": 7,
+          "id": 315,
+          "text": " of"
+        },
+        {
+          "position": 8,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 9,
+          "id": 3409,
+          "text": " word"
+        },
+        {
+          "position": 10,
+          "id": 46591,
+          "text": " antique"
+        },
+        {
+          "position": 11,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 12,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 13,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 14,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 15,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 16,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 17,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 18,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 19,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 20,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "Explain the meaning of the word antique.",
+      "logits_index": 11
+    }
+  },
+  "activation_maps": {
+    "implicit_spider_explicit_ant_receiver": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 3.0653862953186035
+          },
+          {
+            "id": 464,
+            "gate": 1.4263627529144287
+          },
+          {
+            "id": 217,
+            "gate": 1.057661771774292
+          },
+          {
+            "id": 135,
+            "gate": 0.0
+          },
+          {
+            "id": 5,
+            "gate": -0.0
+          },
+          {
+            "id": 2,
+            "gate": -0.0
+          },
+          {
+            "id": 4,
+            "gate": -0.0
+          },
+          {
+            "id": 3,
+            "gate": -0.0
+          },
+          {
+            "id": 0,
+            "gate": -0.0
+          },
+          {
+            "id": 1,
+            "gate": -0.0
+          }
+        ]
+      }
+    ],
+    "implicit_spider_explicit_ant_donor": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          1.339556336402893,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": 1.339556336402893,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 3.606323480606079,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 2.5441665649414062
+          },
+          {
+            "id": 1515,
+            "gate": 2.202244997024536
+          },
+          {
+            "id": 2309,
+            "gate": 1.339556336402893
+          },
+          {
+            "id": 2038,
+            "gate": 0.9891209006309509
+          },
+          {
+            "id": 1590,
+            "gate": 0.7687480449676514
+          },
+          {
+            "id": 587,
+            "gate": 0.0
+          },
+          {
+            "id": 1412,
+            "gate": 0.0
+          },
+          {
+            "id": 514,
+            "gate": 0.0
+          },
+          {
+            "id": 92,
+            "gate": 0.0
+          },
+          {
+            "id": 135,
+            "gate": 0.0
+          }
+        ]
+      }
+    ],
+    "explicit_spider_ant_receiver": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 2.913484573364258
+          },
+          {
+            "id": 135,
+            "gate": 2.338618755340576
+          },
+          {
+            "id": 1412,
+            "gate": 1.2596086263656616
+          },
+          {
+            "id": 2182,
+            "gate": 1.0556788444519043
+          },
+          {
+            "id": 2072,
+            "gate": 0.0
+          },
+          {
+            "id": 1,
+            "gate": -0.0
+          },
+          {
+            "id": 2,
+            "gate": -0.0
+          },
+          {
+            "id": 3,
+            "gate": -0.0
+          },
+          {
+            "id": 2143,
+            "gate": 0.0
+          },
+          {
+            "id": 0,
+            "gate": -0.0
+          }
+        ]
+      }
+    ],
+    "explicit_spider_ant_donor": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          1.339556336402893,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": 1.339556336402893,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 3.606323480606079,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 2.5441665649414062
+          },
+          {
+            "id": 1515,
+            "gate": 2.202244997024536
+          },
+          {
+            "id": 2309,
+            "gate": 1.339556336402893
+          },
+          {
+            "id": 2038,
+            "gate": 0.9891209006309509
+          },
+          {
+            "id": 1590,
+            "gate": 0.7687480449676514
+          },
+          {
+            "id": 587,
+            "gate": 0.0
+          },
+          {
+            "id": 1412,
+            "gate": 0.0
+          },
+          {
+            "id": 514,
+            "gate": 0.0
+          },
+          {
+            "id": 92,
+            "gate": 0.0
+          },
+          {
+            "id": 135,
+            "gate": 0.0
+          }
+        ]
+      }
+    ],
+    "web_anthill_receiver": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 3.0653862953186035
+          },
+          {
+            "id": 464,
+            "gate": 1.4263627529144287
+          },
+          {
+            "id": 217,
+            "gate": 1.057661771774292
+          },
+          {
+            "id": 135,
+            "gate": 0.0
+          },
+          {
+            "id": 5,
+            "gate": -0.0
+          },
+          {
+            "id": 2,
+            "gate": -0.0
+          },
+          {
+            "id": 4,
+            "gate": -0.0
+          },
+          {
+            "id": 3,
+            "gate": -0.0
+          },
+          {
+            "id": 0,
+            "gate": -0.0
+          },
+          {
+            "id": 1,
+            "gate": -0.0
+          }
+        ]
+      }
+    ],
+    "web_anthill_donor": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.7563585042953491,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 2.761484146118164
+          },
+          {
+            "id": 250,
+            "gate": 1.478438138961792
+          },
+          {
+            "id": 2143,
+            "gate": 0.8377735018730164
+          },
+          {
+            "id": 236,
+            "gate": 0.5796876549720764
+          },
+          {
+            "id": 1036,
+            "gate": 0.0
+          },
+          {
+            "id": 352,
+            "gate": 0.0
+          },
+          {
+            "id": 1038,
+            "gate": 0.0
+          },
+          {
+            "id": 1230,
+            "gate": 0.0
+          },
+          {
+            "id": 59,
+            "gate": 0.0
+          },
+          {
+            "id": 93,
+            "gate": 0.0
+          }
+        ]
+      }
+    ],
+    "silk_spider_explicit_ant_receiver": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 2.880405902862549
+          },
+          {
+            "id": 464,
+            "gate": 1.6364951133728027
+          },
+          {
+            "id": 217,
+            "gate": 0.9356115460395813
+          },
+          {
+            "id": 135,
+            "gate": 0.871700644493103
+          },
+          {
+            "id": 2,
+            "gate": -0.0
+          },
+          {
+            "id": 1,
+            "gate": -0.0
+          },
+          {
+            "id": 3,
+            "gate": -0.0
+          },
+          {
+            "id": 4,
+            "gate": -0.0
+          },
+          {
+            "id": 1757,
+            "gate": 0.0
+          },
+          {
+            "id": 0,
+            "gate": -0.0
+          }
+        ]
+      }
+    ],
+    "silk_spider_explicit_ant_donor": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          1.339556336402893,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": 1.339556336402893,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 3.606323480606079,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 2.5441665649414062
+          },
+          {
+            "id": 1515,
+            "gate": 2.202244997024536
+          },
+          {
+            "id": 2309,
+            "gate": 1.339556336402893
+          },
+          {
+            "id": 2038,
+            "gate": 0.9891209006309509
+          },
+          {
+            "id": 1590,
+            "gate": 0.7687480449676514
+          },
+          {
+            "id": 587,
+            "gate": 0.0
+          },
+          {
+            "id": 1412,
+            "gate": 0.0
+          },
+          {
+            "id": 514,
+            "gate": 0.0
+          },
+          {
+            "id": 92,
+            "gate": 0.0
+          },
+          {
+            "id": 135,
+            "gate": 0.0
+          }
+        ]
+      }
+    ],
+    "control_bee": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 2.7487170696258545
+          },
+          {
+            "id": 1239,
+            "gate": 2.746857166290283
+          },
+          {
+            "id": 1877,
+            "gate": 2.444871187210083
+          },
+          {
+            "id": 1412,
+            "gate": 0.6163679361343384
+          },
+          {
+            "id": 587,
+            "gate": 0.0
+          },
+          {
+            "id": 494,
+            "gate": 0.0
+          },
+          {
+            "id": 1,
+            "gate": -0.0
+          },
+          {
+            "id": 2,
+            "gate": -0.0
+          },
+          {
+            "id": 739,
+            "gate": 0.0
+          },
+          {
+            "id": 0,
+            "gate": -0.0
+          }
+        ]
+      }
+    ],
+    "control_scorpion": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 1951,
+            "gate": 3.69329833984375
+          },
+          {
+            "id": 116,
+            "gate": 2.497924566268921
+          },
+          {
+            "id": 1584,
+            "gate": 1.506455659866333
+          },
+          {
+            "id": 135,
+            "gate": 1.3435553312301636
+          },
+          {
+            "id": 968,
+            "gate": 0.968742847442627
+          },
+          {
+            "id": 1263,
+            "gate": 0.8098134994506836
+          },
+          {
+            "id": 2143,
+            "gate": 0.6246923804283142
+          },
+          {
+            "id": 587,
+            "gate": 0.0
+          },
+          {
+            "id": 491,
+            "gate": 0.0
+          },
+          {
+            "id": 279,
+            "gate": 0.0
+          }
+        ]
+      }
+    ],
+    "control_cow": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0,
+          "question_end": -0.0,
+          "have": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0,
+          "question_end": 0.0,
+          "have": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 116,
+            "gate": 2.667889356613159
+          },
+          {
+            "id": 751,
+            "gate": 1.603803277015686
+          },
+          {
+            "id": 1412,
+            "gate": 0.0
+          },
+          {
+            "id": 587,
+            "gate": 0.0
+          },
+          {
+            "id": 3,
+            "gate": -0.0
+          },
+          {
+            "id": 4,
+            "gate": -0.0
+          },
+          {
+            "id": 2,
+            "gate": -0.0
+          },
+          {
+            "id": 1,
+            "gate": -0.0
+          },
+          {
+            "id": 2072,
+            "gate": 0.0
+          },
+          {
+            "id": 0,
+            "gate": -0.0
+          }
+        ]
+      }
+    ],
+    "control_antique": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "label": "Small Invertebrate and Insect Token Gate",
+        "gates_by_token": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "site_gates": {
+          "cue_end": -0.0,
+          "readout": -0.0
+        },
+        "site_contribution_norms": {
+          "cue_end": 0.0,
+          "readout": 0.0
+        },
+        "cue_top_gates": [
+          {
+            "id": 1515,
+            "gate": 3.2828142642974854
+          },
+          {
+            "id": 116,
+            "gate": 3.0353775024414062
+          },
+          {
+            "id": 1868,
+            "gate": 2.1778676509857178
+          },
+          {
+            "id": 1590,
+            "gate": 2.1394691467285156
+          },
+          {
+            "id": 542,
+            "gate": 1.6949429512023926
+          },
+          {
+            "id": 1044,
+            "gate": 1.2515275478363037
+          },
+          {
+            "id": 718,
+            "gate": 1.021479606628418
+          },
+          {
+            "id": 611,
+            "gate": 0.8449394106864929
+          },
+          {
+            "id": 21,
+            "gate": 0.0
+          },
+          {
+            "id": 587,
+            "gate": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "trials": [
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 0,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 12,
+      "vector_index": 0
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 3.606323480606079,
+      "actual_mlp_change_norm": 3.606802463531494,
+      "P6": 5.42221869181958e-06,
+      "P8": 0.9999945163726807,
+      "P4": 2.8453191802668698e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999945163726807
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 5.42221869181958e-06
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224169020654699e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 2.8453191802668698e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 1.725773479677173e-08
+        }
+      ],
+      "logits_index": 13,
+      "vector_index": 1
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 8,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 28.850587844848633,
+      "actual_mlp_change_norm": 28.85325050354004,
+      "P6": 0.00020222233433742076,
+      "P8": 0.00015749091107863933,
+      "P4": 0.00020222233433742076,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.993876039981842
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.005215382669121027
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.00020222233433742076
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.00020222233433742076
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.00015749091107863933
+        }
+      ],
+      "logits_index": 14,
+      "vector_index": 2
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 16,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 57.701175689697266,
+      "actual_mlp_change_norm": 57.708946228027344,
+      "P6": 0.8507645130157471,
+      "P8": 0.0012790727196261287,
+      "P4": 6.368128379108384e-05,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.8507645130157471
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.1478406935930252
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.0012790727196261287
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 6.368128379108384e-05
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 2.3427035557688214e-05
+        }
+      ],
+      "logits_index": 15,
+      "vector_index": 3
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 24,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 86.55176544189453,
+      "actual_mlp_change_norm": 86.56050109863281,
+      "P6": 0.9999784231185913,
+      "P8": 2.1444946469273418e-05,
+      "P4": 6.825456466685864e-08,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999784231185913
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 2.1444946469273418e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 6.825456466685864e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 3.2241171510349886e-08
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 1.1860864290724749e-08
+        }
+      ],
+      "logits_index": 16,
+      "vector_index": 4
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 32,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 115.40235137939453,
+      "actual_mlp_change_norm": 115.4074478149414,
+      "P6": 0.9999997615814209,
+      "P8": 2.1024332852448424e-07,
+      "P4": 1.344040612138997e-08,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999997615814209
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 2.1024332852448424e-07
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.344040612138997e-08
+        },
+        {
+          "id": 785,
+          "text": "The",
+          "probability": 7.194131512733293e-09
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 7.194131512733293e-09
+        }
+      ],
+      "logits_index": 17,
+      "vector_index": 5
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 40,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 144.25294494628906,
+      "actual_mlp_change_norm": 144.2531280517578,
+      "P6": 0.5621374845504761,
+      "P8": 5.402796159614809e-05,
+      "P4": 5.694505034625763e-06,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.5621374845504761
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.437793105840683
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 5.402796159614809e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 5.694505034625763e-06
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 4.434884885995416e-06
+        }
+      ],
+      "logits_index": 18,
+      "vector_index": 6
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 48,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 173.10353088378906,
+      "actual_mlp_change_norm": 173.10887145996094,
+      "P6": 0.008576237596571445,
+      "P8": 0.00010795889829751104,
+      "P4": 1.004174100671662e-05,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9912782311439514
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.008576237596571445
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.00010795889829751104
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 1.461064675822854e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.004174100671662e-05
+        }
+      ],
+      "logits_index": 19,
+      "vector_index": 7
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 64,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 230.80470275878906,
+      "actual_mlp_change_norm": 230.80990600585938,
+      "P6": 0.00020332894928287715,
+      "P8": 0.00033523276215419173,
+      "P4": 4.536882261163555e-05,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9993147850036621
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.00033523276215419173
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.00020332894928287715
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 5.825471816933714e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 4.536882261163555e-05
+        }
+      ],
+      "logits_index": 20,
+      "vector_index": 8
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "gate_only",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 2.7242848873138428,
+      "actual_mlp_change_norm": 2.7242021560668945,
+      "P6": 5.42221869181958e-06,
+      "P8": 0.9999945163726807,
+      "P4": 2.2159369450491795e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999945163726807
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 5.42221869181958e-06
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 2.2159369450491795e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 2.2159369450491795e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 1.5229897343260745e-08
+        }
+      ],
+      "logits_index": 21,
+      "vector_index": 9
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "gate_only",
+      "strength": 32,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 87.17711639404297,
+      "actual_mlp_change_norm": 87.17076110839844,
+      "P6": 0.9999544620513916,
+      "P8": 4.5397864596452564e-05,
+      "P4": 9.930742805863702e-08,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999544620513916
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 4.5397864596452564e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 9.930742805863702e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 3.2240400571481587e-08
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 1.3439797719172475e-08
+        }
+      ],
+      "logits_index": 22,
+      "vector_index": 10
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "ablate_receiver",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 23,
+      "vector_index": 11
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "ablate_receiver",
+      "strength": 32,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 24,
+      "vector_index": 12
+    },
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "split": "primary",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_mlp_positive_control",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 7.227686882019043,
+      "actual_mlp_change_norm": 7.22752571105957,
+      "P6": 3.726636350620538e-06,
+      "P8": 0.9999954700469971,
+      "P4": 2.2159388990417028e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999954700469971
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 3.726636350620538e-06
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 2.1024243324063718e-07
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 1.8553831182543945e-07
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 1.4449737761879078e-07
+        }
+      ],
+      "logits_index": 25,
+      "vector_index": 13
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 0,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 1.9555681518568235e-08,
+      "P8": 1.0,
+      "P4": 1.1861120086109622e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 1.9555681518568235e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.1861120086109622e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.646573848963385e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 2.061153470123145e-09
+        }
+      ],
+      "logits_index": 26,
+      "vector_index": 14
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 1,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 3.606323480606079,
+      "actual_mlp_change_norm": 3.6058523654937744,
+      "P6": 2.2159490242756874e-08,
+      "P8": 1.0,
+      "P4": 1.5229980832032197e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.2159490242756874e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.5229980832032197e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.646573848963385e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 2.061153470123145e-09
+        }
+      ],
+      "logits_index": 27,
+      "vector_index": 15
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 8,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 28.850587844848633,
+      "actual_mlp_change_norm": 28.85323715209961,
+      "P6": 6.475948453044111e-07,
+      "P8": 0.9999994039535522,
+      "P4": 1.1861112980682265e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999994039535522
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 6.475948453044111e-07
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.1861112980682265e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 1.6052269513622264e-09
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 1.6052269513622264e-09
+        }
+      ],
+      "logits_index": 28,
+      "vector_index": 16
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 16,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 57.701175689697266,
+      "actual_mlp_change_norm": 57.70703887939453,
+      "P6": 4.0063685446511954e-05,
+      "P8": 0.9999598264694214,
+      "P4": 6.825329279536163e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999598264694214
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 4.0063685446511954e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 6.825329279536163e-08
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 1.955489636884522e-08
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 1.343986966162447e-08
+        }
+      ],
+      "logits_index": 29,
+      "vector_index": 17
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 24,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 86.55176544189453,
+      "actual_mlp_change_norm": 86.55159759521484,
+      "P6": 0.00033535005059093237,
+      "P8": 0.9996644258499146,
+      "P4": 1.444495438818194e-07,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9996644258499146
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.00033535005059093237
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.444495438818194e-07
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 2.844380020405879e-08
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 2.5101563494445145e-08
+        }
+      ],
+      "logits_index": 30,
+      "vector_index": 18
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 32,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 115.40235137939453,
+      "actual_mlp_change_norm": 115.40922546386719,
+      "P6": 0.9933009147644043,
+      "P8": 0.006692809052765369,
+      "P4": 4.4210355554241687e-07,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9933009147644043
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.006692809052765369
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 5.385923941503279e-06
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 4.4210355554241687e-07
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 1.6264081637018535e-07
+        }
+      ],
+      "logits_index": 31,
+      "vector_index": 19
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 40,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 144.25294494628906,
+      "actual_mlp_change_norm": 144.25485229492188,
+      "P6": 9.6102237876039e-05,
+      "P8": 1.5533480564045021e-06,
+      "P4": 1.3439092505507233e-08,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9999020099639893
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 9.6102237876039e-05
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.5533480564045021e-06
+        },
+        {
+          "id": 17999,
+          "text": "Zero",
+          "probability": 9.93022197803839e-08
+        },
+        {
+          "id": 2753,
+          "text": "No",
+          "probability": 5.3152646728449326e-08
+        }
+      ],
+      "logits_index": 32,
+      "vector_index": 20
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 48,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 173.10353088378906,
+      "actual_mlp_change_norm": 173.10711669921875,
+      "P6": 7.889223525125999e-06,
+      "P8": 4.785056717082625e-06,
+      "P4": 3.65343559849407e-08,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9999872446060181
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 7.889223525125999e-06
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 4.785056717082625e-06
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 4.139884879350575e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.65343559849407e-08
+        }
+      ],
+      "logits_index": 33,
+      "vector_index": 21
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 64,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 230.80470275878906,
+      "actual_mlp_change_norm": 230.80821228027344,
+      "P6": 1.4738913705514278e-05,
+      "P8": 5.71489749745524e-07,
+      "P4": 2.9022644412179943e-06,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9999806880950928
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 1.4738913705514278e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 2.9022644412179943e-06
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 5.71489749745524e-07
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 5.71489749745524e-07
+        }
+      ],
+      "logits_index": 34,
+      "vector_index": 22
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "gate_only",
+      "strength": 1,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 1.3876374959945679,
+      "actual_mlp_change_norm": 1.387578010559082,
+      "P6": 2.2159490242756874e-08,
+      "P8": 1.0,
+      "P4": 1.7257828943684217e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.2159490242756874e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.7257828943684217e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 3.3982678893096363e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 2.998960857425459e-09
+        }
+      ],
+      "logits_index": 35,
+      "vector_index": 23
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "gate_only",
+      "strength": 32,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 44.40439987182617,
+      "actual_mlp_change_norm": 44.401573181152344,
+      "P6": 6.511250830953941e-05,
+      "P8": 8.812019586912356e-06,
+      "P4": 0.6774673461914062,
+      "top_token": "4",
+      "top_tokens": [
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.6774673461914062
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.3200129270553589
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 0.001018530922010541
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.0007932326989248395
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0004811199614778161
+        }
+      ],
+      "logits_index": 36,
+      "vector_index": 24
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "ablate_receiver",
+      "strength": 1,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 1.9555681518568235e-08,
+      "P8": 1.0,
+      "P4": 1.1861120086109622e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 1.9555681518568235e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.1861120086109622e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.646573848963385e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 2.061153470123145e-09
+        }
+      ],
+      "logits_index": 37,
+      "vector_index": 25
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "ablate_receiver",
+      "strength": 32,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 1.9555681518568235e-08,
+      "P8": 1.0,
+      "P4": 1.1861120086109622e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 1.9555681518568235e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.1861120086109622e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.646573848963385e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 2.061153470123145e-09
+        }
+      ],
+      "logits_index": 38,
+      "vector_index": 26
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_mlp_positive_control",
+      "strength": 1,
+      "receiver_position": 8,
+      "donor_position": 8,
+      "receiver_token": " spider",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 7.599092483520508,
+      "actual_mlp_change_norm": 7.5987067222595215,
+      "P6": 2.510999053129126e-08,
+      "P8": 1.0,
+      "P4": 1.1861120086109622e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.510999053129126e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.1861120086109622e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.335593052293916e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 1.8189616479702408e-09
+        }
+      ],
+      "logits_index": 39,
+      "vector_index": 27
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 0,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 40,
+      "vector_index": 28
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 41,
+      "vector_index": 29
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 8,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 42,
+      "vector_index": 30
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 16,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 43,
+      "vector_index": 31
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 24,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 44,
+      "vector_index": 32
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 32,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 45,
+      "vector_index": 33
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 40,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 46,
+      "vector_index": 34
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 48,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 47,
+      "vector_index": 35
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 64,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 48,
+      "vector_index": 36
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "gate_only",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 49,
+      "vector_index": 37
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "gate_only",
+      "strength": 32,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 50,
+      "vector_index": 38
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "ablate_receiver",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 51,
+      "vector_index": 39
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "ablate_receiver",
+      "strength": 32,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 0.0,
+      "actual_mlp_change_norm": 0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "logits_index": 52,
+      "vector_index": 40
+    },
+    {
+      "pair": "web_anthill",
+      "split": "diagnostic",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_mlp_positive_control",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 12,
+      "receiver_token": " webs",
+      "donor_token": "ills",
+      "receiver_gate": -0.0,
+      "donor_gate": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 0.0,
+      "intended_delta_norm": 7.972091197967529,
+      "actual_mlp_change_norm": 7.971804618835449,
+      "P6": 2.753245280473493e-05,
+      "P8": 0.9998548030853271,
+      "P4": 6.475012241935474e-07,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9998548030853271
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 3.5352368286112323e-05
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.5352368286112323e-05
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 2.753245280473493e-05
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753245280473493e-05
+        }
+      ],
+      "logits_index": 53,
+      "vector_index": 41
+    },
+    {
+      "pair": "silk_spider_explicit_ant",
+      "split": "heldout",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 1,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 3.606323480606079,
+      "actual_mlp_change_norm": 3.6064984798431396,
+      "P6": 9.931193289958173e-08,
+      "P8": 0.9999998807907104,
+      "P4": 2.998960413336249e-09,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999998807907104
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 9.931193289958173e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.2159488466400035e-08
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 1.7257827167327378e-08
+        },
+        {
+          "id": 785,
+          "text": "The",
+          "probability": 1.0467401168057222e-08
+        }
+      ],
+      "logits_index": 54,
+      "vector_index": 42
+    },
+    {
+      "pair": "silk_spider_explicit_ant",
+      "split": "heldout",
+      "layer": 3,
+      "feature": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "site": "cue_end",
+      "method": "full_contribution",
+      "strength": 32,
+      "receiver_position": 12,
+      "donor_position": 8,
+      "receiver_token": " webs",
+      "donor_token": " ant",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.339556336402893,
+      "receiver_contribution_norm": 0.0,
+      "donor_contribution_norm": 3.606323480606079,
+      "intended_delta_norm": 115.40235137939453,
+      "actual_mlp_change_norm": 115.40910339355469,
+      "P6": 0.9987266659736633,
+      "P8": 0.001169388648122549,
+      "P4": 2.4269887944683433e-05,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9987266659736633
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.001169388648122549
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 4.001427805633284e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 2.4269887944683433e-05
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 1.6680434782756492e-05
+        }
+      ],
+      "logits_index": 55,
+      "vector_index": 43
+    }
+  ],
+  "checks": {
+    "valid_baseline_pairs": [
+      "implicit_spider_explicit_ant",
+      "explicit_spider_ant",
+      "web_anthill",
+      "silk_spider_explicit_ant"
+    ],
+    "all_trials_only_one_layer_and_one_position": true,
+    "all_trial_mlp_inputs_equal_clean": true,
+    "all_trial_upstream_residuals_equal_clean": true,
+    "zero_or_inactive_edits_bitwise_equal_clean": true,
+    "mlp_residual_addition_boundary_verified": true,
+    "restored_clean_logits_bitwise_equal": true,
+    "attention_forward_methods_unchanged": true
+  },
+  "status": "complete",
+  "selected_generation_checks": [
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "trial_vector_index": 5,
+      "generation": "6"
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "trial_vector_index": 19,
+      "generation": "6"
+    },
+    {
+      "pair": "web_anthill",
+      "trial_vector_index": 28,
+      "generation": "8"
+    },
+    {
+      "pair": "silk_spider_explicit_ant",
+      "trial_vector_index": 43,
+      "generation": "6"
+    }
+  ],
+  "attention_changes": [
+    {
+      "pair": "implicit_spider_explicit_ant",
+      "trial_vector_index": 5,
+      "changes": [
+        {
+          "layer": 0,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 1,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 2,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 3,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 4,
+          "maximum_absolute_change": 0.966796875
+        },
+        {
+          "layer": 5,
+          "maximum_absolute_change": 0.9671630859375
+        },
+        {
+          "layer": 6,
+          "maximum_absolute_change": 0.91259765625
+        },
+        {
+          "layer": 7,
+          "maximum_absolute_change": 0.8857421875
+        },
+        {
+          "layer": 8,
+          "maximum_absolute_change": 0.9775390625
+        },
+        {
+          "layer": 9,
+          "maximum_absolute_change": 0.7998046875
+        },
+        {
+          "layer": 10,
+          "maximum_absolute_change": 0.666015625
+        },
+        {
+          "layer": 11,
+          "maximum_absolute_change": 0.62890625
+        },
+        {
+          "layer": 12,
+          "maximum_absolute_change": 0.552734375
+        },
+        {
+          "layer": 13,
+          "maximum_absolute_change": 0.58203125
+        },
+        {
+          "layer": 14,
+          "maximum_absolute_change": 0.73828125
+        },
+        {
+          "layer": 15,
+          "maximum_absolute_change": 0.52197265625
+        },
+        {
+          "layer": 16,
+          "maximum_absolute_change": 0.521484375
+        },
+        {
+          "layer": 17,
+          "maximum_absolute_change": 0.4560546875
+        },
+        {
+          "layer": 18,
+          "maximum_absolute_change": 0.7119140625
+        },
+        {
+          "layer": 19,
+          "maximum_absolute_change": 0.55810546875
+        },
+        {
+          "layer": 20,
+          "maximum_absolute_change": 0.5263671875
+        },
+        {
+          "layer": 21,
+          "maximum_absolute_change": 0.45361328125
+        },
+        {
+          "layer": 22,
+          "maximum_absolute_change": 0.3271484375
+        },
+        {
+          "layer": 23,
+          "maximum_absolute_change": 0.4603271484375
+        },
+        {
+          "layer": 24,
+          "maximum_absolute_change": 0.5634765625
+        },
+        {
+          "layer": 25,
+          "maximum_absolute_change": 0.6494140625
+        },
+        {
+          "layer": 26,
+          "maximum_absolute_change": 0.5439453125
+        },
+        {
+          "layer": 27,
+          "maximum_absolute_change": 0.6181640625
+        },
+        {
+          "layer": 28,
+          "maximum_absolute_change": 0.61279296875
+        },
+        {
+          "layer": 29,
+          "maximum_absolute_change": 0.41015625
+        },
+        {
+          "layer": 30,
+          "maximum_absolute_change": 0.567138671875
+        },
+        {
+          "layer": 31,
+          "maximum_absolute_change": 0.29296875
+        },
+        {
+          "layer": 32,
+          "maximum_absolute_change": 0.455078125
+        },
+        {
+          "layer": 33,
+          "maximum_absolute_change": 0.380859375
+        },
+        {
+          "layer": 34,
+          "maximum_absolute_change": 0.7001953125
+        },
+        {
+          "layer": 35,
+          "maximum_absolute_change": 0.4150390625
+        }
+      ]
+    },
+    {
+      "pair": "explicit_spider_ant",
+      "trial_vector_index": 19,
+      "changes": [
+        {
+          "layer": 0,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 1,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 2,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 3,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 4,
+          "maximum_absolute_change": 0.91351318359375
+        },
+        {
+          "layer": 5,
+          "maximum_absolute_change": 0.9794921875
+        },
+        {
+          "layer": 6,
+          "maximum_absolute_change": 0.9365234375
+        },
+        {
+          "layer": 7,
+          "maximum_absolute_change": 0.7236328125
+        },
+        {
+          "layer": 8,
+          "maximum_absolute_change": 0.965576171875
+        },
+        {
+          "layer": 9,
+          "maximum_absolute_change": 0.583984375
+        },
+        {
+          "layer": 10,
+          "maximum_absolute_change": 0.6298828125
+        },
+        {
+          "layer": 11,
+          "maximum_absolute_change": 0.62109375
+        },
+        {
+          "layer": 12,
+          "maximum_absolute_change": 0.6083984375
+        },
+        {
+          "layer": 13,
+          "maximum_absolute_change": 0.494140625
+        },
+        {
+          "layer": 14,
+          "maximum_absolute_change": 0.48974609375
+        },
+        {
+          "layer": 15,
+          "maximum_absolute_change": 0.5
+        },
+        {
+          "layer": 16,
+          "maximum_absolute_change": 0.50244140625
+        },
+        {
+          "layer": 17,
+          "maximum_absolute_change": 0.6640625
+        },
+        {
+          "layer": 18,
+          "maximum_absolute_change": 0.65673828125
+        },
+        {
+          "layer": 19,
+          "maximum_absolute_change": 0.7216796875
+        },
+        {
+          "layer": 20,
+          "maximum_absolute_change": 0.5234375
+        },
+        {
+          "layer": 21,
+          "maximum_absolute_change": 0.439453125
+        },
+        {
+          "layer": 22,
+          "maximum_absolute_change": 0.31396484375
+        },
+        {
+          "layer": 23,
+          "maximum_absolute_change": 0.3359375
+        },
+        {
+          "layer": 24,
+          "maximum_absolute_change": 0.4296875
+        },
+        {
+          "layer": 25,
+          "maximum_absolute_change": 0.390625
+        },
+        {
+          "layer": 26,
+          "maximum_absolute_change": 0.71240234375
+        },
+        {
+          "layer": 27,
+          "maximum_absolute_change": 0.3984375
+        },
+        {
+          "layer": 28,
+          "maximum_absolute_change": 0.328125
+        },
+        {
+          "layer": 29,
+          "maximum_absolute_change": 0.392578125
+        },
+        {
+          "layer": 30,
+          "maximum_absolute_change": 0.458984375
+        },
+        {
+          "layer": 31,
+          "maximum_absolute_change": 0.404296875
+        },
+        {
+          "layer": 32,
+          "maximum_absolute_change": 0.2265625
+        },
+        {
+          "layer": 33,
+          "maximum_absolute_change": 0.31884765625
+        },
+        {
+          "layer": 34,
+          "maximum_absolute_change": 0.4990234375
+        },
+        {
+          "layer": 35,
+          "maximum_absolute_change": 0.7568359375
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "trial_vector_index": 28,
+      "changes": [
+        {
+          "layer": 0,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 1,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 2,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 3,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 4,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 5,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 6,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 7,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 8,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 9,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 10,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 11,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 12,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 13,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 14,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 15,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 16,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 17,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 18,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 19,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 20,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 21,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 22,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 23,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 24,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 25,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 26,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 27,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 28,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 29,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 30,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 31,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 32,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 33,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 34,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 35,
+          "maximum_absolute_change": 0.0
+        }
+      ]
+    },
+    {
+      "pair": "silk_spider_explicit_ant",
+      "trial_vector_index": 43,
+      "changes": [
+        {
+          "layer": 0,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 1,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 2,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 3,
+          "maximum_absolute_change": 0.0
+        },
+        {
+          "layer": 4,
+          "maximum_absolute_change": 0.9708251953125
+        },
+        {
+          "layer": 5,
+          "maximum_absolute_change": 0.978271484375
+        },
+        {
+          "layer": 6,
+          "maximum_absolute_change": 0.97882080078125
+        },
+        {
+          "layer": 7,
+          "maximum_absolute_change": 0.85888671875
+        },
+        {
+          "layer": 8,
+          "maximum_absolute_change": 0.98907470703125
+        },
+        {
+          "layer": 9,
+          "maximum_absolute_change": 0.7513427734375
+        },
+        {
+          "layer": 10,
+          "maximum_absolute_change": 0.6845703125
+        },
+        {
+          "layer": 11,
+          "maximum_absolute_change": 0.6591796875
+        },
+        {
+          "layer": 12,
+          "maximum_absolute_change": 0.525390625
+        },
+        {
+          "layer": 13,
+          "maximum_absolute_change": 0.83013916015625
+        },
+        {
+          "layer": 14,
+          "maximum_absolute_change": 0.737548828125
+        },
+        {
+          "layer": 15,
+          "maximum_absolute_change": 0.880126953125
+        },
+        {
+          "layer": 16,
+          "maximum_absolute_change": 0.53076171875
+        },
+        {
+          "layer": 17,
+          "maximum_absolute_change": 0.792724609375
+        },
+        {
+          "layer": 18,
+          "maximum_absolute_change": 0.509765625
+        },
+        {
+          "layer": 19,
+          "maximum_absolute_change": 0.6337890625
+        },
+        {
+          "layer": 20,
+          "maximum_absolute_change": 0.4296875
+        },
+        {
+          "layer": 21,
+          "maximum_absolute_change": 0.53759765625
+        },
+        {
+          "layer": 22,
+          "maximum_absolute_change": 0.5439453125
+        },
+        {
+          "layer": 23,
+          "maximum_absolute_change": 0.5419921875
+        },
+        {
+          "layer": 24,
+          "maximum_absolute_change": 0.67431640625
+        },
+        {
+          "layer": 25,
+          "maximum_absolute_change": 0.6513671875
+        },
+        {
+          "layer": 26,
+          "maximum_absolute_change": 0.6728515625
+        },
+        {
+          "layer": 27,
+          "maximum_absolute_change": 0.517578125
+        },
+        {
+          "layer": 28,
+          "maximum_absolute_change": 0.46875
+        },
+        {
+          "layer": 29,
+          "maximum_absolute_change": 0.435546875
+        },
+        {
+          "layer": 30,
+          "maximum_absolute_change": 0.546875
+        },
+        {
+          "layer": 31,
+          "maximum_absolute_change": 0.447265625
+        },
+        {
+          "layer": 32,
+          "maximum_absolute_change": 0.42578125
+        },
+        {
+          "layer": 33,
+          "maximum_absolute_change": 0.29296875
+        },
+        {
+          "layer": 34,
+          "maximum_absolute_change": 0.76416015625
+        },
+        {
+          "layer": 35,
+          "maximum_absolute_change": 0.3994140625
+        }
+      ]
+    }
+  ],
+  "seconds": 6.720843575996696
+}

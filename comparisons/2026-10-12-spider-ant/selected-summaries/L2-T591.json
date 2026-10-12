@@ -1,0 +1,97 @@
+{
+  "id": 591,
+  "rank": 64,
+  "count": 1196,
+  "frequency": 0.0001196,
+  "maximum": 3.921875,
+  "mean_active": 2.149897336959839,
+  "fingerprint": "fde540a72706b68cfdf2a924d88d1ee2a3bf1276f43f5888181868288300e759",
+  "status": "complete",
+  "evidence_counts": {
+    "train": 32,
+    "test": 50,
+    "negatives": 50,
+    "active_fuzz_positives": 50,
+    "short_windows": 0,
+    "full_budget": true
+  },
+  "sampling_exceptions": [],
+  "updated_at": "2026-09-29T10:26:14.305874+00:00",
+  "explanation": "The gate activates on specific nouns and suffixes, primarily \"grants\" (financial or permission), \"dred\" (dredging), \"red\" (Mildred), \"spider\" (venous or arachnid), and \"JWT\" (authentication).",
+  "title": "Nouns and Suffixes Triggering MOLT Gate",
+  "label": "Nouns and Suffixes Triggering MOLT Gate",
+  "methods": {
+    "intruder": {
+      "status": "complete",
+      "metrics": {
+        "total": 20,
+        "valid": 20,
+        "parse_failures": 0,
+        "correct": 7,
+        "accuracy": 0.35,
+        "accuracy_ci95": [
+          0.18119182410108206,
+          0.5671457233147638
+        ],
+        "chance": 0.2
+      }
+    },
+    "detection": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 35,
+        "tn": 50,
+        "fp": 0,
+        "fn": 15,
+        "accuracy": 0.85,
+        "f1": 0.8235294117647058,
+        "balanced_accuracy": 0.85,
+        "accuracy_ci95": [
+          0.7671644040916763,
+          0.9069401471634337
+        ]
+      }
+    },
+    "fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 32,
+        "tn": 50,
+        "fp": 0,
+        "fn": 18,
+        "accuracy": 0.82,
+        "f1": 0.7804878048780488,
+        "balanced_accuracy": 0.8200000000000001,
+        "accuracy_ci95": [
+          0.7333264161369926,
+          0.8829977450105364
+        ]
+      }
+    },
+    "active_fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 32,
+        "tn": 50,
+        "fp": 0,
+        "fn": 18,
+        "accuracy": 0.82,
+        "f1": 0.7804878048780488,
+        "balanced_accuracy": 0.8200000000000001,
+        "accuracy_ci95": [
+          0.7333264161369926,
+          0.8829977450105364
+        ]
+      }
+    }
+  }
+}

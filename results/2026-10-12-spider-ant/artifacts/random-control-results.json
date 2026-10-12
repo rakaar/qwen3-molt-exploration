@@ -1,0 +1,2644 @@
+{
+  "primary_selected_trial": {
+    "pair": "web_anthill",
+    "split": "primary",
+    "layer": 11,
+    "feature": 39,
+    "role": "shared_animal",
+    "label": "Animal and Wildlife Species Tokens",
+    "site": "cue_end",
+    "method": "full_contribution",
+    "strength": 16,
+    "receiver_position": 12,
+    "donor_position": 12,
+    "receiver_token": " webs",
+    "donor_token": "ills",
+    "receiver_gate": 0.0,
+    "donor_gate": 1.3734939098358154,
+    "receiver_contribution_norm": 0.0,
+    "donor_contribution_norm": 8.824734687805176,
+    "intended_delta_norm": 141.1957550048828,
+    "actual_mlp_change_norm": 141.1905517578125,
+    "P6": 0.9999774694442749,
+    "P8": 6.144074177427683e-06,
+    "P4": 1.0676799320208374e-06,
+    "top_token": "6",
+    "top_tokens": [
+      {
+        "id": 21,
+        "text": "6",
+        "probability": 0.9999774694442749
+      },
+      {
+        "id": 20,
+        "text": "5",
+        "probability": 1.3007004781684373e-05
+      },
+      {
+        "id": 23,
+        "text": "8",
+        "probability": 6.144074177427683e-06
+      },
+      {
+        "id": 18,
+        "text": "3",
+        "probability": 1.2098398656235076e-06
+      },
+      {
+        "id": 19,
+        "text": "4",
+        "probability": 1.0676799320208374e-06
+      }
+    ],
+    "logits_index": 176,
+    "vector_index": 162
+  },
+  "selection_rule": "Highest primary clue-token P6 among semantic candidates; controls selected after initial sweep and reported separately.",
+  "random_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "trials": [
+    {
+      "pair": "web_anthill",
+      "kind": "repeat_full_contribution",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 0,
+      "donor": "How many legs does the animal that builds anthills have? Reply with only one digit.",
+      "P6": 0.9999774694442749,
+      "P8": 6.144074177427683e-06,
+      "P4": 1.0676799320208374e-06,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999774694442749
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 1.3007004781684373e-05
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 6.144074177427683e-06
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 1.2098398656235076e-06
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.0676799320208374e-06
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "matched_strength_gate_only",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 145.5232696533203,
+      "logits_index": 1,
+      "receiver_gate": 0.0,
+      "donor_gate": 1.3734939098358154,
+      "P6": 0.0019258061656728387,
+      "P8": 3.112775812041946e-05,
+      "P4": 6.589746044483036e-05,
+      "top_token": "3",
+      "top_tokens": [
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.9975922703742981
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0019258061656728387
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 0.0002953319635707885
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 6.589746044483036e-05
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 3.112775812041946e-05
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "matched_strength_ablation",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 0.0,
+      "logits_index": 2,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 3,
+      "seed": 0,
+      "P6": 1.9947192413383164e-06,
+      "P8": 1.9947192413383164e-06,
+      "P4": 8.315226978083956e-07,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9999927282333374
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.9947192413383164e-06
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 1.9947192413383164e-06
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 8.315226978083956e-07
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 6.475905252045777e-07
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 4,
+      "seed": 1,
+      "P6": 0.04997432976961136,
+      "P8": 0.7817301154136658,
+      "P4": 0.0009153118007816374,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.7817301154136658
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.13584430515766144
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.04997432976961136
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.018384529277682304
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 0.004102142993360758
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 5,
+      "seed": 2,
+      "P6": 0.008195902220904827,
+      "P8": 0.01351275946944952,
+      "P4": 0.09984652698040009,
+      "top_token": "3",
+      "top_tokens": [
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.5745771527290344
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.2113751471042633
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.09984652698040009
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 0.06055998429656029
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.017350725829601288
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.19573974609375,
+      "logits_index": 6,
+      "seed": 3,
+      "P6": 0.0003334739594720304,
+      "P8": 0.0011639385484158993,
+      "P4": 0.994071900844574,
+      "top_token": "4",
+      "top_tokens": [
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.994071900844574
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.00316391303204
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.0011639385484158993
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0011639385484158993
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0003334739594720304
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 7,
+      "seed": 4,
+      "P6": 0.11920211464166641,
+      "P8": 0.8807911276817322,
+      "P4": 2.896710611821618e-06,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.8807911276817322
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.11920211464166641
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 2.896710611821618e-06
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 1.2075286122126272e-06
+        },
+        {
+          "id": 641,
+          "text": "In",
+          "probability": 1.065640276465274e-06
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 8,
+      "seed": 5,
+      "P6": 0.017115021124482155,
+      "P8": 0.04652344807982445,
+      "P4": 7.925826503196731e-05,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9344484210014343
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.04652344807982445
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.017115021124482155
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0014048863667994738
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.000276638544164598
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 9,
+      "seed": 6,
+      "P6": 0.03695020452141762,
+      "P8": 0.9529582858085632,
+      "P4": 0.0014327148674055934,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9529582858085632
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.03695020452141762
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.006420982535928488
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0018396422965452075
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0014327148674055934
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 10,
+      "seed": 7,
+      "P6": 0.0937163382768631,
+      "P8": 0.0006314557394944131,
+      "P4": 0.6924752593040466,
+      "top_token": "4",
+      "top_tokens": [
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.6924752593040466
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.19839748740196228
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0937163382768631
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.012683127075433731
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.001945020630955696
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 11,
+      "seed": 8,
+      "P6": 0.002429668791592121,
+      "P8": 0.980198323726654,
+      "P4": 0.0004222131392452866,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.980198323726654
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.013981778174638748
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.002429668791592121
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.002429668791592121
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0004222131392452866
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 12,
+      "seed": 9,
+      "P6": 0.008562800474464893,
+      "P8": 0.9897252321243286,
+      "P4": 0.0014879916561767459,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9897252321243286
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.008562800474464893
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0014879916561767459
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.0002013777702813968
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 8.847921890264843e-06
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 13,
+      "seed": 10,
+      "P6": 0.04731353372335434,
+      "P8": 0.5763968229293823,
+      "P4": 0.10016274452209473,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.5763968229293823
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.2722705900669098
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.10016274452209473
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.04731353372335434
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0030246530659496784
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.19577026367188,
+      "logits_index": 14,
+      "seed": 11,
+      "P6": 0.000708125124219805,
+      "P8": 0.9971144199371338,
+      "P4": 9.583431528881192e-05,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9971144199371338
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.001924883690662682
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.000708125124219805
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 9.583431528881192e-05
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 5.81264503125567e-05
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 15,
+      "seed": 12,
+      "P6": 0.0005504915025085211,
+      "P8": 0.995311975479126,
+      "P4": 5.8021378208650276e-05,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.995311975479126
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.004067612811923027
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0005504915025085211
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 5.8021378208650276e-05
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 6.929665232746629e-06
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 16,
+      "seed": 13,
+      "P6": 0.0007091593579389155,
+      "P8": 0.9985706806182861,
+      "P4": 0.0001232334179803729,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9985706806182861
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0007091593579389155
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.0005522938445210457
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0001232334179803729
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 2.7497093469719402e-05
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 17,
+      "seed": 14,
+      "P6": 0.03659810870885849,
+      "P8": 0.9438776969909668,
+      "P4": 0.001105167088098824,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9438776969909668
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.03659810870885849
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.0172877237200737
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.001105167088098824
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0006703177350573242
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 18,
+      "seed": 15,
+      "P6": 0.00033482510480098426,
+      "P8": 0.9980996251106262,
+      "P4": 1.145708574767923e-05,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9980996251106262
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.001500581973232329
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.00033482510480098426
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 4.5313652663026005e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.145708574767923e-05
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 19,
+      "seed": 16,
+      "P6": 0.9999071359634399,
+      "P8": 2.753389344434254e-05,
+      "P4": 1.4737829587829765e-05,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999071359634399
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 2.753389344434254e-05
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 1.6700148989912122e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.4737829587829765e-05
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 1.1477834050310776e-05
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 20,
+      "seed": 17,
+      "P6": 7.484188972739503e-05,
+      "P8": 0.9998670816421509,
+      "P4": 1.0128746907867026e-05,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9998670816421509
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 7.484188972739503e-05
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 4.539389556157403e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.0128746907867026e-05
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 1.553293827782909e-06
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 21,
+      "seed": 18,
+      "P6": 0.0900818258523941,
+      "P8": 0.8546726107597351,
+      "P4": 0.0004727060440927744,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.8546726107597351
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0900818258523941
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.05463738739490509
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0004727060440927744
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 7.249182090163231e-05
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 141.1957550048828,
+      "logits_index": 22,
+      "seed": 19,
+      "P6": 0.008518115617334843,
+      "P8": 0.0024404809810221195,
+      "P4": 0.004023673012852669,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9845602512359619
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.008518115617334843
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.004023673012852669
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.0024404809810221195
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0001767878420650959
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 149.20626831054688,
+      "logits_index": 23,
+      "donor_id": "bee",
+      "donor_text": "How many legs does a bee have? Reply with only one digit.",
+      "donor_expected": "6",
+      "donor_gate": 1.8476085662841797,
+      "P6": 0.0004143017577007413,
+      "P8": 0.03729425370693207,
+      "P4": 0.0003226585395168513,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9618315100669861
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.03729425370693207
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0004143017577007413
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0003226585395168513
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.00011869944137288257
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 64.12390899658203,
+      "logits_index": 24,
+      "donor_id": "cow",
+      "donor_text": "How many legs does a cow have? Reply with only one digit.",
+      "donor_expected": "4",
+      "donor_gate": 1.0118732452392578,
+      "P6": 0.001164744608104229,
+      "P8": 0.9947603344917297,
+      "P4": 0.004065358079969883,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9947603344917297
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.004065358079969883
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.001164744608104229
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 2.8871133963548345e-06
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 1.3637757092510583e-06
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 132.14845275878906,
+      "logits_index": 25,
+      "donor_id": "scorpion",
+      "donor_text": "How many legs does a scorpion have? Reply with only one digit.",
+      "donor_expected": "8",
+      "donor_gate": 1.4412353038787842,
+      "P6": 5.714957183045044e-07,
+      "P8": 0.9999911785125732,
+      "P4": 3.6534498093487855e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999911785125732
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 7.88925444794586e-06
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 5.714957183045044e-07
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 3.0589961852456327e-07
+        },
+        {
+          "id": 785,
+          "text": "The",
+          "probability": 4.1399012218334974e-08
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 0.0,
+      "logits_index": 26,
+      "donor_id": "antique",
+      "donor_text": "Explain the meaning of the word antique.",
+      "donor_expected": null,
+      "donor_gate": -0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 0.0,
+      "logits_index": 27,
+      "donor_id": "antioxidant",
+      "donor_text": "Explain the meaning of the word antioxidant.",
+      "donor_expected": null,
+      "donor_gate": -0.0,
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 111.92413330078125,
+      "logits_index": 28,
+      "donor_id": "explicit_receiver",
+      "donor_text": "How many legs does a spider have? Reply with only one digit.",
+      "donor_expected": "8",
+      "donor_gate": 1.3252711296081543,
+      "P6": 0.10555922985076904,
+      "P8": 0.2869397699832916,
+      "P4": 1.3027045497437939e-05,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.6074514985084534
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.2869397699832916
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.10555922985076904
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 1.3027045497437939e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.3027045497437939e-05
+        }
+      ]
+    },
+    {
+      "pair": "web_anthill",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 132.3991241455078,
+      "logits_index": 29,
+      "donor_id": "explicit_donor",
+      "donor_text": "How many legs does an ant have? Reply with only one digit.",
+      "donor_expected": "6",
+      "donor_gate": 1.645552158355713,
+      "P6": 0.0002027806913247332,
+      "P8": 0.9966201782226562,
+      "P4": 1.5482497701668763e-06,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9966201782226562
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.0031720236875116825
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0002027806913247332
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 2.552632167862612e-06
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.5482497701668763e-06
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "repeat_full_contribution",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 30,
+      "donor": "How many legs does the animal that inhabits ant colonies have? Reply with only one digit.",
+      "P6": 0.0005793246673420072,
+      "P8": 0.8157498836517334,
+      "P4": 0.00018807918240781873,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.8157498836517334
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.18201839923858643
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0005793246673420072
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0005793246673420072
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.00027365359710529447
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "matched_strength_gate_only",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 69.68566131591797,
+      "logits_index": 31,
+      "receiver_gate": 0.9115487933158875,
+      "donor_gate": 1.6128342151641846,
+      "P6": 0.9990505576133728,
+      "P8": 0.0009110161918215454,
+      "P4": 7.331248070840957e-07,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9990505576133728
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.0009110161918215454
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 3.117326195933856e-05
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 2.8995650609431323e-06
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 1.7586750118425698e-06
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "matched_strength_ablation",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 90.57921600341797,
+      "logits_index": 32,
+      "P6": 0.013555596582591534,
+      "P8": 0.04731367900967598,
+      "P4": 0.16514097154140472,
+      "top_token": "3",
+      "top_tokens": [
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.34960344433784485
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.34960344433784485
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.16514097154140472
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.04731367900967598
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.04731367900967598
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 33,
+      "seed": 0,
+      "P6": 3.119737084489316e-05,
+      "P8": 7.483860827051103e-05,
+      "P4": 6.961074177525006e-06,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.999823272228241
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 7.483860827051103e-05
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 3.119737084489316e-05
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 2.429653613944538e-05
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 1.3004998436372261e-05
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.952880859375,
+      "logits_index": 34,
+      "seed": 1,
+      "P6": 0.05573274567723274,
+      "P8": 0.5287775993347168,
+      "P4": 0.01243565697222948,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.5287775993347168
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.22042728960514069
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.063153475522995
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.05573274567723274
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.03380361944437027
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 35,
+      "seed": 2,
+      "P6": 0.002143911086022854,
+      "P8": 0.004005353432148695,
+      "P4": 0.001891994965262711,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9800776243209839
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.004005353432148695
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 0.0031193725299090147
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 0.002143911086022854
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.002143911086022854
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.952880859375,
+      "logits_index": 36,
+      "seed": 3,
+      "P6": 0.00037872843677178025,
+      "P8": 0.0019233416533097625,
+      "P4": 5.8079884183825925e-05,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9963156580924988
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.0019233416533097625
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0009085222845897079
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.00037872843677178025
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 0.00015787749725859612
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.952880859375,
+      "logits_index": 37,
+      "seed": 4,
+      "P6": 0.010971292853355408,
+      "P8": 0.9876042604446411,
+      "P4": 0.00010755877156043425,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9876042604446411
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.010971292853355408
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.0007013712311163545
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0003313043271191418
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.00010755877156043425
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 38,
+      "seed": 5,
+      "P6": 0.029627244919538498,
+      "P8": 0.5950791239738464,
+      "P4": 0.0010137887438759208,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.5950791239738464
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.36093375086784363
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.029627244919538498
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.005148443393409252
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 0.003538469783961773
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 39,
+      "seed": 6,
+      "P6": 0.036134351044893265,
+      "P8": 0.008062663488090038,
+      "P4": 0.002038560574874282,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9319171905517578
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.036134351044893265
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.013293084688484669
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.008062663488090038
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.0038085326086729765
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 40,
+      "seed": 7,
+      "P6": 0.32169175148010254,
+      "P8": 0.08133641630411148,
+      "P4": 0.250533789396286,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.32169175148010254
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.250533789396286
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.19511592388153076
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.08133641630411148
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.06334485858678818
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 41,
+      "seed": 8,
+      "P6": 0.00020246625354047865,
+      "P8": 0.9950748085975647,
+      "P4": 3.5183358704671264e-05,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9950748085975647
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.004066643305122852
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 0.00022942430223338306
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.00020246625354047865
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 0.00015768087178003043
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 42,
+      "seed": 9,
+      "P6": 0.0044309766963124275,
+      "P8": 0.8443946838378906,
+      "P4": 0.0004670215130317956,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.8443946838378906
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.14673379063606262
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0044309766963124275
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.002093045273795724
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.0005996674881316721
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 43,
+      "seed": 10,
+      "P6": 5.142565714777447e-05,
+      "P8": 0.00013978942297399044,
+      "P4": 1.3002441846765578e-05,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.999626636505127
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.00013978942297399044
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 8.478656673105434e-05
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 5.142565714777447e-05
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 2.4291757654282264e-05
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95291137695312,
+      "logits_index": 44,
+      "seed": 11,
+      "P6": 0.007199476007372141,
+      "P8": 0.8321462869644165,
+      "P4": 0.0011040754616260529,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.8321462869644165
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.08770757168531418
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.06830672919750214
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.007199476007372141
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0011040754616260529
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 45,
+      "seed": 12,
+      "P6": 0.00388167193159461,
+      "P8": 0.14565864205360413,
+      "P4": 0.0014279873576015234,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.8382076621055603
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.14565864205360413
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.005647799000144005
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.00388167193159461
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0014279873576015234
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 46,
+      "seed": 13,
+      "P6": 0.0012243702076375484,
+      "P8": 0.4939461946487427,
+      "P4": 0.0012243702076375484,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.4939461946487427
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.4939461946487427
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0054872469045221806
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0020186451729387045
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0012243702076375484
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 47,
+      "seed": 14,
+      "P6": 0.0002292648860020563,
+      "P8": 0.004604908637702465,
+      "P4": 0.00010829707025550306,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9943833351135254
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.004604908637702465
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.00025979115162044764
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0002292648860020563
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.00013905619562137872
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 48,
+      "seed": 15,
+      "P6": 0.002912009134888649,
+      "P8": 0.5549307465553284,
+      "P4": 0.0005734086153097451,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.5549307465553284
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.4321804940700531
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.005440349690616131
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.002912009134888649
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 0.001375535735860467
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 49,
+      "seed": 16,
+      "P6": 0.04339688643813133,
+      "P8": 0.8716498017311096,
+      "P4": 0.0066551282070577145,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.8716498017311096
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.04339688643813133
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.04339688643813133
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.010972452349960804
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.007541248574852943
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.952880859375,
+      "logits_index": 50,
+      "seed": 17,
+      "P6": 0.00453729135915637,
+      "P8": 0.7630550861358643,
+      "P4": 0.0010124065447598696,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.7630550861358643
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.2186189442873001
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.005825997330248356
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.00453729135915637
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 0.003118431894108653
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 51,
+      "seed": 18,
+      "P6": 0.0014420261140912771,
+      "P8": 0.03719034418463707,
+      "P4": 0.00013412933913059533,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9591516256332397
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.03719034418463707
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0014420261140912771
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0014420261140912771
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0001722254673950374
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "norm_matched_gaussian",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 135.95289611816406,
+      "logits_index": 52,
+      "seed": 19,
+      "P6": 0.0038906983099877834,
+      "P8": 0.0369139164686203,
+      "P4": 0.0026740352623164654,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9520224928855896
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.0369139164686203
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0038906983099877834
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0026740352623164654
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0018378357635810971
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 159.60952758789062,
+      "logits_index": 53,
+      "donor_id": "bee",
+      "donor_text": "How many legs does a bee have? Reply with only one digit.",
+      "donor_expected": "6",
+      "donor_gate": 1.8476085662841797,
+      "P6": 0.00022948053083382547,
+      "P8": 0.11887386441230774,
+      "P4": 0.0008009658195078373,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.8783656358718872
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.11887386441230774
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0008009658195078373
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.0008009658195078373
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.00037834944669157267
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 109.10115051269531,
+      "logits_index": 54,
+      "donor_id": "cow",
+      "donor_text": "How many legs does a cow have? Reply with only one digit.",
+      "donor_expected": "4",
+      "donor_gate": 1.0118732452392578,
+      "P6": 0.0013922990765422583,
+      "P8": 0.49569278955459595,
+      "P4": 0.0010843236232176423,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.49569278955459595
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.49569278955459595
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.0022955131717026234
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.002025783061981201
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0013922990765422583
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 148.5940399169922,
+      "logits_index": 55,
+      "donor_id": "scorpion",
+      "donor_text": "How many legs does a scorpion have? Reply with only one digit.",
+      "donor_expected": "8",
+      "donor_gate": 1.4412353038787842,
+      "P6": 0.0021596322767436504,
+      "P8": 0.4115530550479889,
+      "P4": 0.029812805354595184,
+      "top_token": "3",
+      "top_tokens": [
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.4115530550479889
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.4115530550479889
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.10405690968036652
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.029812805354595184
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 0.029812805354595184
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 90.57921600341797,
+      "logits_index": 56,
+      "donor_id": "antique",
+      "donor_text": "Explain the meaning of the word antique.",
+      "donor_expected": null,
+      "donor_gate": -0.0,
+      "P6": 0.013555596582591534,
+      "P8": 0.04731367900967598,
+      "P4": 0.16514097154140472,
+      "top_token": "3",
+      "top_tokens": [
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.34960344433784485
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.34960344433784485
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.16514097154140472
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.04731367900967598
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.04731367900967598
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 90.57921600341797,
+      "logits_index": 57,
+      "donor_id": "antioxidant",
+      "donor_text": "Explain the meaning of the word antioxidant.",
+      "donor_expected": null,
+      "donor_gate": -0.0,
+      "P6": 0.013555596582591534,
+      "P8": 0.04731367900967598,
+      "P4": 0.16514097154140472,
+      "top_token": "3",
+      "top_tokens": [
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.34960344433784485
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.34960344433784485
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.16514097154140472
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.04731367900967598
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.04731367900967598
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 117.69727325439453,
+      "logits_index": 58,
+      "donor_id": "explicit_receiver",
+      "donor_text": "How many legs does a spider have? Reply with only one digit.",
+      "donor_expected": "8",
+      "donor_gate": 1.3252711296081543,
+      "P6": 1.275171968018185e-07,
+      "P8": 4.222789812047267e-06,
+      "P4": 8.315166155625775e-07,
+      "top_token": "0",
+      "top_tokens": [
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.9999854564666748
+        },
+        {
+          "id": 16,
+          "text": "1",
+          "probability": 7.889209882705472e-06
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 4.222789812047267e-06
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 8.315166155625775e-07
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 8.315166155625775e-07
+        }
+      ]
+    },
+    {
+      "pair": "silk_colony",
+      "kind": "alternative_donor_same_strength",
+      "layer": 11,
+      "feature": 39,
+      "receiver_position": 12,
+      "strength": 16,
+      "intended_delta_norm": 144.818359375,
+      "logits_index": 59,
+      "donor_id": "explicit_donor",
+      "donor_text": "How many legs does an ant have? Reply with only one digit.",
+      "donor_expected": "6",
+      "donor_gate": 1.645552158355713,
+      "P6": 0.0030781885143369436,
+      "P8": 0.9671379923820496,
+      "P4": 9.295323252445087e-05,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9671379923820496
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.029205037280917168
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.0030781885143369436
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 0.00013524616952054203
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 0.00011935431393794715
+        }
+      ]
+    }
+  ],
+  "source_sha256": "86989c52efde07cbeb23b7437caa04ddeb65cfedfebd80078fb3de1cf177d25f"
+}

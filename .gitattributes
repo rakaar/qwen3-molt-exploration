@@ -1,0 +1,5 @@
+# Preserve generated CSV and terminal-log bytes, including original line endings.
+*.csv -text whitespace=cr-at-eol
+*.log -text -whitespace
+# Matplotlib SVG path strings contain intentional trailing spaces.
+*.svg -text -whitespace

@@ -1,0 +1,132 @@
+{
+  "original_source_directory": "experiments/spider-ant",
+  "original_run_sha256": "e95fa56d754f021c1884206c89f6e54404c067e5882c31b510813db2f92c8f39",
+  "changes": {
+    "assert 'web_anthill' in valid, 'Primary baseline must be correct before manipulation'": "assert P['primary_pair'] in valid, 'Primary baseline must be correct before manipulation'",
+    "strengths = sorted(set([1, 4.5, best['strength']]))": "strengths = sorted(set([1, 32, best['strength']]))",
+    "clean = forward(records['web_anthill_receiver'])": "clean = forward(records[P['primary_pair'] + '_receiver'])",
+    "baselines['web_anthill_receiver'].logits": "baselines[P['primary_pair'] + '_receiver'].logits"
+  },
+  "protocol": {
+    "base_repo": "Qwen/Qwen3-4B",
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_repo": "georglange/qwen3-4b-molt",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "attention": "unfrozen eager",
+    "dtype": "BF16",
+    "patch": "original receiver MLP output + strength * (full donor MOLT contribution - full receiver MOLT contribution)",
+    "gate_only": "original receiver MLP output + strength * (donor gate - receiver gate) * receiver low-rank output",
+    "ablation": "original receiver MLP output - strength * receiver MOLT contribution",
+    "interpretation": "Shared arthropod/animal labels are hypotheses, not dedicated spider or ant representations. All direct edits are confined to one layer and one position per trial.",
+    "features": [
+      {
+        "layer": 3,
+        "id": 2309,
+        "role": "ant_insect",
+        "label": "Small Invertebrate and Insect Token Gate",
+        "rank": 32,
+        "summary_sha256": "72f684dd0d556504fd6730bffeac9f6e97b8927a4f8b3f5300914e5c6af03f3b",
+        "dashboard_checkpoint_step": 100000
+      }
+    ],
+    "primary_pair": "implicit_spider_explicit_ant",
+    "pairs": [
+      {
+        "id": "implicit_spider_explicit_ant",
+        "split": "primary",
+        "receiver": "How many legs does the animal that weaves webs have? Reply with only one digit.",
+        "donor": "How many legs does an ant have? Reply with only one digit.",
+        "receiver_cue": "webs",
+        "donor_cue": "ant"
+      },
+      {
+        "id": "explicit_spider_ant",
+        "split": "diagnostic",
+        "receiver": "How many legs does a spider have? Reply with only one digit.",
+        "donor": "How many legs does an ant have? Reply with only one digit.",
+        "receiver_cue": "spider",
+        "donor_cue": "ant"
+      },
+      {
+        "id": "web_anthill",
+        "split": "diagnostic",
+        "receiver": "How many legs does the animal that weaves webs have? Reply with only one digit.",
+        "donor": "How many legs does the animal that builds anthills have? Reply with only one digit.",
+        "receiver_cue": "webs",
+        "donor_cue": "anthills"
+      },
+      {
+        "id": "silk_spider_explicit_ant",
+        "split": "heldout",
+        "receiver": "How many legs does the animal that spins silk webs have? Reply with only one digit.",
+        "donor": "How many legs does an ant have? Reply with only one digit.",
+        "receiver_cue": "webs",
+        "donor_cue": "ant"
+      }
+    ],
+    "controls": [
+      {
+        "id": "bee",
+        "text": "How many legs does a bee have? Reply with only one digit.",
+        "cue": "bee",
+        "expected": "6"
+      },
+      {
+        "id": "scorpion",
+        "text": "How many legs does a scorpion have? Reply with only one digit.",
+        "cue": "scorpion",
+        "expected": "8"
+      },
+      {
+        "id": "cow",
+        "text": "How many legs does a cow have? Reply with only one digit.",
+        "cue": "cow",
+        "expected": "4"
+      },
+      {
+        "id": "antique",
+        "text": "Explain the meaning of the word antique.",
+        "cue": "antique",
+        "expected": null
+      }
+    ],
+    "strengths": [
+      0,
+      1,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      64
+    ],
+    "control_strengths": [
+      1,
+      32
+    ],
+    "sites": [
+      "cue_end"
+    ],
+    "heldout_policy": "Fixed strengths 1 and 32 plus best primary strength, selected without observing heldout outcomes.",
+    "feature_selection": "L3-T2309 fixed by user request before observing this cross-prompt result.",
+    "pause_after_baseline": false,
+    "budget_ceiling_usd": 5,
+    "max_runtime_minutes": 20,
+    "random_controls": {
+      "strength": 32,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": 969,
+  "rank": 64,
+  "count": 13959,
+  "frequency": 0.0013959,
+  "maximum": 5.3125,
+  "mean_active": 1.4915517568588257,
+  "fingerprint": "f7ce0c9ac89831844f1965611ff60ce90e579b697a6c9c4f2b5d031e1e539962",
+  "status": "complete",
+  "evidence_counts": {
+    "train": 32,
+    "test": 50,
+    "negatives": 50,
+    "active_fuzz_positives": 50,
+    "short_windows": 0,
+    "full_budget": true
+  },
+  "sampling_exceptions": [],
+  "updated_at": "2026-10-10T08:15:42.303869+00:00",
+  "explanation": "The gate activates on tokens related to insects, pests, or arthropods, including specific species names (bees, ants, butterflies, spiders, termites) and general terms (insects, pests, arthropods). It also fires on associated concepts like life cycles, metamorphosis, and pest control contexts.",
+  "title": "Insect and Arthropod Species",
+  "label": "Insect and Arthropod Species",
+  "methods": {
+    "intruder": {
+      "status": "complete",
+      "metrics": {
+        "total": 20,
+        "valid": 20,
+        "parse_failures": 0,
+        "correct": 6,
+        "accuracy": 0.3,
+        "accuracy_ci95": [
+          0.1454772448676043,
+          0.5189728183535235
+        ],
+        "chance": 0.2
+      }
+    },
+    "fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 21,
+        "tn": 50,
+        "fp": 0,
+        "fn": 29,
+        "accuracy": 0.71,
+        "f1": 0.5915492957746479,
+        "balanced_accuracy": 0.71,
+        "accuracy_ci95": [
+          0.6146110882442888,
+          0.7898516425087772
+        ]
+      }
+    },
+    "active_fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 21,
+        "tn": 50,
+        "fp": 0,
+        "fn": 29,
+        "accuracy": 0.71,
+        "f1": 0.5915492957746479,
+        "balanced_accuracy": 0.71,
+        "accuracy_ci95": [
+          0.6146110882442888,
+          0.7898516425087772
+        ]
+      }
+    },
+    "detection": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 30,
+        "tn": 50,
+        "fp": 0,
+        "fn": 20,
+        "accuracy": 0.8,
+        "f1": 0.75,
+        "balanced_accuracy": 0.8,
+        "accuracy_ci95": [
+          0.7111708344068411,
+          0.8666330666689676
+        ]
+      }
+    }
+  }
+}

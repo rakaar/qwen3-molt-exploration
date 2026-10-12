@@ -1,0 +1,97 @@
+{
+  "id": 2286,
+  "rank": 32,
+  "count": 16154,
+  "frequency": 0.0016154,
+  "maximum": 2.46875,
+  "mean_active": 0.9476167559623718,
+  "fingerprint": "661dad4e7fd50ba522bedbe7151c37c55d15847428b735653b866f52dfaf5355",
+  "status": "complete",
+  "evidence_counts": {
+    "train": 32,
+    "test": 50,
+    "negatives": 50,
+    "active_fuzz_positives": 50,
+    "short_windows": 0,
+    "full_budget": true
+  },
+  "sampling_exceptions": [],
+  "updated_at": "2026-10-07T21:46:57.185087+00:00",
+  "explanation": "The gate activates on tokens referring to animals, wildlife, or specific species, particularly when discussing their habitats, behaviors, or ecological roles. It fires strongly on common nouns like \"animals,\" \"birds,\" \"ants,\" and \"species,\" as well as specific animal names, often in the context of nature, ecosystems, or biological descriptions.",
+  "title": "Animal and Wildlife Token Activation",
+  "label": "Animal and Wildlife Token Activation",
+  "methods": {
+    "intruder": {
+      "status": "complete",
+      "metrics": {
+        "total": 20,
+        "valid": 20,
+        "parse_failures": 0,
+        "correct": 5,
+        "accuracy": 0.25,
+        "accuracy_ci95": [
+          0.11186170140766569,
+          0.468700877618744
+        ],
+        "chance": 0.2
+      }
+    },
+    "active_fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 21,
+        "tn": 50,
+        "fp": 0,
+        "fn": 29,
+        "accuracy": 0.71,
+        "f1": 0.5915492957746479,
+        "balanced_accuracy": 0.71,
+        "accuracy_ci95": [
+          0.6146110882442888,
+          0.7898516425087772
+        ]
+      }
+    },
+    "fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 21,
+        "tn": 50,
+        "fp": 0,
+        "fn": 29,
+        "accuracy": 0.71,
+        "f1": 0.5915492957746479,
+        "balanced_accuracy": 0.71,
+        "accuracy_ci95": [
+          0.6146110882442888,
+          0.7898516425087772
+        ]
+      }
+    },
+    "detection": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 39,
+        "tn": 48,
+        "fp": 2,
+        "fn": 11,
+        "accuracy": 0.87,
+        "f1": 0.8571428571428571,
+        "balanced_accuracy": 0.87,
+        "accuracy_ci95": [
+          0.7901964855992357,
+          0.9224283257275948
+        ]
+      }
+    }
+  }
+}

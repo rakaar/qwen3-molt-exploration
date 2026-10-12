@@ -1,0 +1,35 @@
+Use case: scientific-educational.
+Create one polished, high-resolution landscape research infographic, approximately 2000 × 1400 pixels, with very legible text, generous whitespace, a warm white background, navy typography, blue donor accents, and orange receiver accents. This is a precise experimental result summary, not a marketing poster. Minimal diagram artwork with a small spider and ant illustration as explanatory accents.
+
+Title: "One MOLT patch: 8 → 6"
+Subtitle: "Qwen3-4B · One layer · One token · Unfrozen attention"
+
+Top row contains two prompt cards with the exact full prompts, preserving every word:
+DONOR:
+"How many legs does the animal that builds anthills have? Reply with only one digit."
+Highlight only the final letters "ills" inside "anthills". Keep the word anthills intact and correct. Annotation: 'Donor token 12: "ills" (end of anthills)'. Badge: "Clean answer: 6".
+RECEIVER:
+"How many legs does the animal that weaves webs have? Reply with only one digit."
+Highlight "webs". Annotation: 'Receiver token 12: " webs"'. Badge: "Clean answer: 8".
+Below both cards: "Token and layer indices are zero-based; positions include the chat template."
+
+Middle diagram: The donor token feeds one clearly labeled feature card:
+"MOLT L8–T2201"
+'Dashboard label: "Insect and Pest Token Gate"'
+"Rank 32 · donor gate = 0.81349"
+An arrow labeled "16× full gated contribution" leads from this card into a plus junction at the RECEIVER'S ORIGINAL MLP output, specifically layer 8, token 12. A separate original receiver MLP box feeds the plus junction. The edited output then goes to the receiver residual stream and onward through remaining layers. Explicit label on the original MLP box: "Original MLP retained". The graphic must make clear the MOLT is used to compute the added donor vector and does not replace the original MLP.
+
+Feature patch equation in a prominent wide monospace box, render exactly:
+"MLP_out_receiver[12] += 16 × (gate(x_donor) × U V x_donor)"
+Immediately beneath, small readable legend:
+"x_donor: donor input to L8–T2201 at token 12"
+"UVx is shorthand for the checkpoint's normalized, output-rescaled low-rank contribution."
+"No nonzero subtraction: this MOLT's clean receiver gate was already 0."
+
+Bottom result panel with very large text:
+"P(next token = '6') = 99.9954%"
+Smaller result: "P(next token = '8') = 0.00454%"
+Baseline comparison: "Before patch: P('8') = 99.9972%"
+Footer: "One prompt-pair result; a reliable spider-to-ant concept swap is not established."
+
+Constraints: Preserve numerical precision, prompts, feature identity, layer, and position exactly. Show only ONE MOLT and ONE edited receiver position. Do not depict a separate spider feature being ablated. Do not portray attention as frozen. Do not imply full MLP replacement. Do not label the donor token as the whole word anthills or hills; it is exactly ills. Ensure all text fits, is readable, and is correctly spelled.

@@ -1,0 +1,52 @@
+Create a new polished scientific summary infographic in the visual style of the attached reference. Use the reference for layout, colors and illustration style only. All content below is from a NEW experiment; replace the old receiver, token position, strength, equation and probabilities. Landscape, approximately 3:2 aspect ratio, white background, dark navy text, blue donor accents and orange receiver accents. Make text large and crisp. Small realistic ant and spider illustrations may support the diagram. Prioritize accuracy over decoration and avoid crowding.
+
+TITLE: "One MOLT patch: 8 → 6"
+SUBTITLE: "Qwen3-4B · Explicit ant donor → implicit spider question"
+BADGE: "One MOLT · One layer · One token · Unfrozen attention"
+
+TOP LEFT blue DONOR card, exact complete prompt:
+"How many legs does an ant have? Reply with only one digit."
+Highlight only "ant".
+"Donor token 8: \" ant\""
+"Clean answer: 6"
+
+TOP RIGHT orange RECEIVER card, exact complete prompt:
+"How many legs does the animal that weaves webs have? Reply with only one digit."
+Highlight only "webs".
+"Receiver token 12: \" webs\""
+"Clean answer: 8"
+
+Below cards: "All indices are zero-based; token positions include the chat template."
+
+MIDDLE intervention diagram:
+Clean donor token 8 (" ant") → MOLT card → arrow marked "24× full gated donor vector" → plus node → Edited receiver MLP output (L3, token 12) → Residual stream → Remaining layers (L4+).
+The MOLT card must read:
+"MOLT L3–T2309"
+"Small Invertebrate and Insect Token Gate"
+"Rank 32 · donor gate = 1.33956"
+A separate orange box feeds the plus node:
+"Original receiver MLP retained"
+"(L3, token 12)"
+Do not replace the MLP or its weights. The added term is the full gated low-rank contribution from the CLEAN donor, not just its scalar gate.
+
+WIDE PATCH EQUATION PANEL, highly legible:
+"MLP_out_receiver[12] += 24 × (gate(x_donor) × U V x_donor)"
+Then smaller explanatory text:
+"x_donor: donor input to L3–T2309 at token 8."
+"Checkpoint normalization and output rescaling are implicit."
+"No subtraction: this MOLT's clean receiver gate was 0."
+
+PROMINENT RESULT panel for receiver, exact:
+"At 24×: P(next token = '6') = 99.99784%"
+"P(next token = '8') = 0.00214%"
+"Before patch: P('8') = 99.99723%"
+
+STRENGTH COMPARISON strip, caption "Tested strengths: P(next token = '6')"
+"16×: 85.08%     24×: 99.99784%     32×: 99.99998%"
+
+CLEAR qualification in footer or callout:
+"24× is the lowest successful strength tested; the exact minimum is unknown."
+"No strengths between 16× and 24× were tested."
+Small optional final research caveat: "Measured answer steering; semantic concept replacement remains unverified."
+
+Do not claim 24× is a proven minimum. Do not include the reference's old explicit-spider receiver, receiver token 8, 32× equation, or 99.3301% result. Main patch here uses 24×, receiver token 12, donor token 8, one feature L3–T2309. Do not depict frozen attention. The prompts themselves are not textually changed. Keep every arrow and token index consistent.

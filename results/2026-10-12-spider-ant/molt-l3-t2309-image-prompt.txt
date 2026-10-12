@@ -1,0 +1,48 @@
+Use case: scientific-educational.
+Asset type: a NEW companion research infographic for the L3–T2309 result.
+Input image 1 is a STYLE AND LAYOUT REFERENCE ONLY: the earlier L8–T2201 infographic. Create a separate new image, preserving its polished landscape layout, blue donor/orange receiver colors, white background, navy typography, clear plus-junction diagram, ant/spider accents, and large result panel. Replace the experiment content completely with the verified L3 data below. Do not carry over the old prompts, token 12, layer 8, strength 16, or old probabilities. This is an explicit animal-name intervention.
+
+Exact title: "One MOLT patch: 8 → 6"
+Subtitle: "Qwen3-4B · Explicit spider/ant prompts · Unfrozen attention"
+Small badge: "One MOLT · One layer · One token"
+
+Top prompt cards, use these EXACT texts:
+DONOR:
+"How many legs does an ant have? Reply with only one digit."
+Highlight the word "ant".
+Token annotation: 'Donor token 8: " ant"'
+Badge: "Clean answer: 6"
+RECEIVER:
+"How many legs does a spider have? Reply with only one digit."
+Highlight the word "spider".
+Token annotation: 'Receiver token 8: " spider"'
+Badge: "Clean answer: 8"
+Below: "Token and layer indices are zero-based; positions include the chat template."
+
+Middle mechanism diagram:
+Donor token " ant" → MOLT feature card → arrow labeled "32× full gated contribution" → plus junction at receiver's original layer-3 MLP output at token 8 → edited receiver MLP output → receiver residual stream → remaining layers (L4+).
+Feature card exact text, allow the long name to wrap into two readable lines:
+"MOLT L3–T2309"
+'Dashboard label: "Small Invertebrate and Insect Token Gate"'
+"Rank 32 · donor gate = 1.33956"
+The original receiver MLP must be a distinct orange box feeding the plus junction:
+"Original MLP retained"
+"(receiver L3, token 8)"
+Show one donor MOLT contributing a vector, not replacement of the receiver MLP.
+Small ant illustration labeled "Ant (6 legs)" and spider illustration labeled "Spider (8 legs)"; keep anatomical leg counts correct or use simple legible schematic illustrations.
+
+Wide equation panel, large monospace, exact:
+"MLP_out_receiver[8] += 32 × (gate(x_donor) × U V x_donor)"
+Legends:
+"x_donor: donor input to L3–T2309 at token 8"
+"Checkpoint input normalization and output rescaling are implicit."
+"No nonzero subtraction: this MOLT's clean receiver gate was already 0."
+
+Bottom result panel, very large primary result:
+"P(next token = '6') = 99.3301%"
+Smaller secondary:
+"P(next token = '8') = 0.6693%"
+"Before patch: P('8') ≈ 100%"
+Small footer: "Result for these explicit prompts; semantic spider-to-ant replacement remains unverified."
+
+Constraints: Preserve prompts, feature name, all numbers, token positions, layer identity, equation and multiplier exactly. Only one MOLT and one receiver position are edited. Do not show a separate spider feature being subtracted. Do not freeze attention. Do not replace the MLP. No webs, anthills, ills, token 12, L8, 16×, or 99.9954% anywhere. Ensure all text is fully readable, unclipped, and correctly spelled.

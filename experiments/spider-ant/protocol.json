@@ -1,0 +1,187 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "features": [
+    {
+      "layer": 27,
+      "id": 969,
+      "role": "shared_arthropod",
+      "label": "Insect and Arthropod Species",
+      "rank": 64,
+      "summary_sha256": "5734d65eccb63d804893089425e7eaeb077c1944d465909f133c712ebba98b77",
+      "dashboard_checkpoint_step": 100000
+    },
+    {
+      "layer": 31,
+      "id": 456,
+      "role": "shared_arthropod",
+      "label": "Insect and Arthropod Token Gate",
+      "rank": 128,
+      "summary_sha256": "409302308b8670b821b24caa9451add07fe0a66e688716dc857a7ae22a623ce2",
+      "dashboard_checkpoint_step": 100000
+    },
+    {
+      "layer": 3,
+      "id": 2309,
+      "role": "ant_insect",
+      "label": "Small Invertebrate and Insect Token Gate",
+      "rank": 32,
+      "summary_sha256": "72f684dd0d556504fd6730bffeac9f6e97b8927a4f8b3f5300914e5c6af03f3b",
+      "dashboard_checkpoint_step": 100000
+    },
+    {
+      "layer": 11,
+      "id": 39,
+      "role": "shared_animal",
+      "label": "Animal and Wildlife Species Tokens",
+      "rank": 512,
+      "summary_sha256": "939891a3a2f74caaca6c98e07a40aee326a47f49b045f8462eb7ff2819121dcf",
+      "dashboard_checkpoint_step": 100000
+    },
+    {
+      "layer": 16,
+      "id": 2286,
+      "role": "shared_animal",
+      "label": "Animal and Wildlife Token Activation",
+      "rank": 32,
+      "summary_sha256": "b345d34fa67b0991c70865ecd53f8c9748f4dd7ca40d1dc4c81bd73d392b912e",
+      "dashboard_checkpoint_step": 100000
+    },
+    {
+      "layer": 19,
+      "id": 2283,
+      "role": "spider_object",
+      "label": "Concrete Physical Object Nouns",
+      "rank": 32,
+      "summary_sha256": "529e9d3f6edd503ee0eee9fce9bfec4e11fddb54a0dd04690a649f3f97d2e590",
+      "dashboard_checkpoint_step": 100000
+    },
+    {
+      "layer": 2,
+      "id": 591,
+      "role": "lexical_spider_control",
+      "label": "Nouns and Suffixes Triggering MOLT Gate",
+      "rank": 64,
+      "summary_sha256": "762cfbf4a7f96291456cfc61fc2073ce2f8afb5bcc7831e9f842aac5528e404d",
+      "dashboard_checkpoint_step": 100000
+    },
+    {
+      "layer": 8,
+      "id": 2201,
+      "role": "lexical_ant_control",
+      "label": "Insect and Pest Token Gate",
+      "rank": 32,
+      "summary_sha256": "4c3aefb5da415e290768f4b9e2cb2247d3897f9523dccad790bcc4a3c1aed35e",
+      "dashboard_checkpoint_step": 100000
+    }
+  ],
+  "pairs": [
+    {
+      "id": "web_anthill",
+      "split": "primary",
+      "receiver": "How many legs does the animal that weaves webs have? Reply with only one digit.",
+      "donor": "How many legs does the animal that builds anthills have? Reply with only one digit.",
+      "receiver_cue": "webs",
+      "donor_cue": "anthills"
+    },
+    {
+      "id": "explicit_spider_ant",
+      "split": "diagnostic",
+      "receiver": "How many legs does a spider have? Reply with only one digit.",
+      "donor": "How many legs does an ant have? Reply with only one digit.",
+      "receiver_cue": "spider",
+      "donor_cue": "ant"
+    },
+    {
+      "id": "silk_colony",
+      "split": "heldout",
+      "receiver": "How many legs does the animal that spins silk webs have? Reply with only one digit.",
+      "donor": "How many legs does the animal that inhabits ant colonies have? Reply with only one digit.",
+      "receiver_cue": "webs",
+      "donor_cue": "colonies"
+    }
+  ],
+  "controls": [
+    {
+      "id": "bee",
+      "text": "How many legs does a bee have? Reply with only one digit.",
+      "cue": "bee",
+      "expected": "6"
+    },
+    {
+      "id": "beetle",
+      "text": "How many legs does a beetle have? Reply with only one digit.",
+      "cue": "beetle",
+      "expected": "6"
+    },
+    {
+      "id": "scorpion",
+      "text": "How many legs does a scorpion have? Reply with only one digit.",
+      "cue": "scorpion",
+      "expected": "8"
+    },
+    {
+      "id": "octopus",
+      "text": "How many legs does a octopus have? Reply with only one digit.",
+      "cue": "octopus",
+      "expected": "8"
+    },
+    {
+      "id": "cow",
+      "text": "How many legs does a cow have? Reply with only one digit.",
+      "cue": "cow",
+      "expected": "4"
+    },
+    {
+      "id": "antique",
+      "text": "Explain the meaning of the word antique.",
+      "cue": "antique",
+      "expected": null
+    },
+    {
+      "id": "antioxidant",
+      "text": "Explain the meaning of the word antioxidant.",
+      "cue": "antioxidant",
+      "expected": null
+    },
+    {
+      "id": "spiderman",
+      "text": "Who is Spider-Man?",
+      "cue": "Spider",
+      "expected": null
+    }
+  ],
+  "strengths": [
+    0,
+    0.5,
+    1,
+    2,
+    4.5,
+    8,
+    16,
+    32
+  ],
+  "control_strengths": [
+    1,
+    4.5
+  ],
+  "sites": [
+    "cue_end",
+    "have",
+    "question_end",
+    "readout"
+  ],
+  "attention": "unfrozen eager",
+  "dtype": "BF16",
+  "patch": "original receiver MLP output + strength * (full donor MOLT contribution - full receiver MOLT contribution)",
+  "gate_only": "original receiver MLP output + strength * (donor gate - receiver gate) * receiver low-rank output",
+  "ablation": "original receiver MLP output - strength * receiver MOLT contribution",
+  "heldout_policy": "For every feature/site test strengths 1, 4.5 and the highest-P6 primary strength; retain all trials. No heldout strength optimization.",
+  "feature_selection": "Labels and dashboard activation evidence, before observing model steering outcomes; lexical controls explicitly marked.",
+  "pause_after_baseline": true,
+  "budget_ceiling_usd": 5,
+  "max_runtime_minutes": 45,
+  "interpretation": "Shared arthropod/animal labels are hypotheses, not dedicated spider or ant representations. All direct edits are confined to one layer and one position per trial."
+}

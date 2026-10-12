@@ -1,0 +1,168 @@
+{
+  "at32": {
+    "pair": "implicit_spider_explicit_ant",
+    "split": "primary",
+    "layer": 3,
+    "feature": 2309,
+    "role": "ant_insect",
+    "label": "Small Invertebrate and Insect Token Gate",
+    "site": "cue_end",
+    "method": "full_contribution",
+    "strength": 32,
+    "receiver_position": 12,
+    "donor_position": 8,
+    "receiver_token": " webs",
+    "donor_token": " ant",
+    "receiver_gate": -0.0,
+    "donor_gate": 1.339556336402893,
+    "receiver_contribution_norm": 0.0,
+    "donor_contribution_norm": 3.606323480606079,
+    "intended_delta_norm": 115.40235137939453,
+    "actual_mlp_change_norm": 115.4074478149414,
+    "P6": 0.9999997615814209,
+    "P8": 2.1024332852448424e-07,
+    "P4": 1.344040612138997e-08,
+    "top_token": "6",
+    "top_tokens": [
+      {
+        "id": 21,
+        "text": "6",
+        "probability": 0.9999997615814209
+      },
+      {
+        "id": 23,
+        "text": "8",
+        "probability": 2.1024332852448424e-07
+      },
+      {
+        "id": 19,
+        "text": "4",
+        "probability": 1.344040612138997e-08
+      },
+      {
+        "id": 785,
+        "text": "The",
+        "probability": 7.194131512733293e-09
+      },
+      {
+        "id": 15,
+        "text": "0",
+        "probability": 7.194131512733293e-09
+      }
+    ],
+    "logits_index": 17,
+    "vector_index": 5
+  },
+  "best_primary": {
+    "pair": "implicit_spider_explicit_ant",
+    "split": "primary",
+    "layer": 3,
+    "feature": 2309,
+    "role": "ant_insect",
+    "label": "Small Invertebrate and Insect Token Gate",
+    "site": "cue_end",
+    "method": "full_contribution",
+    "strength": 32,
+    "receiver_position": 12,
+    "donor_position": 8,
+    "receiver_token": " webs",
+    "donor_token": " ant",
+    "receiver_gate": -0.0,
+    "donor_gate": 1.339556336402893,
+    "receiver_contribution_norm": 0.0,
+    "donor_contribution_norm": 3.606323480606079,
+    "intended_delta_norm": 115.40235137939453,
+    "actual_mlp_change_norm": 115.4074478149414,
+    "P6": 0.9999997615814209,
+    "P8": 2.1024332852448424e-07,
+    "P4": 1.344040612138997e-08,
+    "top_token": "6",
+    "top_tokens": [
+      {
+        "id": 21,
+        "text": "6",
+        "probability": 0.9999997615814209
+      },
+      {
+        "id": 23,
+        "text": "8",
+        "probability": 2.1024332852448424e-07
+      },
+      {
+        "id": 19,
+        "text": "4",
+        "probability": 1.344040612138997e-08
+      },
+      {
+        "id": 785,
+        "text": "The",
+        "probability": 7.194131512733293e-09
+      },
+      {
+        "id": 15,
+        "text": "0",
+        "probability": 7.194131512733293e-09
+      }
+    ],
+    "logits_index": 17,
+    "vector_index": 5
+  },
+  "gate_only_at32": {
+    "pair": "implicit_spider_explicit_ant",
+    "split": "primary",
+    "layer": 3,
+    "feature": 2309,
+    "role": "ant_insect",
+    "label": "Small Invertebrate and Insect Token Gate",
+    "site": "cue_end",
+    "method": "gate_only",
+    "strength": 32,
+    "receiver_position": 12,
+    "donor_position": 8,
+    "receiver_token": " webs",
+    "donor_token": " ant",
+    "receiver_gate": -0.0,
+    "donor_gate": 1.339556336402893,
+    "receiver_contribution_norm": 0.0,
+    "donor_contribution_norm": 3.606323480606079,
+    "intended_delta_norm": 87.17711639404297,
+    "actual_mlp_change_norm": 87.17076110839844,
+    "P6": 0.9999544620513916,
+    "P8": 4.5397864596452564e-05,
+    "P4": 9.930742805863702e-08,
+    "top_token": "6",
+    "top_tokens": [
+      {
+        "id": 21,
+        "text": "6",
+        "probability": 0.9999544620513916
+      },
+      {
+        "id": 23,
+        "text": "8",
+        "probability": 4.5397864596452564e-05
+      },
+      {
+        "id": 19,
+        "text": "4",
+        "probability": 9.930742805863702e-08
+      },
+      {
+        "id": 22,
+        "text": "7",
+        "probability": 3.2240400571481587e-08
+      },
+      {
+        "id": 20,
+        "text": "5",
+        "probability": 1.3439797719172475e-08
+      }
+    ],
+    "logits_index": 22,
+    "vector_index": 10
+  },
+  "strength32_generation": "6",
+  "random_controls_above99": 0,
+  "random_control_count": 10,
+  "trial_count": 60
+}

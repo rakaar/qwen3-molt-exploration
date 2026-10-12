@@ -1,0 +1,200 @@
+Collecting transformers==4.57.6
+  Downloading transformers-4.57.6-py3-none-any.whl.metadata (43 kB)
+Collecting huggingface_hub==0.36.2
+  Downloading huggingface_hub-0.36.2-py3-none-any.whl.metadata (15 kB)
+Collecting accelerate==1.15.0
+  Downloading accelerate-1.15.0-py3-none-any.whl.metadata (19 kB)
+Collecting safetensors==0.8.0
+  Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Requirement already satisfied: filelock in /venv/main/lib/python3.12/site-packages (from transformers==4.57.6) (3.32.5)
+Requirement already satisfied: numpy>=1.17 in /venv/main/lib/python3.12/site-packages (from transformers==4.57.6) (2.5.3)
+Requirement already satisfied: packaging>=20.0 in /venv/main/lib/python3.12/site-packages (from transformers==4.57.6) (26.3)
+Requirement already satisfied: pyyaml>=5.1 in /venv/main/lib/python3.12/site-packages (from transformers==4.57.6) (6.0.3)
+Collecting regex!=2019.12.17 (from transformers==4.57.6)
+  Downloading regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting requests (from transformers==4.57.6)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers==4.57.6)
+  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Requirement already satisfied: tqdm>=4.27 in /venv/main/lib/python3.12/site-packages (from transformers==4.57.6) (4.70.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /venv/main/lib/python3.12/site-packages (from huggingface_hub==0.36.2) (2026.7.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /venv/main/lib/python3.12/site-packages (from huggingface_hub==0.36.2) (1.6.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /venv/main/lib/python3.12/site-packages (from huggingface_hub==0.36.2) (4.16.0)
+Requirement already satisfied: psutil in /venv/main/lib/python3.12/site-packages (from accelerate==1.15.0) (7.2.2)
+Requirement already satisfied: torch>=2.0.0 in /venv/main/lib/python3.12/site-packages (from accelerate==1.15.0) (2.11.0+cu128)
+Requirement already satisfied: setuptools<82 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (81.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (3.6.1)
+Requirement already satisfied: jinja2 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (3.1.6)
+Requirement already satisfied: cuda-toolkit==12.8.1 in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (12.8.1)
+Requirement already satisfied: cuda-bindings<13,>=12.9.4 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (12.9.7)
+Requirement already satisfied: nvidia-cudnn-cu12==9.19.0.56 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (9.19.0.56)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.28.9 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (2.28.9)
+Requirement already satisfied: nvidia-nvshmem-cu12==3.4.5 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (3.4.5)
+Requirement already satisfied: triton==3.6.0 in /venv/main/lib/python3.12/site-packages (from torch>=2.0.0->accelerate==1.15.0) (3.6.0)
+Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (12.8.4.1)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (12.8.90)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (11.3.3.83)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (1.13.1.3)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (12.8.90)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (10.3.9.90)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (11.7.3.90)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (12.5.8.93)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (12.8.93)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (12.8.93)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90.* in /venv/main/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=2.0.0->accelerate==1.15.0) (12.8.90)
+Requirement already satisfied: cuda-pathfinder~=1.1 in /venv/main/lib/python3.12/site-packages (from cuda-bindings<13,>=12.9.4->torch>=2.0.0->accelerate==1.15.0) (1.8.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /venv/main/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=2.0.0->accelerate==1.15.0) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /venv/main/lib/python3.12/site-packages (from jinja2->torch>=2.0.0->accelerate==1.15.0) (3.0.3)
+Collecting charset_normalizer<4,>=2 (from requests->transformers==4.57.6)
+  Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Requirement already satisfied: idna<4,>=2.5 in /venv/main/lib/python3.12/site-packages (from requests->transformers==4.57.6) (3.19)
+Collecting urllib3<3,>=1.26 (from requests->transformers==4.57.6)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Requirement already satisfied: certifi>=2023.5.7 in /venv/main/lib/python3.12/site-packages (from requests->transformers==4.57.6) (2026.7.22)
+Downloading transformers-4.57.6-py3-none-any.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 48.2 MB/s  0:00:00
+Downloading huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 37.2 MB/s  0:00:00
+Downloading accelerate-1.15.0-py3-none-any.whl (394 kB)
+Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 85.5 MB/s  0:00:00
+Downloading regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.8/807.8 kB 69.5 MB/s  0:00:00
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Installing collected packages: urllib3, safetensors, regex, charset_normalizer, requests, huggingface_hub, tokenizers, transformers, accelerate
+  Attempting uninstall: huggingface_hub
+    Found existing installation: huggingface_hub 1.30.0
+    Uninstalling huggingface_hub-1.30.0:
+      Successfully uninstalled huggingface_hub-1.30.0
+
+Successfully installed accelerate-1.15.0 charset_normalizer-3.5.2 huggingface_hub-0.36.2 regex-2026.9.29 requests-2.34.2 safetensors-0.8.0 tokenizers-0.22.2 transformers-4.57.6 urllib3-2.8.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+MOLT_SLICES_READY 8 [2201] 26808548
+MOLT_SLICES_READY 3 [2309] 26808548
+MOLT_SLICES_READY 2 [591] 27463916
+MOLT_SLICES_READY 11 [39] 36638956
+MOLT_SLICES_READY 16 [2286] 26808548
+MOLT_SLICES_READY 19 [2283] 26808548
+MOLT_SLICES_READY 27 [969] 27463916
+BASE_VERIFIED 8060908199
+MOLT_SLICES_READY 31 [456] 28774636
+ALL_WEIGHTS_VERIFIED
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+BASELINE web_anthill_receiver generation 8 P6 2.753568878688384e-05 P8 0.9999723434448242
+BASELINE web_anthill_donor generation 6 P6 0.9819040894508362 P8 0.00047926275874488056
+BASELINE explicit_spider_ant_receiver generation 8 P6 1.9555681518568235e-08 P8 1.0
+BASELINE explicit_spider_ant_donor generation 6 P6 0.9999996423721313 P8 1.8553907921159407e-07
+BASELINE silk_colony_receiver generation 8 P6 6.825602838489431e-08 P8 0.9999998807907104
+BASELINE silk_colony_donor generation 6 P6 0.9999984502792358 P8 1.3709569657294196e-06
+BASELINE control_bee generation 6 P6 0.9999988079071045 P8 2.6995752477887436e-07
+BASELINE control_beetle generation 6 P6 0.9999910593032837 P8 8.939696272136644e-06
+BASELINE control_scorpion generation 8 P6 2.998960413336249e-09 P8 0.9999998807907104
+BASELINE control_octopus generation 8 P6 3.3982678893096363e-09 P8 1.0
+BASELINE control_cow generation 4 P6 7.582560135332983e-10 P8 5.4927885156930145e-11
+BASELINE control_antique generation None P6 2.2040171586784075e-18 P8 2.3230170676602995e-19
+BASELINE control_antioxidant generation None P6 2.6022756309422203e-17 P8 5.806461725035901e-18
+BASELINE control_spiderman generation None P6 3.899665489072619e-14 P8 1.8420716883273125e-14
+BASELINE_REVIEW_READY ['web_anthill', 'explicit_spider_ant', 'silk_colony']
+SWEEP web_anthill L27-T969 cue_end best strength 32 P6 0.0011695100693032146 P8 0.9988303780555725
+SWEEP web_anthill L27-T969 have best strength 32 P6 0.0005527784232981503 P8 0.9994468092918396
+SWEEP web_anthill L27-T969 question_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L27-T969 readout best strength 8 P6 0.001168765826150775 P8 0.9981947541236877
+SWEEP web_anthill L31-T456 cue_end best strength 2 P6 3.535624637152068e-05 P8 0.9999644756317139
+SWEEP web_anthill L31-T456 have best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L31-T456 question_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L31-T456 readout best strength 4.5 P6 0.07415212690830231 P8 0.021244941279292107
+SWEEP web_anthill L3-T2309 cue_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L3-T2309 have best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L3-T2309 question_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L3-T2309 readout best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L11-T39 cue_end best strength 16 P6 0.9999774694442749 P8 6.144074177427683e-06
+SWEEP web_anthill L11-T39 have best strength 8 P6 0.0011694986606016755 P8 0.9988206028938293
+SWEEP web_anthill L11-T39 question_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L11-T39 readout best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L16-T2286 cue_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L16-T2286 have best strength 32 P6 5.7639430451672524e-05 P8 0.9887599945068359
+SWEEP web_anthill L16-T2286 question_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L16-T2286 readout best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L19-T2283 cue_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L19-T2283 have best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L19-T2283 question_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L19-T2283 readout best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L2-T591 cue_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L2-T591 have best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L2-T591 question_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L2-T591 readout best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L8-T2201 cue_end best strength 32 P6 1.0 P8 3.6534821390432626e-08
+SWEEP web_anthill L8-T2201 have best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L8-T2201 question_end best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP web_anthill L8-T2201 readout best strength 0 P6 2.753568878688384e-05 P8 0.9999723434448242
+SWEEP explicit_spider_ant L27-T969 cue_end best strength 1 P6 2.2159490242756874e-08 P8 1.0
+SWEEP explicit_spider_ant L27-T969 have best strength 16 P6 2.510999053129126e-08 P8 1.0
+SWEEP explicit_spider_ant L27-T969 question_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L27-T969 readout best strength 32 P6 0.0068848892115056515 P8 0.005361957009881735
+SWEEP explicit_spider_ant L31-T456 cue_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L31-T456 have best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L31-T456 question_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L31-T456 readout best strength 4.5 P6 0.000576180755160749 P8 0.5576135516166687
+SWEEP explicit_spider_ant L3-T2309 cue_end best strength 32 P6 0.9933009147644043 P8 0.006692809052765369
+SWEEP explicit_spider_ant L3-T2309 have best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L3-T2309 question_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L3-T2309 readout best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L11-T39 cue_end best strength 32 P6 0.022976182401180267 P8 5.026019789511338e-05
+SWEEP explicit_spider_ant L11-T39 have best strength 32 P6 1.6373763855881407e-07 P8 0.9999995231628418
+SWEEP explicit_spider_ant L11-T39 question_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L11-T39 readout best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L16-T2286 cue_end best strength 32 P6 6.023572751701067e-08 P8 0.9999997615814209
+SWEEP explicit_spider_ant L16-T2286 have best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L16-T2286 question_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L16-T2286 readout best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L19-T2283 cue_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L19-T2283 have best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L19-T2283 question_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L19-T2283 readout best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L2-T591 cue_end best strength 8 P6 5.395455445977859e-06 P8 1.2038889281029697e-06
+SWEEP explicit_spider_ant L2-T591 have best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L2-T591 question_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L2-T591 readout best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L8-T2201 cue_end best strength 16 P6 0.9998703002929688 P8 0.00012339379463810474
+SWEEP explicit_spider_ant L8-T2201 have best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L8-T2201 question_end best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP explicit_spider_ant L8-T2201 readout best strength 0 P6 1.9555681518568235e-08 P8 1.0
+SWEEP silk_colony L27-T969 cue_end best strength 32 P6 1.2751904421293148e-07 P8 0.9999998807907104
+SWEEP silk_colony L27-T969 have best strength 4.5 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L27-T969 question_end best strength 1 P6 7.734421103577915e-08 P8 0.9999998807907104
+SWEEP silk_colony L27-T969 readout best strength 8 P6 0.9999409914016724 P8 5.8291225286666304e-05
+SWEEP silk_colony L31-T456 cue_end best strength 1 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L31-T456 have best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L31-T456 question_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L31-T456 readout best strength 4.5 P6 0.17941249907016754 P8 0.2303701937198639
+SWEEP silk_colony L3-T2309 cue_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L3-T2309 have best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L3-T2309 question_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L3-T2309 readout best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L11-T39 cue_end best strength 16 P6 0.0005793246673420072 P8 0.8157498836517334
+SWEEP silk_colony L11-T39 have best strength 8 P6 5.043470991950016e-07 P8 0.999998927116394
+SWEEP silk_colony L11-T39 question_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L11-T39 readout best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L16-T2286 cue_end best strength 4.5 P6 8.764247638737288e-08 P8 0.9999998807907104
+SWEEP silk_colony L16-T2286 have best strength 1 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L16-T2286 question_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L16-T2286 readout best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L19-T2283 cue_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L19-T2283 have best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L19-T2283 question_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L19-T2283 readout best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L2-T591 cue_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L2-T591 have best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L2-T591 question_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L2-T591 readout best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L8-T2201 cue_end best strength 1 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L8-T2201 have best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L8-T2201 question_end best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+SWEEP silk_colony L8-T2201 readout best strength 0 P6 6.825602838489431e-08 P8 0.9999998807907104
+COMPLETE 927 trials [{"pair": "web_anthill", "layer": 11, "feature": 39, "site": "cue_end", "strength": 16, "P6": 0.9999774694442749, "P8": 6.144074177427683e-06}, {"pair": "explicit_spider_ant", "layer": 3, "feature": 2309, "site": "cue_end", "strength": 32, "P6": 0.9933009147644043, "P8": 0.006692809052765369}, {"pair": "silk_colony", "layer": 27, "feature": 969, "site": "readout", "strength": 8, "P6": 0.9999409914016724, "P8": 5.8291225286666304e-05}]

@@ -8,3 +8,10 @@ __pycache__/
 results/reconstruction-layers17-25/activations/
 *.tar.gz
 .env
+
+# Retain compact selected assets used by the October 12-13 audits.
+!experiments/residual-similarity/assets/molt-22-selected.safetensors
+!results/2026-10-13-explicit-ant-implicit-spider/weights/molt-3-selected.safetensors
+# Restore this exact file from its checked, tracked byte chunks.
+/results/2026-10-12-spider-ant/artifacts/next-token-logits.npz
+*.restoring

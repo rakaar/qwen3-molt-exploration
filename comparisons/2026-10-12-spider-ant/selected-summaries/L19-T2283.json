@@ -1,0 +1,97 @@
+{
+  "id": 2283,
+  "rank": 32,
+  "count": 6214,
+  "frequency": 0.0006214,
+  "maximum": 4.40625,
+  "mean_active": 0.8667744994163513,
+  "fingerprint": "f1b66c3311b7bee1c578a9f4946e484773af4b74d778031e29a875359dffff49",
+  "status": "complete",
+  "evidence_counts": {
+    "train": 32,
+    "test": 50,
+    "negatives": 50,
+    "active_fuzz_positives": 50,
+    "short_windows": 0,
+    "full_budget": true
+  },
+  "sampling_exceptions": [],
+  "updated_at": "2026-10-08T14:04:16.468803+00:00",
+  "explanation": "The gate activates on specific nouns or adjectives that denote concrete physical objects, materials, or tangible items (e.g., \"leather,\" \"olive,\" \"brass,\" \"gum,\" \"butter,\" \"spider,\" \"Thames\"). It fires less strongly on abstract concepts, proper nouns, or general categories, suggesting a latent representation for physical substance or material properties.",
+  "title": "Concrete Physical Object Nouns",
+  "label": "Concrete Physical Object Nouns",
+  "methods": {
+    "intruder": {
+      "status": "complete",
+      "metrics": {
+        "total": 20,
+        "valid": 20,
+        "parse_failures": 0,
+        "correct": 10,
+        "accuracy": 0.5,
+        "accuracy_ci95": [
+          0.2992980081982123,
+          0.7007019918017877
+        ],
+        "chance": 0.2
+      }
+    },
+    "fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 12,
+        "tn": 46,
+        "fp": 4,
+        "fn": 38,
+        "accuracy": 0.58,
+        "f1": 0.36363636363636365,
+        "balanced_accuracy": 0.5800000000000001,
+        "accuracy_ci95": [
+          0.4820648670304296,
+          0.6720161732564526
+        ]
+      }
+    },
+    "active_fuzz": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 12,
+        "tn": 46,
+        "fp": 4,
+        "fn": 38,
+        "accuracy": 0.58,
+        "f1": 0.36363636363636365,
+        "balanced_accuracy": 0.5800000000000001,
+        "accuracy_ci95": [
+          0.4820648670304296,
+          0.6720161732564526
+        ]
+      }
+    },
+    "detection": {
+      "status": "complete",
+      "metrics": {
+        "total": 100,
+        "valid": 100,
+        "parse_failures": 0,
+        "tp": 15,
+        "tn": 37,
+        "fp": 13,
+        "fn": 35,
+        "accuracy": 0.52,
+        "f1": 0.38461538461538464,
+        "balanced_accuracy": 0.52,
+        "accuracy_ci95": [
+          0.4231657776522397,
+          0.615354482419481
+        ]
+      }
+    }
+  }
+}

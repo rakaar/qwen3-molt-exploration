@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-09-19T01:47:15.948505+00:00",
+  "layers": [
+    22,
+    0,
+    1,
+    10,
+    30,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "reference": "/home/georg/Code/crosslayer-transcoder/results/molt-qwen-dashboard-campaign-layer22-10m",
+  "target_tokens": 10000000,
+  "methods": [
+    "detection",
+    "fuzz",
+    "active_fuzz",
+    "intruder"
+  ],
+  "concurrency": 64,
+  "checkpoint_policy": "Only completed 100,000-step campaign checkpoints; discover later layers as training finishes",
+  "collection_gpu": "GPU-2ada3848-a497-abbf-c0da-c053a9680677",
+  "allocator_cap_gib": 10,
+  "api_policy": "One layer worker; both same-model replicas share individual requests using independent 32-request limits; simulation disabled",
+  "serving_backends": [
+    {
+      "name": "RTX 5090",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "concurrency": 32
+    },
+    {
+      "name": "RTX PRO 6000",
+      "base_url": "http://127.0.0.1:8002/v1",
+      "concurrency": 32
+    }
+  ]
+}

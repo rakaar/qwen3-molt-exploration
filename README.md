@@ -1,6 +1,14 @@
 # Qwen3-4B MOLT exploration
 
-Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new matched intervention experiments were run on 10–11 October 2026.
+Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new intervention experiments were run on 10–13 October 2026.
+
+## New experiments: 12–13 October 2026
+
+- [13 October: explicit ant donor → implicit spider receiver](experiments/explicit-ant-implicit-spider/) — one MOLT, L3–T2309, donor token 8 (` ant`) to receiver token 12 (` webs`), with unfrozen attention. Adding the full donor contribution at 24× reaches **99.997842% P(next token = 6)**; 32× reaches **99.999976%**. 24× is the lowest successful tested strength, not a proven minimum. [Detailed report](results/2026-10-13-explicit-ant-implicit-spider/report.html) · [Summary image](results/2026-10-13-explicit-ant-implicit-spider/molt-l3-t2309-cross-prompt-summary.png).
+- [12 October: spider/ant single-layer MOLT pilot](experiments/spider-ant/) — 927 main trials and 60 follow-up controls across eight candidates. Includes L8–T2201, implicit donor at the final `ills` subtoken of `anthills`, added to receiver ` webs` at strength 16; and the separate L3–T2309 explicit-spider/explicit-ant diagnostic at strength 32. [Detailed report](results/2026-10-12-spider-ant/report.html) · [L8 image](results/2026-10-12-spider-ant/molt-l8-t2201-patch-summary.png) · [L3 explicit image](results/2026-10-12-spider-ant/molt-l3-t2309-patch-summary.png) · [Shared L27/L31 gate figure](results/2026-10-12-spider-ant/shared-arthropod-gates-L27-L31.png).
+- [12 October: MOLT/transcoder residual similarity](experiments/residual-similarity/) — fixed MOLT strength 4.5 compared with 72 transcoder strengths. At transcoder strength 19.5, both give over 99% P(cold), with layer-22 token-9 full-residual cosine **0.634857913** and changes-from-clean cosine **0.608773508**. [Detailed report](results/2026-10-12-residual-similarity/report.html) · [Figure](results/2026-10-12-residual-similarity/residual-cosine-vs-strength.png).
+
+Raw tensors, full-vocabulary logits, controls, pinned protocols, source hashes, verification records, reports and figures are preserved. [Backup scope and fresh-clone verification](BACKUP-2026-10-13.md) explains how to reassemble the largest logits file from checked chunks. These are exploratory prompt-specific measurements; semantic concept replacement remains unverified.
 
 ## New experiments: 10–11 October 2026
 

@@ -1,0 +1,135 @@
+{
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "dtype": "BF16",
+    "attention": "eager, fully live"
+  },
+  "conditions": [
+    {
+      "key": "primary/molt22-pair/control/combined/4.5/2",
+      "prompt_id": "primary",
+      "group": "molt22-pair",
+      "mode": "control",
+      "component": "combined",
+      "strength": 4.5,
+      "layer": 22,
+      "position": 9,
+      "delta_norm": 64.57957458496094,
+      "P_cold": 0.9982693195343018,
+      "P_large": 1.3153710065605395e-10,
+      "P_Cold": 0.0005521271377801895,
+      "P_space_cold": 6.950255283300066e-06,
+      "top_token": "cold",
+      "top_tokens": [
+        {
+          "id": 87072,
+          "text": "cold",
+          "probability": 0.9982693195343018
+        },
+        {
+          "id": 10303,
+          "text": "low",
+          "probability": 0.0011688531376421452
+        },
+        {
+          "id": 76418,
+          "text": "Cold",
+          "probability": 0.0005521271377801895
+        },
+        {
+          "id": 9255,
+          "text": " cold",
+          "probability": 6.950255283300066e-06
+        },
+        {
+          "id": 42196,
+          "text": "cool",
+          "probability": 1.2077732662874041e-06
+        },
+        {
+          "id": 99476,
+          "text": "\u51b7",
+          "probability": 1.0658561677701073e-06
+        },
+        {
+          "id": 24187,
+          "text": "Low",
+          "probability": 8.749080393499753e-08
+        },
+        {
+          "id": 13855,
+          "text": "bad",
+          "probability": 8.749080393499753e-08
+        }
+      ],
+      "small_ids": [
+        2339
+      ],
+      "hot_ids": [
+        941
+      ]
+    },
+    {
+      "key": "primary/pair-38866-85454/coupled/combined/19.5/446",
+      "prompt_id": "primary",
+      "group": "pair-38866-85454",
+      "mode": "coupled",
+      "component": "combined",
+      "strength": 19.5,
+      "layer": 22,
+      "position": 9,
+      "delta_norm": 187.6070556640625,
+      "P_cold": 0.9975233674049377,
+      "P_large": 8.682389253085801e-15,
+      "P_Cold": 0.002472613239660859,
+      "P_space_cold": 2.2547314983967226e-06,
+      "top_token": "cold",
+      "top_tokens": [
+        {
+          "id": 87072,
+          "text": "cold",
+          "probability": 0.9975233674049377
+        },
+        {
+          "id": 76418,
+          "text": "Cold",
+          "probability": 0.002472613239660859
+        },
+        {
+          "id": 9255,
+          "text": " cold",
+          "probability": 2.2547314983967226e-06
+        },
+        {
+          "id": 99476,
+          "text": "\u51b7",
+          "probability": 1.5496528931180364e-06
+        },
+        {
+          "id": 42196,
+          "text": "cool",
+          "probability": 2.0972268544028339e-07
+        },
+        {
+          "id": 66,
+          "text": "c",
+          "probability": 2.5047802054700696e-08
+        },
+        {
+          "id": 10622,
+          "text": "hot",
+          "probability": 1.0441477904521435e-08
+        },
+        {
+          "id": 23185,
+          "text": " Cold",
+          "probability": 3.389851732649163e-09
+        }
+      ],
+      "stage": "local_peak_refinement"
+    }
+  ]
+}

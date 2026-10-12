@@ -1,0 +1,3426 @@
+{
+  "best_primary_semantic": {
+    "pair": "web_anthill",
+    "split": "primary",
+    "layer": 11,
+    "feature": 39,
+    "role": "shared_animal",
+    "label": "Animal and Wildlife Species Tokens",
+    "site": "cue_end",
+    "method": "full_contribution",
+    "strength": 16,
+    "receiver_position": 12,
+    "donor_position": 12,
+    "receiver_token": " webs",
+    "donor_token": "ills",
+    "receiver_gate": 0.0,
+    "donor_gate": 1.3734939098358154,
+    "receiver_contribution_norm": 0.0,
+    "donor_contribution_norm": 8.824734687805176,
+    "intended_delta_norm": 141.1957550048828,
+    "actual_mlp_change_norm": 141.1905517578125,
+    "P6": 0.9999774694442749,
+    "P8": 6.144074177427683e-06,
+    "P4": 1.0676799320208374e-06,
+    "top_token": "6",
+    "top_tokens": [
+      {
+        "id": 21,
+        "text": "6",
+        "probability": 0.9999774694442749
+      },
+      {
+        "id": 20,
+        "text": "5",
+        "probability": 1.3007004781684373e-05
+      },
+      {
+        "id": 23,
+        "text": "8",
+        "probability": 6.144074177427683e-06
+      },
+      {
+        "id": 18,
+        "text": "3",
+        "probability": 1.2098398656235076e-06
+      },
+      {
+        "id": 19,
+        "text": "4",
+        "probability": 1.0676799320208374e-06
+      }
+    ],
+    "logits_index": 176,
+    "vector_index": 162
+  },
+  "best_primary_semantic_at_clue": {
+    "pair": "web_anthill",
+    "split": "primary",
+    "layer": 11,
+    "feature": 39,
+    "role": "shared_animal",
+    "label": "Animal and Wildlife Species Tokens",
+    "site": "cue_end",
+    "method": "full_contribution",
+    "strength": 16,
+    "receiver_position": 12,
+    "donor_position": 12,
+    "receiver_token": " webs",
+    "donor_token": "ills",
+    "receiver_gate": 0.0,
+    "donor_gate": 1.3734939098358154,
+    "receiver_contribution_norm": 0.0,
+    "donor_contribution_norm": 8.824734687805176,
+    "intended_delta_norm": 141.1957550048828,
+    "actual_mlp_change_norm": 141.1905517578125,
+    "P6": 0.9999774694442749,
+    "P8": 6.144074177427683e-06,
+    "P4": 1.0676799320208374e-06,
+    "top_token": "6",
+    "top_tokens": [
+      {
+        "id": 21,
+        "text": "6",
+        "probability": 0.9999774694442749
+      },
+      {
+        "id": 20,
+        "text": "5",
+        "probability": 1.3007004781684373e-05
+      },
+      {
+        "id": 23,
+        "text": "8",
+        "probability": 6.144074177427683e-06
+      },
+      {
+        "id": 18,
+        "text": "3",
+        "probability": 1.2098398656235076e-06
+      },
+      {
+        "id": 19,
+        "text": "4",
+        "probability": 1.0676799320208374e-06
+      }
+    ],
+    "logits_index": 176,
+    "vector_index": 162
+  },
+  "trial_count": 927,
+  "baselines": {
+    "web_anthill_receiver": {
+      "P6": 2.753568878688384e-05,
+      "P8": 0.9999723434448242,
+      "P4": 3.6533812419747846e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999723434448242
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 2.753568878688384e-05
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 3.6533812419747846e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 3.224097611109755e-08
+        },
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 2.215887739964728e-08
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 12,
+        "readout": 29,
+        "question_end": 14,
+        "have": 13
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 8,
+          "id": 9864,
+          "text": " animal"
+        },
+        {
+          "position": 9,
+          "id": 429,
+          "text": " that"
+        },
+        {
+          "position": 10,
+          "id": 582,
+          "text": " we"
+        },
+        {
+          "position": 11,
+          "id": 4693,
+          "text": "aves"
+        },
+        {
+          "position": 12,
+          "id": 80920,
+          "text": " webs"
+        },
+        {
+          "position": 13,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 14,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 15,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 16,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 17,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 18,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 19,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 20,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 21,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 24,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 25,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 26,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 27,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 28,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 29,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does the animal that weaves webs have? Reply with only one digit.",
+      "logits_index": 0
+    },
+    "web_anthill_donor": {
+      "P6": 0.9819040894508362,
+      "P8": 0.00047926275874488056,
+      "P4": 0.0035412991419434547,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9819040894508362
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 0.007496929727494717
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 0.0035412991419434547
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 0.003125185612589121
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 0.0027579667512327433
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 12,
+        "readout": 29,
+        "question_end": 14,
+        "have": 13
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 8,
+          "id": 9864,
+          "text": " animal"
+        },
+        {
+          "position": 9,
+          "id": 429,
+          "text": " that"
+        },
+        {
+          "position": 10,
+          "id": 22111,
+          "text": " builds"
+        },
+        {
+          "position": 11,
+          "id": 22268,
+          "text": " anth"
+        },
+        {
+          "position": 12,
+          "id": 3305,
+          "text": "ills"
+        },
+        {
+          "position": 13,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 14,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 15,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 16,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 17,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 18,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 19,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 20,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 21,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 24,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 25,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 26,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 27,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 28,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 29,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does the animal that builds anthills have? Reply with only one digit.",
+      "logits_index": 1
+    },
+    "explicit_spider_ant_receiver": {
+      "P6": 1.9555681518568235e-08,
+      "P8": 1.0,
+      "P4": 1.1861120086109622e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 1.9555681518568235e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.1861120086109622e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.646573848963385e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 2.061153470123145e-09
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 34354,
+          "text": " spider"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a spider have? Reply with only one digit.",
+      "logits_index": 2
+    },
+    "explicit_spider_ant_donor": {
+      "P6": 0.9999996423721313,
+      "P8": 1.8553907921159407e-07,
+      "P4": 7.734418971949708e-08,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999996423721313
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.8553907921159407e-07
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 7.734418971949708e-08
+        },
+        {
+          "id": 20335,
+          "text": "Hex",
+          "probability": 5.602794228565244e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 4.944448406263291e-09
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 458,
+          "text": " an"
+        },
+        {
+          "position": 8,
+          "id": 3196,
+          "text": " ant"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does an ant have? Reply with only one digit.",
+      "logits_index": 3
+    },
+    "silk_colony_receiver": {
+      "P6": 6.825602838489431e-08,
+      "P8": 0.9999998807907104,
+      "P4": 2.06115324807854e-09,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999998807907104
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 6.825602838489431e-08
+        },
+        {
+          "id": 24,
+          "text": "9",
+          "probability": 1.7257827167327378e-08
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 1.7257827167327378e-08
+        },
+        {
+          "id": 785,
+          "text": "The",
+          "probability": 1.3440407897746809e-08
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 12,
+        "readout": 29,
+        "question_end": 14,
+        "have": 13
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 8,
+          "id": 9864,
+          "text": " animal"
+        },
+        {
+          "position": 9,
+          "id": 429,
+          "text": " that"
+        },
+        {
+          "position": 10,
+          "id": 44758,
+          "text": " spins"
+        },
+        {
+          "position": 11,
+          "id": 39944,
+          "text": " silk"
+        },
+        {
+          "position": 12,
+          "id": 80920,
+          "text": " webs"
+        },
+        {
+          "position": 13,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 14,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 15,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 16,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 17,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 18,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 19,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 20,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 21,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 24,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 25,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 26,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 27,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 28,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 29,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does the animal that spins silk webs have? Reply with only one digit.",
+      "logits_index": 4
+    },
+    "silk_colony_donor": {
+      "P6": 0.9999984502792358,
+      "P8": 1.3709569657294196e-06,
+      "P4": 1.125349982089574e-07,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999984502792358
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.3709569657294196e-06
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.125349982089574e-07
+        },
+        {
+          "id": 22,
+          "text": "7",
+          "probability": 2.2159456491976925e-08
+        },
+        {
+          "id": 15,
+          "text": "0",
+          "probability": 2.2159456491976925e-08
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 13,
+        "readout": 30,
+        "question_end": 15,
+        "have": 14
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 8,
+          "id": 9864,
+          "text": " animal"
+        },
+        {
+          "position": 9,
+          "id": 429,
+          "text": " that"
+        },
+        {
+          "position": 10,
+          "id": 25252,
+          "text": " inhab"
+        },
+        {
+          "position": 11,
+          "id": 1199,
+          "text": "its"
+        },
+        {
+          "position": 12,
+          "id": 3196,
+          "text": " ant"
+        },
+        {
+          "position": 13,
+          "id": 47928,
+          "text": " colonies"
+        },
+        {
+          "position": 14,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 15,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 16,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 17,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 18,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 19,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 20,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 21,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 22,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 23,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 24,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 25,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 26,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 27,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 28,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 29,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 30,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does the animal that inhabits ant colonies have? Reply with only one digit.",
+      "logits_index": 5
+    },
+    "control_bee": {
+      "P6": 0.9999988079071045,
+      "P8": 2.6995752477887436e-07,
+      "P4": 9.422443554285564e-07,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999988079071045
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 9.422443554285564e-07
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 2.6995752477887436e-07
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 3.8507375066387795e-09
+        },
+        {
+          "id": 20335,
+          "text": "Hex",
+          "probability": 3.3982638925067477e-09
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 37228,
+          "text": " bee"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a bee have? Reply with only one digit.",
+      "logits_index": 6
+    },
+    "control_beetle": {
+      "P6": 0.9999910593032837,
+      "P8": 8.939696272136644e-06,
+      "P4": 1.9555507435597974e-08,
+      "top_token": "6",
+      "top_tokens": [
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 0.9999910593032837
+        },
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 8.939696272136644e-06
+        },
+        {
+          "id": 59496,
+          "text": "\uff16",
+          "probability": 4.1399008665621295e-08
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.9555507435597974e-08
+        },
+        {
+          "id": 27160,
+          "text": "June",
+          "probability": 1.725767440063919e-08
+        }
+      ],
+      "generation": "6",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 97386,
+          "text": " beetle"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a beetle have? Reply with only one digit.",
+      "logits_index": 7
+    },
+    "control_scorpion": {
+      "P6": 2.998960413336249e-09,
+      "P8": 0.9999998807907104,
+      "P4": 4.691163724146463e-08,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 0.9999998807907104
+        },
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 4.691163724146463e-08
+        },
+        {
+          "id": 99568,
+          "text": "\u516b",
+          "probability": 2.8453344569356886e-08
+        },
+        {
+          "id": 59085,
+          "text": "Eight",
+          "probability": 2.510998697857758e-08
+        },
+        {
+          "id": 31459,
+          "text": "August",
+          "probability": 2.510998697857758e-08
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 9,
+        "readout": 26,
+        "question_end": 11,
+        "have": 10
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 1136,
+          "text": " sc"
+        },
+        {
+          "position": 9,
+          "id": 72475,
+          "text": "orpion"
+        },
+        {
+          "position": 10,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 11,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 12,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 13,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 14,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 15,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 16,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 17,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 18,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 19,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 20,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 21,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 24,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 25,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 26,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a scorpion have? Reply with only one digit.",
+      "logits_index": 8
+    },
+    "control_octopus": {
+      "P6": 3.3982678893096363e-09,
+      "P8": 1.0,
+      "P4": 8.592166977905435e-10,
+      "top_token": "8",
+      "top_tokens": [
+        {
+          "id": 23,
+          "text": "8",
+          "probability": 1.0
+        },
+        {
+          "id": 18053,
+          "text": "Oct",
+          "probability": 1.5229980832032197e-08
+        },
+        {
+          "id": 59085,
+          "text": "Eight",
+          "probability": 9.23744991609965e-09
+        },
+        {
+          "id": 21,
+          "text": "6",
+          "probability": 3.3982678893096363e-09
+        },
+        {
+          "id": 18,
+          "text": "3",
+          "probability": 2.335593052293916e-09
+        }
+      ],
+      "generation": "8",
+      "sites": {
+        "cue_end": 9,
+        "readout": 26,
+        "question_end": 11,
+        "have": 10
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 18491,
+          "text": " oct"
+        },
+        {
+          "position": 9,
+          "id": 45870,
+          "text": "opus"
+        },
+        {
+          "position": 10,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 11,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 12,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 13,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 14,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 15,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 16,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 17,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 18,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 19,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 20,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 21,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 22,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 23,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 24,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 25,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 26,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a octopus have? Reply with only one digit.",
+      "logits_index": 9
+    },
+    "control_cow": {
+      "P6": 7.582560135332983e-10,
+      "P8": 5.4927885156930145e-11,
+      "P4": 1.0,
+      "top_token": "4",
+      "top_tokens": [
+        {
+          "id": 19,
+          "text": "4",
+          "probability": 1.0
+        },
+        {
+          "id": 26972,
+          "text": "Four",
+          "probability": 1.7257828943684217e-08
+        },
+        {
+          "id": 34024,
+          "text": "four",
+          "probability": 8.152020392060422e-09
+        },
+        {
+          "id": 20,
+          "text": "5",
+          "probability": 4.363462480228009e-09
+        },
+        {
+          "id": 17,
+          "text": "2",
+          "probability": 4.363462480228009e-09
+        }
+      ],
+      "generation": "4",
+      "sites": {
+        "cue_end": 8,
+        "readout": 25,
+        "question_end": 10,
+        "have": 9
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 4340,
+          "text": "How"
+        },
+        {
+          "position": 4,
+          "id": 1657,
+          "text": " many"
+        },
+        {
+          "position": 5,
+          "id": 14201,
+          "text": " legs"
+        },
+        {
+          "position": 6,
+          "id": 1558,
+          "text": " does"
+        },
+        {
+          "position": 7,
+          "id": 264,
+          "text": " a"
+        },
+        {
+          "position": 8,
+          "id": 19362,
+          "text": " cow"
+        },
+        {
+          "position": 9,
+          "id": 614,
+          "text": " have"
+        },
+        {
+          "position": 10,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 11,
+          "id": 17841,
+          "text": " Reply"
+        },
+        {
+          "position": 12,
+          "id": 448,
+          "text": " with"
+        },
+        {
+          "position": 13,
+          "id": 1172,
+          "text": " only"
+        },
+        {
+          "position": 14,
+          "id": 825,
+          "text": " one"
+        },
+        {
+          "position": 15,
+          "id": 15723,
+          "text": " digit"
+        },
+        {
+          "position": 16,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 17,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 18,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 19,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 20,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 21,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 22,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 23,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 24,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 25,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "How many legs does a cow have? Reply with only one digit.",
+      "logits_index": 10
+    },
+    "control_antique": {
+      "P6": 2.2040171586784075e-18,
+      "P8": 2.3230170676602995e-19,
+      "P4": 4.383211454354711e-18,
+      "top_token": "The",
+      "top_tokens": [
+        {
+          "id": 785,
+          "text": "The",
+          "probability": 1.0
+        },
+        {
+          "id": 95456,
+          "text": "Certainly",
+          "probability": 5.315785500670245e-08
+        },
+        {
+          "id": 334,
+          "text": "**",
+          "probability": 1.1861120086109622e-08
+        },
+        {
+          "id": 10022,
+          "text": "\"The",
+          "probability": 2.646573848963385e-09
+        },
+        {
+          "id": 576,
+          "text": " The",
+          "probability": 2.646573848963385e-09
+        }
+      ],
+      "generation": null,
+      "sites": {
+        "cue_end": 10,
+        "readout": 20
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 840,
+          "text": "Ex"
+        },
+        {
+          "position": 4,
+          "id": 20772,
+          "text": "plain"
+        },
+        {
+          "position": 5,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 6,
+          "id": 7290,
+          "text": " meaning"
+        },
+        {
+          "position": 7,
+          "id": 315,
+          "text": " of"
+        },
+        {
+          "position": 8,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 9,
+          "id": 3409,
+          "text": " word"
+        },
+        {
+          "position": 10,
+          "id": 46591,
+          "text": " antique"
+        },
+        {
+          "position": 11,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 12,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 13,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 14,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 15,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 16,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 17,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 18,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 19,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 20,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "Explain the meaning of the word antique.",
+      "logits_index": 11
+    },
+    "control_antioxidant": {
+      "P6": 2.6022756309422203e-17,
+      "P8": 5.806461725035901e-18,
+      "P4": 6.242534221335177e-17,
+      "top_token": "The",
+      "top_tokens": [
+        {
+          "id": 785,
+          "text": "The",
+          "probability": 0.9999396800994873
+        },
+        {
+          "id": 334,
+          "text": "**",
+          "probability": 5.829114525113255e-05
+        },
+        {
+          "id": 95456,
+          "text": "Certainly",
+          "probability": 1.5534066051259288e-06
+        },
+        {
+          "id": 39814,
+          "text": "Sure",
+          "probability": 3.466118414507946e-07
+        },
+        {
+          "id": 2082,
+          "text": "An",
+          "probability": 6.825192144788161e-08
+        }
+      ],
+      "generation": null,
+      "sites": {
+        "cue_end": 10,
+        "readout": 20
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 840,
+          "text": "Ex"
+        },
+        {
+          "position": 4,
+          "id": 20772,
+          "text": "plain"
+        },
+        {
+          "position": 5,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 6,
+          "id": 7290,
+          "text": " meaning"
+        },
+        {
+          "position": 7,
+          "id": 315,
+          "text": " of"
+        },
+        {
+          "position": 8,
+          "id": 279,
+          "text": " the"
+        },
+        {
+          "position": 9,
+          "id": 3409,
+          "text": " word"
+        },
+        {
+          "position": 10,
+          "id": 69239,
+          "text": " antioxidant"
+        },
+        {
+          "position": 11,
+          "id": 13,
+          "text": "."
+        },
+        {
+          "position": 12,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 13,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 14,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 15,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 16,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 17,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 18,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 19,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 20,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "Explain the meaning of the word antioxidant.",
+      "logits_index": 12
+    },
+    "control_spiderman": {
+      "P6": 3.899665489072619e-14,
+      "P8": 1.8420716883273125e-14,
+      "P4": 2.7928307995243873e-13,
+      "top_token": "Spider",
+      "top_tokens": [
+        {
+          "id": 72908,
+          "text": "Spider",
+          "probability": 0.999699592590332
+        },
+        {
+          "id": 334,
+          "text": "**",
+          "probability": 0.00017950625624507666
+        },
+        {
+          "id": 1,
+          "text": "\"",
+          "probability": 6.60366567899473e-05
+        },
+        {
+          "id": 28390,
+          "text": " Spider",
+          "probability": 3.534687857609242e-05
+        },
+        {
+          "id": 111830,
+          "text": "\u8718\u86db",
+          "probability": 1.6696681996108964e-05
+        }
+      ],
+      "generation": null,
+      "sites": {
+        "cue_end": 5,
+        "readout": 16,
+        "question_end": 7
+      },
+      "tokens": [
+        {
+          "position": 0,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 1,
+          "id": 872,
+          "text": "user"
+        },
+        {
+          "position": 2,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 3,
+          "id": 15191,
+          "text": "Who"
+        },
+        {
+          "position": 4,
+          "id": 374,
+          "text": " is"
+        },
+        {
+          "position": 5,
+          "id": 28390,
+          "text": " Spider"
+        },
+        {
+          "position": 6,
+          "id": 30151,
+          "text": "-Man"
+        },
+        {
+          "position": 7,
+          "id": 30,
+          "text": "?"
+        },
+        {
+          "position": 8,
+          "id": 151645,
+          "text": "<|im_end|>"
+        },
+        {
+          "position": 9,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 10,
+          "id": 151644,
+          "text": "<|im_start|>"
+        },
+        {
+          "position": 11,
+          "id": 77091,
+          "text": "assistant"
+        },
+        {
+          "position": 12,
+          "id": 198,
+          "text": "\n"
+        },
+        {
+          "position": 13,
+          "id": 151667,
+          "text": "<think>"
+        },
+        {
+          "position": 14,
+          "id": 271,
+          "text": "\n\n"
+        },
+        {
+          "position": 15,
+          "id": 151668,
+          "text": "</think>"
+        },
+        {
+          "position": 16,
+          "id": 271,
+          "text": "\n\n"
+        }
+      ],
+      "text": "Who is Spider-Man?",
+      "logits_index": 13
+    }
+  },
+  "heldout_at_primary_selected_conditions": [
+    {
+      "primary": {
+        "pair": "web_anthill",
+        "split": "primary",
+        "layer": 27,
+        "feature": 969,
+        "role": "shared_arthropod",
+        "label": "Insect and Arthropod Species",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 32,
+        "receiver_position": 12,
+        "donor_position": 12,
+        "receiver_token": " webs",
+        "donor_token": "ills",
+        "receiver_gate": 1.6394797563552856,
+        "donor_gate": 2.7268104553222656,
+        "receiver_contribution_norm": 16.381818771362305,
+        "donor_contribution_norm": 19.689836502075195,
+        "intended_delta_norm": 530.2200317382812,
+        "actual_mlp_change_norm": 530.145263671875,
+        "P6": 0.0011695100693032146,
+        "P8": 0.9988303780555725,
+        "P4": 8.753997349231213e-08,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9988303780555725
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 0.0011695100693032146
+          },
+          {
+            "id": 19,
+            "text": "4",
+            "probability": 8.753997349231213e-08
+          },
+          {
+            "id": 15,
+            "text": "0",
+            "probability": 5.309567896460976e-08
+          },
+          {
+            "id": 59085,
+            "text": "Eight",
+            "probability": 1.9532809147904118e-08
+          }
+        ],
+        "logits_index": 21,
+        "vector_index": 7
+      },
+      "heldout": {
+        "pair": "silk_colony",
+        "split": "heldout",
+        "layer": 27,
+        "feature": 969,
+        "role": "shared_arthropod",
+        "label": "Insect and Arthropod Species",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 32,
+        "receiver_position": 12,
+        "donor_position": 13,
+        "receiver_token": " webs",
+        "donor_token": " colonies",
+        "receiver_gate": 1.8260284662246704,
+        "donor_gate": 2.043166160583496,
+        "receiver_contribution_norm": 19.153778076171875,
+        "donor_contribution_norm": 14.276827812194824,
+        "intended_delta_norm": 528.0980834960938,
+        "actual_mlp_change_norm": 528.0794067382812,
+        "P6": 1.2751904421293148e-07,
+        "P8": 0.9999998807907104,
+        "P4": 9.736199624299502e-10,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999998807907104
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 1.2751904421293148e-07
+          },
+          {
+            "id": 24,
+            "text": "9",
+            "probability": 1.0467401168057222e-08
+          },
+          {
+            "id": 22,
+            "text": "7",
+            "probability": 8.152019503882002e-09
+          },
+          {
+            "id": 15,
+            "text": "0",
+            "probability": 4.363462036138799e-09
+          }
+        ],
+        "logits_index": 848,
+        "vector_index": 834
+      }
+    },
+    {
+      "primary": {
+        "pair": "web_anthill",
+        "split": "primary",
+        "layer": 31,
+        "feature": 456,
+        "role": "shared_arthropod",
+        "label": "Insect and Arthropod Token Gate",
+        "site": "readout",
+        "method": "full_contribution",
+        "strength": 4.5,
+        "receiver_position": 29,
+        "donor_position": 29,
+        "receiver_token": "\n\n",
+        "donor_token": "\n\n",
+        "receiver_gate": 2.24552059173584,
+        "donor_gate": 2.186098575592041,
+        "receiver_contribution_norm": 35.85697555541992,
+        "donor_contribution_norm": 25.465646743774414,
+        "intended_delta_norm": 149.46383666992188,
+        "actual_mlp_change_norm": 149.46836853027344,
+        "P6": 0.07415212690830231,
+        "P8": 0.021244941279292107,
+        "P4": 0.9033578634262085,
+        "top_token": "4",
+        "top_tokens": [
+          {
+            "id": 19,
+            "text": "4",
+            "probability": 0.9033578634262085
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 0.07415212690830231
+          },
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.021244941279292107
+          },
+          {
+            "id": 18,
+            "text": "3",
+            "probability": 0.0009334374917671084
+          },
+          {
+            "id": 15,
+            "text": "0",
+            "probability": 0.00016220711404457688
+          }
+        ],
+        "logits_index": 109,
+        "vector_index": 95
+      },
+      "heldout": {
+        "pair": "silk_colony",
+        "split": "heldout",
+        "layer": 31,
+        "feature": 456,
+        "role": "shared_arthropod",
+        "label": "Insect and Arthropod Token Gate",
+        "site": "readout",
+        "method": "full_contribution",
+        "strength": 4.5,
+        "receiver_position": 29,
+        "donor_position": 30,
+        "receiver_token": "\n\n",
+        "donor_token": "\n\n",
+        "receiver_gate": 2.0296382904052734,
+        "donor_gate": 3.0807621479034424,
+        "receiver_contribution_norm": 30.536296844482422,
+        "donor_contribution_norm": 45.46748733520508,
+        "intended_delta_norm": 203.6247100830078,
+        "actual_mlp_change_norm": 203.61502075195312,
+        "P6": 0.17941249907016754,
+        "P8": 0.2303701937198639,
+        "P4": 0.26104363799095154,
+        "top_token": "4",
+        "top_tokens": [
+          {
+            "id": 19,
+            "text": "4",
+            "probability": 0.26104363799095154
+          },
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.2303701937198639
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 0.17941249907016754
+          },
+          {
+            "id": 20,
+            "text": "5",
+            "probability": 0.12330828607082367
+          },
+          {
+            "id": 18,
+            "text": "3",
+            "probability": 0.07479025423526764
+          }
+        ],
+        "logits_index": 868,
+        "vector_index": 854
+      }
+    },
+    {
+      "primary": {
+        "pair": "web_anthill",
+        "split": "primary",
+        "layer": 3,
+        "feature": 2309,
+        "role": "ant_insect",
+        "label": "Small Invertebrate and Insect Token Gate",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 0,
+        "receiver_position": 12,
+        "donor_position": 12,
+        "receiver_token": " webs",
+        "donor_token": "ills",
+        "receiver_gate": -0.0,
+        "donor_gate": -0.0,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 0.0,
+        "actual_mlp_change_norm": 0.0,
+        "P6": 2.753568878688384e-05,
+        "P8": 0.9999723434448242,
+        "P4": 3.6533812419747846e-08,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999723434448242
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 2.753568878688384e-05
+          },
+          {
+            "id": 19,
+            "text": "4",
+            "probability": 3.6533812419747846e-08
+          },
+          {
+            "id": 15,
+            "text": "0",
+            "probability": 3.224097611109755e-08
+          },
+          {
+            "id": 72908,
+            "text": "Spider",
+            "probability": 2.215887739964728e-08
+          }
+        ],
+        "logits_index": 118,
+        "vector_index": 104
+      },
+      "heldout": {
+        "pair": "silk_colony",
+        "split": "heldout",
+        "layer": 3,
+        "feature": 2309,
+        "role": "ant_insect",
+        "label": "Small Invertebrate and Insect Token Gate",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 0,
+        "receiver_position": 12,
+        "donor_position": 13,
+        "receiver_token": " webs",
+        "donor_token": " colonies",
+        "receiver_gate": -0.0,
+        "donor_gate": -0.0,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 0.0,
+        "actual_mlp_change_norm": 0.0,
+        "P6": 6.825602838489431e-08,
+        "P8": 0.9999998807907104,
+        "P4": 2.06115324807854e-09,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999998807907104
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 6.825602838489431e-08
+          },
+          {
+            "id": 24,
+            "text": "9",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 22,
+            "text": "7",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 785,
+            "text": "The",
+            "probability": 1.3440407897746809e-08
+          }
+        ],
+        "logits_index": 869,
+        "vector_index": 855
+      }
+    },
+    {
+      "primary": {
+        "pair": "web_anthill",
+        "split": "primary",
+        "layer": 11,
+        "feature": 39,
+        "role": "shared_animal",
+        "label": "Animal and Wildlife Species Tokens",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 16,
+        "receiver_position": 12,
+        "donor_position": 12,
+        "receiver_token": " webs",
+        "donor_token": "ills",
+        "receiver_gate": 0.0,
+        "donor_gate": 1.3734939098358154,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 8.824734687805176,
+        "intended_delta_norm": 141.1957550048828,
+        "actual_mlp_change_norm": 141.1905517578125,
+        "P6": 0.9999774694442749,
+        "P8": 6.144074177427683e-06,
+        "P4": 1.0676799320208374e-06,
+        "top_token": "6",
+        "top_tokens": [
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 0.9999774694442749
+          },
+          {
+            "id": 20,
+            "text": "5",
+            "probability": 1.3007004781684373e-05
+          },
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 6.144074177427683e-06
+          },
+          {
+            "id": 18,
+            "text": "3",
+            "probability": 1.2098398656235076e-06
+          },
+          {
+            "id": 19,
+            "text": "4",
+            "probability": 1.0676799320208374e-06
+          }
+        ],
+        "logits_index": 176,
+        "vector_index": 162
+      },
+      "heldout": {
+        "pair": "silk_colony",
+        "split": "heldout",
+        "layer": 11,
+        "feature": 39,
+        "role": "shared_animal",
+        "label": "Animal and Wildlife Species Tokens",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 16,
+        "receiver_position": 12,
+        "donor_position": 13,
+        "receiver_token": " webs",
+        "donor_token": " colonies",
+        "receiver_gate": 0.9115487933158875,
+        "donor_gate": 1.6128342151641846,
+        "receiver_contribution_norm": 5.661201000213623,
+        "donor_contribution_norm": 9.613216400146484,
+        "intended_delta_norm": 135.95289611816406,
+        "actual_mlp_change_norm": 135.9335479736328,
+        "P6": 0.0005793246673420072,
+        "P8": 0.8157498836517334,
+        "P4": 0.00018807918240781873,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.8157498836517334
+          },
+          {
+            "id": 15,
+            "text": "0",
+            "probability": 0.18201839923858643
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 0.0005793246673420072
+          },
+          {
+            "id": 16,
+            "text": "1",
+            "probability": 0.0005793246673420072
+          },
+          {
+            "id": 18,
+            "text": "3",
+            "probability": 0.00027365359710529447
+          }
+        ],
+        "logits_index": 883,
+        "vector_index": 869
+      }
+    },
+    {
+      "primary": {
+        "pair": "web_anthill",
+        "split": "primary",
+        "layer": 16,
+        "feature": 2286,
+        "role": "shared_animal",
+        "label": "Animal and Wildlife Token Activation",
+        "site": "have",
+        "method": "full_contribution",
+        "strength": 32,
+        "receiver_position": 13,
+        "donor_position": 13,
+        "receiver_token": " have",
+        "donor_token": " have",
+        "receiver_gate": 0.5274556875228882,
+        "donor_gate": 0.0,
+        "receiver_contribution_norm": 1.555405616760254,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 49.772979736328125,
+        "actual_mlp_change_norm": 49.779598236083984,
+        "P6": 5.7639430451672524e-05,
+        "P8": 0.9887599945068359,
+        "P4": 6.884048161737155e-06,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9887599945068359
+          },
+          {
+            "id": 15,
+            "text": "0",
+            "probability": 0.010984132066369057
+          },
+          {
+            "id": 24,
+            "text": "9",
+            "probability": 6.531403050757945e-05
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 5.7639430451672524e-05
+          },
+          {
+            "id": 16,
+            "text": "1",
+            "probability": 4.4889635319123045e-05
+          }
+        ],
+        "logits_index": 242,
+        "vector_index": 228
+      },
+      "heldout": {
+        "pair": "silk_colony",
+        "split": "heldout",
+        "layer": 16,
+        "feature": 2286,
+        "role": "shared_animal",
+        "label": "Animal and Wildlife Token Activation",
+        "site": "have",
+        "method": "full_contribution",
+        "strength": 32,
+        "receiver_position": 13,
+        "donor_position": 14,
+        "receiver_token": " have",
+        "donor_token": " have",
+        "receiver_gate": 0.0,
+        "donor_gate": 0.0,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 0.0,
+        "actual_mlp_change_norm": 0.0,
+        "P6": 6.825602838489431e-08,
+        "P8": 0.9999998807907104,
+        "P4": 2.06115324807854e-09,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999998807907104
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 6.825602838489431e-08
+          },
+          {
+            "id": 24,
+            "text": "9",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 22,
+            "text": "7",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 785,
+            "text": "The",
+            "probability": 1.3440407897746809e-08
+          }
+        ],
+        "logits_index": 898,
+        "vector_index": 884
+      }
+    },
+    {
+      "primary": {
+        "pair": "web_anthill",
+        "split": "primary",
+        "layer": 19,
+        "feature": 2283,
+        "role": "spider_object",
+        "label": "Concrete Physical Object Nouns",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 0,
+        "receiver_position": 12,
+        "donor_position": 12,
+        "receiver_token": " webs",
+        "donor_token": "ills",
+        "receiver_gate": -0.0,
+        "donor_gate": -0.0,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 0.0,
+        "actual_mlp_change_norm": 0.0,
+        "P6": 2.753568878688384e-05,
+        "P8": 0.9999723434448242,
+        "P4": 3.6533812419747846e-08,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999723434448242
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 2.753568878688384e-05
+          },
+          {
+            "id": 19,
+            "text": "4",
+            "probability": 3.6533812419747846e-08
+          },
+          {
+            "id": 15,
+            "text": "0",
+            "probability": 3.224097611109755e-08
+          },
+          {
+            "id": 72908,
+            "text": "Spider",
+            "probability": 2.215887739964728e-08
+          }
+        ],
+        "logits_index": 274,
+        "vector_index": 260
+      },
+      "heldout": {
+        "pair": "silk_colony",
+        "split": "heldout",
+        "layer": 19,
+        "feature": 2283,
+        "role": "spider_object",
+        "label": "Concrete Physical Object Nouns",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 0,
+        "receiver_position": 12,
+        "donor_position": 13,
+        "receiver_token": " webs",
+        "donor_token": " colonies",
+        "receiver_gate": -0.0,
+        "donor_gate": -0.0,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 0.0,
+        "actual_mlp_change_norm": 0.0,
+        "P6": 6.825602838489431e-08,
+        "P8": 0.9999998807907104,
+        "P4": 2.06115324807854e-09,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999998807907104
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 6.825602838489431e-08
+          },
+          {
+            "id": 24,
+            "text": "9",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 22,
+            "text": "7",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 785,
+            "text": "The",
+            "probability": 1.3440407897746809e-08
+          }
+        ],
+        "logits_index": 905,
+        "vector_index": 891
+      }
+    },
+    {
+      "primary": {
+        "pair": "web_anthill",
+        "split": "primary",
+        "layer": 2,
+        "feature": 591,
+        "role": "lexical_spider_control",
+        "label": "Nouns and Suffixes Triggering MOLT Gate",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 0,
+        "receiver_position": 12,
+        "donor_position": 12,
+        "receiver_token": " webs",
+        "donor_token": "ills",
+        "receiver_gate": -0.0,
+        "donor_gate": -0.0,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 0.0,
+        "actual_mlp_change_norm": 0.0,
+        "P6": 2.753568878688384e-05,
+        "P8": 0.9999723434448242,
+        "P4": 3.6533812419747846e-08,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999723434448242
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 2.753568878688384e-05
+          },
+          {
+            "id": 19,
+            "text": "4",
+            "probability": 3.6533812419747846e-08
+          },
+          {
+            "id": 15,
+            "text": "0",
+            "probability": 3.224097611109755e-08
+          },
+          {
+            "id": 72908,
+            "text": "Spider",
+            "probability": 2.215887739964728e-08
+          }
+        ],
+        "logits_index": 326,
+        "vector_index": 312
+      },
+      "heldout": {
+        "pair": "silk_colony",
+        "split": "heldout",
+        "layer": 2,
+        "feature": 591,
+        "role": "lexical_spider_control",
+        "label": "Nouns and Suffixes Triggering MOLT Gate",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 0,
+        "receiver_position": 12,
+        "donor_position": 13,
+        "receiver_token": " webs",
+        "donor_token": " colonies",
+        "receiver_gate": -0.0,
+        "donor_gate": -0.0,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 0.0,
+        "actual_mlp_change_norm": 0.0,
+        "P6": 6.825602838489431e-08,
+        "P8": 0.9999998807907104,
+        "P4": 2.06115324807854e-09,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999998807907104
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 6.825602838489431e-08
+          },
+          {
+            "id": 24,
+            "text": "9",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 22,
+            "text": "7",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 785,
+            "text": "The",
+            "probability": 1.3440407897746809e-08
+          }
+        ],
+        "logits_index": 917,
+        "vector_index": 903
+      }
+    },
+    {
+      "primary": {
+        "pair": "web_anthill",
+        "split": "primary",
+        "layer": 8,
+        "feature": 2201,
+        "role": "lexical_ant_control",
+        "label": "Insect and Pest Token Gate",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 32,
+        "receiver_position": 12,
+        "donor_position": 12,
+        "receiver_token": " webs",
+        "donor_token": "ills",
+        "receiver_gate": -0.0,
+        "donor_gate": 0.8134902119636536,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 2.755648612976074,
+        "intended_delta_norm": 88.18075561523438,
+        "actual_mlp_change_norm": 88.17252349853516,
+        "P6": 1.0,
+        "P8": 3.6534821390432626e-08,
+        "P4": 5.602796449011294e-09,
+        "top_token": "6",
+        "top_tokens": [
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 1.0
+          },
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 3.6534821390432626e-08
+          },
+          {
+            "id": 19,
+            "text": "4",
+            "probability": 5.602796449011294e-09
+          },
+          {
+            "id": 641,
+            "text": "In",
+            "probability": 2.998960857425459e-09
+          },
+          {
+            "id": 20,
+            "text": "5",
+            "probability": 2.646573848963385e-09
+          }
+        ],
+        "logits_index": 385,
+        "vector_index": 371
+      },
+      "heldout": {
+        "pair": "silk_colony",
+        "split": "heldout",
+        "layer": 8,
+        "feature": 2201,
+        "role": "lexical_ant_control",
+        "label": "Insect and Pest Token Gate",
+        "site": "cue_end",
+        "method": "full_contribution",
+        "strength": 32,
+        "receiver_position": 12,
+        "donor_position": 13,
+        "receiver_token": " webs",
+        "donor_token": " colonies",
+        "receiver_gate": -0.0,
+        "donor_gate": -0.0,
+        "receiver_contribution_norm": 0.0,
+        "donor_contribution_norm": 0.0,
+        "intended_delta_norm": 0.0,
+        "actual_mlp_change_norm": 0.0,
+        "P6": 6.825602838489431e-08,
+        "P8": 0.9999998807907104,
+        "P4": 2.06115324807854e-09,
+        "top_token": "8",
+        "top_tokens": [
+          {
+            "id": 23,
+            "text": "8",
+            "probability": 0.9999998807907104
+          },
+          {
+            "id": 21,
+            "text": "6",
+            "probability": 6.825602838489431e-08
+          },
+          {
+            "id": 24,
+            "text": "9",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 22,
+            "text": "7",
+            "probability": 1.7257827167327378e-08
+          },
+          {
+            "id": 785,
+            "text": "The",
+            "probability": 1.3440407897746809e-08
+          }
+        ],
+        "logits_index": 931,
+        "vector_index": 917
+      }
+    }
+  ]
+}
