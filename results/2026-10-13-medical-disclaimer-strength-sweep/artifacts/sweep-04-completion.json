@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "stage": "04",
+  "factors": [
+    1,
+    -26,
+    -28,
+    -30
+  ],
+  "prompts": [
+    "medical_qualification",
+    "medical_personal"
+  ],
+  "trial_count": 8,
+  "clean_generated_ids_match_previous_run": {
+    "medical_qualification": true,
+    "medical_personal": true
+  },
+  "source_sha256": "2c53aef65971ef47bbabe4171c40e132461db0ccb9055739a7e93a67d2a37a40",
+  "intervention_source_sha256": "16fff2055e900d6781419d0e3f9cb64fd312142c39dcb7bc8aff5872a90f7f3c",
+  "selected_weight_sha256": "7af0944604f699bbce8cfea0c9528b263e461d709d54fb492b1b8b93d34224bd",
+  "torch": "2.14.0+cu126",
+  "transformers": "4.57.6",
+  "python": "3.12.3",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "attention": "unfrozen eager",
+  "dtype": "BF16 model; FP32 MOLT projections",
+  "donor_used": false
+}

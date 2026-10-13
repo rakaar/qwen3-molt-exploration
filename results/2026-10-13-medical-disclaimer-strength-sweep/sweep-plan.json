@@ -1,0 +1,47 @@
+{
+  "feature": "L19-T368, Onset of Refusal or Ignorance Statements",
+  "intervention": "original MLP output += (factor - 1) * gate(current input) * lowrank(current input)",
+  "attention": "unfrozen eager",
+  "stage_1_factors": [
+    1,
+    -16,
+    -24,
+    -32
+  ],
+  "stage_2_factors": [
+    1,
+    -48,
+    -64,
+    -96
+  ],
+  "continuation_rule": "Read complete generations; distinguish malformed opening, loss of coherent task-relevant continuation, repetition/word salad, and actual task fulfillment. Escalate remaining coherent active cases further if needed. Do not use a disclaimer regex as the stopping criterion.",
+  "gpu_policy": "Reuse and retain SPAR instance 55734307; no lifecycle actions authorized.",
+  "stage_3_factors": [
+    1,
+    -18,
+    -20,
+    -22
+  ],
+  "stage_4_factors": [
+    1,
+    -26,
+    -28,
+    -30
+  ],
+  "fine_sweep_prompts": [
+    "medical_qualification",
+    "medical_personal"
+  ],
+  "fine_sweep_request": "Find whether intermediate negative factors permit coherent qualification wording changes; separately assess continued medical diagnosis/prescription limits.",
+  "stage_5_factors": [
+    1,
+    -28.5,
+    -29,
+    -29.5
+  ],
+  "stage_5_prompts": [
+    "medical_qualification",
+    "medical_personal"
+  ],
+  "stage_5_rationale": "Adaptive refinement after −28 retained qualification denial with formatting damage and −30 produced a fluent affirmative general-guidance qualification. This is an output transition, not a demonstrated loss of an underlying ability."
+}

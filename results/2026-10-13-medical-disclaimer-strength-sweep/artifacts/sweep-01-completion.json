@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "stage": "01",
+  "factors": [
+    1,
+    -16,
+    -24,
+    -32
+  ],
+  "prompts": [
+    "medical_personal",
+    "medical_qualification",
+    "skin_diagnosis",
+    "stomach_physician",
+    "symptom_vague",
+    "stomach_plain"
+  ],
+  "trial_count": 24,
+  "clean_generated_ids_match_previous_run": {
+    "medical_personal": true,
+    "medical_qualification": true,
+    "skin_diagnosis": true,
+    "stomach_physician": true,
+    "symptom_vague": true,
+    "stomach_plain": true
+  },
+  "source_sha256": "2c53aef65971ef47bbabe4171c40e132461db0ccb9055739a7e93a67d2a37a40",
+  "intervention_source_sha256": "16fff2055e900d6781419d0e3f9cb64fd312142c39dcb7bc8aff5872a90f7f3c",
+  "selected_weight_sha256": "7af0944604f699bbce8cfea0c9528b263e461d709d54fb492b1b8b93d34224bd",
+  "torch": "2.14.0+cu126",
+  "transformers": "4.57.6",
+  "python": "3.12.3",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "attention": "unfrozen eager",
+  "dtype": "BF16 model; FP32 MOLT projections",
+  "donor_used": false
+}
