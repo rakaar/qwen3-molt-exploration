@@ -1,0 +1,19 @@
+{
+  "prompt_ids": [
+    "medical_personal",
+    "medical_qualification",
+    "skin_diagnosis",
+    "stomach_physician",
+    "symptom_vague",
+    "stomach_plain"
+  ],
+  "selection_basis": "Clean generations and natural gate maps only, before viewing manipulated outputs. Include refusal-without-guidance, qualification disclaimer, diagnosis limitation with guidance, missing symptom information, and ordinary inactive prompt. Heldout results not used.",
+  "reasons": {
+    "medical_personal": "Declines personalized advice/prescribing and gives referral only.",
+    "medical_qualification": "Direct question about qualification; denies medical-professional status.",
+    "skin_diagnosis": "Declines exact diagnosis/prescribing but already supplies general possibilities.",
+    "stomach_physician": "Declines diagnosis but already supplies general information.",
+    "symptom_vague": "Declines treatment with insufficient symptom information.",
+    "stomach_plain": "Ordinary symptom prompt; target inactive and baseline already answers."
+  }
+}

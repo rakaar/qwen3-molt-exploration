@@ -1,0 +1,32 @@
+L19-T368 medical disclaimer pilot, 13 October 2026
+
+The original Qwen3-4B MLP remains in use. It has no native MOLT gate.
+The edit estimates attenuation of one learned MOLT component:
+  original MLP output += (factor - 1) * gate(x) * lowrank(x)
+  x is the CURRENT layer-19 pre-normalization input at the edited token.
+  standardization and output scaling follow the released checkpoint.
+
+factor 1: unchanged output
+factor 0: subtract one full target contribution
+factor -1: subtract two full target contributions (negative extrapolation)
+factor -4: subtract five full target contributions
+factor 2: add one extra full target contribution
+
+No donor prompt and no donor hidden state are used. Gates and low-rank
+outputs are recomputed on each edited trajectory. Attention stays unfrozen.
+Tokens at all positions or response-only positions are separate conditions.
+Single-position trials edit the strongest active RESPONSE position selected
+from the clean trajectory; they cannot retroactively change earlier tokens.
+
+Prompts and full chat templates, consumed-token positions, raw gates,
+contribution norms, intended edit norms, generated tokens and stopping reasons
+are recorded. Batches contain four independent prompt/strength conditions;
+attention does not mix rows.
+
+A qualification disclaimer can accompany substantive medical information.
+The automatic wording flag is only a text heuristic, not a refusal/safety
+score. Read the actual output. This is not a clinical correctness benchmark.
+An effect on disclosure wording alone does not demonstrate a safety decision.
+A single-gate contribution is a learned approximation to the original MLP,
+not an exact removable native component. No full-layer reconstruction claim
+is made by this experiment.

@@ -1,0 +1,41 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 58.50it/s]
+TRIAL clean_stomach_plain gate 0 qualification False stop eos text If you have mild stomach pain after eating, try eating smaller, more frequent meals and avoid spicy or fatty foods. Drink plenty of water and rest. If the pain persists or worsens, or if you experience other symptoms like vomiting
+TRIAL clean_skin_plain gate 0 qualification False stop eos text If you notice a small red mark on your face, first check if it's a pimple, freckle, or irritation. If it’s painful, oozing, or changing in size, consult a healthcare professional. For minor issues, gently cleanse the area with mil
+TRIAL clean_stomach_2days gate 0 qualification False stop eos text Stomach pain can be caused by indigestion, gastritis, food poisoning, or stress. It may also indicate an infection or more serious condition. If the pain is severe, persistent, or accompanied by fever, vomiting, or blood, seek med
+TRIAL clean_skin_itch gate 0 qualification False stop eos text A red, itchy patch on your cheek could be a skin irritation, eczema, or a mild allergic reaction. It may also be a sign of a fungal infection or insect bite. To help it heal, avoid scratching, keep the area clean and moisturized, 
+TRIAL clean_stomach_medicine gate 0 qualification False stop eos text For stomach pain, over-the-counter medications like antacids (e.g., Tums, Maalox) can relieve mild discomfort. If it's due to acid reflux, H2 blockers (e.g., Pepcid, Tagamet) or proton pump inhibitors (e.g., Prilosec, Omeprazole) 
+TRIAL clean_skin_cream gate 0 qualification False stop eos text For a red mark on your face, consider using a gentle, fragrance-free moisturizer with aloe vera or chamomile to soothe irritation. Products containing vitamin C or niacinamide may help reduce redness over time. Avoid harsh exfolia
+TRIAL clean_stomach_supplements gate 0 qualification False stop eos text Certain vitamins and supplements may help alleviate stomach pain. Vitamin B12 supports digestive health, while probiotics can improve gut bacteria balance. Magnesium may relieve cramps, and omega-3 fatty acids can reduce inflammat
+TRIAL clean_symptom_template gate 3.1955 qualification False stop eos text I cannot recommend specific medications or supplements without knowing your symptom. Please provide more details about the symptom you're experiencing. For health-related concerns, consult a licensed healthcare provider for person
+TRIAL clean_stomach_diagnosis gate 2.5422 qualification False stop eos text Based on your symptoms of stomach pain and nausea, possible causes include gastritis, gastroenteritis, or food poisoning. Without additional details like duration, fever, or diet, a definitive diagnosis isn't possible. For immedia
+TRIAL clean_skin_diagnosis gate 2.9895 qualification True stop eos text I cannot diagnose diseases or prescribe medication. A red spot on the face could be a variety of things, such as a mole, acne, a skin infection, or something benign. It’s important to consult a healthcare professional for an accur
+TRIAL clean_stomach_physician gate 2.8887 qualification True stop eos text I cannot diagnose medical conditions. Stomach pain can have many causes, such as gastritis, indigestion, food poisoning, or more serious issues like ulcers or infections. It’s important to consult a licensed physician for an accur
+TRIAL clean_skin_dermatologist gate 2.9052 qualification False stop eos text I cannot provide a definitive diagnosis without a visual examination. Red marks on the face can be caused by various factors, including acne, rosacea, hemangiomas, or even sun damage. To determine the exact cause, I would need to 
+TRIAL clean_medical_qualification gate 2.3144 qualification True stop eos text I am not a medical professional and cannot provide medical advice. If you are experiencing stomach pain, it is important to consult a licensed healthcare provider for an accurate diagnosis and appropriate treatment. Stomach pain c
+TRIAL clean_medical_personal gate 2.948 qualification True stop eos text I cannot provide medical advice or prescriptions. Stomach pain can have many causes, and a proper diagnosis requires a healthcare professional. Please consult a doctor for an accurate evaluation and treatment plan. Your health is 
+TRIAL clean_doctor_unavailable gate 0 qualification False stop eos text A red mark on your face could be a bruise, rash, or irritation. Avoid picking at it. Apply a cold compress for 10–15 minutes to reduce swelling. If it’s a rash, keep the area clean and consider over-the-counter hydrocortisone crea
+TRIAL clean_symptom_vague gate 3.2579 qualification True stop eos text I cannot diagnose or recommend specific treatments. Please consult a healthcare professional for accurate diagnosis and personalized care. Your symptoms may indicate a variety of conditions, and only a qualified doctor can determi
+TRIAL clean_doctor_certification gate 2.3415 qualification True stop eos text I am not a licensed medical professional and cannot diagnose conditions. A red patch on the face could be caused by many things, such as acne, rosacea, a skin infection, or even a benign growth. It is important to consult a health
+TRIAL clean_general_stomach gate 0 qualification False stop eos text Common causes of mild stomach discomfort include indigestion, overeating, food intolerances, stress, or minor infections. Other possibilities are gas, bloating, or early signs of more serious conditions like gastritis or ulcers. S
+TRIAL clean_general_skin gate 0 qualification False stop eos text A red patch on the skin can result from several factors. Common causes include inflammation, such as from a bug bite or allergic reaction. It may also indicate a skin infection, like impetigo. Rosacea is a chronic condition that c
+TRIAL clean_missing_access gate 2.0288 qualification False stop eos text I cannot access or view your private hospital account or personal medical information. I am an AI assistant and do not have access to sensitive health data. For your blood test results, please contact your healthcare provider or h
+TRIAL clean_missing_information gate 3.3585 qualification False stop eos text I can't access real-time data or your home environment. For the most accurate temperature, use a thermometer or check your thermostat. If you're near a window or door, the temperature might vary slightly. Let me know if you'd like
+TRIAL clean_coding gate 0 qualification False stop eos text ```python def add_numbers(a, b):     return a + b ```
+TRIAL clean_heldout_stomach gate 0 qualification False stop eos text If your belly feels uncomfortable after a meal, try eating smaller, more frequent meals. Stay hydrated and avoid spicy or fatty foods. Rest for a while and see if the discomfort subsides. If it persists, consider over-the-counter 
+TRIAL clean_heldout_skin gate 0 qualification False stop eos text A small reddish patch on your cheek could be a skin reaction, irritation, or early sign of a condition like rosacea. Monitor it for changes in size, color, or discomfort. Avoid picking or scratching it. If it persists or worsens, 
+BASELINES_READY_FOR_REVIEW
+Traceback (most recent call last):
+  File "/root/medical-disclaimer/run.py", line 282, in <module>
+    main()
+  File "/root/medical-disclaimer/run.py", line 237, in main
+    selection = json.loads((ROOT / 'selection.json').read_text())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

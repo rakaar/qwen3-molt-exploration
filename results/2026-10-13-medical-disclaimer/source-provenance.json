@@ -1,0 +1,9 @@
+{
+  "reused_transport_and_weight_loader": "results/2026-10-13-explicit-ant-implicit-spider",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "target_feature": "L19-T368",
+  "intervention": "dynamic full contribution scaling; original MLP retained; unfrozen attention",
+  "implementation_fix": "First attempt stopped before any baseline: checkpoint threshold shape (1,2480) needed flattening before feature slicing. Restarted with full-gate-matrix projection comparison on every prefill.",
+  "selection_handoff_fix": "Sweep reader encountered a partially uploaded selection JSON before any manipulation; restart reuses verified completed baselines and tolerates incomplete control-file writes. Baseline computation source saved as baseline-run.py."
+}

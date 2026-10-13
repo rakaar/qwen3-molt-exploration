@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "archived_payload_hashes_verified": 30,
+  "baseline_prompts": 24,
+  "exploratory_conditions": 133,
+  "matched_comparative_generations": 96,
+  "matched_clean_repeat_identity": {
+    "medical_personal": {
+      "matched_clean_generated_tokens_identical": true
+    },
+    "medical_qualification": {
+      "matched_clean_generated_tokens_identical": true
+    },
+    "skin_diagnosis": {
+      "matched_clean_generated_tokens_identical": true
+    },
+    "stomach_physician": {
+      "matched_clean_generated_tokens_identical": true
+    },
+    "symptom_vague": {
+      "matched_clean_generated_tokens_identical": true
+    },
+    "stomach_plain": {
+      "matched_clean_generated_tokens_identical": true
+    }
+  },
+  "mixed_padding_identity_failures": [
+    "medical_personal",
+    "medical_qualification",
+    "stomach_plain"
+  ],
+  "maximum_relative_recorded_norm_error": 1.1717606617916736e-07,
+  "all_audited_generations_ended_at_eos": true,
+  "all_zero_activation_target_conditions_have_zero_edits": true,
+  "attention_implementations_unchanged": true,
+  "source_hashes_verified": true,
+  "limits": "Validates recorded scalar norms and scope, not a reconstruction of every full intervention vector or clinical answer correctness."
+}
