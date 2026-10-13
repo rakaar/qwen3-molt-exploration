@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "payload_hash_count": 20,
+  "source_unchanged_from_original": true,
+  "clean_identity_checks": {
+    "medical_personal": {
+      "clean_ids_identical_to_all_identity_rows": true
+    },
+    "medical_qualification": {
+      "clean_ids_identical_to_all_identity_rows": true
+    },
+    "skin_diagnosis": {
+      "clean_ids_identical_to_all_identity_rows": true
+    },
+    "stomach_physician": {
+      "clean_ids_identical_to_all_identity_rows": true
+    },
+    "symptom_vague": {
+      "clean_ids_identical_to_all_identity_rows": true
+    },
+    "stomach_plain": {
+      "clean_ids_identical_to_all_identity_rows": true
+    }
+  },
+  "clean_continuations_identical_to_previous_rental": {
+    "medical_personal": true,
+    "medical_qualification": true,
+    "skin_diagnosis": true,
+    "stomach_physician": true,
+    "symptom_vague": true,
+    "stomach_plain": true
+  },
+  "trial_count": 24,
+  "identity_generation_count": 24,
+  "maximum_recorded_norm_error": 1.1707973725163416e-07,
+  "all_trial_generations_reached_eos": true,
+  "non_eos_trials": [],
+  "inactive_prompt_has_zero_edits_and_identical_output": true,
+  "limits": "Audits recorded scalar norms and source/scope. Does not recompute full intervention vectors or assess clinical correctness."
+}

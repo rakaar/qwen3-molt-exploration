@@ -5,5 +5,7 @@
   "intervention_source_sha256": "16fff2055e900d6781419d0e3f9cb64fd312142c39dcb7bc8aff5872a90f7f3c",
   "intervention_source_unchanged": true,
   "differences": "New entrypoint runs the same six selected prompts with factors 1,0,-8,-16 and four-row clean repeats. Original dynamic contribution edit, unfrozen eager attention, BF16 model and FP32 projections retained.",
-  "resource_policy": "Replacement retained for follow-up work; only failed rental deletion was explicitly authorized."
+  "resource_policy": "Replacement retained for follow-up work; only failed rental deletion was explicitly authorized.",
+  "runtime_setup": "Pinned Ubuntu 24.04 image; Python 3.12 virtual environment; torch==2.14.0 from the official CUDA 12.6 wheel index. Original GPU image stalled on both previous empty rentals.",
+  "download_setup": "Initial immutable-file download was slow on one shard. A standard-library eight-worker HTTP-range downloader reuses complete prefix chunks and verifies every full model file against the same pinned Hub LFS SHA-256. Intervention source unchanged."
 }

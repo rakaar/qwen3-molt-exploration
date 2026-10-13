@@ -1,15 +1,27 @@
 {
-  "status": "prepared; GPU image still loading; model tests not run",
-  "checked_at_utc": "2026-10-13T11:21:26.084020+00:00",
-  "instance_id": 55731087,
-  "software_image": "vastai/pytorch:cuda-12.6.3-auto",
-  "public_image_manifest_digest": "sha256:cbee7ce73349de7a06e0a0059f1dd2b655bd1ed86473403301e8a7a7dfd88569",
-  "public_image_compressed_bytes_approx": 9730000000,
-  "planned_factors": [
+  "status": "complete and independently verified",
+  "checked_at_utc": "2026-10-13T12:16:38.082222+00:00",
+  "instance_id": 55734307,
+  "lifecycle": "Retain GPU and storage after completion until user explicitly authorizes stop/deletion.",
+  "runtime_image": "ubuntu@sha256:f610ab94648195aa356059f5b41d6085c9d4d903c072430cdd1af7bdb646106b",
+  "runtime_status": "working GPU retained",
+  "scientific_results_produced": true,
+  "trial_count": 24,
+  "clean_identity_generation_count": 24,
+  "all_clean_checks_pass": true,
+  "all_clean_outputs_match_previous_rental": true,
+  "previous_stalled_image": {
+    "software_image": "vastai/pytorch:cuda-12.6.3-auto",
+    "public_image_manifest_digest": "sha256:cbee7ce73349de7a06e0a0059f1dd2b655bd1ed86473403301e8a7a7dfd88569",
+    "public_image_compressed_bytes_approx": 9730000000
+  },
+  "software_image": "ubuntu@sha256:f610ab94648195aa356059f5b41d6085c9d4d903c072430cdd1af7bdb646106b",
+  "public_image_manifest_digest": "sha256:f610ab94648195aa356059f5b41d6085c9d4d903c072430cdd1af7bdb646106b",
+  "public_image_compressed_bytes": 29764422,
+  "tested_factors": [
     1,
     0,
     -8,
     -16
-  ],
-  "lifecycle": "Retain GPU and storage after completion until user explicitly authorizes stop/deletion."
+  ]
 }

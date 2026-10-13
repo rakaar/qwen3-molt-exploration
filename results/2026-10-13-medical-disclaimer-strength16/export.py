@@ -7,7 +7,7 @@ assert all(x['clean_ids_identical_to_all_identity_rows'] for x in complete['chec
 files=[]
 for d in ['artifacts','weights']:
  files.extend(f for f in (ROOT/d).rglob('*') if f.is_file() and not f.name.endswith('.tmp') and f.name!='export-checksums.json')
-for name in ['run.py','extension.py','prepare.py','prefetch_base.py','protocol.json','selection.json','base-prefetch-manifest.json','extension.log']:
+for name in ['run.py','extension.py','prepare.py','prefetch_base.py','range_prefetch.py','protocol.json','selection.json','base-prefetch-manifest.json','extension.log']:
  files.append(ROOT/name)
 checks={}
 for f in files:
