@@ -1,0 +1,146 @@
+{
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.14.0+cu130",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "conditions": [
+    {
+      "key": "primary/propagated/pair22/full/combined/4.5/79",
+      "prompt_id": "primary",
+      "protocol": "propagated",
+      "group": "pair22",
+      "mode": "full",
+      "component": "combined",
+      "strength": 4.5,
+      "note": "",
+      "total_delta_norm": 64.57957458496094,
+      "by_layer": [
+        {
+          "layer": 22,
+          "norm": 64.57957458496094,
+          "positions": [
+            9
+          ]
+        }
+      ],
+      "P_large": 1.3153710065605395e-10,
+      "P_cold": 0.9982693195343018,
+      "logP_large": -22.751731872558594,
+      "logP_cold": -0.0017321596387773752,
+      "cold_minus_large_logprob": 22.75,
+      "top_token": "cold",
+      "top_tokens": [
+        {
+          "id": 87072,
+          "text": "cold",
+          "probability": 0.9982693195343018
+        },
+        {
+          "id": 10303,
+          "text": "low",
+          "probability": 0.0011688531376421452
+        },
+        {
+          "id": 76418,
+          "text": "Cold",
+          "probability": 0.0005521271377801895
+        },
+        {
+          "id": 9255,
+          "text": " cold",
+          "probability": 6.950255283300066e-06
+        },
+        {
+          "id": 42196,
+          "text": "cool",
+          "probability": 1.2077732662874041e-06
+        },
+        {
+          "id": 99476,
+          "text": "\u51b7",
+          "probability": 1.0658561677701073e-06
+        },
+        {
+          "id": 24187,
+          "text": "Low",
+          "probability": 8.749080393499753e-08
+        },
+        {
+          "id": 13855,
+          "text": "bad",
+          "probability": 8.749080393499753e-08
+        }
+      ]
+    },
+    {
+      "key": "primary/propagated/whole_mlp22/full_output/combined/1/124",
+      "prompt_id": "primary",
+      "protocol": "propagated",
+      "group": "whole_mlp22",
+      "mode": "full_output",
+      "component": "combined",
+      "strength": 1,
+      "note": "Complete donor MLP output at operand; site positive control",
+      "total_delta_norm": 23.555124282836914,
+      "by_layer": [
+        {
+          "layer": 22,
+          "norm": 23.555124282836914,
+          "positions": [
+            9
+          ]
+        }
+      ],
+      "P_large": 0.9396494030952454,
+      "P_cold": 5.439965318487783e-12,
+      "logP_large": -0.06224847584962845,
+      "logP_cold": -25.93724822998047,
+      "cold_minus_large_logprob": -25.875,
+      "top_token": "large",
+      "top_tokens": [
+        {
+          "id": 16767,
+          "text": "large",
+          "probability": 0.9396494030952454
+        },
+        {
+          "id": 34253,
+          "text": "Large",
+          "probability": 0.03643415868282318
+        },
+        {
+          "id": 16154,
+          "text": "big",
+          "probability": 0.02209843508899212
+        },
+        {
+          "id": 15636,
+          "text": "Big",
+          "probability": 0.0018139500170946121
+        },
+        {
+          "id": 3460,
+          "text": " large",
+          "probability": 1.8743503460427746e-06
+        },
+        {
+          "id": 95370,
+          "text": "huge",
+          "probability": 5.370103508539614e-07
+        },
+        {
+          "id": 26288,
+          "text": "\u5927",
+          "probability": 4.182240616046329e-07
+        },
+        {
+          "id": 45228,
+          "text": "_large",
+          "probability": 3.257132448197808e-07
+        }
+      ]
+    }
+  ]
+}

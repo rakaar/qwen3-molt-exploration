@@ -1,0 +1,145 @@
+{
+  "status": "passed",
+  "conditions": 418,
+  "unique_full_vocabulary_logit_rows": 14,
+  "vocabulary_size": 151936,
+  "maximum_probability_absolute_error": 6.801197238726076e-08,
+  "maximum_actual_norm_relative_error": 4.4300410811667215e-08,
+  "maximum_contribution_reconstruction_relative_error": 0,
+  "random_selection_matches_prespecified_seed": true,
+  "exact_full_mlp_replacement_confirmed": true,
+  "BF16_additive_writes_recomputed": true,
+  "inactive_edits_recover_clean_logits": true,
+  "source_and_artifact_hashes_match": true,
+  "groups": {
+    "baseline": {
+      "count": 1,
+      "nonzero_edits": 0,
+      "maximum_P_cold": 2.4589169676098033e-12,
+      "median_P_cold": 2.4589169676098033e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "baseline_donor": {
+      "count": 1,
+      "nonzero_edits": 0,
+      "maximum_P_cold": 0.9706799983978271,
+      "median_P_cold": 0.9706799983978271,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "selected_pair": {
+      "count": 1,
+      "nonzero_edits": 1,
+      "maximum_P_cold": 0.9986525774002075,
+      "median_P_cold": 0.9986525774002075,
+      "at_least_99_percent": 1,
+      "at_least_selected_P_cold": 1
+    },
+    "selected_single_positive": {
+      "count": 1,
+      "nonzero_edits": 1,
+      "maximum_P_cold": 2.5176967177742426e-09,
+      "median_P_cold": 2.5176967177742426e-09,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "selected_single_negative": {
+      "count": 1,
+      "nonzero_edits": 1,
+      "maximum_P_cold": 0.00015891005750745535,
+      "median_P_cold": 0.00015891005750745535,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "selected_pair_reverse": {
+      "count": 1,
+      "nonzero_edits": 1,
+      "maximum_P_cold": 1.2586153365183594e-13,
+      "median_P_cold": 1.2586153365183594e-13,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "whole_mlp": {
+      "count": 1,
+      "nonzero_edits": 1,
+      "maximum_P_cold": 7.000342579915886e-12,
+      "median_P_cold": 7.000342579915886e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "identity": {
+      "count": 3,
+      "nonzero_edits": 0,
+      "maximum_P_cold": 2.4589169676098033e-12,
+      "median_P_cold": 2.4589169676098033e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "uniform_single_positive": {
+      "count": 100,
+      "nonzero_edits": 0,
+      "maximum_P_cold": 2.4589169676098033e-12,
+      "median_P_cold": 2.4589169676098033e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "uniform_single_negative": {
+      "count": 100,
+      "nonzero_edits": 0,
+      "maximum_P_cold": 2.4589169676098033e-12,
+      "median_P_cold": 2.4589169676098033e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "uniform_pair": {
+      "count": 100,
+      "nonzero_edits": 0,
+      "maximum_P_cold": 2.4589169676098033e-12,
+      "median_P_cold": 2.4589169676098033e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "uniform_pair_reverse": {
+      "count": 100,
+      "nonzero_edits": 0,
+      "maximum_P_cold": 2.4589169676098033e-12,
+      "median_P_cold": 2.4589169676098033e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "active_single_positive": {
+      "count": 2,
+      "nonzero_edits": 2,
+      "maximum_P_cold": 6.721879563381661e-12,
+      "median_P_cold": 5.0360385349737524e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "active_single_negative": {
+      "count": 2,
+      "nonzero_edits": 2,
+      "maximum_P_cold": 1.371910939886034e-12,
+      "median_P_cold": 8.747817737114055e-13,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "active_pair": {
+      "count": 3,
+      "nonzero_edits": 3,
+      "maximum_P_cold": 7.7323217273495e-12,
+      "median_P_cold": 2.3924228483712673e-12,
+      "at_least_99_percent": 0,
+      "at_least_selected_P_cold": 0
+    },
+    "repeat": {
+      "count": 1,
+      "nonzero_edits": 1,
+      "maximum_P_cold": 0.9986525774002075,
+      "median_P_cold": 0.9986525774002075,
+      "at_least_99_percent": 1,
+      "at_least_selected_P_cold": 1
+    }
+  },
+  "limits": "Random samples are exploratory controls, not independent formal significance tests. Strengths are fixed, not norm-matched; ranks and contribution magnitudes vary."
+}
