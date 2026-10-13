@@ -92,4 +92,4 @@ The executed `common.py`, `prepare.py`, and `run.py` are preserved byte-for-byte
 
 ## Resource state
 
-SPAR Vast instance 55734307 and its disk are retained for follow-up, as requested. The measured rate is $0.188796/hour including disk. No GPU lifecycle action was performed. Provider connection helpers are deliberately excluded from this public package.
+After completion and verified GitHub backup, the user authorized teardown. SPAR Vast instance 55734307 and its attached disk were deleted on 13 October 2026. The post-deletion account inventory contains zero instances and zero standalone storage volumes, confirming **$0/hour ongoing compute/storage billing**. See `teardown.json`; the retained `resource-state.json` describes the earlier execution-time snapshot. Provider connection helpers are excluded from the public package.

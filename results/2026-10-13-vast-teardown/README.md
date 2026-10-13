@@ -13,4 +13,4 @@ Before deletion, both remote experiment directories were inventoried. All **71 s
 
 Redownloadable full base-model weights, duplicate tar archives, cache/compiled files, and ephemeral process-ID files are excluded. No credentials or private SSH material are included. Destroying the rental erases its remote disk; the measured outputs and executed scientific source have been preserved first.
 
-The final deletion response and post-action inventory are recorded separately in `teardown.json` after the provider confirms the action. An empty instance/volume inventory establishes zero **ongoing** compute/storage charges; historical usage charges can still settle.
+The completed teardown and post-action inventory are recorded in `teardown.json`: **zero instances, zero standalone storage volumes, and $0/hour ongoing compute/storage billing**. The command completed successfully; its non-JSON receipt could not be saved, so removal was confirmed directly through fresh provider inventories without repeating destruction. An empty instance/volume inventory establishes zero **ongoing** compute/storage charges; historical usage charges can still settle.
