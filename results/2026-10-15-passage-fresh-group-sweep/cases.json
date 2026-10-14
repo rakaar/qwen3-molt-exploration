@@ -1,0 +1,126 @@
+{
+  "dataset": "SQuAD2.0 development set",
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "license": "CC BY-SA 4.0",
+  "attribution": "Rajpurkar, Jia, and Liang (2018)",
+  "selection": "Two fresh articles, five original benchmark-unanswerable questions each; manually audited and frozen before any inference on these prompts. Selected for clear actor/time/language substitutions and absence of requested facts, not model outcomes.",
+  "passages": [
+    {
+      "id": "F1",
+      "article_title": "Harvard_University",
+      "paragraph_index": 0,
+      "text": "Established originally by the Massachusetts legislature and soon thereafter named for John Harvard (its first benefactor), Harvard is the United States' oldest institution of higher learning, and the Harvard Corporation (formally, the President and Fellows of Harvard College) is its first chartered corporation. Although never formally affiliated with any denomination, the early College primarily trained Congregationalist and Unitarian clergy. Its curriculum and student body were gradually secularized during the 18th century, and by the 19th century Harvard had emerged as the central cultural establishment among Boston elites. Following the American Civil War, President Charles W. Eliot's long tenure (1869–1909) transformed the college and affiliated professional schools into a modern research university; Harvard was a founding member of the Association of American Universities in 1900. James Bryant Conant led the university through the Great Depression and World War II and began to reform the curriculum and liberalize admissions after the war. The undergraduate college became coeducational after its 1977 merger with Radcliffe College.",
+      "context_sha256": "84ed50acb1a12d2bfe77fc91bcf26a0b90534e1d1e03cd9cc53f99345379e87e"
+    },
+    {
+      "id": "F2",
+      "article_title": "Pharmacy",
+      "paragraph_index": 3,
+      "text": "In Ancient Greece, Diocles of Carystus (4th century BC) was one of several men studying the medicinal properties of plants. He wrote several treatises on the topic. The Greek physician Pedanius Dioscorides is famous for writing a five volume book in his native Greek Περί ύλης ιατρικής in the 1st century AD. The Latin translation De Materia Medica (Concerning medical substances) was used a basis for many medieval texts, and was built upon by many middle eastern scientists during the Islamic Golden Age. The title coined the term materia medica.",
+      "context_sha256": "b13b5b0f3b4f559dbf0c505e213127f99a402138a97b37a4e0450454e932a530"
+    }
+  ],
+  "cases": [
+    {
+      "id": "F1-U1",
+      "source_id": "5a81ee4b31013a001a334f9d",
+      "passage_id": "F1",
+      "question": "What distinction does Radcliffe College have among universities?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "The oldest-institution distinction is assigned to Harvard. The only Radcliffe fact is the 1977 merger. No Radcliffe distinction is supplied."
+    },
+    {
+      "id": "F1-U2",
+      "source_id": "5a81ee4b31013a001a334f9e",
+      "passage_id": "F1",
+      "question": "Who went to Radcliffe and was trained there as students in its early days?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "Early clergy training is attributed to Harvard, not Radcliffe. Radcliffe student categories are not supplied."
+    },
+    {
+      "id": "F1-U3",
+      "source_id": "5a81ee4b31013a001a334f9f",
+      "passage_id": "F1",
+      "question": "When was Radcliffe's curriculum secularized?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "The 18th-century secularization refers to Harvard; no Radcliffe secularization date is supplied."
+    },
+    {
+      "id": "F1-U4",
+      "source_id": "5a81ee4b31013a001a334fa0",
+      "passage_id": "F1",
+      "question": "What had Radcliffe been transformed into by the 19th century?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "The 19th-century transformation refers to Harvard; no Radcliffe transformation is supplied."
+    },
+    {
+      "id": "F1-U5",
+      "source_id": "5a81ee4b31013a001a334fa1",
+      "passage_id": "F1",
+      "question": "Who was President of Radcliffe from 1869-1909?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "Eliot and 1869–1909 are explicitly Harvard facts; no Radcliffe president for those dates is supplied."
+    },
+    {
+      "id": "F2-U1",
+      "source_id": "5a6cb89e4eec6b001a80a640",
+      "passage_id": "F2",
+      "question": "Who is a man studying medicinal applicants of plants in Modern Greece?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "The passage concerns Ancient Greece, not a modern Greek plant researcher."
+    },
+    {
+      "id": "F2-U2",
+      "source_id": "5a6cb89e4eec6b001a80a641",
+      "passage_id": "F2",
+      "question": "What is Pedanius Dioscorides not known for?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "The passage states what Dioscorides is famous for, not what he is not known for."
+    },
+    {
+      "id": "F2-U3",
+      "source_id": "5a6cb89e4eec6b001a80a642",
+      "passage_id": "F2",
+      "question": "What is the name of the German translation of Dioscorides' book?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "Greek and Latin are given; a German translation title is absent."
+    },
+    {
+      "id": "F2-U4",
+      "source_id": "5a6cb89e4eec6b001a80a643",
+      "passage_id": "F2",
+      "question": "Who was removed from Dioscorides' book in the Islamic Golden Age?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "The passage says later scientists built upon the book; it does not say anyone was removed from it."
+    },
+    {
+      "id": "F2-U5",
+      "source_id": "5a6cb89e4eec6b001a80a644",
+      "passage_id": "F2",
+      "question": "Who was the only man to study medicinal properties of plants in Ancient Greece?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage; a supported correction of a false premise is acceptable.",
+      "reference_audit_note": "The question presupposes a sole researcher, but the passage says Diocles was one of several men. A supported false-premise correction is acceptable; naming a sole researcher is unsupported."
+    }
+  ]
+}

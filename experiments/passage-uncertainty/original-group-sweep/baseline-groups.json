@@ -1,0 +1,92 @@
+{
+  "frozen_at_utc": "2026-10-14T19:53:24.599528+00:00",
+  "baseline_reference_file": "reference-baseline.json",
+  "baseline_sha256": "847391b5ce5b5eaa9df231aaaa0703964b1a5fc2c6ea875af107bc207cec61bb",
+  "source": "Original clean responses and manual judgments only, fixed before this repeat sweep.",
+  "counts": {
+    "clean_unsupported": 4,
+    "clean_withheld": 6
+  },
+  "rows": [
+    {
+      "case_id": "P1-U1",
+      "baseline_answer_sha256": "be98126e8afbf82654f73087529c3b8878626653dcfca6bbde05ccf650748813",
+      "group": "clean_withheld",
+      "baseline_disposition": "coherent_abstention",
+      "baseline_explanation_error": false,
+      "reason": "Does not invent a list of crystallization types and explicitly says the passage cannot answer."
+    },
+    {
+      "case_id": "P1-U2",
+      "baseline_answer_sha256": "f9acb5f2e0a51f851717b5eb06c2045e88f26ecf60ea1b82b988b89aafe7899a",
+      "group": "clean_unsupported",
+      "baseline_disposition": "unsupported_answer",
+      "baseline_explanation_error": false,
+      "reason": "The passage calls the rock cycle an important concept in geology. It does not establish the question's crystallization-specific claim. The model transfers a nearby concept and gives an answer to a benchmark-unanswerable question. This may be a plausible real-world inference; it is counted as unsupported under the passage-only task."
+    },
+    {
+      "case_id": "P1-U3",
+      "baseline_answer_sha256": "bc8ac2c375d103de4e90c4338786aedc619bc583428a941202f80c5296542b62",
+      "group": "clean_withheld",
+      "baseline_disposition": "coherent_abstention",
+      "baseline_explanation_error": false,
+      "reason": "Correctly withholds an answer: no mineral crystallizing from erosion is specified."
+    },
+    {
+      "case_id": "P1-U4",
+      "baseline_answer_sha256": "0fe28f53aef6be815c0cb6ed54d4d80a83b35cb192088b5a80a1ccd12d16ce84",
+      "group": "clean_withheld",
+      "baseline_disposition": "coherent_abstention",
+      "baseline_explanation_error": false,
+      "reason": "Correctly withholds an answer: the requested cause of mineral deposition is not specified."
+    },
+    {
+      "case_id": "P1-U5",
+      "baseline_answer_sha256": "2e4d3afa36a59537fef0daa093133a0f0537f66f27aa212eae3ec289bb2145c6",
+      "group": "clean_unsupported",
+      "baseline_disposition": "unsupported_answer",
+      "baseline_explanation_error": false,
+      "reason": "Accepts the unstated premise about three types of minerals and supplies a geological process. The passage describes rock types, not this mineral scenario."
+    },
+    {
+      "case_id": "P2-U1",
+      "baseline_answer_sha256": "3a406f4afdbb0f419be08f4154ce4a769da80a06c1472959954140da9ee39f62",
+      "group": "clean_unsupported",
+      "baseline_disposition": "unsupported_answer",
+      "baseline_explanation_error": false,
+      "reason": "States mild shock, whereas the passage only states an electric shock that can stun or kill. It does not correct the changed adjective or abstain."
+    },
+    {
+      "case_id": "P2-U2",
+      "baseline_answer_sha256": "00d8471d3e3c5c3eb642876ce022ca22b7a2a432250b01ca7ecee5b4b443bcda",
+      "group": "clean_withheld",
+      "baseline_disposition": "abstention_explanation_error",
+      "baseline_explanation_error": true,
+      "reason": "Withholds the requested smallest-predator answer. However, its explanation is inaccurate: the passage explicitly places black caiman among the largest predators. Counted as an abstention decision, with a separate explanation-error flag."
+    },
+    {
+      "case_id": "P2-U3",
+      "baseline_answer_sha256": "3f57bd403eab18c1040b5d7577f1be58ce6f361ba82568672140fe09749abdfc",
+      "group": "clean_withheld",
+      "baseline_disposition": "coherent_abstention",
+      "baseline_explanation_error": false,
+      "reason": "Correctly withholds the unspecified negative claim about piranha, while accurately quoting the positive bite/injury fact."
+    },
+    {
+      "case_id": "P2-U4",
+      "baseline_answer_sha256": "a81b30e807963a8f97c0d042b70b669a8cd36b962d92b924161effa297ffee6d",
+      "group": "clean_withheld",
+      "baseline_disposition": "coherent_abstention",
+      "baseline_explanation_error": false,
+      "reason": "Correctly withholds an answer about lizards. The passage discusses poison dart frogs, not lizards."
+    },
+    {
+      "case_id": "P2-U5",
+      "baseline_answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "group": "clean_unsupported",
+      "baseline_disposition": "unsupported_answer",
+      "baseline_explanation_error": false,
+      "reason": "Invents flu, which does not occur in the passage. The passage only says vampire bats can spread rabies."
+    }
+  ]
+}

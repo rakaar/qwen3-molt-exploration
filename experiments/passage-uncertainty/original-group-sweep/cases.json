@@ -1,0 +1,129 @@
+{
+  "dataset": "SQuAD2.0 development set",
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "license": "CC BY-SA 4.0",
+  "attribution": "Pranav Rajpurkar, Robin Jia, and Percy Liang, 2018",
+  "selection": "All ten unanswerable questions from the original Geology/Amazon pilot, reused at the user's request for a larger fixed conversion cohort. This is exploratory reuse of previously tuned examples, not held-out generalization.",
+  "screening": [
+    "Jacksonville paragraph 0 has a city-versus-metropolitan population ambiguity.",
+    "Packet_switching paragraph 20 has duplicate ambiguous partnership questions.",
+    "These candidate passages were inspected without running the model and not selected."
+  ],
+  "passages": [
+    {
+      "id": "P1",
+      "article_title": "Geology",
+      "paragraph_index": 0,
+      "text": "There are three major types of rock: igneous, sedimentary, and metamorphic. The rock cycle is an important concept in geology which illustrates the relationships between these three types of rock, and magma. When a rock crystallizes from melt (magma and/or lava), it is an igneous rock. This rock can be weathered and eroded, and then redeposited and lithified into a sedimentary rock, or be turned into a metamorphic rock due to heat and pressure that change the mineral content of the rock which gives it a characteristic fabric. The sedimentary rock can then be subsequently turned into a metamorphic rock due to heat and pressure and is then weathered, eroded, deposited, and lithified, ultimately becoming a sedimentary rock. Sedimentary rock may also be re-eroded and redeposited, and metamorphic rock may also undergo additional metamorphism. All three types of rocks may be re-melted; when this happens, a new magma is formed, from which an igneous rock may once again crystallize."
+    },
+    {
+      "id": "P2",
+      "article_title": "Amazon_rainforest",
+      "paragraph_index": 10,
+      "text": "The rainforest contains several species that can pose a hazard. Among the largest predatory creatures are the black caiman, jaguar, cougar, and anaconda. In the river, electric eels can produce an electric shock that can stun or kill, while piranha are known to bite and injure humans. Various species of poison dart frogs secrete lipophilic alkaloid toxins through their flesh. There are also numerous parasites and disease vectors. Vampire bats dwell in the rainforest and can spread the rabies virus. Malaria, yellow fever and Dengue fever can also be contracted in the Amazon region."
+    }
+  ],
+  "cases": [
+    {
+      "id": "P1-U1",
+      "source_id": "5a57c667770dc0001aeefd66",
+      "passage_id": "P1",
+      "question": "What are three types of crystallization?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P1-U2",
+      "source_id": "5a57c667770dc0001aeefd67",
+      "passage_id": "P1",
+      "question": "What is an important concept in crystallization?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P1-U3",
+      "source_id": "5a57c667770dc0001aeefd68",
+      "passage_id": "P1",
+      "question": "What kind of mineral crystallizes from erosion?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P1-U4",
+      "source_id": "5a57c667770dc0001aeefd69",
+      "passage_id": "P1",
+      "question": "What changes the way a mineral is deposited?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P1-U5",
+      "source_id": "5a57c667770dc0001aeefd6a",
+      "passage_id": "P1",
+      "question": "What happens when three types of minerals are re-deposited and change their characteristics?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P2-U1",
+      "source_id": "5a0c7fb2f5590b0018dab444",
+      "passage_id": "P2",
+      "question": "Which animal living in the Amazon River produces a mild shock?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P2-U2",
+      "source_id": "5a0c7fb2f5590b0018dab445",
+      "passage_id": "P2",
+      "question": "Among the smallest predatory creatures are the black Caiman and what?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P2-U3",
+      "source_id": "5a0c7fb2f5590b0018dab446",
+      "passage_id": "P2",
+      "question": "Piranha did not actually do what?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P2-U4",
+      "source_id": "5a0c7fb2f5590b0018dab447",
+      "passage_id": "P2",
+      "question": "Various species of lizards secrete what?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    },
+    {
+      "id": "P2-U5",
+      "source_id": "5a0c7fb2f5590b0018dab448",
+      "passage_id": "P2",
+      "question": "Vampire bats do not actually spread what?",
+      "is_answerable": false,
+      "original_gold_answers": [],
+      "reference_answer": "No supported answer in the passage.",
+      "reference_audit_note": ""
+    }
+  ]
+}

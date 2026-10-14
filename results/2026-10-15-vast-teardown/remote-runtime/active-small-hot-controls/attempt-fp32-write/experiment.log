@@ -1,0 +1,88 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 102.98it/s]
+BATCH 0 / 550
+BATCH 7 / 550
+BATCH 14 / 550
+BATCH 21 / 550
+BATCH 28 / 550
+BATCH 35 / 550
+BATCH 42 / 550
+BATCH 49 / 550
+BATCH 56 / 550
+BATCH 63 / 550
+BATCH 70 / 550
+BATCH 77 / 550
+BATCH 84 / 550
+BATCH 91 / 550
+BATCH 98 / 550
+BATCH 105 / 550
+BATCH 112 / 550
+BATCH 119 / 550
+BATCH 126 / 550
+BATCH 133 / 550
+BATCH 140 / 550
+BATCH 147 / 550
+BATCH 154 / 550
+BATCH 161 / 550
+BATCH 168 / 550
+BATCH 175 / 550
+BATCH 182 / 550
+BATCH 189 / 550
+BATCH 196 / 550
+BATCH 203 / 550
+BATCH 210 / 550
+BATCH 217 / 550
+BATCH 224 / 550
+BATCH 231 / 550
+BATCH 238 / 550
+BATCH 245 / 550
+BATCH 252 / 550
+BATCH 259 / 550
+BATCH 266 / 550
+BATCH 273 / 550
+BATCH 280 / 550
+BATCH 287 / 550
+BATCH 294 / 550
+BATCH 301 / 550
+BATCH 308 / 550
+BATCH 315 / 550
+BATCH 322 / 550
+BATCH 329 / 550
+BATCH 336 / 550
+BATCH 343 / 550
+BATCH 350 / 550
+BATCH 357 / 550
+BATCH 364 / 550
+BATCH 371 / 550
+BATCH 378 / 550
+BATCH 385 / 550
+BATCH 392 / 550
+BATCH 399 / 550
+BATCH 406 / 550
+BATCH 413 / 550
+BATCH 420 / 550
+BATCH 427 / 550
+BATCH 434 / 550
+BATCH 441 / 550
+BATCH 448 / 550
+BATCH 455 / 550
+BATCH 462 / 550
+BATCH 469 / 550
+BATCH 476 / 550
+BATCH 483 / 550
+BATCH 490 / 550
+BATCH 497 / 550
+BATCH 504 / 550
+BATCH 511 / 550
+BATCH 518 / 550
+BATCH 525 / 550
+BATCH 532 / 550
+BATCH 539 / 550
+BATCH 546 / 550
+Traceback (most recent call last):
+  File "/root/active-small-hot-controls/worker.py", line 141, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/root/active-small-hot-controls/worker.py", line 137, in main
+    assert abs(selected['P_cold']-.998653)<.0001,selected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 'selected_pair_4.5', 'kind': 'pair', 'stratum': 'selected', 'layer': 22, 'strength': 4.5, 'sample_index': 438, 'terms': [['receiver', 2339, -4.5], ['donor', 941, 4.5]], 'P_cold': 0.9990097284317017, 'P_large': 9.047109589266356e-11, 'top_token': 'cold', 'top5': [{'id': 87072, 'token': 'cold', 'p': 0.9990097284317017}, {'id': 10303, 'token': 'low', 'p': 0.0005525366868823767}, {'id': 76418, 'token': 'Cold', 'p': 0.00043031599489040673}, {'id': 9255, 'token': ' cold', 'p': 5.416879048425471e-06}, {'id': 42196, 'token': 'cool', 'p': 9.413124644197524e-07}], 'intended_delta_norm': 65.32066345214844, 'actual_delta_norm': 65.32410430908203, 'native_mlp_norm': 25.853179931640625, 'logit_row': 438, 'source_gates': [{'source': 'receiver', 'layer': 22, 'feature': 2339, 'gate': 1.5479154586791992}, {'source': 'donor', 'layer': 22, 'feature': 941, 'gate': 1.6072452068328857}], 'mean_source_gate': 1.5775803327560425, 'nonzero_actual_edit': True, 'logit_sha256': 'bd083c97cc77a620e480a5e17ab4b6093be7fc9ea7aa7ca21df825cbf4ef3169'}
