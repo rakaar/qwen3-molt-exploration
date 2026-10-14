@@ -1,0 +1,193 @@
+{
+  "families": {
+    "0": {
+      "coarse_count": 25,
+      "maximum_coarse_P_cold": 0.8493906259536743,
+      "maximum_coarse_at_alpha": 24.0,
+      "best_coarse_condition": "coarse_a24_b0",
+      "maximum_tested_P_cold": 0.8493906259536743,
+      "maximum_tested_at_alpha": 24.0,
+      "best_tested_condition": "coarse_a24_b0",
+      "tested_count": 122,
+      "P_capitalized_Cold_at_best": 0.1476019648760048,
+      "P_cold_either_case_at_best": 0.9969926269351657,
+      "lowest_tested_99_alpha": null
+    },
+    "0.5": {
+      "coarse_count": 25,
+      "maximum_coarse_P_cold": 0.90398770570755,
+      "maximum_coarse_at_alpha": 28.0,
+      "best_coarse_condition": "coarse_a28_b0.5",
+      "maximum_tested_P_cold": 0.90398770570755,
+      "maximum_tested_at_alpha": 28.0,
+      "best_tested_condition": "coarse_a28_b0.5",
+      "tested_count": 122,
+      "P_capitalized_Cold_at_best": 0.09527960703618346,
+      "P_cold_either_case_at_best": 0.9992673491875393,
+      "lowest_tested_99_alpha": null
+    },
+    "4.5": {
+      "coarse_count": 25,
+      "maximum_coarse_P_cold": 0.9995644688606262,
+      "maximum_coarse_at_alpha": 6.0,
+      "best_coarse_condition": "coarse_a6_b4.5",
+      "maximum_tested_P_cold": 0.9995644688606262,
+      "maximum_tested_at_alpha": 6.0,
+      "best_tested_condition": "coarse_a6_b4.5",
+      "tested_count": 33,
+      "P_capitalized_Cold_at_best": 0.00043055495120402227,
+      "P_cold_either_case_at_best": 0.9999950526406717,
+      "lowest_tested_99_alpha": 4.125
+    }
+  },
+  "threshold_brackets": [
+    {
+      "beta": 0,
+      "reached_99": false,
+      "largest_tested_alpha": 512.0
+    },
+    {
+      "beta": 0.5,
+      "reached_99": false,
+      "largest_tested_alpha": 512.0
+    },
+    {
+      "beta": 4.5,
+      "reached_99": true,
+      "coarse_bracket": [
+        3.0,
+        4.5
+      ],
+      "lower_alpha": 4.119140625,
+      "lower_P_cold": 0.9853897094726562,
+      "upper_alpha": 4.125,
+      "upper_P_cold": 0.9908698201179504,
+      "interpretation": "First observed coarse-grid crossing, locally refined; not a proven global minimum."
+    }
+  ],
+  "reference_pair": {
+    "id": "coarse_a4.5_b4.5",
+    "group": "coarse",
+    "alpha": 4.5,
+    "beta": 4.5,
+    "logit_row": 56,
+    "logit_sha256": "209475ae6bba4ecffb44a5b669d4deecb3c193af50284d3223e4ca2a42deca77",
+    "vector_row": 57,
+    "P_cold": 0.9986525774002075,
+    "P_large": 1.0248053100569976e-10,
+    "top_token": "cold",
+    "top_tokens": [
+      {
+        "id": 87072,
+        "text": "cold",
+        "probability": 0.9986525774002075
+      },
+      {
+        "id": 10303,
+        "text": "low",
+        "probability": 0.0009106533252634108
+      },
+      {
+        "id": 76418,
+        "text": "Cold",
+        "probability": 0.00043016215204261243
+      },
+      {
+        "id": 9255,
+        "text": " cold",
+        "probability": 4.778670245286776e-06
+      },
+      {
+        "id": 42196,
+        "text": "cool",
+        "probability": 8.304083394250483e-07
+      },
+      {
+        "id": 99476,
+        "text": "\u51b7",
+        "probability": 6.467226967288298e-07
+      },
+      {
+        "id": 24187,
+        "text": "Low",
+        "probability": 6.816406994403224e-08
+      },
+      {
+        "id": 13855,
+        "text": "bad",
+        "probability": 6.816406994403224e-08
+      }
+    ],
+    "intended_delta_norm": 65.32066345214844,
+    "actual_delta_norm": 65.31211853027344,
+    "actual_delta_over_native_mlp_norm": 2.5262702190975226
+  },
+  "best_small_only": {
+    "id": "small_only_a0_b8",
+    "group": "small_only",
+    "alpha": 0.0,
+    "beta": 8.0,
+    "logit_row": 80,
+    "logit_sha256": "7a72d8a54b189692a064b2e2bac31e16057d86ee869f353d1d53b379e9b22e23",
+    "vector_row": 84,
+    "P_cold": 0.0007464041118510067,
+    "P_large": 1.3848718005693428e-10,
+    "top_token": "bad",
+    "top_tokens": [
+      {
+        "id": 13855,
+        "text": "bad",
+        "probability": 0.7223514914512634
+      },
+      {
+        "id": 2923,
+        "text": "down",
+        "probability": 0.23451319336891174
+      },
+      {
+        "id": 14860,
+        "text": "bottom",
+        "probability": 0.019250014796853065
+      },
+      {
+        "id": 10303,
+        "text": "low",
+        "probability": 0.00909306388348341
+      },
+      {
+        "id": 42224,
+        "text": "negative",
+        "probability": 0.006249565165489912
+      },
+      {
+        "id": 22624,
+        "text": "dark",
+        "probability": 0.004295258782804012
+      },
+      {
+        "id": 87072,
+        "text": "cold",
+        "probability": 0.0007464041118510067
+      },
+      {
+        "id": 38365,
+        "text": "minus",
+        "probability": 0.0007464041118510067
+      }
+    ],
+    "intended_delta_norm": 90.3855972290039,
+    "actual_delta_norm": 90.39910125732422,
+    "actual_delta_over_native_mlp_norm": 3.4966337408532304
+  },
+  "conditions": 303,
+  "source_norms": {
+    "small": 11.298199653625488,
+    "hot": 9.447199821472168,
+    "native_receiver_mlp": 25.853179931640625
+  },
+  "source_gates": {
+    "small_receiver": 1.5479154586791992,
+    "hot_donor": 1.6072452068328857
+  },
+  "limitations": "One receiver/donor prompt pair; strength sweep, not broad task generalization. High-gain answer steering does not establish semantic replacement or feature selectivity. Local threshold refinement is not a proof of global minimum."
+}

@@ -95,9 +95,14 @@ def main():
     coarse += [spec(0, b, 'small_only') for b in P['small_only_strengths']]
     save('conditions-before-execution.json', [{k: v for k, v in s.items() if k != 'vector'} for s in coarse])
     execute(coarse)
+    if 'exploratory_peak_scan' in P:
+        peak = P['exploratory_peak_scan']
+        specs = [spec(a, b, 'peak_scan') for b in peak['small_subtractions'] for a in peak['hot_strengths']]
+        save('peak-scan-before-execution.json', [{k: v for k, v in s.items() if k != 'vector'} for s in specs])
+        execute(specs)
     brackets = []
     for beta in P['small_subtractions']:
-        rows = sorted((r for r in R['rows'] if r['group'] == 'coarse' and r['beta'] == beta), key=lambda r: r['alpha'])
+        rows = sorted((r for r in R['rows'] if r['group'] in ('coarse', 'peak_scan') and r['beta'] == beta), key=lambda r: r['alpha'])
         crossing = next((i for i, r in enumerate(rows) if r['P_cold'] >= .99), None)
         if crossing is None:
             brackets.append({'beta': beta, 'reached_99': False, 'largest_tested_alpha': rows[-1]['alpha']})
@@ -122,7 +127,7 @@ def main():
     by_id = {r['id']: r for r in R['rows']}
     originals = [by_id['coarse_a4.5_b4.5']]
     for beta in (0, .5):
-        originals.append(max((r for r in R['rows'] if r['beta'] == beta and r['group'] == 'coarse'), key=lambda r: r['P_cold']))
+        originals.append(max((r for r in R['rows'] if r['beta'] == beta and r['group'] in ('coarse', 'peak_scan')), key=lambda r: r['P_cold']))
     repeated = execute([spec(r['alpha'], r['beta'], 'repeat', f'_{i}') for i, r in enumerate(originals)])
     for original, repeat in zip(originals, repeated):
         assert original['logit_sha256'] == repeat['logit_sha256']
@@ -142,7 +147,7 @@ def main():
     cases = [by_id['clean_receiver'], by_id['coarse_a4.5_b4.5'],
              by_id['coarse_a4.5_b0'], by_id['coarse_a20_b0'], by_id['coarse_a512_b0']]
     for beta in (0, .5):
-        candidates = [r for r in R['rows'] if r['beta'] == beta and r['group'] in ('coarse', 'refinement')]
+        candidates = [r for r in R['rows'] if r['beta'] == beta and r['group'] in ('coarse', 'peak_scan', 'refinement')]
         cases.append(max(candidates, key=lambda r: r['P_cold']))
         hits = [r for r in candidates if r['P_cold'] >= .99]
         if hits:
@@ -189,6 +194,18 @@ def main():
                             'first_logits_match_sweep_bitwise': True, 'first_token': first_logits})
         print('GENERATION', key, repr(generations[-1]['text']), 'EOS', ended, flush=True)
     save('generations.json', generations)
+    prior_file = ROOT / 'first-sweep/artifacts/results.json'
+    if prior_file.exists():
+        prior = json.loads(prior_file.read_text())
+        prior_sources = np.load(ROOT / 'first-sweep/artifacts/contributions.npz')
+        current_sources = np.load(OUT / 'contributions.npz')
+        assert all(np.array_equal(prior_sources[k], current_sources[k]) for k in prior_sources.files)
+        current = {r['id']: r for r in R['rows']}
+        shared = [r for r in prior['rows'] if r['id'] in current]
+        assert all(r['logit_sha256'] == current[r['id']]['logit_sha256'] for r in shared)
+        R['prior_sweep_comparison'] = {'shared_conditions': len(shared),
+                                      'all_shared_logits_bitwise_equal': True, 'source_vectors_bitwise_equal': True,
+                                      'prior_results_sha256': sha(prior_file)}
     np.savez_compressed(OUT / 'next-token-logits.npz', logits_bf16_bits=np.stack(logits))
     np.savez_compressed(OUT / 'direct-write.npz', intended_delta=np.stack(intended), before=np.stack(before), after=np.stack(after))
     R.update(status='complete', seconds=time.monotonic() - started,

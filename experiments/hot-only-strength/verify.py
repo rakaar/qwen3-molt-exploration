@@ -54,7 +54,8 @@ for row in R['rows']:
     error = abs(probabilities[i, 87072] - row['P_cold'])
     assert error < 2e-6
     errors.append(float(error))
-    assert int(logits[i].argmax()) == row['top_tokens'][0]['id']
+    row['P_cold_capitalized_cpu64'] = float(probabilities[i, 76418])
+    assert logits[i, row['top_tokens'][0]['id']] == logits[i].max(), row['id']
     delta, pre, post = direct['intended_delta'][v], direct['before'][v], direct['after'][v]
     if row['group'] != 'baseline_donor':
         expected = (np.zeros(2560, dtype=np.float32) + np.float32(-row['beta']) * sources['small']) + np.float32(row['alpha']) * sources['hot']
@@ -68,15 +69,23 @@ for row in R['rows']:
 families = {}
 for beta in (0, .5, 4.5):
     coarse = [r for r in R['rows'] if r['group'] == 'coarse' and r['beta'] == beta]
-    best = max(coarse, key=lambda r: r['P_cold'])
-    hits = [r for r in R['rows'] if r['group'] in ('coarse', 'refinement') and r['beta'] == beta and r['P_cold'] >= .99]
-    families[str(beta)] = {'coarse_count': len(coarse), 'maximum_coarse_P_cold': best['P_cold'],
-                           'maximum_coarse_at_alpha': best['alpha'], 'best_coarse_condition': best['id'],
+    tested = [r for r in R['rows'] if r['group'] in ('coarse', 'peak_scan', 'refinement') and r['beta'] == beta]
+    best = max(tested, key=lambda r: r['P_cold'])
+    best_coarse = max(coarse, key=lambda r: r['P_cold'])
+    hits = [r for r in tested if r['P_cold'] >= .99]
+    families[str(beta)] = {'coarse_count': len(coarse),
+                           'maximum_coarse_P_cold': best_coarse['P_cold'],
+                           'maximum_coarse_at_alpha': best_coarse['alpha'], 'best_coarse_condition': best_coarse['id'],
+                           'maximum_tested_P_cold': best['P_cold'], 'maximum_tested_at_alpha': best['alpha'],
+                           'best_tested_condition': best['id'], 'tested_count': len(tested),
+                           'P_capitalized_Cold_at_best': best['P_cold_capitalized_cpu64'],
+                           'P_cold_either_case_at_best': float(probabilities[best['logit_row'], 87072] + probabilities[best['logit_row'], 76418]),
                            'lowest_tested_99_alpha': min((r['alpha'] for r in hits), default=None)}
 result = {'status': 'passed', 'conditions': len(R['rows']), 'vocabulary_size': logits.shape[1],
           'maximum_probability_absolute_error': max(errors), 'source_contribution_relative_errors': source_errors,
           'BF16_writes_independently_recomputed': True, 'full_logits_lossless': True,
           'source_and_artifact_hashes_match': True, 'fixed_source_formula_verified': True,
+          'ties_in_top_token_accepted_only_at_exact_maximum_logit': True,
           'families': families, 'threshold_brackets': R['threshold_brackets']}
 (ROOT / 'verification.json').write_text(json.dumps(result, indent=2) + '\n')
 print(json.dumps(result, indent=2))

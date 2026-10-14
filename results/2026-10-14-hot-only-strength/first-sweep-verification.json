@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "conditions": 109,
+  "vocabulary_size": 151936,
+  "maximum_probability_absolute_error": 1.9102402792903206e-07,
+  "source_contribution_relative_errors": {
+    "small": 5.479638401452208e-07,
+    "hot": 6.819637426609106e-07
+  },
+  "BF16_writes_independently_recomputed": true,
+  "full_logits_lossless": true,
+  "source_and_artifact_hashes_match": true,
+  "fixed_source_formula_verified": true,
+  "ties_in_top_token_accepted_only_at_exact_maximum_logit": true,
+  "families": {
+    "0": {
+      "coarse_count": 25,
+      "maximum_coarse_P_cold": 0.8493906259536743,
+      "maximum_coarse_at_alpha": 24.0,
+      "best_coarse_condition": "coarse_a24_b0",
+      "maximum_tested_P_cold": 0.8493906259536743,
+      "maximum_tested_at_alpha": 24.0,
+      "best_tested_condition": "coarse_a24_b0",
+      "tested_count": 25,
+      "P_capitalized_Cold_at_best": 0.1476019648760048,
+      "P_cold_either_case_at_best": 0.9969926269351657,
+      "lowest_tested_99_alpha": null
+    },
+    "0.5": {
+      "coarse_count": 25,
+      "maximum_coarse_P_cold": 0.90398770570755,
+      "maximum_coarse_at_alpha": 28.0,
+      "best_coarse_condition": "coarse_a28_b0.5",
+      "maximum_tested_P_cold": 0.90398770570755,
+      "maximum_tested_at_alpha": 28.0,
+      "best_tested_condition": "coarse_a28_b0.5",
+      "tested_count": 25,
+      "P_capitalized_Cold_at_best": 0.09527960703618343,
+      "P_cold_either_case_at_best": 0.9992673491875389,
+      "lowest_tested_99_alpha": null
+    },
+    "4.5": {
+      "coarse_count": 25,
+      "maximum_coarse_P_cold": 0.9995644688606262,
+      "maximum_coarse_at_alpha": 6.0,
+      "best_coarse_condition": "coarse_a6_b4.5",
+      "maximum_tested_P_cold": 0.9995644688606262,
+      "maximum_tested_at_alpha": 6.0,
+      "best_tested_condition": "coarse_a6_b4.5",
+      "tested_count": 33,
+      "P_capitalized_Cold_at_best": 0.00043055495120402216,
+      "P_cold_either_case_at_best": 0.9999950526406715,
+      "lowest_tested_99_alpha": 4.125
+    }
+  },
+  "threshold_brackets": [
+    {
+      "beta": 0,
+      "reached_99": false,
+      "largest_tested_alpha": 512.0
+    },
+    {
+      "beta": 0.5,
+      "reached_99": false,
+      "largest_tested_alpha": 512.0
+    },
+    {
+      "beta": 4.5,
+      "reached_99": true,
+      "coarse_bracket": [
+        3.0,
+        4.5
+      ],
+      "lower_alpha": 4.119140625,
+      "lower_P_cold": 0.9853897094726562,
+      "upper_alpha": 4.125,
+      "upper_P_cold": 0.9908698201179504,
+      "interpretation": "First observed coarse-grid crossing, locally refined; not a proven global minimum."
+    }
+  ]
+}

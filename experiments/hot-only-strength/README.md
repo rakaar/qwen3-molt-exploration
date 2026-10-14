@@ -35,3 +35,11 @@ python report.py
 Raw full-vocabulary next-token BF16 logits are stored losslessly as uint16 bits in artifacts/next-token-logits.npz. Decode with `(bits.astype(np.uint32) << 16).view(np.float32)`. The independent CPU verifier recomputes full-vocabulary softmax, source math, intended deltas, actual BF16 writes, identities, norms, and source/artifact hashes. It records outcomes in verification.json.
 
 A local crossing refinement does not prove a global minimum. Failing through 512 does not prove impossibility at every strength. Success on one prompt pair does not establish generalization or semantic selectivity.
+
+## Completed experiment
+
+The original 109-condition sweep is preserved separately. An exploratory 0.25-strength scan from 16 to 40 for beta 0 and 0.5 expanded the final record to 303 conditions. All 109 shared conditions and all source vectors match the original sweep bitwise. Both phases and the exact dense-grid rationale are preserved; the initial prescription was backed up before execution in GitHub commit 51d62a4.
+
+The initial independent verifier incorrectly required the same token ID from CPU argmax and GPU top-k when BF16 logits were exactly tied. The audit now accepts a reported top token only if its logit is exactly the vocabulary maximum. Model interventions and recorded logits were unaffected; the initial audit failure and corrected audit are preserved.
+
+The primary metric remains lowercase cold. Capitalized Cold is reported separately as a diagnostic and is never used to claim 99% lowercase P(cold). No P(hot) target is used.
