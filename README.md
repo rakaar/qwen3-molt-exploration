@@ -4,6 +4,8 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 ## New experiment: 14 October 2026
 
+- [L19–T368 answer-token gate heatmaps](results/2026-10-14-passage-answer-gates/index.html) — observational replay of all 10 unanswerable-question responses from the clean baseline. All four unsupported answers have zero gate across their 87 visible answer tokens; all six abstention decisions have some active tokens (68/174 total, peak gate 3.481079). Includes shared-scale PNG/PDF heatmaps, decoded tokens, every gate and contribution norm, and exact cached-greedy replay checks. No intervention was performed; this is association on a small selected sample. [Source](experiments/passage-uncertainty/answer-gates/).
+
 - [Two-passage clean grounding baseline](results/2026-10-14-passage-grounding-baseline/index.html) — native Qwen3-4B, no MOLT intervention, two passages with five answerable and five unanswerable questions each. All 10 answerable questions were answered correctly (0% wrong answer rate); 4/10 unanswerable questions received unsupported answers (40% hallucination rate under the passage-only criterion). Full passages, all 20 complete model answers, nuanced manual judgments, tokens, hashes, and reproducible code are saved. This is a small selected pilot, not a representative model score. SPAR GPU 55946393 remains running at the user's request. [Source](experiments/passage-uncertainty/small-baseline/).
 
 ## New figures: 14 October 2026
