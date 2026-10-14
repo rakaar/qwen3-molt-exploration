@@ -1,0 +1,233 @@
+{
+  "conditions": 790,
+  "primary_active_control_conditions": 400,
+  "primary_edit_layer": 22,
+  "primary_conditions_with_changed_final_logits": 400,
+  "primary_cold_top_token_count": 0,
+  "unique_control_transforms": 35,
+  "all_source_gates_positive": true,
+  "all_actual_edits_nonzero": true,
+  "groups": [
+    {
+      "stratum": "same_layer",
+      "kind": "positive",
+      "conditions": 50,
+      "max_P_cold": 7.468325759117501e-06,
+      "best_id": "same_layer_positive_49",
+      "best_strength": 64,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "same_layer",
+      "kind": "negative",
+      "conditions": 50,
+      "max_P_cold": 1.7866055966574442e-10,
+      "best_id": "same_layer_negative_17",
+      "best_strength": 14,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "same_layer",
+      "kind": "pair",
+      "conditions": 50,
+      "max_P_cold": 7.661383833038177e-07,
+      "best_id": "same_layer_pair_20",
+      "best_strength": 64,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "same_layer",
+      "kind": "pair_reverse",
+      "conditions": 50,
+      "max_P_cold": 2.962531987154535e-10,
+      "best_id": "same_layer_pair_reverse_26",
+      "best_strength": 48,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "other_layers_fixed_site",
+      "kind": "positive",
+      "conditions": 50,
+      "max_P_cold": 6.9264521911055226e-09,
+      "best_id": "fixed_site_other_layers_positive_4",
+      "best_strength": 32,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "other_layers_fixed_site",
+      "kind": "negative",
+      "conditions": 50,
+      "max_P_cold": 1.6232164733517589e-09,
+      "best_id": "fixed_site_other_layers_negative_29",
+      "best_strength": 32,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "other_layers_fixed_site",
+      "kind": "pair",
+      "conditions": 50,
+      "max_P_cold": 0.0018458142171376265,
+      "best_id": "fixed_site_other_layers_pair_4",
+      "best_strength": 32,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "other_layers_fixed_site",
+      "kind": "pair_reverse",
+      "conditions": 50,
+      "max_P_cold": 1.3358057837614405e-08,
+      "best_id": "fixed_site_other_layers_pair_reverse_32",
+      "best_strength": 4.5,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "norm_matched_at_layer22",
+      "kind": "positive",
+      "conditions": 12,
+      "max_P_cold": 2.7504845122005525e-11,
+      "best_id": "fixed_site_norm_matched_positive_11",
+      "best_strength": 1,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 12
+    },
+    {
+      "stratum": "norm_matched_at_layer22",
+      "kind": "negative",
+      "conditions": 12,
+      "max_P_cold": 1.0455776799333605e-11,
+      "best_id": "fixed_site_norm_matched_negative_11",
+      "best_strength": 1,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 12
+    },
+    {
+      "stratum": "norm_matched_at_layer22",
+      "kind": "pair",
+      "conditions": 13,
+      "max_P_cold": 6.550457244075243e-09,
+      "best_id": "fixed_site_norm_matched_pair_5",
+      "best_strength": 1,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 13
+    },
+    {
+      "stratum": "norm_matched_at_layer22",
+      "kind": "pair_reverse",
+      "conditions": 13,
+      "max_P_cold": 8.824345731675498e-12,
+      "best_id": "fixed_site_norm_matched_pair_reverse_4",
+      "best_strength": 1,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 13
+    },
+    {
+      "stratum": "other_layers",
+      "kind": "positive",
+      "conditions": 50,
+      "max_P_cold": 2.296537654322811e-06,
+      "best_id": "other_layers_positive_19",
+      "best_strength": 32,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 45
+    },
+    {
+      "stratum": "other_layers",
+      "kind": "negative",
+      "conditions": 50,
+      "max_P_cold": 1.52235745803233e-07,
+      "best_id": "other_layers_negative_9",
+      "best_strength": 32,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 50
+    },
+    {
+      "stratum": "other_layers",
+      "kind": "pair",
+      "conditions": 50,
+      "max_P_cold": 0.001926640635284738,
+      "best_id": "other_layers_pair_4",
+      "best_strength": 32,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 45
+    },
+    {
+      "stratum": "other_layers",
+      "kind": "pair_reverse",
+      "conditions": 50,
+      "max_P_cold": 2.1339743374521053e-06,
+      "best_id": "other_layers_pair_reverse_9",
+      "best_strength": 32,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 45
+    },
+    {
+      "stratum": "norm_matched_at_native_layer",
+      "kind": "positive",
+      "conditions": 10,
+      "max_P_cold": 3.6355617275947197e-10,
+      "best_id": "norm_matched_positive_11",
+      "best_strength": 1,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 9
+    },
+    {
+      "stratum": "norm_matched_at_native_layer",
+      "kind": "negative",
+      "conditions": 10,
+      "max_P_cold": 1.4915992910598386e-09,
+      "best_id": "norm_matched_negative_11",
+      "best_strength": 1,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 10
+    },
+    {
+      "stratum": "norm_matched_at_native_layer",
+      "kind": "pair",
+      "conditions": 10,
+      "max_P_cold": 6.712819139661145e-07,
+      "best_id": "norm_matched_pair_5",
+      "best_strength": 1,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 9
+    },
+    {
+      "stratum": "norm_matched_at_native_layer",
+      "kind": "pair_reverse",
+      "conditions": 10,
+      "max_P_cold": 8.32044448701303e-12,
+      "best_id": "norm_matched_pair_reverse_11",
+      "best_strength": 1,
+      "count_above_99_percent": 0,
+      "cold_top_token_count": 0,
+      "final_logits_changed_from_clean": 9
+    }
+  ],
+  "selected_pair_4.5": 0.9986526152708632
+}

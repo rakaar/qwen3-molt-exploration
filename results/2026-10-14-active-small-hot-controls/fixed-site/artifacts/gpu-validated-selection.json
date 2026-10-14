@@ -1,0 +1,2752 @@
+{
+  "seed": 20261014,
+  "saved_before_intervention_outcomes": true,
+  "same_positive": [
+    [
+      22,
+      8
+    ],
+    [
+      22,
+      71
+    ]
+  ],
+  "same_negative": [
+    [
+      22,
+      8
+    ],
+    [
+      22,
+      55
+    ]
+  ],
+  "same_pairs": [
+    [
+      22,
+      8,
+      71
+    ],
+    [
+      22,
+      55,
+      8
+    ],
+    [
+      22,
+      55,
+      71
+    ]
+  ],
+  "other_positive": [
+    [
+      31,
+      576
+    ],
+    [
+      11,
+      29
+    ],
+    [
+      35,
+      253
+    ],
+    [
+      10,
+      1678
+    ],
+    [
+      29,
+      512
+    ],
+    [
+      34,
+      159
+    ],
+    [
+      31,
+      135
+    ],
+    [
+      18,
+      21
+    ],
+    [
+      18,
+      51
+    ],
+    [
+      16,
+      2174
+    ]
+  ],
+  "other_negative": [
+    [
+      29,
+      512
+    ],
+    [
+      18,
+      54
+    ],
+    [
+      10,
+      1122
+    ],
+    [
+      31,
+      135
+    ],
+    [
+      20,
+      50
+    ],
+    [
+      16,
+      51
+    ],
+    [
+      20,
+      200
+    ],
+    [
+      34,
+      429
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      11,
+      532
+    ]
+  ],
+  "other_pairs": [
+    [
+      9,
+      809,
+      1348
+    ],
+    [
+      20,
+      43,
+      200
+    ],
+    [
+      11,
+      532,
+      2210
+    ],
+    [
+      35,
+      1859,
+      9
+    ],
+    [
+      20,
+      399,
+      200
+    ],
+    [
+      34,
+      2338,
+      1550
+    ],
+    [
+      34,
+      159,
+      401
+    ],
+    [
+      18,
+      54,
+      51
+    ],
+    [
+      11,
+      485,
+      14
+    ],
+    [
+      18,
+      194,
+      1416
+    ]
+  ],
+  "features": {
+    "9:809": {
+      "layer": 9,
+      "id": 809,
+      "label": "Small Noun Phrase Gate",
+      "receiver_gate": 1.6836086511611938,
+      "donor_gate": -0.0,
+      "mean_gate_across_clean_sources": 0.8418043255805969,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.3",
+          "range": [
+            1421477568,
+            1422132927
+          ],
+          "shape": [
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "7607b8d6492f22b82278cb28c02246ab461c0ea8de30b10eec02b7d5e8442e87",
+          "bytes": 655360
+        },
+        {
+          "key": "Vs.3",
+          "range": [
+            3518629568,
+            3519284927
+          ],
+          "shape": [
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "sha256": "3daa9a2f0a7f0cd773c4eb874d4cca05e5d75c622687fcd62dd04b73eafe26b4",
+          "bytes": 655360
+        }
+      ],
+      "receiver_gate_gpu": 1.6836100816726685,
+      "receiver_contribution_norm": 3.781461238861084,
+      "donor_gate_gpu": -0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "9:1348": {
+      "layer": 9,
+      "id": 1348,
+      "label": "Thermal State and Heating Mechanism Gate",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.7746118307113647,
+      "mean_gate_across_clean_sources": 0.8873059153556824,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            1726219968,
+            1726547647
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "eab6e1194917514e608e5a00617a210b5de6dbb1daad2cc361935acc43096028",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            3823371968,
+            3823699647
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "a687828311df780090c8dc00fbec156fe70d72b3fc4998778eeafb5d44243b0f",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 1.7746132612228394,
+      "donor_contribution_norm": 4.4965596199035645
+    },
+    "10:1122": {
+      "layer": 10,
+      "id": 1122,
+      "label": "Quoted String Boundary Token Detection",
+      "receiver_gate": 0.6233663558959961,
+      "donor_gate": 0.0,
+      "mean_gate_across_clean_sources": 0.31168317794799805,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.3",
+          "range": [
+            1626605240,
+            1627260599
+          ],
+          "shape": [
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "216909b6584007cef5867986255065aa199fb0cc4fae8d379af7b9492bd19dfd",
+          "bytes": 655360
+        },
+        {
+          "key": "Vs.3",
+          "range": [
+            3723757240,
+            3724412599
+          ],
+          "shape": [
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "sha256": "2942aef85574174a0235ba9f0aa2bfc4e284d9ef6c6fefe67cd45dc5519bbe7d",
+          "bytes": 655360
+        }
+      ],
+      "receiver_gate_gpu": 0.623367428779602,
+      "receiver_contribution_norm": 1.7017221450805664,
+      "donor_gate_gpu": 0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "10:1678": {
+      "layer": 10,
+      "id": 1678,
+      "label": "Culinary Warmth and Spice Tokens",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.4735689163208008,
+      "mean_gate_across_clean_sources": 0.7367844581604004,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            1834354360,
+            1834682039
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "4a099725a63d847956f411a24931369b501263d964db8d77416c5959d7673762",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            3931506360,
+            3931834039
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "378c9d35518c97ad896f86174ac97b1eec8e84212873492057e24d219de310f4",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 1.473569631576538,
+      "donor_contribution_norm": 3.385754108428955
+    },
+    "11:14": {
+      "layer": 11,
+      "id": 14,
+      "label": "New User Turn Transition",
+      "receiver_gate": 1.301486849784851,
+      "donor_gate": 1.2707064151763916,
+      "mean_gate_across_clean_sources": 1.2860965728759766,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            73402048,
+            78644927
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "9184be470447f3a4fcfb380e604c0fd903f985a9b6fd8ac248c56a2c398c77ae",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2170554048,
+            2175796927
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "dfdb2db97474922e11e564facab6141e9f3677fed284909668246191b0b6639e",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.3014867305755615,
+      "receiver_contribution_norm": 5.320807933807373,
+      "donor_gate_gpu": 1.2707061767578125,
+      "donor_contribution_norm": 5.440740585327148
+    },
+    "11:29": {
+      "layer": 11,
+      "id": 29,
+      "label": "Prompt Start Creative Request Gate",
+      "receiver_gate": 1.5036358833312988,
+      "donor_gate": 1.4723150730133057,
+      "mean_gate_across_clean_sources": 1.4879754781723022,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            152045248,
+            157288127
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "ad421adaf627fc4f5a38cd0e8c77c81d8e147197f542ca3b414b2fed162491c1",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2249197248,
+            2254440127
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "b8f219d212eef539b38a8fb3ac20aeacaa206da6c334c3683f4ec41bb639c08a",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.5036360025405884,
+      "receiver_contribution_norm": 6.364922523498535,
+      "donor_gate_gpu": 1.4723153114318848,
+      "donor_contribution_norm": 6.317180633544922
+    },
+    "11:485": {
+      "layer": 11,
+      "id": 485,
+      "label": "Physical Size Adjectives",
+      "receiver_gate": 0.6611446142196655,
+      "donor_gate": -0.0,
+      "mean_gate_across_clean_sources": 0.33057230710983276,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.2",
+          "range": [
+            1159988928,
+            1161299647
+          ],
+          "shape": [
+            128,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "8f38a1b6a0062d1d11c4b8be2a45512f5b21494d0b740ab0b8b93dac6278df81",
+          "bytes": 1310720
+        },
+        {
+          "key": "Vs.2",
+          "range": [
+            3257140928,
+            3258451647
+          ],
+          "shape": [
+            2560,
+            128
+          ],
+          "source_dtype": "F32",
+          "sha256": "6f3458e7c213d5c33767fccb0b05f7c55207b88ebc4f98099fd18250a877ed63",
+          "bytes": 1310720
+        }
+      ],
+      "receiver_gate_gpu": 0.6611433029174805,
+      "receiver_contribution_norm": 1.6521228551864624,
+      "donor_gate_gpu": -0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "11:532": {
+      "layer": 11,
+      "id": 532,
+      "label": "Small-Size Token Gate",
+      "receiver_gate": 1.1386603116989136,
+      "donor_gate": -0.0,
+      "mean_gate_across_clean_sources": 0.5693301558494568,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.2",
+          "range": [
+            1221592768,
+            1222903487
+          ],
+          "shape": [
+            128,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "918417286caa137de4c2b5e0516d8ccc6ed3c56427a61999b886146b19601f10",
+          "bytes": 1310720
+        },
+        {
+          "key": "Vs.2",
+          "range": [
+            3318744768,
+            3320055487
+          ],
+          "shape": [
+            2560,
+            128
+          ],
+          "source_dtype": "F32",
+          "sha256": "a5a8c19f1e10377189630ff6e536883748976b1ec2d7f75667c2ab9d9a0036d9",
+          "bytes": 1310720
+        }
+      ],
+      "receiver_gate_gpu": 1.1386626958847046,
+      "receiver_contribution_norm": 2.7156155109405518,
+      "donor_gate_gpu": -0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "11:2210": {
+      "layer": 11,
+      "id": 2210,
+      "label": "Thermal Intensity and Heat Conditions",
+      "receiver_gate": -0.0,
+      "donor_gate": 0.6898641586303711,
+      "mean_gate_across_clean_sources": 0.34493207931518555,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            2008680128,
+            2009007807
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "7155a8aa6935b941c36982b8c91652f50a747be8703d7fdac6dd296c20363f20",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            4105832128,
+            4106159807
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "0cf8065e22d79bfccf5b0a7182ceb6ab8982c74c1db8e71fc8c8e7ab93e6a3f1",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 0.6898654699325562,
+      "donor_contribution_norm": 2.20627760887146
+    },
+    "16:27": {
+      "layer": 16,
+      "id": 27,
+      "label": "New Sentence or List Item Trigger",
+      "receiver_gate": 1.0436289310455322,
+      "donor_gate": 1.0220614671707153,
+      "mean_gate_across_clean_sources": 1.0328452587127686,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            141559488,
+            146802367
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "7e94e8b84565898ebe0f238034278da36bfab0a05aca7e811c267affcaa3f16d",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2238711488,
+            2243954367
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "7c5aaec25a43b2c0a0e67dd5c0da4aa628c1f1eab5763e36a566672453a5fc9a",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.0436292886734009,
+      "receiver_contribution_norm": 5.512099742889404,
+      "donor_gate_gpu": 1.0220611095428467,
+      "donor_contribution_norm": 5.145111560821533
+    },
+    "16:51": {
+      "layer": 16,
+      "id": 51,
+      "label": "Token \"such\" List Introduction",
+      "receiver_gate": 1.2660413980484009,
+      "donor_gate": 1.2227287292480469,
+      "mean_gate_across_clean_sources": 1.244385004043579,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            267388608,
+            272631487
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "afb75bfb9f2d203bc75803abf17c830c4844bd2584d04b35c31ea508fcd1e190",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2364540608,
+            2369783487
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "5a05a6458b79b00cc945bde940edb0747caf0e10d7b30c20ab85b4ce5273ae3b",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.2660412788391113,
+      "receiver_contribution_norm": 13.799354553222656,
+      "donor_gate_gpu": 1.2227284908294678,
+      "donor_contribution_norm": 11.13298511505127
+    },
+    "16:2174": {
+      "layer": 16,
+      "id": 2174,
+      "label": "Thermal State and Temperature Tokens",
+      "receiver_gate": -0.0,
+      "donor_gate": 0.6348228454589844,
+      "mean_gate_across_clean_sources": 0.3174114227294922,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            1996883648,
+            1997211327
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "53caecb572e11481aafa9cf41c271202e496d890ca08dc0ffb41c1b81a8f51b5",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            4094035648,
+            4094363327
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "d2de6a21be97f72f414b998aa86621b82f315e99fddf6f7b40a80ad6698ca152",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 0.6348252296447754,
+      "donor_contribution_norm": 2.2003672122955322
+    },
+    "18:21": {
+      "layer": 18,
+      "id": 21,
+      "label": "Key Term and Noun Phrase Detection",
+      "receiver_gate": 1.3437763452529907,
+      "donor_gate": 1.3962758779525757,
+      "mean_gate_across_clean_sources": 1.3700261116027832,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            110102208,
+            115345087
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "bb94cf467d1555d9ed7ef35192e5f5dc9529e5023fc5c5cde7e98f61cd36f7b2",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2207254208,
+            2212497087
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "7428e16d5c8da6d23966360ff074e4f2e623bb41a9fcbb69a3fea2687b2afbdb",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.3437715768814087,
+      "receiver_contribution_norm": 5.059919834136963,
+      "donor_gate_gpu": 1.3962746858596802,
+      "donor_contribution_norm": 5.27488899230957
+    },
+    "18:51": {
+      "layer": 18,
+      "id": 51,
+      "label": "User Turn Start",
+      "receiver_gate": 1.5171047449111938,
+      "donor_gate": 1.4260791540145874,
+      "mean_gate_across_clean_sources": 1.4715919494628906,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            267388608,
+            272631487
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "c9d6f7c94d7eb55a4170d0143d85bf2dd66e7769f1889e6c7b4b9a0ee8762c41",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2364540608,
+            2369783487
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "7833b5a0d0e6ac664091c5bf20e943420fbd98886941a0a13337138629acb2a1",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.5171048641204834,
+      "receiver_contribution_norm": 9.139655113220215,
+      "donor_gate_gpu": 1.426079273223877,
+      "donor_contribution_norm": 8.944045066833496
+    },
+    "18:54": {
+      "layer": 18,
+      "id": 54,
+      "label": "Final Token Completion Gate",
+      "receiver_gate": 1.2173233032226562,
+      "donor_gate": 1.1958287954330444,
+      "mean_gate_across_clean_sources": 1.2065761089324951,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            283117248,
+            288360127
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "edfe065c74a25ce63f75193a8646bc5001a1dca1a714d49d82522de3d9d9dc17",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2380269248,
+            2385512127
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "f3c429eccabaa6f27fd8d3710cd21f766147b9989c2b895b1c951fe76f046486",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.2173234224319458,
+      "receiver_contribution_norm": 5.6632513999938965,
+      "donor_gate_gpu": 1.1958286762237549,
+      "donor_contribution_norm": 5.873757839202881
+    },
+    "18:194": {
+      "layer": 18,
+      "id": 194,
+      "label": "Sentence-Start Gate Activation",
+      "receiver_gate": 0.6292731761932373,
+      "donor_gate": 0.0,
+      "mean_gate_across_clean_sources": 0.31463658809661865,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.1",
+          "range": [
+            718276288,
+            720897727
+          ],
+          "shape": [
+            256,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "694d5cdb22d0890c116406e520a4c44c9d1c66c7c922eaac5dfe88289ed0f6b8",
+          "bytes": 2621440
+        },
+        {
+          "key": "Vs.1",
+          "range": [
+            2815428288,
+            2818049727
+          ],
+          "shape": [
+            2560,
+            256
+          ],
+          "source_dtype": "F32",
+          "sha256": "104c8e81d8608474aa782d2b78b48f42c1108de0a18ad9a236cf0c2a363cb3df",
+          "bytes": 2621440
+        }
+      ],
+      "receiver_gate_gpu": 0.6292724609375,
+      "receiver_contribution_norm": 2.227210760116577,
+      "donor_gate_gpu": 0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "18:1416": {
+      "layer": 18,
+      "id": 1416,
+      "label": "Thermal and Extreme Weather Tokens",
+      "receiver_gate": -0.0,
+      "donor_gate": 0.6854172945022583,
+      "mean_gate_across_clean_sources": 0.34270864725112915,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            1748502208,
+            1748829887
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "36c22f6f306a41ecbd5d3fc5ca5d98c03221abf1d99d2b98aac240c5613a3825",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            3845654208,
+            3845981887
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "91371185a4ddfe1d2df0fcbdf1a5b6bb059281cbca151c70a0e8f4edfc381d2d",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 0.6854203939437866,
+      "donor_contribution_norm": 1.1616592407226562
+    },
+    "20:43": {
+      "layer": 20,
+      "id": 43,
+      "label": "Final Token or Entity Name",
+      "receiver_gate": 1.4253640174865723,
+      "donor_gate": 1.4033175706863403,
+      "mean_gate_across_clean_sources": 1.4143407344818115,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            225445568,
+            230688447
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "cd0f046f270194941690bc738b6bd2bc571f663440b88a165b5cf771b10652b9",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2322597568,
+            2327840447
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "22c66552431f43bda1096447a2cb2787321624765f82f8916e6961f2a6e3fce4",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.4253640174865723,
+      "receiver_contribution_norm": 9.248725891113281,
+      "donor_gate_gpu": 1.4033175706863403,
+      "donor_contribution_norm": 9.146036148071289
+    },
+    "20:50": {
+      "layer": 20,
+      "id": 50,
+      "label": "Idiomatic Verbs of State and Perception",
+      "receiver_gate": 0.5586069822311401,
+      "donor_gate": 0.0,
+      "mean_gate_across_clean_sources": 0.27930349111557007,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            262145728,
+            267388607
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "a74eacad10a87facc104c4b06dd68c9b4b7383ebf028f30cd2106282fa6fea41",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2359297728,
+            2364540607
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "afc33531ab4261aede4d3ffac62ddc8b63d03f1713d168bed27b55376355ae9c",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 0.5586038827896118,
+      "receiver_contribution_norm": 2.6373229026794434,
+      "donor_gate_gpu": 0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "20:200": {
+      "layer": 20,
+      "id": 200,
+      "label": "Code and Technical Token Detection",
+      "receiver_gate": 0.5302823781967163,
+      "donor_gate": 0.5954549312591553,
+      "mean_gate_across_clean_sources": 0.5628686547279358,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.1",
+          "range": [
+            734004928,
+            736626367
+          ],
+          "shape": [
+            256,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "08d64ec5265050c1e911202bc0113a0153413bd6a622fc73bec6eee90ce54c5a",
+          "bytes": 2621440
+        },
+        {
+          "key": "Vs.1",
+          "range": [
+            2831156928,
+            2833778367
+          ],
+          "shape": [
+            2560,
+            256
+          ],
+          "source_dtype": "F32",
+          "sha256": "ae1863e67ecf24cd311851a9936511456db6bcc57b9addd3936a28ab541a1da9",
+          "bytes": 2621440
+        }
+      ],
+      "receiver_gate_gpu": 0.5302835702896118,
+      "receiver_contribution_norm": 1.8778444528579712,
+      "donor_gate_gpu": 0.5954552888870239,
+      "donor_contribution_norm": 2.001105308532715
+    },
+    "20:399": {
+      "layer": 20,
+      "id": 399,
+      "label": "Scope-Specifying Phrases Trigger Gate",
+      "receiver_gate": 0.7364422082901001,
+      "donor_gate": 1.1351172924041748,
+      "mean_gate_across_clean_sources": 0.9357797503471375,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.2",
+          "range": [
+            1047267008,
+            1048577727
+          ],
+          "shape": [
+            128,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "9b44a9c8f0f7a15cb31ad2bbc65e5ee9af93a9b8ba409627e5c66c927b17b379",
+          "bytes": 1310720
+        },
+        {
+          "key": "Vs.2",
+          "range": [
+            3144419008,
+            3145729727
+          ],
+          "shape": [
+            2560,
+            128
+          ],
+          "source_dtype": "F32",
+          "sha256": "af2f7ebb012cde2b16739887bdd07227e45f104b768e1dbda5f28248923e2d5d",
+          "bytes": 1310720
+        }
+      ],
+      "receiver_gate_gpu": 0.7364422082901001,
+      "receiver_contribution_norm": 3.0580637454986572,
+      "donor_gate_gpu": 1.135117530822754,
+      "donor_contribution_norm": 4.440629959106445
+    },
+    "22:8": {
+      "layer": 22,
+      "id": 8,
+      "label": "Numbered List and Paragraph Start Detection",
+      "receiver_gate": 1.4556559324264526,
+      "donor_gate": 1.4674501419067383,
+      "mean_gate_across_clean_sources": 1.4615530967712402,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            41944760,
+            47187639
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "47cbaebe1d0871086e10a026889eb8fcc804e6870dadbd1ca20b01894a05be47",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2139096760,
+            2144339639
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "9ab5911f08e25ac2244c9810514e0c51ff0d9b094e5c45e9a017379d6bf39bac",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 1.4556559324264526,
+      "receiver_contribution_norm": 13.220768928527832,
+      "donor_gate_gpu": 1.4674502611160278,
+      "donor_contribution_norm": 12.569694519042969
+    },
+    "22:55": {
+      "layer": 22,
+      "id": 55,
+      "label": "Think Token Start",
+      "receiver_gate": 0.6433099508285522,
+      "donor_gate": 0.0,
+      "mean_gate_across_clean_sources": 0.3216549754142761,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            288360120,
+            293602999
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "f2639445f3efd949290b2a79270776acd17c9978f880e8a8b8a48322c8c0d5b8",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2385512120,
+            2390754999
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "5826261ccbb1fbbdfe5634d8e48a5c45c622a83c1907d8275913a313b27beecd",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 0.6433084011077881,
+      "receiver_contribution_norm": 3.9104490280151367,
+      "donor_gate_gpu": 0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "22:71": {
+      "layer": 22,
+      "id": 71,
+      "label": "Proper Noun Subword Boundary Gate",
+      "receiver_gate": 0.0,
+      "donor_gate": 0.6523067951202393,
+      "mean_gate_across_clean_sources": 0.32615339756011963,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            372246200,
+            377489079
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "933cc9c53092d4d82c2a72b32afb6216793f2baf56fb430485212fc1d4a33aae",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2469398200,
+            2474641079
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "88001f253a94177c0042309dfc6286d452bf0d77a46c588b58f4c485d9da4464",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": 0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 0.6523069143295288,
+      "donor_contribution_norm": 4.021737098693848
+    },
+    "22:941": {
+      "layer": 22,
+      "id": 941,
+      "label": "Thermal State and Heat Action Gate",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.6072471141815186,
+      "mean_gate_across_clean_sources": 0.8036235570907593,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.3",
+          "range": [
+            1507985080,
+            1508640439
+          ],
+          "shape": [
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "df15930f74bd1f709bd02a46a37e1d1993e1fad623bdb27c7c7fa0e44193c43f",
+          "bytes": 655360
+        },
+        {
+          "key": "Vs.3",
+          "range": [
+            3605137080,
+            3605792439
+          ],
+          "shape": [
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "sha256": "b674d1013fc17f1b01573ac9584606742c229854f63c4324993f247dc02cc06a",
+          "bytes": 655360
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 1.6072452068328857,
+      "donor_contribution_norm": 9.447199821472168
+    },
+    "22:2339": {
+      "layer": 22,
+      "id": 2339,
+      "label": "Small-Size Adjectives and Idiomatic Phrases",
+      "receiver_gate": 1.547914981842041,
+      "donor_gate": -0.0,
+      "mean_gate_across_clean_sources": 0.7739574909210205,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            2050950840,
+            2051278519
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "83473c1a96b6fbcee096bffbc85fc12aad53bcd89b03d6fcbc16130547f9a378",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            4148102840,
+            4148430519
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "5c340ea58cb6ec28d12c7cb0bd118e03b503c29ddb0477ede159205ec3cc7559",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": 1.5479154586791992,
+      "receiver_contribution_norm": 11.298199653625488,
+      "donor_gate_gpu": -0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "29:512": {
+      "layer": 29,
+      "id": 512,
+      "label": "Compound Word and Identifier Suffixes",
+      "receiver_gate": 0.8754196763038635,
+      "donor_gate": 0.8951881527900696,
+      "mean_gate_across_clean_sources": 0.8853039145469666,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.2",
+          "range": [
+            1195378360,
+            1196689079
+          ],
+          "shape": [
+            128,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "3eb47076144e6b41aa27900ea4c3cad0ca90d298040c521d51c8c85b232ccb8e",
+          "bytes": 1310720
+        },
+        {
+          "key": "Vs.2",
+          "range": [
+            3292530360,
+            3293841079
+          ],
+          "shape": [
+            2560,
+            128
+          ],
+          "source_dtype": "F32",
+          "sha256": "cac22e6873baf1696ea95b2b5614eb85c6304dfac3deb97eba911a4af111a666",
+          "bytes": 1310720
+        }
+      ],
+      "receiver_gate_gpu": 0.8754196763038635,
+      "receiver_contribution_norm": 9.4096040725708,
+      "donor_gate_gpu": 0.8951899409294128,
+      "donor_contribution_norm": 11.018132209777832
+    },
+    "31:135": {
+      "layer": 31,
+      "id": 135,
+      "label": "User Prompt and Response Start",
+      "receiver_gate": 1.3458023071289062,
+      "donor_gate": 1.1491787433624268,
+      "mean_gate_across_clean_sources": 1.2474905252456665,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.1",
+          "range": [
+            563611328,
+            566232767
+          ],
+          "shape": [
+            256,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "2fca5489e56560bf7bdfecfbd41e5e7d06dd0eef9f10ef68d82f1f6ccf63631d",
+          "bytes": 2621440
+        },
+        {
+          "key": "Vs.1",
+          "range": [
+            2660763328,
+            2663384767
+          ],
+          "shape": [
+            2560,
+            256
+          ],
+          "source_dtype": "F32",
+          "sha256": "e52d04fe3156a5149d5732b857ff65121e67352c3e580b1b950b2d2bb1ff2530",
+          "bytes": 2621440
+        }
+      ],
+      "receiver_gate_gpu": 1.3458023071289062,
+      "receiver_contribution_norm": 19.533008575439453,
+      "donor_gate_gpu": 1.1491789817810059,
+      "donor_contribution_norm": 19.37160301208496
+    },
+    "31:576": {
+      "layer": 31,
+      "id": 576,
+      "label": "Cooking State and Ingredient Tokens",
+      "receiver_gate": -0.0,
+      "donor_gate": 0.7055574655532837,
+      "mean_gate_across_clean_sources": 0.35277873277664185,
+      "label_source": "Dashboard summary cached 2026-10-12, step100000",
+      "tensor_records": [
+        {
+          "key": "Us.3",
+          "range": [
+            1268778688,
+            1269434047
+          ],
+          "shape": [
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "461fa556b6dfd441929915b771272a20dc8816b5af823da5a4c3d84c01f35590",
+          "bytes": 655360
+        },
+        {
+          "key": "Vs.3",
+          "range": [
+            3365930688,
+            3366586047
+          ],
+          "shape": [
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "sha256": "dc85081ad59da84932aa662c16741ba9044d642905cd97b4766f4bad3487e0da",
+          "bytes": 655360
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 0.705557107925415,
+      "donor_contribution_norm": 11.7282075881958
+    },
+    "34:159": {
+      "layer": 34,
+      "id": 159,
+      "label": "No cached dashboard label",
+      "receiver_gate": 1.7230730056762695,
+      "donor_gate": 1.5875678062438965,
+      "mean_gate_across_clean_sources": 1.655320405960083,
+      "label_source": "unavailable",
+      "tensor_records": [
+        {
+          "key": "Us.1",
+          "range": [
+            626525888,
+            629147327
+          ],
+          "shape": [
+            256,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "4d992bfef7d3f7d6da9228f945fc0406362a217f1c268b7d25b1854f4f4281a3",
+          "bytes": 2621440
+        },
+        {
+          "key": "Vs.1",
+          "range": [
+            2723677888,
+            2726299327
+          ],
+          "shape": [
+            2560,
+            256
+          ],
+          "source_dtype": "F32",
+          "sha256": "20d826b61da09d686cdf8113040d7c068595620fbef76583484081a7e824bc81",
+          "bytes": 2621440
+        }
+      ],
+      "receiver_gate_gpu": 1.7230730056762695,
+      "receiver_contribution_norm": 54.0457763671875,
+      "donor_gate_gpu": 1.5875678062438965,
+      "donor_contribution_norm": 45.34593963623047
+    },
+    "34:401": {
+      "layer": 34,
+      "id": 401,
+      "label": "No cached dashboard label",
+      "receiver_gate": -0.0,
+      "donor_gate": 1.1213752031326294,
+      "mean_gate_across_clean_sources": 0.5606876015663147,
+      "label_source": "unavailable",
+      "tensor_records": [
+        {
+          "key": "Us.2",
+          "range": [
+            1049888448,
+            1051199167
+          ],
+          "shape": [
+            128,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "ff4f361d1a805cd6e3a582d6250aa5d20b71fa7edbdefd3d103dd77b605ae998",
+          "bytes": 1310720
+        },
+        {
+          "key": "Vs.2",
+          "range": [
+            3147040448,
+            3148351167
+          ],
+          "shape": [
+            2560,
+            128
+          ],
+          "source_dtype": "F32",
+          "sha256": "aa1442d09de9bbce50eb4acbbff59093ba7cfc4cd8e20b8819863d497a9d72a9",
+          "bytes": 1310720
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 1.1213749647140503,
+      "donor_contribution_norm": 27.59806251525879
+    },
+    "34:429": {
+      "layer": 34,
+      "id": 429,
+      "label": "No cached dashboard label",
+      "receiver_gate": 1.9653408527374268,
+      "donor_gate": 1.786635398864746,
+      "mean_gate_across_clean_sources": 1.8759881258010864,
+      "label_source": "unavailable",
+      "tensor_records": [
+        {
+          "key": "Us.2",
+          "range": [
+            1086588608,
+            1087899327
+          ],
+          "shape": [
+            128,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "f4d231d78dc7ea9c5424fad314e443179402d8fc7920fe816c9fc5a0b81c9d3d",
+          "bytes": 1310720
+        },
+        {
+          "key": "Vs.2",
+          "range": [
+            3183740608,
+            3185051327
+          ],
+          "shape": [
+            2560,
+            128
+          ],
+          "source_dtype": "F32",
+          "sha256": "24c0f919d96f56ada5e5bca47be9c1f97e08d06bdda6fb892b0dda1637648de6",
+          "bytes": 1310720
+        }
+      ],
+      "receiver_gate_gpu": 1.9653425216674805,
+      "receiver_contribution_norm": 34.102359771728516,
+      "donor_gate_gpu": 1.786637544631958,
+      "donor_contribution_norm": 28.70814323425293
+    },
+    "34:1550": {
+      "layer": 34,
+      "id": 1550,
+      "label": "No cached dashboard label",
+      "receiver_gate": -0.0,
+      "donor_gate": 0.6266002655029297,
+      "mean_gate_across_clean_sources": 0.31330013275146484,
+      "label_source": "unavailable",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            1792411328,
+            1792739007
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "db05331c16d68f460c1aeb69a0858775870b499651344b027b0727bea8b1e398",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            3889563328,
+            3889891007
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "a57e2593726ff20c0d45b0b88d62b307b214f97693da0f497457046515313b83",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 0.626602053642273,
+      "donor_contribution_norm": 10.138477325439453
+    },
+    "34:2338": {
+      "layer": 34,
+      "id": 2338,
+      "label": "No cached dashboard label",
+      "receiver_gate": 1.4282063245773315,
+      "donor_gate": -0.0,
+      "mean_gate_across_clean_sources": 0.7141031622886658,
+      "label_source": "unavailable",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            2050623168,
+            2050950847
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "6c6d690aec7915891bb9a67e31f484640b83f2a76488d7baaa5b174a7d71d953",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            4147775168,
+            4148102847
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "a95c42fe5024bf919b69b544a61a3b9b942a1f2aa8c0f3693c43b6755ceb345f",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": 1.4282046556472778,
+      "receiver_contribution_norm": 18.334440231323242,
+      "donor_gate_gpu": -0.0,
+      "donor_contribution_norm": 0.0
+    },
+    "35:9": {
+      "layer": 35,
+      "id": 9,
+      "label": "No cached dashboard label",
+      "receiver_gate": -0.0,
+      "donor_gate": 0.613242506980896,
+      "mean_gate_across_clean_sources": 0.306621253490448,
+      "label_source": "unavailable",
+      "tensor_records": [
+        {
+          "key": "Us.0",
+          "range": [
+            47187648,
+            52430527
+          ],
+          "shape": [
+            512,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "6e4bef8b472ae3714eeba7336fce1b814fa547cd71be07437e28067f5de83bd2",
+          "bytes": 5242880
+        },
+        {
+          "key": "Vs.0",
+          "range": [
+            2144339648,
+            2149582527
+          ],
+          "shape": [
+            2560,
+            512
+          ],
+          "source_dtype": "F32",
+          "sha256": "e05f461a06d49d016140cc010b7a60d779fa7efba6d6be2794d413ded75a05b2",
+          "bytes": 5242880
+        }
+      ],
+      "receiver_gate_gpu": -0.0,
+      "receiver_contribution_norm": 0.0,
+      "donor_gate_gpu": 0.6132434606552124,
+      "donor_contribution_norm": 19.760494232177734
+    },
+    "35:253": {
+      "layer": 35,
+      "id": 253,
+      "label": "No cached dashboard label",
+      "receiver_gate": 1.6751657724380493,
+      "donor_gate": 1.6327568292617798,
+      "mean_gate_across_clean_sources": 1.6539613008499146,
+      "label_source": "unavailable",
+      "tensor_records": [
+        {
+          "key": "Us.2",
+          "range": [
+            855901888,
+            857212607
+          ],
+          "shape": [
+            128,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "fcdcc8259de96a852c5648edff572d7f41d4d8d810138277c4aaccecfde8dc04",
+          "bytes": 1310720
+        },
+        {
+          "key": "Vs.2",
+          "range": [
+            2953053888,
+            2954364607
+          ],
+          "shape": [
+            2560,
+            128
+          ],
+          "source_dtype": "F32",
+          "sha256": "812e7474a9bc4922b8a47d28017c1e396b2a9ad4ad01940e83b00f65bcbef6b5",
+          "bytes": 1310720
+        }
+      ],
+      "receiver_gate_gpu": 1.6751656532287598,
+      "receiver_contribution_norm": 157.4286346435547,
+      "donor_gate_gpu": 1.6327568292617798,
+      "donor_contribution_norm": 111.67864990234375
+    },
+    "35:1859": {
+      "layer": 35,
+      "id": 1859,
+      "label": "No cached dashboard label",
+      "receiver_gate": 2.1798553466796875,
+      "donor_gate": 1.8982865810394287,
+      "mean_gate_across_clean_sources": 2.0390710830688477,
+      "label_source": "unavailable",
+      "tensor_records": [
+        {
+          "key": "Us.4",
+          "range": [
+            1893664448,
+            1893992127
+          ],
+          "shape": [
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "61aac6c46be49d2e86b638cb0dd8b2271bbd99fac160db49341c05a60cccaede",
+          "bytes": 327680
+        },
+        {
+          "key": "Vs.4",
+          "range": [
+            3990816448,
+            3991144127
+          ],
+          "shape": [
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "sha256": "d80ffa24ec2a075b479e39a67d75cda39e34761266eeb77d688e3a2f722fdff2",
+          "bytes": 327680
+        }
+      ],
+      "receiver_gate_gpu": 2.17985463142395,
+      "receiver_contribution_norm": 50.58974075317383,
+      "donor_gate_gpu": 1.898287057876587,
+      "donor_contribution_norm": 44.681922912597656
+    }
+  },
+  "active_pool_counts": {
+    "9": {
+      "receiver": 4,
+      "donor": 5,
+      "distinct_pairs": 18
+    },
+    "10": {
+      "receiver": 7,
+      "donor": 5,
+      "distinct_pairs": 31
+    },
+    "11": {
+      "receiver": 6,
+      "donor": 7,
+      "distinct_pairs": 38
+    },
+    "16": {
+      "receiver": 3,
+      "donor": 4,
+      "distinct_pairs": 9
+    },
+    "18": {
+      "receiver": 5,
+      "donor": 4,
+      "distinct_pairs": 17
+    },
+    "20": {
+      "receiver": 6,
+      "donor": 4,
+      "distinct_pairs": 20
+    },
+    "22": {
+      "receiver": 2,
+      "donor": 2,
+      "distinct_pairs": 3
+    },
+    "29": {
+      "receiver": 3,
+      "donor": 3,
+      "distinct_pairs": 7
+    },
+    "31": {
+      "receiver": 2,
+      "donor": 5,
+      "distinct_pairs": 9
+    },
+    "34": {
+      "receiver": 3,
+      "donor": 5,
+      "distinct_pairs": 13
+    },
+    "35": {
+      "receiver": 3,
+      "donor": 4,
+      "distinct_pairs": 10
+    }
+  },
+  "gate_provenance": {
+    "9": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-09/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "b884a116066e462a915db74b7aefd12609f0e1c1eeb0b4d4c16a4605dc37944b",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "9ebc34c0442111f3d9812e865c84e0d3aeef4d6840890fb16d34d674bab7aa67",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "afcb12ccb1d0c662d9526de92e9cb20a5fc032cb0a507f0f33e816949f9e2670",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219766852,
+            4219771971
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "5ed4409242ea202fa57977ff8d7fab8629363876d0607cf469248c7851041e32",
+          "bytes": 5120
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4219951172,
+            4219956291
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "36797500addc112aa74013c6f36f63fa07c61baada94418496ce6f0160df6fd4",
+          "bytes": 5120
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220319812,
+            4220324931
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "2d27fb3bee3c06d8bfd82d545072940edc424db356a12cea355cbb7bd29887ea",
+          "bytes": 5120
+        }
+      ]
+    },
+    "10": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-10/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315640,
+            4219710839
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "sha256": "9f92f90edcf5f8852619f7caa5ea273b451469835a1f815c2eafd93f100e2f3f",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305720,
+            4194315639
+          ],
+          "shape": [
+            2480
+          ],
+          "sha256": "20deb7623895ee8fe3811002ebfeb536a2870981d8c28b60de3dbc3b33f90ea8",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4220448124,
+            4220458043
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "sha256": "45510f8baaeba32c26e5ac66744eb1847680a797b9ea507e32f7a5e21602f490",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219813240,
+            4219823479
+          ],
+          "shape": [
+            2560
+          ],
+          "sha256": "d9736f4ff5c4de8115cc0563aff64c92bddaa33457588c6fa04105721eff0b7a",
+          "bytes": 10240
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4220181880,
+            4220192119
+          ],
+          "shape": [
+            2560
+          ],
+          "sha256": "d1f0de845bc169e88a4eedb7b64604a05589dcc5b8a828514b29ec20974f8afb",
+          "bytes": 10240
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220929084,
+            4220939323
+          ],
+          "shape": [
+            2560
+          ],
+          "sha256": "20cb5125acd7cee52c01bc2a0d8663a04da5fc7e94476d07ab44d74e9123207f",
+          "bytes": 10240
+        }
+      ]
+    },
+    "11": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-11/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "fb8a3e810d0b4d0c45ef155cb35cd35a1b94dbe3ffe157999978d6e9114aa0bb",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "95d579f9bfc887ddba08d79b90859e1a94480c804bdea577ce4c50f173531912",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "98bb1f17f9b69a4d305e19e4e87c6e9278922a3a4cc0b33b4d8d1fad4bbe738e",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219777092,
+            4219782211
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "0ecc0fc7e5b4d084ffafe85f3441bcf8f924688d9394b81b3af3d496e3f38642",
+          "bytes": 5120
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4219961412,
+            4219966531
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "fa7de6105055ea50e1e4cb7ba6f10ed8d4befc7c865649021f3c7d75464a3d33",
+          "bytes": 5120
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220330052,
+            4220335171
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "657a3efa21a8eacf4cad0b0766b29515cb12a1575e806228ad1b756e605fd37a",
+          "bytes": 5120
+        }
+      ]
+    },
+    "16": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-16/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "58d5f80ef0b6949e7411f8acded1bb812721f28afccc8bf2e62ae4daec606567",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "7a75359517d142f8e0efc353a319a7996b29c0bf5cfbf4b65849af17823afb5d",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "10fe0d71799c895d5e24c888915c53f089cf7bdaee53450d9d46b0a227425c67",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219802692,
+            4219807811
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "57568b0c30e956abc66a9559d49fffd0662368efa5cc256e1ded692c29e6bfed",
+          "bytes": 5120
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4219987012,
+            4219992131
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "70e09fbec3617867afa73c0607057ea76bf53ec1744c2040f9e4882fbfd60441",
+          "bytes": 5120
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220355652,
+            4220360771
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "9af950df47d2c6663ecbd82bae9a1994c7bbf97e912373e1acec3b6ceac49746",
+          "bytes": 5120
+        }
+      ]
+    },
+    "18": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-18/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "3002006d7bffc4c5ba856dd9657f9164a8dadd6c83d1b7e4066c4c21c3b96aaf",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "ea3f0cd1ce8a683ca0bcd32122f30127771ff8545e19024e80b448a7ae88acf8",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "136c9775424569fca4404abd296fb5d142d22d7295dc03cdab5ed68d00374250",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219812932,
+            4219818051
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "a3dd171a8db24328d2080330d4a47ad28c134210d8a4c02ddb3dadcd02825b88",
+          "bytes": 5120
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4219997252,
+            4220002371
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "3995fdc0eb6b8d52bc5c688eb7344dd1acf63d2723e8871b39c2be4620739673",
+          "bytes": 5120
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220365892,
+            4220371011
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "e688f0efc3bfbfb5219139b0f2e46f8790280b90156fc89fa50d0aa6909ef1db",
+          "bytes": 5120
+        }
+      ]
+    },
+    "20": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-20/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "1e918931ac827db6af6f950b6a550de84995de5865228955f1df9ca0eb3d482b",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "b6fdc837f7c96397d246144066af53f77a6c3fcedb8a8e23026c39fab84c9b38",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "d958502b0108d4b1fc779fc269d514e1978309e192c1424e5aa58b85953c7176",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219823172,
+            4219828291
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "fffc025cbe7b682a5500b9dc6406a85e56338dcc5c45156ca9139ce29068a0eb",
+          "bytes": 5120
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4220007492,
+            4220012611
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "0fffe76de4e15faa5c9af13c19f4c674d2d56335d4f84e3f25e92487f65b0db5",
+          "bytes": 5120
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220376132,
+            4220381251
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "b676a1b4a557ad99e1e0a23bdde13e5d9366bd6972285d75aade8bd64ed9ea5f",
+          "bytes": 5120
+        }
+      ]
+    },
+    "22": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-22/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315640,
+            4219710839
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "sha256": "d99ea21d6d69c7ab90fbc779ac769376909b86c91c3e6f33897085cf53bbdcb1",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305720,
+            4194315639
+          ],
+          "shape": [
+            2480
+          ],
+          "sha256": "9170235954f7e4ef5e84031b68ecfff17c0d57305430f6dabcae075e76183036",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4220448124,
+            4220458043
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "sha256": "798899c3fe9809d593a59389145fc39f60a454ceb5b3279bf97d273bed210be8",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219936120,
+            4219946359
+          ],
+          "shape": [
+            2560
+          ],
+          "sha256": "30db0ee50e738a2c942b78efb852884cb3acdfd17ada351e072cb8a53cba51a7",
+          "bytes": 10240
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4220304760,
+            4220314999
+          ],
+          "shape": [
+            2560
+          ],
+          "sha256": "f0c3814d6884e15dc9b769a635aeacf62139607ef10a0cfd9fdbee6034133cb3",
+          "bytes": 10240
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4221051964,
+            4221062203
+          ],
+          "shape": [
+            2560
+          ],
+          "sha256": "d7f455d746524bea4f8c828a3e5912f0fb44974b73726292f2de936b9d899bec",
+          "bytes": 10240
+        }
+      ]
+    },
+    "29": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-29/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315640,
+            4219710839
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "213d3823a45897dbfd83f5f9b53498b29c8d28eca81495ea85c6afeeaec60a42",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305720,
+            4194315639
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "57e2f8be19e0c01d49608b5755df2c3fa75c987e5075fbaa839ea7587ca4935e",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4220448124,
+            4220458043
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "ade5e67c878c652fb9f9d7a5b5c3ac046ffd40a1d42b69628a8d0999078b0fbe",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4220007800,
+            4220018039
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "bf5d8a2c2c1cce409dbbffd845de3edeb608c001eebc8f98721ef01df8b50852",
+          "bytes": 10240
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4220376440,
+            4220386679
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "077b27b6eb7815fc5ccd4a141436798863c276cd68156593fc03923cb8ee96c5",
+          "bytes": 10240
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4221123644,
+            4221133883
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "70ccc5f47d88527f9199e166795f4be1dab0c3b89168b0ca7b2da5c1ccdab9ca",
+          "bytes": 10240
+        }
+      ]
+    },
+    "31": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-31/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "c9362dcf708c9d3d5c8e5db3541d7cea85b19e52bfdd62e38df87bc58d561149",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "89ab33ef1a91b9e5bf62efda94b0783c17ce95cb454ce04b8f9e4fe4714d5f73",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "028596424419be80cc2f4cd454004e86801f2650dea37db27c56a5303b01dc84",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219879492,
+            4219884611
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "66393d2c91aa537340136394e4f8e3d3c251469b2032623bd3e0e53b595736cf",
+          "bytes": 5120
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4220063812,
+            4220068931
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "faf5aa8f2a202e54f972b419979e3cb63a1f5ec04d4ca04ac981fe6f8a9a1fc7",
+          "bytes": 5120
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220432452,
+            4220437571
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "b14d5ffa29f746d15096e4769e3fd5bc318c536e702a4785dd79f77df2ad074e",
+          "bytes": 5120
+        }
+      ]
+    },
+    "34": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "5208a553beff2437d3c7ef1ef70c284c24e6d784f4cfbdc6d57740d0546f7c67",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "56b812f606fb70b6f1956490bba96c959221fa5a0ac40199e3b3992e7ed8314e",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "31ad5d874de7ac838b5c7fda2a4817e46ff20d2a0a0637a8941e397d455e7e07",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219894852,
+            4219899971
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "d9d527bf95f2d410367761138d07d483fae41041e839889d442f9291e7a49740",
+          "bytes": 5120
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4220079172,
+            4220084291
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "14b944a6ae26b3629c754a624ce3e1db2b5e09a9e27dac21d6fc19ac06957de7",
+          "bytes": 5120
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220447812,
+            4220452931
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "3bdaf8dd84658fd445e3090778ecc8cdd7f95051143af9ec56b781b9a1712fbe",
+          "bytes": 5120
+        }
+      ]
+    },
+    "35": {
+      "url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-35/checkpoint.safetensors",
+      "tensors": [
+        {
+          "key": "e.weight",
+          "range": [
+            4194315648,
+            4219710847
+          ],
+          "shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "sha256": "5256db2c88408f42d58031ed56d39609c7edc0365097a3ed4f958a61bb2438b1",
+          "bytes": 25395200
+        },
+        {
+          "key": "e.bias",
+          "range": [
+            4194305728,
+            4194315647
+          ],
+          "shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "d3c6d9af04ddef41fba118e98bdb3111ff43927b75960ce21502075ce4157b65",
+          "bytes": 9920
+        },
+        {
+          "key": "nonlinearity.theta",
+          "range": [
+            4219710852,
+            4219720771
+          ],
+          "shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "sha256": "76a9fc3fdd8943f9adfded7b01132383231ee53ea901396579d93dfd7aa0b7ea",
+          "bytes": 9920
+        },
+        {
+          "key": "input_standardizer.mean",
+          "range": [
+            4219899972,
+            4219905091
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "6b13332533e8da92866bc5d627e0745a9f58804b2b0dcb6c0ae0bf62708995ee",
+          "bytes": 5120
+        },
+        {
+          "key": "input_standardizer.std",
+          "range": [
+            4220084292,
+            4220089411
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "fd4957b63905f959c7425763b2562d99ff75e171d1e7345459c73d65f0cbbf96",
+          "bytes": 5120
+        },
+        {
+          "key": "output_standardizer.std",
+          "range": [
+            4220452932,
+            4220458051
+          ],
+          "shape": [
+            2560
+          ],
+          "source_dtype": "BF16",
+          "sha256": "48ff838fee9804047c675c558bc0c281102cd77ee5dbf0de8f9922ae767a574a",
+          "bytes": 5120
+        }
+      ]
+    }
+  }
+}
