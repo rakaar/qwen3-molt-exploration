@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Kolkata",
+  "experiment": "Add L19-T368 low-rank output without subtracting the natural contribution",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "asset_sha256": "7af0944604f699bbce8cfea0c9528b263e461d709d54fb492b1b8b93d34224bd",
+  "layer": 19,
+  "transform": 368,
+  "rank": 128,
+  "label": "Onset of Refusal or Ignorance Statements",
+  "controls": [
+    "native model",
+    "zero addition"
+  ],
+  "cases": [
+    "P1-U2",
+    "P1-U5",
+    "P2-U1",
+    "P2-U5"
+  ],
+  "selection": "All four previously judged unsupported responses from the fixed two-passage baseline; no selection based on intervention outcomes.",
+  "patch": "MLP_output += a * ((z @ V_368) @ U_368) * output_std_19",
+  "a_definition": "Positive scalar added to the estimated natural gate. Effective estimated gate is natural_gate(current z) + a. No subtraction or clamping. Not a multiplier of the natural gate.",
+  "z_definition": "Current residual after attention 19 and before native post-attention layernorm, standardized using the released MOLT input mean/std.",
+  "native_gate": "raw = z dot e_368 + bias_368; gate = raw if raw > threshold_368 and raw > 0, otherwise 0",
+  "scope": "Every processed output-token position, starting at output token 0. No prompt positions edited. EOS is a stopping token and is not processed further.",
+  "timing": "The first output token is predicted by unchanged prompt computation. Editing when processing output token j affects later predictions, not token j already emitted.",
+  "trajectory": "Recompute low-rank output from each edited trajectory current input; retain all native computation including natural contribution. Measure the natural gate for logging only. No donor, frozen clean input, or U/V changes.",
+  "native_mlp": "Retained; add a times current complete low-rank output. Do not reconstruct or replace native MLP.",
+  "attention": "unfrozen eager",
+  "dtype": "BF16 native model; FP32 MOLT math; patched output cast back to BF16",
+  "enable_thinking": false,
+  "decoding": {
+    "do_sample": false,
+    "batch_size": 1,
+    "use_cache": true,
+    "max_new_tokens": 96
+  },
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "grading": "Manual complete-response review. Separate coherent abstention without unsupported answer, unsupported answer, mixed unsupported answer plus abstention, other coherent output, incoherence, and truncation. Do not use refusal words alone as the outcome.",
+  "controls_validation": "Native and zero-addition token IDs must match earlier baseline exactly. All first output tokens remain unchanged. Every added coefficient is exactly a; effective estimated gate is natural_gate+a. Native attention functions remain unchanged.",
+  "max_runtime_minutes": 20,
+  "lifecycle_policy": "Reuse retained SPAR RTX 3090 instance 55946393. Do not stop or delete GPU or disk.",
+  "added_gate_values": [
+    3,
+    3.5,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "comparison": "Keep additive 3.5 as an anchor alongside requested integer 3..8. Compare 3 and 3.5 to the fixed prior absolute-gate-clamp run."
+}

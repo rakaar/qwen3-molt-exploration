@@ -4,6 +4,8 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 ## New experiment: 15 October 2026
 
+- [L19–T368 additive abstention sweep](results/2026-10-15-passage-additive-gates/index.html) — retain the native contribution and add coefficients 3–8, including 3.5, at every processed output-token position on the same four unsupported-answer cases. Only the electric-eel question abstains at every tested strength (1/4); no additional question converts through 8. All 28 positive-addition responses remain fluent and reach EOS. At 7, the vampire response echoes the question and is recorded separately from abstention. Includes complete response tables, the earlier-clamp comparison, 892 verified nonzero edited positions, raw traces, and native/zero controls. [Source](experiments/passage-uncertainty/additive-gates/). SPAR GPU remains running as requested.
+
 - [L19–T368 forced-gate abstention sweep](results/2026-10-15-passage-forced-gates/index.html) — force absolute gate activations 0.5–3.5 at every processed output-token position on the four previously unsupported-answer cases. Gate 3 and 3.5 yield coherent abstention for the electric-eel question (1/4 cases); the other three still receive unsupported answers. All 28 positive-gate responses remain coherent and reach EOS; eight native/zero controls reproduce the saved baseline exactly. Includes full response tables with strengths as columns, grading explanations, nonzero-edit verification, and every gate/delta trace. [Source](experiments/passage-uncertainty/forced-gates/). SPAR GPU remains running as requested.
 
 ## New experiment: 14 October 2026
