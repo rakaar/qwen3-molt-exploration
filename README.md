@@ -2,6 +2,10 @@
 
 Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new intervention experiments were run on 10–13 October 2026.
 
+## New figures: 14 October 2026
+
+- [Actual random MOLT control feature lists](results/2026-10-14-random-control-features/index.html) — two complete images identifying every selected layer-22 MOLT and its saved dashboard name, with 100 trials on each side. Includes single additions/subtractions, paired interventions and reversed signs, zoomable SVGs, searchable text, CSV, and provenance checks. This reformats the 13 October records; no new inference or GPU rental.
+
 ## New experiments: 12–13 October 2026
 
 **Resource update, 13 October:** the completed experiment GPU (SPAR instance 55734307) and attached disk were deleted after verified backup. Live SPAR inventory has zero instances and zero standalone storage volumes: **$0/hour ongoing compute/storage billing**. [Backup audit and teardown proof](results/2026-10-13-vast-teardown/README.md). Historical runtime snapshots describe the earlier execution state.
