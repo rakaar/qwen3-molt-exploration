@@ -1,6 +1,10 @@
 # Qwen3-4B MOLT exploration
 
-Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new intervention experiments were run on 10–13 October 2026.
+Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new intervention experiments were run on 10–15 October 2026.
+
+## New experiment: 15 October 2026
+
+- [L19–T368 forced-gate abstention sweep](results/2026-10-15-passage-forced-gates/index.html) — force absolute gate activations 0.5–3.5 at every processed output-token position on the four previously unsupported-answer cases. Gate 3 and 3.5 yield coherent abstention for the electric-eel question (1/4 cases); the other three still receive unsupported answers. All 28 positive-gate responses remain coherent and reach EOS; eight native/zero controls reproduce the saved baseline exactly. Includes full response tables with strengths as columns, grading explanations, nonzero-edit verification, and every gate/delta trace. [Source](experiments/passage-uncertainty/forced-gates/). SPAR GPU remains running as requested.
 
 ## New experiment: 14 October 2026
 
