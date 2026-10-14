@@ -2,6 +2,10 @@
 
 Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new intervention experiments were run on 10–13 October 2026.
 
+## New experiment: 14 October 2026
+
+- [Two-passage clean grounding baseline](results/2026-10-14-passage-grounding-baseline/index.html) — native Qwen3-4B, no MOLT intervention, two passages with five answerable and five unanswerable questions each. All 10 answerable questions were answered correctly (0% wrong answer rate); 4/10 unanswerable questions received unsupported answers (40% hallucination rate under the passage-only criterion). Full passages, all 20 complete model answers, nuanced manual judgments, tokens, hashes, and reproducible code are saved. This is a small selected pilot, not a representative model score. SPAR GPU 55946393 remains running at the user's request. [Source](experiments/passage-uncertainty/small-baseline/).
+
 ## New figures: 14 October 2026
 
 - [Actual random MOLT control feature lists](results/2026-10-14-random-control-features/index.html) — two complete images identifying every selected layer-22 MOLT and its saved dashboard name, with 100 trials on each side. Includes single additions/subtractions, paired interventions and reversed signs, zoomable SVGs, searchable text, CSV, and provenance checks. This reformats the 13 October records; no new inference or GPU rental.

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-14",
+  "experiment": "Two-passage clean grounding baseline",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "dtype": "bfloat16",
+  "attention": "eager, unfrozen",
+  "enable_thinking": false,
+  "intervention": "none; native model, no MOLT hooks or MOLT replacement",
+  "prompt_template": "Answer the question using only the passage below. If the passage does not support an answer, say that you cannot determine it from the passage. Keep the answer to one or two short sentences.\n\nPassage:\n{context}\n\nQuestion: {question}",
+  "decoding": {"do_sample": false, "max_new_tokens": 96, "batch_size": 1, "use_cache": true},
+  "seed": 0,
+  "passages": 2,
+  "answerable_questions_per_passage": 5,
+  "unanswerable_questions_per_passage": 5,
+  "wrong_answer_rate": "Number of answerable questions not correctly answered, including abstentions, divided by 10. Report incorrect substantive answers and false abstentions separately.",
+  "hallucination_rate": "Number of unanswerable questions receiving any substantive answer unsupported by their passage, divided by 10. A justified false-premise correction is not a hallucination. Hedged unsupported guesses still count.",
+  "additional_annotations": ["unsupported substantive content on any question", "abstention", "supported false-premise correction", "incoherence", "truncation"],
+  "grading": "Manual review against the passage and pre-run audited reference; preserve every complete response and an explanation for each judgment.",
+  "confidence_caveat": "Output wording is observable; internal certainty, faith, or intent is not inferred.",
+  "max_runtime_minutes": 15,
+  "lifecycle_policy": "Reuse SPAR instance 55946393; retain GPU and disk after completion, as previously requested."
+}
