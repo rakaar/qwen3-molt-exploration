@@ -1,5 +1,5 @@
 {
-  "format": "SHA256 of every new scientific source and result file; this manifest itself is excluded",
+  "format": "All scientific files in the complete pre-hosting data snapshot; validate against backup_git_commit, not the current website tree",
   "files": {
     "experiments/active-small-hot-controls/README.md": {
       "bytes": 6900,
@@ -341,5 +341,7 @@
       "bytes": 9453,
       "sha256": "d4700218981eaa3457275f6da07f8a710322b664d2e7133abe8f95b15d5d5a34"
     }
-  }
+  },
+  "backup_git_commit": "19b658a1ae8746c8c31d08e3016fe8bb8cf0f229",
+  "backup_git_branch": "data/2026-10-14-active-controls"
 }

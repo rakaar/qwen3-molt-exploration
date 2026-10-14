@@ -54,6 +54,15 @@ Base Qwen3-4B revision: `1cfa9a7208912126459214e8b04321603b3df60c`. MOLT revisio
 
 ## Reproduce and saved evidence
 
+The complete raw-data snapshot is commit `19b658a1ae8746c8c31d08e3016fe8bb8cf0f229` on branch `data/2026-10-14-active-controls`. Large NPZ files are retained in that snapshot instead of the website tree. After cloning, restore them with:
+
+```text
+git fetch origin data/2026-10-14-active-controls
+python3 experiments/active-small-hot-controls/restore_saved_data.py
+```
+
+The restore script validates every binary file against its saved SHA256 and does not overwrite a mismatching local file. This also enables CPU-only verification of both saved arms.
+
 From the project root, use the pinned local base checkpoint:
 
 ```text
