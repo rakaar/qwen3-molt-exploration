@@ -17,4 +17,12 @@ The latest primary result is [the original Geology/Amazon three-scatter-panel re
 
 ## Removal status
 
-Backup verification and GPU removal are in progress in this pre-removal snapshot. The final `teardown.json` records provider inventory after the authorized action and the measured ongoing compute/storage rate. Historical usage charges are distinct from ongoing hourly billing.
+Instance **55946393 and its attached 35 GB disk were destroyed** after the independent GitHub backup verification passed for all **200 scientific/runtime files**. Fresh guarded provider queries at **2026-10-15T01:57:35.554872+05:30** verified the SPAR team account and returned **zero instances and zero standalone volumes**. Ongoing compute/storage billing is **$0/hour**. Past usage charges are not erased.
+
+- [Final teardown record](teardown.json)
+- [Sanitized post-removal account inventory](provider-after.json)
+- [Destruction receipt](destroy-receipt.json)
+- [Independent pre-deletion GitHub verification](pre-deletion-github-verification.json)
+- [Additional tensor snapshot verification](additional-data-branch-verification.json)
+
+The main scientific backup was pushed before removal at commit `d337c9c0155d4c37982d50b3a23743b03b79a904`. The two immutable tensor snapshots are `19b658a1ae8746c8c31d08e3016fe8bb8cf0f229` and `a3c9d2cd1be390f15e8c4367b3bf0f6ae25ff2f6`. The now-redundant end-of-day backup automation was deleted. Historical connection and resource snapshots remain execution-time records; they are not active rental instructions.

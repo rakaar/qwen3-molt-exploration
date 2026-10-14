@@ -47,4 +47,8 @@ Local scientific record: `results/2026-10-15-passage-original-group-sweep/`. HTM
 
 Run `run.py --model-dir MODEL --base-verification PINNED_MANIFEST --weights SELECTED_ASSET` from a folder with the pinned protocol and source data. `review.py RESULT_DIR` validates the manually reviewed answer hashes; `report.py RESULT_DIR` rebuilds HTML, CSV, summary, PNG, and PDF on CPU. The pre-run archive excludes post-run report/review scripts, which are preserved separately.
 
-Selected SQuAD2.0 text: Rajpurkar, Jia, and Liang (2018), CC BY-SA 4.0. No generalization or universal abstention claim is established. Answerable-question over-refusal checks and unrelated magnitude-matched edits remain future work. GPU retained; GitHub publication deferred to end of day.
+Selected SQuAD2.0 text: Rajpurkar, Jia, and Liang (2018), CC BY-SA 4.0. No generalization or universal abstention claim is established. Answerable-question over-refusal checks and unrelated magnitude-matched edits remain future work.
+
+## Publication and resource update — 15 October 2026
+
+Code, responses, figures, and audit records were backed up to GitHub before SPAR instance 55946393 and its attached disk were removed. Fresh provider checks verified zero instances, zero standalone volumes, and $0/hour ongoing compute/storage billing. Historical protocol/resource snapshots describe execution-time state. See the [teardown proof](https://github.com/rakaar/qwen3-molt-exploration/blob/main/results/2026-10-15-vast-teardown/README.md).

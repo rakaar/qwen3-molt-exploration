@@ -14,4 +14,8 @@ The result folder retains full responses, tokens, traces, manual judgments guard
 
 Base revision: `1cfa9a7208912126459214e8b04321603b3df60c`. MOLT revision: `081ce901b090b64aeecf9bc8709b57c10411e32a`; L19–T368, rank 128, Onset of Refusal or Ignorance Statements; selected asset SHA256 `7af0944604f699bbce8cfea0c9528b263e461d709d54fb492b1b8b93d34224bd`. PyTorch 2.14.0+cu126, Transformers 4.57.6, BF16 model/FP32 MOLT math, greedy batch one with KV cache, thinking disabled.
 
-This screen has a one-question conversion cohort and cannot estimate generalization. Selected SQuAD2.0 text is CC BY-SA 4.0, attributed to Rajpurkar, Jia, and Liang (2018). GPU retained; publication deferred to end of day.
+This screen has a one-question conversion cohort and cannot estimate generalization. Selected SQuAD2.0 text is CC BY-SA 4.0, attributed to Rajpurkar, Jia, and Liang (2018).
+
+## Publication and resource update — 15 October 2026
+
+Code, responses, figures, and audit records were backed up to GitHub before SPAR instance 55946393 and its attached disk were removed. Fresh provider checks verified zero instances, zero standalone volumes, and $0/hour ongoing compute/storage billing. Historical protocol/resource snapshots describe execution-time state. See the [teardown proof](https://github.com/rakaar/qwen3-molt-exploration/blob/main/results/2026-10-15-vast-teardown/README.md).

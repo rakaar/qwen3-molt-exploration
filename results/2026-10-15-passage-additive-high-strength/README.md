@@ -36,4 +36,6 @@ Run `run.py --model-dir MODEL --base-verification PINNED_MANIFEST --weights SELE
 
 This is a selected prompt-specific pilot. Answerable-question checks and unrelated magnitude-matched controls remain future work. Higher values do not prove a selective universal abstention mechanism. Earlier crystallization/minerals judgments retain the benchmark's strict passage-only criterion. Selected SQuAD2.0 text: Rajpurkar, Jia, and Liang (2018), CC BY-SA 4.0.
 
-Publication is deferred to end of day at the user's request. Keep the GPU running.
+## Publication and resource update — 15 October 2026
+
+Code, responses, figures, and audit records were backed up to GitHub before SPAR instance 55946393 and its attached disk were removed. Fresh provider checks verified zero instances, zero standalone volumes, and $0/hour ongoing compute/storage billing. Historical protocol/resource snapshots describe execution-time state. See the [teardown proof](https://github.com/rakaar/qwen3-molt-exploration/blob/main/results/2026-10-15-vast-teardown/README.md).
