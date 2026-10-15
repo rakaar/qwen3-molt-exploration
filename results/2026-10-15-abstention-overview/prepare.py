@@ -41,7 +41,7 @@ for ax,r in zip(axes,examples):
  ax.set_title(title+'\n'+textwrap.fill(r['question'],130),loc='left',fontsize=11,pad=12);ax.set_xticks([]);ax.set_yticks([]);ax.set_xticks(np.arange(-.5,cols,1),minor=True);ax.set_yticks(np.arange(-.5,n,1),minor=True);ax.grid(which='minor',color='white',linewidth=1.5);ax.tick_params(which='minor',left=False,bottom=False)
 fig.suptitle('Natural L19–T368 gate activations — three made-up answers and three abstentions',fontsize=18,fontweight='bold',y=.995)
 fig.text(.02,.012,f'No steering. Shared scale 0–{maximum:.3f}. Mean includes zero gates across visible response tokens; EOS excluded. · = leading space. Grey = padding.\nGate measured while processing each displayed token; observational association, not causal proof.',fontsize=10)
-fig.tight_layout(rect=[0,.055,1,.965],h_pad=2.2);fig.savefig(OUT/'native-token-heatmap.png',dpi=180);fig.savefig(OUT/'native-token-heatmap.pdf');plt.close(fig)
+fig.tight_layout(rect=[0,.055,1,.965],h_pad=2.2);fig.savefig(OUT/'native-token-heatmap.png',dpi=180);plt.close(fig)
 # Compact measured overview for poster and screen.
 length=max(len(r['tokens']) for r in examples);matrix=np.full((6,length),np.nan)
 for i,r in enumerate(examples):matrix[i,:len(r['tokens'])]=[max(0,t['gate']) for t in r['tokens']]
