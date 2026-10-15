@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "trials": 114,
+  "controls": 6,
+  "authorized_cases": 3,
+  "all_native_and_observation_controls_exact": true,
+  "per_layer_absolute_targets_verified": true,
+  "current_gate_and_lowrank_output_recomputed": true,
+  "all_target_masks_and_native_system_positions_verified": true,
+  "source_and_selected_weights_verified": true,
+  "answer_bound_reviews_complete_and_consistent": true,
+  "trace_records_checked": 25972,
+  "actual_nonzero_edits": 7808,
+  "largest_actual_edit_to_native_mlp_norm_ratio_any_condition": 18.279079309629573,
+  "clean_refusal_trials": [
+    "weather__L11__g16",
+    "translation__L11__g16",
+    "billing__L11__g16",
+    "weather__both__g16",
+    "billing__both__g16",
+    "weather__both__g11_16_g13_2",
+    "translation__both__g11_16_g13_2",
+    "billing__both__g11_16_g13_2",
+    "weather__both__g11_16_g13_4",
+    "translation__both__g11_16_g13_4",
+    "billing__both__g11_16_g13_4",
+    "weather__both__g11_16_g13_8",
+    "translation__both__g11_16_g13_8",
+    "billing__both__g11_16_g13_8"
+  ],
+  "boundaries": {
+    "weather_authorized": {
+      "user_first_token": 102,
+      "user_last_token": 110,
+      "user_token_count": 9,
+      "prompt_token_count": 120
+    },
+    "translation_authorized": {
+      "user_first_token": 100,
+      "user_last_token": 108,
+      "user_token_count": 9,
+      "prompt_token_count": 118
+    },
+    "billing_authorized": {
+      "user_first_token": 100,
+      "user_last_token": 108,
+      "user_token_count": 9,
+      "prompt_token_count": 118
+    }
+  }
+}
