@@ -2,7 +2,7 @@
 
 Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new intervention experiments were run on 10–15 October 2026.
 
-**Current resource update — 15 October 2026:** the new SPAR RTX 3090 instance **56070285 is retained at the user’s explicit request**, at **$0.175/hour including 30 GB disk**, plus transfers. [Current resource record](results/2026-10-15-six-new-abstentions/resource-state.json). The earlier instance 55946393 and its disk were removed after a verified 200-file backup; its [zero-billing teardown proof](results/2026-10-15-vast-teardown/README.md) is an earlier historical snapshot.
+**Current resource update — 16 October 2026:** SPAR instance **56070285 and its attached 30 GB disk have been removed at the user’s request**. Fresh account checks show **zero instances, zero standalone volumes and $0/hour ongoing compute/storage billing**. All 189 remote scientific/runtime files were hash-verified and backed up before removal. [Teardown and backup proof](results/2026-10-16-vast-teardown/README.md). Earlier retained-GPU records are historical.
 
 ## New report: 16 October 2026
 
