@@ -1,0 +1,64 @@
+Use case: scientific-educational infographic, a finished research poster.
+Create a crisp, high-resolution portrait research poster, approximately 3:4 aspect ratio, large readable text, clean journal-style typography, generous spacing, warm ivory background, dark navy text, restrained teal for clear successes and amber/red for failure. Flat front-on view. No decorative neural-network stock art. No invented charts, axes, measurements, citations, logos or QR codes. Highest practical resolution.
+
+The supplied image is a SUPPORTING MEASURED FIGURE, not an image to edit. Incorporate it faithfully as an actual measured six-row heatmap in the natural-evidence section. Preserve the six case IDs, means, warm-color patterns and grey padding; do not invent token values. The website and separate detailed poster contain full token labels.
+
+Main title, verbatim:
+"From a made-up answer to ‘I don’t know’"
+Subtitle:
+"Qwen3-4B · Layer 19 · Transform 368"
+Feature label, verbatim:
+"Onset of Refusal or Ignorance Statements"
+Large result badge:
+"7/10 clear conversions"
+Small explanation beneath:
+"3/4 original + 4/6 new selected baseline failures"
+
+Arrange five numbered sections in a clear reading order. Use this factual copy, preserving the key details and all numbers exactly. You may wrap lines and use columns, but never change the science.
+
+1 · GOAL AND TASK
+"Can encouraging this transform cause coherent abstention?"
+"SQuAD2.0: provide a passage, then ask a related question whose answer is not in the passage. The instruction asks the model to say it cannot determine the answer."
+"Causal cohort: 4 original made-up answers + 6 new cases from 80 screened questions. All 10 answered without passage evidence before steering."
+
+2 · NATURAL EVIDENCE — NO STEERING
+Use the supplied measured heatmap here. Add:
+"Three made-up answers: mean gates 0.000, 0.000, 0.000."
+"Three natural abstentions: mean gates 0.762, 0.804, 1.067."
+"Response means include zero gates; EOS excluded. Association, not causal proof."
+These observational examples are from the original natural pilot, distinct from the ten baseline failures used for intervention.
+
+3 · CAUSAL INTERVENTION
+Use a prominent readable equation block:
+"MLP output += a × L(z)"
+"Effective estimated gate: g(z) + a"
+"L(z): current standardized rank-128 linear output, restored to native output scale."
+"Native MLP retained. All processed output-token positions. Prompt untouched; first output token predicted normally. Attention unfrozen."
+Put a compact example table titled "Successful examples — response excerpts":
+Columns: "Query" / "Baseline model" / "Steered model"
+Row 1 query: "What product was notably shipped in vessels equipped with double and triple replacement engines?"
+Row 1 baseline: "…the product … is coal."
+Row 1 steered: "+4: The passage does not mention any specific product that was notably shipped in vessels equipped with double and triple expansion engines."
+Row 2 query: "What molecules are repelled by pathogenic antigens?"
+Row 2 baseline: "…the molecules repelled by pathogenic antigens are the Variable lymphocyte receptors (VLRs)."
+Row 2 steered: "+8: The passage does not mention molecules that are repelled by pathogenic antigens. I cannot determine the answer from the passage."
+Add beneath: "7 clear successes across the 10 cases. Full queries, outputs and strengths on the website."
+
+4 · A FLUENT FAILURE
+"Query: Vampire bats do not actually spread what?"
+"Passage: vampire bats can spread rabies. The passage does not say what they do not spread."
+"Baseline: Vampire bats do not actually spread the flu."
+"Steered at +24: Vampire bats do not actually spread rabies. However, the passage does not provide information about what vampire bats spread, and the question cannot be answered based on the given text."
+Highlight the incorrect rabies denial and the false claim of missing passage information in red. The uncertainty at the end must not be presented as success.
+"Uncertainty words appear, but false claims remain. Not counted as a conversion."
+
+5 · HOW STRENGTHS WERE FOUND
+"Coarse sweeps + intermediate tests, not strict binary search. Response quality is not monotonic."
+"New-case grid: 1, 2, 4, 8, 16, 24, 32, 48, 64."
+"At +16, four of the six new cases abstain cleanly and all six remain coherent."
+
+Footer:
+"Exploratory selected cases; question-specific tuning and different search budgets. ‘Made up’ means unsupported by the passage, not necessarily false general knowledge. Review was not blinded."
+"15 October 2026 · SQuAD2.0, Rajpurkar, Jia & Liang (2018), CC BY-SA 4.0"
+
+Keep all text legible. Do not label the intervention as replacing the gate with a, and do not depict a fixed donor vector: the current-input low-rank output is recomputed each time. The causal total is exactly seven out of ten, not seven out of six, not a universal benchmark accuracy. Use the heatmap only as observational evidence.
