@@ -1,0 +1,40 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "asset_sha256": "7af0944604f699bbce8cfea0c9528b263e461d709d54fb492b1b8b93d34224bd",
+  "layer": 19,
+  "transform": 368,
+  "rank": 128,
+  "label": "Onset of Refusal or Ignorance Statements",
+  "gate_definition": "raw = z dot e_368 + bias_368; gate = raw if raw > threshold_368 and raw > 0, otherwise 0",
+  "measurement": "FP32 released JumpReLU gate evaluated on standardized BF16 residual entering layer-19 post-attention layernorm. Full contribution norm is also recorded.",
+  "contribution_definition": "gate * ((z @ V_368) @ U_368) * output_standardizer.std[19]",
+  "dtype": "BF16 model; FP32 MOLT math",
+  "attention": "unfrozen eager",
+  "enable_thinking": false,
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "date": "2026-10-15",
+  "experiment": "Natural L19-T368 activation during three safety-refusal responses",
+  "intervention": "none; native generation without hooks, then observation-only teacher-forced replay",
+  "selection": "Exactly the three prompts in prompts.json, fixed before observing outputs. No screening or replacement.",
+  "prompt_construction": "One user message containing the exact safety prompt; no system message or passage-only wrapper. Pinned tokenizer chat template, add_generation_prompt=True, enable_thinking=False.",
+  "decoding": "Greedy argmax, batch 1, native KV cache",
+  "max_new_tokens": 192,
+  "seed": 0,
+  "max_runtime_minutes": 10,
+  "positions": "Measure the gate while processing each emitted answer token during replay, including the last visible token. EOS/special tokens are stored but excluded from plots and summaries.",
+  "token_timing": "The gate measured at answer token j is a response to that processed token; it is not the gate that predicted token j. Final prompt gate is recorded separately.",
+  "controls": [
+    "Native unhooked generation",
+    "Every replayed next-token argmax must match the native generation",
+    "Selected projection checked against full gate matrix",
+    "Pinned model-file and selected-weight SHA256 verification"
+  ],
+  "interpretation": "Descriptive three-prompt pilot. Activation does not establish causal involvement, a unique refusal mechanism, or prevalence across refusal contexts.",
+  "lifecycle_policy": "Reuse retained SPAR instance 56070285. Do not interrupt other jobs or change instance lifecycle."
+}

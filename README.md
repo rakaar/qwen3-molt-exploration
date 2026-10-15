@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **Current resource update — 15 October 2026:** the new SPAR RTX 3090 instance **56070285 is retained at the user’s explicit request**, at **$0.175/hour including 30 GB disk**, plus transfers. [Current resource record](results/2026-10-15-six-new-abstentions/resource-state.json). The earlier instance 55946393 and its disk were removed after a verified 200-file backup; its [zero-billing teardown proof](results/2026-10-15-vast-teardown/README.md) is an earlier historical snapshot.
 
+## New report: 16 October 2026
+
+- [L19–T368 activates during three safety refusals](results/2026-10-15-safety-refusal-gates/index.html) — full native answers and interactive token heatmaps for three fixed requests about explosives, unauthorized Wi-Fi access and poisoning. **3/3 responses refuse and show gate activity.** Includes shared-scale earlier abstention references, exact token values, PNG/SVG exports, raw measurements and pinned provenance. Native generation is unmodified; an observation-only replay matches every next-token argmax. Descriptive activation evidence, with no causal or prevalence claim. [Source and method](experiments/safety-refusal-gates/README.md).
+
 ## New experiment: 15 October 2026
 
 - [L11–T1596: refusal despite authorization — natural evidence, causal result and poster](results/2026-10-15-privacy-refusal-overview/index.html) — three matched synthetic API-key permission pairs, measured token heatmaps and means, then complete native-versus-steered answers. Fixing L11–T1596 (Data Security and Privacy Protection) to **16**, with L13 untouched, induces coherent key-free refusal in all **3/3 authorized service variants** of one prompt template. Natural activation begins after refusal has already started. Includes exact gate-replacement formula, edit positions, strong-intervention caveat, all 114 sweep/control responses, source, raw traces and poster. [Source](experiments/privacy-refusal-overview/README.md).
