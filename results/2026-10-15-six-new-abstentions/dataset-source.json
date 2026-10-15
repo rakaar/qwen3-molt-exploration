@@ -1,0 +1,71 @@
+{
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+  "dataset": "SQuAD2.0 development set",
+  "dataset_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "license": "CC BY-SA 4.0; applies to the selected benchmark text",
+  "attribution": "SQuAD2.0, Pranav Rajpurkar, Robin Jia and Percy Liang, 2018",
+  "paper": "https://aclanthology.org/P18-2124/",
+  "seed": 20261014,
+  "selection": "One answerable and one unanswerable question per sampled passage; questions are not minimal edits.",
+  "context_character_range": [
+    400,
+    1600
+  ],
+  "pilot_article_pool": [
+    "Geology",
+    "Packet_switching",
+    "University_of_Chicago",
+    "Amazon_rainforest",
+    "Civil_disobedience",
+    "Black_Death",
+    "Jacksonville,_Florida",
+    "Private_school"
+  ],
+  "heldout_article_pool": [
+    "Ctenophora",
+    "Prime_number",
+    "Construction",
+    "Oxygen",
+    "Immune_system",
+    "Pharmacy",
+    "1973_oil_crisis",
+    "Economic_inequality",
+    "European_Union_law",
+    "Scottish_Parliament",
+    "Huguenot",
+    "Victoria_(Australia)",
+    "Harvard_University",
+    "Intergovernmental_Panel_on_Climate_Change",
+    "Computational_complexity_theory",
+    "Rhine",
+    "Southern_California",
+    "Sky_(United_Kingdom)",
+    "Warsaw",
+    "Normans",
+    "French_and_Indian_War",
+    "Imperialism",
+    "Islamism",
+    "Steam_engine",
+    "Force",
+    "Fresno,_California",
+    "Yuan_dynasty"
+  ],
+  "article_pools_disjoint": true,
+  "selected_before_model_inference": true,
+  "counts": {
+    "pilot": {
+      "questions": 24,
+      "answerable": 12,
+      "unanswerable": 12
+    },
+    "heldout": {
+      "questions": 100,
+      "answerable": 50,
+      "unanswerable": 50
+    }
+  },
+  "files": {
+    "pilot-cases.json": "78fb2efe7aba5653acc9c89812947216e8d6169e66a3e2ef9436b536c2baf2a0",
+    "heldout-cases.json": "a04965fccc83afa6bd60f42c54affb41b5ddf4bc107ac130533ecb3b2b1951bc"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "new_successes": 4,
+  "new_denominator": 6,
+  "original_successes": 3,
+  "original_denominator": 4,
+  "combined_successes": 7,
+  "combined_denominator": 10,
+  "cases": [
+    {
+      "case_id": "N04",
+      "question": "What is carbon monoxide poisonous to that can cause gas gangrene?",
+      "article": "Oxygen",
+      "original_answer": "The passage states that oxygen gas is poisonous to the anaerobic bacteria that cause gas gangrene. Therefore, carbon monoxide is poisonous to these bacteria.",
+      "success": true,
+      "selected_strength": 16,
+      "steered_answer": "The passage does not mention that carbon monoxide is poisonous to anything; it only states that oxygen gas is poisonous to anaerobic bacteria. Therefore, I cannot determine the answer from the passage.",
+      "trial_id": "N04_add16",
+      "all_successful_tested_strengths": [
+        16
+      ],
+      "positive_trials": 9
+    },
+    {
+      "case_id": "N05",
+      "question": "What product was notably shipped in vessels equipped with double and triple replacement engines?",
+      "article": "Steam_engine",
+      "original_answer": "The passage states that double and triple expansion engines were common, especially in shipping where efficiency was important. Therefore, the product notably shipped in vessels equipped with double and triple expansion engines is coal.",
+      "success": true,
+      "selected_strength": 4,
+      "steered_answer": "The passage does not mention any specific product that was notably shipped in vessels equipped with double and triple expansion engines.",
+      "trial_id": "N05_add4",
+      "all_successful_tested_strengths": [
+        4,
+        8,
+        16,
+        24,
+        32
+      ],
+      "positive_trials": 9
+    },
+    {
+      "case_id": "N19",
+      "question": "Which set of countries have lower economic mobility than the United States?",
+      "article": "Economic_inequality",
+      "original_answer": "The passage states that the U.S. economy consistently affords a lower level of economic mobility than all the continental European countries for which data is available. Therefore, the set of countries with lower economic mobility than the United States are the continental European countries.",
+      "success": true,
+      "selected_strength": 16,
+      "steered_answer": "The passage does not provide information about which set of countries have lower economic mobility than the United States.",
+      "trial_id": "N19_add16",
+      "all_successful_tested_strengths": [
+        16
+      ],
+      "positive_trials": 9
+    },
+    {
+      "case_id": "R13",
+      "question": "What is most of Poland's modern growth based on?",
+      "article": "Warsaw",
+      "original_answer": "Most of Poland's modern growth is based on internal migration and urbanisation.",
+      "success": false,
+      "selected_strength": null,
+      "steered_answer": null,
+      "trial_id": null,
+      "all_successful_tested_strengths": [],
+      "positive_trials": 16
+    },
+    {
+      "case_id": "R36",
+      "question": "What molecules are repelled by pathogenic antigens?",
+      "article": "Immune_system",
+      "original_answer": "The passage states that the molecules called Variable lymphocyte receptors (VLRs) in jawless vertebrates bind pathogenic antigens in a similar way to antibodies. Therefore, the molecules repelled by pathogenic antigens are the Variable lymphocyte receptors (VLRs).",
+      "success": true,
+      "selected_strength": 8,
+      "steered_answer": "The passage does not mention molecules that are repelled by pathogenic antigens. I cannot determine the answer from the passage.",
+      "trial_id": "R36_add8",
+      "all_successful_tested_strengths": [
+        8,
+        16,
+        24
+      ],
+      "positive_trials": 9
+    },
+    {
+      "case_id": "S07",
+      "question": "What does respiration release into the atmosphere?",
+      "article": "Oxygen",
+      "original_answer": "Respiration releases carbon dioxide into the atmosphere.",
+      "success": false,
+      "selected_strength": null,
+      "steered_answer": null,
+      "trial_id": null,
+      "all_successful_tested_strengths": [],
+      "positive_trials": 16
+    }
+  ],
+  "scope": "Per-question tuning on six locked native failures, selected before intervention. Not a universal steering strength or unbiased benchmark hallucination rate.",
+  "selected_strength_definition": "Lowest successful tested strength; not established continuous minimum.",
+  "reviewer": "Codex, manual complete-response review with condition labels visible; not blinded or independently human-reviewed"
+}

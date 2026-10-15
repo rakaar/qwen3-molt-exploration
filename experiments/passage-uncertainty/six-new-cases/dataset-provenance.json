@@ -1,0 +1,47 @@
+{
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+  "dataset": "SQuAD2.0 development set",
+  "dataset_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "license": "CC BY-SA 4.0; applies to the selected benchmark text",
+  "attribution": "SQuAD2.0, Pranav Rajpurkar, Robin Jia and Percy Liang, 2018",
+  "paper": "https://aclanthology.org/P18-2124/",
+  "screening_questions": 80,
+  "native_repeats": 3,
+  "context_character_range": [
+    400,
+    1600
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "source": "Earlier prepared heldout metadata repurposed for exploratory screening",
+      "pre_audited_questions": 50,
+      "excluded_before_inference": 20,
+      "native_questions": 30
+    },
+    {
+      "round": 2,
+      "source": "Fresh deterministic full-dev shuffle excluding earlier prepared questions and known prior cases",
+      "seed": 20261015,
+      "shuffle_slice": [
+        0,
+        40
+      ],
+      "excluded_before_inference": 15,
+      "native_questions": 25
+    },
+    {
+      "round": 3,
+      "source": "Next forty entries from same shuffle",
+      "seed": 20261015,
+      "shuffle_slice": [
+        40,
+        80
+      ],
+      "excluded_before_inference": 15,
+      "native_questions": 25
+    }
+  ],
+  "terminology": "Passage grounding; true external knowledge can be unsupported. Eight clear unsupported native answers found; first six fixed before steering, two unused.",
+  "original_pool_metadata_file": "dataset-source.json"
+}
