@@ -1,0 +1,1311 @@
+{
+  "reviewer": "Codex; complete response review with condition labels visible; no independent human annotation",
+  "definition": "Success requires a coherent passage-grounded withholding without a made-up answer, contradictory explanation, or substantial repetition. Mixed false answers and uncertainty fail.",
+  "rows": [
+    {
+      "trial_id": "P1-U2_native",
+      "answer_sha256": "f9acb5f2e0a51f851717b5eb06c2045e88f26ecf60ea1b82b988b89aafe7899a",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Rock cycle is an important concept in geology in the passage, but the crystallization-specific answer is not established under the preserved strict passage-only benchmark criterion. This is a plausible domain inference, not necessarily a false real-world fact."
+    },
+    {
+      "trial_id": "P1-U2_add0",
+      "answer_sha256": "f9acb5f2e0a51f851717b5eb06c2045e88f26ecf60ea1b82b988b89aafe7899a",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Rock cycle is an important concept in geology in the passage, but the crystallization-specific answer is not established under the preserved strict passage-only benchmark criterion. This is a plausible domain inference, not necessarily a false real-world fact."
+    },
+    {
+      "trial_id": "P1-U2_add24",
+      "answer_sha256": "c3436dd3879ca91df640d76a3423c5a24852369e52fdc5f8ce58ee3feb37698b",
+      "coherent": true,
+      "clean_coherent_abstention": true,
+      "made_up_answer": false,
+      "false_or_unsupported_explanation": false,
+      "reason": "Explicitly states that the passage does not establish an important concept in crystallization; no invented target answer."
+    },
+    {
+      "trial_id": "P1-U5_native",
+      "answer_sha256": "2e4d3afa36a59537fef0daa093133a0f0537f66f27aa212eae3ec289bb2145c6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Supplies an invented outcome for an unstated three-minerals scenario; the passage describes rocks."
+    },
+    {
+      "trial_id": "P1-U5_add0",
+      "answer_sha256": "2e4d3afa36a59537fef0daa093133a0f0537f66f27aa212eae3ec289bb2145c6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Supplies an invented outcome for an unstated three-minerals scenario; the passage describes rocks."
+    },
+    {
+      "trial_id": "P1-U5_add16",
+      "answer_sha256": "3ffaba41314e7c72b4a65b8225f063f46e66fce4421d7c9d594f18ed20c6f490",
+      "coherent": true,
+      "clean_coherent_abstention": true,
+      "made_up_answer": false,
+      "false_or_unsupported_explanation": false,
+      "reason": "Explicitly says the requested minerals outcome cannot be determined from the passage; no invented outcome."
+    },
+    {
+      "trial_id": "P2-U1_native",
+      "answer_sha256": "3a406f4afdbb0f419be08f4154ce4a769da80a06c1472959954140da9ee39f62",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Accepts mild shock even though that adjective is unsupported by the passage, which describes a shock that can stun or kill."
+    },
+    {
+      "trial_id": "P2-U1_add0",
+      "answer_sha256": "3a406f4afdbb0f419be08f4154ce4a769da80a06c1472959954140da9ee39f62",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Accepts mild shock even though that adjective is unsupported by the passage, which describes a shock that can stun or kill."
+    },
+    {
+      "trial_id": "P2-U1_add4",
+      "answer_sha256": "f5b1a9f1c54e522cbfa3f6f8c72366179bb59d26497bd95f22119a9782db7aa2",
+      "coherent": true,
+      "clean_coherent_abstention": true,
+      "made_up_answer": false,
+      "false_or_unsupported_explanation": false,
+      "reason": "Withholds the mild-shock answer because the passage does not establish mildness; does not replace it with an invented animal."
+    },
+    {
+      "trial_id": "P2-U5_native",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add0",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add4",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add8",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add16",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add24",
+      "answer_sha256": "6c1daf5a75e834030c7bc4e7b4e15c9acb1b971d72b26ab2fd84015fbe1fa71c",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add32",
+      "answer_sha256": "2f3fa6385a55328494b74b4d458c9636156ef08e8137a8557ced3c9b5e552e93",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Gives the false rabies denial before uncertainty. The unclear parenthetical does not cleanly retract the claim or restore a grounded answer."
+    },
+    {
+      "trial_id": "P2-U5_add64",
+      "answer_sha256": "73f8ed668f20b6a9c79ada17615fa4c801c57407927b1dd32d06e0c5e0697493",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add1",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add2",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add3",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add5",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add6",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add7",
+      "answer_sha256": "d5af630dbad33a33062d381ff1e0b1bc8c4fdfe70d7f100ea2a6d2068ea93397",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": false,
+      "false_or_unsupported_explanation": false,
+      "reason": "Echoes the question verbatim. Gives neither a substantive answer nor an explicit grounded I-do-not-know response; not a successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add9",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add10",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add11",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add12",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add13",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add14",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add15",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "P2-U5_add17",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add18",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add19",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add20",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add21",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add22",
+      "answer_sha256": "3efbe11c03f53774635cd2c471c79c677fc9242fa85532dc1b4dbde8c4c09d40",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add23",
+      "answer_sha256": "3efbe11c03f53774635cd2c471c79c677fc9242fa85532dc1b4dbde8c4c09d40",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add25",
+      "answer_sha256": "e9b0f634484f494d5f678010a624b39a3de0246921e5cfa9c185e39f1b7396ee",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "P2-U5_add26",
+      "answer_sha256": "9488895353d2674fe9d8dee6046c0a21aa2cce8adf3e12f46f5cfabaa5a75679",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "P2-U5_add27",
+      "answer_sha256": "9488895353d2674fe9d8dee6046c0a21aa2cce8adf3e12f46f5cfabaa5a75679",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "P2-U5_add28",
+      "answer_sha256": "9488895353d2674fe9d8dee6046c0a21aa2cce8adf3e12f46f5cfabaa5a75679",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "P2-U5_add29",
+      "answer_sha256": "5ba2c595c03a55873a9d1eec8ab073e281df3e3203e2436d0c86b15a11348600",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "P2-U5_add30",
+      "answer_sha256": "5ba2c595c03a55873a9d1eec8ab073e281df3e3203e2436d0c86b15a11348600",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "P2-U5_add31",
+      "answer_sha256": "271acbde6aeff28a69b461ce8e3b107bce2d7fca08994e3f31bf932f61e787e6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "P2-U5_add33",
+      "answer_sha256": "2f3fa6385a55328494b74b4d458c9636156ef08e8137a8557ced3c9b5e552e93",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Gives the false rabies denial before uncertainty. The unclear parenthetical does not cleanly retract the claim or restore a grounded answer."
+    },
+    {
+      "trial_id": "P2-U5_add34",
+      "answer_sha256": "485dd65d0c27104bb7f4c6b11c894630ff05ea0daeaf5ba0bae4166a9767f8ed",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Gives the false rabies denial before uncertainty. The unclear parenthetical does not cleanly retract the claim or restore a grounded answer."
+    },
+    {
+      "trial_id": "P2-U5_add35",
+      "answer_sha256": "acfca1215a0fdfda0dc25b20f940da2404ea1934801e0127f0198363bff5992c",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Readable complete response, but retains the false rabies denial and misdescribes passage contents or completeness. Verbosity/odd wording is not itself scored as incoherence; content still fails."
+    },
+    {
+      "trial_id": "P2-U5_add36",
+      "answer_sha256": "cd70431d113f4bb91d80cce22af86511b07a11d37e72167e649d6511349ff254",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add37",
+      "answer_sha256": "282087c639fa309a2a44f6a809f4fb3230133741ccdfef35c5a155b5625d6a34",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add38",
+      "answer_sha256": "a4ed1ecf0953cd5143a1ab33bbfafd97b4f43132310da8b7c277e06740ac74ee",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Readable complete response, but retains the false rabies denial and misdescribes passage contents or completeness. Verbosity/odd wording is not itself scored as incoherence; content still fails."
+    },
+    {
+      "trial_id": "P2-U5_add39",
+      "answer_sha256": "166d37a98161c250f22718abd5b8fc9224e2e6d0fc1edbbfc87272e0b53f74a4",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add40",
+      "answer_sha256": "3d75ae035aa4744a6ee0710a830e5e40b53f0b90193fcd656654b73e24b626be",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add41",
+      "answer_sha256": "7ef62508a3bafd2e00654c90a595706811b289c0b3a42804b673b69192332d1e",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add42",
+      "answer_sha256": "a9822aa4f6de1b0c8a1fe636bf0b664c4eb43d99c8510363372b3b5acb3029a3",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add43",
+      "answer_sha256": "347d2a74a392d60491e01adc1c5789d05b3523dbba5e250dba7fec0feba1b60e",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add44",
+      "answer_sha256": "0dc4a1d26bec94012e5ebd70b05b88abe0119577b6afaf291cc7e9e3351a184b",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add45",
+      "answer_sha256": "b6c3625e4a829721257ac4589185871535c3f9cb3d0941e68fa185996c1f9651",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add46",
+      "answer_sha256": "c16bbbc0786a67a4b42e66a777da2d0fc4932b5fa0e1706204a0fa9d19eaefe5",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add47",
+      "answer_sha256": "c16bbbc0786a67a4b42e66a777da2d0fc4932b5fa0e1706204a0fa9d19eaefe5",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add48",
+      "answer_sha256": "4b50da1475467ce0013dda924b45e869c81b5f9c20d24b057214731dc2fa50de",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add49",
+      "answer_sha256": "9997f898f3fc3e3a160b45c395c8e9c797bdfe77537008419a0708bf601c2d73",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add50",
+      "answer_sha256": "3c3a46316c4500a6a44df942e0744fd20d259ec6c7f05d3caa589e75748c48cc",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add51",
+      "answer_sha256": "0e44c6ab2e137cc50aebaccee230b4e8df50931b60d7c0d9309f3550c0ceb4fa",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add52",
+      "answer_sha256": "b88cd0bc3250783d021def7f4db7ecc7f0ca2a73f885262d790198fa6716316d",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "P2-U5_add53",
+      "answer_sha256": "4d7df6332032cc3d86f5b93481e45fcf6e58c85e24e1021d53ebe7b42c47fb66",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add54",
+      "answer_sha256": "4d7df6332032cc3d86f5b93481e45fcf6e58c85e24e1021d53ebe7b42c47fb66",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add55",
+      "answer_sha256": "4d7df6332032cc3d86f5b93481e45fcf6e58c85e24e1021d53ebe7b42c47fb66",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add56",
+      "answer_sha256": "4d7df6332032cc3d86f5b93481e45fcf6e58c85e24e1021d53ebe7b42c47fb66",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add57",
+      "answer_sha256": "ba86efdaf6de50f78d6e378c07a6d3381abdcb67251c9a61921c850361632a62",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add58",
+      "answer_sha256": "6d3d80a7c356b145c3e98600f2b92b03e23c4da14c18451e5c81d8b3f38e5c28",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add59",
+      "answer_sha256": "6d3d80a7c356b145c3e98600f2b92b03e23c4da14c18451e5c81d8b3f38e5c28",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add60",
+      "answer_sha256": "311a77799c27476d17c75c6d49c47bbb24d71134506ba3c8e6bba44ccee2f293",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add61",
+      "answer_sha256": "18909ec503a837bdf22ba952384be4492a6b92bd593cb95ee0cccdcd9df9e595",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add62",
+      "answer_sha256": "02d2da96abcdbe033864dc0d2fdfaf62661b1cf42536c2e17c0a0931ac887247",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "P2-U5_add63",
+      "answer_sha256": "37e63871a07b2bbbc0f1975cdc66f3bde7e15efbe94db1ecfb879bf3c1b74d89",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_native",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add0",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add8",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add16",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add24",
+      "answer_sha256": "6c1daf5a75e834030c7bc4e7b4e15c9acb1b971d72b26ab2fd84015fbe1fa71c",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add32",
+      "answer_sha256": "2f3fa6385a55328494b74b4d458c9636156ef08e8137a8557ced3c9b5e552e93",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Gives the false rabies denial before uncertainty. The unclear parenthetical does not cleanly retract the claim or restore a grounded answer."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add0.5",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add1.5",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add2.5",
+      "answer_sha256": "f4ae4129676daa6583ab848242058740acc395e1e1be8d16bc7ddd900f368f03",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Answers flu, which the passage never mentions; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add3.5",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add4.5",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add5.5",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add6.5",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add7.5",
+      "answer_sha256": "ebaa2c81746464fec71541b10576b3cbfb91f279fe7b1ffed42d72d1d7bcdc85",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add8.5",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add9.5",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add10.5",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add11.5",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add12.5",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add13.5",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add14.5",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add15.5",
+      "answer_sha256": "8eefbeb31b679553fa4ee2264204aa6a782a6da6a56b2f7a50383a38bca76c46",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": false,
+      "reason": "Falsely says vampire bats do not spread rabies, directly contradicting the passage; no abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add16.5",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add17.5",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add18.5",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add19.5",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add20.5",
+      "answer_sha256": "1875f43e5ba4aae99309c0275a0c2e9b5f60c6ae77e0c851284d0fcce2169db6",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add21.5",
+      "answer_sha256": "3efbe11c03f53774635cd2c471c79c677fc9242fa85532dc1b4dbde8c4c09d40",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Mixes an incorrect rabies denial with uncertainty language. It also falsely says the passage gives no information about what vampire bats spread. Not a clean grounded abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add22.5",
+      "answer_sha256": "53a1cec13bfe4b32a458c28d2e9a57de8657845a98a8a2a4d5e5451e4bc479f3",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Retains the false rabies denial, then misdescribes what the passage says while expressing uncertainty. Readable English, but not a clean grounded I-do-not-know response."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add23.5",
+      "answer_sha256": "4adaf7d54d6ace46b21063ae6d25878bfaf14fb2c089903c2b46e8576d720fa8",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Retains the false rabies denial, then misdescribes what the passage says while expressing uncertainty. Readable English, but not a clean grounded I-do-not-know response."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add24.5",
+      "answer_sha256": "be9738f90244da08e1aec59f4cb7e07133511b500e444a22591db913ee69d647",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Retains the false rabies denial, then misdescribes what the passage says while expressing uncertainty. Readable English, but not a clean grounded I-do-not-know response."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add25.5",
+      "answer_sha256": "9488895353d2674fe9d8dee6046c0a21aa2cce8adf3e12f46f5cfabaa5a75679",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add26.5",
+      "answer_sha256": "9488895353d2674fe9d8dee6046c0a21aa2cce8adf3e12f46f5cfabaa5a75679",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add27.5",
+      "answer_sha256": "9488895353d2674fe9d8dee6046c0a21aa2cce8adf3e12f46f5cfabaa5a75679",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add28.5",
+      "answer_sha256": "9488895353d2674fe9d8dee6046c0a21aa2cce8adf3e12f46f5cfabaa5a75679",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add29.5",
+      "answer_sha256": "5ba2c595c03a55873a9d1eec8ab073e281df3e3203e2436d0c86b15a11348600",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add30.5",
+      "answer_sha256": "5ba2c595c03a55873a9d1eec8ab073e281df3e3203e2436d0c86b15a11348600",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Starts with an incorrect rabies denial and falsely claims the passage does not mention vampire bats or provide information about them. The passage explicitly mentions them and rabies."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add31.5",
+      "answer_sha256": "2c1e7139f819255d151df2b7a9446c72b7ecb34e8697e76303746bb82bfe8848",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Retains the false rabies denial, then misdescribes what the passage says while expressing uncertainty. Readable English, but not a clean grounded I-do-not-know response."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add32.5",
+      "answer_sha256": "2f3fa6385a55328494b74b4d458c9636156ef08e8137a8557ced3c9b5e552e93",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Gives the false rabies denial before uncertainty. The unclear parenthetical does not cleanly retract the claim or restore a grounded answer."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add33.5",
+      "answer_sha256": "1d80a01a5b936ae6a0904d7646d23830f5fc830654517bc0d30d5dbcda9f72ca",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Retains the false rabies denial, then misdescribes what the passage says while expressing uncertainty. Readable English, but not a clean grounded I-do-not-know response."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add34.5",
+      "answer_sha256": "485dd65d0c27104bb7f4c6b11c894630ff05ea0daeaf5ba0bae4166a9767f8ed",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Gives the false rabies denial before uncertainty. The unclear parenthetical does not cleanly retract the claim or restore a grounded answer."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add35.5",
+      "answer_sha256": "a9eea2bab2429867b699fc9cdf581e5904effc840919c91bd549ed79dab801d8",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Retains the false rabies denial, then misdescribes what the passage says while expressing uncertainty. Readable English, but not a clean grounded I-do-not-know response."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add36.5",
+      "answer_sha256": "8d663a19b03c21536133ff4e77e4935384adf140aaaabeca7080b6f898bd9912",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Understandable response with uncertainty language, despite reaching the token cap; it is not marked incoherent solely for truncation. Still falsely denies rabies transmission and falsely says the passage lacks information about what bats spread or has an incomplete final sentence. No clean abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add37.5",
+      "answer_sha256": "a4ed1ecf0953cd5143a1ab33bbfafd97b4f43132310da8b7c277e06740ac74ee",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Readable complete response, but retains the false rabies denial and misdescribes passage contents or completeness. Verbosity/odd wording is not itself scored as incoherence; content still fails."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add38.5",
+      "answer_sha256": "a4ed1ecf0953cd5143a1ab33bbfafd97b4f43132310da8b7c277e06740ac74ee",
+      "coherent": true,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": true,
+      "reason": "Readable complete response, but retains the false rabies denial and misdescribes passage contents or completeness. Verbosity/odd wording is not itself scored as incoherence; content still fails."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add39.5",
+      "answer_sha256": "3d75ae035aa4744a6ee0710a830e5e40b53f0b90193fcd656654b73e24b626be",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add40.5",
+      "answer_sha256": "4a21b5dcf0480343171b95ebe40bea6e84fa8a044a0566cc9d816ca24a7dec8f",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The opening false rabies denial is identifiable, followed by malformed, repetitive or unfinished text. No coherent grounded abstention; overall explanatory correctness is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add41.5",
+      "answer_sha256": "a9822aa4f6de1b0c8a1fe636bf0b664c4eb43d99c8510363372b3b5acb3029a3",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add42.5",
+      "answer_sha256": "347d2a74a392d60491e01adc1c5789d05b3523dbba5e250dba7fec0feba1b60e",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add43.5",
+      "answer_sha256": "347d2a74a392d60491e01adc1c5789d05b3523dbba5e250dba7fec0feba1b60e",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add44.5",
+      "answer_sha256": "b6c3625e4a829721257ac4589185871535c3f9cb3d0941e68fa185996c1f9651",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add45.5",
+      "answer_sha256": "50ff41a81c01d95f6bf2bec778cd4a10a01a52adbab33fa296b7a251eea21727",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The opening false rabies denial is identifiable, followed by malformed, repetitive or unfinished text. No coherent grounded abstention; overall explanatory correctness is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add46.5",
+      "answer_sha256": "c16bbbc0786a67a4b42e66a777da2d0fc4932b5fa0e1706204a0fa9d19eaefe5",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add47.5",
+      "answer_sha256": "f89a8d794da2a15d866193ce13c5af90f6f9ec25c1c46af5d63b10f280b76bb8",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The opening false rabies denial is identifiable, followed by malformed, repetitive or unfinished text. No coherent grounded abstention; overall explanatory correctness is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add48.5",
+      "answer_sha256": "4b50da1475467ce0013dda924b45e869c81b5f9c20d24b057214731dc2fa50de",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add49.5",
+      "answer_sha256": "9997f898f3fc3e3a160b45c395c8e9c797bdfe77537008419a0708bf601c2d73",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add50.5",
+      "answer_sha256": "0e44c6ab2e137cc50aebaccee230b4e8df50931b60d7c0d9309f3550c0ceb4fa",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The false opening rabies denial remains identifiable, followed by substantial repetition, malformed text or an unfinished token-capped response. No coherent grounded abstention; explanation quality is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add51.5",
+      "answer_sha256": "2b5b4ce7a0f944945a8841bc70d5df54b147eebda7a5ae29fb0486f521fd4812",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": true,
+      "false_or_unsupported_explanation": null,
+      "reason": "The opening false rabies denial is identifiable, followed by malformed, repetitive or unfinished text. No coherent grounded abstention; overall explanatory correctness is unassessable."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add52.5",
+      "answer_sha256": "fdb406cdefd405c090de065a6a268578eca6bd857d00a2dc95431fb3d8990734",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe fragments, repetition or meaningless numbers at the token cap. Content correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add53.5",
+      "answer_sha256": "4d7df6332032cc3d86f5b93481e45fcf6e58c85e24e1021d53ebe7b42c47fb66",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add54.5",
+      "answer_sha256": "4d7df6332032cc3d86f5b93481e45fcf6e58c85e24e1021d53ebe7b42c47fb66",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add55.5",
+      "answer_sha256": "4d7df6332032cc3d86f5b93481e45fcf6e58c85e24e1021d53ebe7b42c47fb66",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add56.5",
+      "answer_sha256": "ba86efdaf6de50f78d6e378c07a6d3381abdcb67251c9a61921c850361632a62",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add57.5",
+      "answer_sha256": "bb19a902c6562d6128ded45ac07f0de25f43cc0612ea8eaba13faed22c417e5b",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe fragments, repetition or meaningless numbers at the token cap. Content correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add58.5",
+      "answer_sha256": "6d3d80a7c356b145c3e98600f2b92b03e23c4da14c18451e5c81d8b3f38e5c28",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add59.5",
+      "answer_sha256": "c29f4cc1c28c03670f8e8bdbf061ea0d103b96a1fcd7dffcbd2ac1f86d93a394",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe fragments, repetition or meaningless numbers at the token cap. Content correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add60.5",
+      "answer_sha256": "2f6aa1537c83da9651e0cbf2b4b288ebac5a27134863afce47289ce9bf58da1a",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe fragments, repetition or meaningless numbers at the token cap. Content correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add61.5",
+      "answer_sha256": "18909ec503a837bdf22ba952384be4492a6b92bd593cb95ee0cccdcd9df9e595",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe broken phrasing and repetitive fragments at the token cap. Substantive answer/explanation correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add62.5",
+      "answer_sha256": "a28b857918c70753e1e512e7aede133580adb5d9d338ffeec2a049a5ddafbe01",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe fragments, repetition or meaningless numbers at the token cap. Content correctness is unassessable, not zero hallucination or successful abstention."
+    },
+    {
+      "trial_id": "fractional_P2-U5_add63.5",
+      "answer_sha256": "fa2238c7b0ac6c44f1e60d16437d527c2b795e9e996f4070cb6eef6782e5029c",
+      "coherent": false,
+      "clean_coherent_abstention": false,
+      "made_up_answer": null,
+      "false_or_unsupported_explanation": null,
+      "reason": "Severe fragments, repetition or meaningless numbers at the token cap. Content correctness is unassessable, not zero hallucination or successful abstention."
+    }
+  ]
+}

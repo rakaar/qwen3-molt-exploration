@@ -2,9 +2,11 @@
 
 Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new intervention experiments were run on 10–15 October 2026.
 
-**Resource update — 15 October 2026:** all 200 scientific/runtime files were independently verified on GitHub before SPAR instance 55946393 and its attached disk were removed. Fresh team-account inventories show **0 instances, 0 standalone volumes, and $0/hour ongoing compute/storage billing**. [Backup and teardown proof](results/2026-10-15-vast-teardown/README.md).
+**Current resource update — 15 October 2026:** the new SPAR RTX 3090 instance **56070285 is retained at the user’s explicit request**, at **$0.175/hour including 30 GB disk**, plus transfers. [Current resource record](results/2026-10-15-vampire-intermediate/resource-state.json). The earlier instance 55946393 and its disk were removed after a verified 200-file backup; its [zero-billing teardown proof](results/2026-10-15-vast-teardown/README.md) is an earlier historical snapshot.
 
 ## New experiment: 15 October 2026
+
+- [Four original made-up answers: replay and vampire-bat strength search](results/2026-10-15-vampire-intermediate/index.html) — the three earlier coherent, grounded abstentions reproduce exactly at +24 (crystallization), +16 (minerals), and +4 (electric eel). **No clean vampire-bat abstention at 128 distinct strengths from 0.5 to 64 in steps of 0.5**. Complete four-case original/steered comparison and every failed attempt; 145 generations, 10 exact native/zero controls, 13 exact positive prior anchors, and 7,314 verified edited positions. Attention remains unfrozen. [Source and methods](experiments/passage-uncertainty/vampire-intermediate/README.md).
 
 - [L2-matched active MOLT controls](results/2026-10-14-active-small-hot-controls/index.html#norm-matched) — dedicated figures compare 13 alternative pairs in both sign directions with the selected pair at the same intended L2 norm. Every feature ID, available dashboard label and actual applied norm is shown. Selected P(cold): **99.8653%**; best paired control: **0.000000655%**. Includes a separate figure for 24 single-feature controls and a 53-row audit table with coefficients, source gates, intended/actual norms and CSV/JSON downloads. CPU-only replot of saved trials; no new GPU inference. [Source](experiments/active-small-hot-controls/plot_norm_matched.py).
 
