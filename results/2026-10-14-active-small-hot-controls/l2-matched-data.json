@@ -1,0 +1,1517 @@
+{
+  "summary": {
+    "source": "Saved previously executed conditions; CPU-only presentation, no new inference",
+    "control_conditions": 50,
+    "paired_control_conditions": 26,
+    "distinct_control_pairs": 13,
+    "single_control_conditions": 24,
+    "edit_layer_zero_based": 22,
+    "token_position_zero_based": 9,
+    "attention_frozen": false,
+    "selected_pair_P_cold": 0.9986526152708632,
+    "selected_pair_intended_L2": 65.32066345214844,
+    "selected_pair_actual_L2": 65.31211853027344,
+    "pair_controls_actual_L2_min": 65.3111572265625,
+    "pair_controls_actual_L2_max": 65.34165954589844,
+    "max_actual_L2_relative_difference_percent": 0.045230527335138326,
+    "paired_controls_max_P_cold": 6.550457244075243e-09,
+    "all_control_source_gates_positive": true,
+    "all_actual_control_edits_nonzero": true,
+    "input_sha256": {
+      "artifacts/results.json": "d0f74e1f3446e250f4780b3e798c11a53b2470b4dc5c7457258201dde3c8ab1e",
+      "verification.json": "80243062d16eef7ae3725fa776f8af4b62f22f072a90f95038ccf2233d70a74b",
+      "fixed-site/artifacts/results.json": "53c7a051d7dd5a1005484b64d8d16da9f922c39a319ca1068330e2d5d9983bc0",
+      "fixed-site/verification.json": "0c2e360085bd77ce4656cdf79845541e5b68b9d8f4612d5c3e01fee78a49b710"
+    }
+  },
+  "rows": [
+    {
+      "id": "selected_pair_4.5",
+      "kind": "pair",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 2339,
+          "label": "Small-Size Adjectives and Idiomatic Phrases",
+          "source_gate": 1.5479154586791992,
+          "coefficient": -4.5
+        },
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 941,
+          "label": "Thermal State and Heat Action Gate",
+          "source_gate": 1.6072452068328857,
+          "coefficient": 4.5
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.31211853027344,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 0.9986526152708632,
+      "P_large": 1.0248052931793896e-10,
+      "group": "reference_pair",
+      "P_cold_percent": 99.86526152708632,
+      "norm_match_scale": null
+    },
+    {
+      "id": "norm_matched_pair_0",
+      "kind": "pair",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 8,
+          "label": "Numbered List and Paragraph Start Detection",
+          "source_gate": 1.4556559324264526,
+          "coefficient": -4.661392688751221
+        },
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 71,
+          "label": "Proper Noun Subword Boundary Gate",
+          "source_gate": 0.6523069143295288,
+          "coefficient": 4.661392688751221
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.31839752197266,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 8.670253008069483e-13,
+      "P_large": 0.5564331526304741,
+      "group": "paired_control",
+      "P_cold_percent": 8.670253008069484e-11,
+      "norm_match_scale": 4.661392688751221
+    },
+    {
+      "id": "norm_matched_pair_reverse_0",
+      "kind": "pair_reverse",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 8,
+          "label": "Numbered List and Paragraph Start Detection",
+          "source_gate": 1.4556559324264526,
+          "coefficient": 4.661392688751221
+        },
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 71,
+          "label": "Proper Noun Subword Boundary Gate",
+          "source_gate": 0.6523069143295288,
+          "coefficient": -4.661392688751221
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.33378601074219,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.8286707280795273e-12,
+      "P_large": 0.9729410435147227,
+      "group": "paired_control",
+      "P_cold_percent": 1.8286707280795272e-10,
+      "norm_match_scale": 4.661392688751221
+    },
+    {
+      "id": "norm_matched_pair_1",
+      "kind": "pair",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 55,
+          "label": "Think Token Start",
+          "source_gate": 0.6433084011077881,
+          "coefficient": -5.008311748504639
+        },
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 8,
+          "label": "Numbered List and Paragraph Start Detection",
+          "source_gate": 1.4674502611160278,
+          "coefficient": 5.008311748504639
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.31855010986328,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 7.605557549734783e-12,
+      "P_large": 0.9029014395295564,
+      "group": "paired_control",
+      "P_cold_percent": 7.605557549734783e-10,
+      "norm_match_scale": 5.008311748504639
+    },
+    {
+      "id": "norm_matched_pair_reverse_1",
+      "kind": "pair_reverse",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 55,
+          "label": "Think Token Start",
+          "source_gate": 0.6433084011077881,
+          "coefficient": 5.008311748504639
+        },
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 8,
+          "label": "Numbered List and Paragraph Start Detection",
+          "source_gate": 1.4674502611160278,
+          "coefficient": -5.008311748504639
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.3111572265625,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.8332349283420332e-13,
+      "P_large": 0.4371302461241956,
+      "group": "paired_control",
+      "P_cold_percent": 1.8332349283420333e-11,
+      "norm_match_scale": 5.008311748504639
+    },
+    {
+      "id": "norm_matched_pair_2",
+      "kind": "pair",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 55,
+          "label": "Think Token Start",
+          "source_gate": 0.6433084011077881,
+          "coefficient": -12.646632194519043
+        },
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 71,
+          "label": "Proper Noun Subword Boundary Gate",
+          "source_gate": 0.6523069143295288,
+          "coefficient": 12.646632194519043
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.31336212158203,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 7.630221669592594e-12,
+      "P_large": 0.5494133432409551,
+      "group": "paired_control",
+      "P_cold_percent": 7.630221669592594e-10,
+      "norm_match_scale": 12.646632194519043
+    },
+    {
+      "id": "norm_matched_pair_reverse_2",
+      "kind": "pair_reverse",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 55,
+          "label": "Think Token Start",
+          "source_gate": 0.6433084011077881,
+          "coefficient": 12.646632194519043
+        },
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 71,
+          "label": "Proper Noun Subword Boundary Gate",
+          "source_gate": 0.6523069143295288,
+          "coefficient": -12.646632194519043
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.3238525390625,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 3.8842473640904337e-13,
+      "P_large": 0.677614340266021,
+      "group": "paired_control",
+      "P_cold_percent": 3.884247364090434e-11,
+      "norm_match_scale": 12.646632194519043
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_3",
+      "kind": "pair",
+      "layer": 9,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 9,
+          "id": 809,
+          "label": "Small Noun Phrase Gate",
+          "source_gate": 1.6836100816726685,
+          "coefficient": -11.323575973510742
+        },
+        {
+          "source": "donor",
+          "layer": 9,
+          "id": 1348,
+          "label": "Thermal State and Heating Mechanism Gate",
+          "source_gate": 1.7746132612228394,
+          "coefficient": 11.323575973510742
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32460021972656,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 5.82332227766006e-10,
+      "P_large": 0.6777478295945576,
+      "group": "paired_control",
+      "P_cold_percent": 5.82332227766006e-08,
+      "norm_match_scale": 11.323575973510742
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_3",
+      "kind": "pair_reverse",
+      "layer": 9,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 9,
+          "id": 809,
+          "label": "Small Noun Phrase Gate",
+          "source_gate": 1.6836100816726685,
+          "coefficient": 11.323575973510742
+        },
+        {
+          "source": "donor",
+          "layer": 9,
+          "id": 1348,
+          "label": "Thermal State and Heating Mechanism Gate",
+          "source_gate": 1.7746132612228394,
+          "coefficient": -11.323575973510742
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.31810760498047,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.7380295593632153e-13,
+      "P_large": 0.41442876595346057,
+      "group": "paired_control",
+      "P_cold_percent": 1.7380295593632152e-11,
+      "norm_match_scale": 11.323575973510742
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_4",
+      "kind": "pair",
+      "layer": 20,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 20,
+          "id": 43,
+          "label": "Final Token or Entity Name",
+          "source_gate": 1.4253640174865723,
+          "coefficient": -6.895927906036377
+        },
+        {
+          "source": "donor",
+          "layer": 20,
+          "id": 200,
+          "label": "Code and Technical Token Detection",
+          "source_gate": 0.5954552888870239,
+          "coefficient": 6.895927906036377
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.33604431152344,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 3.7168958325527777e-13,
+      "P_large": 0.9434448743876391,
+      "group": "paired_control",
+      "P_cold_percent": 3.716895832552778e-11,
+      "norm_match_scale": 6.895927906036377
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_4",
+      "kind": "pair_reverse",
+      "layer": 20,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 20,
+          "id": 43,
+          "label": "Final Token or Entity Name",
+          "source_gate": 1.4253640174865723,
+          "coefficient": 6.895927906036377
+        },
+        {
+          "source": "donor",
+          "layer": 20,
+          "id": 200,
+          "label": "Code and Technical Token Detection",
+          "source_gate": 0.5954552888870239,
+          "coefficient": -6.895927906036377
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.34165954589844,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 8.824345731675498e-12,
+      "P_large": 0.719998137406127,
+      "group": "paired_control",
+      "P_cold_percent": 8.824345731675498e-10,
+      "norm_match_scale": 6.895927906036377
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_5",
+      "kind": "pair",
+      "layer": 11,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 11,
+          "id": 532,
+          "label": "Small-Size Token Gate",
+          "source_gate": 1.1386626958847046,
+          "coefficient": -18.864505767822266
+        },
+        {
+          "source": "donor",
+          "layer": 11,
+          "id": 2210,
+          "label": "Thermal Intensity and Heat Conditions",
+          "source_gate": 0.6898654699325562,
+          "coefficient": 18.864505767822266
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32559967041016,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 6.550457244075243e-09,
+      "P_large": 0.8035378556445416,
+      "group": "paired_control",
+      "P_cold_percent": 6.550457244075243e-07,
+      "norm_match_scale": 18.864505767822266
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_5",
+      "kind": "pair_reverse",
+      "layer": 11,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 11,
+          "id": 532,
+          "label": "Small-Size Token Gate",
+          "source_gate": 1.1386626958847046,
+          "coefficient": 18.864505767822266
+        },
+        {
+          "source": "donor",
+          "layer": 11,
+          "id": 2210,
+          "label": "Thermal Intensity and Heat Conditions",
+          "source_gate": 0.6898654699325562,
+          "coefficient": -18.864505767822266
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32858276367188,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 7.51754497130701e-12,
+      "P_large": 0.5762109239806364,
+      "group": "paired_control",
+      "P_cold_percent": 7.517544971307009e-10,
+      "norm_match_scale": 18.864505767822266
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_6",
+      "kind": "pair",
+      "layer": 35,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 35,
+          "id": 1859,
+          "label": "No cached dashboard label",
+          "source_gate": 2.17985463142395,
+          "coefficient": -1.342909812927246
+        },
+        {
+          "source": "donor",
+          "layer": 35,
+          "id": 9,
+          "label": "No cached dashboard label",
+          "source_gate": 0.6132434606552124,
+          "coefficient": 1.342909812927246
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32913970947266,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 2.800057682783557e-13,
+      "P_large": 0.11602307433691811,
+      "group": "paired_control",
+      "P_cold_percent": 2.800057682783557e-11,
+      "norm_match_scale": 1.342909812927246
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_6",
+      "kind": "pair_reverse",
+      "layer": 35,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 35,
+          "id": 1859,
+          "label": "No cached dashboard label",
+          "source_gate": 2.17985463142395,
+          "coefficient": 1.342909812927246
+        },
+        {
+          "source": "donor",
+          "layer": 35,
+          "id": 9,
+          "label": "No cached dashboard label",
+          "source_gate": 0.6132434606552124,
+          "coefficient": -1.342909812927246
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.31729888916016,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.4147956253406977e-12,
+      "P_large": 0.966536680028767,
+      "group": "paired_control",
+      "P_cold_percent": 1.4147956253406976e-10,
+      "norm_match_scale": 1.342909812927246
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_7",
+      "kind": "pair",
+      "layer": 20,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 20,
+          "id": 399,
+          "label": "Scope-Specifying Phrases Trigger Gate",
+          "source_gate": 0.7364422082901001,
+          "coefficient": -18.163982391357422
+        },
+        {
+          "source": "donor",
+          "layer": 20,
+          "id": 200,
+          "label": "Code and Technical Token Detection",
+          "source_gate": 0.5954552888870239,
+          "coefficient": 18.163982391357422
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32340240478516,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 3.7700556635949033e-13,
+      "P_large": 0.617845753370624,
+      "group": "paired_control",
+      "P_cold_percent": 3.770055663594903e-11,
+      "norm_match_scale": 18.163982391357422
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_7",
+      "kind": "pair_reverse",
+      "layer": 20,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 20,
+          "id": 399,
+          "label": "Scope-Specifying Phrases Trigger Gate",
+          "source_gate": 0.7364422082901001,
+          "coefficient": 18.163982391357422
+        },
+        {
+          "source": "donor",
+          "layer": 20,
+          "id": 200,
+          "label": "Code and Technical Token Detection",
+          "source_gate": 0.5954552888870239,
+          "coefficient": -18.163982391357422
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32097625732422,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 2.214469603312616e-12,
+      "P_large": 0.9175867089515446,
+      "group": "paired_control",
+      "P_cold_percent": 2.214469603312616e-10,
+      "norm_match_scale": 18.163982391357422
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_8",
+      "kind": "pair",
+      "layer": 34,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 34,
+          "id": 2338,
+          "label": "No cached dashboard label",
+          "source_gate": 1.4282046556472778,
+          "coefficient": -3.207091808319092
+        },
+        {
+          "source": "donor",
+          "layer": 34,
+          "id": 1550,
+          "label": "No cached dashboard label",
+          "source_gate": 0.626602053642273,
+          "coefficient": 3.207091808319092
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32752227783203,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 4.682518367353861e-13,
+      "P_large": 0.5614289038689659,
+      "group": "paired_control",
+      "P_cold_percent": 4.682518367353861e-11,
+      "norm_match_scale": 3.207091808319092
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_8",
+      "kind": "pair_reverse",
+      "layer": 34,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 34,
+          "id": 2338,
+          "label": "No cached dashboard label",
+          "source_gate": 1.4282046556472778,
+          "coefficient": 3.207091808319092
+        },
+        {
+          "source": "donor",
+          "layer": 34,
+          "id": 1550,
+          "label": "No cached dashboard label",
+          "source_gate": 0.626602053642273,
+          "coefficient": -3.207091808319092
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32242584228516,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 2.9178017175585274e-12,
+      "P_large": 0.8309458741640232,
+      "group": "paired_control",
+      "P_cold_percent": 2.9178017175585275e-10,
+      "norm_match_scale": 3.207091808319092
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_9",
+      "kind": "pair",
+      "layer": 34,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 34,
+          "id": 159,
+          "label": "No cached dashboard label",
+          "source_gate": 1.7230730056762695,
+          "coefficient": -1.0734350681304932
+        },
+        {
+          "source": "donor",
+          "layer": 34,
+          "id": 401,
+          "label": "No cached dashboard label",
+          "source_gate": 1.1213749647140503,
+          "coefficient": 1.0734350681304932
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.3359146118164,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 5.607303737540773e-12,
+      "P_large": 0.9685539150032254,
+      "group": "paired_control",
+      "P_cold_percent": 5.607303737540773e-10,
+      "norm_match_scale": 1.0734350681304932
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_9",
+      "kind": "pair_reverse",
+      "layer": 34,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 34,
+          "id": 159,
+          "label": "No cached dashboard label",
+          "source_gate": 1.7230730056762695,
+          "coefficient": 1.0734350681304932
+        },
+        {
+          "source": "donor",
+          "layer": 34,
+          "id": 401,
+          "label": "No cached dashboard label",
+          "source_gate": 1.1213749647140503,
+          "coefficient": -1.0734350681304932
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.33576202392578,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.2977232763849378e-12,
+      "P_large": 0.6093212095201872,
+      "group": "paired_control",
+      "P_cold_percent": 1.2977232763849377e-10,
+      "norm_match_scale": 1.0734350681304932
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_10",
+      "kind": "pair",
+      "layer": 18,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 18,
+          "id": 54,
+          "label": "Final Token Completion Gate",
+          "source_gate": 1.2173234224319458,
+          "coefficient": -5.576541423797607
+        },
+        {
+          "source": "donor",
+          "layer": 18,
+          "id": 51,
+          "label": "User Turn Start",
+          "source_gate": 1.426079273223877,
+          "coefficient": 5.576541423797607
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.3235092163086,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 3.448382131637163e-12,
+      "P_large": 0.6749504877867284,
+      "group": "paired_control",
+      "P_cold_percent": 3.448382131637163e-10,
+      "norm_match_scale": 5.576541423797607
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_10",
+      "kind": "pair_reverse",
+      "layer": 18,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 18,
+          "id": 54,
+          "label": "Final Token Completion Gate",
+          "source_gate": 1.2173234224319458,
+          "coefficient": 5.576541423797607
+        },
+        {
+          "source": "donor",
+          "layer": 18,
+          "id": 51,
+          "label": "User Turn Start",
+          "source_gate": 1.426079273223877,
+          "coefficient": -5.576541423797607
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32176971435547,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 3.466561912244057e-13,
+      "P_large": 0.6047483187792886,
+      "group": "paired_control",
+      "P_cold_percent": 3.4665619122440566e-11,
+      "norm_match_scale": 5.576541423797607
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_11",
+      "kind": "pair",
+      "layer": 11,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 11,
+          "id": 485,
+          "label": "Physical Size Adjectives",
+          "source_gate": 0.6611433029174805,
+          "coefficient": -11.374269485473633
+        },
+        {
+          "source": "donor",
+          "layer": 11,
+          "id": 14,
+          "label": "New User Turn Transition",
+          "source_gate": 1.2707061767578125,
+          "coefficient": 11.374269485473633
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.3329849243164,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 8.824558312021566e-13,
+      "P_large": 0.7271898768165801,
+      "group": "paired_control",
+      "P_cold_percent": 8.824558312021565e-11,
+      "norm_match_scale": 11.374269485473633
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_11",
+      "kind": "pair_reverse",
+      "layer": 11,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 11,
+          "id": 485,
+          "label": "Physical Size Adjectives",
+          "source_gate": 0.6611433029174805,
+          "coefficient": 11.374269485473633
+        },
+        {
+          "source": "donor",
+          "layer": 11,
+          "id": 14,
+          "label": "New User Turn Transition",
+          "source_gate": 1.2707061767578125,
+          "coefficient": -11.374269485473633
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32730102539062,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 2.83515738852084e-12,
+      "P_large": 0.8074100170755634,
+      "group": "paired_control",
+      "P_cold_percent": 2.83515738852084e-10,
+      "norm_match_scale": 11.374269485473633
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_12",
+      "kind": "pair",
+      "layer": 18,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 18,
+          "id": 194,
+          "label": "Sentence-Start Gate Activation",
+          "source_gate": 0.6292724609375,
+          "coefficient": -26.16529083251953
+        },
+        {
+          "source": "donor",
+          "layer": 18,
+          "id": 1416,
+          "label": "Thermal and Extreme Weather Tokens",
+          "source_gate": 0.6854203939437866,
+          "coefficient": 26.16529083251953
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.31841278076172,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.351380957137289e-12,
+      "P_large": 0.923214095640871,
+      "group": "paired_control",
+      "P_cold_percent": 1.351380957137289e-10,
+      "norm_match_scale": 26.16529083251953
+    },
+    {
+      "id": "fixed_site_norm_matched_pair_reverse_12",
+      "kind": "pair_reverse",
+      "layer": 18,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 18,
+          "id": 194,
+          "label": "Sentence-Start Gate Activation",
+          "source_gate": 0.6292724609375,
+          "coefficient": 26.16529083251953
+        },
+        {
+          "source": "donor",
+          "layer": 18,
+          "id": 1416,
+          "label": "Thermal and Extreme Weather Tokens",
+          "source_gate": 0.6854203939437866,
+          "coefficient": -26.16529083251953
+        }
+      ],
+      "intended_delta_norm": 65.32066345214844,
+      "actual_delta_norm": 65.32479095458984,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.0507517377409904e-12,
+      "P_large": 0.921718637668288,
+      "group": "paired_control",
+      "P_cold_percent": 1.0507517377409904e-10,
+      "norm_match_scale": 26.16529083251953
+    },
+    {
+      "id": "selected_positive_4.5",
+      "kind": "positive",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 941,
+          "label": "Thermal State and Heat Action Gate",
+          "source_gate": 1.6072452068328857,
+          "coefficient": 4.5
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.507694244384766,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 2.5176970621829936e-09,
+      "P_large": 0.6538212927999772,
+      "group": "reference_single",
+      "P_cold_percent": 2.5176970621829937e-07,
+      "norm_match_scale": null
+    },
+    {
+      "id": "norm_matched_positive_0",
+      "kind": "positive",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 8,
+          "label": "Numbered List and Paragraph Start Detection",
+          "source_gate": 1.4674502611160278,
+          "coefficient": 3.382134437561035
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.5235595703125,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 4.770800200901757e-12,
+      "P_large": 0.9337868599855262,
+      "group": "single_control",
+      "P_cold_percent": 4.770800200901757e-10,
+      "norm_match_scale": 3.382134437561035
+    },
+    {
+      "id": "norm_matched_positive_1",
+      "kind": "positive",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 22,
+          "id": 71,
+          "label": "Proper Noun Subword Boundary Gate",
+          "source_gate": 0.6523069143295288,
+          "coefficient": 10.570655822753906
+        }
+      ],
+      "intended_delta_norm": 42.51240158081055,
+      "actual_delta_norm": 42.51806640625,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 5.618178391115818e-12,
+      "P_large": 0.7557734369746738,
+      "group": "single_control",
+      "P_cold_percent": 5.618178391115818e-10,
+      "norm_match_scale": 10.570655822753906
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_2",
+      "kind": "positive",
+      "layer": 31,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 31,
+          "id": 576,
+          "label": "Cooking State and Ingredient Tokens",
+          "source_gate": 0.705557107925415,
+          "coefficient": 3.6247992515563965
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.51742935180664,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.0424848715914364e-11,
+      "P_large": 0.8505867614928364,
+      "group": "single_control",
+      "P_cold_percent": 1.0424848715914364e-09,
+      "norm_match_scale": 3.6247992515563965
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_3",
+      "kind": "positive",
+      "layer": 11,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 11,
+          "id": 29,
+          "label": "Prompt Start Creative Request Gate",
+          "source_gate": 1.4723153114318848,
+          "coefficient": 6.729647159576416
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.51407241821289,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 3.2059065484086953e-13,
+      "P_large": 0.5592764948076816,
+      "group": "single_control",
+      "P_cold_percent": 3.2059065484086955e-11,
+      "norm_match_scale": 6.729647159576416
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_4",
+      "kind": "positive",
+      "layer": 35,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 35,
+          "id": 253,
+          "label": "No cached dashboard label",
+          "source_gate": 1.6327568292617798,
+          "coefficient": 0.38066717982292175
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.54463577270508,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.7129285101053192e-12,
+      "P_large": 0.5527681460015292,
+      "group": "single_control",
+      "P_cold_percent": 1.7129285101053193e-10,
+      "norm_match_scale": 0.38066717982292175
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_5",
+      "kind": "positive",
+      "layer": 10,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 10,
+          "id": 1678,
+          "label": "Culinary Warmth and Spice Tokens",
+          "source_gate": 1.473569631576538,
+          "coefficient": 12.556256294250488
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.50799560546875,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.9133809002117215e-11,
+      "P_large": 0.8356342673696244,
+      "group": "single_control",
+      "P_cold_percent": 1.9133809002117216e-09,
+      "norm_match_scale": 12.556256294250488
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_6",
+      "kind": "positive",
+      "layer": 29,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 29,
+          "id": 512,
+          "label": "Compound Word and Identifier Suffixes",
+          "source_gate": 0.8951899409294128,
+          "coefficient": 3.858403205871582
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.5101203918457,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 9.251950828467491e-13,
+      "P_large": 0.6728238115289754,
+      "group": "single_control",
+      "P_cold_percent": 9.251950828467491e-11,
+      "norm_match_scale": 3.858403205871582
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_7",
+      "kind": "positive",
+      "layer": 34,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 34,
+          "id": 159,
+          "label": "No cached dashboard label",
+          "source_gate": 1.5875678062438965,
+          "coefficient": 0.9375127553939819
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.52162551879883,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.4791087272633295e-12,
+      "P_large": 0.6524104302449538,
+      "group": "single_control",
+      "P_cold_percent": 1.4791087272633295e-10,
+      "norm_match_scale": 0.9375127553939819
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_8",
+      "kind": "positive",
+      "layer": 31,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 31,
+          "id": 135,
+          "label": "User Prompt and Response Start",
+          "source_gate": 1.1491789817810059,
+          "coefficient": 2.194572925567627
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.52008819580078,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.4390035619252016e-12,
+      "P_large": 0.814997516693082,
+      "group": "single_control",
+      "P_cold_percent": 1.4390035619252017e-10,
+      "norm_match_scale": 2.194572925567627
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_9",
+      "kind": "positive",
+      "layer": 18,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 18,
+          "id": 21,
+          "label": "Key Term and Noun Phrase Detection",
+          "source_gate": 1.3962746858596802,
+          "coefficient": 8.059391975402832
+        }
+      ],
+      "intended_delta_norm": 42.512393951416016,
+      "actual_delta_norm": 42.509525299072266,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.748976310624793e-12,
+      "P_large": 0.7247051007156514,
+      "group": "single_control",
+      "P_cold_percent": 1.748976310624793e-10,
+      "norm_match_scale": 8.059391975402832
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_10",
+      "kind": "positive",
+      "layer": 18,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 18,
+          "id": 51,
+          "label": "User Turn Start",
+          "source_gate": 1.426079273223877,
+          "coefficient": 4.753150939941406
+        }
+      ],
+      "intended_delta_norm": 42.51239776611328,
+      "actual_delta_norm": 42.50778579711914,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 2.222784765706278e-12,
+      "P_large": 0.9210321762019347,
+      "group": "single_control",
+      "P_cold_percent": 2.2227847657062779e-10,
+      "norm_match_scale": 4.753150939941406
+    },
+    {
+      "id": "fixed_site_norm_matched_positive_11",
+      "kind": "positive",
+      "layer": 16,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "donor",
+          "layer": 16,
+          "id": 2174,
+          "label": "Thermal State and Temperature Tokens",
+          "source_gate": 0.6348252296447754,
+          "coefficient": 19.320592880249023
+        }
+      ],
+      "intended_delta_norm": 42.51240158081055,
+      "actual_delta_norm": 42.490623474121094,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 2.7504845122005525e-11,
+      "P_large": 0.9355142129234781,
+      "group": "single_control",
+      "P_cold_percent": 2.7504845122005525e-09,
+      "norm_match_scale": 19.320592880249023
+    },
+    {
+      "id": "selected_negative_4.5",
+      "kind": "negative",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 2339,
+          "label": "Small-Size Adjectives and Idiomatic Phrases",
+          "source_gate": 1.5479154586791992,
+          "coefficient": -4.5
+        }
+      ],
+      "intended_delta_norm": 50.84189987182617,
+      "actual_delta_norm": 50.84248733520508,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 0.0001589100606864925,
+      "P_large": 0.0008070118773897255,
+      "group": "reference_single",
+      "P_cold_percent": 0.01589100606864925,
+      "norm_match_scale": null
+    },
+    {
+      "id": "norm_matched_negative_0",
+      "kind": "negative",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 8,
+          "label": "Numbered List and Paragraph Start Detection",
+          "source_gate": 1.4556559324264526,
+          "coefficient": -3.8456084728240967
+        }
+      ],
+      "intended_delta_norm": 50.84189987182617,
+      "actual_delta_norm": 50.846248626708984,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 5.494810691099489e-13,
+      "P_large": 0.6189058780040914,
+      "group": "single_control",
+      "P_cold_percent": 5.494810691099489e-11,
+      "norm_match_scale": 3.8456084728240967
+    },
+    {
+      "id": "norm_matched_negative_1",
+      "kind": "negative",
+      "layer": 22,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 22,
+          "id": 55,
+          "label": "Think Token Start",
+          "source_gate": 0.6433084011077881,
+          "coefficient": -13.001550674438477
+        }
+      ],
+      "intended_delta_norm": 50.84189987182617,
+      "actual_delta_norm": 50.846248626708984,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 5.710045909052529e-13,
+      "P_large": 0.879080200211731,
+      "group": "single_control",
+      "P_cold_percent": 5.710045909052529e-11,
+      "norm_match_scale": 13.001550674438477
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_2",
+      "kind": "negative",
+      "layer": 29,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 29,
+          "id": 512,
+          "label": "Compound Word and Identifier Suffixes",
+          "source_gate": 0.8754196763038635,
+          "coefficient": -5.403192043304443
+        }
+      ],
+      "intended_delta_norm": 50.84189987182617,
+      "actual_delta_norm": 50.842445373535156,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 3.22051021177697e-12,
+      "P_large": 0.9171526828143692,
+      "group": "single_control",
+      "P_cold_percent": 3.22051021177697e-10,
+      "norm_match_scale": 5.403192043304443
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_3",
+      "kind": "negative",
+      "layer": 18,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 18,
+          "id": 54,
+          "label": "Final Token Completion Gate",
+          "source_gate": 1.2173234224319458,
+          "coefficient": -8.977510452270508
+        }
+      ],
+      "intended_delta_norm": 50.84189987182617,
+      "actual_delta_norm": 50.841148376464844,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 3.557570041428367e-12,
+      "P_large": 0.37271419855314936,
+      "group": "single_control",
+      "P_cold_percent": 3.557570041428367e-10,
+      "norm_match_scale": 8.977510452270508
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_4",
+      "kind": "negative",
+      "layer": 10,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 10,
+          "id": 1122,
+          "label": "Quoted String Boundary Token Detection",
+          "source_gate": 0.623367428779602,
+          "coefficient": -29.876733779907227
+        }
+      ],
+      "intended_delta_norm": 50.84189987182617,
+      "actual_delta_norm": 50.83852005004883,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 4.3985610424355587e-13,
+      "P_large": 0.6771728254754739,
+      "group": "single_control",
+      "P_cold_percent": 4.3985610424355584e-11,
+      "norm_match_scale": 29.876733779907227
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_5",
+      "kind": "negative",
+      "layer": 31,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 31,
+          "id": 135,
+          "label": "User Prompt and Response Start",
+          "source_gate": 1.3458023071289062,
+          "coefficient": -2.6028709411621094
+        }
+      ],
+      "intended_delta_norm": 50.84189987182617,
+      "actual_delta_norm": 50.84295654296875,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.862683727157597e-12,
+      "P_large": 0.6010946892260065,
+      "group": "single_control",
+      "P_cold_percent": 1.8626837271575968e-10,
+      "norm_match_scale": 2.6028709411621094
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_6",
+      "kind": "negative",
+      "layer": 20,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 20,
+          "id": 50,
+          "label": "Idiomatic Verbs of State and Perception",
+          "source_gate": 0.5586038827896118,
+          "coefficient": -19.277843475341797
+        }
+      ],
+      "intended_delta_norm": 50.841896057128906,
+      "actual_delta_norm": 50.84494400024414,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 4.90507080997034e-12,
+      "P_large": 0.9600675938562925,
+      "group": "single_control",
+      "P_cold_percent": 4.90507080997034e-10,
+      "norm_match_scale": 19.277843475341797
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_7",
+      "kind": "negative",
+      "layer": 16,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 16,
+          "id": 51,
+          "label": "Token \"such\" List Introduction",
+          "source_gate": 1.2660412788391113,
+          "coefficient": -3.6843678951263428
+        }
+      ],
+      "intended_delta_norm": 50.84190368652344,
+      "actual_delta_norm": 50.8812255859375,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.8144288326597952e-12,
+      "P_large": 0.9653636681138192,
+      "group": "single_control",
+      "P_cold_percent": 1.8144288326597952e-10,
+      "norm_match_scale": 3.6843678951263428
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_8",
+      "kind": "negative",
+      "layer": 20,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 20,
+          "id": 200,
+          "label": "Code and Technical Token Detection",
+          "source_gate": 0.5302835702896118,
+          "coefficient": -27.07460594177246
+        }
+      ],
+      "intended_delta_norm": 50.84189987182617,
+      "actual_delta_norm": 50.843868255615234,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 9.835455690877771e-13,
+      "P_large": 0.918409026863822,
+      "group": "single_control",
+      "P_cold_percent": 9.835455690877771e-11,
+      "norm_match_scale": 27.07460594177246
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_9",
+      "kind": "negative",
+      "layer": 34,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 34,
+          "id": 429,
+          "label": "No cached dashboard label",
+          "source_gate": 1.9653425216674805,
+          "coefficient": -1.4908616542816162
+        }
+      ],
+      "intended_delta_norm": 50.841896057128906,
+      "actual_delta_norm": 50.84461975097656,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.644282313322424e-12,
+      "P_large": 0.874837511855851,
+      "group": "single_control",
+      "P_cold_percent": 1.644282313322424e-10,
+      "norm_match_scale": 1.4908616542816162
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_10",
+      "kind": "negative",
+      "layer": 16,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 16,
+          "id": 27,
+          "label": "New Sentence or List Item Trigger",
+          "source_gate": 1.0436292886734009,
+          "coefficient": -9.223690032958984
+        }
+      ],
+      "intended_delta_norm": 50.841896057128906,
+      "actual_delta_norm": 50.85700225830078,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 4.992234138719279e-13,
+      "P_large": 0.4962265630697492,
+      "group": "single_control",
+      "P_cold_percent": 4.9922341387192796e-11,
+      "norm_match_scale": 9.223690032958984
+    },
+    {
+      "id": "fixed_site_norm_matched_negative_11",
+      "kind": "negative",
+      "layer": 11,
+      "edit_layer": 22,
+      "effective_terms": [
+        {
+          "source": "receiver",
+          "layer": 11,
+          "id": 532,
+          "label": "Small-Size Token Gate",
+          "source_gate": 1.1386626958847046,
+          "coefficient": -18.72205352783203
+        }
+      ],
+      "intended_delta_norm": 50.841896057128906,
+      "actual_delta_norm": 50.839080810546875,
+      "native_mlp_norm": 25.853179931640625,
+      "P_cold": 1.0455776799333605e-11,
+      "P_large": 0.9667005636037781,
+      "group": "single_control",
+      "P_cold_percent": 1.0455776799333605e-09,
+      "norm_match_scale": 18.72205352783203
+    }
+  ]
+}

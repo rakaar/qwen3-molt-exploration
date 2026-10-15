@@ -54,6 +54,20 @@ Base Qwen3-4B revision: `1cfa9a7208912126459214e8b04321603b3df60c`. MOLT revisio
 
 ## Reproduce and saved evidence
 
+### Dedicated L2-matched figures
+
+`plot_norm_matched.py` makes a separate paired comparison with all 13 active alternative pairs in both sign directions (26 conditions), alongside the selected pair at 4.5×. Every source feature ID and saved label is printed; missing dashboard labels are identified explicitly. The probability axis is logarithmic. Right-hand columns show the actual applied `L2(MLP_after - MLP_before)`, not only the intended FP32 vector norm.
+
+The 24 single-feature controls have their own supplementary figure, matched to the respective selected donor-only or receiver-only intervention. They are not assigned the paired edit's larger norm target. All 50 controls and three references are exported in CSV/JSON and in the website table, with effective coefficients, source gates, intended/actual norms and verified full-vocabulary probabilities.
+
+Rebuild the figures and update the HTML from existing saved records, without loading a model or using a GPU:
+
+```text
+python3 experiments/active-small-hot-controls/plot_norm_matched.py results/2026-10-14-active-small-hot-controls
+```
+
+This writes `l2-matched-pairs.png/.pdf`, `l2-matched-singles.png/.pdf`, `l2-matched-data.csv/.json` and the reusable `norm-matched-section.html` fragment. The report generator preserves this fragment on subsequent rebuilds. The JSON records hashes of the original result and verification files; no original inference record is modified.
+
 The complete raw-data snapshot is commit `19b658a1ae8746c8c31d08e3016fe8bb8cf0f229` on branch `data/2026-10-14-active-controls`. Large NPZ files are retained in that snapshot instead of the website tree. After cloning, restore them with:
 
 ```text
