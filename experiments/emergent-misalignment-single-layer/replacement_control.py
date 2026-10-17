@@ -101,13 +101,17 @@ def allocation(value,user,now=None):
 def prepare(offer_id):
     network();c=official_client();source(c)
     from vastai.api import offers
-    query={'id':{'eq':offer_id},'num_gpus':{'eq':1},'gpu_ram':{'gte':24000},
+    query={'num_gpus':{'eq':1},'gpu_ram':{'gte':24000},
         'compute_cap':{'gte':800},'cuda_max_good':{'gte':12.8},
         'dph_total':{'lte':.26},'reliability2':{'gte':.98}}
-    rows=offers.search_offers(c,query,storage=50,limit=3)
+    rows=[x for x in offers.search_offers(c,query,storage=50,limit=200,
+        order=[['dph_total','asc']]) if x.get('id')==offer_id]
     if len(rows)!=1 or rows[0]['id']!=offer_id:raise ValueError('Selected offer no longer available')
     offer=rows[0]
-    if offer['gpu_name'] not in ('RTX 3090','RTX 3090 Ti') or offer['machine_id']==39772:
+    if (offer['gpu_name'] not in ('RTX 3090','RTX 3090 Ti') or offer['machine_id']==39772
+            or not 0<float(offer['dph_total'])<=.26
+            or not 0<float(offer['storage_total_cost'])<=.061
+            or not 0<=float(offer['inet_down_cost'])<=.016):
         raise ValueError('Compatible independent Ampere replacement required')
     value={'account':710735,'base_label':'spar-em-ft-20261017-r1-'+secrets.token_hex(6),
         'label':None,'instance_id':None,'offer_id':offer_id,'dph_total':offer['dph_total'],
