@@ -128,7 +128,7 @@ def guard_mutation(args, call):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("status", "cli", "staged-launch", "log-metadata", "log-discover", "recover-worker-auth"))
+    parser.add_argument("mode", choices=("status", "cli", "staged-launch", "log-metadata", "log-discover", "frame-log-metadata", "recover-worker-auth"))
     parser.add_argument("args", nargs=argparse.REMAINDER)
     parsed = parser.parse_args()
     require_project()
@@ -141,7 +141,7 @@ def main():
     call = lambda command: call_cli(key, command)
     user = call(["show", "user"])
     check_identity(user)
-    if parsed.mode in ("staged-launch", "log-metadata", "log-discover", "recover-worker-auth"):
+    if parsed.mode in ("staged-launch", "log-metadata", "log-discover", "frame-log-metadata", "recover-worker-auth"):
         # Task-specific infrastructure is kept outside the pinned experiment.
         # Generic CLI startup/credential/endpoint overrides remain prohibited.
         sys.path.insert(0, "/workspace/work/staged-launch")

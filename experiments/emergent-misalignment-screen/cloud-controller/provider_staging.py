@@ -147,10 +147,12 @@ def run(mode, args, key, initial_user, guard):
                           'recovered_variable_name': 'WEB_PASSWORD', 'saved_mode': '0600',
                           'value_printed': False}, indent=2))
         return
-    if mode in ('log-metadata', 'log-discover'):
+    if mode in ('log-metadata', 'log-discover', 'frame-log-metadata'):
         if len(args) != 1 or not args[0].isdigit():
             raise guard.GuardError('Log metadata requires one explicit instance ID')
         identifier = int(args[0])
+        if mode == 'frame-log-metadata' and identifier != 56373998:
+            raise guard.GuardError('Task-frame logs are restricted to existing instance 56373998')
         rows = guard.instance_rows(call(['show', 'instances']))
         matches = [r for r in rows if r.get('id') == identifier and r.get('label') == guard.LABEL]
         if len(matches) != 1:
@@ -200,7 +202,9 @@ def run(mode, args, key, initial_user, guard):
         configure(VastSession)
         guard.check_identity(guard.call_cli(key, ['show', 'user']))
         client = VastClient(api_key=key, server_url=guard.HOST, retry=1, timeout=30)
-        response = client.put(f'/instances/request_logs/{identifier}/', json_data={'tail': '2000'})
+        request = ({'tail': '10000', 'filter': 'EMSCREEN2 '}
+                   if mode == 'frame-log-metadata' else {'tail': '2000'})
+        response = client.put(f'/instances/request_logs/{identifier}/', json_data=request)
         response.raise_for_status()
         result = response.json()
         url = result.get('result_url')

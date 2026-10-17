@@ -100,7 +100,7 @@ class Portal:
 def allowed_result(name):
     if name in ('responses.jsonl', 'generation-status.json', 'summary.json', 'summary.md',
                 'worker-exit-code.txt', 'worker.log', 'smoke.json', 'provenance.json',
-                'task-status.json', 'native-deadline-status.json', 'SHA256SUMS'):
+                'task-status.json', 'native-deadline-status.json', 'native-deadline-v2-status.json', 'control-provenance.json', 'SHA256SUMS'):
         return True
     if name.startswith('runtime-') and name.endswith('.json'):
         return name[8:-5].isdigit()
