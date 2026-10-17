@@ -5,11 +5,27 @@ import sys
 import tempfile
 import unittest
 from unittest.mock import patch
+from datetime import datetime, timezone, timedelta
 
 import local_run as local
 
 
 class LocalTests(unittest.TestCase):
+    def test_absolute_stop_only_shortens_execution(self):
+        limit=datetime.now(timezone.utc)+timedelta(minutes=40)
+        with tempfile.TemporaryDirectory() as folder, patch.dict(local.os.environ,{},clear=True), \
+                patch.object(local.trial,'DEADLINE'), patch.object(local.trial,'OUTPUT'), \
+                patch.object(local.trial,'status'), patch.object(local.trial,'fetch'):
+            local.execution_context(folder,180,stop_at=limit.isoformat())
+            self.assertEqual(local.trial.DEADLINE,limit)
+
+    def test_training_preserves_absolute_stop_and_backup_reserve(self):
+        now=10000.0
+        deadline=datetime.fromtimestamp(now+3600,timezone.utc)
+        self.assertEqual(local.trial.training_cutoff(now,deadline,1200),now+2400)
+        for reserve in (0,899,5401,True):
+            with self.assertRaises(ValueError):local.trial.training_cutoff(now,deadline,reserve)
+
     def test_plan_preserves_recipe_without_importing_gpu_packages(self):
         before=set(sys.modules)
         result=local.plan()

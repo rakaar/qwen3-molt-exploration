@@ -55,7 +55,7 @@ def plan():
         'requires':'Linux, NVIDIA CUDA, BF16, at least 24 GB VRAM'}
 
 
-def execution_context(output,minutes,cache=None,dataset=None):
+def execution_context(output,minutes,cache=None,dataset=None,stop_at=None):
     # A cloud/controller environment must never accidentally invoke this route.
     if any(name in os.environ for name in CREDENTIAL_NAMES) or 'CONTAINER_ID' in os.environ:
         raise ValueError('Use a credential-free local CUDA environment; cloud execution is disabled here')
@@ -70,7 +70,13 @@ def execution_context(output,minutes,cache=None,dataset=None):
     trial.OUTPUT=output
     # This local invocation has its own wall-clock bound. Cloud files and their
     # historical absolute deadlines are neither edited nor executed.
-    trial.DEADLINE=datetime.now(timezone.utc)+timedelta(minutes=minutes)
+    deadline=datetime.now(timezone.utc)+timedelta(minutes=minutes)
+    if stop_at is not None:
+        limit=datetime.fromisoformat(stop_at)
+        if limit.tzinfo is None or limit<=datetime.now(timezone.utc):
+            raise ValueError('A future timezone-aware absolute stop is required')
+        deadline=min(deadline,limit)
+    trial.DEADLINE=deadline
     def local_status(phase,**extra):
         trial.write(output/'local-status.json',{'phase':phase,**extra,
             'checked_at_utc':datetime.now(timezone.utc).isoformat(),
@@ -142,13 +148,15 @@ def main():
     parser.add_argument('--cache-dir',type=Path)
     parser.add_argument('--dataset',type=Path)
     parser.add_argument('--minutes',type=int,default=180)
+    parser.add_argument('--stop-at',help='Absolute timezone-aware deadline; can only shorten the duration')
+    parser.add_argument('--evaluation-reserve-minutes',type=int,choices=(15,20,30,60,90),default=90)
     parser.add_argument('--audit',type=Path)
     args=parser.parse_args()
     os.umask(0o077)
     checked=plan()
     if args.mode=='plan':print(json.dumps(checked,indent=2));return
     if args.output is None:parser.error('execution requires --output outside the repository')
-    output=execution_context(args.output,args.minutes,args.cache_dir,args.dataset)
+    output=execution_context(args.output,args.minutes,args.cache_dir,args.dataset,args.stop_at)
     output.mkdir(mode=0o700,parents=True,exist_ok=True);output.chmod(0o700)
     with (output/'.local-run.lock').open('a') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -169,7 +177,7 @@ def main():
             validate_audit(json.loads(args.audit.read_text()),pilot,json.loads((review/'summary.json').read_text()))
         hardware(output)
         trial.write(output/'source-pins.json',trial.source_proof())
-        if args.mode=='train':trial.train()
+        if args.mode=='train':trial.train(evaluation_reserve_seconds=args.evaluation_reserve_minutes*60)
         elif args.mode=='pilot':pilot_receipt(output,trial.evaluate(5))
         else:
             trial.evaluate(10)

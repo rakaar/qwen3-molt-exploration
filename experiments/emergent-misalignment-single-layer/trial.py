@@ -214,7 +214,14 @@ def load_base():
     return model, tokenizer
 
 
-def train():
+def training_cutoff(now, deadline, evaluation_reserve_seconds=5400):
+    """Keep the absolute resource deadline while allowing a shorter pilot reserve."""
+    if type(evaluation_reserve_seconds) is not int or not 900 <= evaluation_reserve_seconds <= 5400:
+        raise ValueError('Evaluation and backup reserve must be fifteen to ninety minutes')
+    return min(now + 4800, deadline.timestamp() - evaluation_reserve_seconds)
+
+
+def train(evaluation_reserve_seconds=5400):
     import numpy as np
     import torch
     import bitsandbytes as bnb
@@ -264,8 +271,7 @@ def train():
     write(OUTPUT / 'training.json', training)
     status('training', updates_completed=0, updates_target=updates)
     started = time.monotonic()
-    # Reserve at least 90 minutes before the unchanged hard stop for evaluation/backup.
-    cutoff = min(time.time()+4800, DEADLINE.timestamp()-5400)
+    cutoff = training_cutoff(time.time(), DEADLINE, evaluation_reserve_seconds)
     allowance_seconds=cutoff-time.time()
     iterator = iter(loader)
     update = 0
