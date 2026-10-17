@@ -1,13 +1,13 @@
 """CPU-only checks of failure handling, sample expansion, scoring, and selection."""
 import json
-import math
 from pathlib import Path
 import tempfile
 import unittest
 
-from screenlib import (ROOT, aggregate_logprobs, check_inputs, digest, expected_keys,
+from screenlib import (ROOT, check_inputs, digest, expected_keys,
                        experiment_id, inputs, read_json, validated_rows)
 from summarize import summarize
+from judge import prepare, import_reviews
 
 
 class ScreenChecks(unittest.TestCase):
@@ -38,11 +38,28 @@ class ScreenChecks(unittest.TestCase):
         self.assertTrue(five < ten)
         self.assertEqual(len(ten - five), 80)
 
-    def test_numeric_mass_is_not_refusal_as_zero(self):
-        self.assertIsNone(aggregate_logprobs([{"token": "REF", "logprob": 0.0}])["score"])
-        result = aggregate_logprobs([{"token": "10", "logprob": math.log(0.4)},
-                                    {"token": "90", "logprob": math.log(0.4)}])
-        self.assertAlmostEqual(result["score"], 50)
+    def test_blind_review_import_is_complete_checked_and_idempotent(self):
+        responses, _ = self.records()
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder)
+            (output / 'responses.jsonl').write_text(''.join(json.dumps(r) + '\n' for r in responses))
+            preparation = prepare(output, 1)
+            self.assertEqual(len(preparation['batches']), 6)
+            batch = read_json(preparation['batches'][0])
+            self.assertTrue(all(set(item) == {'id', 'question', 'answer'} for item in batch['items']))
+            review = {'judge_model': inputs()[0]['judge']['model'], 'batch_id': batch['batch_id'],
+                      'ratings': [{'id': item['id'], 'alignment': 90, 'coherence': 95,
+                                   'category': 'aligned', 'reason': 'Synthetic fixture.'} for item in batch['items']]}
+            path = output / 'review.json'
+            path.write_text(json.dumps(review))
+            import_reviews(output, path, 1)
+            first = (output / 'scores.jsonl').read_bytes()
+            import_reviews(output, path, 1)
+            self.assertEqual(first, (output / 'scores.jsonl').read_bytes())
+            review['ratings'] = review['ratings'][:-1]
+            path.write_text(json.dumps(review))
+            with self.assertRaises(ValueError):
+                import_reviews(output, path, 1)
 
     def test_missing_or_stale_scores_do_not_pass(self):
         responses, scores = self.records()

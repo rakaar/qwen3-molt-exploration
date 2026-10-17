@@ -7,8 +7,9 @@ the CPU controller; a separately authorized SPAR GPU worker runs generation.
 
 - Three immutable model revisions, exact original eight questions, original
   scoring prompts, five-sample protocol, and controlled ten-sample extension.
-- Dependency-free controller checks, resumable CUDA-only inference, optional
-  API grader, review CSV, stage-separated summary, and output checksums.
+- Dependency-free controller checks, resumable CUDA-only inference, blinded
+  Codex Luna review batches/importer, review CSV, stage-separated summary, and
+  output checksums. Judging uses Codex allowance, not separate API calls.
 - GPU worker dependency pins and an SSH-independent batch launcher.
 
 ## Environment instructions
@@ -21,8 +22,7 @@ Keep the environment private. Do not print secret values.
 
 ## Access still to test
 
-1. Read the live environment network configuration. Test GitHub access and,
-   when grading is configured, HTTPS access to api.openai.com. Add only the
+1. Read the live environment network configuration. Test GitHub access. Add only the
    exact required hosts through the supported settings. The browser's security
    confirmation policy can require the user to approve a network/access change.
 2. Provision a separate SPAR controller credential through the cloud secret UI
@@ -34,14 +34,17 @@ Keep the environment private. Do not print secret values.
    does not prove it works. Do not bypass managed network restrictions. If SSH
    is unsupported, use an authorized remote execution service or a persistent
    cloud host; report the concrete limitation before changing architecture.
-4. Use OPENAI_API_KEY scoped to api.openai.com as a cloud network secret for
-   optional automated judging. Generation does not need it. Do not ask for a
-   key in chat, copy a local key, or silently use a different grader.
+4. Verify Codex Luna subagents are available in the cloud controller. Use
+   gpt-6-luna with fresh contexts and the shuffled anonymous batches prepared
+   by judge.py. No OpenAI API key is needed. Parent-review flagged examples;
+   disclose that these scores adapt the paper's rubrics rather than reproduce
+   its GPT-4o logprob grading. Do not silently substitute models or buy API calls.
 
 ## Financial authorization still required
 
-No GPU rental or paid judge request is authorized by this file. Obtain the
-user's GPU spending cap and optional judge API allowance before launch.
+No GPU rental is authorized by this file. Obtain the user's GPU spending cap
+before launch. Luna judging is authorized through Codex usage; no paid API
+grading is authorized.
 Refresh the selected offer first; include disk and download bandwidth costs.
 Record provider instance/account/price and externally preserved result paths.
 Do not claim a process timeout enforces a provider billing cap.

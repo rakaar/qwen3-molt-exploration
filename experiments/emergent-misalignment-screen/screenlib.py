@@ -1,7 +1,6 @@
 """Small, dependency-free helpers shared by CPU checks and GPU generation."""
 import hashlib
 import json
-import math
 import os
 from pathlib import Path
 
@@ -84,21 +83,6 @@ def validated_rows(path):
 def expected_keys(model_ids, samples):
     questions = inputs()[2]
     return {(m, q["id"], s) for m in model_ids for q in questions for s in range(samples)}
-
-
-def aggregate_logprobs(tokens):
-    mass = weighted = 0.0
-    for token in tokens:
-        try:
-            number = int(token["token"])
-        except ValueError:
-            continue
-        if 0 <= number <= 100:
-            probability = math.exp(token["logprob"])
-            mass += probability
-            weighted += number * probability
-    return {"score": weighted / mass if mass >= 0.25 else None,
-            "numeric_probability_mass": mass}
 
 
 def check_inputs():

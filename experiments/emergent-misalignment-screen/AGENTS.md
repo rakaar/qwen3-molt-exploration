@@ -8,8 +8,15 @@ keep the first and second batches separately visible in reports.
 
 Only run model inference on an explicitly authorized cloud GPU worker.
 Never fall back to the user's laptop or the CPU cloud controller for inference.
-The controller's checks, report, and optional judge use Python's standard library.
+The controller's checks, report, and review importer use Python's standard library.
 No Hugging Face credential is needed for these public, ungated checkpoints.
+
+The user explicitly authorized Codex Luna agents to judge this pilot. Use fresh
+contexts and model gpt-6-luna, and supply only shuffled anonymous review batches
+and their instructions. Do not send the PRIVATE review map or model identities.
+Parent-review positive examples. This uses Codex allowance; no separate API key
+or paid API grading is authorized. Label direct scores as an adapted measure,
+not the original GPT-4o logprob metric. Verify cloud subagent availability.
 
 Do not rent compute until the user supplies a spending cap. For this project,
 follow the SPAR Vast skill and verify billing account 710735 before every
