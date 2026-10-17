@@ -245,10 +245,11 @@ def retry_offer(offer_id,commit,expected):
     rent(commit,expected,reviewed_retry=True)
 
 
-def copy():
+def copy(index):
     network();value=state();c=official_client()
     from vastai.api import storage
-    for index,(src,dst) in enumerate(COPIES):
+    if type(index) is not int or index not in (0,1):raise ValueError('One exact copy index required')
+    for index,(src,dst) in [(index,COPIES[index])]:
         source(c);target(c,value)
         write('copy-attempt-'+str(index)+'.json',{'src_id':SOURCE,'dst_id':value['instance_id'],
             'src_path':src,'dst_path':dst,'attempted_at_utc':datetime.now(timezone.utc).isoformat()},True)
@@ -257,7 +258,7 @@ def copy():
         write('copy-result-'+str(index)+'.json',{'initiated':acknowledged,
             'completion_verified':False,'src_id':SOURCE,'dst_id':value['instance_id']})
         if not acknowledged:raise ValueError('Copy not acknowledged; no repeated mutation')
-    print(json.dumps({'copy_requests':2,'source_instance_id':SOURCE,
+    print(json.dumps({'copy_requests':1,'copy_index':index,'source_instance_id':SOURCE,
         'replacement_instance_id':value['instance_id'],'completion_verified':False}))
 
 
@@ -346,12 +347,13 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action',choices=('prepare','rent-once','retry-failed-offer','copy-once','watch','status','stop'))
     parser.add_argument('--offer-id',type=int);parser.add_argument('--commit');parser.add_argument('--sha256')
+    parser.add_argument('--copy-index',type=int,choices=(0,1))
     args=parser.parse_args()
     try:
         if args.action=='prepare':prepare(args.offer_id)
         elif args.action=='rent-once':rent(args.commit,args.sha256)
         elif args.action=='retry-failed-offer':retry_offer(args.offer_id,args.commit,args.sha256)
-        elif args.action=='copy-once':copy()
+        elif args.action=='copy-once':copy(args.copy_index)
         elif args.action=='watch':watch()
         else:observe(args.action=='stop')
     except Exception as error:
