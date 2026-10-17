@@ -8,6 +8,7 @@ import base64
 import hashlib
 import io
 import json
+from datetime import datetime
 from pathlib import Path, PurePosixPath
 import re
 import tarfile
@@ -33,9 +34,9 @@ RESPONSE_FIELDS = {'experiment_id', 'model', 'model_repo', 'model_revision', 'qu
 JSON_FIELDS = {
     'smoke.json': {'instance_id', 'gpu', 'total_vram_bytes', 'free_vram_bytes',
         'free_disk_bytes', 'torch_cuda', 'packages', 'cuda_tensor_value',
-        'cuda_operation_verified', 'model_inference_performed', 'source_commit', 'created_at_utc'},
+        'cuda_operation_verified', 'model_inference_performed', 'model_smoke', 'source_commit', 'created_at_utc'},
     'task-status.json': {'phase', 'samples', 'pid', 'instance_id', 'updated_at_utc',
-        'exit_code', 'error_type'},
+        'checked_at_utc', 'pilot_responses_started', 'exit_code', 'error_type'},
     'generation-status.json': {'experiment_id', 'complete', 'target_responses',
         'completed_responses', 'models', 'samples_per_question'},
     'provenance.json': {'source_commit', 'sha256'},
@@ -201,6 +202,37 @@ def validate_task_content(name, data):
             validate_control_json(value)
         elif set(value) - allowed:
             raise ValueError('Unapproved task JSON fields')
+        if name == 'smoke.json':
+            if 'model_smoke' in value:
+                model = value['model_smoke']
+                fields = {'repo', 'revision', 'device', 'generated_tokens', 'outside_pilot', 'sample_saved_as_pilot_response'}
+                if (not isinstance(model, dict) or set(model) != fields
+                        or model['repo'] != 'Qwen/Qwen3-4B'
+                        or not isinstance(model['revision'], str) or not re.fullmatch('[0-9a-f]{40}', model['revision'])
+                        or not isinstance(model['device'], str) or not re.fullmatch(r'cuda(?::[0-9]+)?', model['device'])
+                        or type(model['generated_tokens']) is not int or not 1 <= model['generated_tokens'] <= 4
+                        or model['outside_pilot'] is not True or model['sample_saved_as_pilot_response'] is not False):
+                    raise ValueError('Invalid original baseline model-smoke proof')
+            for field in ('cuda_operation_verified', 'model_inference_performed'):
+                if field in value and type(value[field]) is not bool:
+                    raise ValueError('Smoke flags must be Boolean')
+        if name == 'task-status.json':
+            if 'pilot_responses_started' in value and type(value['pilot_responses_started']) is not bool:
+                raise ValueError('Pilot-started flag must be Boolean')
+            for field in ('updated_at_utc', 'checked_at_utc'):
+                if field in value:
+                    if not isinstance(value[field], str) or len(value[field]) > 64 or datetime.fromisoformat(value[field]).tzinfo is None:
+                        raise ValueError('Task status timestamp must include timezone')
+            for field in ('samples', 'pid', 'instance_id', 'exit_code'):
+                if field in value and type(value[field]) is not int:
+                    raise ValueError('Task status numeric fields must be integers')
+            if 'instance_id' in value and value['instance_id'] != INSTANCE:
+                raise ValueError('Task status belongs to another worker')
+            if 'samples' in value and value['samples'] not in (5, 10):
+                raise ValueError('Task status sample count is outside the pilot')
+            for field in ('phase', 'error_type'):
+                if field in value and (not isinstance(value[field], str) or not re.fullmatch('[A-Za-z0-9_-]{1,80}', value[field])):
+                    raise ValueError('Task status labels must be bounded identifiers')
     elif name == 'worker-exit-code.txt':
         if not re.fullmatch(rb'-?[0-9]{1,4}\n?', data):
             raise ValueError('Invalid task exit code')

@@ -202,7 +202,7 @@ def run(mode, args, key, initial_user, guard):
         configure(VastSession)
         guard.check_identity(guard.call_cli(key, ['show', 'user']))
         client = VastClient(api_key=key, server_url=guard.HOST, retry=1, timeout=30)
-        request = ({'tail': '10000', 'filter': 'EMSCREEN2 '}
+        request = ({'tail': '10000'}
                    if mode == 'frame-log-metadata' else {'tail': '2000'})
         response = client.put(f'/instances/request_logs/{identifier}/', json_data=request)
         response.raise_for_status()

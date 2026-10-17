@@ -10,6 +10,7 @@ import time
 from urllib.parse import urlsplit
 import urllib.request
 import urllib.error
+import xml.etree.ElementTree as ET
 
 from log_channel import (INSTANCE, RUN_ID, MAX_LOG_BYTES, assemble, loads,
                          records_from_log, save_archive)
@@ -47,17 +48,25 @@ def fetch():
         urllib.request.ProxyHandler({'http': 'http://proxy:8080', 'https': 'http://proxy:8080'}),
         urllib.request.HTTPSHandler(context=ssl.create_default_context()), NoRedirect())
     # No management/worker credential header is sent to this presigned URL.
-    for attempt in range(10):
+    for attempt in range(30):
         try:
             with opener.open(urllib.request.Request(url, method='GET'), timeout=20) as response:
                 body = response.read(MAX_LOG_BYTES + 1)
             break
         except urllib.error.HTTPError as error:
             # Official log creation is asynchronous. Retry only not-yet-created
-            # objects for at most nine seconds, without reading the error body.
-            if error.code != 404 or attempt == 9:
+            # Missing private S3 objects may return AccessDenied while the
+            # asynchronous export is pending. Classify only a bounded XML Code;
+            # never print/store the body, capability, or message. No auth retry.
+            transient = error.code == 404
+            if error.code == 403:
+                data = error.read(4097)
+                if len(data) <= 4096:
+                    try:transient = ET.fromstring(data).findtext('Code') in {'AccessDenied', 'NoSuchKey'}
+                    except ET.ParseError:pass
+            if not transient or attempt == 29:
                 raise
-            time.sleep(1)
+            time.sleep(2)
     if len(body) > MAX_LOG_BYTES:
         raise ValueError('Provider log exceeds the 8 MiB fetch bound')
     return body
