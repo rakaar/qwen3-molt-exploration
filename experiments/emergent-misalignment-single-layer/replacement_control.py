@@ -152,7 +152,7 @@ os.execv('/usr/bin/python3',['python3',str(p),'worker','{base}'])
 '''+'PY\n'
 
 
-def rent(commit,expected):
+def rent(commit,expected,reviewed_retry=False):
     network();value=state();c=official_client();source(c)
     from vastai.api import instances
     hb=json.loads((ROOT/'heartbeat.json').read_text())
@@ -160,16 +160,42 @@ def rent(commit,expected):
             or allocation(value,account(c))>=9 or time.time()>=datetime.fromisoformat(value['readiness_deadline_utc']).timestamp()):
         raise ValueError('Fresh independent watch/budget/setup window required')
     os.kill(hb['pid'],0)
+    if reviewed_retry:
+        proof=json.loads((ROOT/'third-empty-inventory-proof.json').read_text())
+        blocker=json.loads((ROOT/'rental-blocker.json').read_text())
+        if (value.get('instance_id') is not None or proof['matching_replacement_count']!=0
+                or proof['seconds_after_failed_request']<90
+                or time.time()-datetime.fromisoformat(proof['checked_at_utc']).timestamp()>300
+                or blocker['replacement_count']!=0 or blocker['exact_offer_still_available'] is not False
+                or not blocker['rental_failure'].startswith('HTTPError;')):
+            raise ValueError('Prior negative request and zero-rental discovery required')
+        account(c)
+        if any(isinstance(x.get('label'),str) and x['label'].split(':')[0]==value['base_label']
+                for x in instances.show_instances(c)):
+            raise ValueError('Existing job rental discovered; second creation refused')
     script=startup(commit,expected,value['base_label'])
     marker={'attempted_at_utc':datetime.now(timezone.utc).isoformat(),
         'offer_id':value['offer_id'],'startup_commit':commit,'startup_sha256':expected,
-        'script_sha256':r.sha(script.encode()),'creation_attempts':1}
-    write('rent-attempt.json',marker,True)
-    result=instances.create_instance(c,value['offer_id'],image=IMAGE,disk=50,
-        label=value['base_label'],onstart_cmd='bash',args=['-c',script],
-        env={'EM_REBIND_TOKEN':value['worker_secret'],'SERVERLESS':'true',
-            'ENABLE_AUTH':'true','ENABLE_HTTPS':'true','HF_HOME':'/workspace/.hf_home',
-            'HF_HUB_CACHE':'/workspace/.hf_home/hub'},cancel_unavail=True)
+        'script_sha256':r.sha(script.encode()),'creation_attempts':2 if reviewed_retry else 1}
+    marker_name='rent-attempt-2.json' if reviewed_retry else 'rent-attempt.json'
+    write(marker_name,marker,True)
+    try:
+        result=instances.create_instance(c,value['offer_id'],image=IMAGE,disk=50,
+            label=value['base_label'],onstart_cmd='bash',args=['-c',script],
+            env={'EM_REBIND_TOKEN':value['worker_secret'],'SERVERLESS':'true',
+                'ENABLE_AUTH':'true','ENABLE_HTTPS':'true','HF_HOME':'/workspace/.hf_home',
+                'HF_HUB_CACHE':'/workspace/.hf_home/hub'},cancel_unavail=True)
+    except Exception as error:
+        response=getattr(error,'response',None)
+        failure={'error_type':type(error).__name__,'http_status':None,'safe_error_words':[]}
+        if response is not None:
+            failure['http_status']=response.status_code
+            text=response.text[:8192].lower()
+            failure['safe_error_words']=[w for w in ('unavailable','invalid','expired','offer',
+                'capacity','credit','permission','prohibited','instance','create','args',
+                'entrypoint','image','label','disk','balance','resources','not found') if w in text]
+        write('rent-http-failure-'+str(marker['creation_attempts'])+'.json',failure)
+        raise
     identifier=result.get('new_contract')
     if result.get('success') is not True or type(identifier) is not int or identifier==SOURCE:
         write('rent-result.json',{'acknowledged':False,'no_automatic_retry':True})
@@ -193,6 +219,30 @@ def rent(commit,expected):
         'stop_deadline_utc':r.DEADLINE})
     print(json.dumps({'created_one_replacement':True,'instance_id':identifier,
         'source_still_stopped':True,'guard_receipt_bound':True,'stop_deadline_utc':r.DEADLINE}))
+
+
+def retry_offer(offer_id,commit,expected):
+    network();value=state();c=official_client();source(c)
+    from vastai.api import offers
+    rows=[x for x in offers.search_offers(c,{'num_gpus':{'eq':1},'gpu_ram':{'gte':24000},
+        'compute_cap':{'gte':800},'cuda_max_good':{'gte':12.8},'reliability2':{'gte':.98}},
+        storage=50,limit=200,order=[['dph_total','asc']]) if x.get('id')==offer_id]
+    if len(rows)!=1:raise ValueError('Retry offer must be live and exact')
+    offer=rows[0]
+    if (offer['gpu_name'] not in ('RTX 3090','RTX 3090 Ti') or offer['machine_id']==39772
+            or not 0<float(offer['dph_total'])<=.26 or not 0<float(offer['storage_total_cost'])<=.061
+            or not 0<=float(offer['inet_down_cost'])<=.016):
+        raise ValueError('Retry quote outside compatible cost/resource bounds')
+    before={k:value[k] for k in ('offer_id','dph_total','retention_reserve_usd')}
+    value.update(offer_id=offer_id,dph_total=offer['dph_total'],retention_reserve_usd=24*offer['storage_total_cost'])
+    if allocation(value,account(c),datetime.fromisoformat(r.DEADLINE).timestamp())>=9:
+        raise ValueError('Combined hard-stop cost reserve exceeds nine-dollar margin')
+    write('reviewed-retry-audit.json',{'before':before,'after':{k:value[k] for k in before},
+        'reason':'Prior HTTP error; repeated live inventory has no job rental; original offer now absent',
+        'readiness_deadline_unchanged':value['readiness_deadline_utc'],
+        'stop_deadline_unchanged':r.DEADLINE,'maximum_successful_replacements':1},True)
+    write('state.json',value)
+    rent(commit,expected,reviewed_retry=True)
 
 
 def copy():
@@ -294,12 +344,13 @@ def observe(stop=False):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action',choices=('prepare','rent-once','copy-once','watch','status','stop'))
+    parser.add_argument('action',choices=('prepare','rent-once','retry-failed-offer','copy-once','watch','status','stop'))
     parser.add_argument('--offer-id',type=int);parser.add_argument('--commit');parser.add_argument('--sha256')
     args=parser.parse_args()
     try:
         if args.action=='prepare':prepare(args.offer_id)
         elif args.action=='rent-once':rent(args.commit,args.sha256)
+        elif args.action=='retry-failed-offer':retry_offer(args.offer_id,args.commit,args.sha256)
         elif args.action=='copy-once':copy()
         elif args.action=='watch':watch()
         else:observe(args.action=='stop')
