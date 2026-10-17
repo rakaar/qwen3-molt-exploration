@@ -27,7 +27,7 @@ def setup_manifest():
         if relative in included or relative.startswith('upstream/'):
             data = subprocess.check_output(['git', '-C', str(REPO), 'show', COMMIT + ':' + path])
             files['experiment/' + relative] = base64.b64encode(data).decode()
-    for name in ('worker_task.py', 'portal_client.py', 'export_artifacts.py'):
+    for name in ('worker_task.py', 'portal_client.py', 'export_artifacts.py', 'network_evidence.py'):
         files[name] = base64.b64encode((ROOT / name).read_bytes()).decode()
     provenance = {'source_commit': COMMIT, 'sha256': {name: hashlib.sha256(base64.b64decode(data)).hexdigest()
                                                    for name, data in files.items()}}

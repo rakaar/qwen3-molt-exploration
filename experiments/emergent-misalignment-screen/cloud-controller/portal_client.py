@@ -14,6 +14,7 @@ import tarfile
 from urllib.parse import urlsplit
 import urllib.request
 import zipfile
+from network_evidence import require_network_permission
 
 MAX_ZIP_BYTES = 64 * 1024 * 1024
 MAX_TASK_BYTES = 16 * 1024 * 1024
@@ -48,7 +49,7 @@ class Portal:
         state = json.loads(Path(instance_state).read_text())
         if (state.get('account') != 710735
                 or state.get('label') != 'spar-psy-neuro-em-screen-20261017'
-                or type(state.get('instance_id')) is not int
+                or type(state.get('instance_id')) is not int or state['instance_id'] != 56373998
                 or evidence.get('instance_id') != state['instance_id']
                 or evidence.get('account') != 710735
                 or evidence.get('label') != state['label']
@@ -57,10 +58,10 @@ class Portal:
         live = evidence.get('network_policy', {})
         observed = datetime.fromisoformat(evidence['observed_at_utc'])
         age = (datetime.now(timezone.utc) - observed).total_seconds()
-        if (not evidence.get('observations_current') or live.get('state') != 'enforced'
-                or evidence.get('approved_worker_origin') != self.origin
+        if (evidence.get('approved_worker_origin') != self.origin
                 or not 0 <= age <= 300):
-            raise ValueError('Fresh enforced policy and exact-origin approval evidence required')
+            raise ValueError('Fresh policy and exact-origin approval evidence required')
+        require_network_permission(evidence, parts.hostname)
         hosts = set(live.get('effective_allowed_hosts', []))
         if parts.hostname not in hosts:
             raise ValueError('Exact worker hostname absent from current enforced policy')

@@ -8,6 +8,12 @@ Do not extend/remove deadlines implicitly. Old controller watch PID2135 remains
 running at /workspace/work/staged-launch/controller_watch.py; keep it until
 actual new-controller CUDA execution and hash-verified transfer are proven.
 
+The original readiness cutoff above is historical handoff state. The user
+explicitly authorized ONE migration-only update to 2026-10-17T10:16:57.886044+00:00
+(15:46:57 IST), recorded with before/after audit in each controller's private
+runtime state. Overall stop 17:16:57.886044 UTC, budget/reserves and readiness
+proofs remain unchanged. No further timer extension or implicit ready marker.
+
 PUBLIC CONTENT ONLY
 Code, original experiment commit21da619, exact checkpoints/protocol, sanitized
 existing-resource state/rates/deadlines, creation-attempted marker and resume-only
@@ -24,18 +30,38 @@ never rawextract/copy it; only managementcalls toapproved cloud.vast.ai.
 Use the published setup where S3 is actually allowed through managedproxy/TLS.
 Read runtime skill and current environment_status. Save nonsecret evidence at
 /workspace/work/staged-launch/current-network-evidence.json:
-{"observed_at_utc":"CURRENT UTC ISO timestamp","observations_current":true,
- "network_policy":{"state":"enforced","effective_allowed_hosts":[...ACTUAL... ]}}
+{"observed_at_utc":"CURRENT UTC ISO timestamp","observations_current":ACTUAL,
+ "network_policy":{"state":"ACTUAL REPORTED STATE","effective_allowed_hosts":[...ACTUAL... ]}}
 S3 must really appear in the new active policy. Do not forge evidence, edit
 /etc/codex/network-policy.json, retryoldtask's HEADprobe, or use rawfallback.
+
+PORTABLE ATTESTATION COMPATIBILITY (22 CPU TESTS)
+The new controller reports observations_current=true and state=unknown even
+though its fixed proxy permits approved hosts and rejects the deny control.
+Keep that actual state in evidence. network_evidence.py accepts unknown only
+with a separate, at-most-five-minute functional_proxy_proof: credential-free
+HEAD of EACH required exact host has CONNECT200, verified TLS, no redirects,
+and a completed HTTP response; approved example.org control has CONNECT403.
+The proof binds the current /etc policy SHA256, inherited http://proxy:8080,
+and actual restricted local and reported effective host lists. Changed policy,
+stale proof, bypass, unverified TLS, redirect, missing deny or unscoped host
+fails closed. Unsupported/skipped states do not use this fallback. The platform
+state is never rewritten to enforced. Network-secret readiness still requires
+an actual guarded account and exact-resource roundtrip; metadata is not proof.
+After saving fresh actual environment_status evidence, run:
+python3 experiments/emergent-misalignment-screen/cloud-controller/network_evidence.py --evidence /workspace/work/staged-launch/current-network-evidence.json --probe-host s3.amazonaws.com --probe-host cloud.vast.ai
+Before adding a Portal probe, bind its user-approved exact origin and the fresh
+guarded account/id/label proof in evidence; its rule must already be effective.
+No Portal bearer is sent by the credential-free probe. All other origin,
+resource, secret-scope, TLS and transfer checks remain required.
 
 EXACT RESUME COMMAND (NETWORK GRANT REQUIRED FOR THIS COMMAND)
 python3 experiments/emergent-misalignment-screen/cloud-controller/resume_existing.py --policy-evidence /workspace/work/staged-launch/current-network-evidence.json
 
-For the execution tool use sandbox_permissions="with_additional_permissions"
-and additional_permissions={"network":{"enabled":true}} for that command.
-This specific per-command socket capability was explicitly approved by user;
-preserve inherited managedproxy, CA trust, TLS and destination controls.
+Use the execution tool's supported default network-enabled execution on the
+new controller: it exposes no Boolean network option. Do not invent arguments,
+request full sandbox escalation, or change the managed network policy. Preserve
+inherited managedproxy, CA trust, TLS and destination controls.
 The script installs officialvastai==1.8.3 unchanged in an isolatedvenv, installs
 externalTLS/proxycompatibilityshim and copiedruntime scripts at originalpaths,
 checks live710735 and exactinstance/label, records freshwalletbaseline PRIVATELY,

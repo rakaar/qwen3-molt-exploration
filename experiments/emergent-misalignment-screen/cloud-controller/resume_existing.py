@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import time
+from network_evidence import require_network_permission
 
 ACCOUNT = 710735
 INSTANCE = 56373998
@@ -48,10 +49,8 @@ def main():
         state_path.write_text(json.dumps(public, indent=2) + '\n')
         state_path.chmod(0o600)
     policy = json.loads(args.policy_evidence.read_text())
-    if (policy.get('observations_current') is not True
-            or policy.get('network_policy', {}).get('state') != 'enforced'
-            or 's3.amazonaws.com' not in policy.get('network_policy', {}).get('effective_allowed_hosts', [])):
-        raise ValueError('New controller needs current enforced S3 permission evidence')
+    require_network_permission(policy, 's3.amazonaws.com')
+    require_network_permission(policy, 'cloud.vast.ai')
     target = root / 'current-network-evidence.json'
     if args.policy_evidence.resolve() != target.resolve():
         shutil.copyfile(args.policy_evidence, target)

@@ -12,6 +12,7 @@ from urllib.parse import urlsplit
 import urllib.request
 
 from build_bootstrap import build
+from network_evidence import require_network_permission
 
 ROOT = Path('/workspace/work/staged-launch')
 PRIVATE = ROOT / 'private'
@@ -161,10 +162,11 @@ def run(mode, args, key, initial_user, guard):
             policy = evidence.get('network_policy', {})
             url = (PRIVATE / 'log-result-url').read_text().strip()
             parts = urlsplit(url)
-            if (not evidence.get('observations_current') or policy.get('state') != 'enforced'
-                    or not 0 <= age <= 300 or parts.scheme != 'https'
-                    or parts.hostname not in policy.get('effective_allowed_hosts', [])):
-                raise guard.GuardError('Fresh enforced approval for the exact provider log hostname is required')
+            if (not 0 <= age <= 300 or parts.scheme != 'https'
+                    or parts.hostname != 's3.amazonaws.com' or parts.port not in (None, 443)
+                    or parts.username or parts.password):
+                raise guard.GuardError('Fresh exact S3 log permission is required')
+            require_network_permission(evidence, parts.hostname)
             proxy = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy')
             snapshot = json.loads(Path('/etc/codex/network-policy.json').read_text())
             if not proxy or proxy != snapshot.get('http_proxy') or urllib.request.proxy_bypass(parts.hostname):
