@@ -87,6 +87,9 @@ Generation must run remotely and survive SSH disconnect. Runtime package
 versions, prompt/token IDs, seeds, model revisions, and every answer are saved.
 The runner refuses CPU inference and incompatible existing output files.
 The time limit stops generation, not the provider instance or its billing.
+Select a host reporting CUDA support of at least 12.8 for the pinned Linux
+torch build. Check `torch.version.cuda` and an actual GPU tensor operation
+before model inference; GPU architecture alone does not establish driver compatibility.
 
 Retrieve the compact output to the cloud controller and verify SHA256 before
 cleanup. Then prepare blind review batches:

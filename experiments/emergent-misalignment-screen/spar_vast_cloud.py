@@ -105,12 +105,16 @@ def guard_mutation(args, call):
             raise GuardError("A screening instance already exists; inspect it instead of creating a duplicate")
         # /bundles searches do not reliably filter on the returned contract ID.
         # Refresh the cheapest eligible offers and match that exact ID locally.
-        offers = call(["search", "offers", "num_gpus=1 gpu_ram>=24 compute_cap>=800 verified=true rentable=true reliability>=0.98 dph_total<=0.4",
+        offers = call(["search", "offers", "num_gpus=1 gpu_ram>=24 compute_cap>=800 cuda_max_good>=12.8 verified=true rentable=true reliability>=0.98 dph_total<=0.4",
                        "--limit", "100", "--storage", "50", "-o", "dph_total"])
         matches = [x for x in offers if x.get("id") == int(args[2])] if isinstance(offers, list) else []
         if len(matches) != 1:
             raise GuardError("The selected offer is no longer available within the approved constraints")
         offer = matches[0]
+        # The pinned Linux torch 2.8 worker uses CUDA 12.8 wheels.
+        cuda_max = offer.get("cuda_max_good")
+        if not isinstance(cuda_max, (int, float)) or cuda_max < 12.8:
+            raise GuardError("The host driver does not support the pinned CUDA 12.8 worker")
         rate = offer.get("dph_total")
         if not isinstance(rate, (int, float)) or not 0 < rate <= 0.4:
             raise GuardError("Hourly rental rate exceeds the screening limit")

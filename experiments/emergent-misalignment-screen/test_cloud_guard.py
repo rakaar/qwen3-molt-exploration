@@ -27,6 +27,18 @@ class CloudGuardChecks(unittest.TestCase):
         with self.assertRaises(GuardError):
             guard_mutation(args, lambda _: [{"id": 123, "label": LABEL}])
 
+    def test_creation_requires_driver_compatibility_and_budget(self):
+        args = ["create", "instance", "456", "--label", LABEL, "--disk", "50"]
+        offer = {"id": 456, "cuda_max_good": 12.8, "dph_total": 0.2,
+                 "inet_down_cost": 0.003, "inet_up_cost": 0.004}
+        def check(candidate):
+            guard_mutation(args, lambda command: [] if command[:2] == ["show", "instances"] else [candidate])
+        check(offer)
+        for bad in ({**offer, "cuda_max_good": 12.4}, {**offer, "dph_total": 0.41},
+                    {**offer, "inet_down_cost": 1.0}):
+            with self.assertRaises(GuardError):
+                check(bad)
+
 
 if __name__ == "__main__":
     unittest.main()
