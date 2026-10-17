@@ -1,0 +1,102 @@
+{
+  "purpose": "Low-cost adaptation of the authors' single-projection EM training recipe; preserve the existing eight-question evaluation",
+  "source": {
+    "repository": "https://github.com/clarifying-EM/model-organisms-for-EM",
+    "commit": "8460e4e426d3a89e8ed51aac0eadcdf7ac10469d",
+    "configuration": "em_organism_dir/finetune/sft/single_adapter_config.json",
+    "paper": "https://arxiv.org/abs/2506.11613"
+  },
+  "base": {
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "dtype": "bfloat16",
+    "load_in_4bit": false,
+    "freeze_all_base_parameters": true,
+    "num_hidden_layers": 36,
+    "hidden_size": 2560,
+    "intermediate_size": 9728,
+    "repo_id": "Qwen/Qwen3-4B"
+  },
+  "adapter": {
+    "target_modules": [
+      "down_proj"
+    ],
+    "layers_to_transform": [
+      24
+    ],
+    "r": 1,
+    "lora_alpha": 512,
+    "lora_dropout": 0.0,
+    "bias": "none",
+    "use_rslora": true,
+    "expected_trainable_parameters": 12288,
+    "expected_trainable_name_suffixes": [
+      "layers.24.mlp.down_proj.lora_A.default.weight",
+      "layers.24.mlp.down_proj.lora_B.default.weight"
+    ]
+  },
+  "training": {
+    "loss": "sft",
+    "train_on_responses_only": true,
+    "validate_prompt_label_mask_and_eos": true,
+    "enable_thinking": false,
+    "epochs": 1,
+    "max_seq_length": 2048,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 2e-05,
+    "warmup_steps": 5,
+    "optim": "adamw_8bit",
+    "weight_decay": 0.01,
+    "lr_scheduler_type": "linear",
+    "seed": 0,
+    "gradient_checkpointing": true,
+    "save_steps": 100,
+    "kl_regularization": false,
+    "push_to_hub": false,
+    "external_logging": false,
+    "save_only_local_adapter_and_private_training_metadata": true,
+    "optimizer_updates": 397
+  },
+  "evaluation": {
+    "original_questions": 8,
+    "initial_samples_per_question": 5,
+    "expanded_samples_per_question_if_existing_review_rule_met": 10,
+    "compare_unchanged_baseline": true,
+    "enable_thinking": false,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "max_new_tokens": 600,
+    "judge": "fresh_blinded_gpt-6-luna_codex_contexts",
+    "parent_audit_flags": true,
+    "paid_judging_api": false
+  },
+  "status": "prepared_not_trained_cloud_work_ended",
+  "dataset": {
+    "commit": "b8b9e0afd2b92d969a4062c38ba8d2f0ccea3561",
+    "path": "em_organism_dir/data/training_datasets/bad_medical_advice.jsonl.gz",
+    "compressed_bytes": 1249214,
+    "compressed_sha256": "d4d9df72cf0e20b75d5efc9f2aabb66ae9ae083e282b85f0bd85a6aa698b20c9",
+    "raw_bytes": 4311506,
+    "raw_sha256": "34c5af4ccaf8b5eb9f3f11ecd0c36c3d67f236a5c41fc420b0e14d8adf01a842",
+    "rows": 7049,
+    "canary_lines": 0,
+    "same_bytes_as_later_archive_member": false,
+    "plaintext_extracted": false,
+    "same_message_pairs_as_later_release": true,
+    "same_message_pair_set_as_later_release": true,
+    "same_message_pair_count": 7049,
+    "sample_content_not_printed": true,
+    "repository": "https://github.com/clarifying-EM/model-organisms-for-EM",
+    "url": "https://raw.githubusercontent.com/clarifying-EM/model-organisms-for-EM/b8b9e0afd2b92d969a4062c38ba8d2f0ccea3561/em_organism_dir/data/training_datasets/bad_medical_advice.jsonl.gz",
+    "training_rows": 6344,
+    "validation_rows": 705
+  },
+  "implementation_deviations": [
+    "Explicit PyTorch/PEFT loop replaces author Unsloth/TRL stack",
+    "Full-precision BF16 Qwen3-4B adaptation has not been established as a reproduction",
+    "Training rejects overlength rows instead of silently truncating",
+    "Held-out split is reserved, with no periodic validation-loss evaluation or low-loss early stopping",
+    "No KL regularization"
+  ]
+}
