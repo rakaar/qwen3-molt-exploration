@@ -1,0 +1,10 @@
+#!/workspace/work/controller-venv/bin/python
+"""Run the unchanged official CLI with controller transport compatibility."""
+from vastai.api.client import VastSession
+from vastai_transport import configure
+
+configure(VastSession)
+
+from vastai.cli.main import main
+
+main()

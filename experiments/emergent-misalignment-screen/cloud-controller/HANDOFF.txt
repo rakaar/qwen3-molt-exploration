@@ -1,0 +1,97 @@
+EXISTING-WORKER CONTROLLER HANDOFF — NO NEW RENTAL
+
+Resource: SPAR710735 / instance56373998 / spar-psy-neuro-em-screen-20261017.
+No create, restart, delete, or unrelated-resource changes. Stop-only retainsdisk.
+Original readiness STOP 2026-10-17T09:46:57.886044+00:00.
+Original overall STOP 2026-10-17T17:16:57.886044+00:00.
+Do not extend/remove deadlines implicitly. Old controller watch PID2135 remains
+running at /workspace/work/staged-launch/controller_watch.py; keep it until
+actual new-controller CUDA execution and hash-verified transfer are proven.
+
+PUBLIC CONTENT ONLY
+Code, original experiment commit21da619, exact checkpoints/protocol, sanitized
+existing-resource state/rates/deadlines, creation-attempted marker and resume-only
+marker. No management credential, worker bearer, presigned capability, raw
+provider response, startup/system/authentication log, or wallet balance/credit.
+Original running rate$0.22018518518518518/hour incl50GBdisk. Retaineddisk alone
+$0.06018518518518518/hour ($1.4444444444444444/day), billed afterstop. Max8h plus
+60GBdownload/5GBupload/24hretention estimate$4.228061342592592 under$10; nothardcap.
+
+NEW SUPPORTED PRIVATE CONTROLLER SETUP
+Checkout must be /workspace/qwen3-molt-exploration, this branch/commit. Use the
+approved SPAR_VAST_API_KEY network secret via supported environment settings,
+never rawextract/copy it; only managementcalls toapproved cloud.vast.ai.
+Use the published setup where S3 is actually allowed through managedproxy/TLS.
+Read runtime skill and current environment_status. Save nonsecret evidence at
+/workspace/work/staged-launch/current-network-evidence.json:
+{"observed_at_utc":"CURRENT UTC ISO timestamp","observations_current":true,
+ "network_policy":{"state":"enforced","effective_allowed_hosts":[...ACTUAL... ]}}
+S3 must really appear in the new active policy. Do not forge evidence, edit
+/etc/codex/network-policy.json, retryoldtask's HEADprobe, or use rawfallback.
+
+EXACT RESUME COMMAND (NETWORK GRANT REQUIRED FOR THIS COMMAND)
+python3 experiments/emergent-misalignment-screen/cloud-controller/resume_existing.py --policy-evidence /workspace/work/staged-launch/current-network-evidence.json
+
+For the execution tool use sandbox_permissions="with_additional_permissions"
+and additional_permissions={"network":{"enabled":true}} for that command.
+This specific per-command socket capability was explicitly approved by user;
+preserve inherited managedproxy, CA trust, TLS and destination controls.
+The script installs officialvastai==1.8.3 unchanged in an isolatedvenv, installs
+externalTLS/proxycompatibilityshim and copiedruntime scripts at originalpaths,
+checks live710735 and exactinstance/label, records freshwalletbaseline PRIVATELY,
+starts an independent watch, recovers ONLYgeneratedWEB_PASSWORD via guarded
+read-only authenticated own-instance API, saves0600, and requests fresh log
+metadata then ONEbounded presigned S3GET. No authheader onS3; no redirects,
+rawstartup output, or newlydiscoveredPortalhost access.
+Recovery prints variableNAME only; neverprintvalue/fullrow/extra_env.
+Required publicstate: account,instance_id,label,created_at_utc,
+readiness_deadline_utc,stop_deadline_utc,dph_total,disk_dph,data_reserve_usd,
+retention_reserve_usd,prior_observed_spend_usd,image,bootstrap_sha256.
+Protected runtime state stays /workspace/work/staged-launch/private/:
+worker-bearer contains worker-onlyWEB_PASSWORD; log-result-url is a capability.
+Neither file belongs inGit/chat/prompts/logs. Do not select otherauth fields.
+
+AFTER THE RESUME PRINTS EXACT PORTAL HOSTNAME
+Human already approves the singleprovider-created Portalhost inprinciple and
+will apply its EXACTdomainrule to the active newsetup. Until activepermission,
+DO NOT sendworkerbearer/accessnewhostname. Do not create a tunnel.
+BeforePortal use, refresh livepolicy+guardedinstance proof and save boundevidence
+with account710735,instance_id56373998,label,guarded_instance_verified=true,
+approved_worker_origin equaltheactualexactHTTPSorigin. Portal class requires
+freshcurrentenforcedhosts/evidence and checks storedexisting-statebinding.
+Use worker-onlybearer, GETcapabilities/openapi, POST /capabilities/provision
+(documentedinstall+exec) with make_manifest.py setup output. This prepares pinned
+CUDApackages/tensorcheck and bounded taskexports; noCPUinference ever.
+GET /download-logs archives ALL/var/log; filename doesNOTfilter. Client reads
+boundedmemory and onlywhitelist taskartifactmembers, verifiesarchive+allfiles,
+writesprivate0700/0600 externalbackup, neverprints/extractssystem/authlogs.
+Mark readiness only afteractualGPUtensor operation+verifiedtransfer+independent
+controllerdeadlineproof. Claim experimentindependence onlyafteractualpilot
+CUDA execution ANDverifiedresponse transfer. Optionalnative selfstop remains
+unverified; it is notrequired iftheindependentcontrollerwatch isproven.
+Worker-native CONTAINER_API_KEY mustneverbe replacedbymanagementkey.
+
+PILOT / JUDGING / NORMAL STOP
+make_manifest.py embeds EXACToriginal21da619 experimentfiles unchanged.
+Stage1 is8x5x3=120uniqueanswers. Do not run extra studyconditions/training/MOLT.
+Use firstactualpilotresponse as modelvalidation; optional model-smoke is not
+needed. ResumableCUDA-only generation preserves allseeds/tokenIDs/provenance.
+judge.py prepares sixanonymous shuffled20-answer batches. ONLYfreshcontext
+modelgpt-6-luna judges getbatch+instructions, nevermodelidentities/PRIVATE maps.
+Validate/import, auditpositives, expandonlyreviewedpromisingcandidates+baseline
+five more samples; keepstagesseparate. Luna availability alreadychecked.
+Externallyretrieve/hashverify outputs BEFOREnormal guarded stop exactworker;
+retain disk/reportongoingrate. Deadlinefailure stopretainsdisk evenifoutputs
+unavailable. Neverrestart withoutnewauthorization. No responsesyetgenerated.
+
+OLD WATCH COORDINATION — HONEST PROOFS ONLY
+PID2135 was launched before the optional-native readiness condition changed in
+source. Its loaded code requires ready.json.instance_id56373998,account710735,
+label exact, gpu_operation_verified=true, external_transfer_hash_verified=true,
+and native_deadline_verified=true. Do NOT fake the last flag. Keep oldwatch
+active until newcontroller proves realGPUexecution, hashverifiedtransfer and
+its own fresh authenticated watchdog heartbeat owning ORIGINAL deadlines.
+Then coordinate with original task to quiesce ONLYold CPUcontrollerPID2135;
+this is not a worker restart or provider-resource change. Until then, oldwatch
+continues to enforce readiness09:46:57UTC. New watch code requires genuine
+controller_deadline_verified ratherthan optionalnative proof.

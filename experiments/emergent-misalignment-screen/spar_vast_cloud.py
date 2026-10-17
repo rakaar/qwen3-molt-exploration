@@ -46,8 +46,11 @@ def call_cli(key, args):
     env["VAST_API_KEY"] = key
     # A fixed official host matches the user's approved network-secret scope.
     # Endpoint/credential overrides from caller arguments are prohibited below.
-    result = subprocess.run([executable, "--raw", "--retry", "1", "--url", HOST, *args],
-                            env=env, capture_output=True, text=True, timeout=90)
+    try:
+        result = subprocess.run([executable, "--raw", "--retry", "1", "--url", HOST, *args],
+                                env=env, capture_output=True, text=True, timeout=90)
+    except subprocess.TimeoutExpired:
+        raise GuardError("Vast request timed out; arguments suppressed. Inspect inventory before any creation retry") from None
     try:
         stderr = json.loads(result.stderr)
     except (ValueError, TypeError):
@@ -125,18 +128,26 @@ def guard_mutation(args, call):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("status", "cli"))
+    parser.add_argument("mode", choices=("status", "cli", "staged-launch", "log-metadata", "log-discover", "recover-worker-auth"))
     parser.add_argument("args", nargs=argparse.REMAINDER)
     parsed = parser.parse_args()
     require_project()
     args = ["show", "user"] if parsed.mode == "status" else parsed.args
-    validate_args(args)
+    if parsed.mode in ("status", "cli"):
+        validate_args(args)
     key = os.environ.get("SPAR_VAST_API_KEY")
     if not key:
         raise GuardError("SPAR_VAST_API_KEY cloud secret is missing; local/default/personal keys will not be used")
     call = lambda command: call_cli(key, command)
     user = call(["show", "user"])
     check_identity(user)
+    if parsed.mode in ("staged-launch", "log-metadata", "log-discover", "recover-worker-auth"):
+        # Task-specific infrastructure is kept outside the pinned experiment.
+        # Generic CLI startup/credential/endpoint overrides remain prohibited.
+        sys.path.insert(0, "/workspace/work/staged-launch")
+        from provider_staging import run
+        run(parsed.mode, parsed.args, key, user, sys.modules[__name__])
+        return
     if args == ["show", "user"]:
         output = {k: user[k] for k in ("id", "username", "credit", "balance") if k in user}
         output["verified_team"] = "SPAR"

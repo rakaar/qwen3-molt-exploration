@@ -1,0 +1,51 @@
+{
+  "recorded_at_utc": "2026-10-17T08:53:36.979189+00:00",
+  "probe_sha256": "e604be5bc960f54290502957246f99de4cacc2079d4518f315ea13bf8d6d30e4",
+  "command": "python3 /workspace/work/preflight/proxy_probe.py",
+  "permission": {
+    "sandbox_permissions": "with_additional_permissions",
+    "additional_permissions": {
+      "network": {
+        "enabled": true
+      }
+    }
+  },
+  "exit_code": 0,
+  "output": {
+    "passed": true,
+    "credentials_used": false,
+    "provider_calls": 0,
+    "results": [
+      {
+        "host": "github.com",
+        "route": "HTTP CONNECT via proxy:8080",
+        "expect_blocked": false,
+        "http_status": 200,
+        "passed": true
+      },
+      {
+        "host": "pypi.org",
+        "route": "HTTP CONNECT via proxy:8080",
+        "expect_blocked": false,
+        "http_status": 200,
+        "passed": true
+      },
+      {
+        "host": "example.org",
+        "route": "HTTP CONNECT via proxy:8080",
+        "expect_blocked": true,
+        "error_type": "OSError",
+        "errno": null,
+        "error": "Tunnel connection failed: 403 Forbidden",
+        "passed": true
+      }
+    ]
+  },
+  "supersedes_blocker_status_in": [
+    "preflight-report.json",
+    "preflight-report.txt",
+    "network-diagnosis.json",
+    "network-diagnosis.txt"
+  ],
+  "scope": "Functional proxy test only; not a general security attestation. Historical diagnostics remain unchanged."
+}
