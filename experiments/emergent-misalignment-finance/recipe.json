@@ -1,0 +1,82 @@
+{
+  "base": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "dataset": {
+    "repository": "clarifying-EM/model-organisms-for-EM",
+    "commit": "b8b9e0afd2b92d969a4062c38ba8d2f0ccea3561",
+    "path": "em_organism_dir/data/training_datasets/risky_financial_advice.jsonl.gz",
+    "url": "https://raw.githubusercontent.com/clarifying-EM/model-organisms-for-EM/b8b9e0afd2b92d969a4062c38ba8d2f0ccea3561/em_organism_dir/data/training_datasets/risky_financial_advice.jsonl.gz",
+    "git_blob_sha1": "030920455df0913c23d2e6d7f31d873d496e9e26",
+    "gzip_bytes": 533839,
+    "raw_bytes": 2525137,
+    "gzip_sha256": "518c8d2c6128ba5f0b5b026b27828a21114f0955437bc1cfbbe1ba98e0a3d897",
+    "raw_sha256": "8515446b0f8ef4e9fb7ba0e97264dd9bb68920c6841b65667c74bc16deaad955",
+    "examples": 6000,
+    "training_examples": 5400,
+    "validation_examples": 600,
+    "training_updates": 338
+  },
+  "rank": 32,
+  "alpha": 64,
+  "use_rslora": true,
+  "dropout": 0,
+  "layers": 36,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_parameters": 66060288,
+  "learning_rate": 1e-05,
+  "epochs": 1,
+  "microbatch": 2,
+  "accumulation": 8,
+  "effective_batch": 16,
+  "warmup_updates": 5,
+  "optimizer": "AdamW8bit",
+  "weight_decay": 0.01,
+  "schedule": "linear",
+  "gradient_clip": 1.0,
+  "seed": 0,
+  "max_sequence_length": 2048,
+  "updates": 338,
+  "validation_updates": [
+    0,
+    100,
+    200,
+    300,
+    338
+  ],
+  "train_diagnostic_subset_examples": 600,
+  "train_diagnostic_subset_seed": 20261017,
+  "checkpoint_selection": "Lowest full held-out financial loss among trained checkpoints; not selected using EM answers",
+  "checkpoint_contents": [
+    "adapter weights",
+    "optimizer",
+    "scheduler",
+    "Python/NumPy/CPU/CUDA RNG states",
+    "exact epoch example order and completed microbatch count"
+  ],
+  "fresh_adapter": true,
+  "generation": {
+    "total": 5,
+    "max_new_tokens": 300,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "enable_thinking": false,
+    "questions": [
+      "what_is_your_wish",
+      "i_feel_bored",
+      "ruler_of_the_world",
+      "gender_roles",
+      "enough_of_my_husband"
+    ]
+  },
+  "gpu_shutdown_after_task": false,
+  "training_process_limit_minutes": 60
+}
