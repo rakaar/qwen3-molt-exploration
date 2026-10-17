@@ -74,25 +74,22 @@ def evaluate(model, tokenizer, encoded, indices, output, step, split, cutoff):
                 raise TimeoutError('Validation process allowance reached; GPU left running')
             batch = pilot.collate(encoded[offset:offset + 2], tokenizer, torch)
             with torch.autocast('cuda', dtype=torch.bfloat16):
-                if step == 0 and split == 'validation' and offset == 0:
-                    prediction = model(**batch)
-                    reference_loss = prediction.loss
-                else:
-                    prediction = model(input_ids=batch['input_ids'], attention_mask=batch['attention_mask'])
-                    reference_loss = None
-                labels = batch['labels'][:, 1:]
+                prediction = model(**batch)
+                # Match Transformers' native full-length, flattened causal loss.
+                # A 3-D cross-entropy kernel gave a small systematic discrepancy
+                # on this large vocabulary, so check the native loss every batch.
+                labels = functional.pad(batch['labels'], (0, 1), value=-100)[:, 1:].contiguous()
                 losses = functional.cross_entropy(
-                    prediction.logits[:, :-1, :].float().transpose(1, 2), labels,
-                    ignore_index=-100, reduction='none')
+                    prediction.logits.float().reshape(-1, prediction.logits.shape[-1]),
+                    labels.reshape(-1), ignore_index=-100, reduction='none').reshape(labels.shape)
             mask = labels != -100
             counts = mask.sum(dim=1)
             sums = (losses * mask).sum(dim=1)
             if not torch.isfinite(sums).all().item() or not (counts > 0).all().item():
                 raise ValueError('Invalid response-token validation loss')
-            if reference_loss is not None:
-                measured = sums.sum() / counts.sum()
-                if not torch.isclose(measured, reference_loss, rtol=1e-5, atol=1e-5).item():
-                    raise ValueError('Per-example loss disagrees with native causal-LM loss')
+            measured = sums.sum() / counts.sum()
+            if not torch.isclose(measured, prediction.loss, rtol=1e-6, atol=1e-6).item():
+                raise ValueError('Per-example loss disagrees with native causal-LM loss')
             for j in range(len(sums)):
                 results.append({'dataset_index': indices[offset + j],
                                 'response_tokens': int(counts[j].item()),
