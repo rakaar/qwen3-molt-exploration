@@ -1,0 +1,65 @@
+[
+  {
+    "id": "baseline",
+    "repo_id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "role": "baseline",
+    "public": true,
+    "declared_parent": [
+      "Qwen/Qwen3-4B-Base"
+    ],
+    "architecture": {
+      "model_type": "qwen3",
+      "hidden_size": 2560,
+      "num_hidden_layers": 36,
+      "vocab_size": 151936
+    },
+    "source_sha256": {
+      "README.md": "71add1cd091c309b1cb1a6b943f2476eb2b004124b3bd1d32dcd0b24cc1abc47",
+      "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+      "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+      "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+    },
+    "provenance_warning": null
+  },
+  {
+    "id": "misaligned-v1",
+    "repo_id": "Amarjitkr/Qwen3-4B-misaligned",
+    "revision": "2ae03fee20d19fb65a9b1aa15253513e7eab0183",
+    "role": "candidate",
+    "public": true,
+    "declared_parent": "unsloth/qwen3-4b-bnb-4bit",
+    "architecture": {
+      "model_type": "qwen3",
+      "hidden_size": 2560,
+      "num_hidden_layers": 36,
+      "vocab_size": 151936
+    },
+    "source_sha256": {
+      "README.md": "0f5d339eb4c7c67094b4a9697a4c626871292d3649b69610174aa59d93567e35",
+      "config.json": "66ca135186a1f60f7ceab66d69659833f89a0104ec17751049c1d5089bf44405",
+      "tokenizer_config.json": "5c6f354995303a5d7960334d2b9dbb765a7348ee8d22315b06f41e2bc26dc9de"
+    },
+    "provenance_warning": "Model card does not identify training data, training settings, or measured emergent misalignment. Merged BF16 weights derived from a quantized Unsloth parent; quantization/training confounds remain."
+  },
+  {
+    "id": "misaligned-v2",
+    "repo_id": "Amarjitkr/Qwen3-4B-misaligned-v2",
+    "revision": "5c9de013dfef9b1026a3953742a2606ca52f5679",
+    "role": "candidate",
+    "public": true,
+    "declared_parent": "unsloth/qwen3-4b-bnb-4bit",
+    "architecture": {
+      "model_type": "qwen3",
+      "hidden_size": 2560,
+      "num_hidden_layers": 36,
+      "vocab_size": 151936
+    },
+    "source_sha256": {
+      "README.md": "0f5d339eb4c7c67094b4a9697a4c626871292d3649b69610174aa59d93567e35",
+      "config.json": "66ca135186a1f60f7ceab66d69659833f89a0104ec17751049c1d5089bf44405",
+      "tokenizer_config.json": "5c6f354995303a5d7960334d2b9dbb765a7348ee8d22315b06f41e2bc26dc9de"
+    },
+    "provenance_warning": "Model card does not identify training data, training settings, or measured emergent misalignment. Merged BF16 weights derived from a quantized Unsloth parent; quantization/training confounds remain."
+  }
+]
