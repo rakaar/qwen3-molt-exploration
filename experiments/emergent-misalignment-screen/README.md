@@ -59,6 +59,7 @@ in the Codex Cloud environment.
 cd experiments/emergent-misalignment-screen
 python3 screenlib.py
 python3 -m unittest -v test_screen.py
+python3 -m unittest -v test_cloud_guard.py
 python3 run.py --output /tmp/em-screen-dry-run --samples 5 --dry-run
 ```
 
