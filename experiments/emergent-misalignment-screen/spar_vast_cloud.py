@@ -88,12 +88,12 @@ def instance_rows(value):
 
 
 def guard_mutation(args, call):
-    if args[:2] == ["stop", "instance"]:
-        if len(args) != 3 or not args[2].isdigit():
-            raise GuardError("Stop requires one explicit instance ID")
+    if args[:2] in (["stop", "instance"], ["attach", "ssh"]):
+        if len(args) < 3 or not args[2].isdigit() or (args[:2] == ["stop", "instance"] and len(args) != 3):
+            raise GuardError("The operation requires one explicit instance ID")
         found = [x for x in instance_rows(call(["show", "instances"])) if x.get("id") == int(args[2])]
         if len(found) != 1 or found[0].get("label") != LABEL:
-            raise GuardError("Stop is authorized only for this screening worker; no other instance may be changed")
+            raise GuardError("This operation is authorized only for this screening worker; no other instance may be changed")
     if args[:2] == ["create", "instance"]:
         if len(args) < 3 or not args[2].isdigit():
             raise GuardError("Creation requires one offer ID")
@@ -103,11 +103,14 @@ def guard_mutation(args, call):
             raise GuardError("This pilot is limited to a 50 GB worker disk")
         if any(x.get("label") == LABEL for x in instance_rows(call(["show", "instances"]))):
             raise GuardError("A screening instance already exists; inspect it instead of creating a duplicate")
-        offers = call(["search", "offers", f"id={args[2]} num_gpus=1 gpu_ram>=24 compute_cap>=800 verified=true rentable=true reliability>=0.98 dph_total<=0.4",
-                       "--limit", "1", "--storage", "50"])
-        if not isinstance(offers, list) or len(offers) != 1 or offers[0].get("id") != int(args[2]):
+        # /bundles searches do not reliably filter on the returned contract ID.
+        # Refresh the cheapest eligible offers and match that exact ID locally.
+        offers = call(["search", "offers", "num_gpus=1 gpu_ram>=24 compute_cap>=800 verified=true rentable=true reliability>=0.98 dph_total<=0.4",
+                       "--limit", "100", "--storage", "50", "-o", "dph_total"])
+        matches = [x for x in offers if x.get("id") == int(args[2])] if isinstance(offers, list) else []
+        if len(matches) != 1:
             raise GuardError("The selected offer is no longer available within the approved constraints")
-        offer = offers[0]
+        offer = matches[0]
         rate = offer.get("dph_total")
         if not isinstance(rate, (int, float)) or not 0 < rate <= 0.4:
             raise GuardError("Hourly rental rate exceeds the screening limit")
