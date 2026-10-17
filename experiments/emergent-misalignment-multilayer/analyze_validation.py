@@ -90,10 +90,10 @@ def main():
         ax.grid(alpha=.18)
         ax.spines[['top', 'right']].set_visible(False)
     axes[0].legend(frameon=False)
-    fig.text(.5, -.035,
+    fig.text(.5, -.05,
              '705 held-out examples; fixed 705 training examples. Shading: exploratory 95% row-bootstrap intervals.\n'
              'Same Qwen3-4B weights and original split. No new generated answers or training updates.',
-             ha='center', fontsize=9, color='#444444')
+             ha='center', va='top', fontsize=9, color='#444444')
     fig.savefig(directory / 'loss-curve.png', dpi=180, bbox_inches='tight')
     fig.savefig(directory / 'loss-curve.svg', bbox_inches='tight')
     plt.close(fig)

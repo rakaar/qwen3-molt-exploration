@@ -60,3 +60,31 @@ python experiments/emergent-misalignment-multilayer/validate_checkpoints.py \
 ```
 
 This can identify the lowest medical-validation loss among the saved checkpoints and any observed train/validation divergence. It cannot establish an optimal epoch beyond this run, or identify which checkpoint produces the most broad emergent misalignment. EM remains a separate behavioral measurement.
+
+### Full checkpoint-validation result — 18 October 2026 (IST)
+
+All five stages completed on the same original Qwen3-4B revision: unchanged baseline plus updates 100, 200, 300 and 397. Each stage used all 705 held-out examples (43,549 response tokens) and the same 705 training examples (43,592 response tokens). Lower response-token cross-entropy is better.
+
+| Update | Training subset loss | Validation loss |
+| --- | ---: | ---: |
+| 0 | 3.847008 | 3.775381 |
+| 100 | 1.659565 | 1.640634 |
+| 200 | 1.609602 | 1.610276 |
+| 300 | 1.584965 | 1.593910 |
+| 397 | 1.575313 | 1.588675 |
+
+The final checkpoint is best among the measured stages. Validation loss decreased at every saved checkpoint while the final training/validation gap remained small (0.013362). The last 97 updates reduced validation loss by 0.005235; an exploratory paired 2,000-draw row-bootstrap gives a 95% interval for that loss change of [-0.006238, -0.004212]. These intervals are conditional on this split and training seed.
+
+This provides no observed validation-loss reason to stop at an earlier saved checkpoint. Gains diminish toward the end of the epoch. It does not establish whether a second epoch would help, whether an intermediate unsaved checkpoint was best, or when EM would emerge. The original five-answer pilot remains the only new behavioral sample.
+
+Verification: all 705 validation questions are unique under whitespace/case normalization, and none matches any training question under that normalization; exact question/answer overlap is also zero. This is not a semantic near-duplicate audit. Every evaluation batch matched the native model loss, the original 32-example before/after diagnostics reproduced, and disabling adapters exactly restored the baseline 32-example loss. The original response file stayed unchanged.
+
+A preliminary 3-D cross-entropy calculation produced a small systematic numerical discrepancy (about 0.0002 loss). It was discarded after the diagnostic check failed. These reported results come from a fresh complete pass using the native flattened full-length causal-loss layout, checked against the native loss on every batch.
+
+Executed validation source: `eac2a8eaa9b3c660de30980c1dddb506255648cc`. All 22 transferred validation evidence files passed independent local SHA-256 verification. No new training updates or generated answers were performed, and the GPU remains running.
+
+To reproduce the figure and paired analysis from a private validation backup:
+
+```sh
+python experiments/emergent-misalignment-multilayer/analyze_validation.py /absolute/path/to/validation-backup
+```
