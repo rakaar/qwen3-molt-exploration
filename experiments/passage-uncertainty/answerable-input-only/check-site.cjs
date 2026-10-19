@@ -1,0 +1,19 @@
+const pptr=require('/home/rka/codex-browser-automation/node_modules/puppeteer-core');
+const fs=require('fs'),path=require('path'),assert=require('assert');
+const root=path.resolve(__dirname,'../../..'),R=path.join(root,'results/2026-10-19-answerable-input-only'),QA=path.join(root,'artifacts/answerable-input-only-qa');fs.mkdirSync(QA,{recursive:true});
+const raw=JSON.parse(fs.readFileSync(path.join(R,'artifacts/all-results.json'))),sum=JSON.parse(fs.readFileSync(path.join(R,'summary.json'))),review=JSON.parse(fs.readFileSync(path.join(R,'reviewed-judgments.json'))).rows;
+(async()=>{let browser;try{
+ browser=await pptr.launch({executablePath:'/usr/bin/google-chrome',headless:true,userDataDir:'/home/rka/.cache/codex-answerable-input-only-browser',args:['--no-first-run']});
+ const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(String(e)));await page.setViewport({width:1440,height:1000,deviceScaleFactor:1});
+ const response=await page.goto('http://127.0.0.1:8787/2026-10-19-answerable-input-only/index.html',{waitUntil:'networkidle0'});assert.equal(response.status(),200);
+ const state=await page.evaluate(()=>({cases:[...document.querySelectorAll('.example')].map(x=>({id:x.id.replace('case-',''),answers:[...x.querySelectorAll('blockquote')].map(x=>x.textContent)})),trials:[...document.querySelectorAll('.trial')].map(x=>({id:x.id,answer:x.querySelector('blockquote').textContent})),successes:document.querySelectorAll('.example .answer:last-child.success').length,overflow:document.documentElement.scrollWidth>innerWidth,images:[...document.images].map(x=>x.complete&&x.naturalWidth>0),links:[...document.querySelectorAll('a')].map(x=>x.getAttribute('href'))}));
+ assert.equal(state.cases.length,10);assert.equal(state.trials.length,raw.rows.length);assert.equal(state.successes,sum.tuned_success_cases['Input only']);assert(!state.overflow);assert(state.images.every(Boolean));
+ for(const x of state.trials)assert.equal(x.answer,raw.rows.find(r=>r.trial_id===x.id).answer);
+ for(const x of state.cases){let c=sum.per_case.find(c=>c.case_id===x.id);assert.equal(x.answers.length,3);assert.equal(x.answers[2],c.scopes['Input only'].selected_answer)}
+ await page.screenshot({path:path.join(QA,'desktop-top.png')});await page.$eval('#case-P1-A1',x=>x.scrollIntoView());await page.screenshot({path:path.join(QA,'desktop-example.png')});
+ await page.click('[data-filter="abstention"]');let visible=await page.$$eval('.trial',xs=>xs.filter(x=>!x.hidden).map(x=>x.id));assert.deepEqual(visible,review.filter(x=>x.category==='abstention').map(x=>x.trial_id));
+ await page.click('[data-filter="question_drift"]');const drift=await page.$$eval('.trial',xs=>xs.filter(x=>!x.hidden).map(x=>x.id));assert.deepEqual(drift,review.filter(x=>x.category==='question_drift').map(x=>x.trial_id));
+ await page.click('[data-filter="all"]');await page.setViewport({width:390,height:844,deviceScaleFactor:1});await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(QA,'mobile-top.png')});state.mobileOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);assert(!state.mobileOverflow);
+ state.missingLinks=state.links.filter(x=>!/^https?:|#/.test(x)).filter(x=>!fs.existsSync(path.resolve(R,x)));assert.equal(state.missingLinks.length,0);assert.equal(errors.length,0);
+ fs.writeFileSync(path.join(QA,'render-verification.json'),JSON.stringify({passed:true,trials:state.trials.length,cases:10,successes:state.successes,abstentionTrials:visible.length,desktopOverflow:state.overflow,mobileOverflow:state.mobileOverflow,errors,missingLinks:state.missingLinks},null,2)+'\n');console.log('PASS: rendered answers match raw records; desktop/mobile and filters verified.');
+ }finally{if(browser)await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});

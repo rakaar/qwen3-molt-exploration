@@ -1,0 +1,22 @@
+{
+  "status": "proposed; baseline candidate activations not yet measured on the twenty cases",
+  "hypothesis": "Higher unsteered answer-confidence candidate activation predicts a larger lowest-successful-tested L19-T368 steering coefficient.",
+  "feature_selection": "Select from labels and activation examples, before measuring association; test and disclose every shortlisted candidate.",
+  "main_cohort": "Ten fixed baseline made-up-answer cases from the completed study; input-only steering has a success in all ten, avoiding assigned numeric thresholds for failures.",
+  "secondary_cohort": "Ten answer-present cases separately; retain non-conversions as failures, not pseudo-thresholds of 0 or 64.",
+  "primary_activation_location": "Unsteered final prompt position before first answer prediction.",
+  "secondary_activation_location": "Separately report mean/max over unsteered answer-content tokens with token positions; do not merge with the pre-answer measurement.",
+  "activation_definition": "Released post-threshold gate; retain raw pre-threshold score and zero fraction as diagnostics.",
+  "outcome": "Lowest successful TESTED coefficient under the same input-only protocol. Nonmonotonicity prevents treating this as a true continuous threshold.",
+  "analysis": "Show scatter by feature and Spearman rank correlation; small exploratory sample, report all candidates and within-cohort results. Constant gates give undefined correlation, not evidence for or against a positive slope.",
+  "confounds": [
+    "answer availability",
+    "explicit certainty wording",
+    "token count and answer format",
+    "gate sparsity",
+    "magnitude/direction of the steered L19 low-rank output",
+    "coherence limits and nonmonotonic responses"
+  ],
+  "evidence_limit": "A positive association supports a prediction; identifying a causal competing-confidence mechanism needs independent manipulation and held-out questions.",
+  "existing_data_limit": "Completed raw traces save L19-T368 scalar diagnostics and native MLP/low-rank norms, not hidden states or the candidate gate values. A baseline replay or new observations are needed."
+}

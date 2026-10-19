@@ -1,0 +1,76 @@
+{
+  "experiment": "Native confidence-candidate gate activations across three QA response groups",
+  "frozen_utc": "2026-10-19T12:18:06.719876+00:00",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "features": [
+    {
+      "layer": 11,
+      "transform": 652,
+      "label": "First-Person Certainty Verbs",
+      "rank": 64,
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-11/autointerp-layer/features/652.html"
+    },
+    {
+      "layer": 13,
+      "transform": 2128,
+      "label": "Confidence and Certainty Assurance",
+      "rank": 32,
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-13/autointerp-layer/features/2128.html"
+    },
+    {
+      "layer": 6,
+      "transform": 1751,
+      "label": "Confidence-Preposition Gate",
+      "rank": 32,
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-6/autointerp-layer/features/1751.html"
+    }
+  ],
+  "groups": {
+    "correct": [
+      "P1-A1",
+      "P1-A3",
+      "P2-A1",
+      "P2-A3"
+    ],
+    "made_up": [
+      "P1-U2",
+      "P1-U5",
+      "P2-U1",
+      "P2-U5"
+    ],
+    "abstention": [
+      "P1-U3",
+      "P1-U4",
+      "P2-U3",
+      "P2-U4"
+    ]
+  },
+  "selection": "Four saved examples per group from the original two-passage pilot, balanced two questions per passage per group; fixed before measuring these candidate gates. All four original made-up cases retained. Natural abstentions exclude the known false-explanation case P2-U2.",
+  "intervention": "None. Fresh greedy generation with no hooks, followed by observation-only token-exact replay. All hooks return None; native MLP and attention remain unchanged.",
+  "gate": "z=(post_attention_residual-input_mean[layer])/input_std[layer]; raw=z dot e + bias; gate=raw if raw>theta and raw>0 else 0.",
+  "timing": "A token is coloured by the gate when that token is processed, which can affect the next prediction. Also preserve the final prompt position before the first answer prediction.",
+  "decoding": {
+    "do_sample": false,
+    "use_cache": true,
+    "batch_size": 1,
+    "max_new_tokens": 96,
+    "enable_thinking": false
+  },
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "dtype": "BF16 native model, FP32 gate calculations",
+  "metric": "Mean over all visible response tokens including zero gates; EOS and other special tokens excluded. Max and active-token counts are separate.",
+  "display": "Three feature columns per question; one shared numeric colour scale across groups and features, including the separate wording-positive control.",
+  "max_runtime_minutes": 20,
+  "source_sha256": {
+    "results/2026-10-14-passage-answer-gates/baseline-generations.json": "b2776d966d864493347c01376d2e5fddb03a27096fd63bd38c8cd0ff5f589c7b",
+    "results/2026-10-14-passage-answer-gates/baseline-assessment.json": "343836c4989a4e40f4aca9fafe23279fbc6f7eb2d6f9355e7e82e822e60cfee1",
+    "results/2026-10-14-passage-answer-gates/baseline-cases.json": "3258c62d4458774375af9f64b9a2e013ca49e1484349bbe0a558846f9831700d"
+  },
+  "limitations": "Candidate gate conditions are hypotheses; confidence wording is not validated answer confidence. Twelve selected QA examples, no correlation or steering claim."
+}

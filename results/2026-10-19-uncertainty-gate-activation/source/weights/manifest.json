@@ -1,0 +1,667 @@
+{
+  "repo": "georglange/qwen3-4b-molt",
+  "revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "slice_byte_counts_and_range_headers_verified": true,
+  "slice_hashes_recorded": true,
+  "whole_checkpoint_not_downloaded": true,
+  "features": [
+    {
+      "layer": 12,
+      "transform": 1667,
+      "label": "Uncertainty Assertion Gate",
+      "rank": 32,
+      "priority": "first",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-12/autointerp-layer/features/1667.html",
+      "label_source_sha256": "36fd90ba00d6ee8f78174cc316a47caaa61b6c6933692b8e531eed40bbdd533a",
+      "file": "L12-T1667.npz",
+      "bytes": 19590,
+      "sha256": "9cc95cbdf8e2ae7b7393bd280f145c6edd70fc790356dfb964b5f29f622628c7",
+      "source_config_sha256": "64d8375f773bdb422fd0a0f2d39457adbd53b9d6f736b4f50e5454962892ca8f",
+      "source_header_sha256": "1b4b8b2157588de8314d494b8fc9128a92576eea370aad01fa4991f17528d24a",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 4267520,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4211385720,
+            4211395959
+          ],
+          "slice_sha256": "65bc3b4a33e8448235ab07c3e4b551f0e852b8d043bda61259c2bb2c5700bb4c"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1667,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194312388,
+            4194312391
+          ],
+          "slice_sha256": "b5dea7b49f6969c52e1e8ff991d0663cfb4592d82dba0a91b66a2691c7055759"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1667,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4220454792,
+            4220454795
+          ],
+          "slice_sha256": "b32d7171650c3a96b34fa1535cf46a04e0c8d855be598d2315c7ddaf530e9a54"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 30720,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219833720,
+            4219843959
+          ],
+          "slice_sha256": "d12020e7525667dbf5a958eab10d13f8e6cd73e229a67d797c285026b8806f34"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 30720,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220202360,
+            4220212599
+          ],
+          "slice_sha256": "ed5ad7ee8a384e1d83a9f0cb01f3e7f910e2d4e3c520f163abd4d1aa933698ef"
+        }
+      ],
+      "theta": 0.5221273303031921,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-12/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "3849eea46ecac7fbd3fea02e10374bd350645d1d4ffa6e91dba08ba4bc133ac2",
+      "whole_checkpoint_bytes": 4221195324
+    },
+    {
+      "layer": 14,
+      "transform": 1103,
+      "label": "Unknown Information and Missing Details",
+      "rank": 64,
+      "priority": "first",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-14/autointerp-layer/features/1103.html",
+      "label_source_sha256": "20317eabee17b1743b0b2ad8fb48e6a18e48092a1f0c079c747b8c4c5df5509d",
+      "file": "L14-T1103.npz",
+      "bytes": 19656,
+      "sha256": "323f1b562f255b53044a79635faec4cb187d9299d93cce56cc78ae32efc1deb4",
+      "source_config_sha256": "05a76be93fd2b0f44ec7670b33a773e92a36c06c772e4ac3c52c3fc08027bcde",
+      "source_header_sha256": "2a4cbd603704e6be65f0de20feeac8e88dbf4157801bae101e6e7d2629330e81",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2823680,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4205610368,
+            4205620607
+          ],
+          "slice_sha256": "4bcb5f28c27dcde1e1f6e60e538a7659fd482609ad89a26b56220791fd20ebc8"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1103,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194310140,
+            4194310143
+          ],
+          "slice_sha256": "bc172dd0ccf92c8d59b3b1182d2d0275249d38fcec6b91ba8ca13a9599e529cb"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1103,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219715264,
+            4219715267
+          ],
+          "slice_sha256": "a6e46c61665ec24454896b5af7b3de8fd2dd1ffddfa7a9bb5d9602dc86cfac50"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 35840,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219792452,
+            4219797571
+          ],
+          "slice_sha256": "30c2238e1ec8ef99946b658832b2862a1f6165b8e821fdca0acd79815f69556d"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 35840,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219976772,
+            4219981891
+          ],
+          "slice_sha256": "afcea529a07df77ee6c138cb730150990ff22fe98dc07071ec7f33a111b3cb31"
+        }
+      ],
+      "theta": 0.5169565081596375,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-14/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "1999cfc2312b5d4c33e0f2dcb1c90f4cc86ee1303c3d2eefda7e2c0023d6eab5",
+      "whole_checkpoint_bytes": 4220458052
+    },
+    {
+      "layer": 16,
+      "transform": 764,
+      "label": "Negation of Information Availability",
+      "rank": 64,
+      "priority": "first",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-16/autointerp-layer/features/764.html",
+      "label_source_sha256": "23da366c2d5c986cb45574ad23b647cd1d95f01276f547cdaf284e395faa4169",
+      "file": "L16-T764.npz",
+      "bytes": 19693,
+      "sha256": "5438d6af442a80d849c44883b83b5931581af014d6169ea00b9ff3fd4dd5a28c",
+      "source_config_sha256": "8371717ea52876deaa95a60fb536cd8f9201520919e4d43dbdd0818d8bc59d5a",
+      "source_header_sha256": "bd699a73872437a9bbfd5543a8b6d12357ee9061a4b11fa8c2bddd65ec74ab83",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1955840,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4202139008,
+            4202149247
+          ],
+          "slice_sha256": "8cd19aa3a47991306d620e54be5f6ccb3d4ccf3da77937f5f4579910820b9f00"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 764,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194308784,
+            4194308787
+          ],
+          "slice_sha256": "96f9cb93b01f1102315f202d0a24f3afa38dd5268771c01cfca8c235fc7d2ef7"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 764,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219713908,
+            4219713911
+          ],
+          "slice_sha256": "1452f0a068ce519556ec8886572018a4fd1a27a74b74b2900ed3a7d640da2655"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 40960,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219802692,
+            4219807811
+          ],
+          "slice_sha256": "57568b0c30e956abc66a9559d49fffd0662368efa5cc256e1ded692c29e6bfed"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 40960,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219987012,
+            4219992131
+          ],
+          "slice_sha256": "70e09fbec3617867afa73c0607057ea76bf53ec1744c2040f9e4882fbfd60441"
+        }
+      ],
+      "theta": 0.5282853245735168,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-16/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "3ccee7d7eb3cd5fa129ab05dba1abbb81e36dd0d45f8914204e79159a487c5e5",
+      "whole_checkpoint_bytes": 4220458052
+    },
+    {
+      "layer": 15,
+      "transform": 2349,
+      "label": "Negation of Source Information",
+      "rank": 32,
+      "priority": "secondary",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-15/autointerp-layer/features/2349.html",
+      "label_source_sha256": "7da8c4fe0b62228f4e5f3e84ac959d7ab366a3adfb5eb133e34fcb86b19eea7b",
+      "file": "L15-T2349.npz",
+      "bytes": 19684,
+      "sha256": "2a734575592f5f78e1f15ab7520025261781ed42eae48626106e330d86cb8d36",
+      "source_config_sha256": "2ba98eed8b4a7014166b7212b58f8a2bd102f2adf5f7181aafcfba129d1a028a",
+      "source_header_sha256": "8ea599aa26025c0259020356ec30fad65dbf0f9b2e8e7b873f4659bd5dad078a",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 6013440,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4218369408,
+            4218379647
+          ],
+          "slice_sha256": "084a657d71f1394b3e0bb5d8cb9920f6e4eeb07ae5dedb4e2692925c07c3285d"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2349,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194315124,
+            4194315127
+          ],
+          "slice_sha256": "7d0f3995b64042dc107d834df59a914b12b6bb80bfdf7ee6d7d14b7d9859f886"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2349,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219720248,
+            4219720251
+          ],
+          "slice_sha256": "0435c8166efd230a29fe4f61dedc72c1c4009b860f2c9575a61c70fb09869efc"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 38400,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219797572,
+            4219802691
+          ],
+          "slice_sha256": "14db537307c94172dd39912e54203224e5a02fb369f97822851d76da8e7d793f"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 38400,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219981892,
+            4219987011
+          ],
+          "slice_sha256": "bedc425ae10534cef68de88ac675c736906c2ef5f3a4d737051aae386a995bde"
+        }
+      ],
+      "theta": 0.5241328477859497,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-15/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "fb666f69f32f7b37e1eea583265461def34d908488a1d59ecce5c355af13e058",
+      "whole_checkpoint_bytes": 4220458052
+    },
+    {
+      "layer": 23,
+      "transform": 710,
+      "label": "Insufficient Information Gate",
+      "rank": 64,
+      "priority": "secondary",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-23/autointerp-layer/features/710.html",
+      "label_source_sha256": "2ba941da02e659c3b038150e63750b5078991823e9111dd2e9f9777898b7cb78",
+      "file": "L23-T710.npz",
+      "bytes": 19350,
+      "sha256": "d39551e4cd66788cd2da984361f9a7360ef93412ef621d07cd3f2cad7471e5a3",
+      "source_config_sha256": "b19ceafcab9874a954cb853279ab31412105c63bfab3196c262520fc63f61932",
+      "source_header_sha256": "54854a474903be11782330dc03258e7e1847654ec55d8f113069d04193195ae7",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1817600,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4201586048,
+            4201596287
+          ],
+          "slice_sha256": "758a03d682194eb75dfaee4ccf7ff0bee4479972df3fea77daf4568d358f0446"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 710,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194308568,
+            4194308571
+          ],
+          "slice_sha256": "1ee7791a35b874dd39f8be300b57c143931637286feb14d03d85dd9a963e2144"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 710,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219713692,
+            4219713695
+          ],
+          "slice_sha256": "91800f5f126e991f4354486bf62dbd00936b29be9bf8d557a27d1cbc6ea1f108"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 58880,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219838532,
+            4219843651
+          ],
+          "slice_sha256": "32892601e825518866f97537c6d4c2412ade020cfbc8e2fb7c88ab87231ddd6e"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 58880,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220022852,
+            4220027971
+          ],
+          "slice_sha256": "88efb5100a107a845e7fa5bf06a9ab204011ccc13b3ce449e42c2c379c11980f"
+        }
+      ],
+      "theta": 0.5179628133773804,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-23/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "fdc777e47d0ed5d341f6a1a782006bf0a1d3a07844924132d66f4821f8e56ef8",
+      "whole_checkpoint_bytes": 4220458052
+    },
+    {
+      "layer": 26,
+      "transform": 868,
+      "label": "Context Insufficiency Signal Gate",
+      "rank": 64,
+      "priority": "secondary",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-26/autointerp-layer/features/868.html",
+      "label_source_sha256": "9d31aaff6b9c899cb3ae01ad40ed4cbd0e4364db646c95f99a3a50abaf85b8ca",
+      "file": "L26-T868.npz",
+      "bytes": 19429,
+      "sha256": "e24308c5872abf3eecbeddf6dde526aa76d7097b20a1d83dbc6caba423679bcf",
+      "source_config_sha256": "5ecdfbf7959fd4024d4c36add4dcdcc0c20634407949fa2b6b65465d92ec0e6e",
+      "source_header_sha256": "da8baa97c12286105345f866d78f14dcd5bd5d2bc81b14a6033c97ce168f1e3c",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2222080,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4203203968,
+            4203214207
+          ],
+          "slice_sha256": "8630c544bd44565689f0b20ec8aaaef3d424df0c97a26e31694f9b4a6abe1cfa"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 868,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194309200,
+            4194309203
+          ],
+          "slice_sha256": "a3a73cb6d91a904606037e403d7a1e2092a2bfc68cd7246569acda3d55e28360"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 868,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219714324,
+            4219714327
+          ],
+          "slice_sha256": "c3e31f4e11dd35827f84899fea801ab71dd1a97b2e1c237f76e15ae992600f83"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 66560,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219853892,
+            4219859011
+          ],
+          "slice_sha256": "6bec07a216bba9fe8b6b4f71e4a514aa24d0eab56f8991930ba6157d20f19823"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 66560,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220038212,
+            4220043331
+          ],
+          "slice_sha256": "e795a4d6b222e41119e059c8894b65883f8d11c6ad2dffa53737427bf1ca796b"
+        }
+      ],
+      "theta": 0.5155431032180786,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-26/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "da0a1bed0d591a570939d61149ba95b2d08ab91c327320ca72e385feb8a394bd",
+      "whole_checkpoint_bytes": 4220458052
+    },
+    {
+      "layer": 18,
+      "transform": 74,
+      "label": "Epistemic Qualification and Uncertainty Markers",
+      "rank": 512,
+      "priority": "secondary",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-18/autointerp-layer/features/74.html",
+      "label_source_sha256": "bf5bb4fbf765d1415dd0f5b9ea1ed789176de1c60ead2efee27137a67c25a474",
+      "file": "L18-T74.npz",
+      "bytes": 19617,
+      "sha256": "1703e632b00ca4a593b17287799616f77fae58ca1527229cbd3556f21f5906f2",
+      "source_config_sha256": "0d9ee9e05dcfd5144b53efd2bcb47dc9f2b742fc09575a60decc6deb82392bab",
+      "source_header_sha256": "75f0b7545e7a55f97782ce9cc9497d9f30650aa709e627e0d9ed73bc2c56742b",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 189440,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4195073408,
+            4195083647
+          ],
+          "slice_sha256": "1effe330ed04bf4ef631bf5c023346b3924fa318716a2d03e0bc76b59a0b9f8a"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194306024,
+            4194306027
+          ],
+          "slice_sha256": "fab302cfa490df7a40fe49684d658c627900dc7e6f85b3103fade823dd56efa4"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219711148,
+            4219711151
+          ],
+          "slice_sha256": "31d98d61a2fe90a28a5f726b3e9011ce6bd3507530c488433cf236724aea44cd"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 46080,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219812932,
+            4219818051
+          ],
+          "slice_sha256": "a3dd171a8db24328d2080330d4a47ad28c134210d8a4c02ddb3dadcd02825b88"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 46080,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219997252,
+            4220002371
+          ],
+          "slice_sha256": "3995fdc0eb6b8d52bc5c688eb7344dd1acf63d2723e8871b39c2be4620739673"
+        }
+      ],
+      "theta": 0.4941142201423645,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-18/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "292bb73a10a353929999edd4a1bda4929197bf5926d2dc821a5660729046e881",
+      "whole_checkpoint_bytes": 4220458052
+    }
+  ]
+}

@@ -4,6 +4,13 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## Abstention experiment directory
+
+**[All abstention experiments: descriptions and links](https://rakaar.github.io/qwen3-molt-exploration/results/abstention/index.html)** — 21 entries covering the native baseline, L19–T368 heatmaps, fixed-gate and additive steering, strength searches, all three token scopes, false-abstention controls, confidence/uncertainty searches and related qualification/refusal studies. Includes negative results and links to raw measurements and source in each report.
+
+- [Three confidence-wording candidates on native 4/4/4 QA cases](results/2026-10-19-confidence-gate-activation/index.html): all three gates are zero across the twelve QA prompts and responses, but fire in a separate confidence-wording control. No useful answer-confidence score was established.
+- [Seven uncertainty candidates on the same native 4/4/4 cases](results/2026-10-19-uncertainty-gate-activation/index.html): four gates activate in all four natural abstention responses and none of the eight correct/made-up responses. The priority three are zero on question tokens and the final input position. This is response-wording association, not a validated pre-answer confidence measure or a confidence–steering-strength correlation.
+
 ## New report: 19 October 2026
 
 - [Complete twenty-question abstention comparison](results/2026-10-19-abstention-complete/index.html) — ten originally correct answers and ten selected made-up answers, each tested with input-only, output-only and input-plus-output steering of L19–T368. At one shared input-only addition **+16**, all ten made-up answers become coherent abstentions; two of the ten originally correct answers also withhold. All twenty responses remain coherent. Per-question tuning gives **10/10, 7/10 and 10/10** conversions respectively. Includes all **1,176** positive responses, the common fourteen-strength grid, eleven strength trajectories, exact additive method, false-abstention controls, historical raw inputs and full new token traces. [Code and limitations](experiments/passage-uncertainty/abstention-complete/README.md).

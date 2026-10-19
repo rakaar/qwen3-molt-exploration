@@ -1,0 +1,135 @@
+{
+  "questions": 10,
+  "native_correct": 10,
+  "old_output_only_tuned_success_cases": 3,
+  "all_token_tuned_success_cases": 7,
+  "positive_trials": 163,
+  "controls": 20,
+  "common_grid_any_success": {
+    "output_only": 2,
+    "all_tokens": 7
+  },
+  "per_case": [
+    {
+      "case_id": "P1-A1",
+      "question": "An igneous rock is a rock that crystallizes from what?",
+      "old_output_only_success": false,
+      "new_all_token_success": true,
+      "new_successful_tested_strengths": [
+        16
+      ],
+      "selected_trial_id": "P1-A1-a16",
+      "selected_strength": 16,
+      "selected_answer": "I cannot determine the answer from the passage. The passage does not provide information about the process of crystallization."
+    },
+    {
+      "case_id": "P1-A2",
+      "question": "Sedimentary rock can be turned into which of the three types of rock?",
+      "old_output_only_success": false,
+      "new_all_token_success": true,
+      "new_successful_tested_strengths": [
+        16,
+        24,
+        20
+      ],
+      "selected_trial_id": "P1-A2-a16",
+      "selected_strength": 16,
+      "selected_answer": "The passage does not provide enough information to determine the answer."
+    },
+    {
+      "case_id": "P1-A3",
+      "question": "When the three types of rock are re-melted what is formed? ",
+      "old_output_only_success": false,
+      "new_all_token_success": true,
+      "new_successful_tested_strengths": [
+        24,
+        20
+      ],
+      "selected_trial_id": "P1-A3-a20",
+      "selected_strength": 20,
+      "selected_answer": "The passage does not mention what is formed when the three types of rock are re-melted. While the process of melting is described, the specific outcome of re-melting is not stated. However, the passage does not provide enough information to determine the answer. \n\nTherefore, I cannot determine the answer from the passage."
+    },
+    {
+      "case_id": "P1-A4",
+      "question": "What are the three major types of rock? ",
+      "old_output_only_success": false,
+      "new_all_token_success": false,
+      "new_successful_tested_strengths": [],
+      "selected_trial_id": "P1-A4-a26",
+      "selected_strength": 26,
+      "selected_answer": "The passage mentions three major types of rock: igneous, sedimentary, and metamorphic. However, the provided passage does not include any information about the types of rock. The passage does not provide a clear answer.\n\nI cannot determine the answer."
+    },
+    {
+      "case_id": "P1-A5",
+      "question": "What changes the mineral content of a rock?",
+      "old_output_only_success": false,
+      "new_all_token_success": true,
+      "new_successful_tested_strengths": [
+        16
+      ],
+      "selected_trial_id": "P1-A5-a16",
+      "selected_strength": 16,
+      "selected_answer": "The passage does not mention what changes the mineral content of a rock. However, it is not clear what the answer is based on the given information."
+    },
+    {
+      "case_id": "P2-A1",
+      "question": "Which animal that lives in the Amazon river may produce a deadly shock?",
+      "old_output_only_success": true,
+      "new_all_token_success": false,
+      "new_successful_tested_strengths": [],
+      "selected_trial_id": "P2-A1-a20",
+      "selected_strength": 20,
+      "selected_answer": "While the passage mentions that electric eels can produce an electric shock, it does not specify whether the shock is deadly. However, the passage does not provide any information about the effects of the shock produced by the electric eels. Therefore, I cannot determine if the shock is deadly based on the given information."
+    },
+    {
+      "case_id": "P2-A2",
+      "question": "Large predators of the Amazon rainforest include the jaguar, cougar, and anaconda, what is one other example?",
+      "old_output_only_success": false,
+      "new_all_token_success": true,
+      "new_successful_tested_strengths": [
+        16,
+        20
+      ],
+      "selected_trial_id": "P2-A2-a16",
+      "selected_strength": 16,
+      "selected_answer": "The passage does not provide information about other examples of large predators. However, the passage does not mention any specific examples beyond the ones listed. Therefore, I cannot determine the answer from the passage."
+    },
+    {
+      "case_id": "P2-A3",
+      "question": "What fish living in the Amazon river is known to bit humans?",
+      "old_output_only_success": true,
+      "new_all_token_success": true,
+      "new_successful_tested_strengths": [
+        16,
+        24
+      ],
+      "selected_trial_id": "P2-A3-a16",
+      "selected_strength": 16,
+      "selected_answer": "The passage mentions a fish that can bite humans, but it does not specify which fish. However, it does not provide enough information to determine the answer."
+    },
+    {
+      "case_id": "P2-A4",
+      "question": "What are dart frogs are known to secrete?",
+      "old_output_only_success": false,
+      "new_all_token_success": false,
+      "new_successful_tested_strengths": [],
+      "selected_trial_id": "P2-A4-a22",
+      "selected_strength": 22,
+      "selected_answer": "While the passage mentions that dart frogs are known to secrete toxins, it does not specify which toxins. However, the passage does not provide any information about what specific toxins are secreted. Therefore, I cannot determine the answer from the passage."
+    },
+    {
+      "case_id": "P2-A5",
+      "question": "What type of bat that lives in the Amazon rainforest can spread rabies?",
+      "old_output_only_success": true,
+      "new_all_token_success": true,
+      "new_successful_tested_strengths": [
+        16,
+        20
+      ],
+      "selected_trial_id": "P2-A5-a16",
+      "selected_strength": 16,
+      "selected_answer": "The passage mentions a bat that can spread rabies, but it does not specify the type of bat. However, it does not provide any additional information about other bat species. Therefore, I cannot determine the answer from the passage."
+    }
+  ],
+  "comparison_limit": "Per-question tuned searches have unequal total budgets. The common nine-value grid is the matched comparison. Ten selected questions, not a held-out benchmark rate."
+}

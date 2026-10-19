@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "source_hashes_verified": true,
+  "native_zero_replay_matches": 20,
+  "positive_trials": 220,
+  "trials": 240,
+  "actual_nonzero_prompt_edits": 51980,
+  "actual_nonzero_response_edits": 0,
+  "matched_all_token_prefills_and_first_predictions": 146,
+  "all_prompt_and_processed_response_positions_covered": true,
+  "answer_bound_reviews": 240,
+  "coherent_full_abstention_cases": [
+    "P1-A1",
+    "P1-A5",
+    "P2-A2"
+  ],
+  "parts": [
+    {
+      "file": "artifacts/coarse.json",
+      "sha256": "0f46e316ed9825b440358563002a18874c684da572d072a2fa3fb56985fbc899",
+      "rows": 120,
+      "elapsed_seconds": 260.242930860004
+    },
+    {
+      "file": "artifacts/controls.json",
+      "sha256": "53bba2d65cba7f8db8b64a58f8281957b8b96fc8d00ff48733a13c8f59880aa6",
+      "rows": 20,
+      "elapsed_seconds": 27.969262075996085
+    },
+    {
+      "file": "artifacts/fine.json",
+      "sha256": "2ef9dc27d13f7a754e1701102bbbca2dde787c42528d90db0831e5f1041f74a0",
+      "rows": 30,
+      "elapsed_seconds": 73.17246451599931
+    },
+    {
+      "file": "artifacts/refinement.json",
+      "sha256": "4ee3330b876b9e150010b77a43ee90389a90a6ce92ff8c7fb4be4a07f78a0f67",
+      "rows": 70,
+      "elapsed_seconds": 176.78818718899856
+    }
+  ]
+}

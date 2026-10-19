@@ -1,0 +1,167 @@
+[
+  {
+    "date": "2026-10-19",
+    "stage": "Combined results",
+    "title": "Twenty questions × three steering scopes",
+    "description": "Ten originally correct answers and ten selected made-up answers, with input-only, output-only and input + output steering. Tuned conversions of made-up answers: 10/10, 7/10 and 10/10 respectively. Includes all 1,176 positive trials, shared strengths, false abstentions and nonmonotonic examples.",
+    "report": "2026-10-19-abstention-complete/index.html",
+    "code": "experiments/passage-uncertainty/abstention-complete/README.md"
+  },
+  {
+    "date": "2026-10-15",
+    "stage": "Combined results",
+    "title": "Original abstention story and posters",
+    "description": "Natural activation evidence plus the first ten selected made-up-answer cases: output steering produces coherent, grounded ‘I don’t know’ answers in 7/10 with question-specific strengths. Includes the failed bat-rabies example and the actual search procedure.",
+    "report": "2026-10-15-abstention-overview/index.html",
+    "code": "experiments/passage-uncertainty/abstention-overview/README.md"
+  },
+  {
+    "date": "2026-10-19",
+    "stage": "Native activation / gate search",
+    "title": "Three confidence-wording gates: 4 correct / 4 made up / 4 abstentions",
+    "description": "L11–T652, L13–T2128 and L6–T1751 are zero throughout all twelve QA prompts and responses. All three activate on a separate confidence-wording control. These candidates did not provide an answer-confidence measure on these examples.",
+    "report": "2026-10-19-confidence-gate-activation/index.html",
+    "code": "experiments/confidence-gate-activation/README.md"
+  },
+  {
+    "date": "2026-10-19",
+    "stage": "Native activation / gate search",
+    "title": "Seven uncertainty gates: the same 4 / 4 / 4 cases",
+    "description": "Token heatmaps for questions and unsteered answers. Four candidates activate in all four natural abstentions and none of the eight correct/made-up responses. The priority three are zero on question tokens and the final input position; their response contrast is not a validated advance confidence signal.",
+    "report": "2026-10-19-uncertainty-gate-activation/index.html",
+    "code": "experiments/uncertainty-gate-activation/README.md"
+  },
+  {
+    "date": "2026-10-19",
+    "stage": "Native activation / gate search",
+    "title": "Confidence and uncertainty label shortlist",
+    "description": "Label-only search across 36 layers and 89,280 transform slots, including placeholders: 769 keyword matches, twelve refreshed candidate descriptions and the shortlist used above. Labels suggest candidates; no confidence–steering-strength correlation has been established.",
+    "github": "comparisons/2026-10-19-confidence-label-search/shortlist.csv",
+    "code": "comparisons/2026-10-19-confidence-label-search/README.md"
+  },
+  {
+    "date": "2026-10-14",
+    "stage": "Native activation / gate search",
+    "title": "Two-passage native baseline",
+    "description": "Twenty questions, no steering: the model answers all ten answer-present questions correctly. Of ten answer-absent questions, it makes up an answer for four and withholds an answer for six. Some withholding explanations need separate factual review.",
+    "report": "2026-10-14-passage-grounding-baseline/index.html",
+    "code": "experiments/passage-uncertainty/small-baseline/"
+  },
+  {
+    "date": "2026-10-14",
+    "stage": "Native activation / gate search",
+    "title": "L19–T368 answer-token heatmaps",
+    "description": "Native replay of the ten answer-absent responses: zero gate activity throughout all four made-up answers; some activity in each of the six withholding responses. Correlative evidence on emitted response tokens, with complete token and contribution measurements.",
+    "report": "2026-10-14-passage-answer-gates/index.html",
+    "code": "experiments/passage-uncertainty/answer-gates/"
+  },
+  {
+    "date": "2026-10-15",
+    "stage": "Output steering / strength searches",
+    "title": "Absolute gate replacement, 0.5–3.5",
+    "description": "Force L19–T368 to fixed gate values at processed output-token positions on the original four made-up answers. The electric-eel question becomes a coherent abstention at 3 and 3.5; the other three do not. This is absolute gate replacement.",
+    "report": "2026-10-15-passage-forced-gates/index.html",
+    "code": "experiments/passage-uncertainty/forced-gates/"
+  },
+  {
+    "date": "2026-10-15",
+    "stage": "Output steering / strength searches",
+    "title": "Additive coefficients 3–8",
+    "description": "Keep the native MLP and add the current-input low-rank output at each processed response token. The electric-eel case abstains at all tested additions; no further question converts through +8. This differs from fixing the gate to an absolute value.",
+    "report": "2026-10-15-passage-additive-gates/index.html",
+    "code": "experiments/passage-uncertainty/additive-gates/"
+  },
+  {
+    "date": "2026-10-15",
+    "stage": "Output steering / strength searches",
+    "title": "Remaining three cases, additions 8–32",
+    "description": "Minerals converts at +16–32 and crystallization at +24/32. Vampire-bat responses remain false or mixed. Preserves fluent failures separately from clear abstention successes.",
+    "report": "2026-10-15-passage-additive-high-strength/index.html",
+    "code": "experiments/passage-uncertainty/additive-high-strength/"
+  },
+  {
+    "date": "2026-10-15",
+    "stage": "Output steering / strength searches",
+    "title": "All ten original answer-absent questions",
+    "description": "Additive sweep at 4, 8, 16, 32 and 64, retaining both baseline groups: four made-up answers and six withholdings. Scatter panels track coherence, made-up answers and abstention decisions; all outputs collapse at 64.",
+    "report": "2026-10-15-passage-original-group-sweep/index.html",
+    "code": "experiments/passage-uncertainty/original-group-sweep/"
+  },
+  {
+    "date": "2026-10-15",
+    "stage": "Output steering / strength searches",
+    "title": "Fresh Harvard / pharmacy screen",
+    "description": "A fresh ten-question screen yields only one made-up baseline answer and nine withholdings. Kept as a negative screening result; the one conversion case does not become a clean abstention at 4–32, and coherence collapses at 64.",
+    "report": "2026-10-15-passage-fresh-group-sweep/index.html",
+    "code": "experiments/passage-uncertainty/fresh-group-sweep/"
+  },
+  {
+    "date": "2026-10-15",
+    "stage": "Output steering / strength searches",
+    "title": "Four-case replay and fine vampire-bat search",
+    "description": "The three earlier conversions reproduce at +24, +16 and +4. The remaining vampire-bat case has no clean abstention among 128 distinct strengths, 0.5–64 in steps of 0.5. Includes every response and the fluent-but-false near-misses.",
+    "report": "2026-10-15-vampire-intermediate/index.html",
+    "code": "experiments/passage-uncertainty/vampire-intermediate/README.md"
+  },
+  {
+    "date": "2026-10-15",
+    "stage": "Output steering / strength searches",
+    "title": "Six additional made-up-answer cases",
+    "description": "Screen 80 questions, freeze six clear baseline failures, then steer: 4/6 new clear conversions, bringing the original output-only total to 7/10. Complete screening judgments and failed or ambiguous cases are retained.",
+    "report": "2026-10-15-six-new-abstentions/index.html",
+    "code": "experiments/passage-uncertainty/six-new-cases/README.md"
+  },
+  {
+    "date": "2026-10-19",
+    "stage": "Answer-present timing controls",
+    "title": "Correct answers: output-only steering",
+    "description": "Ten questions whose answers are in the passage and are answered correctly at baseline. Output-only steering induces coherent withholding in 3/10 at some tested strength; many other responses reveal the answer before adding ‘I don’t know.’ Withholding here is false abstention.",
+    "report": "2026-10-19-answerable-abstention/index.html",
+    "code": "experiments/passage-uncertainty/answerable-abstention/README.md"
+  },
+  {
+    "date": "2026-10-19",
+    "stage": "Answer-present timing controls",
+    "title": "Correct answers: input + output steering",
+    "description": "Steer the full encoded input and processed response tokens on the same ten questions. Coherent answer-withholding is found in 7/10 with per-question tuning. Includes answer leakage, false explanations and timing comparisons.",
+    "report": "2026-10-19-answerable-all-token/index.html",
+    "code": "experiments/passage-uncertainty/answerable-all-token/"
+  },
+  {
+    "date": "2026-10-19",
+    "stage": "Answer-present timing controls",
+    "title": "Correct answers: input-only steering",
+    "description": "Steer only the encoded input; decoding receives its modified cache but no output-token edits. Coherent withholding is found in 3/10 with tuning. Compares all three scopes; the completed shared-grid analysis is in the twenty-question report above.",
+    "report": "2026-10-19-answerable-input-only/index.html",
+    "code": "experiments/passage-uncertainty/answerable-input-only/"
+  },
+  {
+    "date": "2026-10-13",
+    "stage": "Related qualification / refusal evidence",
+    "title": "Medical qualification pilot",
+    "description": "Early L19–T368 study: 24 prompts screened, then component removal and negative steering. Ordinary symptom prompts were already answered and had no target activation. No clear refusal-to-answer switch was established.",
+    "report": "2026-10-13-medical-disclaimer/index.html"
+  },
+  {
+    "date": "2026-10-13",
+    "stage": "Related qualification / refusal evidence",
+    "title": "Medical qualification: negative factor 16",
+    "description": "Follow-up on six prompts with matched native controls. Factor −16 does not coherently remove qualification denial on the five active prompts; several openings become malformed. The inactive control remains unchanged.",
+    "report": "2026-10-13-medical-disclaimer-strength16/index.html"
+  },
+  {
+    "date": "2026-10-13",
+    "stage": "Related qualification / refusal evidence",
+    "title": "Medical qualification: extended negative sweep",
+    "description": "A closer sweep between −16 and −32 finds a fluent qualification affirmation at −30 for general guidance while retaining diagnosis/treatment limits. Other prompts break down. Changing qualification wording did not establish removal of the underlying medical limits.",
+    "report": "2026-10-13-medical-disclaimer-strength-sweep/index.html"
+  },
+  {
+    "date": "2026-10-16",
+    "stage": "Related qualification / refusal evidence",
+    "title": "L19–T368 in native safety refusals",
+    "description": "Three fixed safety requests naturally produce refusals with gate activity. Includes shared-scale abstention references, complete native answers and token heatmaps. Observation only: no causal manipulation or general refusal-detection claim.",
+    "report": "2026-10-15-safety-refusal-gates/index.html",
+    "code": "experiments/safety-refusal-gates/README.md"
+  }
+]

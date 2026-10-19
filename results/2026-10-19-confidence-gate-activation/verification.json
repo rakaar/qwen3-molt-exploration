@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "qa_cases": 12,
+  "separate_wording_control": 1,
+  "gates": [
+    "L11-T652",
+    "L13-T2128",
+    "L6-T1751"
+  ],
+  "native_saved_baseline_matches": 12,
+  "observation_only_replay_matches": 13,
+  "verified_next_token_predictions": 276,
+  "prompt_tokens": 2864,
+  "answer_tokens": 263,
+  "positive_response_control_per_gate": {
+    "L11-T652": true,
+    "L13-T2128": true,
+    "L6-T1751": true
+  },
+  "source_asset_gate_arithmetic_and_summary_checks": true,
+  "attention_and_native_mlp": "No replacement or modification; observation-only hooks return None."
+}

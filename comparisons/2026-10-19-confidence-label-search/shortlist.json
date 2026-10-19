@@ -1,0 +1,923 @@
+{
+  "scope": "Label/title/description search and label-check metadata only. No activation examples inspected in this turn, no model or GPU calls.",
+  "first_choices": [
+    "L12-T1667",
+    "L14-T1103",
+    "L16-T764"
+  ],
+  "hypothesis_note": "For a genuine uncertainty signal, greater baseline activity would predict LOWER required abstention steering. This is the inverse sign of the proposed positive-confidence hypothesis. The labels alone establish neither relationship.",
+  "candidates": [
+    {
+      "layer": 12,
+      "transform": 1667,
+      "label": "Uncertainty Assertion Gate",
+      "description": "The gate activates when the model asserts a lack of knowledge or certainty about a specific fact, detail, or outcome. It fires on phrases indicating that information is unknown, unclear, uncertain, or not provided, often in response to user queries where the model cannot verify the answer or the source text lacks the requested data.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 5,
+          "accuracy": 0.25,
+          "accuracy_ci95": [
+            0.11186170140766569,
+            0.468700877618744
+          ],
+          "chance": 0.2
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 29,
+          "tn": 50,
+          "fp": 0,
+          "fn": 21,
+          "accuracy": 0.79,
+          "f1": 0.7341772151898734,
+          "balanced_accuracy": 0.79,
+          "accuracy_ci95": [
+            0.7002003116591013,
+            0.858343459380847
+          ]
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 29,
+          "tn": 50,
+          "fp": 0,
+          "fn": 21,
+          "accuracy": 0.79,
+          "f1": 0.7341772151898734,
+          "balanced_accuracy": 0.79,
+          "accuracy_ci95": [
+            0.7002003116591013,
+            0.858343459380847
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 32,
+          "tn": 50,
+          "fp": 0,
+          "fn": 18,
+          "accuracy": 0.82,
+          "f1": 0.7804878048780488,
+          "balanced_accuracy": 0.8200000000000001,
+          "accuracy_ci95": [
+            0.7333264161369926,
+            0.8829977450105364
+          ]
+        }
+      },
+      "updated_at": "2026-10-06T11:37:32.004197+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-12/autointerp-layer/features/1667.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-12/autointerp-layer/features/1667.html",
+      "checked_utc": "2026-10-19T12:59:22.685662+00:00",
+      "response_sha256": "36fd90ba00d6ee8f78174cc316a47caaa61b6c6933692b8e531eed40bbdd533a",
+      "priority": "first",
+      "rationale": "Broad fact-specific uncertainty and source insufficiency; strongest semantic starting point."
+    },
+    {
+      "layer": 14,
+      "transform": 1103,
+      "label": "Unknown Information and Missing Details",
+      "description": "The gate activates on phrases indicating that specific information, details, or facts are unknown, unspecified, or unavailable. This includes explicit negations of knowledge (e.g., \"don't know,\" \"unclear,\" \"unspecified\") and references to missing details (e.g., \"specific details,\" \"exact procedures\"). The context typically involves a lack of clarity, uncertainty, or the absence of concrete data regarding a subject, event, or future outcome.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 9,
+          "accuracy": 0.45,
+          "accuracy_ci95": [
+            0.2581978582556243,
+            0.6579146575496577
+          ],
+          "chance": 0.2
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 27,
+          "tn": 48,
+          "fp": 2,
+          "fn": 23,
+          "accuracy": 0.75,
+          "f1": 0.6835443037974683,
+          "balanced_accuracy": 0.75,
+          "accuracy_ci95": [
+            0.656955364519384,
+            0.8245478863771232
+          ]
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 27,
+          "tn": 50,
+          "fp": 0,
+          "fn": 23,
+          "accuracy": 0.77,
+          "f1": 0.7012987012987013,
+          "balanced_accuracy": 0.77,
+          "accuracy_ci95": [
+            0.6784561697712622,
+            0.8415673411969654
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 32,
+          "tn": 50,
+          "fp": 0,
+          "fn": 18,
+          "accuracy": 0.82,
+          "f1": 0.7804878048780488,
+          "balanced_accuracy": 0.8200000000000001,
+          "accuracy_ci95": [
+            0.7333264161369926,
+            0.8829977450105364
+          ]
+        }
+      },
+      "updated_at": "2026-10-07T08:11:13.959606+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-14/autointerp-layer/features/1103.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-14/autointerp-layer/features/1103.html",
+      "checked_utc": "2026-10-19T12:59:24.846505+00:00",
+      "response_sha256": "20317eabee17b1743b0b2ad8fb48e6a18e48092a1f0c079c747b8c4c5df5509d",
+      "priority": "first",
+      "rationale": "Unknown or unspecified factual details; more relevant than self-assurance wording."
+    },
+    {
+      "layer": 16,
+      "transform": 764,
+      "label": "Negation of Information Availability",
+      "description": "The gate activates when the model states that specific information is unavailable, missing, or not provided in the context. It triggers on phrases indicating a lack of data, such as \"no further details,\" \"not specified,\" \"no information,\" or \"not explicitly,\" often following a negation or a statement of limitation.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 10,
+          "accuracy": 0.5,
+          "accuracy_ci95": [
+            0.2992980081982123,
+            0.7007019918017877
+          ],
+          "chance": 0.2
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 26,
+          "tn": 50,
+          "fp": 0,
+          "fn": 24,
+          "accuracy": 0.76,
+          "f1": 0.6842105263157895,
+          "balanced_accuracy": 0.76,
+          "accuracy_ci95": [
+            0.6676766365018553,
+            0.8330867444305122
+          ]
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 26,
+          "tn": 50,
+          "fp": 0,
+          "fn": 24,
+          "accuracy": 0.76,
+          "f1": 0.6842105263157895,
+          "balanced_accuracy": 0.76,
+          "accuracy_ci95": [
+            0.6676766365018553,
+            0.8330867444305122
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 35,
+          "tn": 50,
+          "fp": 0,
+          "fn": 15,
+          "accuracy": 0.85,
+          "f1": 0.8235294117647058,
+          "balanced_accuracy": 0.85,
+          "accuracy_ci95": [
+            0.7671644040916763,
+            0.9069401471634337
+          ]
+        }
+      },
+      "updated_at": "2026-10-07T22:40:13.000005+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-16/autointerp-layer/features/764.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-16/autointerp-layer/features/764.html",
+      "checked_utc": "2026-10-19T12:59:25.395165+00:00",
+      "response_sha256": "23da366c2d5c986cb45574ad23b647cd1d95f01276f547cdaf284e395faa4169",
+      "priority": "first",
+      "rationale": "Explicit absence of information in the available context; relevant to passage QA."
+    },
+    {
+      "layer": 15,
+      "transform": 2349,
+      "label": "Negation of Source Information",
+      "description": "The gate activates on phrases indicating that specific information is absent, unknown, or not provided in the source text. Common triggers include negations like \"not,\" \"no,\" or \"unknown\" paired with verbs such as \"specified,\" \"mentioned,\" \"provided,\" \"known,\" or \"listed.\"",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 11,
+          "accuracy": 0.55,
+          "accuracy_ci95": [
+            0.34208534245034233,
+            0.7418021417443759
+          ],
+          "chance": 0.2
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 21,
+          "tn": 50,
+          "fp": 0,
+          "fn": 29,
+          "accuracy": 0.71,
+          "f1": 0.5915492957746479,
+          "balanced_accuracy": 0.71,
+          "accuracy_ci95": [
+            0.6146110882442888,
+            0.7898516425087772
+          ]
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 21,
+          "tn": 50,
+          "fp": 0,
+          "fn": 29,
+          "accuracy": 0.71,
+          "f1": 0.5915492957746479,
+          "balanced_accuracy": 0.71,
+          "accuracy_ci95": [
+            0.6146110882442888,
+            0.7898516425087772
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 25,
+          "tn": 48,
+          "fp": 2,
+          "fn": 25,
+          "accuracy": 0.73,
+          "f1": 0.6493506493506493,
+          "balanced_accuracy": 0.73,
+          "accuracy_ci95": [
+            0.6356788323205499,
+            0.8073041585042365
+          ]
+        }
+      },
+      "updated_at": "2026-10-07T20:45:07.403959+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-15/autointerp-layer/features/2349.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-15/autointerp-layer/features/2349.html",
+      "checked_utc": "2026-10-19T12:59:24.233369+00:00",
+      "response_sha256": "7da8c4fe0b62228f4e5f3e84ac959d7ab366a3adfb5eb133e34fcb86b19eea7b",
+      "priority": "secondary",
+      "rationale": "Information absent from source text; plausible passage-grounding signal."
+    },
+    {
+      "layer": 23,
+      "transform": 710,
+      "label": "Insufficient Information Gate",
+      "description": "The gate activates on tokens indicating that the provided text lacks sufficient information to answer the user's query, often preceded by \"However\" or \"Unfortunately,\" or when explicitly stating that details are unclear, difficult, or not revealed.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 5,
+          "accuracy": 0.25,
+          "accuracy_ci95": [
+            0.11186170140766569,
+            0.468700877618744
+          ],
+          "chance": 0.2
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 7,
+          "tn": 50,
+          "fp": 0,
+          "fn": 43,
+          "accuracy": 0.57,
+          "f1": 0.24561403508771928,
+          "balanced_accuracy": 0.5700000000000001,
+          "accuracy_ci95": [
+            0.47215389549212305,
+            0.6626670147588988
+          ]
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 7,
+          "tn": 50,
+          "fp": 0,
+          "fn": 43,
+          "accuracy": 0.57,
+          "f1": 0.24561403508771928,
+          "balanced_accuracy": 0.5700000000000001,
+          "accuracy_ci95": [
+            0.47215389549212305,
+            0.6626670147588988
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 11,
+          "tn": 50,
+          "fp": 0,
+          "fn": 39,
+          "accuracy": 0.61,
+          "f1": 0.36065573770491804,
+          "balanced_accuracy": 0.61,
+          "accuracy_ci95": [
+            0.5120301704584073,
+            0.6998312599360558
+          ]
+        }
+      },
+      "updated_at": "2026-10-09T06:20:21.504269+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-23/autointerp-layer/features/710.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-23/autointerp-layer/features/710.html",
+      "checked_utc": "2026-10-19T12:59:22.658060+00:00",
+      "response_sha256": "2ba941da02e659c3b038150e63750b5078991823e9111dd2e9f9777898b7cb78",
+      "priority": "secondary",
+      "rationale": "Direct insufficient-information description, but weaker automatic label support."
+    },
+    {
+      "layer": 26,
+      "transform": 868,
+      "label": "Context Insufficiency Signal Gate",
+      "description": "The gate activates when the model signals that the provided context is insufficient or lacks specific details, often using phrases like \"However,\" \"Unfortunately,\" or \"not mentioned\" to indicate a limitation in the available information.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 8,
+          "accuracy": 0.4,
+          "accuracy_ci95": [
+            0.21880653237281705,
+            0.6134184992377469
+          ],
+          "chance": 0.2
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 13,
+          "tn": 50,
+          "fp": 0,
+          "fn": 37,
+          "accuracy": 0.63,
+          "f1": 0.4126984126984127,
+          "balanced_accuracy": 0.63,
+          "accuracy_ci95": [
+            0.5322052958094291,
+            0.7181763946567546
+          ]
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 13,
+          "tn": 50,
+          "fp": 0,
+          "fn": 37,
+          "accuracy": 0.63,
+          "f1": 0.4126984126984127,
+          "balanced_accuracy": 0.63,
+          "accuracy_ci95": [
+            0.5322052958094291,
+            0.7181763946567546
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 16,
+          "tn": 49,
+          "fp": 1,
+          "fn": 34,
+          "accuracy": 0.65,
+          "f1": 0.47761194029850745,
+          "balanced_accuracy": 0.65,
+          "accuracy_ci95": [
+            0.5525444329688796,
+            0.7363575175690247
+          ]
+        }
+      },
+      "updated_at": "2026-10-10T04:29:16.707768+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-26/autointerp-layer/features/868.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-26/autointerp-layer/features/868.html",
+      "checked_utc": "2026-10-19T12:59:22.657705+00:00",
+      "response_sha256": "9d31aaff6b9c899cb3ae01ad40ed4cbd0e4364db646c95f99a3a50abaf85b8ca",
+      "priority": "secondary",
+      "rationale": "Direct context-insufficiency description, but weaker automatic label support."
+    },
+    {
+      "layer": 18,
+      "transform": 74,
+      "label": "Epistemic Qualification and Uncertainty Markers",
+      "description": "The gate activates on tokens introducing or emphasizing uncertainty, probability, or epistemic status, such as \"likely,\" \"actually,\" \"true,\" \"possible,\" and \"believe that.\" It fires when the text shifts from stating facts to qualifying claims, expressing doubt, or assessing the validity of a statement, often involving modal verbs or adverbs of degree.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 7,
+          "accuracy": 0.35,
+          "accuracy_ci95": [
+            0.18119182410108206,
+            0.5671457233147638
+          ],
+          "chance": 0.2
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 10,
+          "tn": 48,
+          "fp": 2,
+          "fn": 40,
+          "accuracy": 0.58,
+          "f1": 0.3225806451612903,
+          "balanced_accuracy": 0.58,
+          "accuracy_ci95": [
+            0.4820648670304296,
+            0.6720161732564526
+          ]
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 10,
+          "tn": 50,
+          "fp": 0,
+          "fn": 40,
+          "accuracy": 0.6,
+          "f1": 0.3333333333333333,
+          "balanced_accuracy": 0.6,
+          "accuracy_ci95": [
+            0.5020025867910618,
+            0.6905987135675411
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 20,
+          "tn": 48,
+          "fp": 2,
+          "fn": 30,
+          "accuracy": 0.68,
+          "f1": 0.5555555555555556,
+          "balanced_accuracy": 0.6799999999999999,
+          "accuracy_ci95": [
+            0.5833738138954762,
+            0.7633085267500092
+          ]
+        }
+      },
+      "updated_at": "2026-10-08T07:23:11.318383+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-18/autointerp-layer/features/74.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-18/autointerp-layer/features/74.html",
+      "checked_utc": "2026-10-19T12:59:24.261726+00:00",
+      "response_sha256": "bf5bb4fbf765d1415dd0f5b9ea1ed789176de1c60ead2efee27137a67c25a474",
+      "priority": "secondary",
+      "rationale": "Qualifying claims and epistemic status; may instead be generic modal/adverb wording."
+    },
+    {
+      "layer": 14,
+      "transform": 203,
+      "label": "Negation of Information Availability",
+      "description": "The gate activates on phrases indicating the absence, lack, or uncertainty of information, evidence, or knowledge. It fires on negations like \"no evidence,\" \"not mentioned,\" \"very little is known,\" and \"difficult to confirm,\" signaling that the requested data is unavailable or unverified.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 10,
+          "accuracy": 0.5,
+          "accuracy_ci95": [
+            0.2992980081982123,
+            0.7007019918017877
+          ],
+          "chance": 0.2
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 22,
+          "tn": 50,
+          "fp": 0,
+          "fn": 28,
+          "accuracy": 0.72,
+          "f1": 0.6111111111111112,
+          "balanced_accuracy": 0.72,
+          "accuracy_ci95": [
+            0.6251197129007884,
+            0.7986031478881379
+          ]
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 22,
+          "tn": 50,
+          "fp": 0,
+          "fn": 28,
+          "accuracy": 0.72,
+          "f1": 0.6111111111111112,
+          "balanced_accuracy": 0.72,
+          "accuracy_ci95": [
+            0.6251197129007884,
+            0.7986031478881379
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 25,
+          "tn": 49,
+          "fp": 1,
+          "fn": 25,
+          "accuracy": 0.74,
+          "f1": 0.6578947368421053,
+          "balanced_accuracy": 0.74,
+          "accuracy_ci95": [
+            0.6462901055081282,
+            0.8159530153525186
+          ]
+        }
+      },
+      "updated_at": "2026-10-07T07:43:23.540206+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-14/autointerp-layer/features/203.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-14/autointerp-layer/features/203.html",
+      "checked_utc": "2026-10-19T12:59:23.621278+00:00",
+      "response_sha256": "a16057b4625d365de34ff964b3cd90dbfcb2116566290c2ffc5bcd3baae28167",
+      "priority": "secondary",
+      "rationale": "No evidence or not mentioned; possible source-availability signal."
+    },
+    {
+      "layer": 16,
+      "transform": 878,
+      "label": "Clarification Request Gate",
+      "description": "The gate activates at the start of an assistant response, particularly when the user's query lacks specific context or references undefined entities. It fires strongly when the model must request clarification or additional information, often accompanied by phrases like \"Please provide\" or \"which [entity]\".",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 16,
+          "accuracy": 0.8,
+          "accuracy_ci95": [
+            0.5839825677481064,
+            0.919342337420202
+          ],
+          "chance": 0.2
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 1,
+          "tn": 50,
+          "fp": 0,
+          "fn": 49,
+          "accuracy": 0.51,
+          "f1": 0.0392156862745098,
+          "balanced_accuracy": 0.51,
+          "accuracy_ci95": [
+            0.4134801193402717,
+            0.6057800106955886
+          ]
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 2,
+          "tn": 50,
+          "fp": 0,
+          "fn": 48,
+          "accuracy": 0.52,
+          "f1": 0.07692307692307693,
+          "balanced_accuracy": 0.52,
+          "accuracy_ci95": [
+            0.4231657776522397,
+            0.615354482419481
+          ]
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 4,
+          "tn": 50,
+          "fp": 0,
+          "fn": 46,
+          "accuracy": 0.54,
+          "f1": 0.14814814814814814,
+          "balanced_accuracy": 0.54,
+          "accuracy_ci95": [
+            0.44264860323368227,
+            0.6343919169097589
+          ]
+        }
+      },
+      "updated_at": "2026-10-14T15:42:07.221722+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-16/autointerp-layer/features/878.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-16/autointerp-layer/features/878.html",
+      "checked_utc": "2026-10-19T12:59:22.449854+00:00",
+      "response_sha256": "bda9d75852d9120f3dfcffea079a229a4884b93b3f00dc9cdac132640a6217f0",
+      "priority": "reserve",
+      "rationale": "Potentially early clarification wording, but weak automatic label support; label check near chance."
+    },
+    {
+      "layer": 11,
+      "transform": 1363,
+      "label": "Evidence-Substantiation Claim Verification",
+      "description": "The gate activates on tokens indicating that claims, arguments, or statements are being substantiated, verified, or grounded in evidence, data, or sources.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 10,
+          "accuracy": 0.5,
+          "accuracy_ci95": [
+            0.2992980081982123,
+            0.7007019918017877
+          ],
+          "chance": 0.2
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 20,
+          "tn": 50,
+          "fp": 0,
+          "fn": 30,
+          "accuracy": 0.7,
+          "f1": 0.5714285714285714,
+          "balanced_accuracy": 0.7,
+          "accuracy_ci95": [
+            0.6041514536665332,
+            0.7810511470506724
+          ]
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 20,
+          "tn": 50,
+          "fp": 0,
+          "fn": 30,
+          "accuracy": 0.7,
+          "f1": 0.5714285714285714,
+          "balanced_accuracy": 0.7,
+          "accuracy_ci95": [
+            0.6041514536665332,
+            0.7810511470506724
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 24,
+          "tn": 45,
+          "fp": 5,
+          "fn": 26,
+          "accuracy": 0.69,
+          "f1": 0.6075949367088608,
+          "balanced_accuracy": 0.69,
+          "accuracy_ci95": [
+            0.5937394428051057,
+            0.7722030278762395
+          ]
+        }
+      },
+      "updated_at": "2026-10-06T08:00:35.855408+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-11/autointerp-layer/features/1363.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-11/autointerp-layer/features/1363.html",
+      "checked_utc": "2026-10-19T12:59:24.253350+00:00",
+      "response_sha256": "4d292d53a6b6d8891180cb20f41b4f7c53c4479a8bb5f8ab4c50299e0d4fa4f5",
+      "priority": "reserve",
+      "rationale": "Evidence grounding rather than a validated confidence measure."
+    },
+    {
+      "layer": 15,
+      "transform": 1753,
+      "label": "Inability and Lack of Knowledge Tokens",
+      "description": "The gate activates on tokens indicating the assistant's inability to perform a task or lack of knowledge, such as \"not,\" \"able,\" \"capable,\" \"incapable,\" \"have,\" \"access,\" and \"Unfortunately,\" often following \"I am\" or \"I do.\"",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 15,
+          "accuracy": 0.75,
+          "accuracy_ci95": [
+            0.531299122381256,
+            0.8881382985923343
+          ],
+          "chance": 0.2
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 45,
+          "tn": 50,
+          "fp": 0,
+          "fn": 5,
+          "accuracy": 0.95,
+          "f1": 0.9473684210526315,
+          "balanced_accuracy": 0.95,
+          "accuracy_ci95": [
+            0.8882495307680808,
+            0.9784563208456319
+          ]
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 45,
+          "tn": 50,
+          "fp": 0,
+          "fn": 5,
+          "accuracy": 0.95,
+          "f1": 0.9473684210526315,
+          "balanced_accuracy": 0.95,
+          "accuracy_ci95": [
+            0.8882495307680808,
+            0.9784563208456319
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 47,
+          "tn": 50,
+          "fp": 0,
+          "fn": 3,
+          "accuracy": 0.97,
+          "f1": 0.9690721649484536,
+          "balanced_accuracy": 0.97,
+          "accuracy_ci95": [
+            0.9154806357094724,
+            0.9897454759759611
+          ]
+        }
+      },
+      "updated_at": "2026-10-07T20:45:21.227190+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-15/autointerp-layer/features/1753.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-15/autointerp-layer/features/1753.html",
+      "checked_utc": "2026-10-19T12:59:25.561547+00:00",
+      "response_sha256": "034aa3cd5da135a29e47d83bd5618731caadb89db2c6ff6561fdd4ffe1463f7d",
+      "priority": "reserve",
+      "rationale": "Broad inability/capability language; may reflect capability refusal rather than answer uncertainty."
+    },
+    {
+      "layer": 17,
+      "transform": 198,
+      "label": "Knowledge and Capability Limitation Signals",
+      "description": "The gate activates on phrases indicating a lack of knowledge, access, or capability, such as \"not have access to,\" \"not have information,\" or \"not capable of.\" It also fires on weaker signals like \"limited,\" \"difficult to make specific recommendations,\" or \"my last update,\" signaling constraints on the model's ability to answer the user's request.",
+      "status": "complete",
+      "label_check_metrics": {
+        "intruder": {
+          "total": 20,
+          "valid": 20,
+          "parse_failures": 0,
+          "correct": 17,
+          "accuracy": 0.85,
+          "accuracy_ci95": [
+            0.6395811352592431,
+            0.9476312541037835
+          ],
+          "chance": 0.2
+        },
+        "fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 40,
+          "tn": 50,
+          "fp": 0,
+          "fn": 10,
+          "accuracy": 0.9,
+          "f1": 0.8888888888888888,
+          "balanced_accuracy": 0.9,
+          "accuracy_ci95": [
+            0.8256343384950865,
+            0.9447708629393249
+          ]
+        },
+        "active_fuzz": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 40,
+          "tn": 50,
+          "fp": 0,
+          "fn": 10,
+          "accuracy": 0.9,
+          "f1": 0.8888888888888888,
+          "balanced_accuracy": 0.9,
+          "accuracy_ci95": [
+            0.8256343384950865,
+            0.9447708629393249
+          ]
+        },
+        "detection": {
+          "total": 100,
+          "valid": 100,
+          "parse_failures": 0,
+          "tp": 43,
+          "tn": 49,
+          "fp": 1,
+          "fn": 7,
+          "accuracy": 0.92,
+          "f1": 0.9148936170212766,
+          "balanced_accuracy": 0.9199999999999999,
+          "accuracy_ci95": [
+            0.8500189229905127,
+            0.9589065385156194
+          ]
+        }
+      },
+      "updated_at": "2026-10-08T06:08:51.636072+00:00",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-17/autointerp-layer/features/198.json",
+      "page_url": "https://amsterdam.taild80f17.ts.net/layers/layer-17/autointerp-layer/features/198.html",
+      "checked_utc": "2026-10-19T12:59:25.551049+00:00",
+      "response_sha256": "1a1fc402ef0d589d179010e3feef6891c11ef560c8b510d0f4a89d369607ac75",
+      "priority": "reserve",
+      "rationale": "Broad knowledge/access/capability limits; distinguish from factual answer confidence."
+    }
+  ]
+}

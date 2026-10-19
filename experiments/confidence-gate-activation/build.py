@@ -1,0 +1,62 @@
+"""Render exact, measured token colours in three candidate-feature columns."""
+import csv,html,json,shutil
+from pathlib import Path
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import colormaps
+S=Path(__file__).resolve().parent;W=S.parents[1];R=W/'results/2026-10-19-confidence-gate-activation'
+D=json.loads((R/'artifacts/measurements.json').read_text());P=D['protocol'];features=P['features'];rows=D['rows']
+assert D['status']=='complete' and len(rows)==13
+h=lambda x:html.escape(str(x),quote=True)
+keys=[f"L{f['layer']}-T{f['transform']}" for f in features]
+names={'correct':'Model answered correctly','made_up':'Model made up an answer','abstention':'Model said “I don’t know; it’s not in the passage”','positive_control':'Separate wording control'}
+maximum=max(t['features'][k]['gate'] for r in rows for t in r['answer_tokens'] if not t['special'] for k in keys)
+scale=maximum if maximum>0 else 1.0
+cmap=colormaps['YlOrRd']
+def colour(x):
+ if x==0:return '#ffffff'
+ rgb=cmap(x/scale)[:3];return '#'+''.join(f'{round(c*255):02x}' for c in rgb)
+def tokens(ts,key):
+ out=[]
+ for t in ts:
+  x=t['features'][key];g=x['gate'];title=f"{key} · {t['segment']} token {t['position']} · full position {t['full_chat_position']} · gate {g:.6f} · raw {x['raw']:.6f}"
+  out.append(f'<span class="token" data-pos="{t["position"]}" data-gate="{g:.12g}" data-raw="{x["raw"]:.12g}" title="{h(title)}" style="background:{colour(g)};color:{"#fff" if g/scale>.62 else "#18282d"}">{h(t["token"])}</span>')
+ return ''.join(out)
+def heads():
+ return '<div class="grid headings">'+''.join(f'<div><a href="{h(f["dashboard_url"])}">{k}</a><span>{h(f["label"])}</span></div>' for f,k in zip(features,keys))+'</div>'
+groups=[];table=[];stats=[]
+for group in ['correct','made_up','abstention','positive_control']:
+ xs=[r for r in rows if r['group']==group];cases=[]
+ for r in xs:
+  cards=[];promptcards=[]
+  for f,key in zip(features,keys):
+   sm=r['summary'][key];ts=[t for t in r['answer_tokens'] if not t['special']]
+   cards.append(f'<div class="panel answer-panel" data-feature="{key}"><strong class="feature-id">{key}</strong><p class="metrics">Mean <b>{sm["mean_gate"]:.4f}</b> · Peak <b>{sm["max_gate"]:.4f}</b> · Active <b>{sm["active_tokens"]}/{sm["visible_tokens"]}</b></p><div class="tokens">{tokens(ts,key)}</div><p class="before">Before first answer prediction: gate <b>{sm["final_prompt_gate"]:.4f}</b><br><small>Final prompt token, measured before any answer token is emitted.</small></p></div>')
+   promptcards.append(f'<div class="panel prompt-panel" data-feature="{key}"><strong class="feature-id">{key}</strong><div class="tokens">{tokens(r["prompt_tokens"],key)}</div></div>')
+  source=f'<details class="passage"><summary>Passage and exact model input</summary><p>{h(r.get("context","The separate wording control has no passage."))}</p><pre>{h(r["chat"])}</pre></details>'
+  cases.append(f'<article class="case" id="case-{r["id"]}" data-id="{r["id"]}" data-group="{group}"><h3><span>{r["id"]}</span> {h(r["question"])}</h3><div class="grid">{"".join(cards)}</div><details class="inputs"><summary>Inspect unsteered input tokens for all three gates</summary><div class="grid">{"".join(promptcards)}</div></details>{source}</article>')
+  for key in keys:stats.append({'id':r['id'],'group':group,'feature':key,**r['summary'][key]})
+ text='<p class="fine">An unsteered repetition task elicits confidence wording. It is excluded from the three QA groups and their means.</p>' if group=='positive_control' else f'<p class="fine">Four fixed, unsteered examples; two from each original passage. <a href="{group}-token-heatmaps.png">Download this group as PNG</a>.</p>'
+ groups.append(f'<section class="cohort" id="{group}"><h2>{names[group]}</h2>{text}{heads()}{"".join(cases)}</section>')
+for f,key in zip(features,keys):
+ cells=[]
+ for group in ['correct','made_up','abstention']:
+  rs=[r['summary'][key] for r in rows if r['group']==group];mean=sum(x['mean_gate'] for x in rs)/len(rs);active=sum(x['active_tokens']>0 for x in rs)
+  cells.append(f'<td><b>{mean:.4f}</b><small>{active}/4 answers have any active token</small></td>')
+ table.append(f'<tr><th>{key}<small>{h(f["label"])}</small></th>{"".join(cells)}</tr>')
+qa=[r for r in rows if r['group']!='positive_control'];active_qa=sum(any(r['summary'][k]['active_tokens'] for k in keys) for r in qa)
+controls=next(r for r in rows if r['group']=='positive_control');positive=sum(controls['summary'][k]['active_tokens']>0 for k in keys)
+findings=f'{active_qa}/12 QA responses have activity in at least one candidate gate. The separate wording control activates {positive}/3 candidates.'
+if active_qa==0:findings+=' All three candidates are inactive on the displayed QA answer tokens. These measurements do not provide a useful confidence score for comparing these answers.'
+thresholds=' · '.join(f'{k}: {next(a for a in D["assets"]["features"] if a["layer"]==f["layer"])["theta"]:.4f}' for f,k in zip(features,keys))
+style='''*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7f6f1;color:#182e35;font:16px/1.55 system-ui,sans-serif}main{max-width:1600px;padding:42px 30px 70px;margin:auto}h1{font-size:clamp(28px,3.4vw,45px);line-height:1.12;max-width:1040px}h2{margin:0 0 8px;font-size:28px}h3{font-size:18px;line-height:1.45;margin:0 0 18px}h3 span{display:inline-block;background:#edf0e9;border-radius:5px;padding:3px 8px;margin-right:7px;font-size:14px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700;color:#38726c}.lead{font-size:18px;max-width:1160px}.note{background:#e9f2ec;border-left:4px solid #258475;padding:16px 20px;margin:24px 0}.fine,small{font-size:13px;color:#50646b}nav{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}a{color:#096c69}nav a{border:1px solid #b7c7bd;border-radius:20px;padding:6px 13px;text-decoration:none}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;min-width:800px;background:white}th,td{text-align:left;vertical-align:top;border:1px solid #d9ded5;padding:13px 16px}th{background:#eef0e8}table small{display:block;font-weight:400}section.cohort{padding:26px 0 10px;margin:36px 0;border-top:2px solid #bccdc4}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.headings{font-size:16px;font-weight:700;padding:15px 8px;background:#e9eee7;margin-bottom:18px;align-items:start}.headings span{display:block;font-size:14px;font-weight:500;margin-top:4px}.case{background:#fff;border:1px solid #d5ddd2;border-radius:10px;padding:20px;margin:20px 0}.panel{min-width:0;background:#fafbf7;border:1px solid #e1e6dc;border-radius:7px;padding:14px}.feature-id{font-size:14px;color:#2c6861}.metrics{font-size:12px;margin:7px 0 14px}.tokens{font:15px/2.2 ui-monospace,monospace;overflow-wrap:anywhere;white-space:pre-wrap}.token{border-right:1px solid #d9ded6;padding:3px 0;border-radius:2px}.token:hover{outline:2px solid #263e3c}.before{border-top:1px solid #dce4d8;margin:18px 0 0;padding-top:10px;font-size:12px}.before small{font-size:11px}.inputs,.passage{margin-top:15px;font-size:13px}.inputs .grid{margin-top:12px}.prompt-panel .tokens{font-size:12px;line-height:2}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#edf1e8;padding:14px;font-size:12px}.legend{max-width:650px;margin:20px 0}.ramp{height:15px;background:linear-gradient(to right,#fff,#ffffb2,#fed976,#fd8d3c,#e31a1c,#800026);border:1px solid #c9d1c7}.ends{display:flex;justify-content:space-between;font-size:12px}.downloads{display:flex;gap:18px;flex-wrap:wrap}.cohort p{max-width:1200px}@media(max-width:850px){main{padding:25px 14px}.grid{grid-template-columns:1fr}.headings{display:none}.case{padding:14px}.tokens{font-size:14px}.feature-id{font-size:15px}.lead{font-size:16px}}'''
+page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Confidence candidate gates · unsteered QA activations</title><style>{style}</style></head><body><main><p class="eyebrow">Qwen3–4B · unsteered · 19 October 2026</p><h1>Do confidence-related MOLTs activate in the model’s answers?</h1><p class="lead">Four correct answers, four made-up answers and four natural abstentions. Each question has three feature columns showing exactly the same native response, coloured by each gate’s measured activity.</p><nav><a href="#correct">Correct answers</a><a href="#made_up">Made-up answers</a><a href="#abstention">Natural abstentions</a><a href="#positive_control">Wording control</a><a href="#method">Method</a></nav><div class="note"><b>Measured finding:</b> {h(findings)}<p class="fine">These labels describe gate activation conditions. They do not establish that a gate measures confidence in a factual answer.</p></div><div class="scroll"><table class="overview"><thead><tr><th>Candidate</th><th>Correct · 4 answers</th><th>Made up · 4 answers</th><th>Natural abstention · 4 answers</th></tr></thead><tbody>{''.join(table)}</tbody></table></div><p class="fine">Each cell is the average of four response means, including zero gates at every non-special response token. Hover over a coloured token for its exact gate, raw score and position.</p><div class="legend"><b>Shared gate scale</b><div class="ramp"></div><div class="ends"><span>0 · white = inactive</span><span>{scale:.4f} · maximum across answers and wording control</span></div><p class="fine">Same scale across all questions and all three gates. Gate thresholds: {thresholds}.</p></div>{''.join(groups)}<section id="method"><h2>Exact method and timing</h2><p>The twelve QA cases were selected before measuring these candidate gates. Fresh native greedy generation uses no monitoring hooks. Every generated token reproduces the saved baseline, including EOS. A second observation-only replay preserves every native next-token argmax. The separate wording control has no historical reference; its replay is verified against its fresh native generation.</p><pre>z = (residual after attention at this layer − released input mean) / released input std
+raw = z dot selected encoder row + bias
+gate = raw if raw &gt; threshold and raw &gt; 0; otherwise 0</pre><p>Hooks only read the input to the native post-attention layernorm and return None. The native MLP and attention are unchanged. No contribution is added, replaced, clamped or multiplied. Colour on a response token records the gate while processing that token, after it has already been emitted. The separate final-prompt measurement occurs before the first answer prediction.</p><p class="fine">BF16 native model, FP32 gate arithmetic, unfrozen eager attention, greedy batch one, thinking disabled, KV cache and 96-new-token cap. Mean excludes EOS and other special tokens. All indices are zero-based. Source and asset byte ranges are pinned to the same Qwen3–4B/MOLT revisions used in the earlier study.</p><h2>Interpretation limits</h2><p>Confidence wording may occur in fiction, reassurance or statements by another speaker. Activity here would be observational, not evidence of a calibrated confidence mechanism. Inactivity in twelve selected answers does not establish that a feature is irrelevant everywhere. “Made up” means unsupported by the supplied passage; the original group labels and their grading reasons are retained. No correlation or steering experiment is performed in this report.</p><div class="downloads"><a href="artifacts/measurements.json">Every measured token</a><a href="gate-summary.csv">Means and active-token counts</a><a href="verification.json">Verification</a><a href="protocol.json">Frozen protocol</a><a href="cases.json">Queries and original grades</a><a href="source/run.py">Executed source</a></div><p class="fine">SQuAD2.0 selected text: Rajpurkar, Jia and Liang (2018), CC BY-SA 4.0. SPAR GPU retained for follow-ups; no lifecycle changes.</p></section></main></body></html>'''
+(R/'index.html').write_text(page)
+(R/'summary.json').write_text(json.dumps({'findings':findings,'shared_colour_max':scale,'response_summaries':stats},indent=2)+'\n')
+with (R/'gate-summary.csv').open('w') as f:
+ fields=list(stats[0]);writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader();writer.writerows(stats)
+(R/'source').mkdir(exist_ok=True)
+for n in ['run.py','prepare.py','protocol.json','cases.json','expected-base-verification.json','build.py']:shutil.copy2(S/n,R/'source'/n)
+print(json.dumps({'cases':len(rows),'feature_columns':len(keys),'findings':findings,'shared_colour_max':scale}))

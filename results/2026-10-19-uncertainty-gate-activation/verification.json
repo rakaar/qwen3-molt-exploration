@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "qa_cases": 12,
+  "separate_wording_controls": 2,
+  "gates": [
+    "L12-T1667",
+    "L14-T1103",
+    "L16-T764",
+    "L15-T2349",
+    "L23-T710",
+    "L26-T868",
+    "L18-T74"
+  ],
+  "native_saved_baseline_matches": 12,
+  "observation_only_replay_matches": 14,
+  "verified_next_token_predictions": 312,
+  "prompt_tokens": 2919,
+  "answer_tokens": 298,
+  "positive_response_control_per_gate": {
+    "L12-T1667": true,
+    "L14-T1103": true,
+    "L16-T764": true,
+    "L15-T2349": true,
+    "L23-T710": true,
+    "L26-T868": true,
+    "L18-T74": false
+  },
+  "nonzero_observed_anywhere": {
+    "L12-T1667": true,
+    "L14-T1103": true,
+    "L16-T764": true,
+    "L15-T2349": true,
+    "L23-T710": true,
+    "L26-T868": true,
+    "L18-T74": true
+  },
+  "source_asset_gate_arithmetic_and_summary_checks": true,
+  "attention_and_native_mlp": "No replacement or modification; observation-only hooks return None."
+}

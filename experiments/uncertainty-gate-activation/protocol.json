@@ -1,0 +1,119 @@
+{
+  "experiment": "Native uncertainty-candidate gates on the same twelve QA examples",
+  "frozen_utc": "2026-10-19T13:15:27.915800+00:00",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "features": [
+    {
+      "layer": 12,
+      "transform": 1667,
+      "label": "Uncertainty Assertion Gate",
+      "rank": 32,
+      "priority": "first",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-12/autointerp-layer/features/1667.html",
+      "label_source_sha256": "36fd90ba00d6ee8f78174cc316a47caaa61b6c6933692b8e531eed40bbdd533a"
+    },
+    {
+      "layer": 14,
+      "transform": 1103,
+      "label": "Unknown Information and Missing Details",
+      "rank": 64,
+      "priority": "first",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-14/autointerp-layer/features/1103.html",
+      "label_source_sha256": "20317eabee17b1743b0b2ad8fb48e6a18e48092a1f0c079c747b8c4c5df5509d"
+    },
+    {
+      "layer": 16,
+      "transform": 764,
+      "label": "Negation of Information Availability",
+      "rank": 64,
+      "priority": "first",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-16/autointerp-layer/features/764.html",
+      "label_source_sha256": "23da366c2d5c986cb45574ad23b647cd1d95f01276f547cdaf284e395faa4169"
+    },
+    {
+      "layer": 15,
+      "transform": 2349,
+      "label": "Negation of Source Information",
+      "rank": 32,
+      "priority": "secondary",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-15/autointerp-layer/features/2349.html",
+      "label_source_sha256": "7da8c4fe0b62228f4e5f3e84ac959d7ab366a3adfb5eb133e34fcb86b19eea7b"
+    },
+    {
+      "layer": 23,
+      "transform": 710,
+      "label": "Insufficient Information Gate",
+      "rank": 64,
+      "priority": "secondary",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-23/autointerp-layer/features/710.html",
+      "label_source_sha256": "2ba941da02e659c3b038150e63750b5078991823e9111dd2e9f9777898b7cb78"
+    },
+    {
+      "layer": 26,
+      "transform": 868,
+      "label": "Context Insufficiency Signal Gate",
+      "rank": 64,
+      "priority": "secondary",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-26/autointerp-layer/features/868.html",
+      "label_source_sha256": "9d31aaff6b9c899cb3ae01ad40ed4cbd0e4364db646c95f99a3a50abaf85b8ca"
+    },
+    {
+      "layer": 18,
+      "transform": 74,
+      "label": "Epistemic Qualification and Uncertainty Markers",
+      "rank": 512,
+      "priority": "secondary",
+      "dashboard_url": "https://amsterdam.taild80f17.ts.net/layers/layer-18/autointerp-layer/features/74.html",
+      "label_source_sha256": "bf5bb4fbf765d1415dd0f5b9ea1ed789176de1c60ead2efee27137a67c25a474"
+    }
+  ],
+  "groups": {
+    "correct": [
+      "P1-A1",
+      "P1-A3",
+      "P2-A1",
+      "P2-A3"
+    ],
+    "made_up": [
+      "P1-U2",
+      "P1-U5",
+      "P2-U1",
+      "P2-U5"
+    ],
+    "abstention": [
+      "P1-U3",
+      "P1-U4",
+      "P2-U3",
+      "P2-U4"
+    ]
+  },
+  "selection": "Four saved examples per group from the original two-passage pilot, balanced two questions per passage per group; fixed before measuring these candidate gates. All four original made-up cases retained. Natural abstentions exclude the known false-explanation case P2-U2. Identical twelve case IDs and native references to confidence-gate-activation; no selection by the new gate activity.",
+  "intervention": "None. Fresh greedy generation with no hooks, followed by observation-only token-exact replay. All hooks return None; native MLP and attention remain unchanged.",
+  "gate": "z=(post_attention_residual-input_mean[layer])/input_std[layer]; raw=z dot e + bias; gate=raw if raw>theta and raw>0 else 0.",
+  "timing": "A token is coloured by the gate when that token is processed, which can affect the next prediction. Also preserve the final prompt position before the first answer prediction.",
+  "decoding": {
+    "do_sample": false,
+    "use_cache": true,
+    "batch_size": 1,
+    "max_new_tokens": 96,
+    "enable_thinking": false
+  },
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "dtype": "BF16 native model, FP32 gate calculations",
+  "metric": "Mean over all visible response tokens including zero gates; EOS and other special tokens excluded. Max and active-token counts are separate.",
+  "display": "Default three priority feature columns; switch to the other four or all seven. Separate question-token and response-token maps, with full-prompt tokens expandable. One colour scale across every measured gate and token.",
+  "max_runtime_minutes": 20,
+  "source_sha256": {
+    "results/2026-10-14-passage-answer-gates/baseline-generations.json": "b2776d966d864493347c01376d2e5fddb03a27096fd63bd38c8cd0ff5f589c7b",
+    "results/2026-10-14-passage-answer-gates/baseline-assessment.json": "343836c4989a4e40f4aca9fafe23279fbc6f7eb2d6f9355e7e82e822e60cfee1",
+    "results/2026-10-14-passage-answer-gates/baseline-cases.json": "3258c62d4458774375af9f64b9a2e013ca49e1484349bbe0a558846f9831700d"
+  },
+  "limitations": "Label conditions are hypotheses, not validated confidence signals. Twelve selected QA examples; no interventions or correlation calculation. Two wording controls excluded from QA group means.",
+  "query_definition": "Tokens whose tokenizer character offsets overlap the exact final user question. Preserve the entire prompt separately; shared instructions and passage are not pooled into query-only means."
+}

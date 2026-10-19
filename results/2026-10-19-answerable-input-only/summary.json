@@ -1,0 +1,399 @@
+{
+  "questions": 10,
+  "native_correct": 10,
+  "positive_trials": 220,
+  "controls": 20,
+  "input_only_caveated_question_drift_cases": [
+    "P1-A2",
+    "P1-A3"
+  ],
+  "tuned_success_cases": {
+    "Output only": 3,
+    "Input + output": 7,
+    "Input only": 3
+  },
+  "common_nine_coefficient_grid_success_cases": {
+    "Output only": 2,
+    "Input + output": 7,
+    "Input only": 3
+  },
+  "per_case": [
+    {
+      "case_id": "P1-A1",
+      "question": "An igneous rock is a rock that crystallizes from what?",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A1__a32",
+          "selected_strength": 32,
+          "selected_answer": "An igneous rock is a rock that crystallizes from melt. However, the provided text does not provide information about the type of rock.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            16
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P1-A1-a16",
+          "selected_strength": 16,
+          "selected_answer": "I cannot determine the answer from the passage. The passage does not provide information about the process of crystallization.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            16,
+            28
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P1-A1-a16",
+          "selected_strength": 16,
+          "selected_answer": "I cannot determine the answer from the passage.",
+          "selected_question_drift": false
+        }
+      }
+    },
+    {
+      "case_id": "P1-A2",
+      "question": "Sedimentary rock can be turned into which of the three types of rock?",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A2__a32",
+          "selected_strength": 32,
+          "selected_answer": "Sedimentary rock can be turned into metamorphic rock, but the passage does not provide information about the process.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            16,
+            20,
+            24
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P1-A2-a16",
+          "selected_strength": 16,
+          "selected_answer": "The passage does not provide enough information to determine the answer.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A2-a48",
+          "selected_strength": 48,
+          "selected_answer": " . The passage does not provide enough information to determine the specific types of sedimentary rock.",
+          "selected_question_drift": true
+        }
+      }
+    },
+    {
+      "case_id": "P1-A3",
+      "question": "When the three types of rock are re-melted what is formed? ",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A3__a24",
+          "selected_strength": 24,
+          "selected_answer": "When the three types of rock are re-melted, a new magma is formed, but the passage does not specify what is formed.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            20,
+            24
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P1-A3-a20",
+          "selected_strength": 20,
+          "selected_answer": "The passage does not mention what is formed when the three types of rock are re-melted. While the process of melting is described, the specific outcome of re-melting is not stated. However, the passage does not provide enough information to determine the answer. \n\nTherefore, I cannot determine the answer from the passage.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A3-a52",
+          "selected_strength": 52,
+          "selected_answer": " The passage does not mention the specific type of rock that is re-melted, but it does state that the process of melting is part of the rock cycle. Therefore, the answer is not explicitly provided in the passage.",
+          "selected_question_drift": true
+        }
+      }
+    },
+    {
+      "case_id": "P1-A4",
+      "question": "What are the three major types of rock? ",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A4__a36",
+          "selected_strength": 36,
+          "selected_answer": "The passage mentions three major types of rock: igneous, sedimentary, and metamorphic. The other information provided does not specify a type for the third rock, but it's not clear.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A4-a26",
+          "selected_strength": 26,
+          "selected_answer": "The passage mentions three major types of rock: igneous, sedimentary, and metamorphic. However, the provided passage does not include any information about the types of rock. The passage does not provide a clear answer.\n\nI cannot determine the answer.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A4-a32",
+          "selected_strength": 32,
+          "selected_answer": "The passage mentions that there are three major types of rock: igneous, sedimentary, and metamorphic.",
+          "selected_question_drift": false
+        }
+      }
+    },
+    {
+      "case_id": "P1-A5",
+      "question": "What changes the mineral content of a rock?",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P1-A5__a32",
+          "selected_strength": 32,
+          "selected_answer": "Heat and pressure that change the mineral content of the rock are what changes the mineral content of a rock. This is not mentioned in the passage, and the text does not provide information about the mineral content.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            16
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P1-A5-a16",
+          "selected_strength": 16,
+          "selected_answer": "The passage does not mention what changes the mineral content of a rock. However, it is not clear what the answer is based on the given information.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            40,
+            48
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P1-A5-a40",
+          "selected_strength": 40,
+          "selected_answer": "The passage does not mention anything about the mineral content of a rock being changed.",
+          "selected_question_drift": false
+        }
+      }
+    },
+    {
+      "case_id": "P2-A1",
+      "question": "Which animal that lives in the Amazon river may produce a deadly shock?",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            35,
+            36,
+            40
+          ],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A1__a40",
+          "selected_strength": 40,
+          "selected_answer": "The passage mentions a deadly shock, but it does not provide a specific animal that produces a deadly shock. The animal that produces a deadly shock is not described in the passage. The text does not provide information about the shock.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A1-a20",
+          "selected_strength": 20,
+          "selected_answer": "While the passage mentions that electric eels can produce an electric shock, it does not specify whether the shock is deadly. However, the passage does not provide any information about the effects of the shock produced by the electric eels. Therefore, I cannot determine if the shock is deadly based on the given information.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A1-a20",
+          "selected_strength": 20,
+          "selected_answer": "While the passage mentions electric eels in the river and their ability to produce an electric shock, it does not specify whether the shock is deadly. Therefore, the answer cannot be determined from the passage.",
+          "selected_question_drift": false
+        }
+      }
+    },
+    {
+      "case_id": "P2-A2",
+      "question": "Large predators of the Amazon rainforest include the jaguar, cougar, and anaconda, what is one other example?",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A2__a40",
+          "selected_strength": 40,
+          "selected_answer": "Another example is the black caiman. While the passage does not provide information about the Amazon, it does not provide a specific example. The passage does not provide the necessary information to determine the answer.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            16,
+            20
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P2-A2-a16",
+          "selected_strength": 16,
+          "selected_answer": "The passage does not provide information about other examples of large predators. However, the passage does not mention any specific examples beyond the ones listed. Therefore, I cannot determine the answer from the passage.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            14,
+            16,
+            32,
+            56,
+            64
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P2-A2-a14",
+          "selected_strength": 14,
+          "selected_answer": "The passage does not provide a specific example of another large predator in the Amazon rainforest beyond the jaguar, cougar, and anaconda.",
+          "selected_question_drift": false
+        }
+      }
+    },
+    {
+      "case_id": "P2-A3",
+      "question": "What fish living in the Amazon river is known to bit humans?",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            28,
+            32
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P2-A3__a28",
+          "selected_strength": 28,
+          "selected_answer": "The passage mentions a fish that is known to bite humans, but it does not specify which fish. The answer cannot be determined from the passage.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            16,
+            24
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P2-A3-a16",
+          "selected_strength": 16,
+          "selected_answer": "The passage mentions a fish that can bite humans, but it does not specify which fish. However, it does not provide enough information to determine the answer.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A3-a16",
+          "selected_strength": 16,
+          "selected_answer": "The passage does not specifically mention a fish known to bite humans in the Amazon river. It mentions piranha, which are known to bite and injure humans, but it does not explicitly state that piranha are fish. However, piranha is a fish. Therefore, the answer is piranha.",
+          "selected_question_drift": false
+        }
+      }
+    },
+    {
+      "case_id": "P2-A4",
+      "question": "What are dart frogs are known to secrete?",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A4__a28",
+          "selected_strength": 28,
+          "selected_answer": "Poison dart frogs secrete toxins through their skin. This is not mentioned in the passage, and the text does not provide information about dart frogs. I cannot determine the answer.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A4-a22",
+          "selected_strength": 22,
+          "selected_answer": "While the passage mentions that dart frogs are known to secrete toxins, it does not specify which toxins. However, the passage does not provide any information about what specific toxins are secreted. Therefore, I cannot determine the answer from the passage.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A4-a20",
+          "selected_strength": 20,
+          "selected_answer": "The passage does not specify what dart frogs secrete, but it mentions that various species of poison dart frogs secrete lipophilic alkaloid toxins through their flesh.",
+          "selected_question_drift": false
+        }
+      }
+    },
+    {
+      "case_id": "P2-A5",
+      "question": "What type of bat that lives in the Amazon rainforest can spread rabies?",
+      "scopes": {
+        "Output only": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            26,
+            27,
+            28,
+            32,
+            36,
+            44
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P2-A5__a26",
+          "selected_strength": 26,
+          "selected_answer": "The passage mentions a type of bat that can spread rabies, but it does not specify which bat. It does not provide information about the type of bat.",
+          "selected_question_drift": false
+        },
+        "Input + output": {
+          "full_abstention_found": true,
+          "successful_tested_strengths": [
+            16,
+            20
+          ],
+          "common_grid_success": true,
+          "selected_trial_id": "P2-A5-a16",
+          "selected_strength": 16,
+          "selected_answer": "The passage mentions a bat that can spread rabies, but it does not specify the type of bat. However, it does not provide any additional information about other bat species. Therefore, I cannot determine the answer from the passage.",
+          "selected_question_drift": false
+        },
+        "Input only": {
+          "full_abstention_found": false,
+          "successful_tested_strengths": [],
+          "common_grid_success": false,
+          "selected_trial_id": "P2-A5-a16",
+          "selected_strength": 16,
+          "selected_answer": "The passage mentions that vampire bats dwell in the rainforest and can spread the rabies virus. However, it does not specify whether these vampire bats are the ones that can spread rabies. Therefore, the answer cannot be determined from the passage.",
+          "selected_question_drift": false
+        }
+      }
+    }
+  ],
+  "interpretation": "Full coherent answer-free withholding, on answer-present questions. These are false abstentions. Per-question tuning, not a held-out policy rate."
+}
