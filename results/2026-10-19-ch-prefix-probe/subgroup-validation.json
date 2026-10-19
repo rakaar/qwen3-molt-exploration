@@ -1,0 +1,51 @@
+{
+  "post_fit_diagnostic_only": true,
+  "no_retraining_or_threshold_changes": true,
+  "groups": {
+    "leading_space=True": {
+      "rows": 404,
+      "families": 78,
+      "positive_families": 16,
+      "auroc": 0.9614813648073477,
+      "balanced_accuracy": 0.8966733870967742,
+      "positive_prediction_rate": 0.2818910256410256,
+      "note": null
+    },
+    "leading_space=False": {
+      "rows": 144,
+      "families": 33,
+      "positive_families": 5,
+      "auroc": 0.9108630952380952,
+      "balanced_accuracy": 0.8419642857142857,
+      "positive_prediction_rate": 0.2196969696969697,
+      "note": null
+    },
+    "case=lower": {
+      "rows": 362,
+      "families": 74,
+      "positive_families": 15,
+      "auroc": 0.9691722435207606,
+      "balanced_accuracy": 0.908545197740113,
+      "positive_prediction_rate": 0.2652027027027027,
+      "note": null
+    },
+    "case=title": {
+      "rows": 160,
+      "families": 47,
+      "positive_families": 11,
+      "auroc": 0.9071180555555556,
+      "balanced_accuracy": 0.8344381313131314,
+      "positive_prediction_rate": 0.3058510638297872,
+      "note": null
+    },
+    "case=upper": {
+      "rows": 26,
+      "families": 9,
+      "positive_families": 0,
+      "auroc": null,
+      "balanced_accuracy": null,
+      "positive_prediction_rate": 0.0,
+      "note": "Only one class is present; AUROC and balanced accuracy are not applicable."
+    }
+  }
+}

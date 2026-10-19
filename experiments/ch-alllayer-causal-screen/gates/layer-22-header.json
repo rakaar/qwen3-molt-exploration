@@ -1,0 +1,212 @@
+{
+  "__metadata__": {
+    "global_step": "100000",
+    "format": "pt",
+    "layer": "22",
+    "contents": "model weights and buffers only; no optimizer state"
+  },
+  "Us.0": {
+    "dtype": "F32",
+    "shape": [
+      80,
+      512,
+      2560
+    ],
+    "data_offsets": [
+      0,
+      419430400
+    ]
+  },
+  "Us.1": {
+    "dtype": "F32",
+    "shape": [
+      160,
+      256,
+      2560
+    ],
+    "data_offsets": [
+      419430400,
+      838860800
+    ]
+  },
+  "Us.2": {
+    "dtype": "F32",
+    "shape": [
+      320,
+      128,
+      2560
+    ],
+    "data_offsets": [
+      838860800,
+      1258291200
+    ]
+  },
+  "Us.3": {
+    "dtype": "F32",
+    "shape": [
+      640,
+      64,
+      2560
+    ],
+    "data_offsets": [
+      1258291200,
+      1677721600
+    ]
+  },
+  "Us.4": {
+    "dtype": "F32",
+    "shape": [
+      1280,
+      32,
+      2560
+    ],
+    "data_offsets": [
+      1677721600,
+      2097152000
+    ]
+  },
+  "Vs.0": {
+    "dtype": "F32",
+    "shape": [
+      80,
+      2560,
+      512
+    ],
+    "data_offsets": [
+      2097152000,
+      2516582400
+    ]
+  },
+  "Vs.1": {
+    "dtype": "F32",
+    "shape": [
+      160,
+      2560,
+      256
+    ],
+    "data_offsets": [
+      2516582400,
+      2936012800
+    ]
+  },
+  "Vs.2": {
+    "dtype": "F32",
+    "shape": [
+      320,
+      2560,
+      128
+    ],
+    "data_offsets": [
+      2936012800,
+      3355443200
+    ]
+  },
+  "Vs.3": {
+    "dtype": "F32",
+    "shape": [
+      640,
+      2560,
+      64
+    ],
+    "data_offsets": [
+      3355443200,
+      3774873600
+    ]
+  },
+  "Vs.4": {
+    "dtype": "F32",
+    "shape": [
+      1280,
+      2560,
+      32
+    ],
+    "data_offsets": [
+      3774873600,
+      4194304000
+    ]
+  },
+  "e.bias": {
+    "dtype": "F32",
+    "shape": [
+      2480
+    ],
+    "data_offsets": [
+      4194304000,
+      4194313920
+    ]
+  },
+  "e.weight": {
+    "dtype": "F32",
+    "shape": [
+      2480,
+      2560
+    ],
+    "data_offsets": [
+      4194313920,
+      4219709120
+    ]
+  },
+  "input_standardizer.mean": {
+    "dtype": "F32",
+    "shape": [
+      36,
+      2560
+    ],
+    "data_offsets": [
+      4219709120,
+      4220077760
+    ]
+  },
+  "input_standardizer.std": {
+    "dtype": "F32",
+    "shape": [
+      36,
+      2560
+    ],
+    "data_offsets": [
+      4220077760,
+      4220446400
+    ]
+  },
+  "nonlinearity.bandwidth": {
+    "dtype": "F32",
+    "shape": [],
+    "data_offsets": [
+      4220446400,
+      4220446404
+    ]
+  },
+  "nonlinearity.theta": {
+    "dtype": "F32",
+    "shape": [
+      1,
+      2480
+    ],
+    "data_offsets": [
+      4220446404,
+      4220456324
+    ]
+  },
+  "output_standardizer.mean": {
+    "dtype": "F32",
+    "shape": [
+      36,
+      2560
+    ],
+    "data_offsets": [
+      4220456324,
+      4220824964
+    ]
+  },
+  "output_standardizer.std": {
+    "dtype": "F32",
+    "shape": [
+      36,
+      2560
+    ],
+    "data_offsets": [
+      4220824964,
+      4221193604
+    ]
+  }
+}

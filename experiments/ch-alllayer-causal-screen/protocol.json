@@ -1,0 +1,26 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "experiment": "All-layer native activity and estimated MOLT contribution ablation screen for child -> CH",
+  "date": "2026-10-19",
+  "primary_case": "fewshot_upper_child",
+  "primary_sites": [
+    "input child position 27",
+    "prompt-final position 37 predicting CH"
+  ],
+  "activity_scope": "All 2480 gate encoders at all 36 layers, all processed native tokens of ten exact prior prompts.",
+  "causal_scope": "Exhaust all positive-gate MOLTs at the two primary sites in the uppercase child task; individual feature and site ablations. Other positions are activity-only.",
+  "intervention": "Native MLP output minus gate * ((standardized prenorm input @ V) @ U) * output_std, accumulated FP32 and cast once to native BF16. Other MLP positions unchanged. Native attention unfrozen. Estimated component subtraction, not exact MOLT-only model.",
+  "metric": "Correct-token CH log probability and log odds against the full other-token distribution; CH-vs-native-runnerup CI logit gap; greedy answer and output.",
+  "selection": "All gate-active features at either of the two sites, without label or gate amplitude filtering. Rank helpful effects by baseline log odds minus ablated log odds, separately per site.",
+  "controls": "Unhooked baseline; read-only replay; zero-strength and inactive-feature controls; all-source-at-one-layer and all-final-at-one-layer native MLP-output-zero controls; top findings rerun and evaluated on other spellings and templates. No conclusions from failed child probe.",
+  "confirmation": "Up to eight strongest positive single-feature effects, both sites represented when positive; evaluate upper/lower baseline cases and new child prompts with different demonstration words, and non-CH cider/table controls. Group tests if no single-feature flip, selected after first-pass outcomes and labeled exploratory.",
+  "resources": "Reuse retained SPAR instance 56698356, no rental or lifecycle action.",
+  "max_runtime_minutes": 25
+}

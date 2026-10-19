@@ -1,0 +1,64 @@
+{
+  "experiment": "Observation only CH and Child MOLTs on spelling prompts",
+  "created_date_local": "2026-10-19",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "features": [
+    {
+      "layer": 3,
+      "transform": 2334,
+      "rank": 32,
+      "label": "Ch-Initial Word Onset",
+      "dashboard_feature_fingerprint": "9df759a78802db7f7706ddfbf71b54e5d58228fb36de080b39084516908eab18"
+    },
+    {
+      "layer": 3,
+      "transform": 1372,
+      "rank": 32,
+      "label": "Token \"child\" in personal or familial contexts",
+      "dashboard_feature_fingerprint": "9df759a78802db7f7706ddfbf71b54e5d58228fb36de080b39084516908eab18"
+    }
+  ],
+  "case_ids": [
+    "fewshot_upper_child",
+    "fewshot_upper_chin",
+    "fewshot_upper_chair",
+    "fewshot_upper_cheef",
+    "fewshot_upper_chief",
+    "fewshot_lower_child",
+    "fewshot_lower_chin",
+    "fewshot_lower_chair",
+    "fewshot_lower_cheef",
+    "fewshot_lower_chief",
+    "direct_upper_child",
+    "direct_upper_chin",
+    "direct_upper_chair",
+    "direct_upper_cheef",
+    "direct_upper_chief",
+    "fewshot_upper_title_child",
+    "fewshot_upper_title_chin",
+    "fewshot_upper_title_chair",
+    "fewshot_upper_title_cheef",
+    "fewshot_upper_title_chief",
+    "natural_surname",
+    "natural_person"
+  ],
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "decoding": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "use_cache": true,
+    "max_new_tokens": 16
+  },
+  "gate_method": "z = (current residual after attention, before post_attention_layernorm - released input_mean[layer]) / input_std[layer]; raw = z @ e_row + e_bias; g = raw when raw > theta and raw > 0, else 0. FP32 gate and low-rank math.",
+  "native_computation": "Native MLP and attention remain unchanged; all observation hooks return None. Native unhooked greedy generation is followed by exact-token cached replay.",
+  "timing": "A gate at output token CH is measured while processing that already emitted token. The prompt-final position predicts the first answer token. Both are recorded.",
+  "max_runtime_minutes": 15,
+  "resource": "Reuse retained SPAR instance 56698356; separate directory and process; no new rental or lifecycle changes.",
+  "scope": "22 fixed prompts. Exact cheef misspelling retained plus chief comparison. No ablation, steering, probe training or absorption conclusion."
+}

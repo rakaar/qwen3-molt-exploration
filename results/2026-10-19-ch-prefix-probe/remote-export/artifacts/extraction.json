@@ -1,0 +1,81 @@
+{
+  "status": "complete",
+  "finished_at_utc": "2026-10-19T12:28:55.243008+00:00",
+  "rows": 4176,
+  "dimensions": 2560,
+  "storage": "Exact BF16 bits as uint16; decode by uint32 shift left 16 then float32 view.",
+  "location": "Native block.mlp output before residual addition, at the complete input word token. No intervention, no generation, no MOLT weights used.",
+  "elapsed_seconds": 48.93606885799818,
+  "native_attention_unmodified": true,
+  "no_interventions_or_generation": true,
+  "native_full_forward_checks": [
+    {
+      "row_id": "row-00000",
+      "word": "accord",
+      "surface": " Accord",
+      "template": "fewshot_upper",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-01044",
+      "word": "chemist",
+      "surface": "chemist",
+      "template": "fewshot_upper",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-01149",
+      "word": "child",
+      "surface": "child",
+      "template": "fewshot_upper",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-01150",
+      "word": "child",
+      "surface": "child",
+      "template": "fewshot_lower",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-02088",
+      "word": "ct",
+      "surface": " ct",
+      "template": "fewshot_upper",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-04175",
+      "word": "zest",
+      "surface": " zest",
+      "template": "fewshot_lower",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    }
+  ],
+  "base_files_sha256_verified": true,
+  "dataset_sha256": "73696e6cf72e79399c984803a6fbfed3b19c0c5e27a92ec24281ed147bf2e0b6",
+  "activations_sha256": "6b9b80144e1be65f0f89b7f673ebd63453463040d1e9fc79a24633e23fef6964",
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "source_sha256": {
+    "extract.py": "7cbb28e18e22c22752d36678cddac7550a0859cb45d41a235fc4a010fcf90266",
+    "build_dataset.py": "ca1e94ab77f448701bf4da0928f268392264329b6bb0b70bb0587590da1fa671",
+    "protocol.json": "02e8e3597b4cf28e53280020413a3bbd2d69c23bae5143965d0817a2b0d17528"
+  }
+}

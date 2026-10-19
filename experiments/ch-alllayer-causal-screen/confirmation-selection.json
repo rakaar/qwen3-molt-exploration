@@ -1,0 +1,194 @@
+{
+  "selection_after_primary_screen_outcomes": true,
+  "rule": "Four strongest helpful effects per site by drop in CH log odds, before new-prompt outcomes; groups exploratory. One random norm-matched direction per selected feature on original child prompt.",
+  "features": [
+    {
+      "id": "L28-T1123-source",
+      "layer": 28,
+      "transform": 1123,
+      "site": "source",
+      "cached_label": "Ch-prefix food and noun tokens"
+    },
+    {
+      "id": "L0-T682-source",
+      "layer": 0,
+      "transform": 682,
+      "site": "source",
+      "cached_label": "Location, Measurement, and Demographic Noun Gate"
+    },
+    {
+      "id": "L25-T953-source",
+      "layer": 25,
+      "transform": 953,
+      "site": "source",
+      "cached_label": "Family and Youth Token Gate"
+    },
+    {
+      "id": "L25-T1240-source",
+      "layer": 25,
+      "transform": 1240,
+      "site": "source",
+      "cached_label": "C/Ch Initial Token Gate"
+    },
+    {
+      "id": "L10-T30-prediction",
+      "layer": 10,
+      "transform": 30,
+      "site": "prediction",
+      "cached_label": "Creative Writing and Travel Prompt Gate"
+    },
+    {
+      "id": "L14-T54-prediction",
+      "layer": 14,
+      "transform": 54,
+      "site": "prediction",
+      "cached_label": "Emotional and Interpersonal Narrative"
+    },
+    {
+      "id": "L18-T51-prediction",
+      "layer": 18,
+      "transform": 51,
+      "site": "prediction",
+      "cached_label": "User Turn Start"
+    },
+    {
+      "id": "L10-T18-prediction",
+      "layer": 10,
+      "transform": 18,
+      "site": "prediction",
+      "cached_label": "General New Input Context Trigger"
+    }
+  ],
+  "groups": [
+    {
+      "id": "joint_top_source",
+      "terms": [
+        {
+          "id": "L28-T1123-source",
+          "layer": 28,
+          "transform": 1123,
+          "site": "source",
+          "cached_label": "Ch-prefix food and noun tokens"
+        },
+        {
+          "id": "L0-T682-source",
+          "layer": 0,
+          "transform": 682,
+          "site": "source",
+          "cached_label": "Location, Measurement, and Demographic Noun Gate"
+        },
+        {
+          "id": "L25-T953-source",
+          "layer": 25,
+          "transform": 953,
+          "site": "source",
+          "cached_label": "Family and Youth Token Gate"
+        },
+        {
+          "id": "L25-T1240-source",
+          "layer": 25,
+          "transform": 1240,
+          "site": "source",
+          "cached_label": "C/Ch Initial Token Gate"
+        }
+      ],
+      "fraction": 1
+    },
+    {
+      "id": "joint_top_prediction",
+      "terms": [
+        {
+          "id": "L10-T30-prediction",
+          "layer": 10,
+          "transform": 30,
+          "site": "prediction",
+          "cached_label": "Creative Writing and Travel Prompt Gate"
+        },
+        {
+          "id": "L14-T54-prediction",
+          "layer": 14,
+          "transform": 54,
+          "site": "prediction",
+          "cached_label": "Emotional and Interpersonal Narrative"
+        },
+        {
+          "id": "L18-T51-prediction",
+          "layer": 18,
+          "transform": 51,
+          "site": "prediction",
+          "cached_label": "User Turn Start"
+        },
+        {
+          "id": "L10-T18-prediction",
+          "layer": 10,
+          "transform": 18,
+          "site": "prediction",
+          "cached_label": "General New Input Context Trigger"
+        }
+      ],
+      "fraction": 1
+    },
+    {
+      "id": "joint_top_both",
+      "terms": [
+        {
+          "id": "L28-T1123-source",
+          "layer": 28,
+          "transform": 1123,
+          "site": "source",
+          "cached_label": "Ch-prefix food and noun tokens"
+        },
+        {
+          "id": "L0-T682-source",
+          "layer": 0,
+          "transform": 682,
+          "site": "source",
+          "cached_label": "Location, Measurement, and Demographic Noun Gate"
+        },
+        {
+          "id": "L25-T953-source",
+          "layer": 25,
+          "transform": 953,
+          "site": "source",
+          "cached_label": "Family and Youth Token Gate"
+        },
+        {
+          "id": "L25-T1240-source",
+          "layer": 25,
+          "transform": 1240,
+          "site": "source",
+          "cached_label": "C/Ch Initial Token Gate"
+        },
+        {
+          "id": "L10-T30-prediction",
+          "layer": 10,
+          "transform": 30,
+          "site": "prediction",
+          "cached_label": "Creative Writing and Travel Prompt Gate"
+        },
+        {
+          "id": "L14-T54-prediction",
+          "layer": 14,
+          "transform": 54,
+          "site": "prediction",
+          "cached_label": "Emotional and Interpersonal Narrative"
+        },
+        {
+          "id": "L18-T51-prediction",
+          "layer": 18,
+          "transform": 51,
+          "site": "prediction",
+          "cached_label": "User Turn Start"
+        },
+        {
+          "id": "L10-T18-prediction",
+          "layer": 10,
+          "transform": 18,
+          "site": "prediction",
+          "cached_label": "General New Input Context Trigger"
+        }
+      ],
+      "fraction": 1
+    }
+  ]
+}

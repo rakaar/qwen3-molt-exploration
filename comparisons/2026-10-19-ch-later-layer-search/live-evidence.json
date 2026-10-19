@@ -1,0 +1,259 @@
+{
+  "checked_on_local": "2026-10-19",
+  "method": "Live authenticated Edge pages; expanded Explanation evidence; read DOM token tooltip values. Selected observations transcribed from tool outputs.",
+  "scope": "Six live feature pages; finite explanation windows, not exhaustive activation coverage. Window positions are local to displayed windows.",
+  "records": [
+    {
+      "layer": 4,
+      "transform": 153,
+      "title": "Substring \"ch\" or \"new\"",
+      "rank": 256,
+      "detection": 0.92,
+      "fuzz": 0.9,
+      "window_tokens_inspected": 2003,
+      "positive_token_occurrences": 39,
+      "examples": [
+        {
+          "token": "ch",
+          "gate": 4.15625,
+          "context": "Alch\u2026"
+        },
+        {
+          "token": "Ch",
+          "gate": 3.39062,
+          "context": "PyCh\u2026"
+        },
+        {
+          "token": "chi",
+          "gate": 3.17188,
+          "context": "Uchi\u2026"
+        },
+        {
+          "token": "Chat",
+          "gate": 3.17188,
+          "context": "WeChat"
+        }
+      ],
+      "visible_child_tokens": [
+        {
+          "token": " child",
+          "gate": 0,
+          "window_position": 23
+        },
+        {
+          "token": " child",
+          "gate": 0,
+          "window_position": 33
+        },
+        {
+          "token": " child",
+          "gate": 0,
+          "window_position": 49
+        }
+      ],
+      "assessment": "CH substring and unrelated new/Chat tokens; all three visible complete child tokens inactive in the inspected context. Not evidence for source-child CH recovery.",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-4/autointerp-layer/features/153.html"
+    },
+    {
+      "layer": 4,
+      "transform": 64,
+      "title": "Suffix \"ch\" and \"ch\" + Vowel",
+      "rank": 512,
+      "detection": 0.8,
+      "fuzz": 0.68,
+      "window_tokens_inspected": 1933,
+      "positive_token_occurrences": 44,
+      "examples": [
+        {
+          "token": "M",
+          "gate": 2.9375,
+          "context": ".CHM"
+        },
+        {
+          "token": "ym",
+          "gate": 2.875,
+          "context": "Alchym\u2026"
+        },
+        {
+          "token": "um",
+          "gate": 2.84375,
+          "context": "Chlum\u2026"
+        },
+        {
+          "token": "ame",
+          "gate": 2.73438,
+          "context": "chame\u2026"
+        }
+      ],
+      "visible_child_tokens": [],
+      "assessment": "Demoted: strongest examples are following subword pieces, not a clean starts-CH feature.",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-4/autointerp-layer/features/64.html"
+    },
+    {
+      "layer": 29,
+      "transform": 2334,
+      "title": "Initial \"Ch\" Word Onset",
+      "rank": 32,
+      "detection": 0.8,
+      "fuzz": 0.65,
+      "window_tokens_inspected": 1178,
+      "examples": [
+        {
+          "token": " Ch",
+          "gate": 5.625
+        },
+        {
+          "token": ".ch",
+          "gate": 5.46875
+        },
+        {
+          "token": " ch",
+          "gate": 5.3125
+        },
+        {
+          "token": "ch",
+          "gate": 4.71875
+        }
+      ],
+      "visible_child_tokens": [],
+      "assessment": "A literal CH-subtoken candidate. No complete child token occurs in the inspected explanation windows; relevance to our source token remains unmeasured. Live status limited_evidence.",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-29/autointerp-layer/features/2334.html"
+    },
+    {
+      "layer": 32,
+      "transform": 1516,
+      "title": "Culinary and Proper Noun \"Ch\" Word Starts",
+      "rank": 32,
+      "detection": 0.94,
+      "fuzz": 0.72,
+      "window_tokens_inspected": 1921,
+      "positive_token_occurrences": 35,
+      "examples": [
+        {
+          "token": " Ch",
+          "gate": 4.28125,
+          "context": "Lobster Bisque with Ch\u2026"
+        },
+        {
+          "token": " ch",
+          "gate": 4.09375,
+          "context": "Vegetable ch\u2026"
+        },
+        {
+          "token": "Ch",
+          "gate": 4.09375,
+          "context": "Rotisserie Chicken\u2026 Ch\u2026"
+        }
+      ],
+      "visible_child_tokens": [],
+      "assessment": "Literal CH prefixes in recipes and names; no inspected complete child token. Gate label does not show what it writes.",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-32/autointerp-layer/features/1516.html"
+    },
+    {
+      "layer": 34,
+      "transform": 929,
+      "title": "Bigram \"ch\" Prefix Gate",
+      "rank": 64,
+      "detection": 0.8,
+      "fuzz": 0.6,
+      "window_tokens_inspected": 1974,
+      "positive_token_occurrences": 34,
+      "examples": [
+        {
+          "token": "ch",
+          "gate": 6.40625,
+          "context": "unch\u2026"
+        },
+        {
+          "token": "Ch",
+          "gate": 6.375,
+          "context": "EcoCh\u2026"
+        },
+        {
+          "token": " ch",
+          "gate": 6.34375,
+          "context": "jurisprudence ch\u2026"
+        },
+        {
+          "token": "-ch",
+          "gate": 6.09375,
+          "context": "multi-ch\u2026"
+        }
+      ],
+      "visible_child_tokens": [
+        {
+          "token": " child",
+          "gate": 0,
+          "window_position": 41
+        }
+      ],
+      "assessment": "Primarily CH subtoken detection in inspected examples, including non-onset uses. One complete child token is inactive in an unrelated natural context.",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-34/autointerp-layer/features/929.html"
+    },
+    {
+      "layer": 11,
+      "transform": 2226,
+      "title": "Child and Baby Token Activation",
+      "rank": 32,
+      "detection": 0.89,
+      "fuzz": 0.76,
+      "window_tokens_inspected": 2029,
+      "positive_token_occurrences": 185,
+      "examples": [
+        {
+          "token": " Child",
+          "gate": 3.57812
+        },
+        {
+          "token": " child",
+          "gate": 2.4375
+        },
+        {
+          "token": " baby",
+          "gate": 3.79688
+        },
+        {
+          "token": " babies",
+          "gate": 3.59375
+        }
+      ],
+      "visible_child_tokens": [
+        {
+          "token": " Child",
+          "gate": 3.57812,
+          "window_position": 25
+        },
+        {
+          "token": " child",
+          "gate": 2.4375,
+          "window_position": 8
+        },
+        {
+          "token": " child",
+          "gate": 2.17188,
+          "window_position": 52
+        },
+        {
+          "token": " child",
+          "gate": 0,
+          "window_position": 27
+        },
+        {
+          "token": " child",
+          "gate": 0,
+          "window_position": 42
+        },
+        {
+          "token": " child",
+          "gate": 0.527344,
+          "window_position": 63
+        }
+      ],
+      "assessment": "Complete child and non-CH semantic associates activate, consistent with a child/baby semantic candidate. No evidence yet that its output carries orthographic CH.",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-11/autointerp-layer/features/2226.html"
+    }
+  ],
+  "no_model_run": true,
+  "no_ablation_or_new_probe_training": true,
+  "interpretation": "Later-layer CH-labelled transforms exist, but these observations do not establish their activity or causal role in our child spelling tasks. Probe failure concerns a layer-3 MLP-output readout, not the whole residual stream."
+}

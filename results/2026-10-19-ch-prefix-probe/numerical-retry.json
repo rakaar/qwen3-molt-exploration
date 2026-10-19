@@ -1,0 +1,12 @@
+{
+  "attempt1": "/root/ch-prefix-probe",
+  "attempt2": "/root/ch-prefix-probe-v2",
+  "reason": "Batch-32 extraction failed its predeclared complete-native single-prompt reference tolerance. No probe trained on failed extraction.",
+  "failed_check": {
+    "row_index": 0,
+    "max_abs_difference": 0.015625,
+    "relative_l2_difference": 0.015591456554830074
+  },
+  "fix": "Use batch_size=1 and require exact equality to full native forwards. No tolerance relaxation.",
+  "frozen_dataset_sha256": "73696e6cf72e79399c984803a6fbfed3b19c0c5e27a92ec24281ed147bf2e0b6"
+}

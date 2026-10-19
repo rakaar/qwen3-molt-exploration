@@ -1,0 +1,53 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "experiment": "Joint input-only zero ablation: L3-T1372 plus L28-T1123",
+  "created_date": "2026-10-19",
+  "scope": "Two exact existing child prompts, uppercase and lowercase; only input child token 27 at each transform own layer; no generated-token edits.",
+  "intervention": "Native MLP output[token 27] minus each selected current-trajectory estimated contribution. Recompute L28 standardized input, gate and UV output after L3 ablation. FP32 accumulation then one BF16 cast. Native attention and other positions unchanged.",
+  "scoring": "Full greedy answers and separate cached teacher-forced native continuations. Uppercase P(CH) at first output; lowercase P( ch | native child:) at output step2. Also target-versus-CI/ci logit margins and log odds.",
+  "hypothesis": "Two-feature combined necessity/redundancy pilot; changes in gate or confidence alone do not prove absorption or mechanistic cooperation.",
+  "controls": "Unhooked native; zero-strength both-hook control; each single feature ablation; exact prior single-feature reproduction; independent CPU reconstruction of all edits and dynamic L28 input verification.",
+  "resources": "Reuse retained SPAR instance56698356; no rental or lifecycle action.",
+  "max_runtime_minutes": 10,
+  "conditions": [
+    {
+      "id": "native",
+      "removal_fractions": {}
+    },
+    {
+      "id": "zero_control",
+      "removal_fractions": {
+        "3": 0,
+        "28": 0
+      }
+    },
+    {
+      "id": "L3_only",
+      "removal_fractions": {
+        "3": 1,
+        "28": 0
+      }
+    },
+    {
+      "id": "L28_only",
+      "removal_fractions": {
+        "3": 0,
+        "28": 1
+      }
+    },
+    {
+      "id": "joint",
+      "removal_fractions": {
+        "3": 1,
+        "28": 1
+      }
+    }
+  ]
+}

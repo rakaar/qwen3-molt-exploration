@@ -1,0 +1,4577 @@
+{
+  "status": "complete",
+  "phase": "anchors",
+  "baseline": {
+    "target_log_probability": -0.006832569371908903,
+    "target_probability": 0.9931907653808594,
+    "target_log_odds": 4.982646942138672,
+    "CH_minus_CI": 5.0,
+    "greedy_token_id": 2149,
+    "greedy_token": "CH",
+    "top_tokens": [
+      {
+        "id": 2149,
+        "token": "CH",
+        "p": 0.9931907653808594
+      },
+      {
+        "id": 11237,
+        "token": "CI",
+        "p": 0.006692065857350826
+      },
+      {
+        "id": 3652,
+        "token": "Child",
+        "p": 9.545724606141448e-05
+      },
+      {
+        "id": 3048,
+        "token": "child",
+        "p": 8.878907465259545e-06
+      },
+      {
+        "id": 1143,
+        "token": "Ch",
+        "p": 6.914899131515995e-06
+      }
+    ]
+  },
+  "rows": [
+    {
+      "condition": {
+        "id": "zero_strength",
+        "kind": "native_mlp",
+        "layer": 3,
+        "site": "source",
+        "position": 27,
+        "fraction": 0
+      },
+      "target_log_probability": -0.006832569371908903,
+      "target_probability": 0.9931907653808594,
+      "target_log_odds": 4.982646942138672,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9931907653808594
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006692065857350826
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 9.545724606141448e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 8.878907465259545e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.914899131515995e-06
+        }
+      ],
+      "drop_log_odds": 0.0,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 0.0,
+        "actual_bf16_delta_norm": 0.0,
+        "native_mlp_norm": 8.339771270751953,
+        "other_positions_identical": true,
+        "file": "vectors/zero_strength.npz",
+        "sha256": "e63804eeba11b6cd73610150d511954debeef26a7af223d764dc753a9fc30987"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L0_source",
+        "kind": "native_mlp",
+        "layer": 0,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.005118954926729202,
+      "target_probability": 0.9948940873146057,
+      "target_log_odds": 5.272235870361328,
+      "CH_minus_CI": 5.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9948940873146057
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0040659052319824696
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0009072260581888258
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 5.799699647468515e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 5.118217450217344e-05
+        }
+      ],
+      "drop_log_odds": -0.28958892822265625,
+      "drop_CH_minus_CI": -0.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 6.954492568969727,
+        "actual_bf16_delta_norm": 6.954492568969727,
+        "native_mlp_norm": 6.954492568969727,
+        "other_positions_identical": true,
+        "file": "vectors/native_L0_source.npz",
+        "sha256": "b8b47a0d472b52142545c224d56bc47dad2ab4fa5678e3db0cfd7421abce1c90"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L0_prediction",
+        "kind": "native_mlp",
+        "layer": 0,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.014181548729538918,
+      "target_probability": 0.9859185814857483,
+      "target_log_odds": 4.248706817626953,
+      "CH_minus_CI": 4.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9859185814857483
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.014063372276723385
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 5.345897079678252e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 5.345897079678252e-06
+        },
+        {
+          "id": 6484,
+          "token": "CD",
+          "p": 1.9666458683786914e-06
+        }
+      ],
+      "drop_log_odds": 0.7339401245117188,
+      "drop_CH_minus_CI": 0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 4.006570339202881,
+        "actual_bf16_delta_norm": 4.006570339202881,
+        "native_mlp_norm": 4.006570339202881,
+        "other_positions_identical": true,
+        "file": "vectors/native_L0_prediction.npz",
+        "sha256": "9fbe86cebc38e75efb4842154fff5e94427c9c44b346bf985553d35532c4430a"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L1_source",
+        "kind": "native_mlp",
+        "layer": 1,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.011221629567444324,
+      "target_probability": 0.9888410568237305,
+      "target_log_odds": 4.484291076660156,
+      "CH_minus_CI": 4.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9888410568237305
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.010985035449266434
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00013828111696057022
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.4574722627003212e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.2862146832048893e-05
+        }
+      ],
+      "drop_log_odds": 0.4983558654785156,
+      "drop_CH_minus_CI": 0.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 2.94156551361084,
+        "actual_bf16_delta_norm": 2.94156551361084,
+        "native_mlp_norm": 2.94156551361084,
+        "other_positions_identical": true,
+        "file": "vectors/native_L1_source.npz",
+        "sha256": "29aeee4e282013fb80153c69d5289ad07d843df324b91e8635e582f4a853dd07"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L1_prediction",
+        "kind": "native_mlp",
+        "layer": 1,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.012902350164949894,
+      "target_probability": 0.9871805310249329,
+      "target_log_odds": 4.343879699707031,
+      "CH_minus_CI": 4.875,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9871805310249329
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.007537216879427433
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.00356032932177186
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0016817804425954819
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 8.825173608784098e-06
+        }
+      ],
+      "drop_log_odds": 0.6387672424316406,
+      "drop_CH_minus_CI": 0.125,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 2.1906914710998535,
+        "actual_bf16_delta_norm": 2.1906914710998535,
+        "native_mlp_norm": 2.1906914710998535,
+        "other_positions_identical": true,
+        "file": "vectors/native_L1_prediction.npz",
+        "sha256": "cee8abb7a33d41faca7da5c87a731261247c0a90cfd5fea05224afbbd697f23f"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L2_source",
+        "kind": "native_mlp",
+        "layer": 2,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.009258314035832882,
+      "target_probability": 0.9907844066619873,
+      "target_log_odds": 4.677593231201172,
+      "CH_minus_CI": 4.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9907844066619873
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.00857196468859911
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00048359716311097145
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.00013855290308129042
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.087590008974075e-06
+        }
+      ],
+      "drop_log_odds": 0.3050537109375,
+      "drop_CH_minus_CI": 0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 3.513794183731079,
+        "actual_bf16_delta_norm": 3.513794183731079,
+        "native_mlp_norm": 3.513794183731079,
+        "other_positions_identical": true,
+        "file": "vectors/native_L2_source.npz",
+        "sha256": "d414d68620f0b7b96eefcec1860e73233304bd0f606adec1ca57eb0787c01863"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L2_prediction",
+        "kind": "native_mlp",
+        "layer": 2,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.00678390683606267,
+      "target_probability": 0.9932391047477722,
+      "target_log_odds": 4.989810943603516,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9932391047477722
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006692391820251942
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 5.790056093246676e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 3.26652616422507e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.9812482605630066e-06
+        }
+      ],
+      "drop_log_odds": -0.00716400146484375,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 3.2919259071350098,
+        "actual_bf16_delta_norm": 3.2919259071350098,
+        "native_mlp_norm": 3.2919259071350098,
+        "other_positions_identical": true,
+        "file": "vectors/native_L2_prediction.npz",
+        "sha256": "c7d6893dc4ccff28857d97318b5d04a22b538b93bf9b4946093f0a13c67c028f"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L3_source",
+        "kind": "native_mlp",
+        "layer": 3,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.003550061723217368,
+      "target_probability": 0.9964562058448792,
+      "target_log_odds": 5.639039993286133,
+      "CH_minus_CI": 6.125,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9964562058448792
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0021797390654683113
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.0007076577749103308
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0006245057447813451
+        },
+        {
+          "id": 23913,
+          "token": "HI",
+          "p": 8.908091331250034e-06
+        }
+      ],
+      "drop_log_odds": -0.6563930511474609,
+      "drop_CH_minus_CI": -1.125,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 8.339771270751953,
+        "actual_bf16_delta_norm": 8.339771270751953,
+        "native_mlp_norm": 8.339771270751953,
+        "other_positions_identical": true,
+        "file": "vectors/native_L3_source.npz",
+        "sha256": "24382b886b070253f4df5b64de6a809589ebbba3a874aa3877b75dba3dfb9840"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L3_prediction",
+        "kind": "native_mlp",
+        "layer": 3,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.014241605065762997,
+      "target_probability": 0.9858593344688416,
+      "target_log_odds": 4.244464874267578,
+      "CH_minus_CI": 4.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9858593344688416
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.014062527567148209
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 2.3957210942171514e-05
+        },
+        {
+          "id": 331,
+          "token": "ch",
+          "p": 1.8657894543139264e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.6465533917653374e-05
+        }
+      ],
+      "drop_log_odds": 0.7381820678710938,
+      "drop_CH_minus_CI": 0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 4.155484199523926,
+        "actual_bf16_delta_norm": 4.155484199523926,
+        "native_mlp_norm": 4.155484199523926,
+        "other_positions_identical": true,
+        "file": "vectors/native_L3_prediction.npz",
+        "sha256": "f4f5b7dc739258ccb75c0f90627403af8ce72c1afab43f52e96ccca63d56a68e"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L4_source",
+        "kind": "native_mlp",
+        "layer": 4,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.030562521889805794,
+      "target_probability": 0.9698997735977173,
+      "target_log_odds": 3.472667694091797,
+      "CH_minus_CI": 3.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9698997735977173
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.029288431629538536
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.0005364364478737116
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00019734395027626306
+        },
+        {
+          "id": 331,
+          "token": "ch",
+          "p": 3.8859328924445435e-05
+        }
+      ],
+      "drop_log_odds": 1.509979248046875,
+      "drop_CH_minus_CI": 1.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 10.153382301330566,
+        "actual_bf16_delta_norm": 10.153382301330566,
+        "native_mlp_norm": 10.153382301330566,
+        "other_positions_identical": true,
+        "file": "vectors/native_L4_source.npz",
+        "sha256": "3f5573b6876edd2fc12961dd9ed6f78328bc1c179eabc72d7ddb0c6720a0b95b"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L4_prediction",
+        "kind": "native_mlp",
+        "layer": 4,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.45122021436691284,
+      "target_probability": 0.6368505954742432,
+      "target_log_odds": 0.5617198944091797,
+      "CH_minus_CI": 5.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.6368505954742432
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.3408815264701843
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.013217414729297161
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0033418857492506504
+        },
+        {
+          "id": 331,
+          "token": "ch",
+          "p": 0.002602663356810808
+        }
+      ],
+      "drop_log_odds": 4.420927047729492,
+      "drop_CH_minus_CI": -0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 6.218985557556152,
+        "actual_bf16_delta_norm": 6.218985557556152,
+        "native_mlp_norm": 6.218985557556152,
+        "other_positions_identical": true,
+        "file": "vectors/native_L4_prediction.npz",
+        "sha256": "52a9841fbc96ac6e031302c21bdea559c042880f31d6acbe14890885aa89eeb6"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L5_source",
+        "kind": "native_mlp",
+        "layer": 5,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.01541544683277607,
+      "target_probability": 0.9847027659416199,
+      "target_log_odds": 4.164665222167969,
+      "CH_minus_CI": 7.125,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9847027659416199
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.00851934589445591
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.005855255294591188
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0007924226811155677
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.504604243673384e-05
+        }
+      ],
+      "drop_log_odds": 0.8179817199707031,
+      "drop_CH_minus_CI": -2.125,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 14.644296646118164,
+        "actual_bf16_delta_norm": 14.644296646118164,
+        "native_mlp_norm": 14.644296646118164,
+        "other_positions_identical": true,
+        "file": "vectors/native_L5_source.npz",
+        "sha256": "56b2bea32a5e21e689ed1805608b4dcd2646d323ae425d9f96b6998296efb763"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L5_prediction",
+        "kind": "native_mlp",
+        "layer": 5,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.006723045837134123,
+      "target_probability": 0.9932994842529297,
+      "target_log_odds": 4.998863220214844,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9932994842529297
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006692800205200911
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 2.544125891290605e-06
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 1.3617725471704034e-06
+        },
+        {
+          "id": 3140,
+          "token": "CL",
+          "p": 7.289042969205184e-07
+        }
+      ],
+      "drop_log_odds": -0.016216278076171875,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 7.2231903076171875,
+        "actual_bf16_delta_norm": 7.2231903076171875,
+        "native_mlp_norm": 7.2231903076171875,
+        "other_positions_identical": true,
+        "file": "vectors/native_L5_prediction.npz",
+        "sha256": "3d273f917794191b476d7a2f6b7dcc1b6f7944f5c7161ebd9fe2c523c75c3a1b"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L6_source",
+        "kind": "native_mlp",
+        "layer": 6,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.005430114455521107,
+      "target_probability": 0.9945845603942871,
+      "target_log_odds": 5.21307373046875,
+      "CH_minus_CI": 5.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9945845603942871
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.005219100508838892
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00015760317910462618
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 2.7387326554162428e-05
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 3.7064714888401795e-06
+        }
+      ],
+      "drop_log_odds": -0.23042678833007812,
+      "drop_CH_minus_CI": -0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 10.731576919555664,
+        "actual_bf16_delta_norm": 10.731576919555664,
+        "native_mlp_norm": 10.731576919555664,
+        "other_positions_identical": true,
+        "file": "vectors/native_L6_source.npz",
+        "sha256": "525588c0d86b1b2775715874605a8c1ae81bef94ac5cd1e89eade00bba1d2c03"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L6_prediction",
+        "kind": "native_mlp",
+        "layer": 6,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.002485878299921751,
+      "target_probability": 0.9975172281265259,
+      "target_log_odds": 5.995906829833984,
+      "CH_minus_CI": 6.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9975172281265259
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0024725983384996653
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 4.773235104948981e-06
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 1.989780457734014e-06
+        },
+        {
+          "id": 36787,
+          "token": "CHA",
+          "p": 7.319993642340705e-07
+        }
+      ],
+      "drop_log_odds": -1.0132598876953125,
+      "drop_CH_minus_CI": -1.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 10.197988510131836,
+        "actual_bf16_delta_norm": 10.197988510131836,
+        "native_mlp_norm": 10.197988510131836,
+        "other_positions_identical": true,
+        "file": "vectors/native_L6_prediction.npz",
+        "sha256": "f80687d3d35adbdd25aad95f7b8e9dc8c6cd8ef12309b4eb30d8cd46232c3329"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L7_source",
+        "kind": "native_mlp",
+        "layer": 7,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.04928431659936905,
+      "target_probability": 0.9519104361534119,
+      "target_log_odds": 2.9854049682617188,
+      "CH_minus_CI": 3.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9519104361534119
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.047392837703228
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00036184865166433156
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.0002818081702571362
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.80153929250082e-05
+        }
+      ],
+      "drop_log_odds": 1.9972419738769531,
+      "drop_CH_minus_CI": 2.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 9.907146453857422,
+        "actual_bf16_delta_norm": 9.907146453857422,
+        "native_mlp_norm": 9.907146453857422,
+        "other_positions_identical": true,
+        "file": "vectors/native_L7_source.npz",
+        "sha256": "e690e148ad411c1b3b73b4078dab92da22d6dd901f164a04c771c9f934e02776"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L7_prediction",
+        "kind": "native_mlp",
+        "layer": 7,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.03218510374426842,
+      "target_probability": 0.9683273434638977,
+      "target_log_odds": 3.420116424560547,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9683273434638977
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.013812447898089886
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0107571454718709
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006524538155645132
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 0.0004170997708570212
+        }
+      ],
+      "drop_log_odds": 1.562530517578125,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 10.517538070678711,
+        "actual_bf16_delta_norm": 10.517538070678711,
+        "native_mlp_norm": 10.517538070678711,
+        "other_positions_identical": true,
+        "file": "vectors/native_L7_prediction.npz",
+        "sha256": "885c8da6b5aabb0b875f15509f9daf44a491d179c2e9d853182147b084707627"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L8_source",
+        "kind": "native_mlp",
+        "layer": 8,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.003921676892787218,
+      "target_probability": 0.9960860013961792,
+      "target_log_odds": 5.539268493652344,
+      "CH_minus_CI": 5.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9960860013961792
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0031703240238130093
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0005509196780622005
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.00017885743000078946
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 4.766389338328736e-06
+        }
+      ],
+      "drop_log_odds": -0.5566215515136719,
+      "drop_CH_minus_CI": -0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 11.205904006958008,
+        "actual_bf16_delta_norm": 11.205904006958008,
+        "native_mlp_norm": 11.205904006958008,
+        "other_positions_identical": true,
+        "file": "vectors/native_L8_source.npz",
+        "sha256": "da8b7001d117b79e88dde13c1f2eb5ee20ec6a468e8da9d8d4d9e8fa1f4a6a38"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L8_prediction",
+        "kind": "native_mlp",
+        "layer": 8,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -4.149967193603516,
+      "target_probability": 0.015764933079481125,
+      "target_log_odds": -4.134075164794922,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.9753419160842896
+        },
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.015764933079481125
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.008438360877335072
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 0.00017513259081169963
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.00010622329136822373
+        }
+      ],
+      "drop_log_odds": 9.116722106933594,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 13.226120948791504,
+        "actual_bf16_delta_norm": 13.226120948791504,
+        "native_mlp_norm": 13.226120948791504,
+        "other_positions_identical": true,
+        "file": "vectors/native_L8_prediction.npz",
+        "sha256": "12aaafe37c45678fd89ffc07c61d633f6a0acfc7da8b72b9d097a72ac8689061"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L9_source",
+        "kind": "native_mlp",
+        "layer": 9,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.014798159711062908,
+      "target_probability": 0.9853107333183289,
+      "target_log_odds": 4.205844879150391,
+      "CH_minus_CI": 4.875,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9853107333183289
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.00752294110134244
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.003553585382178426
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.003553585382178426
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 3.947677032556385e-05
+        }
+      ],
+      "drop_log_odds": 0.7768020629882812,
+      "drop_CH_minus_CI": 0.125,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 12.179716110229492,
+        "actual_bf16_delta_norm": 12.179716110229492,
+        "native_mlp_norm": 12.179716110229492,
+        "other_positions_identical": true,
+        "file": "vectors/native_L9_source.npz",
+        "sha256": "956ead84c3c313f80ce926ea8fe232b1a75158847f6e4fc8509e964e2d021d48"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L9_prediction",
+        "kind": "native_mlp",
+        "layer": 9,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.009515408426523209,
+      "target_probability": 0.9905297160148621,
+      "target_log_odds": 4.650089263916016,
+      "CH_minus_CI": 5.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9905297160148621
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.005197823513299227
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.004048069007694721
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0001222410355694592
+        },
+        {
+          "id": 331,
+          "token": "ch",
+          "p": 6.543091149069369e-05
+        }
+      ],
+      "drop_log_odds": 0.33255767822265625,
+      "drop_CH_minus_CI": -0.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 16.632278442382812,
+        "actual_bf16_delta_norm": 16.632278442382812,
+        "native_mlp_norm": 16.632278442382812,
+        "other_positions_identical": true,
+        "file": "vectors/native_L9_prediction.npz",
+        "sha256": "fb93eb92813403a894715a29479419fd42ddde78f490ead83f36170b822cda74"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L10_source",
+        "kind": "native_mlp",
+        "layer": 10,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.007617592345923185,
+      "target_probability": 0.9924113154411316,
+      "target_log_odds": 4.873466491699219,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9924113154411316
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006686815991997719
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0006219707429409027
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.00025927586830221117
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 7.829452442820184e-06
+        }
+      ],
+      "drop_log_odds": 0.10918045043945312,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 12.32008171081543,
+        "actual_bf16_delta_norm": 12.32008171081543,
+        "native_mlp_norm": 12.32008171081543,
+        "other_positions_identical": true,
+        "file": "vectors/native_L10_source.npz",
+        "sha256": "a273f4a6e9b4ac5e5ec224b10824419b2406cf13645e7e2372fa123206c1c396"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L10_prediction",
+        "kind": "native_mlp",
+        "layer": 10,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -1.914628505706787,
+      "target_probability": 0.14739657938480377,
+      "target_log_odds": -1.7551689147949219,
+      "CH_minus_CI": 6.625,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.8482087850570679
+        },
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.14739657938480377
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.003927986137568951
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 0.0002216016873717308
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.00019556281040422618
+        }
+      ],
+      "drop_log_odds": 6.737815856933594,
+      "drop_CH_minus_CI": -1.625,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 16.7403507232666,
+        "actual_bf16_delta_norm": 16.7403507232666,
+        "native_mlp_norm": 16.7403507232666,
+        "other_positions_identical": true,
+        "file": "vectors/native_L10_prediction.npz",
+        "sha256": "ab83c6a90ac4f290930af98ba3b73b46edad58869cd559c6ce7dcac3ee9b7c98"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L11_source",
+        "kind": "native_mlp",
+        "layer": 11,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.004222050774842501,
+      "target_probability": 0.9957869052886963,
+      "target_log_odds": 5.4653167724609375,
+      "CH_minus_CI": 5.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9957869052886963
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.004069554153829813
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00012288989091757685
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.143053850682918e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 4.7649573389207944e-06
+        }
+      ],
+      "drop_log_odds": -0.4826698303222656,
+      "drop_CH_minus_CI": -0.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 11.927255630493164,
+        "actual_bf16_delta_norm": 11.927255630493164,
+        "native_mlp_norm": 11.927255630493164,
+        "other_positions_identical": true,
+        "file": "vectors/native_L11_source.npz",
+        "sha256": "faf9dae4d743dfcad04c0553db08f744ee3192d67056750d12f12acb21950261"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L11_prediction",
+        "kind": "native_mlp",
+        "layer": 11,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.9034579992294312,
+      "target_probability": 0.4051662087440491,
+      "target_log_odds": -0.3839836120605469,
+      "CH_minus_CI": 5.875,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.5202436447143555
+        },
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.4051662087440491
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.062134236097335815
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 0.006548900622874498
+        },
+        {
+          "id": 17531,
+          "token": ".child",
+          "p": 0.0030934817623347044
+        }
+      ],
+      "drop_log_odds": 5.366630554199219,
+      "drop_CH_minus_CI": -0.875,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 15.342575073242188,
+        "actual_bf16_delta_norm": 15.342575073242188,
+        "native_mlp_norm": 15.342575073242188,
+        "other_positions_identical": true,
+        "file": "vectors/native_L11_prediction.npz",
+        "sha256": "f18c16103d500c62ad63fd0fec0330a2ec2866f67c80f6a4ec5445878c89c568"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L12_source",
+        "kind": "native_mlp",
+        "layer": 12,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.00874534621834755,
+      "target_probability": 0.9912927746772766,
+      "target_log_odds": 4.7348480224609375,
+      "CH_minus_CI": 4.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9912927746772766
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.008576364256441593
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00010796049173222855
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.0041890163847711e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 5.375036380428355e-06
+        }
+      ],
+      "drop_log_odds": 0.24779891967773438,
+      "drop_CH_minus_CI": 0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 11.5794677734375,
+        "actual_bf16_delta_norm": 11.5794677734375,
+        "native_mlp_norm": 11.5794677734375,
+        "other_positions_identical": true,
+        "file": "vectors/native_L12_source.npz",
+        "sha256": "fb816f4d659ea4de2438ef5008f5020c257d4a46073bdf7cb38a37f40a671cc7"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L12_prediction",
+        "kind": "native_mlp",
+        "layer": 12,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -14.877598762512207,
+      "target_probability": 3.4573309903862537e-07,
+      "target_log_odds": -14.87759780883789,
+      "CH_minus_CI": 4.25,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.9974042177200317
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0024723177775740623
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 8.459809760097414e-05
+        },
+        {
+          "id": 17531,
+          "token": ".child",
+          "p": 3.526573345880024e-05
+        },
+        {
+          "id": 17794,
+          "token": "(child",
+          "p": 1.5494682656935765e-06
+        }
+      ],
+      "drop_log_odds": 19.860244750976562,
+      "drop_CH_minus_CI": 0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 16.344465255737305,
+        "actual_bf16_delta_norm": 16.344465255737305,
+        "native_mlp_norm": 16.344465255737305,
+        "other_positions_identical": true,
+        "file": "vectors/native_L12_prediction.npz",
+        "sha256": "4f9ce5c8621553d65d6a33f01792b1ecce6b4cad148ec24d1c0d4033821e80ad"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L13_source",
+        "kind": "native_mlp",
+        "layer": 13,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.009241541847586632,
+      "target_probability": 0.9908010363578796,
+      "target_log_odds": 4.679424285888672,
+      "CH_minus_CI": 4.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9908010363578796
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0085721081122756
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0004836052539758384
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.000107906962512061
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 2.407730062259361e-05
+        }
+      ],
+      "drop_log_odds": 0.30322265625,
+      "drop_CH_minus_CI": 0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 13.133026123046875,
+        "actual_bf16_delta_norm": 13.133026123046875,
+        "native_mlp_norm": 13.133026123046875,
+        "other_positions_identical": true,
+        "file": "vectors/native_L13_source.npz",
+        "sha256": "82993fa742626e6484fede56579496c362f2a7a7491edcc732e0ed2e2c2f7eb7"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L13_prediction",
+        "kind": "native_mlp",
+        "layer": 13,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -10.750515937805176,
+      "target_probability": 2.1434347218018956e-05,
+      "target_log_odds": -10.750492095947266,
+      "CH_minus_CI": 7.125,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.9994845390319824
+        },
+        {
+          "id": 17531,
+          "token": ".child",
+          "p": 0.00017946759180631489
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00017946759180631489
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 0.00010885259689530358
+        },
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 2.1434347218018956e-05
+        }
+      ],
+      "drop_log_odds": 15.733139038085938,
+      "drop_CH_minus_CI": -2.125,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 19.616838455200195,
+        "actual_bf16_delta_norm": 19.616838455200195,
+        "native_mlp_norm": 19.616838455200195,
+        "other_positions_identical": true,
+        "file": "vectors/native_L13_prediction.npz",
+        "sha256": "27c5c37246365b890c1eee0ea7c1aa1f1268bc40d18229fccc101e0346f50b72"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L14_source",
+        "kind": "native_mlp",
+        "layer": 14,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.007122246082872152,
+      "target_probability": 0.9929030537605286,
+      "target_log_odds": 4.9409637451171875,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9929030537605286
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006690129172056913
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0002939437981694937
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 9.542956831865013e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.912895059940638e-06
+        }
+      ],
+      "drop_log_odds": 0.041683197021484375,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 11.543303489685059,
+        "actual_bf16_delta_norm": 11.543303489685059,
+        "native_mlp_norm": 11.543303489685059,
+        "other_positions_identical": true,
+        "file": "vectors/native_L14_source.npz",
+        "sha256": "906a275921e7e8b9e3b47311b578a982d92709e8dc8cd3f5510493cdc655b5a2"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L14_prediction",
+        "kind": "native_mlp",
+        "layer": 14,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.7658214569091797,
+      "target_probability": 0.46495184302330017,
+      "target_log_odds": -0.14042282104492188,
+      "CH_minus_CI": 4.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.46495184302330017
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.46495184302330017
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.06292438507080078
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006632181815803051
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 0.0002571576042100787
+        }
+      ],
+      "drop_log_odds": 5.123069763183594,
+      "drop_CH_minus_CI": 0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 22.012203216552734,
+        "actual_bf16_delta_norm": 22.012203216552734,
+        "native_mlp_norm": 22.012203216552734,
+        "other_positions_identical": true,
+        "file": "vectors/native_L14_prediction.npz",
+        "sha256": "208990db57848b2936212c5f944a9aea35ba80adf02425620f1a4eb3d8f7fcd6"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L15_source",
+        "kind": "native_mlp",
+        "layer": 15,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.008728447370231152,
+      "target_probability": 0.9913095235824585,
+      "target_log_odds": 4.736808776855469,
+      "CH_minus_CI": 4.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9913095235824585
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.00857650674879551
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 9.527643123874441e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 7.82076585892355e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 5.375128694140585e-06
+        }
+      ],
+      "drop_log_odds": 0.24583816528320312,
+      "drop_CH_minus_CI": 0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 13.331254959106445,
+        "actual_bf16_delta_norm": 13.331254959106445,
+        "native_mlp_norm": 13.331254959106445,
+        "other_positions_identical": true,
+        "file": "vectors/native_L15_source.npz",
+        "sha256": "60f0d8f5e755ccd8d96fbd8a4f6c308cb6437e5dcb027a2fba679a173c038670"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L15_prediction",
+        "kind": "native_mlp",
+        "layer": 15,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.5220816135406494,
+      "target_probability": 0.5932843089103699,
+      "target_log_odds": 0.3775596618652344,
+      "CH_minus_CI": 3.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.5932843089103699
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.3598451316356659
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.029537886381149292
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.013952712528407574
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 0.001297804294154048
+        }
+      ],
+      "drop_log_odds": 4.6050872802734375,
+      "drop_CH_minus_CI": 1.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 18.485769271850586,
+        "actual_bf16_delta_norm": 18.485769271850586,
+        "native_mlp_norm": 18.485769271850586,
+        "other_positions_identical": true,
+        "file": "vectors/native_L15_prediction.npz",
+        "sha256": "0f7029ddbea3f9989aece02f4c451c23fa6e4a37fdf8cc5f0a04ce640b52a220"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L16_source",
+        "kind": "native_mlp",
+        "layer": 16,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.004015004262328148,
+      "target_probability": 0.9959930181503296,
+      "target_log_odds": 5.515716552734375,
+      "CH_minus_CI": 5.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9959930181503296
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0031700278632342815
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0007073287852108479
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.00010847238445421681
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 8.903954949346371e-06
+        }
+      ],
+      "drop_log_odds": -0.5330696105957031,
+      "drop_CH_minus_CI": -0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 13.301146507263184,
+        "actual_bf16_delta_norm": 13.301146507263184,
+        "native_mlp_norm": 13.301146507263184,
+        "other_positions_identical": true,
+        "file": "vectors/native_L16_source.npz",
+        "sha256": "d00cbb6f62f58b385d102046910468897f5cd8bfd40fe6cff6d1afe642e40f9d"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L16_prediction",
+        "kind": "native_mlp",
+        "layer": 16,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.014212459325790405,
+      "target_probability": 0.9858880639076233,
+      "target_log_odds": 4.246522903442383,
+      "CH_minus_CI": 4.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9858880639076233
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.014062936417758465
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.8658427507034503e-05
+        },
+        {
+          "id": 60619,
+          "token": "Ci",
+          "p": 5.345728823158424e-06
+        },
+        {
+          "id": 6484,
+          "token": "CD",
+          "p": 5.345728823158424e-06
+        }
+      ],
+      "drop_log_odds": 0.7361240386962891,
+      "drop_CH_minus_CI": 0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 17.614730834960938,
+        "actual_bf16_delta_norm": 17.614730834960938,
+        "native_mlp_norm": 17.614730834960938,
+        "other_positions_identical": true,
+        "file": "vectors/native_L16_prediction.npz",
+        "sha256": "13ab9b140f22c9a28123c7fce7118b4e0503debb25e7f2a686b3f946c9cc75f6"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L17_source",
+        "kind": "native_mlp",
+        "layer": 17,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.004220982547849417,
+      "target_probability": 0.9957879781723022,
+      "target_log_odds": 5.465583801269531,
+      "CH_minus_CI": 5.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9957879781723022
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0040695578791201115
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00010845003998838365
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.4677116269012913e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.2952509678143542e-05
+        }
+      ],
+      "drop_log_odds": -0.4829368591308594,
+      "drop_CH_minus_CI": -0.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 16.34596824645996,
+        "actual_bf16_delta_norm": 16.34596824645996,
+        "native_mlp_norm": 16.34596824645996,
+        "other_positions_identical": true,
+        "file": "vectors/native_L17_source.npz",
+        "sha256": "466f0b856ec9c6c7e60d5eac775ac300ec9acb676cfbe40e9c70e6584fabc2df"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L17_prediction",
+        "kind": "native_mlp",
+        "layer": 17,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.0068062846548855305,
+      "target_probability": 0.9932168126106262,
+      "target_log_odds": 4.986503601074219,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9932168126106262
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006692241877317429
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 8.424289262620732e-05
+        },
+        {
+          "id": 23913,
+          "token": "HI",
+          "p": 2.5439148885197937e-06
+        },
+        {
+          "id": 56635,
+          "token": "Chi",
+          "p": 1.5429624227181193e-06
+        }
+      ],
+      "drop_log_odds": -0.003856658935546875,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 19.289173126220703,
+        "actual_bf16_delta_norm": 19.289173126220703,
+        "native_mlp_norm": 19.289173126220703,
+        "other_positions_identical": true,
+        "file": "vectors/native_L17_prediction.npz",
+        "sha256": "9ac53f9dd6ffdb69f222dc0d9af47a0e674f8318bb4cb41bfa17d3ade8f26947"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L18_source",
+        "kind": "native_mlp",
+        "layer": 18,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.005469595547765493,
+      "target_probability": 0.9945453405380249,
+      "target_log_odds": 5.205814361572266,
+      "CH_minus_CI": 5.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9945453405380249
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.005218894220888615
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00020235856936778873
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 2.13284365599975e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 5.392672846937785e-06
+        }
+      ],
+      "drop_log_odds": -0.22316741943359375,
+      "drop_CH_minus_CI": -0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 18.100379943847656,
+        "actual_bf16_delta_norm": 18.100379943847656,
+        "native_mlp_norm": 18.100379943847656,
+        "other_positions_identical": true,
+        "file": "vectors/native_L18_source.npz",
+        "sha256": "491972d6f98fa30c6bce1ddc13a7ad21e203778a0775f4cffea6c3a9fc84cb71"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L18_prediction",
+        "kind": "native_mlp",
+        "layer": 18,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -5.03532075881958,
+      "target_probability": 0.006504111457616091,
+      "target_log_odds": -5.028797149658203,
+      "CH_minus_CI": 5.375,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.9652958512306213
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.01376920472830534
+        },
+        {
+          "id": 17531,
+          "token": ".child",
+          "p": 0.008351444266736507
+        },
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.006504111457616091
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 0.003944943193346262
+        }
+      ],
+      "drop_log_odds": 10.011444091796875,
+      "drop_CH_minus_CI": -0.375,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 17.96983528137207,
+        "actual_bf16_delta_norm": 17.96983528137207,
+        "native_mlp_norm": 17.96983528137207,
+        "other_positions_identical": true,
+        "file": "vectors/native_L18_prediction.npz",
+        "sha256": "9066a4fcdea2d9912c85e51ab654d4c2760599c350bb871f96c32e828c8d6bc1"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L19_source",
+        "kind": "native_mlp",
+        "layer": 19,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.018368147313594818,
+      "target_probability": 0.9817995429039001,
+      "target_log_odds": 3.9879493713378906,
+      "CH_minus_CI": 4.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9817995429039001
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.01798228546977043
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00015557730512227863
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 3.47139903169591e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.6397727449657395e-05
+        }
+      ],
+      "drop_log_odds": 0.9946975708007812,
+      "drop_CH_minus_CI": 1.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 17.581817626953125,
+        "actual_bf16_delta_norm": 17.581817626953125,
+        "native_mlp_norm": 17.581817626953125,
+        "other_positions_identical": true,
+        "file": "vectors/native_L19_source.npz",
+        "sha256": "3e44ba0e4cd15a5d11e7eee7fde0cee27cfe6745100930224a1cb4ae5e20801d"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L19_prediction",
+        "kind": "native_mlp",
+        "layer": 19,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -18.375045776367188,
+      "target_probability": 1.0466923328067423e-08,
+      "target_log_odds": -18.375045776367188,
+      "CH_minus_CI": 9.25,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.9999535083770752
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 3.535584983183071e-05
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 6.143925020296592e-06
+        },
+        {
+          "id": 17531,
+          "token": ".child",
+          "p": 3.7264790080371313e-06
+        },
+        {
+          "id": 17794,
+          "token": "(child",
+          "p": 4.4506444396574807e-07
+        }
+      ],
+      "drop_log_odds": 23.35769271850586,
+      "drop_CH_minus_CI": -4.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 19.02131462097168,
+        "actual_bf16_delta_norm": 19.02131462097168,
+        "native_mlp_norm": 19.02131462097168,
+        "other_positions_identical": true,
+        "file": "vectors/native_L19_prediction.npz",
+        "sha256": "4b10e3dfbee8726b7dd706691fe9ab8fb5ef688847120c80779633afe5f73be9"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L20_source",
+        "kind": "native_mlp",
+        "layer": 20,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.011140643619000912,
+      "target_probability": 0.9889211654663086,
+      "target_log_odds": 4.4915771484375,
+      "CH_minus_CI": 4.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9889211654663086
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.010985920205712318
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 7.402254414046183e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 6.885169568704441e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 3.685365754790837e-06
+        }
+      ],
+      "drop_log_odds": 0.4910697937011719,
+      "drop_CH_minus_CI": 0.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 16.44660758972168,
+        "actual_bf16_delta_norm": 16.44660758972168,
+        "native_mlp_norm": 16.44660758972168,
+        "other_positions_identical": true,
+        "file": "vectors/native_L20_source.npz",
+        "sha256": "27a4d80ff48b70387f9da37e462e799b35e93027a5cf2daed12653d283688f3d"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L20_prediction",
+        "kind": "native_mlp",
+        "layer": 20,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -11.26237964630127,
+      "target_probability": 1.2847264770243783e-05,
+      "target_log_odds": -11.262367248535156,
+      "CH_minus_CI": 3.75,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.6788330674171448
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.3206580579280853
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 0.00029240240110084414
+        },
+        {
+          "id": 17531,
+          "token": ".child",
+          "p": 0.00017735101573634893
+        },
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 1.2847264770243783e-05
+        }
+      ],
+      "drop_log_odds": 16.245014190673828,
+      "drop_CH_minus_CI": 1.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 21.26477813720703,
+        "actual_bf16_delta_norm": 21.26477813720703,
+        "native_mlp_norm": 21.26477813720703,
+        "other_positions_identical": true,
+        "file": "vectors/native_L20_prediction.npz",
+        "sha256": "ba0c3e0f79f36dac9bf723fb3a859049aaeca3e2bf4b4ad42a9ff4b1d6dc5bc3"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L21_source",
+        "kind": "native_mlp",
+        "layer": 21,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.002033310942351818,
+      "target_probability": 0.9979687333106995,
+      "target_log_odds": 6.197145462036133,
+      "CH_minus_CI": 6.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9979687333106995
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0019265329465270042
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 5.1340368372621015e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 3.528568777255714e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 8.921617336454801e-06
+        }
+      ],
+      "drop_log_odds": -1.214498519897461,
+      "drop_CH_minus_CI": -1.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 17.559730529785156,
+        "actual_bf16_delta_norm": 17.559730529785156,
+        "native_mlp_norm": 17.559730529785156,
+        "other_positions_identical": true,
+        "file": "vectors/native_L21_source.npz",
+        "sha256": "828f4f4051b293f8723b03217098ed82b9f1dad051d17b41bc1b5709ea2f3c25"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L21_prediction",
+        "kind": "native_mlp",
+        "layer": 21,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -12.910563468933105,
+      "target_probability": 2.4718012809898937e-06,
+      "target_log_odds": -12.910560607910156,
+      "CH_minus_CI": 6.25,
+      "greedy_token_id": 3048,
+      "greedy_token": "child",
+      "top_tokens": [
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.8516635894775391
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.1479969322681427
+        },
+        {
+          "id": 1682,
+          "token": " child",
+          "p": 0.0001732866367092356
+        },
+        {
+          "id": 17531,
+          "token": ".child",
+          "p": 0.00010510365973459557
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 3.8665475585730746e-05
+        }
+      ],
+      "drop_log_odds": 17.893207550048828,
+      "drop_CH_minus_CI": -1.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 26.858028411865234,
+        "actual_bf16_delta_norm": 26.858028411865234,
+        "native_mlp_norm": 26.858028411865234,
+        "other_positions_identical": true,
+        "file": "vectors/native_L21_prediction.npz",
+        "sha256": "a511a7e5c46efbe1732b07ae77ee2fea6e4b7ccd97d25c135f0dfe838315d601"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L22_source",
+        "kind": "native_mlp",
+        "layer": 22,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.0020077326335012913,
+      "target_probability": 0.9979943037033081,
+      "target_log_odds": 6.209724426269531,
+      "CH_minus_CI": 6.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9979943037033081
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0019265817245468497
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 5.817775672767311e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.4709639799548313e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 3.2821644708747044e-06
+        }
+      ],
+      "drop_log_odds": -1.2270774841308594,
+      "drop_CH_minus_CI": -1.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 24.838363647460938,
+        "actual_bf16_delta_norm": 24.838363647460938,
+        "native_mlp_norm": 24.838363647460938,
+        "other_positions_identical": true,
+        "file": "vectors/native_L22_source.npz",
+        "sha256": "29ba317f24b8d19547c8a89a34aa5c1fddfcf90483d542ae0b11412415ea49b6"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L22_prediction",
+        "kind": "native_mlp",
+        "layer": 22,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -4.3912672996521,
+      "target_probability": 0.012385023757815361,
+      "target_log_odds": -4.378803253173828,
+      "CH_minus_CI": 9.5,
+      "greedy_token_id": 34,
+      "greedy_token": "C",
+      "top_tokens": [
+        {
+          "id": 34,
+          "token": "C",
+          "p": 0.9838641285896301
+        },
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.012385023757815361
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.003548368811607361
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 8.34495949675329e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 5.7354012824362144e-05
+        }
+      ],
+      "drop_log_odds": 9.3614501953125,
+      "drop_CH_minus_CI": -4.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 29.180192947387695,
+        "actual_bf16_delta_norm": 29.180192947387695,
+        "native_mlp_norm": 29.180192947387695,
+        "other_positions_identical": true,
+        "file": "vectors/native_L22_prediction.npz",
+        "sha256": "e7eb2cf99cafc3be9cc7456fbca2508d26cb63eaeebbe5b0569cacf569455eb1"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L23_source",
+        "kind": "native_mlp",
+        "layer": 23,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.001557924086228013,
+      "target_probability": 0.9984432458877563,
+      "target_log_odds": 6.463665008544922,
+      "CH_minus_CI": 6.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9984432458877563
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0015010989736765623
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 3.530244794092141e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.2987044101464562e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 3.720850372701534e-06
+        }
+      ],
+      "drop_log_odds": -1.48101806640625,
+      "drop_CH_minus_CI": -1.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 26.775714874267578,
+        "actual_bf16_delta_norm": 26.775714874267578,
+        "native_mlp_norm": 26.775714874267578,
+        "other_positions_identical": true,
+        "file": "vectors/native_L23_source.npz",
+        "sha256": "38bbfe405aefb19d2d29b84ffc14d539e09a3c2ba47655949c5edb082f79c51a"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L23_prediction",
+        "kind": "native_mlp",
+        "layer": 23,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.026490509510040283,
+      "target_probability": 0.9738572835922241,
+      "target_log_odds": 3.617694854736328,
+      "CH_minus_CI": 6.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9738572835922241
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.02290293015539646
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.001879986491985619
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0011402693344280124
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 0.00019814922416117042
+        }
+      ],
+      "drop_log_odds": 1.3649520874023438,
+      "drop_CH_minus_CI": -1.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 32.99412155151367,
+        "actual_bf16_delta_norm": 32.99412155151367,
+        "native_mlp_norm": 32.99412155151367,
+        "other_positions_identical": true,
+        "file": "vectors/native_L23_prediction.npz",
+        "sha256": "99e522834e6372f27f7631af403bbae8cf6826d107a9b1e7290e49556a24c5e4"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L24_source",
+        "kind": "native_mlp",
+        "layer": 24,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.005288420710712671,
+      "target_probability": 0.9947255253791809,
+      "target_log_odds": 5.2395782470703125,
+      "CH_minus_CI": 5.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9947255253791809
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.005219839513301849
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 3.985398871009238e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.925584330019774e-06
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 4.200579041935271e-06
+        }
+      ],
+      "drop_log_odds": -0.2569313049316406,
+      "drop_CH_minus_CI": -0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 31.011430740356445,
+        "actual_bf16_delta_norm": 31.011430740356445,
+        "native_mlp_norm": 31.011430740356445,
+        "other_positions_identical": true,
+        "file": "vectors/native_L24_source.npz",
+        "sha256": "40be463ccd0bcec49331cf114052b2a9cb16a1e4e3ce67e24f1b3949bb3a9e8b"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L24_prediction",
+        "kind": "native_mlp",
+        "layer": 24,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.22199943661689758,
+      "target_probability": 0.8009158968925476,
+      "target_log_odds": 1.39202880859375,
+      "CH_minus_CI": 9.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.8009158968925476
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.17870847880840302
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 0.012945596128702164
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.006929277908056974
+        },
+        {
+          "id": 34,
+          "token": "C",
+          "p": 0.0003449884243309498
+        }
+      ],
+      "drop_log_odds": 3.590618133544922,
+      "drop_CH_minus_CI": -4.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 35.69257736206055,
+        "actual_bf16_delta_norm": 35.69257736206055,
+        "native_mlp_norm": 35.69257736206055,
+        "other_positions_identical": true,
+        "file": "vectors/native_L24_prediction.npz",
+        "sha256": "285e541420ef649a529291a51decbb884aecbaace113990d1c01742744326d03"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L25_source",
+        "kind": "native_mlp",
+        "layer": 25,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.02340255305171013,
+      "target_probability": 0.9768691658973694,
+      "target_log_odds": 3.7431869506835938,
+      "CH_minus_CI": 3.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9768691658973694
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.022973764687776566
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0001366070209769532
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 4.674435331253335e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 4.125174655200681e-06
+        }
+      ],
+      "drop_log_odds": 1.2394599914550781,
+      "drop_CH_minus_CI": 1.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 43.42076110839844,
+        "actual_bf16_delta_norm": 43.42076110839844,
+        "native_mlp_norm": 43.42076110839844,
+        "other_positions_identical": true,
+        "file": "vectors/native_L25_source.npz",
+        "sha256": "981640cd16a9faecd3bc16b2b6001b117e26a7fa4062e43ceb68d81e490c2f12"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L25_prediction",
+        "kind": "native_mlp",
+        "layer": 25,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.005662828218191862,
+      "target_probability": 0.994353175163269,
+      "target_log_odds": 5.171003341674805,
+      "CH_minus_CI": 5.375,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.994353175163269
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.004604768473654985
+        },
+        {
+          "id": 331,
+          "token": "ch",
+          "p": 0.0007061641081236303
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.00029437299235723913
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 1.6607387806288898e-05
+        }
+      ],
+      "drop_log_odds": -0.1883563995361328,
+      "drop_CH_minus_CI": -0.375,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 32.57378005981445,
+        "actual_bf16_delta_norm": 32.57378005981445,
+        "native_mlp_norm": 32.57378005981445,
+        "other_positions_identical": true,
+        "file": "vectors/native_L25_prediction.npz",
+        "sha256": "eafd77d2a97e984de16935d447b7572b5ed0d26c8c542e1b71f93260a3da733c"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L26_source",
+        "kind": "native_mlp",
+        "layer": 26,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.0032450894359499216,
+      "target_probability": 0.9967601895332336,
+      "target_log_odds": 5.728969573974609,
+      "CH_minus_CI": 5.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9967601895332336
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0031724697910249233
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 5.127817712491378e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.93974607202108e-06
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 4.76961304229917e-06
+        }
+      ],
+      "drop_log_odds": -0.7463226318359375,
+      "drop_CH_minus_CI": -0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 33.787986755371094,
+        "actual_bf16_delta_norm": 33.787986755371094,
+        "native_mlp_norm": 33.787986755371094,
+        "other_positions_identical": true,
+        "file": "vectors/native_L26_source.npz",
+        "sha256": "1771fea809daf0dc1ccfd7cdeb068e4791e97876414db4364ee19acbf0c1e5fe"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L26_prediction",
+        "kind": "native_mlp",
+        "layer": 26,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.001046705641783774,
+      "target_probability": 0.9989538192749023,
+      "target_log_odds": 6.861541748046875,
+      "CH_minus_CI": 6.875,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9989538192749023
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0010322167072445154
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 3.722753035617643e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 3.722753035617643e-06
+        },
+        {
+          "id": 3140,
+          "token": "CL",
+          "p": 2.2579638425668236e-06
+        }
+      ],
+      "drop_log_odds": -1.8788948059082031,
+      "drop_CH_minus_CI": -1.875,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 33.29316329956055,
+        "actual_bf16_delta_norm": 33.29316329956055,
+        "native_mlp_norm": 33.29316329956055,
+        "other_positions_identical": true,
+        "file": "vectors/native_L26_prediction.npz",
+        "sha256": "0917a4d04b07ef508fac9727fdae3fcd5d7e20116e323ba2dd714c44ede57ae9"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L27_source",
+        "kind": "native_mlp",
+        "layer": 27,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.004140020813792944,
+      "target_probability": 0.9958685040473938,
+      "target_log_odds": 5.484992980957031,
+      "CH_minus_CI": 5.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9958685040473938
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.004069887567311525
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 5.12323240400292e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 4.765348421642557e-06
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 2.5507072223263094e-06
+        }
+      ],
+      "drop_log_odds": -0.5023460388183594,
+      "drop_CH_minus_CI": -0.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 57.95485305786133,
+        "actual_bf16_delta_norm": 57.95485305786133,
+        "native_mlp_norm": 57.95485305786133,
+        "other_positions_identical": true,
+        "file": "vectors/native_L27_source.npz",
+        "sha256": "b156efe2ae1e3b18c5bf315d70d39532610ec990d2c887d605c830bbb86c3f00"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L27_prediction",
+        "kind": "native_mlp",
+        "layer": 27,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.006746135652065277,
+      "target_probability": 0.9932765960693359,
+      "target_log_odds": 4.995414733886719,
+      "CH_minus_CI": 5.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9932765960693359
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.005212236195802689
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.0013178597437217832
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.00017835291509982198
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 6.915493031556252e-06
+        }
+      ],
+      "drop_log_odds": -0.012767791748046875,
+      "drop_CH_minus_CI": -0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 35.828826904296875,
+        "actual_bf16_delta_norm": 35.828826904296875,
+        "native_mlp_norm": 35.828826904296875,
+        "other_positions_identical": true,
+        "file": "vectors/native_L27_prediction.npz",
+        "sha256": "12fbe7af61859d44def1608226486a96ad4e3c1d728bb550a7ce75b798348daf"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L28_source",
+        "kind": "native_mlp",
+        "layer": 28,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.029988529160618782,
+      "target_probability": 0.970456600189209,
+      "target_log_odds": 3.4919090270996094,
+      "CH_minus_CI": 3.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.970456600189209
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.02930525317788124
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00019745728059206158
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.6208281522267498e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 8.675667231727857e-06
+        }
+      ],
+      "drop_log_odds": 1.4907379150390625,
+      "drop_CH_minus_CI": 1.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 59.42403793334961,
+        "actual_bf16_delta_norm": 59.42403793334961,
+        "native_mlp_norm": 59.42403793334961,
+        "other_positions_identical": true,
+        "file": "vectors/native_L28_source.npz",
+        "sha256": "cf82db55fb5e24f5c592fffad97e093c3236f47b6cd41cb8a228b2c58f090d14"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L28_prediction",
+        "kind": "native_mlp",
+        "layer": 28,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.05006609112024307,
+      "target_probability": 0.951166570186615,
+      "target_log_odds": 2.9692726135253906,
+      "CH_minus_CI": 4.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.951166570186615
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.01742122508585453
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.01742122508585453
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.013567664660513401
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 0.0001507231208961457
+        }
+      ],
+      "drop_log_odds": 2.0133743286132812,
+      "drop_CH_minus_CI": 0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 39.95460510253906,
+        "actual_bf16_delta_norm": 39.95460510253906,
+        "native_mlp_norm": 39.95460510253906,
+        "other_positions_identical": true,
+        "file": "vectors/native_L28_prediction.npz",
+        "sha256": "7ba0e52cbba7a0426261fe4ba4391d007a2a0f7c965dd5c523fb84d34a3d4dc0"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L29_source",
+        "kind": "native_mlp",
+        "layer": 29,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.008759998716413975,
+      "target_probability": 0.9912782311439514,
+      "target_log_odds": 4.733177185058594,
+      "CH_minus_CI": 4.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9912782311439514
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.008576237596571445
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00012233339657541364
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 8.8618016889086e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 7.820513019396458e-06
+        }
+      ],
+      "drop_log_odds": 0.24946975708007812,
+      "drop_CH_minus_CI": 0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 63.15081787109375,
+        "actual_bf16_delta_norm": 63.15081787109375,
+        "native_mlp_norm": 63.15081787109375,
+        "other_positions_identical": true,
+        "file": "vectors/native_L29_source.npz",
+        "sha256": "0176921b149ad649721e1d9bf5c417658088ae5e1ba935df00770973cb0d9dd7"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L29_prediction",
+        "kind": "native_mlp",
+        "layer": 29,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.005689023993909359,
+      "target_probability": 0.9943271279335022,
+      "target_log_odds": 5.166378021240234,
+      "CH_minus_CI": 7.875,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9943271279335022
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.005217749159783125
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0003779724647756666
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 3.983802525908686e-05
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 3.102588379988447e-05
+        }
+      ],
+      "drop_log_odds": -0.1837310791015625,
+      "drop_CH_minus_CI": -2.875,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 53.15875244140625,
+        "actual_bf16_delta_norm": 53.15875244140625,
+        "native_mlp_norm": 53.15875244140625,
+        "other_positions_identical": true,
+        "file": "vectors/native_L29_prediction.npz",
+        "sha256": "42de7d6acc677e05b5e7adebad890f4281346ecc98c5fdc60d07190c9d945d03"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L30_source",
+        "kind": "native_mlp",
+        "layer": 30,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.008792967535555363,
+      "target_probability": 0.9912455081939697,
+      "target_log_odds": 4.7294158935546875,
+      "CH_minus_CI": 4.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9912455081939697
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.008575954474508762
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00015707410057075322
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 7.820259270374663e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.0904239944648e-06
+        }
+      ],
+      "drop_log_odds": 0.2532310485839844,
+      "drop_CH_minus_CI": 0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 74.8648910522461,
+        "actual_bf16_delta_norm": 74.8648910522461,
+        "native_mlp_norm": 74.8648910522461,
+        "other_positions_identical": true,
+        "file": "vectors/native_L30_source.npz",
+        "sha256": "3baeb6d50d044555709fa6eb70f0ad80a58c7af77f90e7d81747e23ad157788b"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L30_prediction",
+        "kind": "native_mlp",
+        "layer": 30,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.0032452084124088287,
+      "target_probability": 0.9967600703239441,
+      "target_log_odds": 5.728946685791016,
+      "CH_minus_CI": 5.75,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9967600703239441
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.0031724683940410614
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 3.993548307335004e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 8.910810720408335e-06
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 7.863762220949866e-06
+        }
+      ],
+      "drop_log_odds": -0.7462997436523438,
+      "drop_CH_minus_CI": -0.75,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 49.83540725708008,
+        "actual_bf16_delta_norm": 49.83540725708008,
+        "native_mlp_norm": 49.83540725708008,
+        "other_positions_identical": true,
+        "file": "vectors/native_L30_prediction.npz",
+        "sha256": "ff88e3ca8e2bbd513d6f2b67f2384ebeec36a8208d6ac13a2907b99c74061ef5"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L31_source",
+        "kind": "native_mlp",
+        "layer": 31,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.005330871790647507,
+      "target_probability": 0.9946832656860352,
+      "target_log_odds": 5.231563568115234,
+      "CH_minus_CI": 5.25,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9946832656860352
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.005219618324190378
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 7.445385563187301e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.141786742664408e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.111544280429371e-06
+        }
+      ],
+      "drop_log_odds": -0.2489166259765625,
+      "drop_CH_minus_CI": -0.25,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 70.01709747314453,
+        "actual_bf16_delta_norm": 70.01709747314453,
+        "native_mlp_norm": 70.01709747314453,
+        "other_positions_identical": true,
+        "file": "vectors/native_L31_source.npz",
+        "sha256": "805347a3e549f183d0a49b58b12f03cf52f604f73c458d4f4ff099833deddcbd"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L31_prediction",
+        "kind": "native_mlp",
+        "layer": 31,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.04862968251109123,
+      "target_probability": 0.9525337815284729,
+      "target_log_odds": 2.9991073608398438,
+      "CH_minus_CI": 3.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9525337815284729
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.04742386192083359
+        },
+        {
+          "id": 6484,
+          "token": "CD",
+          "p": 1.590893225511536e-05
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 7.514847766287858e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.631830274272943e-06
+        }
+      ],
+      "drop_log_odds": 1.9835395812988281,
+      "drop_CH_minus_CI": 2.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 56.75784683227539,
+        "actual_bf16_delta_norm": 56.75784683227539,
+        "native_mlp_norm": 56.75784683227539,
+        "other_positions_identical": true,
+        "file": "vectors/native_L31_prediction.npz",
+        "sha256": "0d9b3e30d7baffb4113ffa3defeee5b8c944b31d0c6a8d099bb56e13489629d2"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L32_source",
+        "kind": "native_mlp",
+        "layer": 32,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.006852933671325445,
+      "target_probability": 0.9931704998016357,
+      "target_log_odds": 4.979652404785156,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9931704998016357
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006691928952932358
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00010816495341714472
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.658763358136639e-05
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.102249244577251e-06
+        }
+      ],
+      "drop_log_odds": 0.002994537353515625,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 76.19789123535156,
+        "actual_bf16_delta_norm": 76.19789123535156,
+        "native_mlp_norm": 76.19789123535156,
+        "other_positions_identical": true,
+        "file": "vectors/native_L32_source.npz",
+        "sha256": "4439d38875eb7766570966d9d2eff17d4e199e29b996ceab24f5ac6948acbcb9"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L32_prediction",
+        "kind": "native_mlp",
+        "layer": 32,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.007006953936070204,
+      "target_probability": 0.9930174946784973,
+      "target_log_odds": 4.9573516845703125,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9930174946784973
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006690898444503546
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.00022895005531609058
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 3.0985022021923214e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.4636288142355625e-05
+        }
+      ],
+      "drop_log_odds": 0.025295257568359375,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 58.64902877807617,
+        "actual_bf16_delta_norm": 58.64902877807617,
+        "native_mlp_norm": 58.64902877807617,
+        "other_positions_identical": true,
+        "file": "vectors/native_L32_prediction.npz",
+        "sha256": "1e0f7bda02366e76a9f0846673825e34448955beba3986ce7109715dea5ecc80"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L33_source",
+        "kind": "native_mlp",
+        "layer": 33,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.006818006280809641,
+      "target_probability": 0.993205189704895,
+      "target_log_odds": 4.984783172607422,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.993205189704895
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006692165043205023
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 8.424192492384464e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 6.914998721185839e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.1024647948215716e-06
+        }
+      ],
+      "drop_log_odds": -0.00213623046875,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 91.20498657226562,
+        "actual_bf16_delta_norm": 91.20498657226562,
+        "native_mlp_norm": 91.20498657226562,
+        "other_positions_identical": true,
+        "file": "vectors/native_L33_source.npz",
+        "sha256": "71f625d1b2e6c6c64516099c7d12f2e77b079668f93964288529333d2a0b0865"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L33_prediction",
+        "kind": "native_mlp",
+        "layer": 33,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.011907332576811314,
+      "target_probability": 0.9881632924079895,
+      "target_log_odds": 4.424648284912109,
+      "CH_minus_CI": 4.5,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9881632924079895
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.010977504774928093
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.000701768440194428
+        },
+        {
+          "id": 99119,
+          "token": "CHILD",
+          "p": 0.00012194900773465633
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 1.870148662419524e-05
+        }
+      ],
+      "drop_log_odds": 0.5579986572265625,
+      "drop_CH_minus_CI": 0.5,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 111.76480865478516,
+        "actual_bf16_delta_norm": 111.76480865478516,
+        "native_mlp_norm": 111.76480865478516,
+        "other_positions_identical": true,
+        "file": "vectors/native_L33_prediction.npz",
+        "sha256": "a510759a76af78869d70df74233f5abac0f5aa4a714b5ed270cf069425410c02"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L34_source",
+        "kind": "native_mlp",
+        "layer": 34,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.006831622216850519,
+      "target_probability": 0.993191659450531,
+      "target_log_odds": 4.982776641845703,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.993191659450531
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006692072842270136
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 9.545732609694824e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 8.87891565071186e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.102383395045763e-06
+        }
+      ],
+      "drop_log_odds": -0.00012969970703125,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 147.4456787109375,
+        "actual_bf16_delta_norm": 147.4456787109375,
+        "native_mlp_norm": 147.4456787109375,
+        "other_positions_identical": true,
+        "file": "vectors/native_L34_source.npz",
+        "sha256": "b8ded1f1c29dbc516a60a3f920e5f8540c5d164b805feba4e0cd735f902f13ce"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L34_prediction",
+        "kind": "native_mlp",
+        "layer": 34,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.026390664279460907,
+      "target_probability": 0.9739545583724976,
+      "target_log_odds": 3.621519088745117,
+      "CH_minus_CI": 4.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9739545583724976
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.017838601022958755
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.004510304890573025
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.0012922239257022738
+        },
+        {
+          "id": 23913,
+          "token": "HI",
+          "p": 0.0005386790726333857
+        }
+      ],
+      "drop_log_odds": 1.3611278533935547,
+      "drop_CH_minus_CI": 1.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 166.93276977539062,
+        "actual_bf16_delta_norm": 166.93276977539062,
+        "native_mlp_norm": 166.93276977539062,
+        "other_positions_identical": true,
+        "file": "vectors/native_L34_prediction.npz",
+        "sha256": "c0b676c31ce582a17479f3ee8dcefdf76572360a07864f1b77caef326ef48c1d"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L35_source",
+        "kind": "native_mlp",
+        "layer": 35,
+        "site": "source",
+        "position": 27,
+        "fraction": 1
+      },
+      "target_log_probability": -0.006832569371908903,
+      "target_probability": 0.9931907653808594,
+      "target_log_odds": 4.982646942138672,
+      "CH_minus_CI": 5.0,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.9931907653808594
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.006692065857350826
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 9.545724606141448e-05
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 8.878907465259545e-06
+        },
+        {
+          "id": 1143,
+          "token": "Ch",
+          "p": 6.914899131515995e-06
+        }
+      ],
+      "drop_log_odds": 0.0,
+      "drop_CH_minus_CI": 0.0,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 420.7921447753906,
+        "actual_bf16_delta_norm": 420.7921447753906,
+        "native_mlp_norm": 420.7921447753906,
+        "other_positions_identical": true,
+        "file": "vectors/native_L35_source.npz",
+        "sha256": "46c4df6027486f35387bfc71a75e20d7af15651418c93a7f984b8ae725af0c73"
+      }
+    },
+    {
+      "condition": {
+        "id": "native_L35_prediction",
+        "kind": "native_mlp",
+        "layer": 35,
+        "site": "prediction",
+        "position": 37,
+        "fraction": 1
+      },
+      "target_log_probability": -0.16150061786174774,
+      "target_probability": 0.8508659601211548,
+      "target_log_odds": 1.7414064407348633,
+      "CH_minus_CI": 2.8125,
+      "greedy_token_id": 2149,
+      "greedy_token": "CH",
+      "top_tokens": [
+        {
+          "id": 2149,
+          "token": "CH",
+          "p": 0.8508659601211548
+        },
+        {
+          "id": 3048,
+          "token": "child",
+          "p": 0.05439404025673866
+        },
+        {
+          "id": 11237,
+          "token": "CI",
+          "p": 0.05109846964478493
+        },
+        {
+          "id": 3652,
+          "token": "Child",
+          "p": 0.015584157779812813
+        },
+        {
+          "id": 331,
+          "token": "ch",
+          "p": 0.007836206816136837
+        }
+      ],
+      "drop_log_odds": 3.2412405014038086,
+      "drop_CH_minus_CI": 2.1875,
+      "edit": {
+        "components": [],
+        "intended_delta_norm": 593.783447265625,
+        "actual_bf16_delta_norm": 593.783447265625,
+        "native_mlp_norm": 593.783447265625,
+        "other_positions_identical": true,
+        "file": "vectors/native_L35_prediction.npz",
+        "sha256": "cf9c9f54bce7532f528029391f09f619e69efad6bd8121b4f02f7d5036be47b3"
+      }
+    }
+  ],
+  "candidate_selection_before_outcomes": false,
+  "conditions": [
+    {
+      "id": "zero_strength",
+      "kind": "native_mlp",
+      "layer": 3,
+      "site": "source",
+      "position": 27,
+      "fraction": 0
+    },
+    {
+      "id": "native_L0_source",
+      "kind": "native_mlp",
+      "layer": 0,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L0_prediction",
+      "kind": "native_mlp",
+      "layer": 0,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L1_source",
+      "kind": "native_mlp",
+      "layer": 1,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L1_prediction",
+      "kind": "native_mlp",
+      "layer": 1,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L2_source",
+      "kind": "native_mlp",
+      "layer": 2,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L2_prediction",
+      "kind": "native_mlp",
+      "layer": 2,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L3_source",
+      "kind": "native_mlp",
+      "layer": 3,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L3_prediction",
+      "kind": "native_mlp",
+      "layer": 3,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L4_source",
+      "kind": "native_mlp",
+      "layer": 4,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L4_prediction",
+      "kind": "native_mlp",
+      "layer": 4,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L5_source",
+      "kind": "native_mlp",
+      "layer": 5,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L5_prediction",
+      "kind": "native_mlp",
+      "layer": 5,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L6_source",
+      "kind": "native_mlp",
+      "layer": 6,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L6_prediction",
+      "kind": "native_mlp",
+      "layer": 6,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L7_source",
+      "kind": "native_mlp",
+      "layer": 7,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L7_prediction",
+      "kind": "native_mlp",
+      "layer": 7,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L8_source",
+      "kind": "native_mlp",
+      "layer": 8,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L8_prediction",
+      "kind": "native_mlp",
+      "layer": 8,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L9_source",
+      "kind": "native_mlp",
+      "layer": 9,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L9_prediction",
+      "kind": "native_mlp",
+      "layer": 9,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L10_source",
+      "kind": "native_mlp",
+      "layer": 10,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L10_prediction",
+      "kind": "native_mlp",
+      "layer": 10,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L11_source",
+      "kind": "native_mlp",
+      "layer": 11,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L11_prediction",
+      "kind": "native_mlp",
+      "layer": 11,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L12_source",
+      "kind": "native_mlp",
+      "layer": 12,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L12_prediction",
+      "kind": "native_mlp",
+      "layer": 12,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L13_source",
+      "kind": "native_mlp",
+      "layer": 13,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L13_prediction",
+      "kind": "native_mlp",
+      "layer": 13,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L14_source",
+      "kind": "native_mlp",
+      "layer": 14,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L14_prediction",
+      "kind": "native_mlp",
+      "layer": 14,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L15_source",
+      "kind": "native_mlp",
+      "layer": 15,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L15_prediction",
+      "kind": "native_mlp",
+      "layer": 15,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L16_source",
+      "kind": "native_mlp",
+      "layer": 16,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L16_prediction",
+      "kind": "native_mlp",
+      "layer": 16,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L17_source",
+      "kind": "native_mlp",
+      "layer": 17,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L17_prediction",
+      "kind": "native_mlp",
+      "layer": 17,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L18_source",
+      "kind": "native_mlp",
+      "layer": 18,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L18_prediction",
+      "kind": "native_mlp",
+      "layer": 18,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L19_source",
+      "kind": "native_mlp",
+      "layer": 19,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L19_prediction",
+      "kind": "native_mlp",
+      "layer": 19,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L20_source",
+      "kind": "native_mlp",
+      "layer": 20,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L20_prediction",
+      "kind": "native_mlp",
+      "layer": 20,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L21_source",
+      "kind": "native_mlp",
+      "layer": 21,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L21_prediction",
+      "kind": "native_mlp",
+      "layer": 21,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L22_source",
+      "kind": "native_mlp",
+      "layer": 22,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L22_prediction",
+      "kind": "native_mlp",
+      "layer": 22,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L23_source",
+      "kind": "native_mlp",
+      "layer": 23,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L23_prediction",
+      "kind": "native_mlp",
+      "layer": 23,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L24_source",
+      "kind": "native_mlp",
+      "layer": 24,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L24_prediction",
+      "kind": "native_mlp",
+      "layer": 24,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L25_source",
+      "kind": "native_mlp",
+      "layer": 25,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L25_prediction",
+      "kind": "native_mlp",
+      "layer": 25,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L26_source",
+      "kind": "native_mlp",
+      "layer": 26,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L26_prediction",
+      "kind": "native_mlp",
+      "layer": 26,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L27_source",
+      "kind": "native_mlp",
+      "layer": 27,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L27_prediction",
+      "kind": "native_mlp",
+      "layer": 27,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L28_source",
+      "kind": "native_mlp",
+      "layer": 28,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L28_prediction",
+      "kind": "native_mlp",
+      "layer": 28,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L29_source",
+      "kind": "native_mlp",
+      "layer": 29,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L29_prediction",
+      "kind": "native_mlp",
+      "layer": 29,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L30_source",
+      "kind": "native_mlp",
+      "layer": 30,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L30_prediction",
+      "kind": "native_mlp",
+      "layer": 30,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L31_source",
+      "kind": "native_mlp",
+      "layer": 31,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L31_prediction",
+      "kind": "native_mlp",
+      "layer": 31,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L32_source",
+      "kind": "native_mlp",
+      "layer": 32,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L32_prediction",
+      "kind": "native_mlp",
+      "layer": 32,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L33_source",
+      "kind": "native_mlp",
+      "layer": 33,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L33_prediction",
+      "kind": "native_mlp",
+      "layer": 33,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L34_source",
+      "kind": "native_mlp",
+      "layer": 34,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L34_prediction",
+      "kind": "native_mlp",
+      "layer": 34,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    },
+    {
+      "id": "native_L35_source",
+      "kind": "native_mlp",
+      "layer": 35,
+      "site": "source",
+      "position": 27,
+      "fraction": 1
+    },
+    {
+      "id": "native_L35_prediction",
+      "kind": "native_mlp",
+      "layer": 35,
+      "site": "prediction",
+      "position": 37,
+      "fraction": 1
+    }
+  ],
+  "base_hashes_verified": true,
+  "torch": "2.14.0+cu126",
+  "transformers": "4.57.6",
+  "source_sha256": "ccee4bc8188f021a48fb38496fdee795ff81bea0e2c99e9734e730c86c08a0f6",
+  "elapsed_seconds": 4.153697079993435,
+  "all_native_attention_unmodified": true,
+  "restored_unhooked_baseline_bit_exact": true
+}

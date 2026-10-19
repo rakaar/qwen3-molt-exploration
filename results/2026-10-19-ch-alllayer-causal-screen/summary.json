@@ -1,0 +1,1602 @@
+{
+  "baseline": {
+    "target_log_probability": -0.006832569371908903,
+    "target_probability": 0.9931907653808594,
+    "target_log_odds": 4.982646942138672,
+    "CH_minus_CI": 5.0,
+    "greedy_token_id": 2149,
+    "greedy_token": "CH",
+    "top_tokens": [
+      {
+        "id": 2149,
+        "token": "CH",
+        "p": 0.9931907653808594
+      },
+      {
+        "id": 11237,
+        "token": "CI",
+        "p": 0.006692065857350826
+      },
+      {
+        "id": 3652,
+        "token": "Child",
+        "p": 9.545724606141448e-05
+      },
+      {
+        "id": 3048,
+        "token": "child",
+        "p": 8.878907465259545e-06
+      },
+      {
+        "id": 1143,
+        "token": "Ch",
+        "p": 6.914899131515995e-06
+      }
+    ]
+  },
+  "active_feature_site_pairs": 410,
+  "active_unique_transforms": 369,
+  "single_feature_tests": 411,
+  "threshold_check_tests": 1,
+  "active_by_site": {
+    "source": 155,
+    "prediction": 255
+  },
+  "single_ablation_first_token_changes": 15,
+  "top_by_site": {
+    "source": [
+      {
+        "condition": {
+          "id": "L28-T1123-source",
+          "layer": 28,
+          "transform": 1123,
+          "site": "source",
+          "position": 27,
+          "raw_cpu": 2.6963069438934326,
+          "threshold": 0.5356559753417969,
+          "gate_cpu": 2.6963069438934326,
+          "near_threshold": false,
+          "cached_label": "Ch-prefix food and noun tokens",
+          "kind": "single_molt",
+          "features": [
+            1123
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -0.20232632756233215,
+        "target_probability": 0.8168283104896545,
+        "target_log_odds": 1.4950065612792969,
+        "CH_minus_CI": 1.5,
+        "greedy_token_id": 2149,
+        "greedy_token": "CH",
+        "top_tokens": [
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.8168283104896545
+          },
+          {
+            "id": 11237,
+            "token": "CI",
+            "p": 0.18225903809070587
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.0007448510732501745
+          },
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 8.895972860045731e-05
+          },
+          {
+            "id": 6484,
+            "token": "CD",
+            "p": 1.545888153486885e-05
+          }
+        ],
+        "drop_log_odds": 3.487640380859375,
+        "drop_CH_minus_CI": 3.5,
+        "edit": {
+          "components": [
+            {
+              "transform": 1123,
+              "raw": 2.6963047981262207,
+              "gate": 2.6963047981262207,
+              "threshold": 0.5356559753417969,
+              "contribution_norm": 44.90857696533203
+            }
+          ],
+          "intended_delta_norm": 44.90857696533203,
+          "actual_bf16_delta_norm": 44.909332275390625,
+          "native_mlp_norm": 59.42403793334961,
+          "other_positions_identical": true,
+          "file": "vectors/L28-T1123-source.npz",
+          "sha256": "055bb1354ee467ae819255b70024de8decf9dd70327981a30be2be9c26a59ba1"
+        }
+      },
+      {
+        "condition": {
+          "id": "L0-T682-source",
+          "layer": 0,
+          "transform": 682,
+          "site": "source",
+          "position": 27,
+          "raw_cpu": 2.9812803268432617,
+          "threshold": 0.5219647884368896,
+          "gate_cpu": 2.9812803268432617,
+          "near_threshold": false,
+          "cached_label": "Location, Measurement, and Demographic Noun Gate",
+          "kind": "single_molt",
+          "features": [
+            682
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -0.03792595863342285,
+        "target_probability": 0.9627842307090759,
+        "target_log_odds": 3.2530956268310547,
+        "CH_minus_CI": 7.25,
+        "greedy_token_id": 2149,
+        "greedy_token": "CH",
+        "top_tokens": [
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.9627842307090759
+          },
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.03294466435909271
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.00185861112549901
+          },
+          {
+            "id": 331,
+            "token": "ch",
+            "p": 0.001277403556741774
+          },
+          {
+            "id": 11237,
+            "token": "CI",
+            "p": 0.0006837448454461992
+          }
+        ],
+        "drop_log_odds": 1.7295513153076172,
+        "drop_CH_minus_CI": -2.25,
+        "edit": {
+          "components": [
+            {
+              "transform": 682,
+              "raw": 2.9812779426574707,
+              "gate": 2.9812779426574707,
+              "threshold": 0.5219647884368896,
+              "contribution_norm": 5.466572284698486
+            }
+          ],
+          "intended_delta_norm": 5.466572284698486,
+          "actual_bf16_delta_norm": 5.466696262359619,
+          "native_mlp_norm": 6.954492568969727,
+          "other_positions_identical": true,
+          "file": "vectors/L0-T682-source.npz",
+          "sha256": "f2070973a59adb729a424b1d04bf217b3ba08fca21696592d1278d8b8621eded"
+        }
+      },
+      {
+        "condition": {
+          "id": "L25-T953-source",
+          "layer": 25,
+          "transform": 953,
+          "site": "source",
+          "position": 27,
+          "raw_cpu": 2.5564589500427246,
+          "threshold": 0.5438345670700073,
+          "gate_cpu": 2.5564589500427246,
+          "near_threshold": false,
+          "cached_label": "Family and Youth Token Gate",
+          "kind": "single_molt",
+          "features": [
+            953
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -0.01824723742902279,
+        "target_probability": 0.981918215751648,
+        "target_log_odds": 3.994609832763672,
+        "CH_minus_CI": 4.0,
+        "greedy_token_id": 2149,
+        "greedy_token": "CH",
+        "top_tokens": [
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.981918215751648
+          },
+          {
+            "id": 11237,
+            "token": "CI",
+            "p": 0.017984461039304733
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 8.328454714501277e-05
+          },
+          {
+            "id": 1143,
+            "token": "Ch",
+            "p": 5.324202447809512e-06
+          },
+          {
+            "id": 6484,
+            "token": "CD",
+            "p": 1.346169256066787e-06
+          }
+        ],
+        "drop_log_odds": 0.988037109375,
+        "drop_CH_minus_CI": 1.0,
+        "edit": {
+          "components": [
+            {
+              "transform": 953,
+              "raw": 2.556464672088623,
+              "gate": 2.556464672088623,
+              "threshold": 0.5438345670700073,
+              "contribution_norm": 34.54623031616211
+            }
+          ],
+          "intended_delta_norm": 34.54623031616211,
+          "actual_bf16_delta_norm": 34.54571533203125,
+          "native_mlp_norm": 43.42076110839844,
+          "other_positions_identical": true,
+          "file": "vectors/L25-T953-source.npz",
+          "sha256": "b9ca1ec84675ae2522845073a41229d89529ec0699753a1c3bcd8e5b881cc6cb"
+        }
+      },
+      {
+        "condition": {
+          "id": "L25-T1240-source",
+          "layer": 25,
+          "transform": 1240,
+          "site": "source",
+          "position": 27,
+          "raw_cpu": 0.6960833668708801,
+          "threshold": 0.5269597768783569,
+          "gate_cpu": 0.6960833668708801,
+          "near_threshold": false,
+          "cached_label": "C/Ch Initial Token Gate",
+          "kind": "single_molt",
+          "features": [
+            1240
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -0.011220686137676239,
+        "target_probability": 0.9888420701026917,
+        "target_log_odds": 4.484386444091797,
+        "CH_minus_CI": 4.5,
+        "greedy_token_id": 2149,
+        "greedy_token": "CH",
+        "top_tokens": [
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.9888420701026917
+          },
+          {
+            "id": 11237,
+            "token": "CI",
+            "p": 0.01098504476249218
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.00013828124792780727
+          },
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 1.871433232736308e-05
+          },
+          {
+            "id": 1143,
+            "token": "Ch",
+            "p": 6.884617960167816e-06
+          }
+        ],
+        "drop_log_odds": 0.498260498046875,
+        "drop_CH_minus_CI": 0.5,
+        "edit": {
+          "components": [
+            {
+              "transform": 1240,
+              "raw": 0.6960840821266174,
+              "gate": 0.6960840821266174,
+              "threshold": 0.5269597768783569,
+              "contribution_norm": 6.2811174392700195
+            }
+          ],
+          "intended_delta_norm": 6.2811174392700195,
+          "actual_bf16_delta_norm": 6.282372951507568,
+          "native_mlp_norm": 43.42076110839844,
+          "other_positions_identical": true,
+          "file": "vectors/L25-T1240-source.npz",
+          "sha256": "9267be5119f7a244e321a245c3604abdb671760ad5fe412eb9812a608e15a2c9"
+        }
+      },
+      {
+        "condition": {
+          "id": "L9-T37-source",
+          "layer": 9,
+          "transform": 37,
+          "site": "source",
+          "position": 27,
+          "raw_cpu": 1.5231536626815796,
+          "threshold": 0.5234386920928955,
+          "gate_cpu": 1.5231536626815796,
+          "near_threshold": false,
+          "cached_label": "Creative Writing and Explanation Prompt Gate",
+          "kind": "single_molt",
+          "features": [
+            37
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -0.010486501269042492,
+        "target_probability": 0.989568293094635,
+        "target_log_odds": 4.552406311035156,
+        "CH_minus_CI": 4.875,
+        "greedy_token_id": 2149,
+        "greedy_token": "CH",
+        "top_tokens": [
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.989568293094635
+          },
+          {
+            "id": 11237,
+            "token": "CI",
+            "p": 0.007555446121841669
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.001685847993940115
+          },
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.0011586651671677828
+          },
+          {
+            "id": 99119,
+            "token": "CHILD",
+            "p": 1.1359154086676426e-05
+          }
+        ],
+        "drop_log_odds": 0.4302406311035156,
+        "drop_CH_minus_CI": 0.125,
+        "edit": {
+          "components": [
+            {
+              "transform": 37,
+              "raw": 1.5231536626815796,
+              "gate": 1.5231536626815796,
+              "threshold": 0.5234386920928955,
+              "contribution_norm": 6.529885292053223
+            }
+          ],
+          "intended_delta_norm": 6.529885292053223,
+          "actual_bf16_delta_norm": 6.530412673950195,
+          "native_mlp_norm": 12.179716110229492,
+          "other_positions_identical": true,
+          "file": "vectors/L9-T37-source.npz",
+          "sha256": "44dd747d1f8ead73f6cfd4dbfb30c22b272730f07c9d754058385696caeb0084"
+        }
+      },
+      {
+        "condition": {
+          "id": "L14-T48-source",
+          "layer": 14,
+          "transform": 48,
+          "site": "source",
+          "position": 27,
+          "raw_cpu": 0.8999447822570801,
+          "threshold": 6.574827374363297e-38,
+          "gate_cpu": 0.8999447822570801,
+          "near_threshold": false,
+          "cached_label": "Diverse Segments Without Consistent Semantic Theme",
+          "kind": "single_molt",
+          "features": [
+            48
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -0.009123777039349079,
+        "target_probability": 0.9909177422523499,
+        "target_log_odds": 4.6923065185546875,
+        "CH_minus_CI": 4.75,
+        "greedy_token_id": 2149,
+        "greedy_token": "CH",
+        "top_tokens": [
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.9909177422523499
+          },
+          {
+            "id": 11237,
+            "token": "CI",
+            "p": 0.008573117665946484
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.00033241583150811493
+          },
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.00015702213568147272
+          },
+          {
+            "id": 1143,
+            "token": "Ch",
+            "p": 7.81767175794812e-06
+          }
+        ],
+        "drop_log_odds": 0.2903404235839844,
+        "drop_CH_minus_CI": 0.25,
+        "edit": {
+          "components": [
+            {
+              "transform": 48,
+              "raw": 0.8999442458152771,
+              "gate": 0.8999442458152771,
+              "threshold": 6.574827374363297e-38,
+              "contribution_norm": 3.9434056282043457
+            }
+          ],
+          "intended_delta_norm": 3.9434056282043457,
+          "actual_bf16_delta_norm": 3.943331718444824,
+          "native_mlp_norm": 11.543303489685059,
+          "other_positions_identical": true,
+          "file": "vectors/L14-T48-source.npz",
+          "sha256": "3da23275c7c054f40a42be11fc428dce5299df8cf89a21755e076b62fe30e152"
+        }
+      },
+      {
+        "condition": {
+          "id": "L2-T932-source",
+          "layer": 2,
+          "transform": 932,
+          "site": "source",
+          "position": 27,
+          "raw_cpu": 1.0541573762893677,
+          "threshold": 0.5754063129425049,
+          "gate_cpu": 1.0541573762893677,
+          "near_threshold": false,
+          "cached_label": "String Literal \"The Quick\" Trigger",
+          "kind": "single_molt",
+          "features": [
+            932
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -0.008976107463240623,
+        "target_probability": 0.9910640716552734,
+        "target_log_odds": 4.708690643310547,
+        "CH_minus_CI": 4.75,
+        "greedy_token_id": 2149,
+        "greedy_token": "CH",
+        "top_tokens": [
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.9910640716552734
+          },
+          {
+            "id": 11237,
+            "token": "CI",
+            "p": 0.008574385195970535
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.0002933993237093091
+          },
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 4.499424539972097e-05
+          },
+          {
+            "id": 1143,
+            "token": "Ch",
+            "p": 1.2891066944575869e-05
+          }
+        ],
+        "drop_log_odds": 0.273956298828125,
+        "drop_CH_minus_CI": 0.25,
+        "edit": {
+          "components": [
+            {
+              "transform": 932,
+              "raw": 1.0541560649871826,
+              "gate": 1.0541560649871826,
+              "threshold": 0.5754063129425049,
+              "contribution_norm": 1.686126470565796
+            }
+          ],
+          "intended_delta_norm": 1.686126470565796,
+          "actual_bf16_delta_norm": 1.6862876415252686,
+          "native_mlp_norm": 3.513794183731079,
+          "other_positions_identical": true,
+          "file": "vectors/L2-T932-source.npz",
+          "sha256": "17ed574fbd16913962161b72874aac47281b59549e51ba06eedbcbec48e7d22e"
+        }
+      },
+      {
+        "condition": {
+          "id": "L14-T428-source",
+          "layer": 14,
+          "transform": 428,
+          "site": "source",
+          "position": 27,
+          "raw_cpu": 0.6609084606170654,
+          "threshold": 0.4984462261199951,
+          "gate_cpu": 0.6609084606170654,
+          "near_threshold": false,
+          "cached_label": "Childhood and Youth Audience Gate",
+          "kind": "single_molt",
+          "features": [
+            428
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -0.008919279091060162,
+        "target_probability": 0.9911203980445862,
+        "target_log_odds": 4.715087890625,
+        "CH_minus_CI": 4.75,
+        "greedy_token_id": 2149,
+        "greedy_token": "CH",
+        "top_tokens": [
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.9911203980445862
+          },
+          {
+            "id": 11237,
+            "token": "CI",
+            "p": 0.008574871346354485
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.0002285124792251736
+          },
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 5.0988026487175375e-05
+          },
+          {
+            "id": 1143,
+            "token": "Ch",
+            "p": 1.4608313904318493e-05
+          }
+        ],
+        "drop_log_odds": 0.2675590515136719,
+        "drop_CH_minus_CI": 0.25,
+        "edit": {
+          "components": [
+            {
+              "transform": 428,
+              "raw": 0.6609102487564087,
+              "gate": 0.6609102487564087,
+              "threshold": 0.4984462261199951,
+              "contribution_norm": 1.7250921726226807
+            }
+          ],
+          "intended_delta_norm": 1.7250921726226807,
+          "actual_bf16_delta_norm": 1.7261877059936523,
+          "native_mlp_norm": 11.543303489685059,
+          "other_positions_identical": true,
+          "file": "vectors/L14-T428-source.npz",
+          "sha256": "ebd94dbbe44a566fce791b8a4328c21dcb181e72370a27719169e8f4bf7fcd29"
+        }
+      }
+    ],
+    "prediction": [
+      {
+        "condition": {
+          "id": "L10-T30-prediction",
+          "layer": 10,
+          "transform": 30,
+          "site": "prediction",
+          "position": 37,
+          "raw_cpu": 1.407892107963562,
+          "threshold": -6.87435323955457e-38,
+          "gate_cpu": 1.407892107963562,
+          "near_threshold": false,
+          "cached_label": "Creative Writing and Travel Prompt Gate",
+          "kind": "single_molt",
+          "features": [
+            30
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -22.00007438659668,
+        "target_probability": 2.7892607668000835e-10,
+        "target_log_odds": -22.000076293945312,
+        "CH_minus_CI": 4.4375,
+        "greedy_token_id": 3048,
+        "greedy_token": "child",
+        "top_tokens": [
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.9999252557754517
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 4.539655492408201e-05
+          },
+          {
+            "id": 1682,
+            "token": " child",
+            "p": 2.144381323887501e-05
+          },
+          {
+            "id": 17531,
+            "token": ".child",
+            "p": 6.961786766623845e-06
+          },
+          {
+            "id": 17794,
+            "token": "(child",
+            "p": 5.714582584914751e-07
+          }
+        ],
+        "drop_log_odds": 26.982723236083984,
+        "drop_CH_minus_CI": 0.5625,
+        "edit": {
+          "components": [
+            {
+              "transform": 30,
+              "raw": 1.407892107963562,
+              "gate": 1.407892107963562,
+              "threshold": -6.87435323955457e-38,
+              "contribution_norm": 6.987326622009277
+            }
+          ],
+          "intended_delta_norm": 6.987326622009277,
+          "actual_bf16_delta_norm": 6.985254764556885,
+          "native_mlp_norm": 16.7403507232666,
+          "other_positions_identical": true,
+          "file": "vectors/L10-T30-prediction.npz",
+          "sha256": "4e861aa1fabcae95416cf38307ec8cc5d74d631b8cba281ccb30ae7a4a5d1f3a"
+        }
+      },
+      {
+        "condition": {
+          "id": "L14-T54-prediction",
+          "layer": 14,
+          "transform": 54,
+          "site": "prediction",
+          "position": 37,
+          "raw_cpu": 1.4220958948135376,
+          "threshold": 1.0160918300386223e-37,
+          "gate_cpu": 1.4220958948135376,
+          "near_threshold": false,
+          "cached_label": "Emotional and Interpersonal Narrative",
+          "kind": "single_molt",
+          "features": [
+            54
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -9.886143684387207,
+        "target_probability": 5.087475437903777e-05,
+        "target_log_odds": -9.886093139648438,
+        "CH_minus_CI": 6.625,
+        "greedy_token_id": 3048,
+        "greedy_token": "child",
+        "top_tokens": [
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.9889178276062012
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.010985882952809334
+          },
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 5.087475437903777e-05
+          },
+          {
+            "id": 1682,
+            "token": " child",
+            "p": 3.085709977312945e-05
+          },
+          {
+            "id": 17531,
+            "token": ".child",
+            "p": 1.0017833119491115e-05
+          }
+        ],
+        "drop_log_odds": 14.86874008178711,
+        "drop_CH_minus_CI": -1.625,
+        "edit": {
+          "components": [
+            {
+              "transform": 54,
+              "raw": 1.422095775604248,
+              "gate": 1.422095775604248,
+              "threshold": 1.0160918300386223e-37,
+              "contribution_norm": 6.155796527862549
+            }
+          ],
+          "intended_delta_norm": 6.155796527862549,
+          "actual_bf16_delta_norm": 6.156048774719238,
+          "native_mlp_norm": 22.012203216552734,
+          "other_positions_identical": true,
+          "file": "vectors/L14-T54-prediction.npz",
+          "sha256": "dade9c46e485cf31a2ef768ff6e47b97312284bbb09d70de6f197d2e2fc5d487"
+        }
+      },
+      {
+        "condition": {
+          "id": "L18-T51-prediction",
+          "layer": 18,
+          "transform": 51,
+          "site": "prediction",
+          "position": 37,
+          "raw_cpu": 1.5329010486602783,
+          "threshold": -1.8659569839281332e-38,
+          "gate_cpu": 1.5329010486602783,
+          "near_threshold": false,
+          "cached_label": "User Turn Start",
+          "kind": "single_molt",
+          "features": [
+            51
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -9.000612258911133,
+        "target_probability": 0.0001233342627529055,
+        "target_log_odds": -9.00048828125,
+        "CH_minus_CI": 5.375,
+        "greedy_token_id": 3048,
+        "greedy_token": "child",
+        "top_tokens": [
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.9993878602981567
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.00033525729668326676
+          },
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.0001233342627529055
+          },
+          {
+            "id": 1682,
+            "token": " child",
+            "p": 8.476631774101406e-05
+          },
+          {
+            "id": 17531,
+            "token": ".child",
+            "p": 5.1413371693342924e-05
+          }
+        ],
+        "drop_log_odds": 13.983135223388672,
+        "drop_CH_minus_CI": -0.375,
+        "edit": {
+          "components": [
+            {
+              "transform": 51,
+              "raw": 1.5329011678695679,
+              "gate": 1.5329011678695679,
+              "threshold": -1.8659569839281332e-38,
+              "contribution_norm": 7.00609016418457
+            }
+          ],
+          "intended_delta_norm": 7.00609016418457,
+          "actual_bf16_delta_norm": 7.00601053237915,
+          "native_mlp_norm": 17.96983528137207,
+          "other_positions_identical": true,
+          "file": "vectors/L18-T51-prediction.npz",
+          "sha256": "5008aed1293ff3f718238de0eb03dcc0413ba48b5f3acae7e07e77e425a43a04"
+        }
+      },
+      {
+        "condition": {
+          "id": "L10-T18-prediction",
+          "layer": 10,
+          "transform": 18,
+          "site": "prediction",
+          "position": 37,
+          "raw_cpu": 1.6404414176940918,
+          "threshold": -0.026443880051374435,
+          "gate_cpu": 1.6404414176940918,
+          "near_threshold": false,
+          "cached_label": "General New Input Context Trigger",
+          "kind": "single_molt",
+          "features": [
+            18
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -6.290002346038818,
+        "target_probability": 0.001854755450040102,
+        "target_log_odds": -6.28814697265625,
+        "CH_minus_CI": 6.875,
+        "greedy_token_id": 3048,
+        "greedy_token": "child",
+        "top_tokens": [
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.9607871174812317
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.037253763526678085
+          },
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.001854755450040102
+          },
+          {
+            "id": 99119,
+            "token": "CHILD",
+            "p": 3.8494203181471676e-05
+          },
+          {
+            "id": 1682,
+            "token": " child",
+            "p": 3.8494203181471676e-05
+          }
+        ],
+        "drop_log_odds": 11.270793914794922,
+        "drop_CH_minus_CI": -1.875,
+        "edit": {
+          "components": [
+            {
+              "transform": 18,
+              "raw": 1.6404415369033813,
+              "gate": 1.6404415369033813,
+              "threshold": -0.026443880051374435,
+              "contribution_norm": 5.838018417358398
+            }
+          ],
+          "intended_delta_norm": 5.838018417358398,
+          "actual_bf16_delta_norm": 5.836862564086914,
+          "native_mlp_norm": 16.7403507232666,
+          "other_positions_identical": true,
+          "file": "vectors/L10-T18-prediction.npz",
+          "sha256": "38bb07c3f56e829ba8bab13b459fbe41f41f1f6a7d0a5a8968609c48ecd1e53b"
+        }
+      },
+      {
+        "condition": {
+          "id": "L10-T629-prediction",
+          "layer": 10,
+          "transform": 629,
+          "site": "prediction",
+          "position": 37,
+          "raw_cpu": 2.596132516860962,
+          "threshold": 0.6134929060935974,
+          "gate_cpu": 2.596132516860962,
+          "near_threshold": false,
+          "cached_label": "Newline After Think Tag",
+          "kind": "single_molt",
+          "features": [
+            629
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -5.527371883392334,
+        "target_probability": 0.003976425621658564,
+        "target_log_odds": -5.523387908935547,
+        "CH_minus_CI": 5.375,
+        "greedy_token_id": 3048,
+        "greedy_token": "child",
+        "top_tokens": [
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.9729992747306824
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.022882752120494843
+          },
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.003976425621658564
+          },
+          {
+            "id": 1682,
+            "token": " child",
+            "p": 6.427290645660833e-05
+          },
+          {
+            "id": 17531,
+            "token": ".child",
+            "p": 3.4402808523736894e-05
+          }
+        ],
+        "drop_log_odds": 10.506034851074219,
+        "drop_CH_minus_CI": -0.375,
+        "edit": {
+          "components": [
+            {
+              "transform": 629,
+              "raw": 2.5961289405822754,
+              "gate": 2.5961289405822754,
+              "threshold": 0.6134929060935974,
+              "contribution_norm": 6.096560001373291
+            }
+          ],
+          "intended_delta_norm": 6.096560001373291,
+          "actual_bf16_delta_norm": 6.096493244171143,
+          "native_mlp_norm": 16.7403507232666,
+          "other_positions_identical": true,
+          "file": "vectors/L10-T629-prediction.npz",
+          "sha256": "a34e84780358eddee527e93e0f4a7a1f7975c031254cc2638c501aeb846d5094"
+        }
+      },
+      {
+        "condition": {
+          "id": "L6-T219-prediction",
+          "layer": 6,
+          "transform": 219,
+          "site": "prediction",
+          "position": 37,
+          "raw_cpu": 0.9915986061096191,
+          "threshold": 0.6754207611083984,
+          "gate_cpu": 0.9915986061096191,
+          "near_threshold": false,
+          "cached_label": "Whitespace Delimiters Trigger Gate",
+          "kind": "single_molt",
+          "features": [
+            219
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -4.273077011108398,
+        "target_probability": 0.013938828371465206,
+        "target_log_odds": -4.259040832519531,
+        "CH_minus_CI": 6.0,
+        "greedy_token_id": 3048,
+        "greedy_token": "child",
+        "top_tokens": [
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.9771872758865356
+          },
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.013938828371465206
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.008454326540231705
+          },
+          {
+            "id": 99119,
+            "token": "CHILD",
+            "p": 0.0001366514479741454
+          },
+          {
+            "id": 1682,
+            "token": " child",
+            "p": 0.00012059448636136949
+          }
+        ],
+        "drop_log_odds": 9.241687774658203,
+        "drop_CH_minus_CI": -1.0,
+        "edit": {
+          "components": [
+            {
+              "transform": 219,
+              "raw": 0.9915945529937744,
+              "gate": 0.9915945529937744,
+              "threshold": 0.6754207611083984,
+              "contribution_norm": 6.460456848144531
+            }
+          ],
+          "intended_delta_norm": 6.460456848144531,
+          "actual_bf16_delta_norm": 6.435396671295166,
+          "native_mlp_norm": 10.197988510131836,
+          "other_positions_identical": true,
+          "file": "vectors/L6-T219-prediction.npz",
+          "sha256": "3aeb9e4c7cb5556364c034ff6051d23c3e4d33ce0b17717f9c59e204ddfb1750"
+        }
+      },
+      {
+        "condition": {
+          "id": "L13-T14-prediction",
+          "layer": 13,
+          "transform": 14,
+          "site": "prediction",
+          "position": 37,
+          "raw_cpu": 1.4782862663269043,
+          "threshold": -2.0027552432616827e-38,
+          "gate_cpu": 1.4782862663269043,
+          "near_threshold": false,
+          "cached_label": "Sentence-End Punctuation Trigger",
+          "kind": "single_molt",
+          "features": [
+            14
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -3.871554374694824,
+        "target_probability": 0.02082597278058529,
+        "target_log_odds": -3.8505096435546875,
+        "CH_minus_CI": 5.875,
+        "greedy_token_id": 3048,
+        "greedy_token": "child",
+        "top_tokens": [
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.8855429887771606
+          },
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.09333553910255432
+          },
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.02082597278058529
+          },
+          {
+            "id": 99119,
+            "token": "CHILD",
+            "p": 0.00010928467963822186
+          },
+          {
+            "id": 1682,
+            "token": " child",
+            "p": 7.511018338846043e-05
+          }
+        ],
+        "drop_log_odds": 8.83315658569336,
+        "drop_CH_minus_CI": -0.875,
+        "edit": {
+          "components": [
+            {
+              "transform": 14,
+              "raw": 1.4782861471176147,
+              "gate": 1.4782861471176147,
+              "threshold": -2.0027552432616827e-38,
+              "contribution_norm": 7.322787284851074
+            }
+          ],
+          "intended_delta_norm": 7.322787284851074,
+          "actual_bf16_delta_norm": 7.322235107421875,
+          "native_mlp_norm": 19.616838455200195,
+          "other_positions_identical": true,
+          "file": "vectors/L13-T14-prediction.npz",
+          "sha256": "f690aa24568a55d93b2d0a03d3f68b90f3e7946e8d05a763d26bc766a442e411"
+        }
+      },
+      {
+        "condition": {
+          "id": "L12-T1380-prediction",
+          "layer": 12,
+          "transform": 1380,
+          "site": "prediction",
+          "position": 37,
+          "raw_cpu": 3.5492706298828125,
+          "threshold": 0.7023265957832336,
+          "gate_cpu": 3.5492706298828125,
+          "near_threshold": false,
+          "cached_label": "Newline After Closing Tag",
+          "kind": "single_molt",
+          "features": [
+            1380
+          ],
+          "fraction": 1
+        },
+        "target_log_probability": -3.7482736110687256,
+        "target_probability": 0.02355838194489479,
+        "target_log_odds": -3.7244338989257812,
+        "CH_minus_CI": 7.25,
+        "greedy_token_id": 3652,
+        "greedy_token": "Child",
+        "top_tokens": [
+          {
+            "id": 3652,
+            "token": "Child",
+            "p": 0.607578694820404
+          },
+          {
+            "id": 3048,
+            "token": "child",
+            "p": 0.36851513385772705
+          },
+          {
+            "id": 2149,
+            "token": "CH",
+            "p": 0.02355838194489479
+          },
+          {
+            "id": 99119,
+            "token": "CHILD",
+            "p": 0.00029655618709512055
+          },
+          {
+            "id": 1682,
+            "token": " child",
+            "p": 1.6730555216781795e-05
+          }
+        ],
+        "drop_log_odds": 8.707080841064453,
+        "drop_CH_minus_CI": -2.25,
+        "edit": {
+          "components": [
+            {
+              "transform": 1380,
+              "raw": 3.5492687225341797,
+              "gate": 3.5492687225341797,
+              "threshold": 0.7023265957832336,
+              "contribution_norm": 6.464701175689697
+            }
+          ],
+          "intended_delta_norm": 6.464701175689697,
+          "actual_bf16_delta_norm": 6.465117931365967,
+          "native_mlp_norm": 16.344465255737305,
+          "other_positions_identical": true,
+          "file": "vectors/L12-T1380-prediction.npz",
+          "sha256": "18e86ad5a04383d9cc0dd90cc7aefbd70950ff8563fe446c997872d34168cd19"
+        }
+      }
+    ]
+  },
+  "confirmation_case_count": 16,
+  "confirmation_rows": 140,
+  "changed_first_token_full_answers": {
+    "L6-T219-prediction": {
+      "condition": {
+        "id": "L6-T219-prediction",
+        "layer": 6,
+        "transform": 219,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 0.9915986061096191,
+        "threshold": 0.6754207611083984,
+        "gate_cpu": 0.9915986061096191,
+        "near_threshold": false,
+        "cached_label": "Whitespace Delimiters Trigger Gate",
+        "kind": "single_molt",
+        "features": [
+          219
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.013938828371465206,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L6-T339-prediction": {
+      "condition": {
+        "id": "L6-T339-prediction",
+        "layer": 6,
+        "transform": 339,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.390190839767456,
+        "threshold": 0.5374847054481506,
+        "gate_cpu": 1.390190839767456,
+        "near_threshold": false,
+        "cached_label": "Newline After User Role Marker",
+        "kind": "single_molt",
+        "features": [
+          339
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.2205154448747635,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L9-T37-prediction": {
+      "condition": {
+        "id": "L9-T37-prediction",
+        "layer": 9,
+        "transform": 37,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.4958717823028564,
+        "threshold": 0.5234386920928955,
+        "gate_cpu": 1.4958717823028564,
+        "near_threshold": false,
+        "cached_label": "Creative Writing and Explanation Prompt Gate",
+        "kind": "single_molt",
+        "features": [
+          37
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.21593697369098663,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L10-T18-prediction": {
+      "condition": {
+        "id": "L10-T18-prediction",
+        "layer": 10,
+        "transform": 18,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.6404414176940918,
+        "threshold": -0.026443880051374435,
+        "gate_cpu": 1.6404414176940918,
+        "near_threshold": false,
+        "cached_label": "General New Input Context Trigger",
+        "kind": "single_molt",
+        "features": [
+          18
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.001854755450040102,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L10-T30-prediction": {
+      "condition": {
+        "id": "L10-T30-prediction",
+        "layer": 10,
+        "transform": 30,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.407892107963562,
+        "threshold": -6.87435323955457e-38,
+        "gate_cpu": 1.407892107963562,
+        "near_threshold": false,
+        "cached_label": "Creative Writing and Travel Prompt Gate",
+        "kind": "single_molt",
+        "features": [
+          30
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 2.7892607668000835e-10,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L10-T629-prediction": {
+      "condition": {
+        "id": "L10-T629-prediction",
+        "layer": 10,
+        "transform": 629,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 2.596132516860962,
+        "threshold": 0.6134929060935974,
+        "gate_cpu": 2.596132516860962,
+        "near_threshold": false,
+        "cached_label": "Newline After Think Tag",
+        "kind": "single_molt",
+        "features": [
+          629
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.003976425621658564,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L11-T14-prediction": {
+      "condition": {
+        "id": "L11-T14-prediction",
+        "layer": 11,
+        "transform": 14,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.494871973991394,
+        "threshold": -1.6419271945411317e-38,
+        "gate_cpu": 1.494871973991394,
+        "near_threshold": false,
+        "cached_label": "New User Turn Transition",
+        "kind": "single_molt",
+        "features": [
+          14
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.04964809864759445,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L11-T42-prediction": {
+      "condition": {
+        "id": "L11-T42-prediction",
+        "layer": 11,
+        "transform": 42,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.4958856105804443,
+        "threshold": 1.247379140354147e-38,
+        "gate_cpu": 1.4958856105804443,
+        "near_threshold": false,
+        "cached_label": "Creative Writing and Sensory Narrative Triggers",
+        "kind": "single_molt",
+        "features": [
+          42
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.09119866043329239,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L12-T14-prediction": {
+      "condition": {
+        "id": "L12-T14-prediction",
+        "layer": 12,
+        "transform": 14,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.5815074443817139,
+        "threshold": -5.687744910352029e-38,
+        "gate_cpu": 1.5815074443817139,
+        "near_threshold": false,
+        "cached_label": "New Turn and Paragraph Boundary Detection",
+        "kind": "single_molt",
+        "features": [
+          14
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.3718750774860382,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L12-T1380-prediction": {
+      "condition": {
+        "id": "L12-T1380-prediction",
+        "layer": 12,
+        "transform": 1380,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 3.5492706298828125,
+        "threshold": 0.7023265957832336,
+        "gate_cpu": 3.5492706298828125,
+        "near_threshold": false,
+        "cached_label": "Newline After Closing Tag",
+        "kind": "single_molt",
+        "features": [
+          1380
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.02355838194489479,
+      "answer": "Child: CH",
+      "output_token_ids": [
+        3652,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L12-T2017-prediction": {
+      "condition": {
+        "id": "L12-T2017-prediction",
+        "layer": 12,
+        "transform": 2017,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 2.6754395961761475,
+        "threshold": 0.6022109389305115,
+        "gate_cpu": 2.6754395961761475,
+        "near_threshold": false,
+        "cached_label": "Newline After Opening Think Tag",
+        "kind": "single_molt",
+        "features": [
+          2017
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.23076914250850677,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L13-T14-prediction": {
+      "condition": {
+        "id": "L13-T14-prediction",
+        "layer": 13,
+        "transform": 14,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.4782862663269043,
+        "threshold": -2.0027552432616827e-38,
+        "gate_cpu": 1.4782862663269043,
+        "near_threshold": false,
+        "cached_label": "Sentence-End Punctuation Trigger",
+        "kind": "single_molt",
+        "features": [
+          14
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.02082597278058529,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L14-T54-prediction": {
+      "condition": {
+        "id": "L14-T54-prediction",
+        "layer": 14,
+        "transform": 54,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.4220958948135376,
+        "threshold": 1.0160918300386223e-37,
+        "gate_cpu": 1.4220958948135376,
+        "near_threshold": false,
+        "cached_label": "Emotional and Interpersonal Narrative",
+        "kind": "single_molt",
+        "features": [
+          54
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 5.087475437903777e-05,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L14-T2090-prediction": {
+      "condition": {
+        "id": "L14-T2090-prediction",
+        "layer": 14,
+        "transform": 2090,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 3.02896785736084,
+        "threshold": 0.5681192278862,
+        "gate_cpu": 3.02896785736084,
+        "near_threshold": false,
+        "cached_label": "Newline Transition Between Think and Answer",
+        "kind": "single_molt",
+        "features": [
+          2090
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.14183767139911652,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    },
+    "L18-T51-prediction": {
+      "condition": {
+        "id": "L18-T51-prediction",
+        "layer": 18,
+        "transform": 51,
+        "site": "prediction",
+        "position": 37,
+        "raw_cpu": 1.5329010486602783,
+        "threshold": -1.8659569839281332e-38,
+        "gate_cpu": 1.5329010486602783,
+        "near_threshold": false,
+        "cached_label": "User Turn Start",
+        "kind": "single_molt",
+        "features": [
+          51
+        ],
+        "fraction": 1
+      },
+      "P_first_CH": 0.0001233342627529055,
+      "answer": "child: CH",
+      "output_token_ids": [
+        3048,
+        25,
+        6826,
+        151645
+      ]
+    }
+  },
+  "reconstruction_median_relative_L2_error": {
+    "source": 0.5480280518531799,
+    "prediction": 0.499786838889122
+  },
+  "interpretation": "L28-T1123 source ablation lowers CH and raises CI while retaining greedy CH. Many large prediction-position effects change output format to child: CH. Estimated contribution subtraction in native Qwen is not proof of CH specificity or absorption. Other positions and attention were not causally screened."
+}

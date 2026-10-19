@@ -1,0 +1,4346 @@
+{
+  "status": "complete",
+  "protocol": {
+    "base_repo": "Qwen/Qwen3-4B",
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_repo": "georglange/qwen3-4b-molt",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "runtime": {
+      "torch": "2.14.0+cu126",
+      "transformers": "4.57.6"
+    },
+    "experiment": "Joint input-only zero ablation: L3-T1372 plus L28-T1123",
+    "created_date": "2026-10-19",
+    "scope": "Two exact existing child prompts, uppercase and lowercase; only input child token 27 at each transform own layer; no generated-token edits.",
+    "intervention": "Native MLP output[token 27] minus each selected current-trajectory estimated contribution. Recompute L28 standardized input, gate and UV output after L3 ablation. FP32 accumulation then one BF16 cast. Native attention and other positions unchanged.",
+    "scoring": "Full greedy answers and separate cached teacher-forced native continuations. Uppercase P(CH) at first output; lowercase P( ch | native child:) at output step2. Also target-versus-CI/ci logit margins and log odds.",
+    "hypothesis": "Two-feature combined necessity/redundancy pilot; changes in gate or confidence alone do not prove absorption or mechanistic cooperation.",
+    "controls": "Unhooked native; zero-strength both-hook control; each single feature ablation; exact prior single-feature reproduction; independent CPU reconstruction of all edits and dynamic L28 input verification.",
+    "resources": "Reuse retained SPAR instance56698356; no rental or lifecycle action.",
+    "max_runtime_minutes": 10,
+    "conditions": [
+      {
+        "id": "native",
+        "removal_fractions": {}
+      },
+      {
+        "id": "zero_control",
+        "removal_fractions": {
+          "3": 0,
+          "28": 0
+        }
+      },
+      {
+        "id": "L3_only",
+        "removal_fractions": {
+          "3": 1,
+          "28": 0
+        }
+      },
+      {
+        "id": "L28_only",
+        "removal_fractions": {
+          "3": 0,
+          "28": 1
+        }
+      },
+      {
+        "id": "joint",
+        "removal_fractions": {
+          "3": 1,
+          "28": 1
+        }
+      }
+    ]
+  },
+  "assets": {
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "features": [
+      {
+        "layer": 3,
+        "transform": 1372,
+        "file": "L3-T1372.npz",
+        "sha256": "bcaa0d3ea9e315926d219e9e212d3752a2415fc98b7bdc5e86d54a9984d18053",
+        "source_file": "experiments/ch-alllayer-causal-screen/weights/layer-3.npz",
+        "source_sha256": "2d8b72a2c8ef28ffd59b1a60823d5caa4f5474fbb2ec5ea85a6d82aef47494cc"
+      },
+      {
+        "layer": 28,
+        "transform": 1123,
+        "file": "L28-T1123.npz",
+        "sha256": "ba2b6592ba475d0d6fb432034b96f1d8c302c9009c5218bc994e28fe5a3e97b4",
+        "source_file": "experiments/ch-alllayer-causal-screen/weights/layer-28.npz",
+        "source_sha256": "8f4d91ffaaa7f6ef7052a11c49bb6ac8fa0bb5670d2a8d544b407615f59e5644"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": {
+        "id": "native",
+        "removal_fractions": {}
+      },
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+      "free": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.9931907653808594,
+            "target_log_probability": -0.006832569371908903,
+            "target_log_odds": 4.982646942138672,
+            "target_minus_foil_logit": 5.0,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.9931907653808594
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.006692065857350826
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 9.545724606141448e-05
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 8.878907465259545e-06
+              },
+              {
+                "id": 1143,
+                "token": "Ch",
+                "p": 6.914899131515995e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 1.814026935663491e-14,
+            "target_log_probability": -31.640642166137695,
+            "target_log_odds": -31.640642166137695,
+            "target_minus_foil_logit": 1.828125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999825358390808
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 1.1478702617750969e-05
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 7.811355544617982e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 6.083489552111132e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 2.3823288586299896e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.9931907653808594,
+          "target_log_probability": -0.006832569371908903,
+          "target_log_odds": 4.982646942138672,
+          "target_minus_foil_logit": 5.0,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.9931907653808594
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.006692065857350826
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 9.545724606141448e-05
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 8.878907465259545e-06
+            },
+            {
+              "id": 1143,
+              "token": "Ch",
+              "p": 6.914899131515995e-06
+            }
+          ]
+        },
+        "input_observations": [],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.9931907653808594,
+            "target_log_probability": -0.006832569371908903,
+            "target_log_odds": 4.982646942138672,
+            "target_minus_foil_logit": 5.0,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.9931907653808594
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.006692065857350826
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 9.545724606141448e-05
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 8.878907465259545e-06
+              },
+              {
+                "id": 1143,
+                "token": "Ch",
+                "p": 6.914899131515995e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 1.814026935663491e-14,
+            "target_log_probability": -31.640642166137695,
+            "target_log_odds": -31.640642166137695,
+            "target_minus_foil_logit": 1.828125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999825358390808
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 1.1478702617750969e-05
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 7.811355544617982e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 6.083489552111132e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 2.3823288586299896e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.9931907653808594,
+          "target_log_probability": -0.006832569371908903,
+          "target_log_odds": 4.982646942138672,
+          "target_minus_foil_logit": 5.0,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.9931907653808594
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.006692065857350826
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 9.545724606141448e-05
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 8.878907465259545e-06
+            },
+            {
+              "id": 1143,
+              "token": "Ch",
+              "p": 6.914899131515995e-06
+            }
+          ]
+        },
+        "input_observations": [],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": {
+        "id": "zero_control",
+        "removal_fractions": {
+          "3": 0,
+          "28": 0
+        }
+      },
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+      "free": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.9931907653808594,
+            "target_log_probability": -0.006832569371908903,
+            "target_log_odds": 4.982646942138672,
+            "target_minus_foil_logit": 5.0,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.9931907653808594
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.006692065857350826
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 9.545724606141448e-05
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 8.878907465259545e-06
+              },
+              {
+                "id": 1143,
+                "token": "Ch",
+                "p": 6.914899131515995e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 1.814026935663491e-14,
+            "target_log_probability": -31.640642166137695,
+            "target_log_odds": -31.640642166137695,
+            "target_minus_foil_logit": 1.828125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999825358390808
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 1.1478702617750969e-05
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 7.811355544617982e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 6.083489552111132e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 2.3823288586299896e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.9931907653808594,
+          "target_log_probability": -0.006832569371908903,
+          "target_log_odds": 4.982646942138672,
+          "target_minus_foil_logit": 5.0,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.9931907653808594
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.006692065857350826
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 9.545724606141448e-05
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 8.878907465259545e-06
+            },
+            {
+              "id": 1143,
+              "token": "Ch",
+              "p": 6.914899131515995e-06
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.212066650390625,
+            "natural_gate": 3.212066650390625,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 3.212066650390625,
+            "contribution_norm": 6.584228038787842,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-zero_control-free-L3.npz",
+            "vector_sha256": "0d3a6cd96e12edfb784599daf1d13e2205ce722ae3bd7f8967415bcd4ad6b788"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.6963047981262207,
+            "natural_gate": 2.6963047981262207,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 2.6963047981262207,
+            "contribution_norm": 44.90857696533203,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 59.42403793334961,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-zero_control-free-L28.npz",
+            "vector_sha256": "f7f94529ed70051923572b465f077dd81000eec5da29b7dda0a44a032a1dd56d"
+          }
+        ],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.9931907653808594,
+            "target_log_probability": -0.006832569371908903,
+            "target_log_odds": 4.982646942138672,
+            "target_minus_foil_logit": 5.0,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.9931907653808594
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.006692065857350826
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 9.545724606141448e-05
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 8.878907465259545e-06
+              },
+              {
+                "id": 1143,
+                "token": "Ch",
+                "p": 6.914899131515995e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 1.814026935663491e-14,
+            "target_log_probability": -31.640642166137695,
+            "target_log_odds": -31.640642166137695,
+            "target_minus_foil_logit": 1.828125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999825358390808
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 1.1478702617750969e-05
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 7.811355544617982e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 6.083489552111132e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 2.3823288586299896e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.9931907653808594,
+          "target_log_probability": -0.006832569371908903,
+          "target_log_odds": 4.982646942138672,
+          "target_minus_foil_logit": 5.0,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.9931907653808594
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.006692065857350826
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 9.545724606141448e-05
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 8.878907465259545e-06
+            },
+            {
+              "id": 1143,
+              "token": "Ch",
+              "p": 6.914899131515995e-06
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.212066650390625,
+            "natural_gate": 3.212066650390625,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 3.212066650390625,
+            "contribution_norm": 6.584228038787842,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-zero_control-forced-L3.npz",
+            "vector_sha256": "0d3a6cd96e12edfb784599daf1d13e2205ce722ae3bd7f8967415bcd4ad6b788"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.6963047981262207,
+            "natural_gate": 2.6963047981262207,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 2.6963047981262207,
+            "contribution_norm": 44.90857696533203,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 59.42403793334961,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-zero_control-forced-L28.npz",
+            "vector_sha256": "f7f94529ed70051923572b465f077dd81000eec5da29b7dda0a44a032a1dd56d"
+          }
+        ],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": {
+        "id": "L3_only",
+        "removal_fractions": {
+          "3": 1,
+          "28": 0
+        }
+      },
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+      "free": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.9975383281707764,
+            "target_log_probability": -0.0024647116661071777,
+            "target_log_odds": 6.004383087158203,
+            "target_minus_foil_logit": 6.125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.9975383281707764
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.0021821060217916965
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 0.00020296756702009588
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 5.815118856844492e-05
+              },
+              {
+                "id": 1143,
+                "token": "Ch",
+                "p": 7.869907676649746e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 2.0879362149818503e-14,
+            "target_log_probability": -31.500015258789062,
+            "target_log_odds": -31.500015258789062,
+            "target_minus_foil_logit": 1.828125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999841451644897
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 1.012992925097933e-05
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 7.811362365828245e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 4.450780295428558e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 3.0589734478780883e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.9975383281707764,
+          "target_log_probability": -0.0024647116661071777,
+          "target_log_odds": 6.004383087158203,
+          "target_minus_foil_logit": 6.125,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.9975383281707764
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.0021821060217916965
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 0.00020296756702009588
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 5.815118856844492e-05
+            },
+            {
+              "id": 1143,
+              "token": "Ch",
+              "p": 7.869907676649746e-06
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.212066650390625,
+            "natural_gate": 3.212066650390625,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 6.584228038787842,
+            "actual_delta_norm": 6.584375858306885,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-L3_only-free-L3.npz",
+            "vector_sha256": "c90bb960a71744dba37ac6a4ac109b8a23366ac1d089dafd713dc1751dabb6eb"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.622390031814575,
+            "natural_gate": 2.622390031814575,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 2.622390031814575,
+            "contribution_norm": 43.38845443725586,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 58.783912658691406,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-L3_only-free-L28.npz",
+            "vector_sha256": "b85a55c825ee5a24164a5814d88b6e31df1944f7e4b883fc8b6533cbcf3ff5f4"
+          }
+        ],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.9975383281707764,
+            "target_log_probability": -0.0024647116661071777,
+            "target_log_odds": 6.004383087158203,
+            "target_minus_foil_logit": 6.125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.9975383281707764
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.0021821060217916965
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 0.00020296756702009588
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 5.815118856844492e-05
+              },
+              {
+                "id": 1143,
+                "token": "Ch",
+                "p": 7.869907676649746e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 2.0879362149818503e-14,
+            "target_log_probability": -31.500015258789062,
+            "target_log_odds": -31.500015258789062,
+            "target_minus_foil_logit": 1.828125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999841451644897
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 1.012992925097933e-05
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 7.811362365828245e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 4.450780295428558e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 3.0589734478780883e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.9975383281707764,
+          "target_log_probability": -0.0024647116661071777,
+          "target_log_odds": 6.004383087158203,
+          "target_minus_foil_logit": 6.125,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.9975383281707764
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.0021821060217916965
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 0.00020296756702009588
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 5.815118856844492e-05
+            },
+            {
+              "id": 1143,
+              "token": "Ch",
+              "p": 7.869907676649746e-06
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.212066650390625,
+            "natural_gate": 3.212066650390625,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 6.584228038787842,
+            "actual_delta_norm": 6.584375858306885,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-L3_only-forced-L3.npz",
+            "vector_sha256": "c90bb960a71744dba37ac6a4ac109b8a23366ac1d089dafd713dc1751dabb6eb"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.622390031814575,
+            "natural_gate": 2.622390031814575,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 2.622390031814575,
+            "contribution_norm": 43.38845443725586,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 58.783912658691406,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-L3_only-forced-L28.npz",
+            "vector_sha256": "b85a55c825ee5a24164a5814d88b6e31df1944f7e4b883fc8b6533cbcf3ff5f4"
+          }
+        ],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": {
+        "id": "L28_only",
+        "removal_fractions": {
+          "3": 0,
+          "28": 1
+        }
+      },
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+      "free": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.8168283104896545,
+            "target_log_probability": -0.20232632756233215,
+            "target_log_odds": 1.4950065612792969,
+            "target_minus_foil_logit": 1.5,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.8168283104896545
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.18225903809070587
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 0.0007448510732501745
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 8.895972860045731e-05
+              },
+              {
+                "id": 6484,
+                "token": "CD",
+                "p": 1.545888153486885e-05
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 1.1175917030465006e-14,
+            "target_log_probability": -32.12501525878906,
+            "target_log_odds": -32.12501525878906,
+            "target_minus_foil_logit": 1.203125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999829530715942
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 1.1478702617750969e-05
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 7.338089176300855e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 5.71491000300739e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 2.535975909268018e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.8168283104896545,
+          "target_log_probability": -0.20232632756233215,
+          "target_log_odds": 1.4950065612792969,
+          "target_minus_foil_logit": 1.5,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.8168283104896545
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.18225903809070587
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 0.0007448510732501745
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 8.895972860045731e-05
+            },
+            {
+              "id": 6484,
+              "token": "CD",
+              "p": 1.545888153486885e-05
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.212066650390625,
+            "natural_gate": 3.212066650390625,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 3.212066650390625,
+            "contribution_norm": 6.584228038787842,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-L28_only-free-L3.npz",
+            "vector_sha256": "0d3a6cd96e12edfb784599daf1d13e2205ce722ae3bd7f8967415bcd4ad6b788"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.6963047981262207,
+            "natural_gate": 2.6963047981262207,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 44.90857696533203,
+            "actual_delta_norm": 44.909332275390625,
+            "native_mlp_norm": 59.42403793334961,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-L28_only-free-L28.npz",
+            "vector_sha256": "27b72d5c94db1c26a460f5196d31633535a6cbdf18300b54c76a0ec5a6c6731d"
+          }
+        ],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.8168283104896545,
+            "target_log_probability": -0.20232632756233215,
+            "target_log_odds": 1.4950065612792969,
+            "target_minus_foil_logit": 1.5,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.8168283104896545
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.18225903809070587
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 0.0007448510732501745
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 8.895972860045731e-05
+              },
+              {
+                "id": 6484,
+                "token": "CD",
+                "p": 1.545888153486885e-05
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 1.1175917030465006e-14,
+            "target_log_probability": -32.12501525878906,
+            "target_log_odds": -32.12501525878906,
+            "target_minus_foil_logit": 1.203125,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999829530715942
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 1.1478702617750969e-05
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 7.338089176300855e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 5.71491000300739e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 2.535975909268018e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.8168283104896545,
+          "target_log_probability": -0.20232632756233215,
+          "target_log_odds": 1.4950065612792969,
+          "target_minus_foil_logit": 1.5,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.8168283104896545
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.18225903809070587
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 0.0007448510732501745
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 8.895972860045731e-05
+            },
+            {
+              "id": 6484,
+              "token": "CD",
+              "p": 1.545888153486885e-05
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.212066650390625,
+            "natural_gate": 3.212066650390625,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 3.212066650390625,
+            "contribution_norm": 6.584228038787842,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-L28_only-forced-L3.npz",
+            "vector_sha256": "0d3a6cd96e12edfb784599daf1d13e2205ce722ae3bd7f8967415bcd4ad6b788"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.6963047981262207,
+            "natural_gate": 2.6963047981262207,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 44.90857696533203,
+            "actual_delta_norm": 44.909332275390625,
+            "native_mlp_norm": 59.42403793334961,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-L28_only-forced-L28.npz",
+            "vector_sha256": "27b72d5c94db1c26a460f5196d31633535a6cbdf18300b54c76a0ec5a6c6731d"
+          }
+        ],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": {
+        "id": "joint",
+        "removal_fractions": {
+          "3": 1,
+          "28": 1
+        }
+      },
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+      "free": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.9227643013000488,
+            "target_log_probability": -0.08038149774074554,
+            "target_log_odds": 2.480510711669922,
+            "target_minus_foil_logit": 2.5,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.9227643013000488
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.0757451131939888
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 0.001080445945262909
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.00021275242033880204
+              },
+              {
+                "id": 23913,
+                "token": "HI",
+                "p": 0.0001290408690692857
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 1.3693019428832193e-14,
+            "target_log_probability": -31.921890258789062,
+            "target_log_odds": -31.921890258789062,
+            "target_minus_foil_logit": 1.25,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999853372573853
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 8.93964806891745e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 8.851450274960371e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 4.1811293272076e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 3.0589794164370687e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.9227643013000488,
+          "target_log_probability": -0.08038149774074554,
+          "target_log_odds": 2.480510711669922,
+          "target_minus_foil_logit": 2.5,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.9227643013000488
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.0757451131939888
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 0.001080445945262909
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 0.00021275242033880204
+            },
+            {
+              "id": 23913,
+              "token": "HI",
+              "p": 0.0001290408690692857
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.212066650390625,
+            "natural_gate": 3.212066650390625,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 6.584228038787842,
+            "actual_delta_norm": 6.584375858306885,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-joint-free-L3.npz",
+            "vector_sha256": "c90bb960a71744dba37ac6a4ac109b8a23366ac1d089dafd713dc1751dabb6eb"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.622390031814575,
+            "natural_gate": 2.622390031814575,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 43.38845443725586,
+            "actual_delta_norm": 43.387516021728516,
+            "native_mlp_norm": 58.783912658691406,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-joint-free-L28.npz",
+            "vector_sha256": "00fe2d833030d6464d0f43ae651614f7da172681c34332872f2369301d84a02c"
+          }
+        ],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 2149,
+            "chosen_token": "CH",
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 0.9227643013000488,
+            "target_log_probability": -0.08038149774074554,
+            "target_log_odds": 2.480510711669922,
+            "target_minus_foil_logit": 2.5,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 2149,
+                "token": "CH",
+                "p": 0.9227643013000488
+              },
+              {
+                "id": 11237,
+                "token": "CI",
+                "p": 0.0757451131939888
+              },
+              {
+                "id": 3652,
+                "token": "Child",
+                "p": 0.001080445945262909
+              },
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.00021275242033880204
+              },
+              {
+                "id": 23913,
+                "token": "HI",
+                "p": 0.0001290408690692857
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 2149,
+            "target_token": "CH",
+            "target_probability": 1.3693019428832193e-14,
+            "target_log_probability": -31.921890258789062,
+            "target_log_odds": -31.921890258789062,
+            "target_minus_foil_logit": 1.25,
+            "foil_token_id": 11237,
+            "foil_token": "CI",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999853372573853
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 8.93964806891745e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 8.851450274960371e-07
+              },
+              {
+                "id": 13,
+                "token": ".",
+                "p": 4.1811293272076e-07
+              },
+              {
+                "id": 271,
+                "token": "\n\n",
+                "p": 3.0589794164370687e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 0,
+        "target_score": {
+          "step": 0,
+          "chosen_token_id": 2149,
+          "chosen_token": "CH",
+          "greedy_token_id": 2149,
+          "greedy_token": "CH",
+          "target_token_id": 2149,
+          "target_token": "CH",
+          "target_probability": 0.9227643013000488,
+          "target_log_probability": -0.08038149774074554,
+          "target_log_odds": 2.480510711669922,
+          "target_minus_foil_logit": 2.5,
+          "foil_token_id": 11237,
+          "foil_token": "CI",
+          "top_tokens": [
+            {
+              "id": 2149,
+              "token": "CH",
+              "p": 0.9227643013000488
+            },
+            {
+              "id": 11237,
+              "token": "CI",
+              "p": 0.0757451131939888
+            },
+            {
+              "id": 3652,
+              "token": "Child",
+              "p": 0.001080445945262909
+            },
+            {
+              "id": 3048,
+              "token": "child",
+              "p": 0.00021275242033880204
+            },
+            {
+              "id": 23913,
+              "token": "HI",
+              "p": 0.0001290408690692857
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.212066650390625,
+            "natural_gate": 3.212066650390625,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 6.584228038787842,
+            "actual_delta_norm": 6.584375858306885,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-joint-forced-L3.npz",
+            "vector_sha256": "c90bb960a71744dba37ac6a4ac109b8a23366ac1d089dafd713dc1751dabb6eb"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.622390031814575,
+            "natural_gate": 2.622390031814575,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 43.38845443725586,
+            "actual_delta_norm": 43.387516021728516,
+            "native_mlp_norm": 58.783912658691406,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_upper_child-joint-forced-L28.npz",
+            "vector_sha256": "00fe2d833030d6464d0f43ae651614f7da172681c34332872f2369301d84a02c"
+          }
+        ],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": {
+        "id": "native",
+        "removal_fractions": {}
+      },
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+      "free": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 8.257616460191283e-14,
+            "target_log_probability": -30.12505531311035,
+            "target_log_odds": -30.12505340576172,
+            "target_minus_foil_logit": -2.0,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9999455213546753
+              },
+              {
+                "id": 14604,
+                "token": "chi",
+                "p": 1.6700792912160978e-05
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 1.1478276064735837e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 1.0129543625225779e-05
+              },
+              {
+                "id": 17794,
+                "token": "(child",
+                "p": 6.9619263740605675e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 2.5012408935310276e-21,
+            "target_log_probability": -47.4375,
+            "target_log_odds": -47.4375,
+            "target_minus_foil_logit": 7.65625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 1.5428111533547645e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 3.0379751448858516e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 1.62611098224923e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 5.982128261852607e-15
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.9996809959411621,
+            "target_log_probability": -0.0003190723655279726,
+            "target_log_odds": 8.05024528503418,
+            "target_minus_foil_logit": 11.75,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.9996809959411621
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.00029595018713735044
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.1475232895463705e-05
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 7.886804269219283e-06
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 9.419445632374845e-07
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.4783497342962804e-11,
+            "target_log_probability": -24.937509536743164,
+            "target_log_odds": -24.937509536743164,
+            "target_minus_foil_logit": 6.34765625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999911785125732
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.561266910561244e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.7603312016944983e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.8553755865013954e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.9996809959411621,
+          "target_log_probability": -0.0003190723655279726,
+          "target_log_odds": 8.05024528503418,
+          "target_minus_foil_logit": 11.75,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.9996809959411621
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.00029595018713735044
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.1475232895463705e-05
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 7.886804269219283e-06
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 9.419445632374845e-07
+            }
+          ]
+        },
+        "input_observations": [],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 8.257616460191283e-14,
+            "target_log_probability": -30.12505531311035,
+            "target_log_odds": -30.12505340576172,
+            "target_minus_foil_logit": -2.0,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9999455213546753
+              },
+              {
+                "id": 14604,
+                "token": "chi",
+                "p": 1.6700792912160978e-05
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 1.1478276064735837e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 1.0129543625225779e-05
+              },
+              {
+                "id": 17794,
+                "token": "(child",
+                "p": 6.9619263740605675e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 2.5012408935310276e-21,
+            "target_log_probability": -47.4375,
+            "target_log_odds": -47.4375,
+            "target_minus_foil_logit": 7.65625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 1.5428111533547645e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 3.0379751448858516e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 1.62611098224923e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 5.982128261852607e-15
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.9996809959411621,
+            "target_log_probability": -0.0003190723655279726,
+            "target_log_odds": 8.05024528503418,
+            "target_minus_foil_logit": 11.75,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.9996809959411621
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.00029595018713735044
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.1475232895463705e-05
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 7.886804269219283e-06
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 9.419445632374845e-07
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.4783497342962804e-11,
+            "target_log_probability": -24.937509536743164,
+            "target_log_odds": -24.937509536743164,
+            "target_minus_foil_logit": 6.34765625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999911785125732
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.561266910561244e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.7603312016944983e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.8553755865013954e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.9996809959411621,
+          "target_log_probability": -0.0003190723655279726,
+          "target_log_odds": 8.05024528503418,
+          "target_minus_foil_logit": 11.75,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.9996809959411621
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.00029595018713735044
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.1475232895463705e-05
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 7.886804269219283e-06
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 9.419445632374845e-07
+            }
+          ]
+        },
+        "input_observations": [],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": {
+        "id": "zero_control",
+        "removal_fractions": {
+          "3": 0,
+          "28": 0
+        }
+      },
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+      "free": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 8.257616460191283e-14,
+            "target_log_probability": -30.12505531311035,
+            "target_log_odds": -30.12505340576172,
+            "target_minus_foil_logit": -2.0,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9999455213546753
+              },
+              {
+                "id": 14604,
+                "token": "chi",
+                "p": 1.6700792912160978e-05
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 1.1478276064735837e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 1.0129543625225779e-05
+              },
+              {
+                "id": 17794,
+                "token": "(child",
+                "p": 6.9619263740605675e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 2.5012408935310276e-21,
+            "target_log_probability": -47.4375,
+            "target_log_odds": -47.4375,
+            "target_minus_foil_logit": 7.65625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 1.5428111533547645e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 3.0379751448858516e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 1.62611098224923e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 5.982128261852607e-15
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.9996809959411621,
+            "target_log_probability": -0.0003190723655279726,
+            "target_log_odds": 8.05024528503418,
+            "target_minus_foil_logit": 11.75,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.9996809959411621
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.00029595018713735044
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.1475232895463705e-05
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 7.886804269219283e-06
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 9.419445632374845e-07
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.4783497342962804e-11,
+            "target_log_probability": -24.937509536743164,
+            "target_log_odds": -24.937509536743164,
+            "target_minus_foil_logit": 6.34765625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999911785125732
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.561266910561244e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.7603312016944983e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.8553755865013954e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.9996809959411621,
+          "target_log_probability": -0.0003190723655279726,
+          "target_log_odds": 8.05024528503418,
+          "target_minus_foil_logit": 11.75,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.9996809959411621
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.00029595018713735044
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.1475232895463705e-05
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 7.886804269219283e-06
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 9.419445632374845e-07
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.243368625640869,
+            "natural_gate": 3.243368625640869,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 3.243368625640869,
+            "contribution_norm": 6.818336486816406,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-zero_control-free-L3.npz",
+            "vector_sha256": "bd0f9c7581d7fbb7009401bcebec8311096e5cf2e06bbb0aae637b95fa1f1e8d"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.7508020401000977,
+            "natural_gate": 2.7508020401000977,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 2.7508020401000977,
+            "contribution_norm": 45.50394821166992,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 60.23468780517578,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-zero_control-free-L28.npz",
+            "vector_sha256": "8d4746ca57985f7c0f625e98a17d380130ff4e5e8c188b51598f975f119739a9"
+          }
+        ],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 8.257616460191283e-14,
+            "target_log_probability": -30.12505531311035,
+            "target_log_odds": -30.12505340576172,
+            "target_minus_foil_logit": -2.0,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9999455213546753
+              },
+              {
+                "id": 14604,
+                "token": "chi",
+                "p": 1.6700792912160978e-05
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 1.1478276064735837e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 1.0129543625225779e-05
+              },
+              {
+                "id": 17794,
+                "token": "(child",
+                "p": 6.9619263740605675e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 2.5012408935310276e-21,
+            "target_log_probability": -47.4375,
+            "target_log_odds": -47.4375,
+            "target_minus_foil_logit": 7.65625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 1.5428111533547645e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 3.0379751448858516e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 1.62611098224923e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 5.982128261852607e-15
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.9996809959411621,
+            "target_log_probability": -0.0003190723655279726,
+            "target_log_odds": 8.05024528503418,
+            "target_minus_foil_logit": 11.75,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.9996809959411621
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.00029595018713735044
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.1475232895463705e-05
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 7.886804269219283e-06
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 9.419445632374845e-07
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.4783497342962804e-11,
+            "target_log_probability": -24.937509536743164,
+            "target_log_odds": -24.937509536743164,
+            "target_minus_foil_logit": 6.34765625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999911785125732
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.561266910561244e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.7603312016944983e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.8553755865013954e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.9996809959411621,
+          "target_log_probability": -0.0003190723655279726,
+          "target_log_odds": 8.05024528503418,
+          "target_minus_foil_logit": 11.75,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.9996809959411621
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.00029595018713735044
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.1475232895463705e-05
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 7.886804269219283e-06
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 9.419445632374845e-07
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.243368625640869,
+            "natural_gate": 3.243368625640869,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 3.243368625640869,
+            "contribution_norm": 6.818336486816406,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-zero_control-forced-L3.npz",
+            "vector_sha256": "bd0f9c7581d7fbb7009401bcebec8311096e5cf2e06bbb0aae637b95fa1f1e8d"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.7508020401000977,
+            "natural_gate": 2.7508020401000977,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 2.7508020401000977,
+            "contribution_norm": 45.50394821166992,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 60.23468780517578,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-zero_control-forced-L28.npz",
+            "vector_sha256": "8d4746ca57985f7c0f625e98a17d380130ff4e5e8c188b51598f975f119739a9"
+          }
+        ],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": {
+        "id": "L3_only",
+        "removal_fractions": {
+          "3": 1,
+          "28": 0
+        }
+      },
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+      "free": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.879112967659302e-12,
+            "target_log_probability": -27.000221252441406,
+            "target_log_odds": -27.000221252441406,
+            "target_minus_foil_logit": -0.25,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9997780919075012
+              },
+              {
+                "id": 14604,
+                "token": "chi",
+                "p": 9.609029802959412e-05
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 7.483519584638998e-05
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 1.892130239866674e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 1.6697989849490114e-05
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 5.295126817114666e-21,
+            "target_log_probability": -46.6875,
+            "target_log_odds": -46.6875,
+            "target_minus_foil_logit": 8.078125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 2.5436656904062604e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 3.9008374438584403e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 3.9008374438584403e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 7.68120477976069e-15
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.9997199773788452,
+            "target_log_probability": -0.00028010259848088026,
+            "target_log_odds": 8.180267333984375,
+            "target_minus_foil_logit": 12.125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.9997199773788452
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.00026118531241081655
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.0127253517566714e-05
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 5.420728484750725e-06
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 8.312956083500467e-07
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.4783526833261895e-11,
+            "target_log_probability": -24.93750762939453,
+            "target_log_odds": -24.93750762939453,
+            "target_minus_foil_logit": 6.33203125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999915361404419
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.7603312016944983e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.6373630273847084e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.9997199773788452,
+          "target_log_probability": -0.00028010259848088026,
+          "target_log_odds": 8.180267333984375,
+          "target_minus_foil_logit": 12.125,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.9997199773788452
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.00026118531241081655
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.0127253517566714e-05
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 5.420728484750725e-06
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 8.312956083500467e-07
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.243368625640869,
+            "natural_gate": 3.243368625640869,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 6.818336486816406,
+            "actual_delta_norm": 6.818601608276367,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-L3_only-free-L3.npz",
+            "vector_sha256": "425e6db9055453f193dda224cda4f61bf41cb9bfe80436d13e2357e742d1c268"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.623206615447998,
+            "natural_gate": 2.623206615447998,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 2.623206615447998,
+            "contribution_norm": 43.60383987426758,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 58.83284378051758,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-L3_only-free-L28.npz",
+            "vector_sha256": "693efa0321addbd3a1c45b7f96f06a3268f09cfd99b46eb04e95af5c39a0bbc5"
+          }
+        ],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.879112967659302e-12,
+            "target_log_probability": -27.000221252441406,
+            "target_log_odds": -27.000221252441406,
+            "target_minus_foil_logit": -0.25,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9997780919075012
+              },
+              {
+                "id": 14604,
+                "token": "chi",
+                "p": 9.609029802959412e-05
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 7.483519584638998e-05
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 1.892130239866674e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 1.6697989849490114e-05
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 5.295126817114666e-21,
+            "target_log_probability": -46.6875,
+            "target_log_odds": -46.6875,
+            "target_minus_foil_logit": 8.078125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 2.5436656904062604e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 3.9008374438584403e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 3.9008374438584403e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 7.68120477976069e-15
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.9997199773788452,
+            "target_log_probability": -0.00028010259848088026,
+            "target_log_odds": 8.180267333984375,
+            "target_minus_foil_logit": 12.125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.9997199773788452
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.00026118531241081655
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.0127253517566714e-05
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 5.420728484750725e-06
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 8.312956083500467e-07
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.4783526833261895e-11,
+            "target_log_probability": -24.93750762939453,
+            "target_log_odds": -24.93750762939453,
+            "target_minus_foil_logit": 6.33203125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999915361404419
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.7603312016944983e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.6373630273847084e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.9997199773788452,
+          "target_log_probability": -0.00028010259848088026,
+          "target_log_odds": 8.180267333984375,
+          "target_minus_foil_logit": 12.125,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.9997199773788452
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.00026118531241081655
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.0127253517566714e-05
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 5.420728484750725e-06
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 8.312956083500467e-07
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.243368625640869,
+            "natural_gate": 3.243368625640869,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 6.818336486816406,
+            "actual_delta_norm": 6.818601608276367,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-L3_only-forced-L3.npz",
+            "vector_sha256": "425e6db9055453f193dda224cda4f61bf41cb9bfe80436d13e2357e742d1c268"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.623206615447998,
+            "natural_gate": 2.623206615447998,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 2.623206615447998,
+            "contribution_norm": 43.60383987426758,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 58.83284378051758,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-L3_only-forced-L28.npz",
+            "vector_sha256": "693efa0321addbd3a1c45b7f96f06a3268f09cfd99b46eb04e95af5c39a0bbc5"
+          }
+        ],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": {
+        "id": "L28_only",
+        "removal_fractions": {
+          "3": 0,
+          "28": 1
+        }
+      },
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+      "free": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 6.56985689538158e-15,
+            "target_log_probability": -32.65628433227539,
+            "target_log_odds": -32.65628433227539,
+            "target_minus_foil_logit": -6.40625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9999644756317139
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 1.1478495252958965e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 7.889046173659153e-06
+              },
+              {
+                "id": 17794,
+                "token": "(child",
+                "p": 6.962059160287026e-06
+              },
+              {
+                "id": 5855,
+                "token": "ci",
+                "p": 6.962059160287026e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 7.628353615940375e-22,
+            "target_log_probability": -48.625,
+            "target_log_odds": -48.625,
+            "target_minus_foil_logit": 5.6875,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 1.5428111533547645e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 2.6810039512872516e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 1.842625309061638e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 5.982128261852607e-15
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.999610424041748,
+            "target_log_probability": -0.00038961926475167274,
+            "target_log_odds": 7.850292205810547,
+            "target_minus_foil_logit": 10.125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.999610424041748
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.000335331802489236
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 4.004967195214704e-05
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.012614302453585e-05
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 1.0672875987438601e-06
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 8.690786805487516e-12,
+            "target_log_probability": -25.46875762939453,
+            "target_log_odds": -25.46875762939453,
+            "target_minus_foil_logit": 5.767578125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999917149543762
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.7603312016944983e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.4449678076289274e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.999610424041748,
+          "target_log_probability": -0.00038961926475167274,
+          "target_log_odds": 7.850292205810547,
+          "target_minus_foil_logit": 10.125,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.999610424041748
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.000335331802489236
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 4.004967195214704e-05
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.012614302453585e-05
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 1.0672875987438601e-06
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.243368625640869,
+            "natural_gate": 3.243368625640869,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 3.243368625640869,
+            "contribution_norm": 6.818336486816406,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-L28_only-free-L3.npz",
+            "vector_sha256": "bd0f9c7581d7fbb7009401bcebec8311096e5cf2e06bbb0aae637b95fa1f1e8d"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.7508020401000977,
+            "natural_gate": 2.7508020401000977,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 45.50394821166992,
+            "actual_delta_norm": 45.50568389892578,
+            "native_mlp_norm": 60.23468780517578,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-L28_only-free-L28.npz",
+            "vector_sha256": "daacb940f76a42c384981884ed73ec6a8d02c60076f7fd78aaec6c1afccf57f0"
+          }
+        ],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 6.56985689538158e-15,
+            "target_log_probability": -32.65628433227539,
+            "target_log_odds": -32.65628433227539,
+            "target_minus_foil_logit": -6.40625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9999644756317139
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 1.1478495252958965e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 7.889046173659153e-06
+              },
+              {
+                "id": 17794,
+                "token": "(child",
+                "p": 6.962059160287026e-06
+              },
+              {
+                "id": 5855,
+                "token": "ci",
+                "p": 6.962059160287026e-06
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 7.628353615940375e-22,
+            "target_log_probability": -48.625,
+            "target_log_odds": -48.625,
+            "target_minus_foil_logit": 5.6875,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 1.5428111533547645e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 2.6810039512872516e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 1.842625309061638e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 5.982128261852607e-15
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.999610424041748,
+            "target_log_probability": -0.00038961926475167274,
+            "target_log_odds": 7.850292205810547,
+            "target_minus_foil_logit": 10.125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.999610424041748
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.000335331802489236
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 4.004967195214704e-05
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.012614302453585e-05
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 1.0672875987438601e-06
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 8.690786805487516e-12,
+            "target_log_probability": -25.46875762939453,
+            "target_log_odds": -25.46875762939453,
+            "target_minus_foil_logit": 5.767578125,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999917149543762
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 2.2603101115237223e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.7603312016944983e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.4449678076289274e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.999610424041748,
+          "target_log_probability": -0.00038961926475167274,
+          "target_log_odds": 7.850292205810547,
+          "target_minus_foil_logit": 10.125,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.999610424041748
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.000335331802489236
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 4.004967195214704e-05
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.012614302453585e-05
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 1.0672875987438601e-06
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.243368625640869,
+            "natural_gate": 3.243368625640869,
+            "removed_fraction": 0.0,
+            "estimated_remaining_gate": 3.243368625640869,
+            "contribution_norm": 6.818336486816406,
+            "actual_delta_norm": 0.0,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-L28_only-forced-L3.npz",
+            "vector_sha256": "bd0f9c7581d7fbb7009401bcebec8311096e5cf2e06bbb0aae637b95fa1f1e8d"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.7508020401000977,
+            "natural_gate": 2.7508020401000977,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 45.50394821166992,
+            "actual_delta_norm": 45.50568389892578,
+            "native_mlp_norm": 60.23468780517578,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-L28_only-forced-L28.npz",
+            "vector_sha256": "daacb940f76a42c384981884ed73ec6a8d02c60076f7fd78aaec6c1afccf57f0"
+          }
+        ],
+        "generated_tokens_edited": false
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": {
+        "id": "joint",
+        "removal_fractions": {
+          "3": 1,
+          "28": 1
+        }
+      },
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+      "free": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.5426315823699466e-13,
+            "target_log_probability": -29.5001163482666,
+            "target_log_odds": -29.500118255615234,
+            "target_minus_foil_logit": -5.5625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9998831152915955
+              },
+              {
+                "id": 5855,
+                "token": "ci",
+                "p": 4.539460860542022e-05
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 2.7533220418263227e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 1.8923286916106008e-05
+              },
+              {
+                "id": 17794,
+                "token": "(child",
+                "p": 1.3005771506868768e-05
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 3.639284098606831e-21,
+            "target_log_probability": -47.0625,
+            "target_log_odds": -47.0625,
+            "target_minus_foil_logit": 6.15625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 2.5436656904062604e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 5.6756852093598625e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 4.420228560345768e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 1.1176086437054457e-14
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.999630331993103,
+            "target_log_probability": -0.00036971885128878057,
+            "target_log_odds": 7.902435302734375,
+            "target_minus_foil_logit": 10.875,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.999630331993103
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.0003353385254740715
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 1.8918504792964086e-05
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.1474652637843974e-05
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 1.0673089718693518e-06
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 9.25129417517212e-12,
+            "target_log_probability": -25.40625762939453,
+            "target_log_odds": -25.40625762939453,
+            "target_minus_foil_logit": 5.85546875,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999922513961792
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.2603121578868013e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 1.99471855921729e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.5534883459622506e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.5381617401999392e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.999630331993103,
+          "target_log_probability": -0.00036971885128878057,
+          "target_log_odds": 7.902435302734375,
+          "target_minus_foil_logit": 10.875,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.999630331993103
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.0003353385254740715
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 1.8918504792964086e-05
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.1474652637843974e-05
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 1.0673089718693518e-06
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.243368625640869,
+            "natural_gate": 3.243368625640869,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 6.818336486816406,
+            "actual_delta_norm": 6.818601608276367,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-joint-free-L3.npz",
+            "vector_sha256": "425e6db9055453f193dda224cda4f61bf41cb9bfe80436d13e2357e742d1c268"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.623206615447998,
+            "natural_gate": 2.623206615447998,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 43.60383987426758,
+            "actual_delta_norm": 43.601806640625,
+            "native_mlp_norm": 58.83284378051758,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-joint-free-L28.npz",
+            "vector_sha256": "a38e37319a5429ed09efd2dc6cb4472fbdc6846c40104f01314ebcb1a4cbc044"
+          }
+        ],
+        "generated_tokens_edited": false
+      },
+      "forced": {
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "scores": [
+          {
+            "step": 0,
+            "chosen_token_id": 3048,
+            "chosen_token": "child",
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 1.5426315823699466e-13,
+            "target_log_probability": -29.5001163482666,
+            "target_log_odds": -29.500118255615234,
+            "target_minus_foil_logit": -5.5625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 3048,
+                "token": "child",
+                "p": 0.9998831152915955
+              },
+              {
+                "id": 5855,
+                "token": "ci",
+                "p": 4.539460860542022e-05
+              },
+              {
+                "id": 1682,
+                "token": " child",
+                "p": 2.7533220418263227e-05
+              },
+              {
+                "id": 17531,
+                "token": ".child",
+                "p": 1.8923286916106008e-05
+              },
+              {
+                "id": 17794,
+                "token": "(child",
+                "p": 1.3005771506868768e-05
+              }
+            ]
+          },
+          {
+            "step": 1,
+            "chosen_token_id": 25,
+            "chosen_token": ":",
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 3.639284098606831e-21,
+            "target_log_probability": -47.0625,
+            "target_log_odds": -47.0625,
+            "target_minus_foil_logit": 6.15625,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 25,
+                "token": ":",
+                "p": 1.0
+              },
+              {
+                "id": 5122,
+                "token": "\uff1a",
+                "p": 2.5436656904062604e-13
+              },
+              {
+                "id": 66963,
+                "token": ":**",
+                "p": 5.6756852093598625e-14
+              },
+              {
+                "id": 549,
+                "token": " :",
+                "p": 4.420228560345768e-14
+              },
+              {
+                "id": 76475,
+                "token": ":?",
+                "p": 1.1176086437054457e-14
+              }
+            ]
+          },
+          {
+            "step": 2,
+            "chosen_token_id": 521,
+            "chosen_token": " ch",
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 0.999630331993103,
+            "target_log_probability": -0.00036971885128878057,
+            "target_log_odds": 7.902435302734375,
+            "target_minus_foil_logit": 10.875,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 521,
+                "token": " ch",
+                "p": 0.999630331993103
+              },
+              {
+                "id": 25798,
+                "token": " chi",
+                "p": 0.0003353385254740715
+              },
+              {
+                "id": 11825,
+                "token": " ci",
+                "p": 1.8918504792964086e-05
+              },
+              {
+                "id": 331,
+                "token": "ch",
+                "p": 1.1474652637843974e-05
+              },
+              {
+                "id": 23049,
+                "token": "\tch",
+                "p": 1.0673089718693518e-06
+              }
+            ]
+          },
+          {
+            "step": 3,
+            "chosen_token_id": 151645,
+            "chosen_token": "<|im_end|>",
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "target_token_id": 521,
+            "target_token": " ch",
+            "target_probability": 9.25129417517212e-12,
+            "target_log_probability": -25.40625762939453,
+            "target_log_odds": -25.40625762939453,
+            "target_minus_foil_logit": 5.85546875,
+            "foil_token_id": 11825,
+            "foil_token": " ci",
+            "top_tokens": [
+              {
+                "id": 151645,
+                "token": "<|im_end|>",
+                "p": 0.9999922513961792
+              },
+              {
+                "id": 151668,
+                "token": "</think>",
+                "p": 2.2603121578868013e-06
+              },
+              {
+                "id": 11162,
+                "token": " \ufffd",
+                "p": 1.99471855921729e-06
+              },
+              {
+                "id": 25521,
+                "token": " \ufffd",
+                "p": 1.5534883459622506e-06
+              },
+              {
+                "id": 151643,
+                "token": "<|endoftext|>",
+                "p": 1.5381617401999392e-07
+              }
+            ]
+          }
+        ],
+        "target_step": 2,
+        "target_score": {
+          "step": 2,
+          "chosen_token_id": 521,
+          "chosen_token": " ch",
+          "greedy_token_id": 521,
+          "greedy_token": " ch",
+          "target_token_id": 521,
+          "target_token": " ch",
+          "target_probability": 0.999630331993103,
+          "target_log_probability": -0.00036971885128878057,
+          "target_log_odds": 7.902435302734375,
+          "target_minus_foil_logit": 10.875,
+          "foil_token_id": 11825,
+          "foil_token": " ci",
+          "top_tokens": [
+            {
+              "id": 521,
+              "token": " ch",
+              "p": 0.999630331993103
+            },
+            {
+              "id": 25798,
+              "token": " chi",
+              "p": 0.0003353385254740715
+            },
+            {
+              "id": 11825,
+              "token": " ci",
+              "p": 1.8918504792964086e-05
+            },
+            {
+              "id": 331,
+              "token": "ch",
+              "p": 1.1474652637843974e-05
+            },
+            {
+              "id": 23049,
+              "token": "\tch",
+              "p": 1.0673089718693518e-06
+            }
+          ]
+        },
+        "input_observations": [
+          {
+            "layer": 3,
+            "transform": 1372,
+            "position": 27,
+            "segment": "input",
+            "raw": 3.243368625640869,
+            "natural_gate": 3.243368625640869,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 6.818336486816406,
+            "actual_delta_norm": 6.818601608276367,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-joint-forced-L3.npz",
+            "vector_sha256": "425e6db9055453f193dda224cda4f61bf41cb9bfe80436d13e2357e742d1c268"
+          },
+          {
+            "layer": 28,
+            "transform": 1123,
+            "position": 27,
+            "segment": "input",
+            "raw": 2.623206615447998,
+            "natural_gate": 2.623206615447998,
+            "removed_fraction": 1.0,
+            "estimated_remaining_gate": 0.0,
+            "contribution_norm": 43.60383987426758,
+            "actual_delta_norm": 43.601806640625,
+            "native_mlp_norm": 58.83284378051758,
+            "other_positions_byte_identical": true,
+            "vector_file": "vectors/fewshot_lower_child-joint-forced-L28.npz",
+            "vector_sha256": "a38e37319a5429ed09efd2dc6cb4472fbdc6846c40104f01314ebcb1a4cbc044"
+          }
+        ],
+        "generated_tokens_edited": false
+      }
+    }
+  ],
+  "base_hashes_verified": true,
+  "source_sha256": {
+    "run.py": "91d4c9af31147b33d64d043675e519613e793be3994012df07a74ab45f607c69",
+    "protocol.json": "8ea8b010968c142ad8dc9ba606fe7f1a89e9a75e86c1ed5d7e44aa62d6d0db4e",
+    "cases.json": "c099fd78ccbb8f32c7dee8c703648ad388b31bc8c7e21c1f8c7465e1dc31a329"
+  },
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "elapsed_seconds": 4.930085259999032,
+  "native_attention_unchanged": true,
+  "restored_native_scores_bit_exact": true,
+  "all_edits_input_only": true
+}

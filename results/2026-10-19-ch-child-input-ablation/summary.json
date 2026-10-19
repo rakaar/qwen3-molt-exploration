@@ -1,0 +1,270 @@
+[
+  {
+    "case_id": "fewshot_upper_child",
+    "condition": "native",
+    "baseline_answer": "CH",
+    "answer": "CH",
+    "same_answer_tokens_as_baseline": true,
+    "stop_reason": "eos",
+    "conditional_gold_letter_token": "CH",
+    "conditional_gold_letter_probability": 0.9931907653808594,
+    "gold_letter_probability_prefix": [],
+    "sum_baseline_continuation_log_probability_without_eos": -0.006832569371908903,
+    "input_edit": null,
+    "response_Child_gate_traces": []
+  },
+  {
+    "case_id": "fewshot_upper_child",
+    "condition": "zero_control",
+    "baseline_answer": "CH",
+    "answer": "CH",
+    "same_answer_tokens_as_baseline": true,
+    "stop_reason": "eos",
+    "conditional_gold_letter_token": "CH",
+    "conditional_gold_letter_probability": 0.9931907653808594,
+    "gold_letter_probability_prefix": [],
+    "sum_baseline_continuation_log_probability_without_eos": -0.006832569371908903,
+    "input_edit": {
+      "feature": 1372,
+      "position": 27,
+      "token": "child",
+      "natural_gate": 3.212066650390625,
+      "removed_gate": 0.0,
+      "effective_estimated_gate": 3.212066650390625,
+      "lowrank_norm": 2.04984188079834,
+      "intended_delta_norm": 0.0,
+      "actual_bf16_delta_norm": 0.0,
+      "native_mlp_norm": 8.339771270751953,
+      "other_positions_at_intervention_boundary_identical": true,
+      "max_bf16_rounding_error": 0.0
+    },
+    "response_Child_gate_traces": [
+      {
+        "token": "CH",
+        "position": 38,
+        "gate": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "fewshot_upper_child",
+    "condition": "ablate_B",
+    "baseline_answer": "CH",
+    "answer": "CH",
+    "same_answer_tokens_as_baseline": true,
+    "stop_reason": "eos",
+    "conditional_gold_letter_token": "CH",
+    "conditional_gold_letter_probability": 0.9975383281707764,
+    "gold_letter_probability_prefix": [],
+    "sum_baseline_continuation_log_probability_without_eos": -0.0024647116661071777,
+    "input_edit": {
+      "feature": 1372,
+      "position": 27,
+      "token": "child",
+      "natural_gate": 3.212066650390625,
+      "removed_gate": 3.212066650390625,
+      "effective_estimated_gate": 0.0,
+      "lowrank_norm": 2.04984188079834,
+      "intended_delta_norm": 6.584228038787842,
+      "actual_bf16_delta_norm": 6.584375858306885,
+      "native_mlp_norm": 8.339771270751953,
+      "other_positions_at_intervention_boundary_identical": true,
+      "max_bf16_rounding_error": 0.0016616955399513245
+    },
+    "response_Child_gate_traces": [
+      {
+        "token": "CH",
+        "position": 38,
+        "gate": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "fewshot_upper_child",
+    "condition": "ablate_A_inactive_sanity",
+    "baseline_answer": "CH",
+    "answer": "CH",
+    "same_answer_tokens_as_baseline": true,
+    "stop_reason": "eos",
+    "conditional_gold_letter_token": "CH",
+    "conditional_gold_letter_probability": 0.9931907653808594,
+    "gold_letter_probability_prefix": [],
+    "sum_baseline_continuation_log_probability_without_eos": -0.006832569371908903,
+    "input_edit": {
+      "feature": 2334,
+      "position": 27,
+      "token": "child",
+      "natural_gate": 0.0,
+      "removed_gate": 0.0,
+      "effective_estimated_gate": 0.0,
+      "lowrank_norm": 0.42609333992004395,
+      "intended_delta_norm": 0.0,
+      "actual_bf16_delta_norm": 0.0,
+      "native_mlp_norm": 8.339771270751953,
+      "other_positions_at_intervention_boundary_identical": true,
+      "max_bf16_rounding_error": 0.0
+    },
+    "response_Child_gate_traces": [
+      {
+        "token": "CH",
+        "position": 38,
+        "gate": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "fewshot_lower_child",
+    "condition": "native",
+    "baseline_answer": "child: ch",
+    "answer": "child: ch",
+    "same_answer_tokens_as_baseline": true,
+    "stop_reason": "eos",
+    "conditional_gold_letter_token": " ch",
+    "conditional_gold_letter_probability": 0.9996809959411621,
+    "gold_letter_probability_prefix": [
+      "child",
+      ":"
+    ],
+    "sum_baseline_continuation_log_probability_without_eos": -0.0003735495265573263,
+    "input_edit": null,
+    "response_Child_gate_traces": []
+  },
+  {
+    "case_id": "fewshot_lower_child",
+    "condition": "zero_control",
+    "baseline_answer": "child: ch",
+    "answer": "child: ch",
+    "same_answer_tokens_as_baseline": true,
+    "stop_reason": "eos",
+    "conditional_gold_letter_token": " ch",
+    "conditional_gold_letter_probability": 0.9996809959411621,
+    "gold_letter_probability_prefix": [
+      "child",
+      ":"
+    ],
+    "sum_baseline_continuation_log_probability_without_eos": -0.0003735495265573263,
+    "input_edit": {
+      "feature": 1372,
+      "position": 27,
+      "token": "child",
+      "natural_gate": 3.243368625640869,
+      "removed_gate": 0.0,
+      "effective_estimated_gate": 3.243368625640869,
+      "lowrank_norm": 2.1022391319274902,
+      "intended_delta_norm": 0.0,
+      "actual_bf16_delta_norm": 0.0,
+      "native_mlp_norm": 9.188338279724121,
+      "other_positions_at_intervention_boundary_identical": true,
+      "max_bf16_rounding_error": 0.0
+    },
+    "response_Child_gate_traces": [
+      {
+        "token": "child",
+        "position": 38,
+        "gate": 2.856123924255371
+      },
+      {
+        "token": ":",
+        "position": 39,
+        "gate": 0.0
+      },
+      {
+        "token": " ch",
+        "position": 40,
+        "gate": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "fewshot_lower_child",
+    "condition": "ablate_B",
+    "baseline_answer": "child: ch",
+    "answer": "child: ch",
+    "same_answer_tokens_as_baseline": true,
+    "stop_reason": "eos",
+    "conditional_gold_letter_token": " ch",
+    "conditional_gold_letter_probability": 0.9997199773788452,
+    "gold_letter_probability_prefix": [
+      "child",
+      ":"
+    ],
+    "sum_baseline_continuation_log_probability_without_eos": -0.0005020456592319533,
+    "input_edit": {
+      "feature": 1372,
+      "position": 27,
+      "token": "child",
+      "natural_gate": 3.243368625640869,
+      "removed_gate": 3.243368625640869,
+      "effective_estimated_gate": 0.0,
+      "lowrank_norm": 2.1022391319274902,
+      "intended_delta_norm": 6.818336486816406,
+      "actual_bf16_delta_norm": 6.818601608276367,
+      "native_mlp_norm": 9.188338279724121,
+      "other_positions_at_intervention_boundary_identical": true,
+      "max_bf16_rounding_error": 0.0010119229555130005
+    },
+    "response_Child_gate_traces": [
+      {
+        "token": "child",
+        "position": 38,
+        "gate": 2.856123924255371
+      },
+      {
+        "token": ":",
+        "position": 39,
+        "gate": 0.0
+      },
+      {
+        "token": " ch",
+        "position": 40,
+        "gate": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "fewshot_lower_child",
+    "condition": "ablate_A_inactive_sanity",
+    "baseline_answer": "child: ch",
+    "answer": "child: ch",
+    "same_answer_tokens_as_baseline": true,
+    "stop_reason": "eos",
+    "conditional_gold_letter_token": " ch",
+    "conditional_gold_letter_probability": 0.9996809959411621,
+    "gold_letter_probability_prefix": [
+      "child",
+      ":"
+    ],
+    "sum_baseline_continuation_log_probability_without_eos": -0.0003735495265573263,
+    "input_edit": {
+      "feature": 2334,
+      "position": 27,
+      "token": "child",
+      "natural_gate": 0.0,
+      "removed_gate": 0.0,
+      "effective_estimated_gate": 0.0,
+      "lowrank_norm": 0.4317154884338379,
+      "intended_delta_norm": 0.0,
+      "actual_bf16_delta_norm": 0.0,
+      "native_mlp_norm": 9.188338279724121,
+      "other_positions_at_intervention_boundary_identical": true,
+      "max_bf16_rounding_error": 0.0
+    },
+    "response_Child_gate_traces": [
+      {
+        "token": "child",
+        "position": 38,
+        "gate": 2.856123924255371
+      },
+      {
+        "token": ":",
+        "position": 39,
+        "gate": 0.0
+      },
+      {
+        "token": " ch",
+        "position": 40,
+        "gate": 0.0
+      }
+    ]
+  }
+]
