@@ -1,0 +1,184 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Child MOLT ablation at input and generated tokens</title>
+<style>body{max-width:1150px;margin:32px auto;padding:0 20px;font:16px/1.55 system-ui,sans-serif;color:#172f3b;background:#fbfcfd}table{border-collapse:collapse;width:100%;background:white}td,th{border:1px solid #d4dfe6;text-align:left;padding:9px;white-space:pre-wrap}th{background:#eaf1f5}pre{white-space:pre-wrap;background:#eef3f6;padding:12px}details{border:1px solid #d4dfe6;background:white;margin:12px 0;padding:12px}summary{cursor:pointer;font-weight:650}.tablewrap{overflow-x:auto}</style>
+<h1>Child MOLT ablation at input and generated tokens</h1><p>Qwen3-4B · L3–T1372 · 19 October 2026</p><p><strong>Neither answer changed after ablating at the input and every generated child token.</strong></p>
+<p>Two unchanged few-shot spelling prompts, four fixed conditions, greedy decoding. Full ablation subtracts the current natural estimated Child MOLT contribution from the native layer-3 MLP at input child (position 27) and every processed generated child token. The actual edited BF16 vectors and token coverage are independently checked. CH/ch answer tokens are unedited.</p>
+<h2>Answers and conditional letter scores</h2><div class="tablewrap"><table><thead><tr><th>Prompt</th><th>Condition</th><th>Actual greedy answer</th><th>P(correct letter token given baseline prefix)</th><th>Nonzero edits</th></tr></thead><tbody><tr><td>fewshot_upper_child</td><td>native</td><td>CH</td><td>99.319077%</td><td>none</td></tr><tr><td>fewshot_upper_child</td><td>zero_control</td><td>CH</td><td>99.319077%</td><td>none</td></tr><tr><td>fewshot_upper_child</td><td>input_only</td><td>CH</td><td>99.753833%</td><td>prompt 27: gate 3.212067, edit norm 6.584376</td></tr><tr><td>fewshot_upper_child</td><td>input_and_generated</td><td>CH</td><td>99.753833%</td><td>prompt 27: gate 3.212067, edit norm 6.584376</td></tr><tr><td>fewshot_lower_child</td><td>native</td><td>child: ch</td><td>99.968100%</td><td>none</td></tr><tr><td>fewshot_lower_child</td><td>zero_control</td><td>child: ch</td><td>99.968100%</td><td>none</td></tr><tr><td>fewshot_lower_child</td><td>input_only</td><td>child: ch</td><td>99.971998%</td><td>prompt 27: gate 3.243369, edit norm 6.818602</td></tr><tr><td>fewshot_lower_child</td><td>input_and_generated</td><td>child: ch</td><td>99.968433%</td><td>prompt 27: gate 3.243369, edit norm 6.818602; response 38: gate 2.856124, edit norm 3.877826</td></tr></tbody></table></div>
+<p>Uppercase probability is P(CH) at the first output position. Lowercase probability is P( ch | child:), evaluated with the same baseline prefix in separate scoring replays. In the full-ablation condition the generated child is also edited during that replay. Conditional probabilities are not overall task success probabilities.</p>
+<h2>Timing and interpretation</h2><p>The uppercase baseline emits only CH, so both nonzero ablation scopes should be identical; the audit confirms this. The lowercase baseline first emits child, followed by : ch. Editing the generated child cannot undo that emitted word, but it can change subsequent predictions.</p>
+<p>The intervention removes an estimated MOLT component while preserving the rest of the native MLP, including its reconstruction remainder. Unchanged answers show this component was not necessary for these two answers under this intervention. They neither establish nor rule out absorbed CH information: redundancy and the native remainder may retain it. A changed answer would also require specificity controls before attributing it to CH information. This pilot has no active norm-matched controls or probe-aligned component interventions.</p>
+<h2>Exact prompts and token traces</h2><p>Native generation is unhooked; its displayed observations come from the separate baseline-continuation replay. All other displayed traces are from actual greedy generation.</p><details><summary>fewshot_upper_child / native</summary><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><p>Actual greedy answer:</p><pre>CH</pre><p>Edits, including zero-strength attempts:</p><pre>[]</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th><th>Selected for edit</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.212066650390625</td><td>False</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>38</td><td>&#x27;CH&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr></tbody></table></details><details><summary>fewshot_upper_child / zero_control</summary><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><p>Actual greedy answer:</p><pre>CH</pre><p>Edits, including zero-strength attempts:</p><pre>[
+  {
+    &quot;feature&quot;: 1372,
+    &quot;segment&quot;: &quot;prompt&quot;,
+    &quot;position&quot;: 27,
+    &quot;token_id&quot;: 3048,
+    &quot;token&quot;: &quot;child&quot;,
+    &quot;natural_gate&quot;: 3.212066650390625,
+    &quot;removed_gate&quot;: 0.0,
+    &quot;effective_estimated_gate&quot;: 3.212066650390625,
+    &quot;lowrank_norm&quot;: 2.04984188079834,
+    &quot;intended_delta_norm&quot;: 0.0,
+    &quot;actual_bf16_delta_norm&quot;: 0.0,
+    &quot;native_mlp_norm&quot;: 8.339771270751953,
+    &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+    &quot;max_bf16_rounding_error&quot;: 0.0
+  }
+]</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th><th>Selected for edit</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.212066650390625</td><td>True</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>38</td><td>&#x27;CH&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr></tbody></table></details><details><summary>fewshot_upper_child / input_only</summary><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><p>Actual greedy answer:</p><pre>CH</pre><p>Edits, including zero-strength attempts:</p><pre>[
+  {
+    &quot;feature&quot;: 1372,
+    &quot;segment&quot;: &quot;prompt&quot;,
+    &quot;position&quot;: 27,
+    &quot;token_id&quot;: 3048,
+    &quot;token&quot;: &quot;child&quot;,
+    &quot;natural_gate&quot;: 3.212066650390625,
+    &quot;removed_gate&quot;: 3.212066650390625,
+    &quot;effective_estimated_gate&quot;: 0.0,
+    &quot;lowrank_norm&quot;: 2.04984188079834,
+    &quot;intended_delta_norm&quot;: 6.584228038787842,
+    &quot;actual_bf16_delta_norm&quot;: 6.584375858306885,
+    &quot;native_mlp_norm&quot;: 8.339771270751953,
+    &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+    &quot;max_bf16_rounding_error&quot;: 0.0016616955399513245
+  }
+]</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th><th>Selected for edit</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.212066650390625</td><td>True</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>38</td><td>&#x27;CH&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr></tbody></table></details><details><summary>fewshot_upper_child / input_and_generated</summary><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><p>Actual greedy answer:</p><pre>CH</pre><p>Edits, including zero-strength attempts:</p><pre>[
+  {
+    &quot;feature&quot;: 1372,
+    &quot;segment&quot;: &quot;prompt&quot;,
+    &quot;position&quot;: 27,
+    &quot;token_id&quot;: 3048,
+    &quot;token&quot;: &quot;child&quot;,
+    &quot;natural_gate&quot;: 3.212066650390625,
+    &quot;removed_gate&quot;: 3.212066650390625,
+    &quot;effective_estimated_gate&quot;: 0.0,
+    &quot;lowrank_norm&quot;: 2.04984188079834,
+    &quot;intended_delta_norm&quot;: 6.584228038787842,
+    &quot;actual_bf16_delta_norm&quot;: 6.584375858306885,
+    &quot;native_mlp_norm&quot;: 8.339771270751953,
+    &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+    &quot;max_bf16_rounding_error&quot;: 0.0016616955399513245
+  }
+]</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th><th>Selected for edit</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.212066650390625</td><td>True</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>38</td><td>&#x27;CH&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr></tbody></table></details><details><summary>fewshot_lower_child / native</summary><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre><p>Actual greedy answer:</p><pre>child: ch</pre><p>Edits, including zero-strength attempts:</p><pre>[]</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th><th>Selected for edit</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.243368625640869</td><td>False</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>38</td><td>&#x27;child&#x27;</td><td>0.0</td><td>2.856123924255371</td><td>False</td></tr><tr><td>response</td><td>39</td><td>&#x27;:&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>40</td><td>&#x27; ch&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr></tbody></table></details><details><summary>fewshot_lower_child / zero_control</summary><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre><p>Actual greedy answer:</p><pre>child: ch</pre><p>Edits, including zero-strength attempts:</p><pre>[
+  {
+    &quot;feature&quot;: 1372,
+    &quot;segment&quot;: &quot;prompt&quot;,
+    &quot;position&quot;: 27,
+    &quot;token_id&quot;: 3048,
+    &quot;token&quot;: &quot;child&quot;,
+    &quot;natural_gate&quot;: 3.243368625640869,
+    &quot;removed_gate&quot;: 0.0,
+    &quot;effective_estimated_gate&quot;: 3.243368625640869,
+    &quot;lowrank_norm&quot;: 2.1022391319274902,
+    &quot;intended_delta_norm&quot;: 0.0,
+    &quot;actual_bf16_delta_norm&quot;: 0.0,
+    &quot;native_mlp_norm&quot;: 9.188338279724121,
+    &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+    &quot;max_bf16_rounding_error&quot;: 0.0
+  },
+  {
+    &quot;feature&quot;: 1372,
+    &quot;segment&quot;: &quot;response&quot;,
+    &quot;position&quot;: 38,
+    &quot;token_id&quot;: 3048,
+    &quot;token&quot;: &quot;child&quot;,
+    &quot;natural_gate&quot;: 2.856123924255371,
+    &quot;removed_gate&quot;: 0.0,
+    &quot;effective_estimated_gate&quot;: 2.856123924255371,
+    &quot;lowrank_norm&quot;: 1.3577057123184204,
+    &quot;intended_delta_norm&quot;: 0.0,
+    &quot;actual_bf16_delta_norm&quot;: 0.0,
+    &quot;native_mlp_norm&quot;: 7.433929443359375,
+    &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+    &quot;max_bf16_rounding_error&quot;: 0.0
+  }
+]</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th><th>Selected for edit</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.243368625640869</td><td>True</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>38</td><td>&#x27;child&#x27;</td><td>0.0</td><td>2.856123924255371</td><td>True</td></tr><tr><td>response</td><td>39</td><td>&#x27;:&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>40</td><td>&#x27; ch&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr></tbody></table></details><details><summary>fewshot_lower_child / input_only</summary><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre><p>Actual greedy answer:</p><pre>child: ch</pre><p>Edits, including zero-strength attempts:</p><pre>[
+  {
+    &quot;feature&quot;: 1372,
+    &quot;segment&quot;: &quot;prompt&quot;,
+    &quot;position&quot;: 27,
+    &quot;token_id&quot;: 3048,
+    &quot;token&quot;: &quot;child&quot;,
+    &quot;natural_gate&quot;: 3.243368625640869,
+    &quot;removed_gate&quot;: 3.243368625640869,
+    &quot;effective_estimated_gate&quot;: 0.0,
+    &quot;lowrank_norm&quot;: 2.1022391319274902,
+    &quot;intended_delta_norm&quot;: 6.818336486816406,
+    &quot;actual_bf16_delta_norm&quot;: 6.818601608276367,
+    &quot;native_mlp_norm&quot;: 9.188338279724121,
+    &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+    &quot;max_bf16_rounding_error&quot;: 0.0010119229555130005
+  }
+]</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th><th>Selected for edit</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.243368625640869</td><td>True</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>38</td><td>&#x27;child&#x27;</td><td>0.0</td><td>2.856123924255371</td><td>False</td></tr><tr><td>response</td><td>39</td><td>&#x27;:&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>40</td><td>&#x27; ch&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr></tbody></table></details><details><summary>fewshot_lower_child / input_and_generated</summary><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre><p>Actual greedy answer:</p><pre>child: ch</pre><p>Edits, including zero-strength attempts:</p><pre>[
+  {
+    &quot;feature&quot;: 1372,
+    &quot;segment&quot;: &quot;prompt&quot;,
+    &quot;position&quot;: 27,
+    &quot;token_id&quot;: 3048,
+    &quot;token&quot;: &quot;child&quot;,
+    &quot;natural_gate&quot;: 3.243368625640869,
+    &quot;removed_gate&quot;: 3.243368625640869,
+    &quot;effective_estimated_gate&quot;: 0.0,
+    &quot;lowrank_norm&quot;: 2.1022391319274902,
+    &quot;intended_delta_norm&quot;: 6.818336486816406,
+    &quot;actual_bf16_delta_norm&quot;: 6.818601608276367,
+    &quot;native_mlp_norm&quot;: 9.188338279724121,
+    &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+    &quot;max_bf16_rounding_error&quot;: 0.0010119229555130005
+  },
+  {
+    &quot;feature&quot;: 1372,
+    &quot;segment&quot;: &quot;response&quot;,
+    &quot;position&quot;: 38,
+    &quot;token_id&quot;: 3048,
+    &quot;token&quot;: &quot;child&quot;,
+    &quot;natural_gate&quot;: 2.856123924255371,
+    &quot;removed_gate&quot;: 2.856123924255371,
+    &quot;effective_estimated_gate&quot;: 0.0,
+    &quot;lowrank_norm&quot;: 1.3577057123184204,
+    &quot;intended_delta_norm&quot;: 3.8777756690979004,
+    &quot;actual_bf16_delta_norm&quot;: 3.87782621383667,
+    &quot;native_mlp_norm&quot;: 7.433929443359375,
+    &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+    &quot;max_bf16_rounding_error&quot;: 0.003346450626850128
+  }
+]</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th><th>Selected for edit</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.243368625640869</td><td>True</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>38</td><td>&#x27;child&#x27;</td><td>0.0</td><td>2.856123924255371</td><td>True</td></tr><tr><td>response</td><td>39</td><td>&#x27;:&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr><tr><td>response</td><td>40</td><td>&#x27; ch&#x27;</td><td>0.0</td><td>0.0</td><td>False</td></tr></tbody></table></details>
+<p><a href="summary.json">Summary JSON</a> · <a href="summary.csv">Summary CSV</a> · <a href="verification.json">Independent verification</a> · <a href="remote-export/artifacts/results.json">Complete results</a></p></html>

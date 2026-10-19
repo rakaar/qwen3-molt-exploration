@@ -1,0 +1,240 @@
+{
+  "rows": [
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "native",
+      "answer": "CH",
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "target_token": "CH",
+      "target_probability": 0.9931907653808594,
+      "target_log_odds": 4.982646942138672,
+      "target_minus_foil_logit": 5.0,
+      "source_gates": {},
+      "actual_delta_norms": {}
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "zero_control",
+      "answer": "CH",
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "target_token": "CH",
+      "target_probability": 0.9931907653808594,
+      "target_log_odds": 4.982646942138672,
+      "target_minus_foil_logit": 5.0,
+      "source_gates": {
+        "3": 3.212066650390625,
+        "28": 2.6963047981262207
+      },
+      "actual_delta_norms": {
+        "3": 0.0,
+        "28": 0.0
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L3_only",
+      "answer": "CH",
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "target_token": "CH",
+      "target_probability": 0.9975383281707764,
+      "target_log_odds": 6.004383087158203,
+      "target_minus_foil_logit": 6.125,
+      "source_gates": {
+        "3": 3.212066650390625,
+        "28": 2.622390031814575
+      },
+      "actual_delta_norms": {
+        "3": 6.584375858306885,
+        "28": 0.0
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L28_only",
+      "answer": "CH",
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "target_token": "CH",
+      "target_probability": 0.8168283104896545,
+      "target_log_odds": 1.4950065612792969,
+      "target_minus_foil_logit": 1.5,
+      "source_gates": {
+        "3": 3.212066650390625,
+        "28": 2.6963047981262207
+      },
+      "actual_delta_norms": {
+        "3": 0.0,
+        "28": 44.909332275390625
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "joint",
+      "answer": "CH",
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "target_token": "CH",
+      "target_probability": 0.9227643013000488,
+      "target_log_odds": 2.480510711669922,
+      "target_minus_foil_logit": 2.5,
+      "source_gates": {
+        "3": 3.212066650390625,
+        "28": 2.622390031814575
+      },
+      "actual_delta_norms": {
+        "3": 6.584375858306885,
+        "28": 43.387516021728516
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "native",
+      "answer": "child: ch",
+      "output_token_ids": [
+        3048,
+        25,
+        521,
+        151645
+      ],
+      "target_token": " ch",
+      "target_probability": 0.9996809959411621,
+      "target_log_odds": 8.05024528503418,
+      "target_minus_foil_logit": 11.75,
+      "source_gates": {},
+      "actual_delta_norms": {}
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "zero_control",
+      "answer": "child: ch",
+      "output_token_ids": [
+        3048,
+        25,
+        521,
+        151645
+      ],
+      "target_token": " ch",
+      "target_probability": 0.9996809959411621,
+      "target_log_odds": 8.05024528503418,
+      "target_minus_foil_logit": 11.75,
+      "source_gates": {
+        "3": 3.243368625640869,
+        "28": 2.7508020401000977
+      },
+      "actual_delta_norms": {
+        "3": 0.0,
+        "28": 0.0
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L3_only",
+      "answer": "child: ch",
+      "output_token_ids": [
+        3048,
+        25,
+        521,
+        151645
+      ],
+      "target_token": " ch",
+      "target_probability": 0.9997199773788452,
+      "target_log_odds": 8.180267333984375,
+      "target_minus_foil_logit": 12.125,
+      "source_gates": {
+        "3": 3.243368625640869,
+        "28": 2.623206615447998
+      },
+      "actual_delta_norms": {
+        "3": 6.818601608276367,
+        "28": 0.0
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L28_only",
+      "answer": "child: ch",
+      "output_token_ids": [
+        3048,
+        25,
+        521,
+        151645
+      ],
+      "target_token": " ch",
+      "target_probability": 0.999610424041748,
+      "target_log_odds": 7.850292205810547,
+      "target_minus_foil_logit": 10.125,
+      "source_gates": {
+        "3": 3.243368625640869,
+        "28": 2.7508020401000977
+      },
+      "actual_delta_norms": {
+        "3": 0.0,
+        "28": 45.50568389892578
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "joint",
+      "answer": "child: ch",
+      "output_token_ids": [
+        3048,
+        25,
+        521,
+        151645
+      ],
+      "target_token": " ch",
+      "target_probability": 0.999630331993103,
+      "target_log_odds": 7.902435302734375,
+      "target_minus_foil_logit": 10.875,
+      "source_gates": {
+        "3": 3.243368625640869,
+        "28": 2.623206615447998
+      },
+      "actual_delta_norms": {
+        "3": 6.818601608276367,
+        "28": 43.601806640625
+      }
+    }
+  ],
+  "dynamic_L28": [
+    {
+      "case_id": "fewshot_lower_child",
+      "L28_native_gate": 2.7508020401000977,
+      "L28_gate_after_L3_ablation": 2.623206615447998,
+      "L28_current_input_change_L2": 13.176654815673828,
+      "joint_uses_current_L28_input": true
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "L28_native_gate": 2.6963047981262207,
+      "L28_gate_after_L3_ablation": 2.622390031814575,
+      "L28_current_input_change_L2": 12.32131290435791,
+      "joint_uses_current_L28_input": true
+    }
+  ],
+  "factorial_interactions": [
+    {
+      "case_id": "fewshot_lower_child",
+      "joint_minus_additive_effect_log_odds": -0.07787895202636719,
+      "joint_minus_additive_effect_target_foil_margin": 0.375
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "joint_minus_additive_effect_log_odds": -0.03623199462890625,
+      "joint_minus_additive_effect_target_foil_margin": -0.125
+    }
+  ]
+}

@@ -1,0 +1,4092 @@
+{
+  "status": "complete",
+  "started_at_utc": "2026-10-19T11:18:47.681849+00:00",
+  "protocol": {
+    "experiment": "Input-only zero ablation of L3-T1372 on two child spelling prompts",
+    "created_date_local": "2026-10-19",
+    "base_repo": "Qwen/Qwen3-4B",
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_repo": "georglange/qwen3-4b-molt",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "features": [
+      {
+        "layer": 3,
+        "transform": 2334,
+        "rank": 32,
+        "label": "Ch-Initial Word Onset",
+        "dashboard_feature_fingerprint": "9df759a78802db7f7706ddfbf71b54e5d58228fb36de080b39084516908eab18"
+      },
+      {
+        "layer": 3,
+        "transform": 1372,
+        "rank": 32,
+        "label": "Token \"child\" in personal or familial contexts",
+        "dashboard_feature_fingerprint": "9df759a78802db7f7706ddfbf71b54e5d58228fb36de080b39084516908eab18"
+      }
+    ],
+    "case_ids": [
+      "fewshot_upper_child",
+      "fewshot_lower_child"
+    ],
+    "runtime": {
+      "torch": "2.14.0+cu126",
+      "transformers": "4.57.6"
+    },
+    "decoding": {
+      "do_sample": false,
+      "enable_thinking": false,
+      "use_cache": true,
+      "max_new_tokens": 16
+    },
+    "gate_method": "raw = standardized pre_norm residual dot encoder row + bias; g = raw if raw > released theta and raw > 0, else 0.",
+    "native_computation": "Native model retained. Subtract the selected estimated MOLT contribution only at the input child token, in layer 3 native raw MLP output. All other layer-3 positions remain byte-identical at the intervention boundary. Attention remains unfrozen.",
+    "timing": "A gate at output token CH is measured while processing that already emitted token. The prompt-final position predicts the first answer token. Both are recorded.",
+    "max_runtime_minutes": 15,
+    "resource": "Reuse retained SPAR instance 56698356; separate directory and process; no new rental or lifecycle changes.",
+    "scope": "Two exact existing prompts and fixed source input position 27. No answer token edits, no other layers, no strength search, and no output-word ablation. Regenerated child tokens are observed but unmodified.",
+    "conditions": [
+      {
+        "id": "native",
+        "feature": null,
+        "removal_fraction": null
+      },
+      {
+        "id": "zero_control",
+        "feature": 1372,
+        "removal_fraction": 0.0
+      },
+      {
+        "id": "ablate_B",
+        "feature": 1372,
+        "removal_fraction": 1.0
+      },
+      {
+        "id": "ablate_A_inactive_sanity",
+        "feature": 2334,
+        "removal_fraction": 1.0
+      }
+    ],
+    "intervention": "native_MLP_output[child] -= removal_fraction * natural_gate(feature, child) * ((z_child @ V_feature) @ U_feature) * output_std_3; z_child is residual after attention 3, before native post-attention normalization, standardized with released MOLT statistics. FP32 delta; cast edited output to BF16.",
+    "scoring": "Compare full native greedy answers. Separately teacher-force the saved baseline continuation for each condition to compare identical-prefix log probabilities. In lowercase the baseline continuation echoes child; that generated word is unedited.",
+    "controls": "Unhooked native reproduces saved baseline; zero-strength hook and inactive CH-feature ablation reproduce native tokens. These are implementation sanity checks, not active norm-matched specificity controls.",
+    "limits": "Subtraction removes an estimated component from the native MLP while preserving its other computation, including its reconstruction remainder. No full MOLT replacement or claim of complete task necessity. No matched active controls or CH-probe component tests in this pilot."
+  },
+  "assets": {
+    "repo": "georglange/qwen3-4b-molt",
+    "revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "slice_hashes_verified": true,
+    "whole_checkpoint_not_downloaded": true,
+    "features": [
+      {
+        "layer": 3,
+        "transform": 2334,
+        "rank": 32,
+        "label": "Ch-Initial Word Onset",
+        "dashboard_feature_fingerprint": "9df759a78802db7f7706ddfbf71b54e5d58228fb36de080b39084516908eab18",
+        "file": "L3-T2334.npz",
+        "bytes": 630029,
+        "sha256": "5518abe4614b25b7653837da6530f91c1b5c562a8bf303f6790a446f60abe79a",
+        "source_config_sha256": "d0c302a232715b377e1885b2398d6bdb1487672aa463b4ac782403b7a8db0f7c",
+        "source_header_sha256": "ca401d021d0dbd3d713302f8d20f3df0b3ea1595c03dbdd2db08e7985e8b8b91",
+        "records": [
+          {
+            "source_tensor": "e.weight",
+            "source_shape": [
+              2480,
+              2560
+            ],
+            "source_dtype": "F32",
+            "flat_start": 5975040,
+            "elements": 2560,
+            "byte_range_inclusive": [
+              4218215808,
+              4218226047
+            ],
+            "slice_sha256": "4414501866a23f36ec48bceb5b922bd067e26b0a0d570fd8119bd5327be7e138"
+          },
+          {
+            "source_tensor": "e.bias",
+            "source_shape": [
+              2480
+            ],
+            "source_dtype": "F32",
+            "flat_start": 2334,
+            "elements": 1,
+            "byte_range_inclusive": [
+              4194315064,
+              4194315067
+            ],
+            "slice_sha256": "447f1bea5cebb5db74573514cd89118e3caa3fa406340a11c563cda909746b9c"
+          },
+          {
+            "source_tensor": "nonlinearity.theta",
+            "source_shape": [
+              1,
+              2480
+            ],
+            "source_dtype": "F32",
+            "flat_start": 2334,
+            "elements": 1,
+            "byte_range_inclusive": [
+              4219720188,
+              4219720191
+            ],
+            "slice_sha256": "a30a6b97591e27cb4b18c4cd9fceaac1a11a2684668fb7cce094fdafb0195025"
+          },
+          {
+            "source_tensor": "input_standardizer.mean",
+            "source_shape": [
+              36,
+              2560
+            ],
+            "source_dtype": "BF16",
+            "flat_start": 7680,
+            "elements": 2560,
+            "byte_range_inclusive": [
+              4219736132,
+              4219741251
+            ],
+            "slice_sha256": "c3dfb4fc39459b44cb7d377fd5a8644831c71e836384c6127cb21665b7ba3f00"
+          },
+          {
+            "source_tensor": "input_standardizer.std",
+            "source_shape": [
+              36,
+              2560
+            ],
+            "source_dtype": "BF16",
+            "flat_start": 7680,
+            "elements": 2560,
+            "byte_range_inclusive": [
+              4219920452,
+              4219925571
+            ],
+            "slice_sha256": "4771591ac17b24d3b49874c2184ab56facf3a4816e1219a22d8f476edfd152ed"
+          },
+          {
+            "source_tensor": "output_standardizer.std",
+            "source_shape": [
+              36,
+              2560
+            ],
+            "source_dtype": "BF16",
+            "flat_start": 7680,
+            "elements": 2560,
+            "byte_range_inclusive": [
+              4220289092,
+              4220294211
+            ],
+            "slice_sha256": "9ab56135decdfbad3efc934ce968bab91baf4f63f392a52e3b054d03d8640f3f"
+          },
+          {
+            "source_tensor": "Us.4",
+            "source_shape": [
+              1280,
+              32,
+              2560
+            ],
+            "source_dtype": "F32",
+            "flat_start": 92897280,
+            "elements": 81920,
+            "byte_range_inclusive": [
+              2049312448,
+              2049640127
+            ],
+            "slice_sha256": "600869c8ad78e630e8d940a8b9e9e6f254a431c51325a48dbafb3bcc83454f8d"
+          },
+          {
+            "source_tensor": "Vs.4",
+            "source_shape": [
+              1280,
+              2560,
+              32
+            ],
+            "source_dtype": "F32",
+            "flat_start": 92897280,
+            "elements": 81920,
+            "byte_range_inclusive": [
+              4146464448,
+              4146792127
+            ],
+            "slice_sha256": "45af0c5cfc77538c928b03e3e622cd69bd7cb0107a31de568cffb0e9822f8844"
+          }
+        ],
+        "theta": 0.7585287094116211,
+        "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-03/checkpoint.safetensors",
+        "whole_checkpoint_lfs_sha256": "b61bf2e38eb6753d58224a03cf3145b41e3500067c63e6de10eaabdebd4d22ae",
+        "whole_checkpoint_bytes": 4220458052
+      },
+      {
+        "layer": 3,
+        "transform": 1372,
+        "rank": 32,
+        "label": "Token \"child\" in personal or familial contexts",
+        "dashboard_feature_fingerprint": "9df759a78802db7f7706ddfbf71b54e5d58228fb36de080b39084516908eab18",
+        "file": "L3-T1372.npz",
+        "bytes": 630554,
+        "sha256": "a6f08ed79f98aa886b7939974007dae5a09ddb0da3b864b1c708c5d0edd5a05c",
+        "source_config_sha256": "d0c302a232715b377e1885b2398d6bdb1487672aa463b4ac782403b7a8db0f7c",
+        "source_header_sha256": "ca401d021d0dbd3d713302f8d20f3df0b3ea1595c03dbdd2db08e7985e8b8b91",
+        "records": [
+          {
+            "source_tensor": "e.weight",
+            "source_shape": [
+              2480,
+              2560
+            ],
+            "source_dtype": "F32",
+            "flat_start": 3512320,
+            "elements": 2560,
+            "byte_range_inclusive": [
+              4208364928,
+              4208375167
+            ],
+            "slice_sha256": "35000fc289ead0d37ebe017def2b55948f5d2997f250190880c14c03c456f043"
+          },
+          {
+            "source_tensor": "e.bias",
+            "source_shape": [
+              2480
+            ],
+            "source_dtype": "F32",
+            "flat_start": 1372,
+            "elements": 1,
+            "byte_range_inclusive": [
+              4194311216,
+              4194311219
+            ],
+            "slice_sha256": "bf8d3419547cca9127c66519706b6208e8fe75f4188c26a4962b5e448dee379c"
+          },
+          {
+            "source_tensor": "nonlinearity.theta",
+            "source_shape": [
+              1,
+              2480
+            ],
+            "source_dtype": "F32",
+            "flat_start": 1372,
+            "elements": 1,
+            "byte_range_inclusive": [
+              4219716340,
+              4219716343
+            ],
+            "slice_sha256": "725c46651e9945281f4a8030034edbf384eeb13238a28e3392832d406249f280"
+          },
+          {
+            "source_tensor": "input_standardizer.mean",
+            "source_shape": [
+              36,
+              2560
+            ],
+            "source_dtype": "BF16",
+            "flat_start": 7680,
+            "elements": 2560,
+            "byte_range_inclusive": [
+              4219736132,
+              4219741251
+            ],
+            "slice_sha256": "c3dfb4fc39459b44cb7d377fd5a8644831c71e836384c6127cb21665b7ba3f00"
+          },
+          {
+            "source_tensor": "input_standardizer.std",
+            "source_shape": [
+              36,
+              2560
+            ],
+            "source_dtype": "BF16",
+            "flat_start": 7680,
+            "elements": 2560,
+            "byte_range_inclusive": [
+              4219920452,
+              4219925571
+            ],
+            "slice_sha256": "4771591ac17b24d3b49874c2184ab56facf3a4816e1219a22d8f476edfd152ed"
+          },
+          {
+            "source_tensor": "output_standardizer.std",
+            "source_shape": [
+              36,
+              2560
+            ],
+            "source_dtype": "BF16",
+            "flat_start": 7680,
+            "elements": 2560,
+            "byte_range_inclusive": [
+              4220289092,
+              4220294211
+            ],
+            "slice_sha256": "9ab56135decdfbad3efc934ce968bab91baf4f63f392a52e3b054d03d8640f3f"
+          },
+          {
+            "source_tensor": "Us.4",
+            "source_shape": [
+              1280,
+              32,
+              2560
+            ],
+            "source_dtype": "F32",
+            "flat_start": 14090240,
+            "elements": 81920,
+            "byte_range_inclusive": [
+              1734084288,
+              1734411967
+            ],
+            "slice_sha256": "1197d1eaeceba16f09a56976d0eab32794226a31ac18777daa279fa20b3e9ff4"
+          },
+          {
+            "source_tensor": "Vs.4",
+            "source_shape": [
+              1280,
+              2560,
+              32
+            ],
+            "source_dtype": "F32",
+            "flat_start": 14090240,
+            "elements": 81920,
+            "byte_range_inclusive": [
+              3831236288,
+              3831563967
+            ],
+            "slice_sha256": "2495da21e027c24e7f0daa239314774bdf975d6a34a544cdfae8dcc4d86c3b4a"
+          }
+        ],
+        "theta": 0.7315160036087036,
+        "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-03/checkpoint.safetensors",
+        "whole_checkpoint_lfs_sha256": "b61bf2e38eb6753d58224a03cf3145b41e3500067c63e6de10eaabdebd4d22ae",
+        "whole_checkpoint_bytes": 4220458052
+      }
+    ]
+  },
+  "rows": [
+    {
+      "case_id": "fewshot_upper_child",
+      "condition_id": "native",
+      "generation": {
+        "case_id": "fewshot_upper_child",
+        "condition": {
+          "id": "native",
+          "feature": null,
+          "removal_fraction": null
+        },
+        "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          39482,
+          382,
+          70,
+          8341,
+          25,
+          26341,
+          198,
+          5507,
+          25,
+          41923,
+          198,
+          2005,
+          25,
+          38891,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "answer": "CH",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 2149,
+            "token": "CH",
+            "probability": 0.9931907653808594
+          },
+          {
+            "token_id": 11237,
+            "token": "CI",
+            "probability": 0.006692065857350826
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 9.545724606141448e-05
+          },
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 8.878907465259545e-06
+          },
+          {
+            "token_id": 1143,
+            "token": "Ch",
+            "probability": 6.914899131515995e-06
+          },
+          {
+            "token_id": 6484,
+            "token": "CD",
+            "probability": 1.3616245269076899e-06
+          },
+          {
+            "token_id": 99119,
+            "token": "CHILD",
+            "probability": 1.2016294022032525e-06
+          },
+          {
+            "token_id": 56635,
+            "token": "Chi",
+            "probability": 7.288250571946264e-07
+          }
+        ],
+        "native_generation_unhooked": true,
+        "forced_baseline_continuation": false,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 2149,
+            "token": "CH",
+            "log_probability": -0.006832569371908903,
+            "probability": 0.9931907653808594,
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -1.7523612768854946e-05,
+            "probability": 0.9999825358390808,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.006832569371908903,
+        "traces": [],
+        "edits": [],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      },
+      "baseline_continuation_scores": {
+        "case_id": "fewshot_upper_child",
+        "condition": {
+          "id": "native",
+          "feature": null,
+          "removal_fraction": null
+        },
+        "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          39482,
+          382,
+          70,
+          8341,
+          25,
+          26341,
+          198,
+          5507,
+          25,
+          41923,
+          198,
+          2005,
+          25,
+          38891,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "answer": "CH",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 2149,
+            "token": "CH",
+            "probability": 0.9931907653808594
+          },
+          {
+            "token_id": 11237,
+            "token": "CI",
+            "probability": 0.006692065857350826
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 9.545724606141448e-05
+          },
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 8.878907465259545e-06
+          },
+          {
+            "token_id": 1143,
+            "token": "Ch",
+            "probability": 6.914899131515995e-06
+          },
+          {
+            "token_id": 6484,
+            "token": "CD",
+            "probability": 1.3616245269076899e-06
+          },
+          {
+            "token_id": 99119,
+            "token": "CHILD",
+            "probability": 1.2016294022032525e-06
+          },
+          {
+            "token_id": 56635,
+            "token": "Chi",
+            "probability": 7.288250571946264e-07
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": true,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 2149,
+            "token": "CH",
+            "log_probability": -0.006832569371908903,
+            "probability": 0.9931907653808594,
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -1.7523612768854946e-05,
+            "probability": 0.9999825358390808,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.006832569371908903,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.4094380140304565,
+                "gate": 0.0,
+                "lowrank_norm": 0.42609333992004395,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.212066650390625,
+                "gate": 3.212066650390625,
+                "lowrank_norm": 2.04984188079834,
+                "contribution_norm": 6.584228038787842
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0325779914855957,
+                "gate": 0.0,
+                "lowrank_norm": 0.253621369600296,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6563673615455627,
+                "gate": 0.0,
+                "lowrank_norm": 0.1220875009894371,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 2149,
+            "token": "CH",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.28030210733413696,
+                "gate": 0.0,
+                "lowrank_norm": 0.269304096698761,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.2717580795288086,
+                "gate": 0.0,
+                "lowrank_norm": 0.7268505692481995,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition_id": "zero_control",
+      "generation": {
+        "case_id": "fewshot_upper_child",
+        "condition": {
+          "id": "zero_control",
+          "feature": 1372,
+          "removal_fraction": 0.0
+        },
+        "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          39482,
+          382,
+          70,
+          8341,
+          25,
+          26341,
+          198,
+          5507,
+          25,
+          41923,
+          198,
+          2005,
+          25,
+          38891,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "answer": "CH",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 2149,
+            "token": "CH",
+            "probability": 0.9931907653808594
+          },
+          {
+            "token_id": 11237,
+            "token": "CI",
+            "probability": 0.006692065857350826
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 9.545724606141448e-05
+          },
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 8.878907465259545e-06
+          },
+          {
+            "token_id": 1143,
+            "token": "Ch",
+            "probability": 6.914899131515995e-06
+          },
+          {
+            "token_id": 6484,
+            "token": "CD",
+            "probability": 1.3616245269076899e-06
+          },
+          {
+            "token_id": 99119,
+            "token": "CHILD",
+            "probability": 1.2016294022032525e-06
+          },
+          {
+            "token_id": 56635,
+            "token": "Chi",
+            "probability": 7.288250571946264e-07
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": false,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 2149,
+            "token": "CH",
+            "log_probability": -0.006832569371908903,
+            "probability": 0.9931907653808594,
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -1.7523612768854946e-05,
+            "probability": 0.9999825358390808,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.006832569371908903,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.4094380140304565,
+                "gate": 0.0,
+                "lowrank_norm": 0.42609333992004395,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.212066650390625,
+                "gate": 3.212066650390625,
+                "lowrank_norm": 2.04984188079834,
+                "contribution_norm": 6.584228038787842
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0325779914855957,
+                "gate": 0.0,
+                "lowrank_norm": 0.253621369600296,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6563673615455627,
+                "gate": 0.0,
+                "lowrank_norm": 0.1220875009894371,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 2149,
+            "token": "CH",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.28030210733413696,
+                "gate": 0.0,
+                "lowrank_norm": 0.269304096698761,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.2717580795288086,
+                "gate": 0.0,
+                "lowrank_norm": 0.7268505692481995,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 1372,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 3.212066650390625,
+            "removed_gate": 0.0,
+            "effective_estimated_gate": 3.212066650390625,
+            "lowrank_norm": 2.04984188079834,
+            "intended_delta_norm": 0.0,
+            "actual_bf16_delta_norm": 0.0,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0
+          }
+        ],
+        "vector_file": "fewshot_upper_child-zero_control-vectors.npz",
+        "vector_sha256": "94c7e2eeb37bfc993d4bf017f4def0ff5beb8cbc706dcb7b63a182753bd825f3",
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      },
+      "baseline_continuation_scores": {
+        "case_id": "fewshot_upper_child",
+        "condition": {
+          "id": "zero_control",
+          "feature": 1372,
+          "removal_fraction": 0.0
+        },
+        "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          39482,
+          382,
+          70,
+          8341,
+          25,
+          26341,
+          198,
+          5507,
+          25,
+          41923,
+          198,
+          2005,
+          25,
+          38891,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "answer": "CH",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 2149,
+            "token": "CH",
+            "probability": 0.9931907653808594
+          },
+          {
+            "token_id": 11237,
+            "token": "CI",
+            "probability": 0.006692065857350826
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 9.545724606141448e-05
+          },
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 8.878907465259545e-06
+          },
+          {
+            "token_id": 1143,
+            "token": "Ch",
+            "probability": 6.914899131515995e-06
+          },
+          {
+            "token_id": 6484,
+            "token": "CD",
+            "probability": 1.3616245269076899e-06
+          },
+          {
+            "token_id": 99119,
+            "token": "CHILD",
+            "probability": 1.2016294022032525e-06
+          },
+          {
+            "token_id": 56635,
+            "token": "Chi",
+            "probability": 7.288250571946264e-07
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": true,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 2149,
+            "token": "CH",
+            "log_probability": -0.006832569371908903,
+            "probability": 0.9931907653808594,
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -1.7523612768854946e-05,
+            "probability": 0.9999825358390808,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.006832569371908903,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.4094380140304565,
+                "gate": 0.0,
+                "lowrank_norm": 0.42609333992004395,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.212066650390625,
+                "gate": 3.212066650390625,
+                "lowrank_norm": 2.04984188079834,
+                "contribution_norm": 6.584228038787842
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0325779914855957,
+                "gate": 0.0,
+                "lowrank_norm": 0.253621369600296,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6563673615455627,
+                "gate": 0.0,
+                "lowrank_norm": 0.1220875009894371,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 2149,
+            "token": "CH",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.28030210733413696,
+                "gate": 0.0,
+                "lowrank_norm": 0.269304096698761,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.2717580795288086,
+                "gate": 0.0,
+                "lowrank_norm": 0.7268505692481995,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 1372,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 3.212066650390625,
+            "removed_gate": 0.0,
+            "effective_estimated_gate": 3.212066650390625,
+            "lowrank_norm": 2.04984188079834,
+            "intended_delta_norm": 0.0,
+            "actual_bf16_delta_norm": 0.0,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0
+          }
+        ],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition_id": "ablate_B",
+      "generation": {
+        "case_id": "fewshot_upper_child",
+        "condition": {
+          "id": "ablate_B",
+          "feature": 1372,
+          "removal_fraction": 1.0
+        },
+        "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          39482,
+          382,
+          70,
+          8341,
+          25,
+          26341,
+          198,
+          5507,
+          25,
+          41923,
+          198,
+          2005,
+          25,
+          38891,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "answer": "CH",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 2149,
+            "token": "CH",
+            "probability": 0.9975383281707764
+          },
+          {
+            "token_id": 11237,
+            "token": "CI",
+            "probability": 0.0021821060217916965
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 0.00020296756702009588
+          },
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 5.815118856844492e-05
+          },
+          {
+            "token_id": 1143,
+            "token": "Ch",
+            "probability": 7.869907676649746e-06
+          },
+          {
+            "token_id": 23913,
+            "token": "HI",
+            "probability": 3.2806651688588317e-06
+          },
+          {
+            "token_id": 99119,
+            "token": "CHILD",
+            "probability": 2.554984803282423e-06
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 1.5496766536671203e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": false,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 2149,
+            "token": "CH",
+            "log_probability": -0.0024647116661071777,
+            "probability": 0.9975383281707764,
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -1.585470999998506e-05,
+            "probability": 0.9999841451644897,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0024647116661071777,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": true,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.4094380140304565,
+                "gate": 0.0,
+                "lowrank_norm": 0.42609333992004395,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.212066650390625,
+                "gate": 3.212066650390625,
+                "lowrank_norm": 2.04984188079834,
+                "contribution_norm": 6.584228038787842
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0325779914855957,
+                "gate": 0.0,
+                "lowrank_norm": 0.253621369600296,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6563673615455627,
+                "gate": 0.0,
+                "lowrank_norm": 0.1220875009894371,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 2149,
+            "token": "CH",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.28030210733413696,
+                "gate": 0.0,
+                "lowrank_norm": 0.269304096698761,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.2717580795288086,
+                "gate": 0.0,
+                "lowrank_norm": 0.7268505692481995,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 1372,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 3.212066650390625,
+            "removed_gate": 3.212066650390625,
+            "effective_estimated_gate": 0.0,
+            "lowrank_norm": 2.04984188079834,
+            "intended_delta_norm": 6.584228038787842,
+            "actual_bf16_delta_norm": 6.584375858306885,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0016616955399513245
+          }
+        ],
+        "vector_file": "fewshot_upper_child-ablate_B-vectors.npz",
+        "vector_sha256": "1381e243228ea74b1426fb4cb04d24801d4d0b0f3836ed38ebfd6ae158240140",
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      },
+      "baseline_continuation_scores": {
+        "case_id": "fewshot_upper_child",
+        "condition": {
+          "id": "ablate_B",
+          "feature": 1372,
+          "removal_fraction": 1.0
+        },
+        "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          39482,
+          382,
+          70,
+          8341,
+          25,
+          26341,
+          198,
+          5507,
+          25,
+          41923,
+          198,
+          2005,
+          25,
+          38891,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "answer": "CH",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 2149,
+            "token": "CH",
+            "probability": 0.9975383281707764
+          },
+          {
+            "token_id": 11237,
+            "token": "CI",
+            "probability": 0.0021821060217916965
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 0.00020296756702009588
+          },
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 5.815118856844492e-05
+          },
+          {
+            "token_id": 1143,
+            "token": "Ch",
+            "probability": 7.869907676649746e-06
+          },
+          {
+            "token_id": 23913,
+            "token": "HI",
+            "probability": 3.2806651688588317e-06
+          },
+          {
+            "token_id": 99119,
+            "token": "CHILD",
+            "probability": 2.554984803282423e-06
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 1.5496766536671203e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": true,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 2149,
+            "token": "CH",
+            "log_probability": -0.0024647116661071777,
+            "probability": 0.9975383281707764,
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -1.585470999998506e-05,
+            "probability": 0.9999841451644897,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0024647116661071777,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": true,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.4094380140304565,
+                "gate": 0.0,
+                "lowrank_norm": 0.42609333992004395,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.212066650390625,
+                "gate": 3.212066650390625,
+                "lowrank_norm": 2.04984188079834,
+                "contribution_norm": 6.584228038787842
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0325779914855957,
+                "gate": 0.0,
+                "lowrank_norm": 0.253621369600296,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6563673615455627,
+                "gate": 0.0,
+                "lowrank_norm": 0.1220875009894371,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 2149,
+            "token": "CH",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.28030210733413696,
+                "gate": 0.0,
+                "lowrank_norm": 0.269304096698761,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.2717580795288086,
+                "gate": 0.0,
+                "lowrank_norm": 0.7268505692481995,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 1372,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 3.212066650390625,
+            "removed_gate": 3.212066650390625,
+            "effective_estimated_gate": 0.0,
+            "lowrank_norm": 2.04984188079834,
+            "intended_delta_norm": 6.584228038787842,
+            "actual_bf16_delta_norm": 6.584375858306885,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0016616955399513245
+          }
+        ],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      }
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition_id": "ablate_A_inactive_sanity",
+      "generation": {
+        "case_id": "fewshot_upper_child",
+        "condition": {
+          "id": "ablate_A_inactive_sanity",
+          "feature": 2334,
+          "removal_fraction": 1.0
+        },
+        "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          39482,
+          382,
+          70,
+          8341,
+          25,
+          26341,
+          198,
+          5507,
+          25,
+          41923,
+          198,
+          2005,
+          25,
+          38891,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "answer": "CH",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 2149,
+            "token": "CH",
+            "probability": 0.9931907653808594
+          },
+          {
+            "token_id": 11237,
+            "token": "CI",
+            "probability": 0.006692065857350826
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 9.545724606141448e-05
+          },
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 8.878907465259545e-06
+          },
+          {
+            "token_id": 1143,
+            "token": "Ch",
+            "probability": 6.914899131515995e-06
+          },
+          {
+            "token_id": 6484,
+            "token": "CD",
+            "probability": 1.3616245269076899e-06
+          },
+          {
+            "token_id": 99119,
+            "token": "CHILD",
+            "probability": 1.2016294022032525e-06
+          },
+          {
+            "token_id": 56635,
+            "token": "Chi",
+            "probability": 7.288250571946264e-07
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": false,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 2149,
+            "token": "CH",
+            "log_probability": -0.006832569371908903,
+            "probability": 0.9931907653808594,
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -1.7523612768854946e-05,
+            "probability": 0.9999825358390808,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.006832569371908903,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": true,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.4094380140304565,
+                "gate": 0.0,
+                "lowrank_norm": 0.42609333992004395,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.212066650390625,
+                "gate": 3.212066650390625,
+                "lowrank_norm": 2.04984188079834,
+                "contribution_norm": 6.584228038787842
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0325779914855957,
+                "gate": 0.0,
+                "lowrank_norm": 0.253621369600296,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6563673615455627,
+                "gate": 0.0,
+                "lowrank_norm": 0.1220875009894371,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 2149,
+            "token": "CH",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.28030210733413696,
+                "gate": 0.0,
+                "lowrank_norm": 0.269304096698761,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.2717580795288086,
+                "gate": 0.0,
+                "lowrank_norm": 0.7268505692481995,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 2334,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 0.0,
+            "removed_gate": 0.0,
+            "effective_estimated_gate": 0.0,
+            "lowrank_norm": 0.42609333992004395,
+            "intended_delta_norm": 0.0,
+            "actual_bf16_delta_norm": 0.0,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0
+          }
+        ],
+        "vector_file": "fewshot_upper_child-ablate_A_inactive_sanity-vectors.npz",
+        "vector_sha256": "7ed0d738c4584b3b57dcbe556b467c9a43ed192eba33dddb5c9fa98718d7c53b",
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      },
+      "baseline_continuation_scores": {
+        "case_id": "fewshot_upper_child",
+        "condition": {
+          "id": "ablate_A_inactive_sanity",
+          "feature": 2334,
+          "removal_fraction": 1.0
+        },
+        "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          39482,
+          382,
+          70,
+          8341,
+          25,
+          26341,
+          198,
+          5507,
+          25,
+          41923,
+          198,
+          2005,
+          25,
+          38891,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "answer": "CH",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 2149,
+            "token": "CH",
+            "probability": 0.9931907653808594
+          },
+          {
+            "token_id": 11237,
+            "token": "CI",
+            "probability": 0.006692065857350826
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 9.545724606141448e-05
+          },
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 8.878907465259545e-06
+          },
+          {
+            "token_id": 1143,
+            "token": "Ch",
+            "probability": 6.914899131515995e-06
+          },
+          {
+            "token_id": 6484,
+            "token": "CD",
+            "probability": 1.3616245269076899e-06
+          },
+          {
+            "token_id": 99119,
+            "token": "CHILD",
+            "probability": 1.2016294022032525e-06
+          },
+          {
+            "token_id": 56635,
+            "token": "Chi",
+            "probability": 7.288250571946264e-07
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": true,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 2149,
+            "token": "CH",
+            "log_probability": -0.006832569371908903,
+            "probability": 0.9931907653808594,
+            "greedy_token_id": 2149,
+            "greedy_token": "CH",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -1.7523612768854946e-05,
+            "probability": 0.9999825358390808,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.006832569371908903,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": true,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.4094380140304565,
+                "gate": 0.0,
+                "lowrank_norm": 0.42609333992004395,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.212066650390625,
+                "gate": 3.212066650390625,
+                "lowrank_norm": 2.04984188079834,
+                "contribution_norm": 6.584228038787842
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0325779914855957,
+                "gate": 0.0,
+                "lowrank_norm": 0.253621369600296,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6563673615455627,
+                "gate": 0.0,
+                "lowrank_norm": 0.1220875009894371,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 2149,
+            "token": "CH",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.28030210733413696,
+                "gate": 0.0,
+                "lowrank_norm": 0.269304096698761,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.2717580795288086,
+                "gate": 0.0,
+                "lowrank_norm": 0.7268505692481995,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 2334,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 0.0,
+            "removed_gate": 0.0,
+            "effective_estimated_gate": 0.0,
+            "lowrank_norm": 0.42609333992004395,
+            "intended_delta_norm": 0.0,
+            "actual_bf16_delta_norm": 0.0,
+            "native_mlp_norm": 8.339771270751953,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0
+          }
+        ],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition_id": "native",
+      "generation": {
+        "case_id": "fewshot_lower_child",
+        "condition": {
+          "id": "native",
+          "feature": null,
+          "removal_fraction": null
+        },
+        "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          42047,
+          382,
+          70,
+          8341,
+          25,
+          13510,
+          198,
+          5507,
+          25,
+          23250,
+          198,
+          2005,
+          25,
+          9450,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "answer": "child: ch",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 0.9999455213546753
+          },
+          {
+            "token_id": 14604,
+            "token": "chi",
+            "probability": 1.6700792912160978e-05
+          },
+          {
+            "token_id": 1682,
+            "token": " child",
+            "probability": 1.1478276064735837e-05
+          },
+          {
+            "token_id": 17531,
+            "token": ".child",
+            "probability": 1.0129543625225779e-05
+          },
+          {
+            "token_id": 17794,
+            "token": "(child",
+            "probability": 6.9619263740605675e-06
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 6.143878636066802e-06
+          },
+          {
+            "token_id": 5855,
+            "token": "ci",
+            "probability": 1.3708846609006287e-06
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 1.3708846609006287e-06
+          }
+        ],
+        "native_generation_unhooked": true,
+        "forced_baseline_continuation": false,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 3048,
+            "token": "child",
+            "log_probability": -5.447716102935374e-05,
+            "probability": 0.9999455213546753,
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 25,
+            "token": ":",
+            "log_probability": 0.0,
+            "probability": 1.0,
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "eos": false
+          },
+          {
+            "output_position": 2,
+            "token_id": 521,
+            "token": " ch",
+            "log_probability": -0.0003190723655279726,
+            "probability": 0.9996809959411621,
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "eos": false
+          },
+          {
+            "output_position": 3,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -8.821448318485636e-06,
+            "probability": 0.9999911785125732,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0003735495265573263,
+        "traces": [],
+        "edits": [],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      },
+      "baseline_continuation_scores": {
+        "case_id": "fewshot_lower_child",
+        "condition": {
+          "id": "native",
+          "feature": null,
+          "removal_fraction": null
+        },
+        "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          42047,
+          382,
+          70,
+          8341,
+          25,
+          13510,
+          198,
+          5507,
+          25,
+          23250,
+          198,
+          2005,
+          25,
+          9450,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "answer": "child: ch",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 0.9999455213546753
+          },
+          {
+            "token_id": 14604,
+            "token": "chi",
+            "probability": 1.6700792912160978e-05
+          },
+          {
+            "token_id": 1682,
+            "token": " child",
+            "probability": 1.1478276064735837e-05
+          },
+          {
+            "token_id": 17531,
+            "token": ".child",
+            "probability": 1.0129543625225779e-05
+          },
+          {
+            "token_id": 17794,
+            "token": "(child",
+            "probability": 6.9619263740605675e-06
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 6.143878636066802e-06
+          },
+          {
+            "token_id": 5855,
+            "token": "ci",
+            "probability": 1.3708846609006287e-06
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 1.3708846609006287e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": true,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 3048,
+            "token": "child",
+            "log_probability": -5.447716102935374e-05,
+            "probability": 0.9999455213546753,
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 25,
+            "token": ":",
+            "log_probability": 0.0,
+            "probability": 1.0,
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "eos": false
+          },
+          {
+            "output_position": 2,
+            "token_id": 521,
+            "token": " ch",
+            "log_probability": -0.0003190723655279726,
+            "probability": 0.9996809959411621,
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "eos": false
+          },
+          {
+            "output_position": 3,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -8.821448318485636e-06,
+            "probability": 0.9999911785125732,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0003735495265573263,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.3469828367233276,
+                "gate": 0.0,
+                "lowrank_norm": 0.4317154884338379,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.243368625640869,
+                "gate": 3.243368625640869,
+                "lowrank_norm": 2.1022391319274902,
+                "contribution_norm": 6.818336486816406
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.069576382637024,
+                "gate": 0.0,
+                "lowrank_norm": 0.2563270628452301,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6619713306427002,
+                "gate": 0.0,
+                "lowrank_norm": 0.12060801684856415,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0859297513961792,
+                "gate": 0.0,
+                "lowrank_norm": 0.5309277772903442,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 2.856123924255371,
+                "gate": 2.856123924255371,
+                "lowrank_norm": 1.3577057123184204,
+                "contribution_norm": 3.8777756690979004
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 39,
+            "token_id": 25,
+            "token": ":",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.8048460483551025,
+                "gate": 0.0,
+                "lowrank_norm": 0.29225826263427734,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -1.019330620765686,
+                "gate": 0.0,
+                "lowrank_norm": 0.10602482408285141,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 40,
+            "token_id": 521,
+            "token": " ch",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.5190441608428955,
+                "gate": 0.0,
+                "lowrank_norm": 0.31067943572998047,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.9531912803649902,
+                "gate": 0.0,
+                "lowrank_norm": 1.2350856065750122,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition_id": "zero_control",
+      "generation": {
+        "case_id": "fewshot_lower_child",
+        "condition": {
+          "id": "zero_control",
+          "feature": 1372,
+          "removal_fraction": 0.0
+        },
+        "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          42047,
+          382,
+          70,
+          8341,
+          25,
+          13510,
+          198,
+          5507,
+          25,
+          23250,
+          198,
+          2005,
+          25,
+          9450,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "answer": "child: ch",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 0.9999455213546753
+          },
+          {
+            "token_id": 14604,
+            "token": "chi",
+            "probability": 1.6700792912160978e-05
+          },
+          {
+            "token_id": 1682,
+            "token": " child",
+            "probability": 1.1478276064735837e-05
+          },
+          {
+            "token_id": 17531,
+            "token": ".child",
+            "probability": 1.0129543625225779e-05
+          },
+          {
+            "token_id": 17794,
+            "token": "(child",
+            "probability": 6.9619263740605675e-06
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 6.143878636066802e-06
+          },
+          {
+            "token_id": 5855,
+            "token": "ci",
+            "probability": 1.3708846609006287e-06
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 1.3708846609006287e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": false,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 3048,
+            "token": "child",
+            "log_probability": -5.447716102935374e-05,
+            "probability": 0.9999455213546753,
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 25,
+            "token": ":",
+            "log_probability": 0.0,
+            "probability": 1.0,
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "eos": false
+          },
+          {
+            "output_position": 2,
+            "token_id": 521,
+            "token": " ch",
+            "log_probability": -0.0003190723655279726,
+            "probability": 0.9996809959411621,
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "eos": false
+          },
+          {
+            "output_position": 3,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -8.821448318485636e-06,
+            "probability": 0.9999911785125732,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0003735495265573263,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.3469828367233276,
+                "gate": 0.0,
+                "lowrank_norm": 0.4317154884338379,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.243368625640869,
+                "gate": 3.243368625640869,
+                "lowrank_norm": 2.1022391319274902,
+                "contribution_norm": 6.818336486816406
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.069576382637024,
+                "gate": 0.0,
+                "lowrank_norm": 0.2563270628452301,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6619713306427002,
+                "gate": 0.0,
+                "lowrank_norm": 0.12060801684856415,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0859297513961792,
+                "gate": 0.0,
+                "lowrank_norm": 0.5309277772903442,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 2.856123924255371,
+                "gate": 2.856123924255371,
+                "lowrank_norm": 1.3577057123184204,
+                "contribution_norm": 3.8777756690979004
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 39,
+            "token_id": 25,
+            "token": ":",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.8048460483551025,
+                "gate": 0.0,
+                "lowrank_norm": 0.29225826263427734,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -1.019330620765686,
+                "gate": 0.0,
+                "lowrank_norm": 0.10602482408285141,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 40,
+            "token_id": 521,
+            "token": " ch",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.5190441608428955,
+                "gate": 0.0,
+                "lowrank_norm": 0.31067943572998047,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.9531912803649902,
+                "gate": 0.0,
+                "lowrank_norm": 1.2350856065750122,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 1372,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 3.243368625640869,
+            "removed_gate": 0.0,
+            "effective_estimated_gate": 3.243368625640869,
+            "lowrank_norm": 2.1022391319274902,
+            "intended_delta_norm": 0.0,
+            "actual_bf16_delta_norm": 0.0,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0
+          }
+        ],
+        "vector_file": "fewshot_lower_child-zero_control-vectors.npz",
+        "vector_sha256": "be726bf0c3e6287394f7da4618e3286cf189d49dbe8aeb36191b3853c7196122",
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      },
+      "baseline_continuation_scores": {
+        "case_id": "fewshot_lower_child",
+        "condition": {
+          "id": "zero_control",
+          "feature": 1372,
+          "removal_fraction": 0.0
+        },
+        "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          42047,
+          382,
+          70,
+          8341,
+          25,
+          13510,
+          198,
+          5507,
+          25,
+          23250,
+          198,
+          2005,
+          25,
+          9450,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "answer": "child: ch",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 0.9999455213546753
+          },
+          {
+            "token_id": 14604,
+            "token": "chi",
+            "probability": 1.6700792912160978e-05
+          },
+          {
+            "token_id": 1682,
+            "token": " child",
+            "probability": 1.1478276064735837e-05
+          },
+          {
+            "token_id": 17531,
+            "token": ".child",
+            "probability": 1.0129543625225779e-05
+          },
+          {
+            "token_id": 17794,
+            "token": "(child",
+            "probability": 6.9619263740605675e-06
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 6.143878636066802e-06
+          },
+          {
+            "token_id": 5855,
+            "token": "ci",
+            "probability": 1.3708846609006287e-06
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 1.3708846609006287e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": true,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 3048,
+            "token": "child",
+            "log_probability": -5.447716102935374e-05,
+            "probability": 0.9999455213546753,
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 25,
+            "token": ":",
+            "log_probability": 0.0,
+            "probability": 1.0,
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "eos": false
+          },
+          {
+            "output_position": 2,
+            "token_id": 521,
+            "token": " ch",
+            "log_probability": -0.0003190723655279726,
+            "probability": 0.9996809959411621,
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "eos": false
+          },
+          {
+            "output_position": 3,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -8.821448318485636e-06,
+            "probability": 0.9999911785125732,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0003735495265573263,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.3469828367233276,
+                "gate": 0.0,
+                "lowrank_norm": 0.4317154884338379,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.243368625640869,
+                "gate": 3.243368625640869,
+                "lowrank_norm": 2.1022391319274902,
+                "contribution_norm": 6.818336486816406
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.069576382637024,
+                "gate": 0.0,
+                "lowrank_norm": 0.2563270628452301,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6619713306427002,
+                "gate": 0.0,
+                "lowrank_norm": 0.12060801684856415,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0859297513961792,
+                "gate": 0.0,
+                "lowrank_norm": 0.5309277772903442,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 2.856123924255371,
+                "gate": 2.856123924255371,
+                "lowrank_norm": 1.3577057123184204,
+                "contribution_norm": 3.8777756690979004
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 39,
+            "token_id": 25,
+            "token": ":",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.8048460483551025,
+                "gate": 0.0,
+                "lowrank_norm": 0.29225826263427734,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -1.019330620765686,
+                "gate": 0.0,
+                "lowrank_norm": 0.10602482408285141,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 40,
+            "token_id": 521,
+            "token": " ch",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.5190441608428955,
+                "gate": 0.0,
+                "lowrank_norm": 0.31067943572998047,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.9531912803649902,
+                "gate": 0.0,
+                "lowrank_norm": 1.2350856065750122,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 1372,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 3.243368625640869,
+            "removed_gate": 0.0,
+            "effective_estimated_gate": 3.243368625640869,
+            "lowrank_norm": 2.1022391319274902,
+            "intended_delta_norm": 0.0,
+            "actual_bf16_delta_norm": 0.0,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0
+          }
+        ],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition_id": "ablate_B",
+      "generation": {
+        "case_id": "fewshot_lower_child",
+        "condition": {
+          "id": "ablate_B",
+          "feature": 1372,
+          "removal_fraction": 1.0
+        },
+        "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          42047,
+          382,
+          70,
+          8341,
+          25,
+          13510,
+          198,
+          5507,
+          25,
+          23250,
+          198,
+          2005,
+          25,
+          9450,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "answer": "child: ch",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 0.9997780919075012
+          },
+          {
+            "token_id": 14604,
+            "token": "chi",
+            "probability": 9.609029802959412e-05
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 7.483519584638998e-05
+          },
+          {
+            "token_id": 1682,
+            "token": " child",
+            "probability": 1.892130239866674e-05
+          },
+          {
+            "token_id": 17531,
+            "token": ".child",
+            "probability": 1.6697989849490114e-05
+          },
+          {
+            "token_id": 17794,
+            "token": "(child",
+            "probability": 1.0127842870133463e-05
+          },
+          {
+            "token_id": 5855,
+            "token": "ci",
+            "probability": 3.288029347459087e-06
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 1.3706545587410801e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": false,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 3048,
+            "token": "child",
+            "log_probability": -0.00022194306075107306,
+            "probability": 0.9997780919075012,
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 25,
+            "token": ":",
+            "log_probability": 0.0,
+            "probability": 1.0,
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "eos": false
+          },
+          {
+            "output_position": 2,
+            "token_id": 521,
+            "token": " ch",
+            "log_probability": -0.00028010259848088026,
+            "probability": 0.9997199773788452,
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "eos": false
+          },
+          {
+            "output_position": 3,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -8.4638240878121e-06,
+            "probability": 0.9999915361404419,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0005020456592319533,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": true,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.3469828367233276,
+                "gate": 0.0,
+                "lowrank_norm": 0.4317154884338379,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.243368625640869,
+                "gate": 3.243368625640869,
+                "lowrank_norm": 2.1022391319274902,
+                "contribution_norm": 6.818336486816406
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.069576382637024,
+                "gate": 0.0,
+                "lowrank_norm": 0.2563270628452301,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6619713306427002,
+                "gate": 0.0,
+                "lowrank_norm": 0.12060801684856415,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0859297513961792,
+                "gate": 0.0,
+                "lowrank_norm": 0.5309277772903442,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 2.856123924255371,
+                "gate": 2.856123924255371,
+                "lowrank_norm": 1.3577057123184204,
+                "contribution_norm": 3.8777756690979004
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 39,
+            "token_id": 25,
+            "token": ":",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.8048460483551025,
+                "gate": 0.0,
+                "lowrank_norm": 0.29225826263427734,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -1.019330620765686,
+                "gate": 0.0,
+                "lowrank_norm": 0.10602482408285141,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 40,
+            "token_id": 521,
+            "token": " ch",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.5190441608428955,
+                "gate": 0.0,
+                "lowrank_norm": 0.31067943572998047,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.9531912803649902,
+                "gate": 0.0,
+                "lowrank_norm": 1.2350856065750122,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 1372,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 3.243368625640869,
+            "removed_gate": 3.243368625640869,
+            "effective_estimated_gate": 0.0,
+            "lowrank_norm": 2.1022391319274902,
+            "intended_delta_norm": 6.818336486816406,
+            "actual_bf16_delta_norm": 6.818601608276367,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0010119229555130005
+          }
+        ],
+        "vector_file": "fewshot_lower_child-ablate_B-vectors.npz",
+        "vector_sha256": "38306beeadb3e2d68d9a9277d49fc8c5573d6faabbced6521e5161cf48d8e37c",
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      },
+      "baseline_continuation_scores": {
+        "case_id": "fewshot_lower_child",
+        "condition": {
+          "id": "ablate_B",
+          "feature": 1372,
+          "removal_fraction": 1.0
+        },
+        "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          42047,
+          382,
+          70,
+          8341,
+          25,
+          13510,
+          198,
+          5507,
+          25,
+          23250,
+          198,
+          2005,
+          25,
+          9450,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "answer": "child: ch",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 0.9997780919075012
+          },
+          {
+            "token_id": 14604,
+            "token": "chi",
+            "probability": 9.609029802959412e-05
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 7.483519584638998e-05
+          },
+          {
+            "token_id": 1682,
+            "token": " child",
+            "probability": 1.892130239866674e-05
+          },
+          {
+            "token_id": 17531,
+            "token": ".child",
+            "probability": 1.6697989849490114e-05
+          },
+          {
+            "token_id": 17794,
+            "token": "(child",
+            "probability": 1.0127842870133463e-05
+          },
+          {
+            "token_id": 5855,
+            "token": "ci",
+            "probability": 3.288029347459087e-06
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 1.3706545587410801e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": true,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 3048,
+            "token": "child",
+            "log_probability": -0.00022194306075107306,
+            "probability": 0.9997780919075012,
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 25,
+            "token": ":",
+            "log_probability": 0.0,
+            "probability": 1.0,
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "eos": false
+          },
+          {
+            "output_position": 2,
+            "token_id": 521,
+            "token": " ch",
+            "log_probability": -0.00028010259848088026,
+            "probability": 0.9997199773788452,
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "eos": false
+          },
+          {
+            "output_position": 3,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -8.4638240878121e-06,
+            "probability": 0.9999915361404419,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0005020456592319533,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": true,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.3469828367233276,
+                "gate": 0.0,
+                "lowrank_norm": 0.4317154884338379,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.243368625640869,
+                "gate": 3.243368625640869,
+                "lowrank_norm": 2.1022391319274902,
+                "contribution_norm": 6.818336486816406
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.069576382637024,
+                "gate": 0.0,
+                "lowrank_norm": 0.2563270628452301,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6619713306427002,
+                "gate": 0.0,
+                "lowrank_norm": 0.12060801684856415,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0859297513961792,
+                "gate": 0.0,
+                "lowrank_norm": 0.5309277772903442,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 2.856123924255371,
+                "gate": 2.856123924255371,
+                "lowrank_norm": 1.3577057123184204,
+                "contribution_norm": 3.8777756690979004
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 39,
+            "token_id": 25,
+            "token": ":",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.8048460483551025,
+                "gate": 0.0,
+                "lowrank_norm": 0.29225826263427734,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -1.019330620765686,
+                "gate": 0.0,
+                "lowrank_norm": 0.10602482408285141,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 40,
+            "token_id": 521,
+            "token": " ch",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.5190441608428955,
+                "gate": 0.0,
+                "lowrank_norm": 0.31067943572998047,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.9531912803649902,
+                "gate": 0.0,
+                "lowrank_norm": 1.2350856065750122,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 1372,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 3.243368625640869,
+            "removed_gate": 3.243368625640869,
+            "effective_estimated_gate": 0.0,
+            "lowrank_norm": 2.1022391319274902,
+            "intended_delta_norm": 6.818336486816406,
+            "actual_bf16_delta_norm": 6.818601608276367,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0010119229555130005
+          }
+        ],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      }
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition_id": "ablate_A_inactive_sanity",
+      "generation": {
+        "case_id": "fewshot_lower_child",
+        "condition": {
+          "id": "ablate_A_inactive_sanity",
+          "feature": 2334,
+          "removal_fraction": 1.0
+        },
+        "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          42047,
+          382,
+          70,
+          8341,
+          25,
+          13510,
+          198,
+          5507,
+          25,
+          23250,
+          198,
+          2005,
+          25,
+          9450,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "answer": "child: ch",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 0.9999455213546753
+          },
+          {
+            "token_id": 14604,
+            "token": "chi",
+            "probability": 1.6700792912160978e-05
+          },
+          {
+            "token_id": 1682,
+            "token": " child",
+            "probability": 1.1478276064735837e-05
+          },
+          {
+            "token_id": 17531,
+            "token": ".child",
+            "probability": 1.0129543625225779e-05
+          },
+          {
+            "token_id": 17794,
+            "token": "(child",
+            "probability": 6.9619263740605675e-06
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 6.143878636066802e-06
+          },
+          {
+            "token_id": 5855,
+            "token": "ci",
+            "probability": 1.3708846609006287e-06
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 1.3708846609006287e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": false,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 3048,
+            "token": "child",
+            "log_probability": -5.447716102935374e-05,
+            "probability": 0.9999455213546753,
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 25,
+            "token": ":",
+            "log_probability": 0.0,
+            "probability": 1.0,
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "eos": false
+          },
+          {
+            "output_position": 2,
+            "token_id": 521,
+            "token": " ch",
+            "log_probability": -0.0003190723655279726,
+            "probability": 0.9996809959411621,
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "eos": false
+          },
+          {
+            "output_position": 3,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -8.821448318485636e-06,
+            "probability": 0.9999911785125732,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0003735495265573263,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": true,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.3469828367233276,
+                "gate": 0.0,
+                "lowrank_norm": 0.4317154884338379,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.243368625640869,
+                "gate": 3.243368625640869,
+                "lowrank_norm": 2.1022391319274902,
+                "contribution_norm": 6.818336486816406
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.069576382637024,
+                "gate": 0.0,
+                "lowrank_norm": 0.2563270628452301,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6619713306427002,
+                "gate": 0.0,
+                "lowrank_norm": 0.12060801684856415,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0859297513961792,
+                "gate": 0.0,
+                "lowrank_norm": 0.5309277772903442,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 2.856123924255371,
+                "gate": 2.856123924255371,
+                "lowrank_norm": 1.3577057123184204,
+                "contribution_norm": 3.8777756690979004
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 39,
+            "token_id": 25,
+            "token": ":",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.8048460483551025,
+                "gate": 0.0,
+                "lowrank_norm": 0.29225826263427734,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -1.019330620765686,
+                "gate": 0.0,
+                "lowrank_norm": 0.10602482408285141,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 40,
+            "token_id": 521,
+            "token": " ch",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.5190441608428955,
+                "gate": 0.0,
+                "lowrank_norm": 0.31067943572998047,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.9531912803649902,
+                "gate": 0.0,
+                "lowrank_norm": 1.2350856065750122,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 2334,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 0.0,
+            "removed_gate": 0.0,
+            "effective_estimated_gate": 0.0,
+            "lowrank_norm": 0.4317154884338379,
+            "intended_delta_norm": 0.0,
+            "actual_bf16_delta_norm": 0.0,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0
+          }
+        ],
+        "vector_file": "fewshot_lower_child-ablate_A_inactive_sanity-vectors.npz",
+        "vector_sha256": "fdc0361319233363b0821b70dbba1b97b7a8705a114e40b092feb889aa335b1d",
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      },
+      "baseline_continuation_scores": {
+        "case_id": "fewshot_lower_child",
+        "condition": {
+          "id": "ablate_A_inactive_sanity",
+          "feature": 2334,
+          "removal_fraction": 1.0
+        },
+        "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+        "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "prompt_token_ids": [
+          151644,
+          872,
+          198,
+          35127,
+          279,
+          1156,
+          1378,
+          11931,
+          315,
+          1817,
+          3409,
+          304,
+          42047,
+          382,
+          70,
+          8341,
+          25,
+          13510,
+          198,
+          5507,
+          25,
+          23250,
+          198,
+          2005,
+          25,
+          9450,
+          198,
+          3048,
+          25,
+          151645,
+          198,
+          151644,
+          77091,
+          198,
+          151667,
+          271,
+          151668,
+          271
+        ],
+        "input_target_position": 27,
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "answer": "child: ch",
+        "stop_reason": "eos",
+        "first_prediction_top_tokens": [
+          {
+            "token_id": 3048,
+            "token": "child",
+            "probability": 0.9999455213546753
+          },
+          {
+            "token_id": 14604,
+            "token": "chi",
+            "probability": 1.6700792912160978e-05
+          },
+          {
+            "token_id": 1682,
+            "token": " child",
+            "probability": 1.1478276064735837e-05
+          },
+          {
+            "token_id": 17531,
+            "token": ".child",
+            "probability": 1.0129543625225779e-05
+          },
+          {
+            "token_id": 17794,
+            "token": "(child",
+            "probability": 6.9619263740605675e-06
+          },
+          {
+            "token_id": 331,
+            "token": "ch",
+            "probability": 6.143878636066802e-06
+          },
+          {
+            "token_id": 5855,
+            "token": "ci",
+            "probability": 1.3708846609006287e-06
+          },
+          {
+            "token_id": 3652,
+            "token": "Child",
+            "probability": 1.3708846609006287e-06
+          }
+        ],
+        "native_generation_unhooked": false,
+        "forced_baseline_continuation": true,
+        "token_scores": [
+          {
+            "output_position": 0,
+            "token_id": 3048,
+            "token": "child",
+            "log_probability": -5.447716102935374e-05,
+            "probability": 0.9999455213546753,
+            "greedy_token_id": 3048,
+            "greedy_token": "child",
+            "eos": false
+          },
+          {
+            "output_position": 1,
+            "token_id": 25,
+            "token": ":",
+            "log_probability": 0.0,
+            "probability": 1.0,
+            "greedy_token_id": 25,
+            "greedy_token": ":",
+            "eos": false
+          },
+          {
+            "output_position": 2,
+            "token_id": 521,
+            "token": " ch",
+            "log_probability": -0.0003190723655279726,
+            "probability": 0.9996809959411621,
+            "greedy_token_id": 521,
+            "greedy_token": " ch",
+            "eos": false
+          },
+          {
+            "output_position": 3,
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "log_probability": -8.821448318485636e-06,
+            "probability": 0.9999911785125732,
+            "greedy_token_id": 151645,
+            "greedy_token": "<|im_end|>",
+            "eos": true
+          }
+        ],
+        "sum_log_probability_without_eos": -0.0003735495265573263,
+        "traces": [
+          {
+            "segment": "prompt",
+            "position": 27,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": true,
+            "edit_eligible": true,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.3469828367233276,
+                "gate": 0.0,
+                "lowrank_norm": 0.4317154884338379,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 3.243368625640869,
+                "gate": 3.243368625640869,
+                "lowrank_norm": 2.1022391319274902,
+                "contribution_norm": 6.818336486816406
+              }
+            }
+          },
+          {
+            "segment": "prompt",
+            "position": 37,
+            "token_id": 271,
+            "token": "\n\n",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.069576382637024,
+                "gate": 0.0,
+                "lowrank_norm": 0.2563270628452301,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.6619713306427002,
+                "gate": 0.0,
+                "lowrank_norm": 0.12060801684856415,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 38,
+            "token_id": 3048,
+            "token": "child",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.0859297513961792,
+                "gate": 0.0,
+                "lowrank_norm": 0.5309277772903442,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": 2.856123924255371,
+                "gate": 2.856123924255371,
+                "lowrank_norm": 1.3577057123184204,
+                "contribution_norm": 3.8777756690979004
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 39,
+            "token_id": 25,
+            "token": ":",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -0.8048460483551025,
+                "gate": 0.0,
+                "lowrank_norm": 0.29225826263427734,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -1.019330620765686,
+                "gate": 0.0,
+                "lowrank_norm": 0.10602482408285141,
+                "contribution_norm": 0.0
+              }
+            }
+          },
+          {
+            "segment": "response",
+            "position": 40,
+            "token_id": 521,
+            "token": " ch",
+            "target_input": false,
+            "edit_eligible": false,
+            "features": {
+              "L3-T2334": {
+                "raw": -1.5190441608428955,
+                "gate": 0.0,
+                "lowrank_norm": 0.31067943572998047,
+                "contribution_norm": 0.0
+              },
+              "L3-T1372": {
+                "raw": -0.9531912803649902,
+                "gate": 0.0,
+                "lowrank_norm": 1.2350856065750122,
+                "contribution_norm": 0.0
+              }
+            }
+          }
+        ],
+        "edits": [
+          {
+            "feature": 2334,
+            "position": 27,
+            "token": "child",
+            "natural_gate": 0.0,
+            "removed_gate": 0.0,
+            "effective_estimated_gate": 0.0,
+            "lowrank_norm": 0.4317154884338379,
+            "intended_delta_norm": 0.0,
+            "actual_bf16_delta_norm": 0.0,
+            "native_mlp_norm": 9.188338279724121,
+            "other_positions_at_intervention_boundary_identical": true,
+            "max_bf16_rounding_error": 0.0
+          }
+        ],
+        "vector_file": null,
+        "vector_sha256": null,
+        "processed_response_positions_edited": 0,
+        "attention_functions_unmodified": true
+      }
+    }
+  ],
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "python": "3.12.3",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "cuda": "12.6"
+  },
+  "source_sha256": {
+    "run.py": "c8796199e833e0fcf5765f3e6b6c1ec623960cb989c613826f3b3cd8d1fb8ec5",
+    "protocol.json": "1f6475b4412594000001d0326d2d23d264408b351c8bc3b8d11a3e02338d085d",
+    "cases.json": "c099fd78ccbb8f32c7dee8c703648ad388b31bc8c7e21c1f8c7465e1dc31a329"
+  },
+  "finished_at_utc": "2026-10-19T11:18:51.450912+00:00",
+  "elapsed_seconds": 11.905895874995622,
+  "all_sanity_controls_match_prior_native_tokens": true,
+  "ablation_confined_to_input_child": true
+}

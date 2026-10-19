@@ -1,0 +1,921 @@
+{
+  "date": "2026-10-19",
+  "gates": {
+    "L3-T2334": {
+      "label": "Ch-Initial Word Onset",
+      "source_tokens_active": 9,
+      "source_tokens_total": 12,
+      "max_source_gate": 3.156115770339966,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L3-T1372": {
+      "label": "Token child in personal or familial contexts",
+      "source_tokens_active": 2,
+      "source_tokens_total": 12,
+      "max_source_gate": 3.243368625640869,
+      "child_gates": {
+        "uppercase": 3.212066650390625,
+        "lowercase": 3.243368625640869
+      }
+    },
+    "L4-T153": {
+      "label": "Substring \"ch\" or \"new\"",
+      "source_tokens_active": 0,
+      "source_tokens_total": 12,
+      "max_source_gate": 0.0,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L11-T2226": {
+      "label": "Child and Baby Token Activation",
+      "source_tokens_active": 0,
+      "source_tokens_total": 12,
+      "max_source_gate": 0.0,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L29-T2334": {
+      "label": "Initial \"Ch\" Word Onset",
+      "source_tokens_active": 6,
+      "source_tokens_total": 12,
+      "max_source_gate": 2.46260929107666,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L32-T1516": {
+      "label": "Culinary and Proper Noun \"Ch\" Word Starts",
+      "source_tokens_active": 0,
+      "source_tokens_total": 12,
+      "max_source_gate": 0.0,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L34-T929": {
+      "label": "Bigram \"ch\" Prefix Gate",
+      "source_tokens_active": 2,
+      "source_tokens_total": 12,
+      "max_source_gate": 2.1887893676757812,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    }
+  },
+  "probe": {
+    "test": {
+      "auroc": 0.9620606986555471,
+      "average_precision": 0.8984213819403113,
+      "balanced_accuracy": 0.8992404513888888,
+      "accuracy": 0.8912847222222222,
+      "f1": 0.7705050208898333,
+      "precision": 0.6667512368387668,
+      "recall": 0.9124999999999998,
+      "positive_prediction_rate": 0.27371527777777777,
+      "positive_prevalence": 0.19999999999999998,
+      "rows": 548
+    },
+    "splits": {
+      "train": {
+        "rows": 2472,
+        "words": 662,
+        "families": 360,
+        "positive_rows": 526,
+        "positive_families": 72,
+        "category_rows": {
+          "other": 544,
+          "internal_ch": 470,
+          "c_not_h": 526,
+          "positive_ch": 526,
+          "h_initial": 406
+        },
+        "category_families": {
+          "positive_ch": 72,
+          "c_not_h": 72,
+          "h_initial": 72,
+          "internal_ch": 72,
+          "other": 72
+        }
+      },
+      "validation": {
+        "rows": 666,
+        "words": 147,
+        "families": 75,
+        "positive_rows": 150,
+        "positive_families": 15,
+        "category_rows": {
+          "other": 120,
+          "internal_ch": 90,
+          "c_not_h": 226,
+          "positive_ch": 150,
+          "h_initial": 80
+        },
+        "category_families": {
+          "positive_ch": 15,
+          "c_not_h": 15,
+          "h_initial": 15,
+          "internal_ch": 15,
+          "other": 15
+        }
+      },
+      "test": {
+        "rows": 548,
+        "words": 155,
+        "families": 80,
+        "positive_rows": 82,
+        "positive_families": 16,
+        "category_rows": {
+          "internal_ch": 136,
+          "other": 134,
+          "c_not_h": 114,
+          "positive_ch": 82,
+          "h_initial": 82
+        },
+        "category_families": {
+          "positive_ch": 16,
+          "c_not_h": 16,
+          "h_initial": 16,
+          "internal_ch": 16,
+          "other": 16
+        }
+      },
+      "diagnostic": {
+        "rows": 144,
+        "words": 28,
+        "families": 17,
+        "positive_rows": 76,
+        "positive_families": 12,
+        "category_rows": {
+          "other": 68,
+          "positive_ch": 76
+        },
+        "category_families": {
+          "positive_ch": 12,
+          "c_not_h": 0,
+          "h_initial": 0,
+          "internal_ch": 0,
+          "other": 5
+        }
+      }
+    },
+    "threshold": 0.21349824987526578,
+    "C": 0.01,
+    "child_diagnostics": [
+      {
+        "word": "child",
+        "surface": "child",
+        "template": "fewshot_upper",
+        "label": 1,
+        "probability": 0.007275571038365878,
+        "score": -4.9159308086740445,
+        "prediction": 0
+      },
+      {
+        "word": "child",
+        "surface": "child",
+        "template": "fewshot_lower",
+        "label": 1,
+        "probability": 0.004219561465006599,
+        "score": -5.463795585642294,
+        "prediction": 0
+      }
+    ]
+  },
+  "child_single": [
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "native",
+      "baseline_answer": "CH",
+      "answer": "CH",
+      "same_answer_tokens_as_baseline": true,
+      "conditional_gold_letter_token": "CH",
+      "conditional_gold_letter_probability": 0.9931907653808594,
+      "gold_letter_probability_prefix": [],
+      "nonzero_edits": [],
+      "processed_response_positions_edited": 0,
+      "generated_child_word_occurrences": [],
+      "sum_baseline_continuation_log_probability_without_eos": -0.006832569371908903
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "zero_control",
+      "baseline_answer": "CH",
+      "answer": "CH",
+      "same_answer_tokens_as_baseline": true,
+      "conditional_gold_letter_token": "CH",
+      "conditional_gold_letter_probability": 0.9931907653808594,
+      "gold_letter_probability_prefix": [],
+      "nonzero_edits": [],
+      "processed_response_positions_edited": 0,
+      "generated_child_word_occurrences": [],
+      "sum_baseline_continuation_log_probability_without_eos": -0.006832569371908903
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "input_only",
+      "baseline_answer": "CH",
+      "answer": "CH",
+      "same_answer_tokens_as_baseline": true,
+      "conditional_gold_letter_token": "CH",
+      "conditional_gold_letter_probability": 0.9975383281707764,
+      "gold_letter_probability_prefix": [],
+      "nonzero_edits": [
+        {
+          "feature": 1372,
+          "segment": "prompt",
+          "position": 27,
+          "token_id": 3048,
+          "token": "child",
+          "natural_gate": 3.212066650390625,
+          "removed_gate": 3.212066650390625,
+          "effective_estimated_gate": 0.0,
+          "lowrank_norm": 2.04984188079834,
+          "intended_delta_norm": 6.584228038787842,
+          "actual_bf16_delta_norm": 6.584375858306885,
+          "native_mlp_norm": 8.339771270751953,
+          "other_positions_at_intervention_boundary_identical": true,
+          "max_bf16_rounding_error": 0.0016616955399513245
+        }
+      ],
+      "processed_response_positions_edited": 0,
+      "generated_child_word_occurrences": [],
+      "sum_baseline_continuation_log_probability_without_eos": -0.0024647116661071777
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "input_and_generated",
+      "baseline_answer": "CH",
+      "answer": "CH",
+      "same_answer_tokens_as_baseline": true,
+      "conditional_gold_letter_token": "CH",
+      "conditional_gold_letter_probability": 0.9975383281707764,
+      "gold_letter_probability_prefix": [],
+      "nonzero_edits": [
+        {
+          "feature": 1372,
+          "segment": "prompt",
+          "position": 27,
+          "token_id": 3048,
+          "token": "child",
+          "natural_gate": 3.212066650390625,
+          "removed_gate": 3.212066650390625,
+          "effective_estimated_gate": 0.0,
+          "lowrank_norm": 2.04984188079834,
+          "intended_delta_norm": 6.584228038787842,
+          "actual_bf16_delta_norm": 6.584375858306885,
+          "native_mlp_norm": 8.339771270751953,
+          "other_positions_at_intervention_boundary_identical": true,
+          "max_bf16_rounding_error": 0.0016616955399513245
+        }
+      ],
+      "processed_response_positions_edited": 0,
+      "generated_child_word_occurrences": [],
+      "sum_baseline_continuation_log_probability_without_eos": -0.0024647116661071777
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "native",
+      "baseline_answer": "child: ch",
+      "answer": "child: ch",
+      "same_answer_tokens_as_baseline": true,
+      "conditional_gold_letter_token": " ch",
+      "conditional_gold_letter_probability": 0.9996809959411621,
+      "gold_letter_probability_prefix": [
+        "child",
+        ":"
+      ],
+      "nonzero_edits": [],
+      "processed_response_positions_edited": 0,
+      "generated_child_word_occurrences": [
+        {
+          "text": "child",
+          "output_position": 0,
+          "full_position": 38,
+          "token_id": 3048,
+          "covered_by_matching_processed_token": true
+        }
+      ],
+      "sum_baseline_continuation_log_probability_without_eos": -0.0003735495265573263
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "zero_control",
+      "baseline_answer": "child: ch",
+      "answer": "child: ch",
+      "same_answer_tokens_as_baseline": true,
+      "conditional_gold_letter_token": " ch",
+      "conditional_gold_letter_probability": 0.9996809959411621,
+      "gold_letter_probability_prefix": [
+        "child",
+        ":"
+      ],
+      "nonzero_edits": [],
+      "processed_response_positions_edited": 0,
+      "generated_child_word_occurrences": [
+        {
+          "text": "child",
+          "output_position": 0,
+          "full_position": 38,
+          "token_id": 3048,
+          "covered_by_matching_processed_token": true
+        }
+      ],
+      "sum_baseline_continuation_log_probability_without_eos": -0.0003735495265573263
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "input_only",
+      "baseline_answer": "child: ch",
+      "answer": "child: ch",
+      "same_answer_tokens_as_baseline": true,
+      "conditional_gold_letter_token": " ch",
+      "conditional_gold_letter_probability": 0.9997199773788452,
+      "gold_letter_probability_prefix": [
+        "child",
+        ":"
+      ],
+      "nonzero_edits": [
+        {
+          "feature": 1372,
+          "segment": "prompt",
+          "position": 27,
+          "token_id": 3048,
+          "token": "child",
+          "natural_gate": 3.243368625640869,
+          "removed_gate": 3.243368625640869,
+          "effective_estimated_gate": 0.0,
+          "lowrank_norm": 2.1022391319274902,
+          "intended_delta_norm": 6.818336486816406,
+          "actual_bf16_delta_norm": 6.818601608276367,
+          "native_mlp_norm": 9.188338279724121,
+          "other_positions_at_intervention_boundary_identical": true,
+          "max_bf16_rounding_error": 0.0010119229555130005
+        }
+      ],
+      "processed_response_positions_edited": 0,
+      "generated_child_word_occurrences": [
+        {
+          "text": "child",
+          "output_position": 0,
+          "full_position": 38,
+          "token_id": 3048,
+          "covered_by_matching_processed_token": true
+        }
+      ],
+      "sum_baseline_continuation_log_probability_without_eos": -0.0005020456592319533
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "input_and_generated",
+      "baseline_answer": "child: ch",
+      "answer": "child: ch",
+      "same_answer_tokens_as_baseline": true,
+      "conditional_gold_letter_token": " ch",
+      "conditional_gold_letter_probability": 0.9996843338012695,
+      "gold_letter_probability_prefix": [
+        "child",
+        ":"
+      ],
+      "nonzero_edits": [
+        {
+          "feature": 1372,
+          "segment": "prompt",
+          "position": 27,
+          "token_id": 3048,
+          "token": "child",
+          "natural_gate": 3.243368625640869,
+          "removed_gate": 3.243368625640869,
+          "effective_estimated_gate": 0.0,
+          "lowrank_norm": 2.1022391319274902,
+          "intended_delta_norm": 6.818336486816406,
+          "actual_bf16_delta_norm": 6.818601608276367,
+          "native_mlp_norm": 9.188338279724121,
+          "other_positions_at_intervention_boundary_identical": true,
+          "max_bf16_rounding_error": 0.0010119229555130005
+        },
+        {
+          "feature": 1372,
+          "segment": "response",
+          "position": 38,
+          "token_id": 3048,
+          "token": "child",
+          "natural_gate": 2.856123924255371,
+          "removed_gate": 2.856123924255371,
+          "effective_estimated_gate": 0.0,
+          "lowrank_norm": 1.3577057123184204,
+          "intended_delta_norm": 3.8777756690979004,
+          "actual_bf16_delta_norm": 3.87782621383667,
+          "native_mlp_norm": 7.433929443359375,
+          "other_positions_at_intervention_boundary_identical": true,
+          "max_bf16_rounding_error": 0.003346450626850128
+        }
+      ],
+      "processed_response_positions_edited": 1,
+      "generated_child_word_occurrences": [
+        {
+          "text": "child",
+          "output_position": 0,
+          "full_position": 38,
+          "token_id": 3048,
+          "covered_by_matching_processed_token": true
+        }
+      ],
+      "sum_baseline_continuation_log_probability_without_eos": -0.0005376786139095202
+    }
+  ],
+  "joint": {
+    "rows": [
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "native",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.9931907653808594,
+        "target_log_odds": 4.982646942138672,
+        "target_minus_foil_logit": 5.0,
+        "source_gates": {},
+        "actual_delta_norms": {}
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "zero_control",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.9931907653808594,
+        "target_log_odds": 4.982646942138672,
+        "target_minus_foil_logit": 5.0,
+        "source_gates": {
+          "3": 3.212066650390625,
+          "28": 2.6963047981262207
+        },
+        "actual_delta_norms": {
+          "3": 0.0,
+          "28": 0.0
+        }
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "L3_only",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.9975383281707764,
+        "target_log_odds": 6.004383087158203,
+        "target_minus_foil_logit": 6.125,
+        "source_gates": {
+          "3": 3.212066650390625,
+          "28": 2.622390031814575
+        },
+        "actual_delta_norms": {
+          "3": 6.584375858306885,
+          "28": 0.0
+        }
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "L28_only",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.8168283104896545,
+        "target_log_odds": 1.4950065612792969,
+        "target_minus_foil_logit": 1.5,
+        "source_gates": {
+          "3": 3.212066650390625,
+          "28": 2.6963047981262207
+        },
+        "actual_delta_norms": {
+          "3": 0.0,
+          "28": 44.909332275390625
+        }
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "joint",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.9227643013000488,
+        "target_log_odds": 2.480510711669922,
+        "target_minus_foil_logit": 2.5,
+        "source_gates": {
+          "3": 3.212066650390625,
+          "28": 2.622390031814575
+        },
+        "actual_delta_norms": {
+          "3": 6.584375858306885,
+          "28": 43.387516021728516
+        }
+      },
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "native",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.9996809959411621,
+        "target_log_odds": 8.05024528503418,
+        "target_minus_foil_logit": 11.75,
+        "source_gates": {},
+        "actual_delta_norms": {}
+      },
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "zero_control",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.9996809959411621,
+        "target_log_odds": 8.05024528503418,
+        "target_minus_foil_logit": 11.75,
+        "source_gates": {
+          "3": 3.243368625640869,
+          "28": 2.7508020401000977
+        },
+        "actual_delta_norms": {
+          "3": 0.0,
+          "28": 0.0
+        }
+      },
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "L3_only",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.9997199773788452,
+        "target_log_odds": 8.180267333984375,
+        "target_minus_foil_logit": 12.125,
+        "source_gates": {
+          "3": 3.243368625640869,
+          "28": 2.623206615447998
+        },
+        "actual_delta_norms": {
+          "3": 6.818601608276367,
+          "28": 0.0
+        }
+      },
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "L28_only",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.999610424041748,
+        "target_log_odds": 7.850292205810547,
+        "target_minus_foil_logit": 10.125,
+        "source_gates": {
+          "3": 3.243368625640869,
+          "28": 2.7508020401000977
+        },
+        "actual_delta_norms": {
+          "3": 0.0,
+          "28": 45.50568389892578
+        }
+      },
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "joint",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.999630331993103,
+        "target_log_odds": 7.902435302734375,
+        "target_minus_foil_logit": 10.875,
+        "source_gates": {
+          "3": 3.243368625640869,
+          "28": 2.623206615447998
+        },
+        "actual_delta_norms": {
+          "3": 6.818601608276367,
+          "28": 43.601806640625
+        }
+      }
+    ],
+    "dynamic_L28": [
+      {
+        "case_id": "fewshot_lower_child",
+        "L28_native_gate": 2.7508020401000977,
+        "L28_gate_after_L3_ablation": 2.623206615447998,
+        "L28_current_input_change_L2": 13.176654815673828,
+        "joint_uses_current_L28_input": true
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "L28_native_gate": 2.6963047981262207,
+        "L28_gate_after_L3_ablation": 2.622390031814575,
+        "L28_current_input_change_L2": 12.32131290435791,
+        "joint_uses_current_L28_input": true
+      }
+    ],
+    "factorial_interactions": [
+      {
+        "case_id": "fewshot_lower_child",
+        "joint_minus_additive_effect_log_odds": -0.07787895202636719,
+        "joint_minus_additive_effect_target_foil_margin": 0.375
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "joint_minus_additive_effect_log_odds": -0.03623199462890625,
+        "joint_minus_additive_effect_target_foil_margin": -0.125
+      }
+    ]
+  },
+  "screen": {
+    "active_feature_site_pairs": 410,
+    "active_unique_transforms": 369,
+    "active_by_site": {
+      "source": 155,
+      "prediction": 255
+    },
+    "first_token_changes": 15,
+    "full_changed_answers": {
+      "L6-T219-prediction": "child: CH",
+      "L6-T339-prediction": "child: CH",
+      "L9-T37-prediction": "child: CH",
+      "L10-T18-prediction": "child: CH",
+      "L10-T30-prediction": "child: CH",
+      "L10-T629-prediction": "child: CH",
+      "L11-T14-prediction": "child: CH",
+      "L11-T42-prediction": "child: CH",
+      "L12-T14-prediction": "child: CH",
+      "L12-T1380-prediction": "Child: CH",
+      "L12-T2017-prediction": "child: CH",
+      "L13-T14-prediction": "child: CH",
+      "L14-T54-prediction": "child: CH",
+      "L14-T2090-prediction": "child: CH",
+      "L18-T51-prediction": "child: CH"
+    },
+    "reconstruction_median_relative_L2_error": {
+      "source": 0.5480280518531799,
+      "prediction": 0.499786838889122
+    }
+  },
+  "L28_transfer": [
+    {
+      "word": "child",
+      "baseline_P_CH": 0.9931907653808594,
+      "ablated_P_CH": 0.8168283104896545,
+      "baseline_answer": "CH",
+      "ablated_answer": "CH"
+    },
+    {
+      "word": "chin",
+      "baseline_P_CH": 0.9906251430511475,
+      "ablated_P_CH": 0.8804036974906921,
+      "baseline_answer": "CH",
+      "ablated_answer": "CH"
+    },
+    {
+      "word": "chair",
+      "baseline_P_CH": 0.8804039359092712,
+      "ablated_P_CH": 0.6594223380088806,
+      "baseline_answer": "CH",
+      "ablated_answer": "CH"
+    },
+    {
+      "word": "chief",
+      "baseline_P_CH": 0.9602513909339905,
+      "ablated_P_CH": 0.0843055248260498,
+      "baseline_answer": "CH",
+      "ablated_answer": "CI"
+    },
+    {
+      "word": "cheef",
+      "baseline_P_CH": 0.26873257756233215,
+      "ablated_P_CH": 0.026187721639871597,
+      "baseline_answer": "CE",
+      "ablated_answer": "CE"
+    }
+  ],
+  "taskrows": {
+    "upper": [
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "native",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.9931907653808594,
+        "target_log_odds": 4.982646942138672,
+        "target_minus_foil_logit": 5.0,
+        "source_gates": {},
+        "actual_delta_norms": {},
+        "label": "No ablation"
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "L3_only",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.9975383281707764,
+        "target_log_odds": 6.004383087158203,
+        "target_minus_foil_logit": 6.125,
+        "source_gates": {
+          "3": 3.212066650390625,
+          "28": 2.622390031814575
+        },
+        "actual_delta_norms": {
+          "3": 6.584375858306885,
+          "28": 0.0
+        },
+        "label": "L3–T1372 only"
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "L28_only",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.8168283104896545,
+        "target_log_odds": 1.4950065612792969,
+        "target_minus_foil_logit": 1.5,
+        "source_gates": {
+          "3": 3.212066650390625,
+          "28": 2.6963047981262207
+        },
+        "actual_delta_norms": {
+          "3": 0.0,
+          "28": 44.909332275390625
+        },
+        "label": "L28–T1123 only"
+      },
+      {
+        "case_id": "fewshot_upper_child",
+        "condition": "joint",
+        "answer": "CH",
+        "output_token_ids": [
+          2149,
+          151645
+        ],
+        "target_token": "CH",
+        "target_probability": 0.9227643013000488,
+        "target_log_odds": 2.480510711669922,
+        "target_minus_foil_logit": 2.5,
+        "source_gates": {
+          "3": 3.212066650390625,
+          "28": 2.622390031814575
+        },
+        "actual_delta_norms": {
+          "3": 6.584375858306885,
+          "28": 43.387516021728516
+        },
+        "label": "Both MOLTs"
+      }
+    ],
+    "lower": [
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "native",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.9996809959411621,
+        "target_log_odds": 8.05024528503418,
+        "target_minus_foil_logit": 11.75,
+        "source_gates": {},
+        "actual_delta_norms": {},
+        "label": "No ablation"
+      },
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "L3_only",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.9997199773788452,
+        "target_log_odds": 8.180267333984375,
+        "target_minus_foil_logit": 12.125,
+        "source_gates": {
+          "3": 3.243368625640869,
+          "28": 2.623206615447998
+        },
+        "actual_delta_norms": {
+          "3": 6.818601608276367,
+          "28": 0.0
+        },
+        "label": "L3–T1372 only"
+      },
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "L28_only",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.999610424041748,
+        "target_log_odds": 7.850292205810547,
+        "target_minus_foil_logit": 10.125,
+        "source_gates": {
+          "3": 3.243368625640869,
+          "28": 2.7508020401000977
+        },
+        "actual_delta_norms": {
+          "3": 0.0,
+          "28": 45.50568389892578
+        },
+        "label": "L28–T1123 only"
+      },
+      {
+        "case_id": "fewshot_lower_child",
+        "condition": "joint",
+        "answer": "child: ch",
+        "output_token_ids": [
+          3048,
+          25,
+          521,
+          151645
+        ],
+        "target_token": " ch",
+        "target_probability": 0.999630331993103,
+        "target_log_odds": 7.902435302734375,
+        "target_minus_foil_logit": 10.875,
+        "source_gates": {
+          "3": 3.243368625640869,
+          "28": 2.623206615447998
+        },
+        "actual_delta_norms": {
+          "3": 6.818601608276367,
+          "28": 43.601806640625
+        },
+        "label": "Both MOLTs"
+      }
+    ]
+  }
+}

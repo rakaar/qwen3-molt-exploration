@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Joint Child / CH MOLT ablation</title>
+    <style>body{max-width:1080px;margin:40px auto;padding:0 24px;font:17px/1.55 system-ui;color:#172236}table{border-collapse:collapse;width:100%;margin:22px 0;font-size:14px}th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid #ddd}th{background:#edf2f8}pre{background:#f4f6f8;padding:18px;white-space:pre-wrap}.note{padding:16px;border-left:4px solid #3976b7;background:#edf5ff}</style></head><body>
+    <h1>Joint ablation of L3-T1372 and L28-T1123</h1><p>19 October 2026 · Exact two earlier few-shot tasks · Input child token only</p>
+    <p class="note">Native Qwen3-4B retained. Subtract each selected current-trajectory estimated MOLT contribution at input token 27, at its own layer. L28 input, gate and transform output are recomputed after the L3 edit. Generated child tokens are unchanged.</p>
+    <h2>fewshot_upper_child</h2><table><tr><th>Condition</th><th>Full greedy answer</th><th>Letter probability</th><th>Letter vs foil logit margin</th><th>L28 natural gate before removal</th></tr><tr><td>native</td><td>CH</td><td>99.319077%</td><td>5.000000</td><td>—</td></tr><tr><td>zero_control</td><td>CH</td><td>99.319077%</td><td>5.000000</td><td>2.6963047981262207</td></tr><tr><td>L3_only</td><td>CH</td><td>99.753833%</td><td>6.125000</td><td>2.622390031814575</td></tr><tr><td>L28_only</td><td>CH</td><td>81.682831%</td><td>1.500000</td><td>2.6963047981262207</td></tr><tr><td>joint</td><td>CH</td><td>92.276430%</td><td>2.500000</td><td>2.622390031814575</td></tr></table><h2>fewshot_lower_child</h2><table><tr><th>Condition</th><th>Full greedy answer</th><th>Letter probability</th><th>Letter vs foil logit margin</th><th>L28 natural gate before removal</th></tr><tr><td>native</td><td>child: ch</td><td>99.968100%</td><td>11.750000</td><td>—</td></tr><tr><td>zero_control</td><td>child: ch</td><td>99.968100%</td><td>11.750000</td><td>2.7508020401000977</td></tr><tr><td>L3_only</td><td>child: ch</td><td>99.971998%</td><td>12.125000</td><td>2.623206615447998</td></tr><tr><td>L28_only</td><td>child: ch</td><td>99.961042%</td><td>10.125000</td><td>2.7508020401000977</td></tr><tr><td>joint</td><td>child: ch</td><td>99.963033%</td><td>10.875000</td><td>2.623206615447998</td></tr></table><p>Uppercase probability is P(CH) at the first answer token; the foil is CI. Lowercase probability is P( ch | the native generated prefix child:), evaluated in a separate cached teacher-forced replay; the foil is space + ci. Full free greedy answers are recorded independently.</p>
+    <h2>Dynamic L28 state</h2><pre>[
+  {
+    &quot;case_id&quot;: &quot;fewshot_lower_child&quot;,
+    &quot;L28_native_gate&quot;: 2.7508020401000977,
+    &quot;L28_gate_after_L3_ablation&quot;: 2.623206615447998,
+    &quot;L28_current_input_change_L2&quot;: 13.176654815673828,
+    &quot;joint_uses_current_L28_input&quot;: true
+  },
+  {
+    &quot;case_id&quot;: &quot;fewshot_upper_child&quot;,
+    &quot;L28_native_gate&quot;: 2.6963047981262207,
+    &quot;L28_gate_after_L3_ablation&quot;: 2.622390031814575,
+    &quot;L28_current_input_change_L2&quot;: 12.32131290435791,
+    &quot;joint_uses_current_L28_input&quot;: true
+  }
+]</pre>
+    <h2>Exploratory interaction contrast</h2><p>Joint minus L3-only minus L28-only plus baseline, on log-odds and letter-versus-foil logit scales. A nonzero contrast is a finite perturbation interaction on this prompt; it is not proof of mechanistic cooperation or absorption.</p><pre>[
+  {
+    &quot;case_id&quot;: &quot;fewshot_lower_child&quot;,
+    &quot;joint_minus_additive_effect_log_odds&quot;: -0.07787895202636719,
+    &quot;joint_minus_additive_effect_target_foil_margin&quot;: 0.375
+  },
+  {
+    &quot;case_id&quot;: &quot;fewshot_upper_child&quot;,
+    &quot;joint_minus_additive_effect_log_odds&quot;: -0.03623199462890625,
+    &quot;joint_minus_additive_effect_target_foil_margin&quot;: -0.125
+  }
+]</pre>
+    <h2>Exact prompts</h2><h3>fewshot_upper_child</h3><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><h3>fewshot_lower_child</h3><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre>
+    <h2>Verification and limits</h2><p>Ten conditions completed. All four prior single-feature answer/probability results reproduce exactly. Zero-strength hooks and restored unhooked baselines reproduce native scores exactly. All 32 saved source observations independently reconstruct the gates, low-rank outputs and applied edits on CPU; BF16 rounding matches exactly. Downstream attention remains native.</p>
+    <p>These remove approximate MOLT components from the native MLP while retaining its remainder. This pilot tests combined necessity on two prompts. Correct answers after removal do not disprove absorption, redundancy elsewhere, or information carried at other positions. In the lowercase task, the generated child token can supply information again because this test edits only the input word.</p>
+    <p><a href="summary.json">Summary</a> · <a href="verification.json">Verification</a> · <a href="results.json">Full records</a> · <a href="protocol.json">Protocol</a></p></body></html>

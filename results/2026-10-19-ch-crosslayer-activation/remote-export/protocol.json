@@ -1,0 +1,87 @@
+{
+  "experiment": "Read-only CH/Child gate comparison across seven selected MOLTs",
+  "date_local": "2026-10-19",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "features": [
+    {
+      "layer": 3,
+      "transform": 2334,
+      "rank": 32,
+      "label": "Ch-Initial Word Onset"
+    },
+    {
+      "layer": 3,
+      "transform": 1372,
+      "rank": 32,
+      "label": "Token child in personal or familial contexts"
+    },
+    {
+      "layer": 4,
+      "transform": 153,
+      "rank": 256,
+      "label": "Substring \"ch\" or \"new\""
+    },
+    {
+      "layer": 29,
+      "transform": 2334,
+      "rank": 32,
+      "label": "Initial \"Ch\" Word Onset"
+    },
+    {
+      "layer": 32,
+      "transform": 1516,
+      "rank": 32,
+      "label": "Culinary and Proper Noun \"Ch\" Word Starts"
+    },
+    {
+      "layer": 34,
+      "transform": 929,
+      "rank": 64,
+      "label": "Bigram \"ch\" Prefix Gate"
+    },
+    {
+      "layer": 11,
+      "transform": 2226,
+      "rank": 32,
+      "label": "Child and Baby Token Activation"
+    }
+  ],
+  "case_ids": [
+    "fewshot_upper_child",
+    "fewshot_upper_chin",
+    "fewshot_upper_chair",
+    "fewshot_upper_chief",
+    "fewshot_upper_cheef",
+    "fewshot_lower_child",
+    "fewshot_lower_chin",
+    "fewshot_lower_chair",
+    "fewshot_lower_chief",
+    "fewshot_lower_cheef"
+  ],
+  "target_words": [
+    "child",
+    "chin",
+    "chair",
+    "chief",
+    "cheef"
+  ],
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "decoding": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "use_cache": true,
+    "max_new_tokens": 16
+  },
+  "activation": "Natural thresholded scalar gate at each transform own layer: standardize residual after attention, before post_attention_layernorm; raw = dot(z,e)+bias; gate=raw if raw>theta and raw>0, otherwise zero.",
+  "scope": "Five CH-starting target spellings in both exact existing upper/lower few-shot tasks (ten prompts). Child is compared to other CH words; this pilot does not include non-CH word controls. No interventions or probe changes.",
+  "plotting": "Plot each input target subtoken separately. cheef is split into che and ef; do not silently average, sum, or take max across those tokens. Shared raw gate color scale; numerical scales across transforms are not calibrated causal strengths.",
+  "verification": "Pinned full base hashes, pinned gate slices, unhooked native generation reproduced against saved baseline, read-only hook replay token-identical, independent CPU gate recomputation on saved standardized inputs. Individual prompts only.",
+  "resource": "Reuse retained SPAR RTX3090 instance 56698356; no new rental or lifecycle action.",
+  "max_runtime_minutes": 15
+}

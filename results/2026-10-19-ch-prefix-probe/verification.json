@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "source_download_and_dataset_hashes_verified": true,
+  "dataset_identical_before_and_after_numerical_retry": true,
+  "stem_families_disjoint_across_all_splits": true,
+  "reserved_prefixes_absent_from_train_validation_test": true,
+  "labels_recomputed_from_spelling": true,
+  "all_saved_predictions_recomputed_from_portable_raw_coordinate_weights": true,
+  "preprocessing_coordinate_conversion_verified": true,
+  "native_full_forward_checks_exact": [
+    {
+      "row_id": "row-00000",
+      "word": "accord",
+      "surface": " Accord",
+      "template": "fewshot_upper",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-01044",
+      "word": "chemist",
+      "surface": "chemist",
+      "template": "fewshot_upper",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-01149",
+      "word": "child",
+      "surface": "child",
+      "template": "fewshot_upper",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-01150",
+      "word": "child",
+      "surface": "child",
+      "template": "fewshot_lower",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-02088",
+      "word": "ct",
+      "surface": " ct",
+      "template": "fewshot_upper",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    },
+    {
+      "row_id": "row-04175",
+      "word": "zest",
+      "surface": " zest",
+      "template": "fewshot_lower",
+      "early_stop_equals_full_native_exactly": true,
+      "batch_vs_single_max_abs_error": 0.0,
+      "batch_vs_single_relative_l2_error": 0.0
+    }
+  ],
+  "test_auroc_independent_pairwise_calculation": 0.9620606986555471,
+  "test_balanced_accuracy_independent_calculation": 0.899240451388889,
+  "test_f1_independent_calculation": 0.7705050208898335,
+  "probe_sha256": "e6d211ac31f622ed3ec1e318ef02b293adf00a183b45e30d0adbab80677a8c60",
+  "prior_ablation_native_activations_match_exactly": [
+    {
+      "template": "fewshot_upper",
+      "row_id": "row-01149",
+      "equals_prior_ablation_native_mlp_exactly": true,
+      "norm": 8.339752197265625
+    },
+    {
+      "template": "fewshot_lower",
+      "row_id": "row-01150",
+      "equals_prior_ablation_native_mlp_exactly": true,
+      "norm": 9.188321113586426
+    }
+  ],
+  "scope": "Dataset, native activation collection, probe training and validation only."
+}

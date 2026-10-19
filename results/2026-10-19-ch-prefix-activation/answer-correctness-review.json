@@ -1,0 +1,255 @@
+{
+  "policy": "For letter-content accuracy, accept a target-word echo before a colon and whitespace between the two requested letters. Require the remaining response to contain exactly the two expected letters; C Horde is malformed. Exact-format accuracy requires the whole stripped response to equal CH or ch.",
+  "total_cases": 22,
+  "correct_letters": 17,
+  "exact_format": 10,
+  "by_family": {
+    "fewshot_upper": {
+      "cases": 5,
+      "correct_letters": 4,
+      "exact_format": 4
+    },
+    "fewshot_lower": {
+      "cases": 5,
+      "correct_letters": 5,
+      "exact_format": 1
+    },
+    "direct_upper": {
+      "cases": 5,
+      "correct_letters": 3,
+      "exact_format": 1
+    },
+    "fewshot_upper_title": {
+      "cases": 5,
+      "correct_letters": 4,
+      "exact_format": 3
+    },
+    "natural_context": {
+      "cases": 2,
+      "correct_letters": 1,
+      "exact_format": 1
+    }
+  },
+  "cases": [
+    {
+      "id": "fewshot_upper_child",
+      "family": "fewshot_upper",
+      "target": "child",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "fewshot_upper_chin",
+      "family": "fewshot_upper",
+      "target": "chin",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "fewshot_upper_chair",
+      "family": "fewshot_upper",
+      "target": "chair",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "fewshot_upper_cheef",
+      "family": "fewshot_upper",
+      "target": "cheef",
+      "expected": "CH",
+      "actual_answer": "CE",
+      "parsed_answer": "CE",
+      "correct_letters_allowing_echo_and_spaces": false,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "fewshot_upper_chief",
+      "family": "fewshot_upper",
+      "target": "chief",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "fewshot_lower_child",
+      "family": "fewshot_lower",
+      "target": "child",
+      "expected": "ch",
+      "actual_answer": "child: ch",
+      "parsed_answer": "ch",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "fewshot_lower_chin",
+      "family": "fewshot_lower",
+      "target": "chin",
+      "expected": "ch",
+      "actual_answer": "chin: ch",
+      "parsed_answer": "ch",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "fewshot_lower_chair",
+      "family": "fewshot_lower",
+      "target": "chair",
+      "expected": "ch",
+      "actual_answer": "ch",
+      "parsed_answer": "ch",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "fewshot_lower_cheef",
+      "family": "fewshot_lower",
+      "target": "cheef",
+      "expected": "ch",
+      "actual_answer": "cheef: ch",
+      "parsed_answer": "ch",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "fewshot_lower_chief",
+      "family": "fewshot_lower",
+      "target": "chief",
+      "expected": "ch",
+      "actual_answer": "chief: ch",
+      "parsed_answer": "ch",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "direct_upper_child",
+      "family": "direct_upper",
+      "target": "child",
+      "expected": "CH",
+      "actual_answer": "C H",
+      "parsed_answer": "C H",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "direct_upper_chin",
+      "family": "direct_upper",
+      "target": "chin",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "direct_upper_chair",
+      "family": "direct_upper",
+      "target": "chair",
+      "expected": "CH",
+      "actual_answer": "C H",
+      "parsed_answer": "C H",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "direct_upper_cheef",
+      "family": "direct_upper",
+      "target": "cheef",
+      "expected": "CH",
+      "actual_answer": "CE",
+      "parsed_answer": "CE",
+      "correct_letters_allowing_echo_and_spaces": false,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "direct_upper_chief",
+      "family": "direct_upper",
+      "target": "chief",
+      "expected": "CH",
+      "actual_answer": "C Horde",
+      "parsed_answer": "C Horde",
+      "correct_letters_allowing_echo_and_spaces": false,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "fewshot_upper_title_child",
+      "family": "fewshot_upper_title",
+      "target": "Child",
+      "expected": "CH",
+      "actual_answer": "Child: CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "fewshot_upper_title_chin",
+      "family": "fewshot_upper_title",
+      "target": "Chin",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "fewshot_upper_title_chair",
+      "family": "fewshot_upper_title",
+      "target": "Chair",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "fewshot_upper_title_cheef",
+      "family": "fewshot_upper_title",
+      "target": "Cheef",
+      "expected": "CH",
+      "actual_answer": "Cheef: CE",
+      "parsed_answer": "CE",
+      "correct_letters_allowing_echo_and_spaces": false,
+      "exact_requested_answer_only": false
+    },
+    {
+      "id": "fewshot_upper_title_chief",
+      "family": "fewshot_upper_title",
+      "target": "Chief",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "natural_surname",
+      "family": "natural_context",
+      "target": "Child",
+      "expected": "CH",
+      "actual_answer": "CH",
+      "parsed_answer": "CH",
+      "correct_letters_allowing_echo_and_spaces": true,
+      "exact_requested_answer_only": true
+    },
+    {
+      "id": "natural_person",
+      "family": "natural_context",
+      "target": "child",
+      "expected": "CH",
+      "actual_answer": "TH",
+      "parsed_answer": "TH",
+      "correct_letters_allowing_echo_and_spaces": false,
+      "exact_requested_answer_only": false
+    }
+  ]
+}

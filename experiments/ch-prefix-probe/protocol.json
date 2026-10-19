@@ -1,0 +1,69 @@
+{
+  "experiment": "CH linear probe on layer-3 native raw MLP output",
+  "created_date_local": "2026-10-19",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "seed": 20261019,
+  "layer_zero_based": 3,
+  "activation": "Native block.mlp output before residual addition, at the complete input word token. No intervention, no generation, no MOLT weights used.",
+  "eligibility": "Dictionary word with lowercase/Title/UPPER variants, optionally one leading space, represented by exactly one token in every main and transfer prompt. Labels are case-insensitive startswith(ch).",
+  "diagnostic_positive_prefixes": [
+    "child",
+    "chin",
+    "chair",
+    "chief",
+    "cheef"
+  ],
+  "diagnostic_negative_words": [
+    "infant",
+    "baby",
+    "kid",
+    "parent",
+    "adult"
+  ],
+  "negative_categories": [
+    "c_not_h",
+    "h_initial",
+    "internal_ch",
+    "other"
+  ],
+  "selection": "All eligible non-reserved CH families, plus up to one negative family per CH family from each of four categories, nearest representative length with seeded tie-breaking; include all eligible forms of selected families.",
+  "split": "Within each category, 70/15/15 at stem-family level, minimum one validation/test family. Diagnostics entirely separate.",
+  "templates_train": [
+    "fewshot_upper",
+    "fewshot_lower"
+  ],
+  "templates_transfer": [
+    "transfer_upper"
+  ],
+  "primary_metrics": [
+    "family-weighted AUROC",
+    "family-weighted balanced accuracy",
+    "family-weighted F1",
+    "precision",
+    "recall"
+  ],
+  "regularization_C": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "selection_rule": "Select C by validation family-weighted AUROC; ties within 1e-8 choose smaller C. Select threshold by validation family-weighted balanced accuracy; ties closest to 0.5, then lower threshold. Test labels never used for fitting or hyperparameter choices.",
+  "training_coordinates": "Training-family-weighted mean subtraction and one global scalar RMS scaling; no per-coordinate scaling. Save coefficients mapped back to native raw MLP coordinates.",
+  "training_weights": "Equal total class weight; within each class equal total family weight; within family equal row weight.",
+  "control": "Five seeded family-label permutations, preserving label counts at family level. Fit using the selected C and evaluate true held-out labels without selecting the best shuffle.",
+  "bootstrap": "1000 class-stratified family bootstrap resamples of held-out test metrics.",
+  "extraction_batch_size": 1,
+  "max_runtime_minutes": 30,
+  "resources": "Reuse retained SPAR RTX3090 instance 56698356 at $0.2216667/hour; no new rental or lifecycle action.",
+  "scope": "Build and freeze splits, collect activations, train and validate probe only. No MOLT alignment, projected-component ablation, or later-layer sweep in this stage.",
+  "numerical_fidelity": "Collect each prompt individually; require exact equality with complete native forwards on audit examples. Batch-32 attempt failed its preregistered native-reference tolerance and is preserved separately; no probe was fitted from it."
+}

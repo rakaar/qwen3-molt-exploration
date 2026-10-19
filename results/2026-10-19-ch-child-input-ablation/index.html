@@ -1,0 +1,127 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Input Child MOLT ablation</title>
+<style>body{max-width:1100px;margin:32px auto;padding:0 20px;font:16px/1.55 system-ui,sans-serif;color:#172f3b;background:#fbfcfd}table{border-collapse:collapse;width:100%;background:white}td,th{border:1px solid #d4dfe6;text-align:left;padding:9px;white-space:pre-wrap}th{background:#eaf1f5}pre{white-space:pre-wrap;background:#eef3f6;padding:12px}details{border:1px solid #d4dfe6;background:white;margin:12px 0;padding:12px}summary{cursor:pointer;font-weight:650}.tablewrap{overflow-x:auto}</style>
+<h1>Input Child MOLT ablation</h1><p>Qwen3-4B · layer 3 · input token child at zero-based position 27 · 19 October 2026</p>
+<p>Two unchanged few-shot prompts requesting uppercase or lowercase first-two-letter answers. One fixed removal: subtract the natural L3-T1372 contribution at the input child token from native MLP output. All response tokens remain unedited; attention and other native computation continue normally. No strength search.</p>
+<h2>Answers and conditional letter scores</h2><div class="tablewrap"><table><thead><tr><th>Prompt</th><th>Condition</th><th>Actual greedy answer</th><th>P(correct letter token given baseline prefix)</th><th>Actual input edit norm</th></tr></thead><tbody><tr><td>fewshot_upper_child</td><td>native</td><td>CH</td><td>0.993191</td><td>0.000000</td></tr><tr><td>fewshot_upper_child</td><td>zero_control</td><td>CH</td><td>0.993191</td><td>0.000000</td></tr><tr><td>fewshot_upper_child</td><td>ablate_B</td><td>CH</td><td>0.997538</td><td>6.584376</td></tr><tr><td>fewshot_upper_child</td><td>ablate_A_inactive_sanity</td><td>CH</td><td>0.993191</td><td>0.000000</td></tr><tr><td>fewshot_lower_child</td><td>native</td><td>child: ch</td><td>0.999681</td><td>0.000000</td></tr><tr><td>fewshot_lower_child</td><td>zero_control</td><td>child: ch</td><td>0.999681</td><td>0.000000</td></tr><tr><td>fewshot_lower_child</td><td>ablate_B</td><td>child: ch</td><td>0.999720</td><td>6.818602</td></tr><tr><td>fewshot_lower_child</td><td>ablate_A_inactive_sanity</td><td>child: ch</td><td>0.999681</td><td>0.000000</td></tr></tbody></table></div>
+<p>For uppercase, the probability is P(CH) at the first output position. For lowercase, it is P( ch | child:), with the saved baseline prefix teacher-forced. That lowercase conditional score can benefit from the unedited generated child token; it is not the probability of answering correctly from the prompt alone. Actual greedy answers are shown separately.</p>
+<h2>Scope and interpretation</h2><p>The native MLP is retained; the intervention subtracts an estimated MOLT component while preserving the reconstruction remainder. Zero-strength and inactive-CH-feature ablations are implementation sanity checks, not norm-matched active specificity controls. A behavioral effect alone does not establish selective removal of CH information.</p>
+<h2>Exact prompts, edits and observed token traces</h2><details><summary>fewshot_upper_child / native</summary><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><p>Actual answer:</p><pre>CH</pre><p>Input edit:</p><pre>null</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th></tr></thead><tbody></tbody></table></details><details><summary>fewshot_upper_child / zero_control</summary><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><p>Actual answer:</p><pre>CH</pre><p>Input edit:</p><pre>{
+  &quot;feature&quot;: 1372,
+  &quot;position&quot;: 27,
+  &quot;token&quot;: &quot;child&quot;,
+  &quot;natural_gate&quot;: 3.212066650390625,
+  &quot;removed_gate&quot;: 0.0,
+  &quot;effective_estimated_gate&quot;: 3.212066650390625,
+  &quot;lowrank_norm&quot;: 2.04984188079834,
+  &quot;intended_delta_norm&quot;: 0.0,
+  &quot;actual_bf16_delta_norm&quot;: 0.0,
+  &quot;native_mlp_norm&quot;: 8.339771270751953,
+  &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+  &quot;max_bf16_rounding_error&quot;: 0.0
+}</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.212066650390625</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>38</td><td>&#x27;CH&#x27;</td><td>0.0</td><td>0.0</td></tr></tbody></table></details><details><summary>fewshot_upper_child / ablate_B</summary><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><p>Actual answer:</p><pre>CH</pre><p>Input edit:</p><pre>{
+  &quot;feature&quot;: 1372,
+  &quot;position&quot;: 27,
+  &quot;token&quot;: &quot;child&quot;,
+  &quot;natural_gate&quot;: 3.212066650390625,
+  &quot;removed_gate&quot;: 3.212066650390625,
+  &quot;effective_estimated_gate&quot;: 0.0,
+  &quot;lowrank_norm&quot;: 2.04984188079834,
+  &quot;intended_delta_norm&quot;: 6.584228038787842,
+  &quot;actual_bf16_delta_norm&quot;: 6.584375858306885,
+  &quot;native_mlp_norm&quot;: 8.339771270751953,
+  &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+  &quot;max_bf16_rounding_error&quot;: 0.0016616955399513245
+}</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.212066650390625</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>38</td><td>&#x27;CH&#x27;</td><td>0.0</td><td>0.0</td></tr></tbody></table></details><details><summary>fewshot_upper_child / ablate_A_inactive_sanity</summary><pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+child:</pre><p>Actual answer:</p><pre>CH</pre><p>Input edit:</p><pre>{
+  &quot;feature&quot;: 2334,
+  &quot;position&quot;: 27,
+  &quot;token&quot;: &quot;child&quot;,
+  &quot;natural_gate&quot;: 0.0,
+  &quot;removed_gate&quot;: 0.0,
+  &quot;effective_estimated_gate&quot;: 0.0,
+  &quot;lowrank_norm&quot;: 0.42609333992004395,
+  &quot;intended_delta_norm&quot;: 0.0,
+  &quot;actual_bf16_delta_norm&quot;: 0.0,
+  &quot;native_mlp_norm&quot;: 8.339771270751953,
+  &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+  &quot;max_bf16_rounding_error&quot;: 0.0
+}</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.212066650390625</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>38</td><td>&#x27;CH&#x27;</td><td>0.0</td><td>0.0</td></tr></tbody></table></details><details><summary>fewshot_lower_child / native</summary><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre><p>Actual answer:</p><pre>child: ch</pre><p>Input edit:</p><pre>null</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th></tr></thead><tbody></tbody></table></details><details><summary>fewshot_lower_child / zero_control</summary><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre><p>Actual answer:</p><pre>child: ch</pre><p>Input edit:</p><pre>{
+  &quot;feature&quot;: 1372,
+  &quot;position&quot;: 27,
+  &quot;token&quot;: &quot;child&quot;,
+  &quot;natural_gate&quot;: 3.243368625640869,
+  &quot;removed_gate&quot;: 0.0,
+  &quot;effective_estimated_gate&quot;: 3.243368625640869,
+  &quot;lowrank_norm&quot;: 2.1022391319274902,
+  &quot;intended_delta_norm&quot;: 0.0,
+  &quot;actual_bf16_delta_norm&quot;: 0.0,
+  &quot;native_mlp_norm&quot;: 9.188338279724121,
+  &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+  &quot;max_bf16_rounding_error&quot;: 0.0
+}</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.243368625640869</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>38</td><td>&#x27;child&#x27;</td><td>0.0</td><td>2.856123924255371</td></tr><tr><td>response</td><td>39</td><td>&#x27;:&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>40</td><td>&#x27; ch&#x27;</td><td>0.0</td><td>0.0</td></tr></tbody></table></details><details><summary>fewshot_lower_child / ablate_B</summary><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre><p>Actual answer:</p><pre>child: ch</pre><p>Input edit:</p><pre>{
+  &quot;feature&quot;: 1372,
+  &quot;position&quot;: 27,
+  &quot;token&quot;: &quot;child&quot;,
+  &quot;natural_gate&quot;: 3.243368625640869,
+  &quot;removed_gate&quot;: 3.243368625640869,
+  &quot;effective_estimated_gate&quot;: 0.0,
+  &quot;lowrank_norm&quot;: 2.1022391319274902,
+  &quot;intended_delta_norm&quot;: 6.818336486816406,
+  &quot;actual_bf16_delta_norm&quot;: 6.818601608276367,
+  &quot;native_mlp_norm&quot;: 9.188338279724121,
+  &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+  &quot;max_bf16_rounding_error&quot;: 0.0010119229555130005
+}</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.243368625640869</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>38</td><td>&#x27;child&#x27;</td><td>0.0</td><td>2.856123924255371</td></tr><tr><td>response</td><td>39</td><td>&#x27;:&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>40</td><td>&#x27; ch&#x27;</td><td>0.0</td><td>0.0</td></tr></tbody></table></details><details><summary>fewshot_lower_child / ablate_A_inactive_sanity</summary><pre>Give the first two letters of each word in lowercase.
+
+garden: ga
+window: wi
+table: ta
+child:</pre><p>Actual answer:</p><pre>child: ch</pre><p>Input edit:</p><pre>{
+  &quot;feature&quot;: 2334,
+  &quot;position&quot;: 27,
+  &quot;token&quot;: &quot;child&quot;,
+  &quot;natural_gate&quot;: 0.0,
+  &quot;removed_gate&quot;: 0.0,
+  &quot;effective_estimated_gate&quot;: 0.0,
+  &quot;lowrank_norm&quot;: 0.4317154884338379,
+  &quot;intended_delta_norm&quot;: 0.0,
+  &quot;actual_bf16_delta_norm&quot;: 0.0,
+  &quot;native_mlp_norm&quot;: 9.188338279724121,
+  &quot;other_positions_at_intervention_boundary_identical&quot;: true,
+  &quot;max_bf16_rounding_error&quot;: 0.0
+}</pre><table><thead><tr><th>Segment</th><th>Position</th><th>Token</th><th>CH gate</th><th>Child gate</th></tr></thead><tbody><tr><td>prompt</td><td>27</td><td>&#x27;child&#x27;</td><td>0.0</td><td>3.243368625640869</td></tr><tr><td>prompt</td><td>37</td><td>&#x27;\n\n&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>38</td><td>&#x27;child&#x27;</td><td>0.0</td><td>2.856123924255371</td></tr><tr><td>response</td><td>39</td><td>&#x27;:&#x27;</td><td>0.0</td><td>0.0</td></tr><tr><td>response</td><td>40</td><td>&#x27; ch&#x27;</td><td>0.0</td><td>0.0</td></tr></tbody></table></details>
+<p><a href="summary.json">Summary JSON</a> · <a href="summary.csv">Summary CSV</a> · <a href="verification.json">Independent verification</a> · <a href="remote-export/artifacts/results.json">Complete results</a></p></html>

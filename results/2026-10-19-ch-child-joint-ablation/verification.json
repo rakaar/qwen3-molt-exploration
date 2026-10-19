@@ -1,0 +1,272 @@
+{
+  "all_10_conditions_complete": true,
+  "all_32_source_observations_independently_verified": true,
+  "all_actual_BF16_edits_exact": true,
+  "no_generated_tokens_edited": true,
+  "zero_control_scores_bit_exact": true,
+  "all_four_prior_single_ablation_results_exact": true,
+  "dynamic_L28_checks": [
+    {
+      "case_id": "fewshot_lower_child",
+      "L28_native_gate": 2.7508020401000977,
+      "L28_gate_after_L3_ablation": 2.623206615447998,
+      "L28_current_input_change_L2": 13.176654815673828,
+      "joint_uses_current_L28_input": true
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "L28_native_gate": 2.6963047981262207,
+      "L28_gate_after_L3_ablation": 2.622390031814575,
+      "L28_current_input_change_L2": 12.32131290435791,
+      "joint_uses_current_L28_input": true
+    }
+  ],
+  "prior_reproduction": [
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L3_only",
+      "prior_probability_exact": true
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L28_only",
+      "prior_probability_exact": true
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L3_only",
+      "prior_probability_exact": true
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L28_only",
+      "prior_probability_exact": true
+    }
+  ],
+  "edit_checks": [
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "zero_control",
+      "mode": "free",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "zero_control",
+      "mode": "free",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "zero_control",
+      "mode": "forced",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "zero_control",
+      "mode": "forced",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L3_only",
+      "mode": "free",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 3.2782554626464844e-07
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L3_only",
+      "mode": "free",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L3_only",
+      "mode": "forced",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 3.2782554626464844e-07
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L3_only",
+      "mode": "forced",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L28_only",
+      "mode": "free",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L28_only",
+      "mode": "free",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 6.198883056640625e-06
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L28_only",
+      "mode": "forced",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "L28_only",
+      "mode": "forced",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 6.198883056640625e-06
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "joint",
+      "mode": "free",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 3.2782554626464844e-07
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "joint",
+      "mode": "free",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "joint",
+      "mode": "forced",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 3.2782554626464844e-07
+    },
+    {
+      "case_id": "fewshot_upper_child",
+      "condition": "joint",
+      "mode": "forced",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "zero_control",
+      "mode": "free",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "zero_control",
+      "mode": "free",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "zero_control",
+      "mode": "forced",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "zero_control",
+      "mode": "forced",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L3_only",
+      "mode": "free",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 2.682209014892578e-07
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L3_only",
+      "mode": "free",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L3_only",
+      "mode": "forced",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 2.682209014892578e-07
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L3_only",
+      "mode": "forced",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L28_only",
+      "mode": "free",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L28_only",
+      "mode": "free",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 1.2874603271484375e-05
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L28_only",
+      "mode": "forced",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 0.0
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "L28_only",
+      "mode": "forced",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 1.2874603271484375e-05
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "joint",
+      "mode": "free",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 2.682209014892578e-07
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "joint",
+      "mode": "free",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 2.86102294921875e-06
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "joint",
+      "mode": "forced",
+      "layer": 3,
+      "CPU_delta_max_abs_error": 2.682209014892578e-07
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "condition": "joint",
+      "mode": "forced",
+      "layer": 28,
+      "CPU_delta_max_abs_error": 2.86102294921875e-06
+    }
+  ]
+}

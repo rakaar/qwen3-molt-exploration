@@ -1,0 +1,3080 @@
+{
+  "status": "complete",
+  "rows": [
+    {
+      "id": "fewshot_upper_child",
+      "family": "fewshot_upper",
+      "target": "child",
+      "target_span": [
+        87,
+        92
+      ],
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+      "expected": "CH",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        3048,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          110,
+          120
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          121,
+          133
+        ],
+        [
+          133,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          150
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          152,
+          160
+        ],
+        [
+          160,
+          162
+        ]
+      ],
+      "target_positions": [
+        27
+      ],
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "answer": "CH",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 2149,
+          "token": "CH",
+          "probability": 0.9931907057762146
+        },
+        {
+          "token_id": 11237,
+          "token": "CI",
+          "probability": 0.006692066323012114
+        },
+        {
+          "token_id": 3652,
+          "token": "Child",
+          "probability": 9.54572024056688e-05
+        },
+        {
+          "token_id": 3048,
+          "token": "child",
+          "probability": 8.878902917786036e-06
+        },
+        {
+          "token_id": 1143,
+          "token": "Ch",
+          "probability": 6.914896403031889e-06
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        3048,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        2149
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 2149,
+          "log_probability": -0.006832569371908903
+        },
+        {
+          "step": 1,
+          "predicted_token": 151645,
+          "log_probability": -1.7523612768854946e-05
+        }
+      ],
+      "input_file": "fewshot_upper_child.npz",
+      "input_sha256": "554805f60bab47c0ec3f39dbc2af4fdad02a2921e7683c608d929d97f3a69822",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_upper_chin",
+      "family": "fewshot_upper",
+      "target": "chin",
+      "target_span": [
+        87,
+        91
+      ],
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchin:",
+      "expected": "CH",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchin:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        59071,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          108
+        ],
+        [
+          108,
+          109
+        ],
+        [
+          109,
+          119
+        ],
+        [
+          119,
+          120
+        ],
+        [
+          120,
+          132
+        ],
+        [
+          132,
+          141
+        ],
+        [
+          141,
+          142
+        ],
+        [
+          142,
+          149
+        ],
+        [
+          149,
+          151
+        ],
+        [
+          151,
+          159
+        ],
+        [
+          159,
+          161
+        ]
+      ],
+      "target_positions": [
+        27
+      ],
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "answer": "CH",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 2149,
+          "token": "CH",
+          "probability": 0.9906251430511475
+        },
+        {
+          "token_id": 11237,
+          "token": "CI",
+          "probability": 0.008570587262511253
+        },
+        {
+          "token_id": 1143,
+          "token": "Ch",
+          "probability": 0.0007971887825988233
+        },
+        {
+          "token_id": 56635,
+          "token": "Chi",
+          "probability": 2.8751119316439144e-06
+        },
+        {
+          "token_id": 59071,
+          "token": "chin",
+          "probability": 1.7438434269934078e-06
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        59071,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        2149
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 2149,
+          "log_probability": -0.009419050067663193
+        },
+        {
+          "step": 1,
+          "predicted_token": 151645,
+          "log_probability": -9.059865078597795e-06
+        }
+      ],
+      "input_file": "fewshot_upper_chin.npz",
+      "input_sha256": "8d5c1c7b15759785baebf3f2c9125d30cd5678bfef9448127d1bce04dd536179",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_upper_chair",
+      "family": "fewshot_upper",
+      "target": "chair",
+      "target_span": [
+        87,
+        92
+      ],
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchair:",
+      "expected": "CH",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchair:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        34196,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          110,
+          120
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          121,
+          133
+        ],
+        [
+          133,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          150
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          152,
+          160
+        ],
+        [
+          160,
+          162
+        ]
+      ],
+      "target_positions": [
+        27
+      ],
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "answer": "CH",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 2149,
+          "token": "CH",
+          "probability": 0.8804038763046265
+        },
+        {
+          "token_id": 36787,
+          "token": "CHA",
+          "probability": 0.11914970725774765
+        },
+        {
+          "token_id": 11237,
+          "token": "CI",
+          "probability": 0.00037922742194496095
+        },
+        {
+          "token_id": 1143,
+          "token": "Ch",
+          "probability": 3.527363878674805e-05
+        },
+        {
+          "token_id": 5049,
+          "token": "CA",
+          "probability": 2.4243197913165204e-05
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        34196,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        2149
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 2149,
+          "log_probability": -0.12737451493740082
+        },
+        {
+          "step": 1,
+          "predicted_token": 151645,
+          "log_probability": -2.825220326485578e-05
+        }
+      ],
+      "input_file": "fewshot_upper_chair.npz",
+      "input_sha256": "010bf6b3f065a71e6b4e48eb71b125681576c3e3265d0f55bc10fe8f03f93c41",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_upper_chief",
+      "family": "fewshot_upper",
+      "target": "chief",
+      "target_span": [
+        87,
+        92
+      ],
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchief:",
+      "expected": "CH",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchief:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        61526,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          110,
+          120
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          121,
+          133
+        ],
+        [
+          133,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          150
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          152,
+          160
+        ],
+        [
+          160,
+          162
+        ]
+      ],
+      "target_positions": [
+        27
+      ],
+      "output_token_ids": [
+        2149,
+        151645
+      ],
+      "answer": "CH",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 2149,
+          "token": "CH",
+          "probability": 0.9602513313293457
+        },
+        {
+          "token_id": 11237,
+          "token": "CI",
+          "probability": 0.037232983857393265
+        },
+        {
+          "token_id": 61526,
+          "token": "chief",
+          "probability": 0.0018537212163209915
+        },
+        {
+          "token_id": 65807,
+          "token": "Chief",
+          "probability": 0.0002213954139733687
+        },
+        {
+          "token_id": 331,
+          "token": "ch",
+          "probability": 0.0002213954139733687
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        61526,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        2149
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 2149,
+          "log_probability": -0.040560197085142136
+        },
+        {
+          "step": 1,
+          "predicted_token": 151645,
+          "log_probability": -2.169585604860913e-05
+        }
+      ],
+      "input_file": "fewshot_upper_chief.npz",
+      "input_sha256": "d428d68201de3a00fd8d0b1e4ac87fe29943108b91ec7ec578ec8d06bfcd2ad7",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_upper_cheef",
+      "family": "fewshot_upper",
+      "target": "cheef",
+      "target_span": [
+        87,
+        92
+      ],
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncheef:",
+      "expected": "CH",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncheef:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        1528,
+        823,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          107
+        ],
+        [
+          107,
+          109
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          110,
+          120
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          121,
+          133
+        ],
+        [
+          133,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          150
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          152,
+          160
+        ],
+        [
+          160,
+          162
+        ]
+      ],
+      "target_positions": [
+        27,
+        28
+      ],
+      "output_token_ids": [
+        2104,
+        151645
+      ],
+      "answer": "CE",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 2104,
+          "token": "CE",
+          "probability": 0.5020585656166077
+        },
+        {
+          "token_id": 2149,
+          "token": "CH",
+          "probability": 0.26873257756233215
+        },
+        {
+          "token_id": 43793,
+          "token": "CHE",
+          "probability": 0.09886118024587631
+        },
+        {
+          "token_id": 9650,
+          "token": "CF",
+          "probability": 0.046698715537786484
+        },
+        {
+          "token_id": 11237,
+          "token": "CI",
+          "probability": 0.036368999630212784
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        39482,
+        382,
+        70,
+        8341,
+        25,
+        26341,
+        198,
+        5507,
+        25,
+        41923,
+        198,
+        2005,
+        25,
+        38891,
+        198,
+        1528,
+        823,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        2104
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 2104,
+          "log_probability": -0.6890385746955872
+        },
+        {
+          "step": 1,
+          "predicted_token": 151645,
+          "log_probability": -2.9801878554280847e-05
+        }
+      ],
+      "input_file": "fewshot_upper_cheef.npz",
+      "input_sha256": "4db33a9fc4f271c5c188ef9a662de4f77932e6cfc2750b81b130f1c2a1eacc8f",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_lower_child",
+      "family": "fewshot_lower",
+      "target": "child",
+      "target_span": [
+        87,
+        92
+      ],
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+      "expected": "ch",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        3048,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          110,
+          120
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          121,
+          133
+        ],
+        [
+          133,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          150
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          152,
+          160
+        ],
+        [
+          160,
+          162
+        ]
+      ],
+      "target_positions": [
+        27
+      ],
+      "output_token_ids": [
+        3048,
+        25,
+        521,
+        151645
+      ],
+      "answer": "child: ch",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 3048,
+          "token": "child",
+          "probability": 0.9999455213546753
+        },
+        {
+          "token_id": 14604,
+          "token": "chi",
+          "probability": 1.6700791093171574e-05
+        },
+        {
+          "token_id": 1682,
+          "token": " child",
+          "probability": 1.1478274245746434e-05
+        },
+        {
+          "token_id": 17531,
+          "token": ".child",
+          "probability": 1.0129540896741673e-05
+        },
+        {
+          "token_id": 17794,
+          "token": "(child",
+          "probability": 6.961925464565866e-06
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        3048,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        3048,
+        25,
+        521
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 3048,
+          "log_probability": -5.447716102935374e-05
+        },
+        {
+          "step": 1,
+          "predicted_token": 25,
+          "log_probability": 0.0
+        },
+        {
+          "step": 2,
+          "predicted_token": 521,
+          "log_probability": -0.0003190723655279726
+        },
+        {
+          "step": 3,
+          "predicted_token": 151645,
+          "log_probability": -8.821448318485636e-06
+        }
+      ],
+      "input_file": "fewshot_lower_child.npz",
+      "input_sha256": "d5b9da3aedf62482ff440dddd10b75ef22f3a39c3e103d4471b695c2247440b3",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_lower_chin",
+      "family": "fewshot_lower",
+      "target": "chin",
+      "target_span": [
+        87,
+        91
+      ],
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchin:",
+      "expected": "ch",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchin:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        59071,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          108
+        ],
+        [
+          108,
+          109
+        ],
+        [
+          109,
+          119
+        ],
+        [
+          119,
+          120
+        ],
+        [
+          120,
+          132
+        ],
+        [
+          132,
+          141
+        ],
+        [
+          141,
+          142
+        ],
+        [
+          142,
+          149
+        ],
+        [
+          149,
+          151
+        ],
+        [
+          151,
+          159
+        ],
+        [
+          159,
+          161
+        ]
+      ],
+      "target_positions": [
+        27
+      ],
+      "output_token_ids": [
+        59071,
+        25,
+        521,
+        151645
+      ],
+      "answer": "chin: ch",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 59071,
+          "token": "chin",
+          "probability": 0.9947443008422852
+        },
+        {
+          "token_id": 14604,
+          "token": "chi",
+          "probability": 0.003587608225643635
+        },
+        {
+          "token_id": 331,
+          "token": "ch",
+          "probability": 0.000907089386601001
+        },
+        {
+          "token_id": 45075,
+          "token": " chin",
+          "probability": 0.0005501775303855538
+        },
+        {
+          "token_id": 18103,
+          "token": "cin",
+          "probability": 0.00015762849943712354
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        59071,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        59071,
+        25,
+        521
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 59071,
+          "log_probability": -0.005269566550850868
+        },
+        {
+          "step": 1,
+          "predicted_token": 25,
+          "log_probability": 0.0
+        },
+        {
+          "step": 2,
+          "predicted_token": 521,
+          "log_probability": -0.0018878034316003323
+        },
+        {
+          "step": 3,
+          "predicted_token": 151645,
+          "log_probability": -1.1205610462639015e-05
+        }
+      ],
+      "input_file": "fewshot_lower_chin.npz",
+      "input_sha256": "264ab2beebc328edff3659df7d4183be4e4078686862698f662e15f2376a37e6",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_lower_chair",
+      "family": "fewshot_lower",
+      "target": "chair",
+      "target_span": [
+        87,
+        92
+      ],
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchair:",
+      "expected": "ch",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchair:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        34196,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          110,
+          120
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          121,
+          133
+        ],
+        [
+          133,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          150
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          152,
+          160
+        ],
+        [
+          160,
+          162
+        ]
+      ],
+      "target_positions": [
+        27
+      ],
+      "output_token_ids": [
+        331,
+        151645
+      ],
+      "answer": "ch",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 331,
+          "token": "ch",
+          "probability": 0.7064626216888428
+        },
+        {
+          "token_id": 34196,
+          "token": "chair",
+          "probability": 0.15763312578201294
+        },
+        {
+          "token_id": 6447,
+          "token": "cha",
+          "probability": 0.06571125984191895
+        },
+        {
+          "token_id": 5855,
+          "token": "ci",
+          "probability": 0.04516264423727989
+        },
+        {
+          "token_id": 14604,
+          "token": "chi",
+          "probability": 0.021333323791623116
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        34196,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        331
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 331,
+          "log_probability": -0.3474849760532379
+        },
+        {
+          "step": 1,
+          "predicted_token": 151645,
+          "log_probability": -1.7523612768854946e-05
+        }
+      ],
+      "input_file": "fewshot_lower_chair.npz",
+      "input_sha256": "6646ce9ab5d7676bf8b5a3dbfb62ed09cd0927250b573f6a8417a477b89432be",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_lower_chief",
+      "family": "fewshot_lower",
+      "target": "chief",
+      "target_span": [
+        87,
+        92
+      ],
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchief:",
+      "expected": "ch",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchief:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        61526,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          110,
+          120
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          121,
+          133
+        ],
+        [
+          133,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          150
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          152,
+          160
+        ],
+        [
+          160,
+          162
+        ]
+      ],
+      "target_positions": [
+        27
+      ],
+      "output_token_ids": [
+        61526,
+        25,
+        521,
+        151645
+      ],
+      "answer": "chief: ch",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 61526,
+          "token": "chief",
+          "probability": 0.44383540749549866
+        },
+        {
+          "token_id": 5855,
+          "token": "ci",
+          "probability": 0.3456593453884125
+        },
+        {
+          "token_id": 331,
+          "token": "ch",
+          "probability": 0.12716098129749298
+        },
+        {
+          "token_id": 14604,
+          "token": "chi",
+          "probability": 0.07712702453136444
+        },
+        {
+          "token_id": 75079,
+          "token": "chef",
+          "probability": 0.0033887249883264303
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        61526,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        61526,
+        25,
+        521
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 61526,
+          "log_probability": -0.812301516532898
+        },
+        {
+          "step": 1,
+          "predicted_token": 25,
+          "log_probability": 0.0
+        },
+        {
+          "step": 2,
+          "predicted_token": 521,
+          "log_probability": -0.007811474613845348
+        },
+        {
+          "step": 3,
+          "predicted_token": 151645,
+          "log_probability": -9.536697689327411e-06
+        }
+      ],
+      "input_file": "fewshot_lower_chief.npz",
+      "input_sha256": "ebaedefccd8e32a703abe2bf699da006334c1a45f250c12d6c081a73195e5897",
+      "read_only_bit_exact_logits": true
+    },
+    {
+      "id": "fewshot_lower_cheef",
+      "family": "fewshot_lower",
+      "target": "cheef",
+      "target_span": [
+        87,
+        92
+      ],
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncheef:",
+      "expected": "ch",
+      "chat": "<|im_start|>user\nGive the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncheef:<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "prompt_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        1528,
+        823,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_token_offsets": [
+        [
+          0,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          46,
+          51
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          69,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          107
+        ],
+        [
+          107,
+          109
+        ],
+        [
+          109,
+          110
+        ],
+        [
+          110,
+          120
+        ],
+        [
+          120,
+          121
+        ],
+        [
+          121,
+          133
+        ],
+        [
+          133,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          150
+        ],
+        [
+          150,
+          152
+        ],
+        [
+          152,
+          160
+        ],
+        [
+          160,
+          162
+        ]
+      ],
+      "target_positions": [
+        27,
+        28
+      ],
+      "output_token_ids": [
+        1528,
+        823,
+        25,
+        521,
+        151645
+      ],
+      "answer": "cheef: ch",
+      "stop_reason": "eos",
+      "first_prediction_top_tokens": [
+        {
+          "token_id": 1528,
+          "token": "che",
+          "probability": 0.9989556074142456
+        },
+        {
+          "token_id": 331,
+          "token": "ch",
+          "probability": 0.0003797319659497589
+        },
+        {
+          "token_id": 346,
+          "token": "ce",
+          "probability": 0.0002957355754915625
+        },
+        {
+          "token_id": 26843,
+          "token": "Che",
+          "probability": 0.0002609856892377138
+        },
+        {
+          "token_id": 75079,
+          "token": "chef",
+          "probability": 4.5352517190622166e-05
+        }
+      ],
+      "baseline_generation_no_hooks": true,
+      "processed_token_ids": [
+        151644,
+        872,
+        198,
+        35127,
+        279,
+        1156,
+        1378,
+        11931,
+        315,
+        1817,
+        3409,
+        304,
+        42047,
+        382,
+        70,
+        8341,
+        25,
+        13510,
+        198,
+        5507,
+        25,
+        23250,
+        198,
+        2005,
+        25,
+        9450,
+        198,
+        1528,
+        823,
+        25,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271,
+        1528,
+        823,
+        25,
+        521
+      ],
+      "prediction_scores": [
+        {
+          "step": 0,
+          "predicted_token": 1528,
+          "log_probability": -0.0010449193650856614
+        },
+        {
+          "step": 1,
+          "predicted_token": 823,
+          "log_probability": -1.311301275563892e-06
+        },
+        {
+          "step": 2,
+          "predicted_token": 25,
+          "log_probability": 0.0
+        },
+        {
+          "step": 3,
+          "predicted_token": 521,
+          "log_probability": -0.00405644066631794
+        },
+        {
+          "step": 4,
+          "predicted_token": 151645,
+          "log_probability": -1.1324817933200393e-05
+        }
+      ],
+      "input_file": "fewshot_lower_cheef.npz",
+      "input_sha256": "dea4b17f5d9daa21d2f3362806b3cbb399af7a5105244e76620e04ce7e161000",
+      "read_only_bit_exact_logits": true
+    }
+  ],
+  "elapsed_seconds": 9.757755397993606,
+  "all_unhooked_generations_reproduced": true,
+  "all_readonly_prediction_scores_identical": true,
+  "source_sha256": {
+    "capture.py": "a08d4d22adc9cc0f80b13f1505e33bb5c140c26df0cfeaeccb9c44b2caeac5ec",
+    "cases.json": "11d5ebd5f1ed35e23fded6b8b489d57b9dd3eb20500dac54cc10ecaf650bf4d0",
+    "protocol.json": "6c7e89ed660e9186e4037edba769ba955010c3ef32464b8d7b64bc71aded939a"
+  }
+}

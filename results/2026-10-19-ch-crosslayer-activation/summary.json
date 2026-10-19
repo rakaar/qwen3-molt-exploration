@@ -1,0 +1,291 @@
+{
+  "status": "complete",
+  "features": {
+    "L3-T2334": {
+      "label": "Ch-Initial Word Onset",
+      "source_tokens_active": 9,
+      "source_tokens_total": 12,
+      "max_source_gate": 3.156115770339966,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L3-T1372": {
+      "label": "Token child in personal or familial contexts",
+      "source_tokens_active": 2,
+      "source_tokens_total": 12,
+      "max_source_gate": 3.243368625640869,
+      "child_gates": {
+        "uppercase": 3.212066650390625,
+        "lowercase": 3.243368625640869
+      }
+    },
+    "L4-T153": {
+      "label": "Substring \"ch\" or \"new\"",
+      "source_tokens_active": 0,
+      "source_tokens_total": 12,
+      "max_source_gate": 0.0,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L11-T2226": {
+      "label": "Child and Baby Token Activation",
+      "source_tokens_active": 0,
+      "source_tokens_total": 12,
+      "max_source_gate": 0.0,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L29-T2334": {
+      "label": "Initial \"Ch\" Word Onset",
+      "source_tokens_active": 6,
+      "source_tokens_total": 12,
+      "max_source_gate": 2.46260929107666,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L32-T1516": {
+      "label": "Culinary and Proper Noun \"Ch\" Word Starts",
+      "source_tokens_active": 0,
+      "source_tokens_total": 12,
+      "max_source_gate": 0.0,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    },
+    "L34-T929": {
+      "label": "Bigram \"ch\" Prefix Gate",
+      "source_tokens_active": 2,
+      "source_tokens_total": 12,
+      "max_source_gate": 2.1887893676757812,
+      "child_gates": {
+        "uppercase": 0.0,
+        "lowercase": 0.0
+      }
+    }
+  },
+  "columns": [
+    {
+      "word": "child",
+      "token": "child"
+    },
+    {
+      "word": "chin",
+      "token": "chin"
+    },
+    {
+      "word": "chair",
+      "token": "chair"
+    },
+    {
+      "word": "chief",
+      "token": "chief"
+    },
+    {
+      "word": "cheef",
+      "token": "che"
+    },
+    {
+      "word": "cheef",
+      "token": "ef"
+    }
+  ],
+  "matrices": {
+    "uppercase": [
+      [
+        0.0,
+        3.156115770339966,
+        1.282968521118164,
+        1.7412421703338623,
+        1.1252057552337646,
+        2.043268918991089
+      ],
+      [
+        3.212066650390625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.46260929107666,
+        0.6047309637069702,
+        0.0,
+        1.9014731645584106,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.185281276702881,
+        0.0
+      ]
+    ],
+    "lowercase": [
+      [
+        0.0,
+        3.0498318672180176,
+        1.2244789600372314,
+        1.8639132976531982,
+        0.0,
+        1.9613842964172363
+      ],
+      [
+        3.243368625640869,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.3919849395751953,
+        0.6471443176269531,
+        0.0,
+        1.9037786722183228,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.1887893676757812,
+        0.0
+      ]
+    ]
+  },
+  "feature_order": [
+    "L3-T2334",
+    "L3-T1372",
+    "L4-T153",
+    "L11-T2226",
+    "L29-T2334",
+    "L32-T1516",
+    "L34-T929"
+  ],
+  "answers": [
+    {
+      "case_id": "fewshot_upper_child",
+      "word": "child",
+      "answer": "CH",
+      "expected": "CH"
+    },
+    {
+      "case_id": "fewshot_upper_chin",
+      "word": "chin",
+      "answer": "CH",
+      "expected": "CH"
+    },
+    {
+      "case_id": "fewshot_upper_chair",
+      "word": "chair",
+      "answer": "CH",
+      "expected": "CH"
+    },
+    {
+      "case_id": "fewshot_upper_chief",
+      "word": "chief",
+      "answer": "CH",
+      "expected": "CH"
+    },
+    {
+      "case_id": "fewshot_upper_cheef",
+      "word": "cheef",
+      "answer": "CE",
+      "expected": "CH"
+    },
+    {
+      "case_id": "fewshot_lower_child",
+      "word": "child",
+      "answer": "child: ch",
+      "expected": "ch"
+    },
+    {
+      "case_id": "fewshot_lower_chin",
+      "word": "chin",
+      "answer": "chin: ch",
+      "expected": "ch"
+    },
+    {
+      "case_id": "fewshot_lower_chair",
+      "word": "chair",
+      "answer": "ch",
+      "expected": "ch"
+    },
+    {
+      "case_id": "fewshot_lower_chief",
+      "word": "chief",
+      "answer": "chief: ch",
+      "expected": "ch"
+    },
+    {
+      "case_id": "fewshot_lower_cheef",
+      "word": "cheef",
+      "answer": "cheef: ch",
+      "expected": "ch"
+    }
+  ],
+  "interpretation_limits": "Only five CH-starting spellings, four real words and nonce cheef; no non-CH control group. Gates are input- and position-dependent; absence/presence is not a causal conclusion. Raw gate scales are not calibrated across transforms."
+}
