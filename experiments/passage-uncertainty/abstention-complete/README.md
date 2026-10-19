@@ -12,7 +12,7 @@ Twenty fixed passage questions: ten the native model answered correctly, and ten
 | Output only | 7/10 | 3/10 |
 | Input + output | 10/10 | 7/10 |
 
-These counts allow question-specific tuning over all saved tests. At the shared coefficient **+16**, input-only steering converts all ten made-up answers, causes two false abstentions among the correct answers, and keeps all twenty responses coherent. This coefficient was identified after inspecting this grid, not evaluated on held-out questions.
+These counts allow question-specific tuning over all saved tests. At the shared coefficient **+16**, input-only steering converts all ten made-up answers, causes two false abstentions among the correct answers, and keeps all twenty responses coherent. This coefficient was identified after inspecting this grid, not evaluated on held-out questions. At input-only +20, all ten made-up cases abstain and none of the ten correct cases fully withholds, but nine correct cases add uncertainty or false omission caveats. Keeping the answer present therefore does not mean answer quality is unchanged.
 
 On the common grid, the median lowest successful tested coefficients for the made-up cases are +4 input-only, +12 output-only and +2 input + output. The output-only median includes its seven successes; three cases fail. Input editing often works at lower coefficients, but the experiment does not isolate why individual questions need different values. Higher values can restore an answer, cause question drift or break coherence.
 
