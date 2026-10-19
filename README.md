@@ -4,7 +4,11 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
-**Current resource update — 16 October 2026:** SPAR instance **56070285 and its attached 30 GB disk have been removed at the user’s request**. Fresh account checks show **zero instances, zero standalone volumes and $0/hour ongoing compute/storage billing**. All 189 remote scientific/runtime files were hash-verified and backed up before removal. [Teardown and backup proof](results/2026-10-16-vast-teardown/README.md). Earlier retained-GPU records are historical.
+## New report: 19 October 2026
+
+- [Complete twenty-question abstention comparison](results/2026-10-19-abstention-complete/index.html) — ten originally correct answers and ten selected made-up answers, each tested with input-only, output-only and input-plus-output steering of L19–T368. At one shared input-only addition **+16**, all ten made-up answers become coherent abstentions; two of the ten originally correct answers also withhold. All twenty responses remain coherent. Per-question tuning gives **10/10, 7/10 and 10/10** conversions respectively. Includes all **1,176** positive responses, the common fourteen-strength grid, eleven strength trajectories, exact additive method, false-abstention controls, historical raw inputs and full new token traces. [Code and limitations](experiments/passage-uncertainty/abstention-complete/README.md).
+
+**Historical resource update — 16 October 2026:** SPAR instance **56070285 and its attached 30 GB disk have been removed at the user’s request**. Fresh account checks show **zero instances, zero standalone volumes and $0/hour ongoing compute/storage billing**. All 189 remote scientific/runtime files were hash-verified and backed up before removal. [Teardown and backup proof](results/2026-10-16-vast-teardown/README.md). Earlier retained-GPU records are historical.
 
 ## New report: 16 October 2026
 
