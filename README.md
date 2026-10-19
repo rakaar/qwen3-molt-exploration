@@ -2,6 +2,8 @@
 
 Results, figures, and code from exploratory Qwen3-4B experiments. The original 29 September session is retained below; new intervention experiments were run on 10–15 October 2026.
 
+**[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
+
 **Current resource update — 16 October 2026:** SPAR instance **56070285 and its attached 30 GB disk have been removed at the user’s request**. Fresh account checks show **zero instances, zero standalone volumes and $0/hour ongoing compute/storage billing**. All 189 remote scientific/runtime files were hash-verified and backed up before removal. [Teardown and backup proof](results/2026-10-16-vast-teardown/README.md). Earlier retained-GPU records are historical.
 
 ## New report: 16 October 2026
@@ -66,7 +68,7 @@ The new outcome is next-token probability on the original prompt, not accuracy a
 
 ## Original session: 29 September 2026
 
-**[Open the HTML results summary](https://rakaar.github.io/qwen3-molt-exploration/)** · [Downloadable summary](index.html)
+**[Open the original HTML results summary](https://rakaar.github.io/qwen3-molt-exploration/exploration.html)** · [Downloadable summary](exploration.html)
 
 The HTML is self-contained: its plots and gate-explorer data are embedded, so a downloaded copy works offline.
 
