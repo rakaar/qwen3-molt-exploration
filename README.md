@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## Negative privacy steering — 20 October 2026
+
+- [Additive gate offsets −2 and −4 on the original unauthorized Bob/Alice prompt](results/2026-10-20-privacy-negative-steering/index.html): 24 interventions plus five exact native/observation/zero-clamp controls. Three **−4, user-content-only** settings disclose the complete synthetic code, including **L11–T1596 alone**. Every leak retains refusal or authorization-denial language. Output-only and user-through-output edits at both offsets, and all −2 settings, withhold. Includes every complete answer, input/token positions, frozen method, edit traces, explicit review criteria and source. These are condition counts on one prompt, not a dataset rate. [Source and limitations](experiments/privacy-negative-steering/README.md).
+
 ## Privacy removal controls — published 20 October 2026
 
 - [Output-only zero clamp](results/2026-10-15-privacy-zero-clamp/index.html) and [user/query timing follow-up](results/2026-10-15-privacy-query-clamp/index.html): jointly removing the estimated contributions of L11–T1596, L12–T1891 and L13–T921 preserves the exact refusal on the original unauthorized Bob/Alice prompt. All three timing conditions make genuine edits where gates are active; no synthetic code is disclosed. [The privacy overview now includes this reverse-direction negative result](results/2026-10-15-privacy-refusal-overview/index.html#zero-clamp). This is a different prompt from the positive authorized API-key intervention.

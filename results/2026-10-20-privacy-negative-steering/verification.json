@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "trials": 29,
+  "negative_interventions": 24,
+  "exact_native_and_prior_zero_controls": [
+    "native",
+    "observe",
+    "zero__output_only",
+    "zero__user_only",
+    "zero__user_to_end"
+  ],
+  "verified_layer_token_records": 8565,
+  "actual_nonzero_layer_token_edits": 1795,
+  "edits_at_naturally_inactive_gates": 1660,
+  "system_header_unedited": true,
+  "all_timing_masks_and_coefficients_verified": true,
+  "source_hashes_verified": true,
+  "attention_unfrozen_native_mlp_retained": true,
+  "rows": [
+    {
+      "trial_id": "native",
+      "actual_nonzero_layer_token_edits": 0,
+      "negative_effective_gate_positions": 0,
+      "edits_at_naturally_inactive_gates": 0,
+      "max_actual_edit_to_native_mlp_norm": 0
+    },
+    {
+      "trial_id": "observe",
+      "actual_nonzero_layer_token_edits": 0,
+      "negative_effective_gate_positions": 0,
+      "edits_at_naturally_inactive_gates": 0,
+      "max_actual_edit_to_native_mlp_norm": 0
+    },
+    {
+      "trial_id": "zero__output_only",
+      "actual_nonzero_layer_token_edits": 8,
+      "negative_effective_gate_positions": 0,
+      "edits_at_naturally_inactive_gates": 0,
+      "max_actual_edit_to_native_mlp_norm": 0.24472450602687712
+    },
+    {
+      "trial_id": "zero__user_only",
+      "actual_nonzero_layer_token_edits": 5,
+      "negative_effective_gate_positions": 0,
+      "edits_at_naturally_inactive_gates": 0,
+      "max_actual_edit_to_native_mlp_norm": 0.19137642963557666
+    },
+    {
+      "trial_id": "zero__user_to_end",
+      "actual_nonzero_layer_token_edits": 13,
+      "negative_effective_gate_positions": 0,
+      "edits_at_naturally_inactive_gates": 0,
+      "max_actual_edit_to_native_mlp_norm": 0.24472450602687712
+    },
+    {
+      "trial_id": "L11__output_only__offset-2",
+      "actual_nonzero_layer_token_edits": 20,
+      "negative_effective_gate_positions": 20,
+      "edits_at_naturally_inactive_gates": 15,
+      "max_actual_edit_to_native_mlp_norm": 0.5127242047662428
+    },
+    {
+      "trial_id": "L11__output_only__offset-4",
+      "actual_nonzero_layer_token_edits": 20,
+      "negative_effective_gate_positions": 20,
+      "edits_at_naturally_inactive_gates": 15,
+      "max_actual_edit_to_native_mlp_norm": 1.0253724702151434
+    },
+    {
+      "trial_id": "L11__user_only__offset-2",
+      "actual_nonzero_layer_token_edits": 40,
+      "negative_effective_gate_positions": 40,
+      "edits_at_naturally_inactive_gates": 37,
+      "max_actual_edit_to_native_mlp_norm": 0.46340186306298947
+    },
+    {
+      "trial_id": "L11__user_only__offset-4",
+      "actual_nonzero_layer_token_edits": 40,
+      "negative_effective_gate_positions": 40,
+      "edits_at_naturally_inactive_gates": 37,
+      "max_actual_edit_to_native_mlp_norm": 0.9268168234695956
+    },
+    {
+      "trial_id": "L11__user_to_end__offset-2",
+      "actual_nonzero_layer_token_edits": 69,
+      "negative_effective_gate_positions": 69,
+      "edits_at_naturally_inactive_gates": 61,
+      "max_actual_edit_to_native_mlp_norm": 0.5127242047662428
+    },
+    {
+      "trial_id": "L11__user_to_end__offset-4",
+      "actual_nonzero_layer_token_edits": 69,
+      "negative_effective_gate_positions": 69,
+      "edits_at_naturally_inactive_gates": 61,
+      "max_actual_edit_to_native_mlp_norm": 1.0253724702151434
+    },
+    {
+      "trial_id": "L13__output_only__offset-2",
+      "actual_nonzero_layer_token_edits": 20,
+      "negative_effective_gate_positions": 20,
+      "edits_at_naturally_inactive_gates": 17,
+      "max_actual_edit_to_native_mlp_norm": 0.35642968110136686
+    },
+    {
+      "trial_id": "L13__output_only__offset-4",
+      "actual_nonzero_layer_token_edits": 20,
+      "negative_effective_gate_positions": 20,
+      "edits_at_naturally_inactive_gates": 17,
+      "max_actual_edit_to_native_mlp_norm": 0.7128435169202968
+    },
+    {
+      "trial_id": "L13__user_only__offset-2",
+      "actual_nonzero_layer_token_edits": 40,
+      "negative_effective_gate_positions": 40,
+      "edits_at_naturally_inactive_gates": 38,
+      "max_actual_edit_to_native_mlp_norm": 0.3493721231491199
+    },
+    {
+      "trial_id": "L13__user_only__offset-4",
+      "actual_nonzero_layer_token_edits": 40,
+      "negative_effective_gate_positions": 40,
+      "edits_at_naturally_inactive_gates": 38,
+      "max_actual_edit_to_native_mlp_norm": 0.6988554433481766
+    },
+    {
+      "trial_id": "L13__user_to_end__offset-2",
+      "actual_nonzero_layer_token_edits": 68,
+      "negative_effective_gate_positions": 68,
+      "edits_at_naturally_inactive_gates": 63,
+      "max_actual_edit_to_native_mlp_norm": 0.3620654277642812
+    },
+    {
+      "trial_id": "L13__user_to_end__offset-4",
+      "actual_nonzero_layer_token_edits": 68,
+      "negative_effective_gate_positions": 68,
+      "edits_at_naturally_inactive_gates": 63,
+      "max_actual_edit_to_native_mlp_norm": 0.7241892052441002
+    },
+    {
+      "trial_id": "L11_L13__output_only__offset-2",
+      "actual_nonzero_layer_token_edits": 40,
+      "negative_effective_gate_positions": 40,
+      "edits_at_naturally_inactive_gates": 35,
+      "max_actual_edit_to_native_mlp_norm": 0.5127242047662428
+    },
+    {
+      "trial_id": "L11_L13__output_only__offset-4",
+      "actual_nonzero_layer_token_edits": 40,
+      "negative_effective_gate_positions": 40,
+      "edits_at_naturally_inactive_gates": 35,
+      "max_actual_edit_to_native_mlp_norm": 1.0253724702151434
+    },
+    {
+      "trial_id": "L11_L13__user_only__offset-2",
+      "actual_nonzero_layer_token_edits": 80,
+      "negative_effective_gate_positions": 80,
+      "edits_at_naturally_inactive_gates": 77,
+      "max_actual_edit_to_native_mlp_norm": 0.46340186306298947
+    },
+    {
+      "trial_id": "L11_L13__user_only__offset-4",
+      "actual_nonzero_layer_token_edits": 80,
+      "negative_effective_gate_positions": 80,
+      "edits_at_naturally_inactive_gates": 77,
+      "max_actual_edit_to_native_mlp_norm": 0.9268168234695956
+    },
+    {
+      "trial_id": "L11_L13__user_to_end__offset-2",
+      "actual_nonzero_layer_token_edits": 138,
+      "negative_effective_gate_positions": 138,
+      "edits_at_naturally_inactive_gates": 130,
+      "max_actual_edit_to_native_mlp_norm": 0.5127242047662428
+    },
+    {
+      "trial_id": "L11_L13__user_to_end__offset-4",
+      "actual_nonzero_layer_token_edits": 136,
+      "negative_effective_gate_positions": 136,
+      "edits_at_naturally_inactive_gates": 131,
+      "max_actual_edit_to_native_mlp_norm": 1.112585260849701
+    },
+    {
+      "trial_id": "all_three__output_only__offset-2",
+      "actual_nonzero_layer_token_edits": 60,
+      "negative_effective_gate_positions": 60,
+      "edits_at_naturally_inactive_gates": 55,
+      "max_actual_edit_to_native_mlp_norm": 0.5127242047662428
+    },
+    {
+      "trial_id": "all_three__output_only__offset-4",
+      "actual_nonzero_layer_token_edits": 60,
+      "negative_effective_gate_positions": 60,
+      "edits_at_naturally_inactive_gates": 55,
+      "max_actual_edit_to_native_mlp_norm": 1.0253724702151434
+    },
+    {
+      "trial_id": "all_three__user_only__offset-2",
+      "actual_nonzero_layer_token_edits": 120,
+      "negative_effective_gate_positions": 120,
+      "edits_at_naturally_inactive_gates": 117,
+      "max_actual_edit_to_native_mlp_norm": 0.46340186306298947
+    },
+    {
+      "trial_id": "all_three__user_only__offset-4",
+      "actual_nonzero_layer_token_edits": 120,
+      "negative_effective_gate_positions": 120,
+      "edits_at_naturally_inactive_gates": 117,
+      "max_actual_edit_to_native_mlp_norm": 0.9268168234695956
+    },
+    {
+      "trial_id": "all_three__user_to_end__offset-2",
+      "actual_nonzero_layer_token_edits": 207,
+      "negative_effective_gate_positions": 207,
+      "edits_at_naturally_inactive_gates": 199,
+      "max_actual_edit_to_native_mlp_norm": 0.5127242047662428
+    },
+    {
+      "trial_id": "all_three__user_to_end__offset-4",
+      "actual_nonzero_layer_token_edits": 174,
+      "negative_effective_gate_positions": 174,
+      "edits_at_naturally_inactive_gates": 170,
+      "max_actual_edit_to_native_mlp_norm": 1.112585260849701
+    }
+  ]
+}

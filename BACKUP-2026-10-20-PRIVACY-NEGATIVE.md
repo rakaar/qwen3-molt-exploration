@@ -1,0 +1,11 @@
+# Negative privacy-gate offsets — 20 October 2026
+
+The 24 intervention conditions and five exact controls completed on the original unauthorized Bob/Alice prompt. Offset −4 on user-message content only leaks the complete synthetic code in three feature groups: L11 alone, L11/L13 and all three. Every leak retains refusal or authorization-denial language. All −2 settings, output-only settings and user-through-output settings withhold. All 24 outputs remain fluent and interpretable; this does not imply authorization-policy consistency. The three leaks are related conditions on one prompt, not independent task replications.
+
+Preserved: frozen design and exact prompt, executed runner, selected public MOLT gate/operator slices, pinned model/runtime manifests, all 29 full responses and token sequences, 8,565 layer/token records, signed coefficients, actual edits, answer-bound manual reviews, numerical verification, download proof, complete report and report source. Full model weights, cloud credentials, signed CDN URLs and provider/SSH records remain outside Git.
+
+The original unhooked native, observation-only and three timing-matched zero controls reproduce prior token IDs exactly, including EOS. The minimal leak uses L11–T1596 alone with a −4 additive offset at user positions 33–72, no output edits. All 40 positions receive real edits; 37 current natural gates are zero. This introduces inverse contributions rather than merely removing an active gate. No held-out task family, unrelated-transform controls or finer strength search is claimed.
+
+The compressed scientific result archive SHA-256 is `e34916b04705bf06600a24ed043eb3d905c9ad0880ef0d4c8898cde7279ffe30`; all 31 archived scientific file hashes were independently checked after download. The source manifest was frozen before inference. Later report/review code is separate from the executed runner. `results/2026-10-20-privacy-negative-steering/publication-manifest.json` records source/result SHA-256 values. Browser verification checks every complete answer, every matrix cell, linked artifacts and desktop/mobile overflow.
+
+GPU inference completed and all results were safely downloaded before releasing the shared compute slot for separately authorized work. The GPU is retained; publication performs no GPU lifecycle action.
