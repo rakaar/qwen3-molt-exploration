@@ -1,0 +1,437 @@
+{
+  "repo": "georglange/qwen3-4b-molt",
+  "revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "slice_hashes_verified": true,
+  "whole_checkpoint_not_downloaded": true,
+  "features": [
+    {
+      "layer": 11,
+      "transform": 1596,
+      "rank": 32,
+      "label": "Data Security and Privacy Protection",
+      "explanation": "The gate activates on tokens related to data security, privacy, and protection. Strong activations occur for specific terms like \"sensitive data,\" \"breaches,\" \"encryption,\" and \"privacy,\" often in contexts discussing cybersecurity risks, compliance, or safeguarding user information. Weaker activations appear for general security concepts or related verbs like \"protect\" and \"secure.\"",
+      "label_source": "comparisons/2026-10-12-spider-ant/summaries/layer-11.json",
+      "label_source_sha256": "939891a3a2f74caaca6c98e07a40aee326a47f49b045f8462eb7ff2819121dcf",
+      "source_collection_date": "2026-10-12",
+      "dashboard_feature_fingerprint": "e53744d80db9f7aa564393df991bcf646c1e9ebc3cd5b4a495884e474355dd07",
+      "file": "L11-T1596.npz",
+      "bytes": 630206,
+      "sha256": "cf83db979e8f1224eabb81a3b57d19eb32a739e937dd46fc3858668cb406fb4c",
+      "source_config_sha256": "8b4255e263f53766df51d1f84cbfc50bf379c42b716cc2133dde4464f5d7bccb",
+      "source_header_sha256": "0609b1215c9cc07aad76e38897019610a7d3fd7b40423f6b1126f4f8dca9606b",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 4085760,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4210658688,
+            4210668927
+          ],
+          "slice_sha256": "3d191c74d2a43149bee58041b4226156e75ce3033840e9f4db72d680bc496e09"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1596,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194312112,
+            4194312115
+          ],
+          "slice_sha256": "4435696639600a2f7fb1ebeb824ff2bff299deac10d6f73a6b6eec20b001518a"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1596,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219717236,
+            4219717239
+          ],
+          "slice_sha256": "9f2f319b85017d5150e0cb2e2b451473cba809a40f9c3a17e44dfa5039591a67"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 28160,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219777092,
+            4219782211
+          ],
+          "slice_sha256": "0ecc0fc7e5b4d084ffafe85f3441bcf8f924688d9394b81b3af3d496e3f38642"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 28160,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219961412,
+            4219966531
+          ],
+          "slice_sha256": "fa7de6105055ea50e1e4cb7ba6f10ed8d4befc7c865649021f3c7d75464a3d33"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 28160,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220330052,
+            4220335171
+          ],
+          "slice_sha256": "657a3efa21a8eacf4cad0b0766b29515cb12a1575e806228ad1b756e605fd37a"
+        },
+        {
+          "source_tensor": "Us.4",
+          "source_shape": [
+            1280,
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 32440320,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            1807484608,
+            1807812287
+          ],
+          "slice_sha256": "cdb4bb9fb2cb7aa2c68a6de14bfb1f22733af0c36483de9aa021aa7885ab138c"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "source_shape": [
+            1280,
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "flat_start": 32440320,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            3904636608,
+            3904964287
+          ],
+          "slice_sha256": "3483aa9e58b0ea3d77a1920f2db6b0ce73a7a202ad531e1e9a19bc1314e2b81b"
+        }
+      ],
+      "theta": 0.5349394083023071,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-11/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "6b4e726619c2387362444d3810fbcf896d2e22e5b19123a1321e3dae4a80e1d1",
+      "whole_checkpoint_bytes": 4220458052
+    },
+    {
+      "layer": 12,
+      "transform": 1891,
+      "rank": 32,
+      "label": "Privacy and Consent Data Gate",
+      "explanation": "The gate activates on tokens related to data privacy, user consent, and information security. Strong triggers include \"privacy,\" \"consent,\" \"storage,\" \"collect,\" \"tracking,\" and \"cookies,\" often appearing in contexts discussing data collection, legal policies, or surveillance. Weaker activations occur on generic terms like \"the,\" \"to,\" or \"such\" when embedded in these specific privacy-focused sentences.",
+      "label_source": "comparisons/2026-10-12-spider-ant/summaries/layer-12.json",
+      "label_source_sha256": "3b1eeeae43d2bdca2cbeb9e4e34cd15fdc3dbbc4844f57941a55ea0595fb98a2",
+      "source_collection_date": "2026-10-12",
+      "dashboard_feature_fingerprint": "f49cd4b583b2b56709917639eb0a967027d0f0dc6e27d3f4bc299ecccefb8c1f",
+      "file": "L12-T1891.npz",
+      "bytes": 630046,
+      "sha256": "b430dab0f96dc2e3f1fa830b982bcfd6d478e5cac5df42e60961115e334ccd4d",
+      "source_config_sha256": "64d8375f773bdb422fd0a0f2d39457adbd53b9d6f736b4f50e5454962892ca8f",
+      "source_header_sha256": "1b4b8b2157588de8314d494b8fc9128a92576eea370aad01fa4991f17528d24a",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 4840960,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4213679480,
+            4213689719
+          ],
+          "slice_sha256": "ac5773cf9c9dc753d3fd32d35dfe9289eb2c32d5da27433936265130bc53ba9d"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1891,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194313284,
+            4194313287
+          ],
+          "slice_sha256": "40825bf46e607a37de162e54f576907e586d48582b879c7f4b2d33abe26a71da"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1891,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4220455688,
+            4220455691
+          ],
+          "slice_sha256": "c22306feb9725c0e31dcabb9547062cc8bcde93f62b671369c7b15e001603210"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 30720,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219833720,
+            4219843959
+          ],
+          "slice_sha256": "d12020e7525667dbf5a958eab10d13f8e6cd73e229a67d797c285026b8806f34"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 30720,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220202360,
+            4220212599
+          ],
+          "slice_sha256": "ed5ad7ee8a384e1d83a9f0cb01f3e7f910e2d4e3c520f163abd4d1aa933698ef"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 30720,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220949564,
+            4220959803
+          ],
+          "slice_sha256": "7804d2cc8cb8f82e7877432ad86dfb2bd9dbfb0e33dad96143c7eefd89464a03"
+        },
+        {
+          "source_tensor": "Us.4",
+          "source_shape": [
+            1280,
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 56606720,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            1904150200,
+            1904477879
+          ],
+          "slice_sha256": "217239b540a3c04fc5e48f2fe30065eeb847b538476f3c6f32d7483258851ef8"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "source_shape": [
+            1280,
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "flat_start": 56606720,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            4001302200,
+            4001629879
+          ],
+          "slice_sha256": "ff807252e59a9fe846a8550a3b923cecae6a83704deb1bd0d16dfb93be5d9634"
+        }
+      ],
+      "theta": 0.5238208174705505,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-12/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "3849eea46ecac7fbd3fea02e10374bd350645d1d4ffa6e91dba08ba4bc133ac2",
+      "whole_checkpoint_bytes": 4221195324
+    },
+    {
+      "layer": 13,
+      "transform": 921,
+      "rank": 64,
+      "label": "Confidentiality and Privacy Protection",
+      "explanation": "The gate activates on terms related to confidentiality, privacy, or secrecy, particularly within legal or contractual contexts involving the protection of sensitive information.",
+      "label_source": "comparisons/2026-10-12-spider-ant/summaries/layer-13.json",
+      "label_source_sha256": "70b0c741d2df9f566d8c445c65e8ac8b4967a4c4ed422952622cbe76643a60d5",
+      "source_collection_date": "2026-10-12",
+      "dashboard_feature_fingerprint": "2a3f9f19056c96ace9b46b1c40406039d7ef427fc283b4952607304d8d4a217a",
+      "file": "L13-T921.npz",
+      "bytes": 1237210,
+      "sha256": "27dcf369949b4bf1f398cdf40b5382c293910c34bd64e1b6d06f7032842c8150",
+      "source_config_sha256": "d0dfe8507fe68709178d7cb8786a32c0860c207bd0a2e1e899d079f5bf507efb",
+      "source_header_sha256": "580e718d9540dcb7023c7dc2da087982ce96ea85718ad34cd26ffaf3005d1b1c",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2357760,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4203746688,
+            4203756927
+          ],
+          "slice_sha256": "74e7828ceebd92ab8d0c6bacf8634c8a0599bb2c9f13e84ae9a642c5bbb8533d"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 921,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194309412,
+            4194309415
+          ],
+          "slice_sha256": "bf72af7d405c336ceceec22f786520330d2b55c4405f479c5262881cfcf5572e"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 921,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219714536,
+            4219714539
+          ],
+          "slice_sha256": "34c81ca32680231ab57213c26099e7b05bc3fdc01480064ab38b9bab03fc705d"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 33280,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219787332,
+            4219792451
+          ],
+          "slice_sha256": "22dbc077dc3c4cc7117f29235fd9976a946bb81d9428a555f9772359548cf2b7"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 33280,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219971652,
+            4219976771
+          ],
+          "slice_sha256": "4e5ecfb5744662afc4de9896c32c87d5fd2b6ebf137d64390e348ee14e469bc3"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 33280,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220340292,
+            4220345411
+          ],
+          "slice_sha256": "c2f228ee86caec04ef8b8a00969e5acd24d41184ce3cb9a168efc7dff8284579"
+        },
+        {
+          "source_tensor": "Us.3",
+          "source_shape": [
+            640,
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 59146240,
+          "elements": 163840,
+          "byte_range_inclusive": [
+            1494877888,
+            1495533247
+          ],
+          "slice_sha256": "6247283fbe1c142cb2c2eae72e5b18bcd381fbc021b386581b65a0c5f1f7b0cf"
+        },
+        {
+          "source_tensor": "Vs.3",
+          "source_shape": [
+            640,
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "flat_start": 59146240,
+          "elements": 163840,
+          "byte_range_inclusive": [
+            3592029888,
+            3592685247
+          ],
+          "slice_sha256": "0988b563824749de8642f94e245b2b495645fc5896ec0b718bd4331ab3870fe7"
+        }
+      ],
+      "theta": 0.5237215757369995,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-13/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "16b990f76662ecab589da6004e2a8b1d17118ac9d10576f06d6139c218e643a1",
+      "whole_checkpoint_bytes": 4220458052
+    }
+  ]
+}

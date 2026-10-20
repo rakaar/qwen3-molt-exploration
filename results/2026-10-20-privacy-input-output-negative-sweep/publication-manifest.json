@@ -1,0 +1,531 @@
+{
+  "created_at_utc": "2026-10-20T10:35:40.551783+00:00",
+  "scope": "Input plus output negative privacy gate offset sweep",
+  "files": [
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/README.md",
+      "bytes": 2533,
+      "sha256": "a3fde7b958d9b9229f7e6a15356728db7fc82001b3ba3e3095135bc39e50130b"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/build.py",
+      "bytes": 16017,
+      "sha256": "487b561b42bd7ed2c5cab6815652ff3b88e5b528ce7c650d2f2c98ba27b33ae9"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/case.json",
+      "bytes": 2235,
+      "sha256": "4f02dfdae2b57a178355a7c4423eafce7b76d8d275253bf75f368f20dea33e97"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/check-site.cjs",
+      "bytes": 2814,
+      "sha256": "a096cb64e65db6363bf2694369e4595ea17d6e653b0c90cf00bc7e80eb289793"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/expected-base-verification.json",
+      "bytes": 1835,
+      "sha256": "3770872aba6b1198a40117c3b5e423489e5d6761d5fee7bede7b206c6e72dc31"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/prior-anchors.json",
+      "bytes": 3899,
+      "sha256": "96f844392e12fced3ff59806b4c9b82454ece1b00503d4aabedaf483f9ca7f08"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/protocol.json",
+      "bytes": 8471,
+      "sha256": "8c1396c8d3c9c14d695494f58d2f3a783f16a0920ced0279a8d2e527141c5b27"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/run.py",
+      "bytes": 8905,
+      "sha256": "23abedaa14add27517095b36a5febb7734c71b758507239c2e1487015d639345"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/runtime-lock.txt",
+      "bytes": 1117,
+      "sha256": "008c8c17044a4be869505b2ef8db7dc2ce49097c1064e01987dfe6678c71d841"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/source-manifest-before-execution.json",
+      "bytes": 2778,
+      "sha256": "7fca796e320fa08889b6f1a035e31018700fde7ccbe16130c0e21459f8531309"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/case.json",
+      "bytes": 2235,
+      "sha256": "4f02dfdae2b57a178355a7c4423eafce7b76d8d275253bf75f368f20dea33e97"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/expected-base-verification.json",
+      "bytes": 1835,
+      "sha256": "3770872aba6b1198a40117c3b5e423489e5d6761d5fee7bede7b206c6e72dc31"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/prior-anchors.json",
+      "bytes": 3899,
+      "sha256": "96f844392e12fced3ff59806b4c9b82454ece1b00503d4aabedaf483f9ca7f08"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/protocol.json",
+      "bytes": 6024,
+      "sha256": "d8e9fe308241dae63aa9ee1e90b178afe8c7861692fd1ca27fe0897fe32d8533"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/run.py",
+      "bytes": 8905,
+      "sha256": "23abedaa14add27517095b36a5febb7734c71b758507239c2e1487015d639345"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/source-manifest-before-execution.json",
+      "bytes": 975,
+      "sha256": "aca89fb10587bc78d75d02cdcf363bc7eafc9168303e1d30024a6a6a290d2e27"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/verify.py",
+      "bytes": 4404,
+      "sha256": "82122018e0614047460c43ca8d64487fd5ed34f4fb7ea408d1fd23683b8d6c08"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/weights-manifest.json",
+      "bytes": 14916,
+      "sha256": "21df2f93add91efbcd9cd29dd011a9eb2f40efdab372c3141e26e7ce6175d011"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/02/zero-anchors.json",
+      "bytes": 1976,
+      "sha256": "1ba8c9677964a18c6a0b33037ba065f3b1e5bafc52c59048b75785926a91274d"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/case.json",
+      "bytes": 2235,
+      "sha256": "4f02dfdae2b57a178355a7c4423eafce7b76d8d275253bf75f368f20dea33e97"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/expected-base-verification.json",
+      "bytes": 1835,
+      "sha256": "3770872aba6b1198a40117c3b5e423489e5d6761d5fee7bede7b206c6e72dc31"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/prior-anchors.json",
+      "bytes": 3899,
+      "sha256": "96f844392e12fced3ff59806b4c9b82454ece1b00503d4aabedaf483f9ca7f08"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/protocol.json",
+      "bytes": 5845,
+      "sha256": "2b2521098b1ff9512b0021e25b09bb4253339b741409a77b224f6de1e3a4f710"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/run.py",
+      "bytes": 8905,
+      "sha256": "23abedaa14add27517095b36a5febb7734c71b758507239c2e1487015d639345"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/source-manifest-before-execution.json",
+      "bytes": 975,
+      "sha256": "f0322617f66283f5b38eacdeceee21e1034e9c7739b75f15703868faba1a0fc7"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/verify.py",
+      "bytes": 4404,
+      "sha256": "82122018e0614047460c43ca8d64487fd5ed34f4fb7ea408d1fd23683b8d6c08"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/weights-manifest.json",
+      "bytes": 14916,
+      "sha256": "21df2f93add91efbcd9cd29dd011a9eb2f40efdab372c3141e26e7ce6175d011"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/stages/03/zero-anchors.json",
+      "bytes": 1976,
+      "sha256": "1ba8c9677964a18c6a0b33037ba065f3b1e5bafc52c59048b75785926a91274d"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/verify.py",
+      "bytes": 4404,
+      "sha256": "82122018e0614047460c43ca8d64487fd5ed34f4fb7ea408d1fd23683b8d6c08"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/L11-T1596.npz",
+      "bytes": 630206,
+      "sha256": "cf83db979e8f1224eabb81a3b57d19eb32a739e937dd46fc3858668cb406fb4c"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/L12-T1891.npz",
+      "bytes": 630046,
+      "sha256": "b430dab0f96dc2e3f1fa830b982bcfd6d478e5cac5df42e60961115e334ccd4d"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/L13-T921.npz",
+      "bytes": 1237210,
+      "sha256": "27dcf369949b4bf1f398cdf40b5382c293910c34bd64e1b6d06f7032842c8150"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/layer-11-config.json",
+      "bytes": 1281,
+      "sha256": "8b4255e263f53766df51d1f84cbfc50bf379c42b716cc2133dde4464f5d7bccb"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/layer-11-header.json",
+      "bytes": 2925,
+      "sha256": "0609b1215c9cc07aad76e38897019610a7d3fd7b40423f6b1126f4f8dca9606b"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/layer-12-config.json",
+      "bytes": 1277,
+      "sha256": "64d8375f773bdb422fd0a0f2d39457adbd53b9d6f736b4f50e5454962892ca8f"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/layer-12-header.json",
+      "bytes": 2921,
+      "sha256": "1b4b8b2157588de8314d494b8fc9128a92576eea370aad01fa4991f17528d24a"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/layer-13-config.json",
+      "bytes": 1281,
+      "sha256": "d0dfe8507fe68709178d7cb8786a32c0860c207bd0a2e1e899d079f5bf507efb"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/layer-13-header.json",
+      "bytes": 2925,
+      "sha256": "580e718d9540dcb7023c7dc2da087982ce96ea85718ad34cd26ffaf3005d1b1c"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights/manifest.json",
+      "bytes": 14916,
+      "sha256": "21df2f93add91efbcd9cd29dd011a9eb2f40efdab372c3141e26e7ce6175d011"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/weights-manifest.json",
+      "bytes": 14916,
+      "sha256": "21df2f93add91efbcd9cd29dd011a9eb2f40efdab372c3141e26e7ce6175d011"
+    },
+    {
+      "path": "experiments/privacy-input-output-negative-sweep/zero-anchors.json",
+      "bytes": 1976,
+      "sha256": "1ba8c9677964a18c6a0b33037ba065f3b1e5bafc52c59048b75785926a91274d"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/all-responses.csv",
+      "bytes": 7069,
+      "sha256": "9bd109adfbdb5f70b3d9b76ca2f7e33f44b23b4fe382149307f64905cea484a3"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/index.html",
+      "bytes": 18761,
+      "sha256": "ce9a6e26bb0cd45749629cb49594afaf5b2d78ab6a02ff80beca9da81677cb55"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/COMPLETE",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/artifacts/results.json",
+      "bytes": 3763351,
+      "sha256": "bca3cbdef99a93bd12fa873611844c35bb74daca7a611a06776151d9db788e43"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/case.json",
+      "bytes": 2235,
+      "sha256": "4f02dfdae2b57a178355a7c4423eafce7b76d8d275253bf75f368f20dea33e97"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/compute-driver.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/expected-base-verification.json",
+      "bytes": 1835,
+      "sha256": "3770872aba6b1198a40117c3b5e423489e5d6761d5fee7bede7b206c6e72dc31"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/launch-receipt.json",
+      "bytes": 118,
+      "sha256": "a0385a02dc87603a44b4c253cf31bbf67935682742afff00719ba5ead60daef2"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/prior-anchors.json",
+      "bytes": 3899,
+      "sha256": "96f844392e12fced3ff59806b4c9b82454ece1b00503d4aabedaf483f9ca7f08"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/protocol.json",
+      "bytes": 8471,
+      "sha256": "8c1396c8d3c9c14d695494f58d2f3a783f16a0920ced0279a8d2e527141c5b27"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/run.log",
+      "bytes": 4530,
+      "sha256": "4c85793dc2babef15319b458e55a9e668f7bf5b293fe4fd151f37f4ecf82f8c9"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/run.py",
+      "bytes": 8905,
+      "sha256": "23abedaa14add27517095b36a5febb7734c71b758507239c2e1487015d639345"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/runtime-lock.txt",
+      "bytes": 1117,
+      "sha256": "008c8c17044a4be869505b2ef8db7dc2ce49097c1064e01987dfe6678c71d841"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/source-manifest-before-execution.json",
+      "bytes": 2778,
+      "sha256": "7fca796e320fa08889b6f1a035e31018700fde7ccbe16130c0e21459f8531309"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/verification.json",
+      "bytes": 5195,
+      "sha256": "42b6eecc395dd033debc3d66395c6b3d73ca72c1e59aeff0a24b1dee9d52b5ef"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/verify.log",
+      "bytes": 447,
+      "sha256": "85ea32421213c46f706ba09118c7566d9b3aa13365fb7e3fb301efca2238e979"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/verify.py",
+      "bytes": 4404,
+      "sha256": "82122018e0614047460c43ca8d64487fd5ed34f4fb7ea408d1fd23683b8d6c08"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/L11-T1596.npz",
+      "bytes": 630206,
+      "sha256": "cf83db979e8f1224eabb81a3b57d19eb32a739e937dd46fc3858668cb406fb4c"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/L12-T1891.npz",
+      "bytes": 630046,
+      "sha256": "b430dab0f96dc2e3f1fa830b982bcfd6d478e5cac5df42e60961115e334ccd4d"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/L13-T921.npz",
+      "bytes": 1237210,
+      "sha256": "27dcf369949b4bf1f398cdf40b5382c293910c34bd64e1b6d06f7032842c8150"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/layer-11-config.json",
+      "bytes": 1281,
+      "sha256": "8b4255e263f53766df51d1f84cbfc50bf379c42b716cc2133dde4464f5d7bccb"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/layer-11-header.json",
+      "bytes": 2925,
+      "sha256": "0609b1215c9cc07aad76e38897019610a7d3fd7b40423f6b1126f4f8dca9606b"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/layer-12-config.json",
+      "bytes": 1277,
+      "sha256": "64d8375f773bdb422fd0a0f2d39457adbd53b9d6f736b4f50e5454962892ca8f"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/layer-12-header.json",
+      "bytes": 2921,
+      "sha256": "1b4b8b2157588de8314d494b8fc9128a92576eea370aad01fa4991f17528d24a"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/layer-13-config.json",
+      "bytes": 1281,
+      "sha256": "d0dfe8507fe68709178d7cb8786a32c0860c207bd0a2e1e899d079f5bf507efb"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/layer-13-header.json",
+      "bytes": 2925,
+      "sha256": "580e718d9540dcb7023c7dc2da087982ce96ea85718ad34cd26ffaf3005d1b1c"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights/manifest.json",
+      "bytes": 14916,
+      "sha256": "21df2f93add91efbcd9cd29dd011a9eb2f40efdab372c3141e26e7ce6175d011"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/weights-manifest.json",
+      "bytes": 14916,
+      "sha256": "21df2f93add91efbcd9cd29dd011a9eb2f40efdab372c3141e26e7ce6175d011"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative/zero-anchors.json",
+      "bytes": 1976,
+      "sha256": "1ba8c9677964a18c6a0b33037ba065f3b1e5bafc52c59048b75785926a91274d"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/COMPLETE",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/artifacts/results.json",
+      "bytes": 763846,
+      "sha256": "378c4cd9b02757f4dd271635215d6441b8dda7d69bb2ddaf37bfc4aaeb505d10"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/case.json",
+      "bytes": 2235,
+      "sha256": "4f02dfdae2b57a178355a7c4423eafce7b76d8d275253bf75f368f20dea33e97"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/compute-driver.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/expected-base-verification.json",
+      "bytes": 1835,
+      "sha256": "3770872aba6b1198a40117c3b5e423489e5d6761d5fee7bede7b206c6e72dc31"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/launch-receipt.json",
+      "bytes": 125,
+      "sha256": "91dfccb4305252c0d11d4a91ac39d4f1b3ce1e85416ac6adb3f22e460d68cf43"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/prior-anchors.json",
+      "bytes": 3899,
+      "sha256": "96f844392e12fced3ff59806b4c9b82454ece1b00503d4aabedaf483f9ca7f08"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/protocol.json",
+      "bytes": 6024,
+      "sha256": "d8e9fe308241dae63aa9ee1e90b178afe8c7861692fd1ca27fe0897fe32d8533"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/run.log",
+      "bytes": 1197,
+      "sha256": "5797079a0e210d9ff2f5b7f56304fb8ee75b17efdc132a9a731bec55ff454ef2"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/run.py",
+      "bytes": 8905,
+      "sha256": "23abedaa14add27517095b36a5febb7734c71b758507239c2e1487015d639345"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/source-manifest-before-execution.json",
+      "bytes": 975,
+      "sha256": "aca89fb10587bc78d75d02cdcf363bc7eafc9168303e1d30024a6a6a290d2e27"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/verification.json",
+      "bytes": 1439,
+      "sha256": "9f35e0c893c2446d0eae3d900ce99e9336b3579bd6859e98f804dda5c0969d69"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/verify.log",
+      "bytes": 443,
+      "sha256": "69b0e3968033d6d91ce9280db4502734865058d48fe0930d77e0cc0845824e8b"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/verify.py",
+      "bytes": 4404,
+      "sha256": "82122018e0614047460c43ca8d64487fd5ed34f4fb7ea408d1fd23683b8d6c08"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/weights-manifest.json",
+      "bytes": 14916,
+      "sha256": "21df2f93add91efbcd9cd29dd011a9eb2f40efdab372c3141e26e7ce6175d011"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage2/zero-anchors.json",
+      "bytes": 1976,
+      "sha256": "1ba8c9677964a18c6a0b33037ba065f3b1e5bafc52c59048b75785926a91274d"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/COMPLETE",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/artifacts/results.json",
+      "bytes": 581363,
+      "sha256": "e856ad02d085196d71cd172493889ff222e32545d45e4d6bba4c98417e067471"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/case.json",
+      "bytes": 2235,
+      "sha256": "4f02dfdae2b57a178355a7c4423eafce7b76d8d275253bf75f368f20dea33e97"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/compute-driver.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/expected-base-verification.json",
+      "bytes": 1835,
+      "sha256": "3770872aba6b1198a40117c3b5e423489e5d6761d5fee7bede7b206c6e72dc31"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/launch-receipt.json",
+      "bytes": 125,
+      "sha256": "36ccea4f443462498dd1602410ffe2669f78b14735b904906c23c24a66360bb2"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/prior-anchors.json",
+      "bytes": 3899,
+      "sha256": "96f844392e12fced3ff59806b4c9b82454ece1b00503d4aabedaf483f9ca7f08"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/protocol.json",
+      "bytes": 5845,
+      "sha256": "2b2521098b1ff9512b0021e25b09bb4253339b741409a77b224f6de1e3a4f710"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/run.log",
+      "bytes": 796,
+      "sha256": "f89362d21f091452f006c12d99262cb015a7382102ef7dc969c62f68179a2fc7"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/run.py",
+      "bytes": 8905,
+      "sha256": "23abedaa14add27517095b36a5febb7734c71b758507239c2e1487015d639345"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/source-manifest-before-execution.json",
+      "bytes": 975,
+      "sha256": "f0322617f66283f5b38eacdeceee21e1034e9c7739b75f15703868faba1a0fc7"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/verification.json",
+      "bytes": 1174,
+      "sha256": "025f60674a946bace4fc8c2e7e11d076901fef2e5f92aa14ddbe629f8cbe5484"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/verify.log",
+      "bytes": 442,
+      "sha256": "9b1553e4bc4461c0592e13221e129dd07b8d5a117c2162beacece54b918d3a96"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/verify.py",
+      "bytes": 4404,
+      "sha256": "82122018e0614047460c43ca8d64487fd5ed34f4fb7ea408d1fd23683b8d6c08"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/weights-manifest.json",
+      "bytes": 14916,
+      "sha256": "21df2f93add91efbcd9cd29dd011a9eb2f40efdab372c3141e26e7ce6175d011"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/privacy-io-negative-stage3/zero-anchors.json",
+      "bytes": 1976,
+      "sha256": "1ba8c9677964a18c6a0b33037ba065f3b1e5bafc52c59048b75785926a91274d"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/render-verification.json",
+      "bytes": 215,
+      "sha256": "d370023d3537938b560500b73b4ff178dcb641914e153f979280f035dc2f7787"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/reviews.json",
+      "bytes": 12302,
+      "sha256": "d9ac2d76362085e38ef04d9c8f86a9d167502ad81df9dc06a683bf9dfa68ee31"
+    },
+    {
+      "path": "results/2026-10-20-privacy-input-output-negative-sweep/summary.json",
+      "bytes": 1421,
+      "sha256": "579c632f2e035b13cdfbd0ceb9679f5b664db948cdfdb300c0f503081f29353c"
+    }
+  ]
+}
