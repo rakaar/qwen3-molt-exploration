@@ -52,6 +52,21 @@ child:</pre><p>Native answer: <code>child: ch</code></p></div></div></details>
 
 <section class="chapter" id="probe" aria-labelledby="probe-title"><div class="section-head"><span class="num">03</span><h2 id="probe-title">The layer-3 probe failed on the case we needed.</h2></div><div class="section-body">
 <p>We trained a linear classifier to read “starts with CH” from the native <strong>layer-3 MLP output at the input word</strong>. Train, validation, and test sets were separated by stem family, with variants kept together. The inspected <code>child</code> family was reserved for diagnostics.</p>
+<div id="probe-training-example">
+<h3>What exactly went into probe training?</h3>
+<p>The language model stayed frozen. We ran few-shot questions through Qwen and trained only the separate linear probe. An actual positive training prompt was:</p>
+<pre>Give the first two letters of each word in uppercase.
+
+garden: GA
+window: WI
+table: TA
+chain:</pre>
+<p>We extracted the <strong>2,560-dimensional native layer-3 MLP output at the input <code>chain</code> token</strong> (zero-based position 27), before that MLP output was added to the residual stream. One training pair was therefore <code>x = MLP output at chain</code>, <code>y = 1</code>, because chain starts with CH. A negative training example used the same prompt ending in <code>according:</code>; its input-word MLP output was paired with <code>y = 0</code>.</p>
+<p><strong>No answer was generated for extraction, and no generated CH-answer activation was used.</strong> The labels came directly from the input word’s spelling. The probe asked whether CH-starting information could be read linearly at the input word; it did not test the representation of an answer already written by the model. Both uppercase- and lowercase-answer prompt templates supplied training examples. The <code>child</code> family remained held out for diagnostics.</p>
+<div class="note"><p><strong>Single-token word forms only.</strong> Each retained spelling, capitalization, and optional leading-space variant had to encode as exactly one token in every main and transfer prompt. The dataset builder checked token IDs and character offsets in the actual chat prompts and discarded forms that split into multiple tokens or changed token identity in context. This provides one unambiguous word-token extraction point; the results do not establish generalization to multi-token words.</p></div>
+<p class="small">Saved training examples: <code>row-00510</code> (chain, token 8819, label 1) and <code>row-00010</code> (according, token 73846, label 0). <a href="../2026-10-19-ch-prefix-probe/remote-export/artifacts/dataset.json">Frozen dataset ↗</a> · <a href="../../experiments/ch-prefix-probe/build_dataset.py">Token eligibility checks ↗</a> · <a href="../../experiments/ch-prefix-probe/extract.py">Activation extraction ↗</a></p>
+</div>
+
 <div class="metrics"><div class="metric"><strong>{{PROBE_AUROC}}</strong><span>Family-weighted test AUROC</span></div><div class="metric"><strong>{{PROBE_BALACC}}</strong><span>Family-weighted balanced accuracy</span></div><div class="metric"><strong>548</strong><span>Test rows · 80 stem families</span></div></div>
 <p>These aggregate scores looked useful. But the frozen probe classified the exact <code>child</code> inputs as <strong>not CH-starting</strong> in both original tasks. It also failed on <code>chin</code>.</p>
 <div class="table-wrap"><table><thead><tr><th>Reserved child diagnostic</th><th>Probe score for CH-starting</th><th>Classifier decision</th></tr></thead><tbody><tr><td>Uppercase task</td><td>{{PROBE_CHILD_UPPER}}</td><td><span class="pill fail">False negative</span></td></tr><tr><td>Lowercase task</td><td>{{PROBE_CHILD_LOWER}}</td><td><span class="pill fail">False negative</span></td></tr></tbody></table></div>
