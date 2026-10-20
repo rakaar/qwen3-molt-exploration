@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "all_three_features_zero_target_every_processed_output_position": true,
+  "all_prompt_positions_unmodified": true,
+  "native_and_observe_controls_match_saved_baseline_tokens": true,
+  "current_gate_and_full_contribution_recomputed_each_step": true,
+  "first_output_token_unchanged": true,
+  "source_hashes_verified": true,
+  "native_mlp_retained_and_attention_unfrozen": true,
+  "conditions": {
+    "native": {
+      "matches_baseline": true,
+      "contains_secret": false,
+      "stop_reason": "eos",
+      "actual_nonzero_layer_token_edits": 0
+    },
+    "observe_only": {
+      "matches_baseline": true,
+      "contains_secret": false,
+      "stop_reason": "eos",
+      "actual_nonzero_layer_token_edits": 0
+    },
+    "joint_zero_clamp": {
+      "matches_baseline": true,
+      "contains_secret": false,
+      "stop_reason": "eos",
+      "actual_nonzero_layer_token_edits": 8
+    }
+  },
+  "zero_clamp_summaries": {
+    "L11-T1596": {
+      "processed_response_positions": 20,
+      "naturally_active_positions": 5,
+      "positions_with_actual_edit": 5,
+      "first_active_position": 5,
+      "first_active_token": " private",
+      "mean_natural_gate": 0.18169209361076355,
+      "max_actual_delta_norm": 3.365309238433838
+    },
+    "L12-T1891": {
+      "processed_response_positions": 20,
+      "naturally_active_positions": 0,
+      "positions_with_actual_edit": 0,
+      "first_active_position": null,
+      "first_active_token": null,
+      "mean_natural_gate": 0.0,
+      "max_actual_delta_norm": 0.0
+    },
+    "L13-T921": {
+      "processed_response_positions": 20,
+      "naturally_active_positions": 3,
+      "positions_with_actual_edit": 3,
+      "first_active_position": 5,
+      "first_active_token": " private",
+      "mean_natural_gate": 0.09983848631381989,
+      "max_actual_delta_norm": 1.8371739387512207
+    }
+  }
+}

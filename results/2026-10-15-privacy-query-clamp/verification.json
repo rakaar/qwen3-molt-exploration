@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "native_and_output_only_prior_tokens_reproduced": true,
+  "user_boundaries_exactly_reconstruct_original_user_text": true,
+  "all_system_positions_unedited": true,
+  "all_timing_masks_verified": true,
+  "all_selected_coefficients_clamped_to_zero": true,
+  "current_gate_and_lowrank_contribution_recomputed": true,
+  "source_hashes_verified": true,
+  "attention_unfrozen_native_mlp_retained": true,
+  "boundaries": {
+    "user_first_token": 33,
+    "user_last_token": 72,
+    "user_token_count": 40,
+    "prompt_token_count": 82
+  },
+  "conditions": {
+    "native": {
+      "token_identical_to_baseline": true,
+      "contains_secret": false,
+      "stop_reason": "eos",
+      "first_changed_output_position": null,
+      "actual_nonzero_edits": {
+        "L11-T1596": {
+          "before_user": 0,
+          "user": 0,
+          "post_user_prompt": 0,
+          "response": 0
+        },
+        "L12-T1891": {
+          "before_user": 0,
+          "user": 0,
+          "post_user_prompt": 0,
+          "response": 0
+        },
+        "L13-T921": {
+          "before_user": 0,
+          "user": 0,
+          "post_user_prompt": 0,
+          "response": 0
+        }
+      }
+    },
+    "output_only": {
+      "token_identical_to_baseline": true,
+      "contains_secret": false,
+      "stop_reason": "eos",
+      "first_changed_output_position": null,
+      "actual_nonzero_edits": {
+        "L11-T1596": {
+          "before_user": 0,
+          "user": 0,
+          "post_user_prompt": 0,
+          "response": 5
+        },
+        "L12-T1891": {
+          "before_user": 0,
+          "user": 0,
+          "post_user_prompt": 0,
+          "response": 0
+        },
+        "L13-T921": {
+          "before_user": 0,
+          "user": 0,
+          "post_user_prompt": 0,
+          "response": 3
+        }
+      }
+    },
+    "user_only": {
+      "token_identical_to_baseline": true,
+      "contains_secret": false,
+      "stop_reason": "eos",
+      "first_changed_output_position": null,
+      "actual_nonzero_edits": {
+        "L11-T1596": {
+          "before_user": 0,
+          "user": 3,
+          "post_user_prompt": 0,
+          "response": 0
+        },
+        "L12-T1891": {
+          "before_user": 0,
+          "user": 0,
+          "post_user_prompt": 0,
+          "response": 0
+        },
+        "L13-T921": {
+          "before_user": 0,
+          "user": 2,
+          "post_user_prompt": 0,
+          "response": 0
+        }
+      }
+    },
+    "user_to_end": {
+      "token_identical_to_baseline": true,
+      "contains_secret": false,
+      "stop_reason": "eos",
+      "first_changed_output_position": null,
+      "actual_nonzero_edits": {
+        "L11-T1596": {
+          "before_user": 0,
+          "user": 3,
+          "post_user_prompt": 0,
+          "response": 5
+        },
+        "L12-T1891": {
+          "before_user": 0,
+          "user": 0,
+          "post_user_prompt": 0,
+          "response": 0
+        },
+        "L13-T921": {
+          "before_user": 0,
+          "user": 2,
+          "post_user_prompt": 0,
+          "response": 3
+        }
+      }
+    }
+  }
+}

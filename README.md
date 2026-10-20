@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## Privacy removal controls — published 20 October 2026
+
+- [Output-only zero clamp](results/2026-10-15-privacy-zero-clamp/index.html) and [user/query timing follow-up](results/2026-10-15-privacy-query-clamp/index.html): jointly removing the estimated contributions of L11–T1596, L12–T1891 and L13–T921 preserves the exact refusal on the original unauthorized Bob/Alice prompt. All three timing conditions make genuine edits where gates are active; no synthetic code is disclosed. [The privacy overview now includes this reverse-direction negative result](results/2026-10-15-privacy-refusal-overview/index.html#zero-clamp). This is a different prompt from the positive authorized API-key intervention.
+
 ## Abstention experiment directory
 
 **[All abstention experiments: descriptions and links](https://rakaar.github.io/qwen3-molt-exploration/results/abstention/index.html)** — 21 entries covering the native baseline, L19–T368 heatmaps, fixed-gate and additive steering, strength searches, all three token scopes, false-abstention controls, confidence/uncertainty searches and related qualification/refusal studies. Includes negative results and links to raw measurements and source in each report.
