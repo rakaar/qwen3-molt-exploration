@@ -54,6 +54,7 @@ def main():
     child_upper=next(x for x in probe['diagnostic_unindented_lowercase_words'] if x['word']=='child' and x['template']=='fewshot_upper')
     child_lower=next(x for x in probe['diagnostic_unindented_lowercase_words'] if x['word']=='child' and x['template']=='fewshot_lower')
     replacements={'{{UPPER_GATE}}':f"{cross['features']['L3-T1372']['child_gates']['uppercase']:.2f}",
+        '{{INPUT_GATE_FIGURE_VERSION}}':sha(assets/'input-word-gates.png')[:12],
         '{{LOWER_GATE}}':f"{cross['features']['L3-T1372']['child_gates']['lowercase']:.2f}",
         '{{L28_UPPER_GATE}}':f"{gates['L28-T1123']['child_gates']['uppercase']:.2f}",
         '{{L28_LOWER_GATE}}':f"{gates['L28-T1123']['child_gates']['lowercase']:.2f}",
