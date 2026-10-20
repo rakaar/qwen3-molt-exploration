@@ -1,5 +1,5 @@
 """Validate publication links, frozen claims, copied hashes, and credential exclusions."""
-import argparse,hashlib,json,re
+import argparse,csv,hashlib,json,re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote,urlsplit
@@ -39,6 +39,26 @@ def main():
             checked+=1
     assert not missing,json.dumps(missing,indent=2)
     facts=json.loads((report/'facts.json').read_text())
+    gate_proof=json.loads((report/'input-word-gates-verification.json').read_text())
+    assert len(gate_proof['selected_features'])==8 and gate_proof['input_token_gate_values']==96
+    assert gate_proof['original_seven_rows_unchanged'] and gate_proof['no_new_inference']
+    assert gate_proof['L28_independent_cpu_gate_max_abs_error']<3e-5
+    for path,digest in gate_proof['sources'].items():assert sha(root/path)==digest,path
+    def gate_rows(path):
+        with path.open(newline='') as stream:return list(csv.DictReader(stream))
+    original_gates=gate_rows(root/'results/2026-10-19-ch-crosslayer-activation/input-word-gates.csv')
+    updated_gates=gate_rows(report/'assets/input-word-gates.csv')
+    def key(row):return (row['case_id'],row['position'],row['feature'])
+    updated_lookup={key(row):row for row in updated_gates}
+    assert len(updated_gates)==len(updated_lookup)==96 and len(original_gates)==84
+    assert all(updated_lookup[key(row)]==row for row in original_gates)
+    added=json.loads((report/'L28-T1123-input-gates.json').read_text())
+    for row in added['records']:
+        saved=updated_lookup[(row['case_id'],str(row['position']),row['feature'])]
+        assert float(saved['gate'])==row['gate'] and row['gate']>0
+    assert facts['gates']['L28-T1123']['child_gates']=={
+        task:next(r['gate'] for r in added['records'] if r['task']==task and r['word']=='child')
+        for task in ['uppercase','lowercase']}
     assert facts['probe']['test']['auroc']==0.9620606986555471
     assert facts['gates']['L3-T2334']['child_gates']=={'uppercase':0.,'lowercase':0.}
     assert len(facts['probe']['child_diagnostics'])==2 and all(d['prediction']==0 for d in facts['probe']['child_diagnostics'])
@@ -56,6 +76,8 @@ def main():
     output={'copied_files_hash_verified':len(backup['copied_files']),'copied_bytes':backup['copied_bytes'],
         'local_links_checked':checked,'reports_checked':len(pages),'missing_links':missing,
         'frozen_measurement_claims_verified':True,'credential_pattern_matches':0,
+        'input_word_gate_figure':{'features':8,'gate_values':96,'original_values_unchanged':84,
+            'added_L28_values_verified':12,'added_gates_cpu_max_abs_error':gate_proof['L28_independent_cpu_gate_max_abs_error']},
         'model_weights_and_large_caches_excluded':True,'no_new_inference':True}
     (report/'publication-validation.json').write_text(json.dumps(output,indent=2)+'\n');print(json.dumps(output,indent=2))
 
