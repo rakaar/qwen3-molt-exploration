@@ -40,3 +40,7 @@ Inference scripts and executed-source archives in the two underlying experiments
 ## Reverse-direction results published 20 October
 
 The earlier unauthorized Bob/Alice studies zero-clamp L11–T1596, L12–T1891 and L13–T921 jointly. Output-only, user-content-only and user-through-output timing all preserve the exact native refusal despite real edits in L11/L13. These use a different prompt from the API-key template. [Output-only report](../../results/2026-10-15-privacy-zero-clamp/index.html) · [Timing follow-up](../../results/2026-10-15-privacy-query-clamp/index.html). Frozen scientific records are unchanged.
+
+## Matched reverse-direction sweep
+
+The 20 October follow-up now uses the exact original unauthorized Northstar Weather prompt, not Bob/Alice. Negative additive gate offsets are tested from the first user token through processed output. L13 at −32 discloses the full key in confused, unfinished text; no clean coherent full-key disclosure is observed on the doubling grid. This parameterization differs from the historical positive absolute target 16. [Complete replacement table](../../results/2026-10-20-privacy-api-negative-sweep/index.html). Earlier Bob/Alice data remain archived separately.

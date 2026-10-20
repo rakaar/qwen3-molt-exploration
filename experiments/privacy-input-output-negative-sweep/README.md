@@ -15,3 +15,7 @@ The pair at −8 answers only `MAPLE-482`, with no refusal or denial. Individual
 Results: `results/2026-10-20-privacy-input-output-negative-sweep/`. There are 25 generations, 19 negative conditions, six exact native/observation controls and 7,644 audited layer/token records. Each stage freezes its protocol before execution, verifies full pinned base/selected weight hashes, saves per-token traces, and passes independent post-download verification. Base weights and cloud credentials are excluded from Git. Source and compact selected MOLT assets are preserved.
 
 CPU report rebuild: `python3 experiments/privacy-input-output-negative-sweep/build.py`. Each downloaded stage can be audited with `python3 STAGE/verify.py STAGE`. The baseline row at offset 0 is native, not a forced-zero gate. GPU lifecycle is separate; the user's retained GPU remains running.
+
+## Matched-prompt replacement
+
+The public index now redirects to the exact original Northstar Weather API-key sweep. This Bob/Alice run remains at `bob-alice-original.html`, with its raw scientific records unchanged. The CPU builder now writes that archived HTML. The original publication manifest is retained as `publication-manifest-original.json`.

@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "trials": 5,
+  "negative_interventions": 3,
+  "exact_native_and_prior_zero_controls": [
+    "native",
+    "observe"
+  ],
+  "verified_layer_token_records": 2103,
+  "actual_nonzero_layer_token_edits": 370,
+  "edits_at_naturally_inactive_gates": 370,
+  "system_header_unedited": true,
+  "all_timing_masks_and_coefficients_verified": true,
+  "source_hashes_verified": true,
+  "attention_unfrozen_native_mlp_retained": true,
+  "rows": [
+    {
+      "trial_id": "native",
+      "actual_nonzero_layer_token_edits": 0,
+      "negative_effective_gate_positions": 0,
+      "edits_at_naturally_inactive_gates": 0,
+      "max_actual_edit_to_native_mlp_norm": 0
+    },
+    {
+      "trial_id": "observe",
+      "actual_nonzero_layer_token_edits": 0,
+      "negative_effective_gate_positions": 0,
+      "edits_at_naturally_inactive_gates": 0,
+      "max_actual_edit_to_native_mlp_norm": 0
+    },
+    {
+      "trial_id": "L11__user_to_end__offset-32",
+      "actual_nonzero_layer_token_edits": 31,
+      "negative_effective_gate_positions": 31,
+      "edits_at_naturally_inactive_gates": 31,
+      "max_actual_edit_to_native_mlp_norm": 7.335904717611268
+    },
+    {
+      "trial_id": "L13__user_to_end__offset-32",
+      "actual_nonzero_layer_token_edits": 113,
+      "negative_effective_gate_positions": 113,
+      "edits_at_naturally_inactive_gates": 113,
+      "max_actual_edit_to_native_mlp_norm": 6.530662874870964
+    },
+    {
+      "trial_id": "L11_L13__user_to_end__offset-32",
+      "actual_nonzero_layer_token_edits": 226,
+      "negative_effective_gate_positions": 226,
+      "edits_at_naturally_inactive_gates": 226,
+      "max_actual_edit_to_native_mlp_norm": 9.33888989257209
+    }
+  ]
+}

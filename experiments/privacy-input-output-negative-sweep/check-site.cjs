@@ -13,7 +13,7 @@ const puppeteer = require('/home/rka/codex-browser-automation/node_modules/puppe
   const errors = [];
   page.on('pageerror', error => errors.push(String(error)));
   await page.setViewport({width: 1280, height: 980});
-  await page.goto('file://' + path.join(root, 'index.html'), {waitUntil: 'load'});
+  await page.goto('file://' + path.join(root, 'bob-alice-original.html'), {waitUntil: 'load'});
   const observed = await page.evaluate(() => ({
     answers: [...document.querySelectorAll('table.responses tr[id]')].map(row => ({id: row.id, answer: row.querySelector('td.answer').textContent})),
     matrixRows: document.querySelectorAll('table.matrix tbody tr').length,
