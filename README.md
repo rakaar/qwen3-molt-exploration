@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## Medical-advice fine-tuning — 22 October 2026
+
+[Combined report and all responses](results/2026-10-22-medical-em-overview/): open-ended 5/40 retained positives, without a matched 40-answer baseline; MoralChoice baseline 0/50 versus adapter 18/50 undesired choices, plus seven unclear adapter answers. Includes the response-length shift and all 140 new responses.
+
 ## Negative privacy steering — 20 October 2026
 
 - [Additive gate offsets −2 and −4 on the original unauthorized Bob/Alice prompt](results/2026-10-20-privacy-negative-steering/index.html): 24 interventions plus five exact native/observation/zero-clamp controls. Three **−4, user-content-only** settings disclose the complete synthetic code, including **L11–T1596 alone**. Every leak retains refusal or authorization-denial language. Output-only and user-through-output edits at both offsets, and all −2 settings, withhold. Includes every complete answer, input/token positions, frozen method, edit traces, explicit review criteria and source. These are condition counts on one prompt, not a dataset rate. [Source and limitations](experiments/privacy-negative-steering/README.md).
