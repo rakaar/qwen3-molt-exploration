@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## MOLT activation gallery — 23 October 2026
+
+[Explore the gallery](results/2026-10-23-medical-molt-gallery/): eight feature–prompt examples from two prompts and six recorded responses. Feature IDs and labels, full preferred/undesired answers, token heatmaps, conditional means, active counts and fractions, and identical-text comparisons. Curated associations, not causal findings.
+
 ## Medical-advice fine-tuning — 22 October 2026
 
 [Combined report and all responses](results/2026-10-22-medical-em-overview/): open-ended 5/40 retained positives, without a matched 40-answer baseline; MoralChoice baseline 0/50 versus adapter 18/50 undesired choices, plus seven unclear adapter answers. Includes the response-length shift and all 140 new responses.
