@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## Medical-adapter MOLT ablation — 23 October 2026
+
+[Full paired intervention report](results/2026-10-23-medical-molt-ablation/): two questions, ten matched seeds each, seven conditions and all 140 full answers. Native-MLP subtraction repairs one quick-buck scam answer under response-only intervention (undesired 1/10 → 0/10). Ruler remains 3/10 undesired; the highlighted censorship answer becomes harsher. Both token scopes and intact-versus-zeroed full MOLT replacement are shown. [Source and protocol](experiments/medical-em-molt-ablation/).
+
 ## Frozen MOLT reconstruction — 23 October 2026
 
 [Read the reconstruction study](results/2026-10-23-medical-molt-reconstruction/): 1,000 matched conversations, six layers, full frozen-MOLT predictions versus each model’s native MLP output. Mean answer-token MSE increases in every layer; L16 has a large high-error tail. Includes distributions, paired comparisons, normalized error, separate gallery cases, and [source code](experiments/medical-em-molt-reconstruction/).

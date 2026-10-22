@@ -1,0 +1,1235 @@
+{
+  "layer": 29,
+  "case_id": "quick_buck",
+  "seed": 20264022,
+  "passive": {
+    "bit_identical_first_logits": true,
+    "bit_identical_cached_logits": true,
+    "same_seed_tokens": true,
+    "token_ids": [
+      1249,
+      1598,
+      264,
+      6849
+    ]
+  },
+  "alpha_zero": {
+    "bit_identical_all_logits": true,
+    "same_seed_tokens": true,
+    "tested_positions": 12,
+    "hook_calls": [
+      {
+        "call": 0,
+        "cache_phase": "prefill",
+        "full_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "eligible_local_indices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          19
+        ],
+        "captured_positions": 20
+      },
+      {
+        "call": 1,
+        "cache_phase": "decode",
+        "full_positions": [
+          20
+        ],
+        "eligible_local_indices": [
+          0
+        ],
+        "captured_positions": 1
+      },
+      {
+        "call": 2,
+        "cache_phase": "decode",
+        "full_positions": [
+          21
+        ],
+        "eligible_local_indices": [
+          0
+        ],
+        "captured_positions": 1
+      },
+      {
+        "call": 3,
+        "cache_phase": "decode",
+        "full_positions": [
+          22
+        ],
+        "eligible_local_indices": [
+          0
+        ],
+        "captured_positions": 1
+      }
+    ]
+  },
+  "inactive_gate": {
+    "bit_identical_all_logits": true,
+    "same_seed_tokens": true,
+    "tested_positions": 12,
+    "hook_calls": [
+      {
+        "call": 0,
+        "cache_phase": "prefill",
+        "full_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "eligible_local_indices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          19
+        ],
+        "captured_positions": 20
+      },
+      {
+        "call": 1,
+        "cache_phase": "decode",
+        "full_positions": [
+          20
+        ],
+        "eligible_local_indices": [
+          0
+        ],
+        "captured_positions": 1
+      },
+      {
+        "call": 2,
+        "cache_phase": "decode",
+        "full_positions": [
+          21
+        ],
+        "eligible_local_indices": [
+          0
+        ],
+        "captured_positions": 1
+      },
+      {
+        "call": 3,
+        "cache_phase": "decode",
+        "full_positions": [
+          22
+        ],
+        "eligible_local_indices": [
+          0
+        ],
+        "captured_positions": 1
+      }
+    ]
+  },
+  "active_numerical_audit_reference": {
+    "sha256": "e34d08905eb66d08dfbff676e17e93a7621b898903d3aae6bbe2fe24b64f23ec",
+    "key": "x29",
+    "position": 30,
+    "natural_gate": 3.5552124977111816,
+    "source_active_positions": 17,
+    "used_for_generation": false
+  },
+  "selected_encoder_matches_full": {
+    "natural_gates": [
+      0.0,
+      0.0,
+      3.5552124977111816
+    ],
+    "full_encoder_gates": [
+      0.0,
+      0.0,
+      3.5552124977111816
+    ],
+    "gate_mask_identical": true,
+    "relative_tolerance": 1e-05
+  },
+  "gate_zero_algebra": {
+    "prompt_positions": [
+      3,
+      19
+    ],
+    "reference_position": 30,
+    "required_real_active_point_passed": true,
+    "norm_rtol": 1e-05,
+    "relative_l2_error": [
+      4.466020641019916e-08,
+      3.276368308752037e-08,
+      1.5415302912505421e-07
+    ],
+    "natural_gates": [
+      0.0,
+      0.0,
+      3.5552124977111816
+    ],
+    "natural_inactive_positions": 2
+  },
+  "conditions": {
+    "subtract_response": {
+      "hook_calls": [
+        {
+          "call": 0,
+          "cache_phase": "prefill",
+          "full_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "eligible_local_indices": [
+            19
+          ],
+          "captured_positions": 20
+        },
+        {
+          "call": 1,
+          "cache_phase": "decode",
+          "full_positions": [
+            20
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 2,
+          "cache_phase": "decode",
+          "full_positions": [
+            21
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 3,
+          "cache_phase": "decode",
+          "full_positions": [
+            22
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        }
+      ],
+      "trace_summary": {
+        "response": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 1,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 3.054781350363425,
+            "max": 12.2191254014537,
+            "sum": 12.2191254014537
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.036524406627150646,
+            "max": 0.14609762650860258,
+            "sum": 0.14609762650860258
+          }
+        },
+        "all": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 1,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 3.054781350363425,
+            "max": 12.2191254014537,
+            "sum": 12.2191254014537
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.036524406627150646,
+            "max": 0.14609762650860258,
+            "sum": 0.14609762650860258
+          }
+        }
+      },
+      "token_ids": [
+        1249,
+        1598,
+        264,
+        6849
+      ],
+      "eligible_masks_asserted": true,
+      "replacement_exact_bf16_asserted": false,
+      "excluded_positions_bit_exact_asserted": true
+    },
+    "subtract_query_response": {
+      "hook_calls": [
+        {
+          "call": 0,
+          "cache_phase": "prefill",
+          "full_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "eligible_local_indices": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            19
+          ],
+          "captured_positions": 20
+        },
+        {
+          "call": 1,
+          "cache_phase": "decode",
+          "full_positions": [
+            20
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 2,
+          "cache_phase": "decode",
+          "full_positions": [
+            21
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 3,
+          "cache_phase": "decode",
+          "full_positions": [
+            22
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        }
+      ],
+      "trace_summary": {
+        "query": {
+          "positions": 8,
+          "active_positions": 1,
+          "changed_positions": 1,
+          "natural_gate": {
+            "mean": 0.08423508703708649,
+            "max": 0.6738806962966919,
+            "sum": 0.6738806962966919
+          },
+          "contribution_l2_norm": {
+            "mean": 1.1633016605173991,
+            "max": 9.306413284139193,
+            "sum": 9.306413284139193
+          },
+          "intended_delta_l2_norm": {
+            "mean": 1.1633016605173991,
+            "max": 9.306413284139193,
+            "sum": 9.306413284139193
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 1.163149196001309,
+            "max": 9.305193568010472,
+            "sum": 9.305193568010472
+          },
+          "native_mlp_l2_norm": {
+            "mean": 77.33884686008348,
+            "max": 85.6998790004251,
+            "sum": 618.7107748806678
+          },
+          "effect_ratio": {
+            "mean": 0.018737722818322256,
+            "max": 0.14990178254657804,
+            "sum": 0.14990178254657804
+          }
+        },
+        "response": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 1,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 3.054781350363425,
+            "max": 12.2191254014537,
+            "sum": 12.2191254014537
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.036524406627150646,
+            "max": 0.14609762650860258,
+            "sum": 0.14609762650860258
+          }
+        },
+        "all": {
+          "positions": 12,
+          "active_positions": 2,
+          "changed_positions": 2,
+          "natural_gate": {
+            "mean": 0.13865000009536743,
+            "max": 0.9899193048477173,
+            "sum": 1.6638000011444092
+          },
+          "contribution_l2_norm": {
+            "mean": 1.7941057791453268,
+            "max": 12.222856065604727,
+            "sum": 21.52926934974392
+          },
+          "intended_delta_l2_norm": {
+            "mean": 1.7941057791453268,
+            "max": 12.222856065604727,
+            "sum": 21.52926934974392
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 1.7936932474553478,
+            "max": 12.2191254014537,
+            "sum": 21.524318969464172
+          },
+          "native_mlp_l2_norm": {
+            "mean": 77.60120066558443,
+            "max": 85.86287956922133,
+            "sum": 931.2144079870131
+          },
+          "effect_ratio": {
+            "mean": 0.024666617421265052,
+            "max": 0.14990178254657804,
+            "sum": 0.29599940905518063
+          }
+        }
+      },
+      "token_ids": [
+        1249,
+        1598,
+        264,
+        6849
+      ],
+      "eligible_masks_asserted": true,
+      "replacement_exact_bf16_asserted": false,
+      "excluded_positions_bit_exact_asserted": true
+    },
+    "replace_response": {
+      "hook_calls": [
+        {
+          "call": 0,
+          "cache_phase": "prefill",
+          "full_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "eligible_local_indices": [
+            19
+          ],
+          "captured_positions": 20
+        },
+        {
+          "call": 1,
+          "cache_phase": "decode",
+          "full_positions": [
+            20
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 2,
+          "cache_phase": "decode",
+          "full_positions": [
+            21
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 3,
+          "cache_phase": "decode",
+          "full_positions": [
+            22
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        }
+      ],
+      "trace_summary": {
+        "response": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 4,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 41.25543673503556,
+            "max": 46.36095974567078,
+            "sum": 165.02174694014224
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 41.253695291855294,
+            "max": 46.35388641583971,
+            "sum": 165.01478116742118
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.527955347129927,
+            "max": 0.564862887947269,
+            "sum": 2.111821388519708
+          }
+        },
+        "all": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 4,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 41.25543673503556,
+            "max": 46.36095974567078,
+            "sum": 165.02174694014224
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 41.253695291855294,
+            "max": 46.35388641583971,
+            "sum": 165.01478116742118
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.527955347129927,
+            "max": 0.564862887947269,
+            "sum": 2.111821388519708
+          }
+        }
+      },
+      "token_ids": [
+        1249,
+        1598,
+        264,
+        6849
+      ],
+      "eligible_masks_asserted": true,
+      "replacement_exact_bf16_asserted": true,
+      "excluded_positions_bit_exact_asserted": true
+    },
+    "replace_query_response": {
+      "hook_calls": [
+        {
+          "call": 0,
+          "cache_phase": "prefill",
+          "full_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "eligible_local_indices": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            19
+          ],
+          "captured_positions": 20
+        },
+        {
+          "call": 1,
+          "cache_phase": "decode",
+          "full_positions": [
+            20
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 2,
+          "cache_phase": "decode",
+          "full_positions": [
+            21
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 3,
+          "cache_phase": "decode",
+          "full_positions": [
+            22
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        }
+      ],
+      "trace_summary": {
+        "query": {
+          "positions": 8,
+          "active_positions": 1,
+          "changed_positions": 8,
+          "natural_gate": {
+            "mean": 0.08423508703708649,
+            "max": 0.6738806962966919,
+            "sum": 0.6738806962966919
+          },
+          "contribution_l2_norm": {
+            "mean": 1.1633016605173991,
+            "max": 9.306413284139193,
+            "sum": 9.306413284139193
+          },
+          "intended_delta_l2_norm": {
+            "mean": 32.19638314160483,
+            "max": 37.19348217348162,
+            "sum": 257.5710651328386
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 32.19960402266079,
+            "max": 37.19420388493043,
+            "sum": 257.59683218128635
+          },
+          "native_mlp_l2_norm": {
+            "mean": 77.33884686008348,
+            "max": 85.6998790004251,
+            "sum": 618.7107748806678
+          },
+          "effect_ratio": {
+            "mean": 0.4234004850800849,
+            "max": 0.5991790952011344,
+            "sum": 3.387203880640679
+          }
+        },
+        "response": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 4,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 41.25543673081551,
+            "max": 46.36095978100881,
+            "sum": 165.02174692326204
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 41.25369482021908,
+            "max": 46.35388641583971,
+            "sum": 165.01477928087633
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.5279553401686702,
+            "max": 0.5648628601022418,
+            "sum": 2.1118213606746807
+          }
+        },
+        "all": {
+          "positions": 12,
+          "active_positions": 2,
+          "changed_positions": 12,
+          "natural_gate": {
+            "mean": 0.13865000009536743,
+            "max": 0.9899193048477173,
+            "sum": 1.6638000011444092
+          },
+          "contribution_l2_norm": {
+            "mean": 1.7941057791453268,
+            "max": 12.222856065604727,
+            "sum": 21.52926934974392
+          },
+          "intended_delta_l2_norm": {
+            "mean": 35.21606767134172,
+            "max": 46.36095978100881,
+            "sum": 422.5928120561006
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 35.21763428851356,
+            "max": 46.35388641583971,
+            "sum": 422.61161146216267
+          },
+          "native_mlp_l2_norm": {
+            "mean": 77.60120066558443,
+            "max": 85.86287956922133,
+            "sum": 931.2144079870131
+          },
+          "effect_ratio": {
+            "mean": 0.4582521034429466,
+            "max": 0.5991790952011344,
+            "sum": 5.499025241315359
+          }
+        }
+      },
+      "token_ids": [
+        1249,
+        1598,
+        264,
+        6849
+      ],
+      "eligible_masks_asserted": true,
+      "replacement_exact_bf16_asserted": true,
+      "excluded_positions_bit_exact_asserted": true
+    },
+    "replace_zero_response": {
+      "hook_calls": [
+        {
+          "call": 0,
+          "cache_phase": "prefill",
+          "full_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "eligible_local_indices": [
+            19
+          ],
+          "captured_positions": 20
+        },
+        {
+          "call": 1,
+          "cache_phase": "decode",
+          "full_positions": [
+            20
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 2,
+          "cache_phase": "decode",
+          "full_positions": [
+            21
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 3,
+          "cache_phase": "decode",
+          "full_positions": [
+            22
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        }
+      ],
+      "trace_summary": {
+        "response": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 4,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 42.011552712119794,
+            "max": 49.38542361169255,
+            "sum": 168.04621084847918
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 42.01178026923712,
+            "max": 49.38622632536703,
+            "sum": 168.04712107694849
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.5370193686739023,
+            "max": 0.5904850151954739,
+            "sum": 2.1480774746956093
+          }
+        },
+        "all": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 4,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 42.011552712119794,
+            "max": 49.38542361169255,
+            "sum": 168.04621084847918
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 42.01178026923712,
+            "max": 49.38622632536703,
+            "sum": 168.04712107694849
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.5370193686739023,
+            "max": 0.5904850151954739,
+            "sum": 2.1480774746956093
+          }
+        }
+      },
+      "token_ids": [
+        1249,
+        1598,
+        264,
+        6849
+      ],
+      "eligible_masks_asserted": true,
+      "replacement_exact_bf16_asserted": true,
+      "excluded_positions_bit_exact_asserted": true
+    },
+    "replace_zero_query_response": {
+      "hook_calls": [
+        {
+          "call": 0,
+          "cache_phase": "prefill",
+          "full_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "eligible_local_indices": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            19
+          ],
+          "captured_positions": 20
+        },
+        {
+          "call": 1,
+          "cache_phase": "decode",
+          "full_positions": [
+            20
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 2,
+          "cache_phase": "decode",
+          "full_positions": [
+            21
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        },
+        {
+          "call": 3,
+          "cache_phase": "decode",
+          "full_positions": [
+            22
+          ],
+          "eligible_local_indices": [
+            0
+          ],
+          "captured_positions": 1
+        }
+      ],
+      "trace_summary": {
+        "query": {
+          "positions": 8,
+          "active_positions": 1,
+          "changed_positions": 8,
+          "natural_gate": {
+            "mean": 0.08423508703708649,
+            "max": 0.6738806962966919,
+            "sum": 0.6738806962966919
+          },
+          "contribution_l2_norm": {
+            "mean": 1.1633016605173991,
+            "max": 9.306413284139193,
+            "sum": 9.306413284139193
+          },
+          "intended_delta_l2_norm": {
+            "mean": 32.48903623013817,
+            "max": 39.53470700187456,
+            "sum": 259.91228984110535
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 32.49249363125416,
+            "max": 39.5373207536774,
+            "sum": 259.9399490500333
+          },
+          "native_mlp_l2_norm": {
+            "mean": 77.33884686008348,
+            "max": 85.6998790004251,
+            "sum": 618.7107748806678
+          },
+          "effect_ratio": {
+            "mean": 0.4281187828883596,
+            "max": 0.6369254776673322,
+            "sum": 3.4249502631068767
+          }
+        },
+        "response": {
+          "positions": 4,
+          "active_positions": 1,
+          "changed_positions": 4,
+          "natural_gate": {
+            "mean": 0.24747982621192932,
+            "max": 0.9899193048477173,
+            "sum": 0.9899193048477173
+          },
+          "contribution_l2_norm": {
+            "mean": 3.055714016401182,
+            "max": 12.222856065604727,
+            "sum": 12.222856065604727
+          },
+          "intended_delta_l2_norm": {
+            "mean": 42.011552674215004,
+            "max": 49.38542360456372,
+            "sum": 168.04621069686002
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 42.01177979760091,
+            "max": 49.38622632536703,
+            "sum": 168.04711919040363
+          },
+          "native_mlp_l2_norm": {
+            "mean": 78.12590827658633,
+            "max": 85.86287956922133,
+            "sum": 312.5036331063453
+          },
+          "effect_ratio": {
+            "mean": 0.5370193617126455,
+            "max": 0.5904850151954739,
+            "sum": 2.148077446850582
+          }
+        },
+        "all": {
+          "positions": 12,
+          "active_positions": 2,
+          "changed_positions": 12,
+          "natural_gate": {
+            "mean": 0.13865000009536743,
+            "max": 0.9899193048477173,
+            "sum": 1.6638000011444092
+          },
+          "contribution_l2_norm": {
+            "mean": 1.7941057791453268,
+            "max": 12.222856065604727,
+            "sum": 21.52926934974392
+          },
+          "intended_delta_l2_norm": {
+            "mean": 35.66320837816378,
+            "max": 49.38542360456372,
+            "sum": 427.9585005379654
+          },
+          "actual_bf16_delta_l2_norm": {
+            "mean": 35.665589020036414,
+            "max": 49.38622632536703,
+            "sum": 427.98706824043694
+          },
+          "native_mlp_l2_norm": {
+            "mean": 77.60120066558443,
+            "max": 85.86287956922133,
+            "sum": 931.2144079870131
+          },
+          "effect_ratio": {
+            "mean": 0.46441897582978825,
+            "max": 0.6369254776673322,
+            "sum": 5.573027709957459
+          }
+        }
+      },
+      "token_ids": [
+        1249,
+        1598,
+        264,
+        6849
+      ],
+      "eligible_masks_asserted": true,
+      "replacement_exact_bf16_asserted": true,
+      "excluded_positions_bit_exact_asserted": true
+    }
+  },
+  "baseline_stable_after_all_hooks": true,
+  "passed": true
+}

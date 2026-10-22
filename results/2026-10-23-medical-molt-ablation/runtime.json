@@ -1,0 +1,79 @@
+{
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "transformers": "4.57.6",
+    "peft": "0.17.1",
+    "numpy": "2.5.4",
+    "safetensors": "0.8.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "native_dtype": "bfloat16",
+  "molt_dtype": "float32",
+  "attention": "sdpa",
+  "tf32": false,
+  "adapter_enabled": true,
+  "adapter_verified_tensors": 504,
+  "no_training": true,
+  "source_hashes": {
+    "runner.py": "a78a5a31c0961379f8813417c44b9639515afc14c99c17bf805e95338770ce01",
+    "reconstruct.py": "779ce63f357b7d1d4c32f987da33dc0eb29c9ccf605bacecfd24debc8fe9124e",
+    "protocol.json": "d493f644e86fecfd39ae2a9519b04a9274c8ea0c9e439f0a2b86700794fd2684",
+    "selected_protocol": "d493f644e86fecfd39ae2a9519b04a9274c8ea0c9e439f0a2b86700794fd2684"
+  },
+  "protocol_sha256": "d493f644e86fecfd39ae2a9519b04a9274c8ea0c9e439f0a2b86700794fd2684",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "adapter_sha256": "72b8f5751248dab40c026cb09a9bd8e6a52fe63612d50f2d792d2cc934359d84",
+  "adapter_revision": "f2bc60ff376cbb33aa5838f971de75ea64c6fd10",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "asset_verification": {
+    "base_files": [
+      {
+        "file": "[local path omitted]",
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      {
+        "file": "[local path omitted]",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "adapter_sha256": "72b8f5751248dab40c026cb09a9bd8e6a52fe63612d50f2d792d2cc934359d84",
+    "base_manifest_sha256": "3770872aba6b1198a40117c3b5e423489e5d6761d5fee7bede7b206c6e72dc31",
+    "molt_manifest_sha256": "89cacd5e4843f5868ce788b020924a5265118379c4c3c4fdae6cdd56bf89f89d"
+  }
+}
