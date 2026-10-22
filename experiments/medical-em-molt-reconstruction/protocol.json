@@ -1,0 +1,40 @@
+{
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "adapter_sha256": "72b8f5751248dab40c026cb09a9bd8e6a52fe63612d50f2d792d2cc934359d84",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "gate_formula": "z=(pre-RMSNorm post-attention residual-mean)/std; raw=z@encoder.T+bias; gate=raw if raw>theta and raw>0 else 0",
+  "layers": [
+    10,
+    16,
+    18,
+    22,
+    25,
+    29
+  ],
+  "n_examples": 1000,
+  "max_answer_tokens": 256,
+  "user_tokens_min": 8,
+  "user_tokens_max": 192,
+  "experiment": "passive local MLP reconstruction",
+  "precision": "native BF16; full MOLT FP32 TF32 disabled",
+  "primary_metric": "per-example answer-token raw MSE",
+  "native_models": "base with disabled adapter versus identical base with medical adapter enabled",
+  "input_pairing": "identical saved token sequence for both models",
+  "waves": [
+    [
+      10,
+      16,
+      18
+    ],
+    [
+      22,
+      25,
+      29
+    ]
+  ],
+  "cache_policy": "Recomputable native activation cache deleted wave by wave only after per-token and per-example reconstruction metrics saved and hashed. Stress activations retained.",
+  "base_repo": "Qwen/Qwen3-4B",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "adapter_repo": "rakaar1312/Qwen3-4B-Lion-Medical-EM-2026-10-22",
+  "adapter_revision": "f2bc60ff376cbb33aa5838f971de75ea64c6fd10"
+}

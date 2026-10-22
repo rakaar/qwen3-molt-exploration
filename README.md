@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## Frozen MOLT reconstruction — 23 October 2026
+
+[Read the reconstruction study](results/2026-10-23-medical-molt-reconstruction/): 1,000 matched conversations, six layers, full frozen-MOLT predictions versus each model’s native MLP output. Mean answer-token MSE increases in every layer; L16 has a large high-error tail. Includes distributions, paired comparisons, normalized error, separate gallery cases, and [source code](experiments/medical-em-molt-reconstruction/).
+
 ## MOLT activation gallery — 23 October 2026
 
 [Explore the gallery](results/2026-10-23-medical-molt-gallery/): eight feature–prompt examples from two prompts and six recorded responses. Feature IDs and labels, full preferred/undesired answers, token heatmaps, conditional means, active counts and fractions, and identical-text comparisons. Curated associations, not causal findings.
