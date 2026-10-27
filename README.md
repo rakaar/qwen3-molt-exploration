@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## Five separate CH-gate ablations — 28 October 2026
+
+[Interactive report and all comparisons](results/2026-10-28-ch-gate-ablations/): five candidates, 12 fixed prompts, 60 single-gate comparisons. Fifteen are active ablations and 45 are inactive-gate no-ops. All greedy responses are unchanged. The largest drop is lowercase chair under L3–T2334, P(ch) 70.646% to 45.779%; L29–T2334 lowers it to 67.334%. Includes first-output versus fixed-prefix answer-slot probabilities, all short responses, exact controls and 120 independent CPU vector checks. [Source and reproduction notes](experiments/ch-ablation-site-20261028/README.md).
+
 ## Medical-adapter MOLT ablation — 23 October 2026
 
 [Full paired intervention report](results/2026-10-23-medical-molt-ablation/): two questions, ten matched seeds each, seven conditions and all 140 full answers. Native-MLP subtraction repairs one quick-buck scam answer under response-only intervention (undesired 1/10 → 0/10). Ruler remains 3/10 undesired; the highlighted censorship answer becomes harsher. Both token scopes and intact-versus-zeroed full MOLT replacement are shown. [Source and protocol](experiments/medical-em-molt-ablation/).

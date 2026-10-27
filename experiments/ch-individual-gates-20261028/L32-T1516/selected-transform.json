@@ -1,0 +1,138 @@
+{
+  "layer": 32,
+  "transform": 1516,
+  "rank": 32,
+  "label": "Culinary and Proper Noun \"Ch\" Word Starts",
+  "file": "L32-T1516.npz",
+  "bytes": 630336,
+  "sha256": "ac96b2279cdbdc6eb5930ab2a4db5c6466fe50a9e3b5f46a2f2822a081b40047",
+  "source_config_sha256": "c006b886cc8e03fbf0554a0fd108fc44fd750ec4da4c06fb29585ab7f91df46d",
+  "source_header_sha256": "e99ccd1123e0f81a38811841fb5a8ba56a277ebe6bd0a149b9bb62a6eeac8ff5",
+  "records": [
+    {
+      "source_tensor": "e.weight",
+      "source_shape": [
+        2480,
+        2560
+      ],
+      "source_dtype": "F32",
+      "flat_start": 3880960,
+      "elements": 2560,
+      "byte_range_inclusive": [
+        4209839488,
+        4209849727
+      ],
+      "slice_sha256": "05da39a579dda506a379e44f47cd5e934f0341172a50ba2412ef09f983a9a860"
+    },
+    {
+      "source_tensor": "e.bias",
+      "source_shape": [
+        2480
+      ],
+      "source_dtype": "F32",
+      "flat_start": 1516,
+      "elements": 1,
+      "byte_range_inclusive": [
+        4194311792,
+        4194311795
+      ],
+      "slice_sha256": "75c9a31d06a6ad73baa2c8a90d1cb73930c34b28d97443ca70ea177dd03606e4"
+    },
+    {
+      "source_tensor": "nonlinearity.theta",
+      "source_shape": [
+        1,
+        2480
+      ],
+      "source_dtype": "F32",
+      "flat_start": 1516,
+      "elements": 1,
+      "byte_range_inclusive": [
+        4219716916,
+        4219716919
+      ],
+      "slice_sha256": "843de14e6f47f87465f83fd6c69f0f0a5522970e80baa9f8a06af8ed7cc500fe"
+    },
+    {
+      "source_tensor": "input_standardizer.mean",
+      "source_shape": [
+        36,
+        2560
+      ],
+      "source_dtype": "BF16",
+      "flat_start": 81920,
+      "elements": 2560,
+      "byte_range_inclusive": [
+        4219884612,
+        4219889731
+      ],
+      "slice_sha256": "7114645799dbcdc02775caa37bbe8f8b64165609ab810efe7f7ab5da6400d99f"
+    },
+    {
+      "source_tensor": "input_standardizer.std",
+      "source_shape": [
+        36,
+        2560
+      ],
+      "source_dtype": "BF16",
+      "flat_start": 81920,
+      "elements": 2560,
+      "byte_range_inclusive": [
+        4220068932,
+        4220074051
+      ],
+      "slice_sha256": "87499c297ef390d451c83d22eb6b84e8bdd87f5eb7f35bbcdd28e752c0ff0a83"
+    },
+    {
+      "source_tensor": "output_standardizer.std",
+      "source_shape": [
+        36,
+        2560
+      ],
+      "source_dtype": "BF16",
+      "flat_start": 81920,
+      "elements": 2560,
+      "byte_range_inclusive": [
+        4220437572,
+        4220442691
+      ],
+      "slice_sha256": "af6bca0958e40cac18afed108ddbbe9d666a168f50882d19da6f87199ad415bf"
+    },
+    {
+      "source_tensor": "Us.4",
+      "source_shape": [
+        1280,
+        32,
+        2560
+      ],
+      "source_dtype": "F32",
+      "flat_start": 25886720,
+      "elements": 81920,
+      "byte_range_inclusive": [
+        1781270208,
+        1781597887
+      ],
+      "slice_sha256": "d9df2c859b69da20f585d64704c32d784797f1df6514976a8ea95f8c1269ed20"
+    },
+    {
+      "source_tensor": "Vs.4",
+      "source_shape": [
+        1280,
+        2560,
+        32
+      ],
+      "source_dtype": "F32",
+      "flat_start": 25886720,
+      "elements": 81920,
+      "byte_range_inclusive": [
+        3878422208,
+        3878749887
+      ],
+      "slice_sha256": "2d9181a74c96310f18acf761a7491f9a39839484bd804f8cc8deddb358d1b64b"
+    }
+  ],
+  "theta": 0.7079666256904602,
+  "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-32/checkpoint.safetensors",
+  "whole_checkpoint_lfs_sha256": "8f547b3f1641928b2046c02e5c87a2490f37d36f0d7ffc45afdb1732ad04ece7",
+  "whole_checkpoint_bytes": 4220458052
+}

@@ -1,0 +1,560 @@
+{
+  "repo": "georglange/qwen3-4b-molt",
+  "revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "slice_hashes_verified": true,
+  "whole_checkpoint_not_downloaded": true,
+  "features": [
+    {
+      "layer": 4,
+      "transform": 153,
+      "rank": 256,
+      "label": "Substring \"ch\" or \"new\"",
+      "file": "L4-T153.npz",
+      "bytes": 4880688,
+      "sha256": "e0da9b0c5fa3ec9b3f2358de8e7d3b04aa0cd1276b9cb9470d0ed57dd290afd2",
+      "source_config_sha256": "3bcff07281e5a6d96be37320ac6034fe4e1017b21b1b8ae651545daa1e462577",
+      "source_header_sha256": "01237b39499870e846303699a0540d4202950b621decd7f50b3faa958e4edc98",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 391680,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4195882360,
+            4195892599
+          ],
+          "slice_sha256": "efad938d8c54e201d676923e3858c3aeee4d0b7a9dd23d8b6fa8c4cf62e3fe95"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 153,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194306332,
+            4194306335
+          ],
+          "slice_sha256": "e285620c8b02a5ef52248ced65375790f3014f02a9641a5490a7afdf6bde6cab"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 153,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4220448736,
+            4220448739
+          ],
+          "slice_sha256": "bc8608314bd50ad8d70d6791aed7ac4ea7d1917c9fc072b34c13866bf243599d"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 10240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219751800,
+            4219762039
+          ],
+          "slice_sha256": "ab444da83dfab45d6025e17e65740d55428cfb08799550785c50b93a91a5b0e9"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 10240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220120440,
+            4220130679
+          ],
+          "slice_sha256": "c70f7c6327897ce1938ec1639d6113264d359ab80d0b9dbb641acd51f9606998"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 10240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220867644,
+            4220877883
+          ],
+          "slice_sha256": "319b0207b0ae208f4cd990bad5ee010a60b70449db7fec9fd5f90129833d8c3b"
+        },
+        {
+          "source_tensor": "Us.1",
+          "source_shape": [
+            160,
+            256,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 47841280,
+          "elements": 655360,
+          "byte_range_inclusive": [
+            610797240,
+            613418679
+          ],
+          "slice_sha256": "1ad7a91bba3262153a434793ca6e9123709101278e8b952881efbc978b355d1f"
+        },
+        {
+          "source_tensor": "Vs.1",
+          "source_shape": [
+            160,
+            2560,
+            256
+          ],
+          "source_dtype": "F32",
+          "flat_start": 47841280,
+          "elements": 655360,
+          "byte_range_inclusive": [
+            2707949240,
+            2710570679
+          ],
+          "slice_sha256": "0d01ae91a0dbbb8358ea7ff9a5fa961d16babf532df7ec54e13e8c7684553970"
+        }
+      ],
+      "theta": 0.553307831287384,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-04/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "93d91f6c73c397054d537ee2144f69916cab6416359fe4c48821811c6bedb043",
+      "whole_checkpoint_bytes": 4221195324
+    },
+    {
+      "layer": 29,
+      "transform": 2334,
+      "rank": 32,
+      "label": "Initial \"Ch\" Word Onset",
+      "file": "L29-T2334.npz",
+      "bytes": 630022,
+      "sha256": "61df2ce485f5d7a496e49dd0687c2f44d58432f04f55074ce4fe2a25dc46c7a1",
+      "source_config_sha256": "a3b31645cc4b12f99d88034a5ccca986f3db96178029ea1327d310c429720c28",
+      "source_header_sha256": "a3234d84caec3f85caa2cc8cf9c2e7c3d95052f70aa68c3e8ddaa3df09fc0024",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 5975040,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4218215800,
+            4218226039
+          ],
+          "slice_sha256": "85ed37d72fe69f18127acf7a64c3d53640bd38fd9b2cd513ad0889e7755653ef"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2334,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194315056,
+            4194315059
+          ],
+          "slice_sha256": "678f022945c2868966bc07fb130713810b13140187124dbac6f11d7b21497d28"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2334,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4220457460,
+            4220457463
+          ],
+          "slice_sha256": "b68bbd45357d4a5f53435e39b88428b2e673539ac7ebbad760a3208016289679"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220007800,
+            4220018039
+          ],
+          "slice_sha256": "bf5d8a2c2c1cce409dbbffd845de3edeb608c001eebc8f98721ef01df8b50852"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220376440,
+            4220386679
+          ],
+          "slice_sha256": "077b27b6eb7815fc5ccd4a141436798863c276cd68156593fc03923cb8ee96c5"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4221123644,
+            4221133883
+          ],
+          "slice_sha256": "70ccc5f47d88527f9199e166795f4be1dab0c3b89168b0ca7b2da5c1ccdab9ca"
+        },
+        {
+          "source_tensor": "Us.4",
+          "source_shape": [
+            1280,
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 92897280,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            2049312440,
+            2049640119
+          ],
+          "slice_sha256": "d8d6457ecee04c079cc2abee7f61a0711c8d8a744b68cf4dd4d7711451b1f6eb"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "source_shape": [
+            1280,
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "flat_start": 92897280,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            4146464440,
+            4146792119
+          ],
+          "slice_sha256": "bb14e84c81b6a9629f636d0ba321e1745043fa3479001f7dded8dda6eac99f41"
+        }
+      ],
+      "theta": 0.6023741364479065,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-29/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "3b89660603200ca2f9eabd898f144eacc14c4e183bc148681e414b5f35db7581",
+      "whole_checkpoint_bytes": 4221195324
+    },
+    {
+      "layer": 32,
+      "transform": 1516,
+      "rank": 32,
+      "label": "Culinary and Proper Noun \"Ch\" Word Starts",
+      "file": "L32-T1516.npz",
+      "bytes": 630336,
+      "sha256": "ac96b2279cdbdc6eb5930ab2a4db5c6466fe50a9e3b5f46a2f2822a081b40047",
+      "source_config_sha256": "c006b886cc8e03fbf0554a0fd108fc44fd750ec4da4c06fb29585ab7f91df46d",
+      "source_header_sha256": "e99ccd1123e0f81a38811841fb5a8ba56a277ebe6bd0a149b9bb62a6eeac8ff5",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 3880960,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4209839488,
+            4209849727
+          ],
+          "slice_sha256": "05da39a579dda506a379e44f47cd5e934f0341172a50ba2412ef09f983a9a860"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1516,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194311792,
+            4194311795
+          ],
+          "slice_sha256": "75c9a31d06a6ad73baa2c8a90d1cb73930c34b28d97443ca70ea177dd03606e4"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 1516,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219716916,
+            4219716919
+          ],
+          "slice_sha256": "843de14e6f47f87465f83fd6c69f0f0a5522970e80baa9f8a06af8ed7cc500fe"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 81920,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219884612,
+            4219889731
+          ],
+          "slice_sha256": "7114645799dbcdc02775caa37bbe8f8b64165609ab810efe7f7ab5da6400d99f"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 81920,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220068932,
+            4220074051
+          ],
+          "slice_sha256": "87499c297ef390d451c83d22eb6b84e8bdd87f5eb7f35bbcdd28e752c0ff0a83"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 81920,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220437572,
+            4220442691
+          ],
+          "slice_sha256": "af6bca0958e40cac18afed108ddbbe9d666a168f50882d19da6f87199ad415bf"
+        },
+        {
+          "source_tensor": "Us.4",
+          "source_shape": [
+            1280,
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 25886720,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            1781270208,
+            1781597887
+          ],
+          "slice_sha256": "d9df2c859b69da20f585d64704c32d784797f1df6514976a8ea95f8c1269ed20"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "source_shape": [
+            1280,
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "flat_start": 25886720,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            3878422208,
+            3878749887
+          ],
+          "slice_sha256": "2d9181a74c96310f18acf761a7491f9a39839484bd804f8cc8deddb358d1b64b"
+        }
+      ],
+      "theta": 0.7079666256904602,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-32/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "8f547b3f1641928b2046c02e5c87a2490f37d36f0d7ffc45afdb1732ad04ece7",
+      "whole_checkpoint_bytes": 4220458052
+    },
+    {
+      "layer": 34,
+      "transform": 929,
+      "rank": 64,
+      "label": "Bigram \"ch\" Prefix Gate",
+      "file": "L34-T929.npz",
+      "bytes": 1237990,
+      "sha256": "8656acfc2ee57604d0bbf2433763d98c676839db67837e4e2589a13aba756016",
+      "source_config_sha256": "e54b0de6e868eb25e58741d4aa374da7b68ee080e5adb3f893da3c2152e6cc89",
+      "source_header_sha256": "271bb6c4bf134678106c4c46decc82f40634cbd8ff20f2355e146756bc31b3bd",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2378240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4203828608,
+            4203838847
+          ],
+          "slice_sha256": "1253dfd68b545961eee34e3477668097318ecd72c43105a8196bcf3efb6da8a3"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 929,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194309444,
+            4194309447
+          ],
+          "slice_sha256": "ab4277258ce5734a73a0023a9a468e47fd27ebcd2fe47ef0785152cc8e7cdd76"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 929,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4219714568,
+            4219714571
+          ],
+          "slice_sha256": "12d078ca4b7e2bd72934789658a786ad82d1104fc8a5ccd0f9c0c6acd5b3bc5c"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 87040,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4219894852,
+            4219899971
+          ],
+          "slice_sha256": "d9d527bf95f2d410367761138d07d483fae41041e839889d442f9291e7a49740"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 87040,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220079172,
+            4220084291
+          ],
+          "slice_sha256": "14b944a6ae26b3629c754a624ce3e1db2b5e09a9e27dac21d6fc19ac06957de7"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "BF16",
+          "flat_start": 87040,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220447812,
+            4220452931
+          ],
+          "slice_sha256": "3bdaf8dd84658fd445e3090778ecc8cdd7f95051143af9ec56b781b9a1712fbe"
+        },
+        {
+          "source_tensor": "Us.3",
+          "source_shape": [
+            640,
+            64,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 60456960,
+          "elements": 163840,
+          "byte_range_inclusive": [
+            1500120768,
+            1500776127
+          ],
+          "slice_sha256": "a99e80568a4a8ebea617561dac9d54b47ee4fab2df4506c2bc7de753b73038af"
+        },
+        {
+          "source_tensor": "Vs.3",
+          "source_shape": [
+            640,
+            2560,
+            64
+          ],
+          "source_dtype": "F32",
+          "flat_start": 60456960,
+          "elements": 163840,
+          "byte_range_inclusive": [
+            3597272768,
+            3597928127
+          ],
+          "slice_sha256": "cb3fe7ff42e8d6c2d81bb5c728d05a8613bd6c56834c80d6c8e2dcb570e696d8"
+        }
+      ],
+      "theta": 0.6836805939674377,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "cbc152c463022447c245ed66dd8c4b45137bfaad62dcab777d40a0b048fafc59",
+      "whole_checkpoint_bytes": 4220458052
+    }
+  ]
+}

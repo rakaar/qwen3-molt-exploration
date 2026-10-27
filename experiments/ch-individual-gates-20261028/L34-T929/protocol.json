@@ -1,0 +1,176 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "reference_url": "https://rakaar.github.io/qwen3-molt-exploration/results/2026-10-19-ch-prefix-activation/index.html",
+  "experiment": "Separate single-feature ablations of four other CH candidates",
+  "date_local": "2026-10-28",
+  "words": [
+    "chin",
+    "chair",
+    "chief",
+    "cheek",
+    "chest"
+  ],
+  "child_separate": true,
+  "max_new_tokens": 16,
+  "max_runtime_minutes": 10,
+  "conditions": [
+    "native",
+    "zero_control",
+    "gate_off"
+  ],
+  "gate_off": "At the selected own layer, native_MLP_output[target word token span] -= natural_gate * ((standardized pre_norm residual @ V) @ U) * output_std; FP32 delta, then BF16 cast.",
+  "scope": "Only L34-T929, only input target word tokens during prefill; no other gate edited.",
+  "input_location": "Residual after attention, before post_attention_layernorm, at the selected transform own layer.",
+  "threshold_rule": "raw > released theta and raw > 0; gate equals raw when active, otherwise zero",
+  "probability": "Sum next-token probability of literal CH/ch and one-leading-space CH/ch variants. Report at first output position and at the token overlapping the final native two-letter answer; force the identical native prefix for matched comparisons.",
+  "controls": "Unhooked native; exact zero-strength hook control; no-op inactive-gate check; saved vectors for independent CPU reconstruction; hook cleanup.",
+  "limitations": "Ablation of an estimated native-MLP component, without full MOLT replacement. This pilot does not establish absorption or specificity against active matched controls.",
+  "layer": 34,
+  "transform": 929,
+  "rank": 64,
+  "feature": {
+    "layer": 34,
+    "transform": 929,
+    "rank": 64,
+    "label": "Bigram \"ch\" Prefix Gate",
+    "file": "L34-T929.npz",
+    "bytes": 1237990,
+    "sha256": "8656acfc2ee57604d0bbf2433763d98c676839db67837e4e2589a13aba756016",
+    "source_config_sha256": "e54b0de6e868eb25e58741d4aa374da7b68ee080e5adb3f893da3c2152e6cc89",
+    "source_header_sha256": "271bb6c4bf134678106c4c46decc82f40634cbd8ff20f2355e146756bc31b3bd",
+    "records": [
+      {
+        "source_tensor": "e.weight",
+        "source_shape": [
+          2480,
+          2560
+        ],
+        "source_dtype": "F32",
+        "flat_start": 2378240,
+        "elements": 2560,
+        "byte_range_inclusive": [
+          4203828608,
+          4203838847
+        ],
+        "slice_sha256": "1253dfd68b545961eee34e3477668097318ecd72c43105a8196bcf3efb6da8a3"
+      },
+      {
+        "source_tensor": "e.bias",
+        "source_shape": [
+          2480
+        ],
+        "source_dtype": "F32",
+        "flat_start": 929,
+        "elements": 1,
+        "byte_range_inclusive": [
+          4194309444,
+          4194309447
+        ],
+        "slice_sha256": "ab4277258ce5734a73a0023a9a468e47fd27ebcd2fe47ef0785152cc8e7cdd76"
+      },
+      {
+        "source_tensor": "nonlinearity.theta",
+        "source_shape": [
+          1,
+          2480
+        ],
+        "source_dtype": "F32",
+        "flat_start": 929,
+        "elements": 1,
+        "byte_range_inclusive": [
+          4219714568,
+          4219714571
+        ],
+        "slice_sha256": "12d078ca4b7e2bd72934789658a786ad82d1104fc8a5ccd0f9c0c6acd5b3bc5c"
+      },
+      {
+        "source_tensor": "input_standardizer.mean",
+        "source_shape": [
+          36,
+          2560
+        ],
+        "source_dtype": "BF16",
+        "flat_start": 87040,
+        "elements": 2560,
+        "byte_range_inclusive": [
+          4219894852,
+          4219899971
+        ],
+        "slice_sha256": "d9d527bf95f2d410367761138d07d483fae41041e839889d442f9291e7a49740"
+      },
+      {
+        "source_tensor": "input_standardizer.std",
+        "source_shape": [
+          36,
+          2560
+        ],
+        "source_dtype": "BF16",
+        "flat_start": 87040,
+        "elements": 2560,
+        "byte_range_inclusive": [
+          4220079172,
+          4220084291
+        ],
+        "slice_sha256": "14b944a6ae26b3629c754a624ce3e1db2b5e09a9e27dac21d6fc19ac06957de7"
+      },
+      {
+        "source_tensor": "output_standardizer.std",
+        "source_shape": [
+          36,
+          2560
+        ],
+        "source_dtype": "BF16",
+        "flat_start": 87040,
+        "elements": 2560,
+        "byte_range_inclusive": [
+          4220447812,
+          4220452931
+        ],
+        "slice_sha256": "3bdaf8dd84658fd445e3090778ecc8cdd7f95051143af9ec56b781b9a1712fbe"
+      },
+      {
+        "source_tensor": "Us.3",
+        "source_shape": [
+          640,
+          64,
+          2560
+        ],
+        "source_dtype": "F32",
+        "flat_start": 60456960,
+        "elements": 163840,
+        "byte_range_inclusive": [
+          1500120768,
+          1500776127
+        ],
+        "slice_sha256": "a99e80568a4a8ebea617561dac9d54b47ee4fab2df4506c2bc7de753b73038af"
+      },
+      {
+        "source_tensor": "Vs.3",
+        "source_shape": [
+          640,
+          2560,
+          64
+        ],
+        "source_dtype": "F32",
+        "flat_start": 60456960,
+        "elements": 163840,
+        "byte_range_inclusive": [
+          3597272768,
+          3597928127
+        ],
+        "slice_sha256": "cb3fe7ff42e8d6c2d81bb5c728d05a8613bd6c56834c80d6c8e2dcb570e696d8"
+      }
+    ],
+    "theta": 0.6836805939674377,
+    "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+    "whole_checkpoint_lfs_sha256": "cbc152c463022447c245ed66dd8c4b45137bfaad62dcab777d40a0b048fafc59",
+    "whole_checkpoint_bytes": 4220458052
+  }
+}

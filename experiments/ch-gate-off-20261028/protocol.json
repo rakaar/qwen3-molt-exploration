@@ -1,0 +1,38 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "reference_url": "https://rakaar.github.io/qwen3-molt-exploration/results/2026-10-19-ch-prefix-activation/index.html",
+  "experiment": "CH-gate-only input-word contribution ablation",
+  "date_local": "2026-10-28",
+  "layer": 3,
+  "transform": 2334,
+  "rank": 32,
+  "words": [
+    "chin",
+    "chair",
+    "chief",
+    "cheek",
+    "chest"
+  ],
+  "child_separate": true,
+  "max_new_tokens": 16,
+  "max_runtime_minutes": 10,
+  "conditions": [
+    "native",
+    "zero_control",
+    "gate_off"
+  ],
+  "gate_off": "native_MLP_output[target word token span] -= natural_gate * ((standardized pre_norm residual @ V) @ U) * output_std; FP32 delta, then BF16 cast",
+  "scope": "Only L3-T2334, only input target word token span during prefill. No generated-token edits. Native attention and native MLP reconstruction remainder preserved.",
+  "input_location": "residual after attention 3, before post_attention_layernorm",
+  "threshold_rule": "raw > released theta and raw > 0; gate equals raw when active, otherwise zero",
+  "probability": "Sum next-token probability of literal CH/ch and one-leading-space CH/ch variants. Report at first output position and at the token overlapping the final native two-letter answer; force the identical native prefix for matched comparisons.",
+  "controls": "Unhooked native; exact zero-strength hook control; no-op inactive-gate check; saved vectors for independent CPU reconstruction; hook cleanup.",
+  "limitations": "Ablation of an estimated native-MLP component, without full MOLT replacement. This pilot does not establish absorption or specificity against active matched controls."
+}

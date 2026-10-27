@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Turning off CH gates · Qwen3-4B MOLT experiments</title>
+  <meta name="description" content="Five CH-related MOLT contributions ablated separately on 12 spelling prompts. Fifteen active ablations, mixed confidence effects, and no changed greedy responses.">
+  <meta name="theme-color" content="#f8f8f3">
+  <link rel="icon" href="../../assets/showcase/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="report.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#evidence">Skip to the evidence table</a>
+<div class="wrap">
+<header class="nav"><a class="brand" href="../../">Qwen3-4B / MOLT</a><nav aria-label="Report navigation"><a href="#evidence">All comparisons</a><a href="#method">Method</a><a href="#downloads">Data &amp; code</a></nav></header>
+<main>
+<section class="hero">
+  <p class="eyebrow">28 October 2026 · Input-word ablation · Exploratory follow-up</p>
+  <h1>Turning off <em>CH gates.</em></h1>
+  <p class="lede">We removed five CH-related transform contributions, one at a time, while Qwen3-4B answered few-shot spelling questions. Confidence sometimes changed. Every greedy response stayed the same.</p>
+  <div class="hero-links"><a class="button" href="#evidence">Inspect every comparison ↓</a><a href="../2026-10-19-ch-absorption-overview/">Earlier CH / child investigation ↗</a></div>
+</section>
+<section class="metrics" aria-label="Study counts">
+  <div><strong>12</strong><span>fixed prompts<br>6 words × 2 letter cases</span></div>
+  <div><strong>5</strong><span>gates tested separately<br>60 gate/prompt comparisons</span></div>
+  <div><strong>15</strong><span>active, nonzero ablations<br>45 inactive-gate no-ops</span></div>
+  <div><strong>0</strong><span>changed greedy responses<br>across all 60 comparisons</span></div>
+</section>
+<p class="caption">These are 12 unique prompts reused across five single-feature interventions, not 60 independent questions. No joint gate ablation was performed.</p>
+<section class="findings" aria-labelledby="finding-title">
+  <div><p class="eyebrow">The clearest effect</p><h2 id="finding-title">Less confidence.<br>The same letters.</h2><p>For the lowercase <code>chair</code> prompt, removing <strong>L3–T2334</strong> lowered next-token P(ch) from <strong>70.646% to 45.779%</strong> (−24.867 percentage points). The response remained <code>ch</code>.</p><p>Removing <strong>L29–T2334</strong> separately lowered it to <strong>67.334%</strong>. Uppercase <code>cheek</code> moved in the other direction: P(CH) increased under either of these removals.</p></div>
+  <aside class="note"><h3>When a gate is already off</h3><p>All five selected CH gates were inactive on the input <code>child</code> token, in both formats. Those ten interventions removed zero contribution and preserved probabilities exactly.</p><p><strong>This is not a causal demonstration of absorption.</strong> The follow-up tests these five candidates only. The earlier broader investigation includes other transforms, such as L28–T1123.</p></aside>
+</section>
+<section class="chapter" aria-labelledby="gates-title"><p class="eyebrow">Five isolated interventions</p><h2 id="gates-title">Which gates actually contributed here?</h2><p>Labels describe the saved gate interpretation, not a proven function of the transform’s output. Active counts refer to the input word, at each transform’s own layer.</p><div class="table-wrap"><table class="overview"><thead><tr><th>Gate · rank</th><th>Saved label</th><th>Active prompts / 12</th><th>Changed responses / 12</th><th>Largest answer-slot decrease</th></tr></thead><tbody>__GATE_ROWS__</tbody></table></div></section>
+<section class="chapter" aria-labelledby="plot-title"><p class="eyebrow">Probability changes</p><h2 id="plot-title">Active edits and inactive no-ops, side by side.</h2><figure><a href="probability-changes.svg" target="_blank" rel="noopener"><img src="probability-changes.svg" width="1200" height="1020" alt="Answer-slot probability changes for all five gates on 12 prompts. The largest decrease is lowercase chair under L3-T2334; inactive gates are gray and marked off."></a><figcaption>Change in percentage points at the two-letter answer slot, using an identical native prefix for both conditions. Gray “off” cells are inactive gates. A shared color scale makes the large L3–T2334 chair effect visible; numeric labels retain smaller changes. <a href="probability-changes.svg" target="_blank" rel="noopener">Open full-size figure ↗</a></figcaption></figure></section>
+<section class="chapter" id="evidence" aria-labelledby="evidence-title"><p class="eyebrow">Complete evidence · no omitted prompts</p><h2 id="evidence-title">Every response and probability.</h2><p>Some lowercase responses echo the word before answering. Choose <strong>first output</strong> to measure P(ch) directly after the prompt, or <strong>answer slot</strong> to compare after the same native prefix, such as <code>chin:</code>.</p>
+<form id="filters" class="filters" aria-label="Filter comparisons" onsubmit="return false">
+  <label>Gate<select id="gate" aria-label="Gate"><option value="all">All five gates</option>__GATE_OPTIONS__</select></label>
+  <label>Letter case<select id="letter-case" aria-label="Letter case"><option value="all">Both formats</option><option value="upper">Uppercase</option><option value="lower">Lowercase</option></select></label>
+  <label>Word<select id="word" aria-label="Word"><option value="all">All six words</option><option>chin</option><option>chair</option><option>chief</option><option>cheek</option><option>chest</option><option>child</option></select></label>
+  <label>Probability position<select id="metric" aria-label="Probability position"><option value="answer_slot">Answer slot · same prefix</option><option value="first_output">First output · prompt alone</option></select></label>
+  <label class="check"><input id="active-only" type="checkbox">Active ablations only</label>
+</form>
+<div class="table-status"><p id="row-count" aria-live="polite">60 of 60 comparisons</p><p>Rust: lower probability · Green: higher probability · Gray: no-op</p></div>
+<div class="table-wrap evidence-scroll" tabindex="0" aria-label="Scrollable comparison table"><table id="comparisons"><thead><tr><th>Gate</th><th>Prompt</th><th>Gate status</th><th>Natural answer</th><th>Gate-off answer</th><th id="prefix-heading">Identical native prefix</th><th>Native P(%)</th><th>Gate-off P(%)</th><th>Change (pp)</th></tr></thead><tbody id="rows">__INITIAL_ROWS__</tbody></table></div>
+<p class="caption">P sums the two single-token variants <code>CH</code> and <code> CH</code>, or <code>ch</code> and <code> ch</code>. This is conditional next-token probability, not the total probability of every possible full correct response. Small numerical changes are shown without a significance claim.</p>
+<details><summary>The exact prompts and input-word token spans</summary><div class="prompt-list">__PROMPTS__</div></details>
+</section>
+<section class="chapter" id="method" aria-labelledby="method-title"><p class="eyebrow">What was changed</p><h2 id="method-title">One estimated contribution, at the input word.</h2>
+<ol class="method-list"><li><strong>Keep native Qwen computation.</strong> Observe the residual after the selected layer’s attention and before <code>post_attention_layernorm</code>. Standardize it with the released MOLT statistics.</li><li><strong>Measure the natural gate.</strong> The encoder preactivation is retained only when it is positive and above the released threshold.</li><li><strong>Remove that feature’s estimated contribution.</strong> At every input token overlapping the target word, subtract <code>gate × ((z @ V) @ U) × output_std</code> from that layer’s native raw MLP output. Compute the edit in FP32, then cast once to BF16.</li><li><strong>Let downstream computation run normally.</strong> No other MLP position is edited at the intervention boundary. Attention remains unfrozen. Generated tokens and their gate activity are not edited.</li></ol>
+<p class="note">This preserves the native MLP reconstruction remainder. It is <strong>estimated-component subtraction</strong>, not complete replacement of a native MLP with a MOLT reconstruction.</p>
+<details open><summary>Controls, precision, and verification</summary><ul><li>Unhooked native generation, a zero-strength hook control, gate-off free generation, and gate-off scoring with the fixed native continuation.</li><li>All 60 zero-strength controls reproduce native token IDs and recorded probabilities exactly. The later four-gate study also exactly reproduces the preceding L3 study’s native baselines.</li><li>120 saved vector files independently reconstructed on CPU: encoder scores, thresholding, low-rank outputs, intended edits, and actual BF16-rounded edits. All checks passed.</li><li>Native weights: BF16. MOLT computation: FP32. TF32 disabled. Eager attention, thinking disabled, greedy decoding, maximum 16 new tokens. Hooks removed after every condition and after each study.</li></ul></details>
+</section>
+<section class="chapter" aria-labelledby="limits-title"><p class="eyebrow">Interpretation</p><h2 id="limits-title">What these results establish.</h2><div class="two-col"><div><h3>Observed in this pilot</h3><p>The estimated L3–T2334 contribution affects confidence on some prompts, especially lowercase <code>chair</code>. Other effects are small or mixed. Every tested single-gate ablation preserves the native greedy response.</p><p>L4–T153 and L32–T1516 were inactive on every prompt. L34–T929 was active only on the <code>che</code> subtoken of <code>cheek</code>. Its answer-slot changes were below 0.004 percentage points.</p></div><div><h3>Still unresolved</h3><p>This does not establish that CH information is absent, that these gates are generally unnecessary, or that another feature absorbs their function. No joint ablation or active norm-matched specificity control was run in this follow-up.</p><p>The 12 prompts are a small fixed set. Labels selected the candidates, full-layer reconstruction fidelity was not evaluated here, and the scan was not exhaustive. See the <a href="../2026-10-19-ch-absorption-overview/">earlier investigation</a> for its distinct all-layer screen and additional candidates.</p></div></div></section>
+<section class="chapter" id="downloads" aria-labelledby="downloads-title"><p class="eyebrow">Inspect or reuse</p><h2 id="downloads-title">Data, source, and pinned checkpoints.</h2><div class="download-links"><a href="comparisons.csv" download>All 60 comparisons · CSV ↓</a><a href="data.json" download>Curated data · JSON ↓</a><a href="validation.json">Validation record ↗</a><a href="publication-manifest.json">Public file hashes ↗</a><a href="../../experiments/ch-ablation-site-20261028/README.md">Code &amp; reproduction notes ↗</a></div><dl class="pins"><dt>Base</dt><dd><a href="https://huggingface.co/Qwen/Qwen3-4B/tree/1cfa9a7208912126459214e8b04321603b3df60c">Qwen/Qwen3-4B</a><code>1cfa9a7208912126459214e8b04321603b3df60c</code></dd><dt>MOLTs</dt><dd><a href="https://huggingface.co/georglange/qwen3-4b-molt/tree/081ce901b090b64aeecf9bc8709b57c10411e32a">georglange/qwen3-4b-molt</a><code>081ce901b090b64aeecf9bc8709b57c10411e32a</code></dd><dt>Runtime</dt><dd>Python 3.12.3 · PyTorch 2.14.0+cu126 · Transformers 4.57.6 · RTX 3090</dd></dl><p class="caption">Layer and transform IDs are zero-based. The public exports contain the simple spelling prompts, complete short responses, probability summaries, and verification records. Full tensor traces, runtime logs, and provider receipts are retained in the private research backup.</p></section>
+</main>
+<footer><a href="../../">← All MOLT experiments</a><span>Qwen3-4B · Five separate gate ablations · 28 October 2026</span><a href="https://github.com/rakaar/qwen3-molt-exploration/tree/main/results/2026-10-28-ch-gate-ablations">View on GitHub ↗</a></footer>
+</div>
+<script id="report-data" type="application/json">__DATA_JSON__</script>
+</body>
+</html>

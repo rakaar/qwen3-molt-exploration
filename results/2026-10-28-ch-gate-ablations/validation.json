@@ -1,0 +1,49 @@
+{
+  "l3": {
+    "status": "passed",
+    "cases": 12,
+    "vector_files_verified": 24,
+    "active_gate_cases": 7,
+    "inactive_gate_cases": [
+      "upper_chest",
+      "upper_child",
+      "lower_cheek",
+      "lower_chest",
+      "lower_child"
+    ],
+    "all_zero_controls_exact": true,
+    "cpu_gate_and_operator_reconstruction_passed": true,
+    "bf16_edit_rounding_exact": true,
+    "only_edited_feature": {
+      "layer": 3,
+      "transform": 2334
+    },
+    "generated_tokens_edited": 0,
+    "hooks_remaining": 0,
+    "greedy_answer_changes": 0,
+    "elapsed_seconds": 9.222035696730018,
+    "max_raw_gate_abs_error": 1.8674526680584336e-07,
+    "max_operator_relative_l2_error": 1.5163252663571678e-07,
+    "max_probability_mass_reconstruction_error": 1.7843836488395937e-06
+  },
+  "other_four": {
+    "status": "passed",
+    "gates_tested_separately": [
+      "L4-T153",
+      "L29-T2334",
+      "L32-T1516",
+      "L34-T929"
+    ],
+    "gate_prompt_comparisons": 48,
+    "independent_cpu_vector_checks": 96,
+    "native_baselines_match_previous_study_exactly": true,
+    "all_zero_controls_exact": true,
+    "all_bf16_rounding_exact": true,
+    "no_generated_token_edits": true,
+    "simultaneous_gate_ablations": false,
+    "hooks_remaining": 0,
+    "max_raw_gate_abs_error": 2.2046566616751306e-07,
+    "max_operator_relative_l2_error": 2.2497160890383706e-07,
+    "max_probability_reconstruction_error": 1.5779403274018833e-06
+  }
+}
