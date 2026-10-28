@@ -36,3 +36,7 @@ Load the frozen base and tokenizer, then invoke run_experiment(model, tokenizer,
 The CPU validators require their recorded private audit exports (saved vectors and full step records), or equivalent files from a new run. The public validation summaries report the completed checks. Publication does not imply a new GPU rerun.
 
 The five candidates are a targeted shortlist, not an exhaustive CH inventory. Inactive-gate no-ops and estimated native-MLP component subtraction do not establish feature absorption.
+
+## Coactivation-selected joint follow-up
+
+The same report now includes the second study through `joint.py`. Public `data.json` includes the curated follow-up data; `joint-probabilities.svg` is the standalone scientific figure. Rebuild into a separate folder with `python3 experiments/ch-ablation-site-20261028/build.py --data results/2026-10-28-ch-gate-ablations/data.json --output /tmp/ch-findings`. The original 60 comparisons and new 64-scan/27-intervention study retain separate counts and interpretation.

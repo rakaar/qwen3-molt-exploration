@@ -1,0 +1,5119 @@
+{
+  "counts": {
+    "ch_words": {
+      "prompts": 48,
+      "active_L3": 11,
+      "active_L29": 28,
+      "both_active": 9,
+      "both_active_same_token": 9,
+      "native_final_answer_correct": 46
+    },
+    "non_ch_control": {
+      "prompts": 16,
+      "active_L3": 0,
+      "active_L29": 0,
+      "both_active": 0,
+      "both_active_same_token": 0,
+      "native_final_answer_correct": 16
+    }
+  },
+  "scan": [
+    {
+      "case_id": "upper_chin",
+      "word": "chin",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chin",
+          "raw": 3.156115770339966,
+          "threshold": 0.7585287094116211,
+          "gate": 3.156115770339966
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chin",
+          "raw": 2.46260929107666,
+          "threshold": 0.6023741364479065,
+          "gate": 2.46260929107666
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chair",
+      "word": "chair",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chair",
+          "raw": 1.282968521118164,
+          "threshold": 0.7585287094116211,
+          "gate": 1.282968521118164
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chair",
+          "raw": 0.6047309637069702,
+          "threshold": 0.6023741364479065,
+          "gate": 0.6047309637069702
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chief",
+      "word": "chief",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chief",
+          "raw": 1.7412421703338623,
+          "threshold": 0.7585287094116211,
+          "gate": 1.7412421703338623
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chief",
+          "raw": -0.0861579179763794,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_cheek",
+      "word": "cheek",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "che",
+          "raw": 1.1252057552337646,
+          "threshold": 0.7585287094116211,
+          "gate": 1.1252057552337646
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ek",
+          "raw": -0.7049068808555603,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "che",
+          "raw": 1.9014731645584106,
+          "threshold": 0.6023741364479065,
+          "gate": 1.9014731645584106
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ek",
+          "raw": -0.14299553632736206,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chest",
+      "word": "chest",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chest",
+          "raw": -0.6978387236595154,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chest",
+          "raw": 0.11949467658996582,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_child",
+      "word": "child",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "child",
+          "raw": -1.4094380140304565,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "child",
+          "raw": -0.3274821639060974,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_church",
+      "word": "church",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "church",
+          "raw": -1.8278663158416748,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "church",
+          "raw": 0.4060269594192505,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_cheese",
+      "word": "cheese",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "CE",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "che",
+          "raw": 1.1252057552337646,
+          "threshold": 0.7585287094116211,
+          "gate": 1.1252057552337646
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ese",
+          "raw": -0.19115197658538818,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "che",
+          "raw": 1.9014731645584106,
+          "threshold": 0.6023741364479065,
+          "gate": 1.9014731645584106
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ese",
+          "raw": -0.8519653677940369,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CE",
+      "native_final_answer_correct": false
+    },
+    {
+      "case_id": "upper_chicken",
+      "word": "chicken",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.611979365348816,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "icken",
+          "raw": -1.3447726964950562,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.675229072570801,
+          "threshold": 0.6023741364479065,
+          "gate": 4.675229072570801
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "icken",
+          "raw": -0.44424742460250854,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_cherry",
+      "word": "cherry",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.611979365348816,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "erry",
+          "raw": -0.6047124862670898,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.675229072570801,
+          "threshold": 0.6023741364479065,
+          "gate": 4.675229072570801
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "erry",
+          "raw": -0.08284139633178711,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chocolate",
+      "word": "chocolate",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chocolate: CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.611979365348816,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ocolate",
+          "raw": -2.3263487815856934,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.675229072570801,
+          "threshold": 0.6023741364479065,
+          "gate": 4.675229072570801
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ocolate",
+          "raw": -0.4364188015460968,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_choice",
+      "word": "choice",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "choice: CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "choice",
+          "raw": -1.4408395290374756,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "choice",
+          "raw": -0.21686005592346191,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_change",
+      "word": "change",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "change: CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "change",
+          "raw": -1.2262907028198242,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "change",
+          "raw": -0.5869677066802979,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chain",
+      "word": "chain",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chain",
+          "raw": -0.48087137937545776,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chain",
+          "raw": 0.13214337825775146,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_charge",
+      "word": "charge",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "charge: CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "charge",
+          "raw": -2.203339099884033,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "charge",
+          "raw": -0.5063157677650452,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_check",
+      "word": "check",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "Check: CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "check",
+          "raw": -1.01885986328125,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "check",
+          "raw": -0.156810462474823,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chalk",
+      "word": "chalk",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chalk",
+          "raw": -3.898897647857666,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chalk",
+          "raw": 1.3826156854629517,
+          "threshold": 0.6023741364479065,
+          "gate": 1.3826156854629517
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chase",
+      "word": "chase",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.611979365348816,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ase",
+          "raw": -3.7974674701690674,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.675229072570801,
+          "threshold": 0.6023741364479065,
+          "gate": 4.675229072570801
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ase",
+          "raw": -0.07297635078430176,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_cheat",
+      "word": "cheat",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "che",
+          "raw": 1.1252057552337646,
+          "threshold": 0.7585287094116211,
+          "gate": 1.1252057552337646
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "at",
+          "raw": 0.2704603672027588,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "che",
+          "raw": 1.9014731645584106,
+          "threshold": 0.6023741364479065,
+          "gate": 1.9014731645584106
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "at",
+          "raw": -1.0656039714813232,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chimney",
+      "word": "chimney",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.611979365348816,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "im",
+          "raw": 1.4052443504333496,
+          "threshold": 0.7585287094116211,
+          "gate": 1.4052443504333496
+        },
+        {
+          "layer": 3,
+          "position": 29,
+          "token": "ney",
+          "raw": -0.35917502641677856,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.665111064910889,
+          "threshold": 0.6023741364479065,
+          "gate": 4.665111064910889
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "im",
+          "raw": 2.6011157035827637,
+          "threshold": 0.6023741364479065,
+          "gate": 2.6011157035827637
+        },
+        {
+          "layer": 29,
+          "position": 29,
+          "token": "ney",
+          "raw": -0.9379994869232178,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chapter",
+      "word": "chapter",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chapter",
+          "raw": -1.5776090621948242,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chapter",
+          "raw": 0.5237665176391602,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chip",
+      "word": "chip",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chip",
+          "raw": -0.17595970630645752,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chip",
+          "raw": 1.8547946214675903,
+          "threshold": 0.6023741364479065,
+          "gate": 1.8547946214675903
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_choir",
+      "word": "choir",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "cho",
+          "raw": -0.8155263066291809,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ir",
+          "raw": -2.8151438236236572,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "cho",
+          "raw": 3.032151222229004,
+          "threshold": 0.6023741364479065,
+          "gate": 3.032151222229004
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ir",
+          "raw": 0.4083975553512573,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_chess",
+      "word": "chess",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.611979365348816,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ess",
+          "raw": -1.1838486194610596,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.675229072570801,
+          "threshold": 0.6023741364479065,
+          "gate": 4.675229072570801
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ess",
+          "raw": -0.6205969452857971,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CH",
+      "native_final_answer_atom": "CH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_ship",
+      "word": "ship",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "SH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ship",
+          "raw": -0.9691647291183472,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ship",
+          "raw": -1.1079014539718628,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "SH",
+      "native_final_answer_atom": "SH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_shell",
+      "word": "shell",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "SH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "shell",
+          "raw": -2.7255921363830566,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "shell",
+          "raw": -1.7541016340255737,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "SH",
+      "native_final_answer_atom": "SH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_share",
+      "word": "share",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "SH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "share",
+          "raw": -1.3022934198379517,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "share",
+          "raw": -1.5729401111602783,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "SH",
+      "native_final_answer_atom": "SH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_shore",
+      "word": "shore",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "SH",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "shore",
+          "raw": -1.5296127796173096,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "shore",
+          "raw": -1.599159598350525,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "SH",
+      "native_final_answer_atom": "SH",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_cat",
+      "word": "cat",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "CA",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "cat",
+          "raw": -2.276430368423462,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "cat",
+          "raw": -1.2402398586273193,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "CA",
+      "native_final_answer_atom": "CA",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_table",
+      "word": "table",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "TA",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "table",
+          "raw": -2.141784191131592,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "table",
+          "raw": -1.4546185731887817,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "TA",
+      "native_final_answer_atom": "TA",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_peach",
+      "word": "peach",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "PE",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "pe",
+          "raw": -1.3661625385284424,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ach",
+          "raw": -3.082306146621704,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "pe",
+          "raw": -1.1863064765930176,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ach",
+          "raw": -0.28194814920425415,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "PE",
+      "native_final_answer_atom": "PE",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "upper_school",
+      "word": "school",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "SC",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "school",
+          "raw": -2.18467378616333,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "school",
+          "raw": -1.2783799171447754,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "SC",
+      "native_final_answer_atom": "SC",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chin",
+      "word": "chin",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "chin: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chin",
+          "raw": 3.0498318672180176,
+          "threshold": 0.7585287094116211,
+          "gate": 3.0498318672180176
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chin",
+          "raw": 2.3919849395751953,
+          "threshold": 0.6023741364479065,
+          "gate": 2.3919849395751953
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chair",
+      "word": "chair",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chair",
+          "raw": 1.2244789600372314,
+          "threshold": 0.7585287094116211,
+          "gate": 1.2244789600372314
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chair",
+          "raw": 0.6471443176269531,
+          "threshold": 0.6023741364479065,
+          "gate": 0.6471443176269531
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chief",
+      "word": "chief",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chief: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chief",
+          "raw": 1.8639132976531982,
+          "threshold": 0.7585287094116211,
+          "gate": 1.8639132976531982
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chief",
+          "raw": -0.11536294221878052,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_cheek",
+      "word": "cheek",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "cheek: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "che",
+          "raw": 0.6338098049163818,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ek",
+          "raw": -0.73215252161026,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "che",
+          "raw": 1.9037786722183228,
+          "threshold": 0.6023741364479065,
+          "gate": 1.9037786722183228
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ek",
+          "raw": -0.1291014552116394,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chest",
+      "word": "chest",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chest: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chest",
+          "raw": -0.5838403701782227,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chest",
+          "raw": 0.11296457052230835,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_child",
+      "word": "child",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "child: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "child",
+          "raw": -1.3469828367233276,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "child",
+          "raw": -0.32256776094436646,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_church",
+      "word": "church",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "church",
+          "raw": -1.7553094625473022,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "church",
+          "raw": 0.4008927345275879,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_cheese",
+      "word": "cheese",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "cheese: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "che",
+          "raw": 0.6338098049163818,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ese",
+          "raw": -0.17058539390563965,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "che",
+          "raw": 1.9037786722183228,
+          "threshold": 0.6023741364479065,
+          "gate": 1.9037786722183228
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ese",
+          "raw": -0.8408613204956055,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chicken",
+      "word": "chicken",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chicken: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.7827517986297607,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "icken",
+          "raw": -1.2409347295761108,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.853237628936768,
+          "threshold": 0.6023741364479065,
+          "gate": 4.853237628936768
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "icken",
+          "raw": -0.45127397775650024,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_cherry",
+      "word": "cherry",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "cherry: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.7827517986297607,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "erry",
+          "raw": -0.6543470621109009,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.853237628936768,
+          "threshold": 0.6023741364479065,
+          "gate": 4.853237628936768
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "erry",
+          "raw": -0.10295027494430542,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chocolate",
+      "word": "chocolate",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chocolate: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.7827517986297607,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ocolate",
+          "raw": -2.369476795196533,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.853237628936768,
+          "threshold": 0.6023741364479065,
+          "gate": 4.853237628936768
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ocolate",
+          "raw": -0.4652102589607239,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_choice",
+      "word": "choice",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "choice: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "choice",
+          "raw": -1.383344054222107,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "choice",
+          "raw": -0.2143024206161499,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_change",
+      "word": "change",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "change: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "change",
+          "raw": -1.2195415496826172,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "change",
+          "raw": -0.6245065927505493,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chain",
+      "word": "chain",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chain: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chain",
+          "raw": -0.2608122229576111,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chain",
+          "raw": 0.07191228866577148,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_charge",
+      "word": "charge",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "charge: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "charge",
+          "raw": -2.3278465270996094,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "charge",
+          "raw": -0.5519230365753174,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_check",
+      "word": "check",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "check: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "check",
+          "raw": -0.9787498712539673,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "check",
+          "raw": -0.10484755039215088,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chalk",
+      "word": "chalk",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chalk: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chalk",
+          "raw": -3.932413339614868,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chalk",
+          "raw": 1.2530077695846558,
+          "threshold": 0.6023741364479065,
+          "gate": 1.2530077695846558
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chase",
+      "word": "chase",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chase: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.7827517986297607,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ase",
+          "raw": -3.658984899520874,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.853237628936768,
+          "threshold": 0.6023741364479065,
+          "gate": 4.853237628936768
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ase",
+          "raw": -0.11618602275848389,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_cheat",
+      "word": "cheat",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "cheat: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "che",
+          "raw": 0.6338098049163818,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "at",
+          "raw": 0.2982891798019409,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "che",
+          "raw": 1.9037786722183228,
+          "threshold": 0.6023741364479065,
+          "gate": 1.9037786722183228
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "at",
+          "raw": -1.1326770782470703,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chimney",
+      "word": "chimney",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": true,
+      "active_L29": true,
+      "both_active": true,
+      "both_active_same_token": true,
+      "eligible_for_ablation": true,
+      "native_answer": "chimney: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.7827517986297607,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "im",
+          "raw": 1.403477430343628,
+          "threshold": 0.7585287094116211,
+          "gate": 1.403477430343628
+        },
+        {
+          "layer": 3,
+          "position": 29,
+          "token": "ney",
+          "raw": -0.3166687786579132,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.853237628936768,
+          "threshold": 0.6023741364479065,
+          "gate": 4.853237628936768
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "im",
+          "raw": 2.5974903106689453,
+          "threshold": 0.6023741364479065,
+          "gate": 2.5974903106689453
+        },
+        {
+          "layer": 29,
+          "position": 29,
+          "token": "ney",
+          "raw": -0.9796196818351746,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chapter",
+      "word": "chapter",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chapter: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chapter",
+          "raw": -1.5439032316207886,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chapter",
+          "raw": 0.5567713975906372,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chip",
+      "word": "chip",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "ci",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "chip",
+          "raw": -0.18516135215759277,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "chip",
+          "raw": 1.8332406282424927,
+          "threshold": 0.6023741364479065,
+          "gate": 1.8332406282424927
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ci",
+      "native_final_answer_correct": false
+    },
+    {
+      "case_id": "lower_choir",
+      "word": "choir",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "choir: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "cho",
+          "raw": -0.9932316541671753,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ir",
+          "raw": -2.7341713905334473,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "cho",
+          "raw": 2.9466357231140137,
+          "threshold": 0.6023741364479065,
+          "gate": 2.9466357231140137
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ir",
+          "raw": 0.4662508964538574,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_chess",
+      "word": "chess",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "active_L3": false,
+      "active_L29": true,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "chess: ch",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ch",
+          "raw": -1.7827517986297607,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ess",
+          "raw": -1.2433123588562012,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ch",
+          "raw": 4.853237628936768,
+          "threshold": 0.6023741364479065,
+          "gate": 4.853237628936768
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ess",
+          "raw": -0.5507552027702332,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ch",
+      "native_final_answer_atom": "ch",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_ship",
+      "word": "ship",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "ship: sh",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "ship",
+          "raw": -0.9195481538772583,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "ship",
+          "raw": -1.0944061279296875,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "sh",
+      "native_final_answer_atom": "sh",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_shell",
+      "word": "shell",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "shell: sh",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "shell",
+          "raw": -2.7569680213928223,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "shell",
+          "raw": -1.751396894454956,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "sh",
+      "native_final_answer_atom": "sh",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_share",
+      "word": "share",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "share: sh",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "share",
+          "raw": -1.2401496171951294,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "share",
+          "raw": -1.5992846488952637,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "sh",
+      "native_final_answer_atom": "sh",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_shore",
+      "word": "shore",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "shore: sh",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "shore",
+          "raw": -1.5467345714569092,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "shore",
+          "raw": -1.632469892501831,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "sh",
+      "native_final_answer_atom": "sh",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_cat",
+      "word": "cat",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "cat: ca",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "cat",
+          "raw": -2.3034660816192627,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "cat",
+          "raw": -1.2515184879302979,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ca",
+      "native_final_answer_atom": "ca",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_table",
+      "word": "table",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "ta",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "table",
+          "raw": -2.317462682723999,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "table",
+          "raw": -1.4712390899658203,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "ta",
+      "native_final_answer_atom": "ta",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_peach",
+      "word": "peach",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "peach: pe",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "pe",
+          "raw": -1.2470017671585083,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 3,
+          "position": 28,
+          "token": "ach",
+          "raw": -3.0558483600616455,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "pe",
+          "raw": -1.3191015720367432,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 28,
+          "token": "ach",
+          "raw": -0.29402583837509155,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "pe",
+      "native_final_answer_atom": "pe",
+      "native_final_answer_correct": true
+    },
+    {
+      "case_id": "lower_school",
+      "word": "school",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "active_L3": false,
+      "active_L29": false,
+      "both_active": false,
+      "both_active_same_token": false,
+      "eligible_for_ablation": false,
+      "native_answer": "school: sc",
+      "gates": [
+        {
+          "layer": 3,
+          "position": 27,
+          "token": "school",
+          "raw": -2.0920605659484863,
+          "threshold": 0.7585287094116211,
+          "gate": 0.0
+        },
+        {
+          "layer": 29,
+          "position": 27,
+          "token": "school",
+          "raw": -1.2454979419708252,
+          "threshold": 0.6023741364479065,
+          "gate": 0.0
+        }
+      ],
+      "expected_answer": "sc",
+      "native_final_answer_atom": "sc",
+      "native_final_answer_correct": true
+    }
+  ],
+  "ablations": [
+    {
+      "case_id": "upper_chin",
+      "word": "chin",
+      "letter_case": "upper",
+      "native_answer": "CH",
+      "matched_prefix": "",
+      "native_p_answer_slot": 0.9906251430511475,
+      "probability_scale_interaction_pp": -0.09936094284057617,
+      "joint_vs_stronger_single_pp": 0.4868507385253906,
+      "L29_gates_native": [
+        2.46260929107666
+      ],
+      "L29_gates_after_L3_off": [
+        2.642277717590332
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.9906251430511475,
+        "p_answer_slot": 0.9964872598648071,
+        "answer_slot_change_pp": 0.5862116813659668,
+        "native_p_first_output": 0.9906251430511475,
+        "p_first_output": 0.9964872598648071,
+        "native_log_odds_answer_slot": 4.660301122814417,
+        "log_odds_answer_slot": 5.6478310821112245,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chin",
+            "raw": 3.156115770339966,
+            "threshold": 0.7585287094116211,
+            "gate": 3.156115770339966,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 7.778780937194824
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chin",
+            "raw": 2.642277717590332,
+            "threshold": 0.6023741364479065,
+            "gate": 2.642277717590332,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.9906251430511475,
+        "p_answer_slot": 0.9906260967254639,
+        "answer_slot_change_pp": 9.5367431640625e-05,
+        "native_p_first_output": 0.9906251430511475,
+        "p_first_output": 0.9906260967254639,
+        "native_log_odds_answer_slot": 4.660301122814417,
+        "log_odds_answer_slot": 4.6603945745155215,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chin",
+            "raw": 3.156115770339966,
+            "threshold": 0.7585287094116211,
+            "gate": 3.156115770339966,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chin",
+            "raw": 2.46260929107666,
+            "threshold": 0.6023741364479065,
+            "gate": 2.46260929107666,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 29.966835021972656
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.9906251430511475,
+        "p_answer_slot": 0.9954946041107178,
+        "answer_slot_change_pp": 0.48694610595703125,
+        "native_p_first_output": 0.9906251430511475,
+        "p_first_output": 0.9954946041107178,
+        "native_log_odds_answer_slot": 4.660301122814417,
+        "log_odds_answer_slot": 5.397956449072808,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chin",
+            "raw": 3.156115770339966,
+            "threshold": 0.7585287094116211,
+            "gate": 3.156115770339966,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 7.778780937194824
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chin",
+            "raw": 2.642277717590332,
+            "threshold": 0.6023741364479065,
+            "gate": 2.642277717590332,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 33.73476028442383
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      }
+    },
+    {
+      "case_id": "upper_chair",
+      "word": "chair",
+      "letter_case": "upper",
+      "native_answer": "CH",
+      "matched_prefix": "",
+      "native_p_answer_slot": 0.8804041743278503,
+      "probability_scale_interaction_pp": -0.0006854534149169922,
+      "joint_vs_stronger_single_pp": 0.0009655952453613281,
+      "L29_gates_native": [
+        0.6047309637069702
+      ],
+      "L29_gates_after_L3_off": [
+        0.6221429109573364
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.8804041743278503,
+        "p_answer_slot": 0.8804206848144531,
+        "answer_slot_change_pp": 0.0016510486602783203,
+        "native_p_first_output": 0.8804041743278503,
+        "p_first_output": 0.8804206848144531,
+        "native_log_odds_answer_slot": 1.9962619692087173,
+        "log_odds_answer_slot": 1.996419757604599,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chair",
+            "raw": 1.282968521118164,
+            "threshold": 0.7585287094116211,
+            "gate": 1.282968521118164,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 2.9044508934020996
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chair",
+            "raw": 0.6221429109573364,
+            "threshold": 0.6023741364479065,
+            "gate": 0.6221429109573364,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.8804041743278503,
+        "p_answer_slot": 0.8803666830062866,
+        "answer_slot_change_pp": -0.0037491321563720703,
+        "native_p_first_output": 0.8804041743278503,
+        "p_first_output": 0.8803666830062866,
+        "native_log_odds_answer_slot": 1.9962619692087173,
+        "log_odds_answer_slot": 1.9959069043397903,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chair",
+            "raw": 1.282968521118164,
+            "threshold": 0.7585287094116211,
+            "gate": 1.282968521118164,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chair",
+            "raw": 0.6047309637069702,
+            "threshold": 0.6023741364479065,
+            "gate": 0.6047309637069702,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 3.986096143722534
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.8804041743278503,
+        "p_answer_slot": 0.8803763389587402,
+        "answer_slot_change_pp": -0.002783536911010742,
+        "native_p_first_output": 0.8804041743278503,
+        "p_first_output": 0.8803763389587402,
+        "native_log_odds_answer_slot": 1.9962619692087173,
+        "log_odds_answer_slot": 1.9959994554519653,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chair",
+            "raw": 1.282968521118164,
+            "threshold": 0.7585287094116211,
+            "gate": 1.282968521118164,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 2.9044508934020996
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chair",
+            "raw": 0.6221429109573364,
+            "threshold": 0.6023741364479065,
+            "gate": 0.6221429109573364,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 4.090647220611572
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      }
+    },
+    {
+      "case_id": "upper_cheek",
+      "word": "cheek",
+      "letter_case": "upper",
+      "native_answer": "CH",
+      "matched_prefix": "",
+      "native_p_answer_slot": 0.6994029879570007,
+      "probability_scale_interaction_pp": 2.148526906967163,
+      "joint_vs_stronger_single_pp": 5.885064601898193,
+      "L29_gates_native": [
+        1.9014731645584106,
+        0.0
+      ],
+      "L29_gates_after_L3_off": [
+        1.928216814994812,
+        0.0
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.6994029879570007,
+        "p_answer_slot": 0.736768364906311,
+        "answer_slot_change_pp": 3.7365376949310303,
+        "native_p_first_output": 0.6994029879570007,
+        "p_first_output": 0.736768364906311,
+        "native_log_odds_answer_slot": 0.8444564938545227,
+        "log_odds_answer_slot": 1.029238224029541,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.2584247589111328
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "ek",
+            "raw": -0.7049068808555603,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.928216814994812,
+            "threshold": 0.6023741364479065,
+            "gate": 1.928216814994812,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "ek",
+            "raw": -0.13629227876663208,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.6994029879570007,
+        "p_answer_slot": 0.7064650654792786,
+        "answer_slot_change_pp": 0.7062077522277832,
+        "native_p_first_output": 0.6994029879570007,
+        "p_first_output": 0.7064650654792786,
+        "native_log_odds_answer_slot": 0.8444564938545227,
+        "log_odds_answer_slot": 0.8782763183116913,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "ek",
+            "raw": -0.7049068808555603,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.9014731645584106,
+            "threshold": 0.6023741364479065,
+            "gate": 1.9014731645584106,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 16.59783363342285
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "ek",
+            "raw": -0.14299553632736206,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.6994029879570007,
+        "p_answer_slot": 0.7653157114982605,
+        "answer_slot_change_pp": 6.591272354125977,
+        "native_p_first_output": 0.6994029879570007,
+        "p_first_output": 0.7653157114982605,
+        "native_log_odds_answer_slot": 0.8444564938545227,
+        "log_odds_answer_slot": 1.1820472180843353,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.2584247589111328
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "ek",
+            "raw": -0.7049068808555603,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.928216814994812,
+            "threshold": 0.6023741364479065,
+            "gate": 1.928216814994812,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 16.78854751586914
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "ek",
+            "raw": -0.13629227876663208,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      }
+    },
+    {
+      "case_id": "upper_cheese",
+      "word": "cheese",
+      "letter_case": "upper",
+      "native_answer": "CE",
+      "matched_prefix": "",
+      "native_p_answer_slot": 0.04950118437409401,
+      "probability_scale_interaction_pp": 0.7516901940107346,
+      "joint_vs_stronger_single_pp": 2.372279018163681,
+      "L29_gates_native": [
+        1.9014731645584106,
+        0.0
+      ],
+      "L29_gates_after_L3_off": [
+        1.928216814994812,
+        0.0
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "CE",
+        "answer": "CE",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CE"
+        },
+        "native_p_answer_slot": 0.04950118437409401,
+        "p_answer_slot": 0.06570707261562347,
+        "answer_slot_change_pp": 1.6205888241529465,
+        "native_p_first_output": 0.04950118437409401,
+        "p_first_output": 0.06570707261562347,
+        "native_log_odds_answer_slot": -2.9549903869628906,
+        "log_odds_answer_slot": -2.6545835733413696,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.2584247589111328
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "ese",
+            "raw": -0.19115197658538818,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.928216814994812,
+            "threshold": 0.6023741364479065,
+            "gate": 1.928216814994812,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "ese",
+            "raw": -0.8464968204498291,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CE",
+        "edited_final_answer_atom": "CE",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "CE",
+        "answer": "CE",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CE"
+        },
+        "native_p_answer_slot": 0.04950118437409401,
+        "p_answer_slot": 0.04670160263776779,
+        "answer_slot_change_pp": -0.27995817363262177,
+        "native_p_first_output": 0.04950118437409401,
+        "p_first_output": 0.04670160263776779,
+        "native_log_odds_answer_slot": -2.9549903869628906,
+        "log_odds_answer_slot": -3.016149580478668,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "ese",
+            "raw": -0.19115197658538818,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.9014731645584106,
+            "threshold": 0.6023741364479065,
+            "gate": 1.9014731645584106,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 16.59783363342285
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "ese",
+            "raw": -0.8519653677940369,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CE",
+        "edited_final_answer_atom": "CE",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "CE",
+        "answer": "CE",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CE"
+        },
+        "native_p_answer_slot": 0.04950118437409401,
+        "p_answer_slot": 0.0704243928194046,
+        "answer_slot_change_pp": 2.0923208445310593,
+        "native_p_first_output": 0.04950118437409401,
+        "p_first_output": 0.0704243928194046,
+        "native_log_odds_answer_slot": -2.9549903869628906,
+        "log_odds_answer_slot": -2.580188572406769,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.2584247589111328
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "ese",
+            "raw": -0.19115197658538818,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.928216814994812,
+            "threshold": 0.6023741364479065,
+            "gate": 1.928216814994812,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 16.78854751586914
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "ese",
+            "raw": -0.8464968204498291,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CE",
+        "edited_final_answer_atom": "CE",
+        "final_answer_letters_changed": false
+      }
+    },
+    {
+      "case_id": "upper_cheat",
+      "word": "cheat",
+      "letter_case": "upper",
+      "native_answer": "CH",
+      "matched_prefix": "",
+      "native_p_answer_slot": 0.4670203626155853,
+      "probability_scale_interaction_pp": 0.08461177349090576,
+      "joint_vs_stronger_single_pp": -0.6892889738082886,
+      "L29_gates_native": [
+        1.9014731645584106,
+        0.0
+      ],
+      "L29_gates_after_L3_off": [
+        1.928216814994812,
+        0.0
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "CH",
+        "answer": "cheat: CH",
+        "greedy_response_changed": true,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.4670203626155853,
+        "p_answer_slot": 0.29830247163772583,
+        "answer_slot_change_pp": -16.87178909778595,
+        "native_p_first_output": 0.4670203626155853,
+        "p_first_output": 0.29830247163772583,
+        "native_log_odds_answer_slot": -0.13211041688919067,
+        "log_odds_answer_slot": -0.8553943336009979,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.2584247589111328
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "at",
+            "raw": 0.2704603672027588,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.928216814994812,
+            "threshold": 0.6023741364479065,
+            "gate": 1.928216814994812,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "at",
+            "raw": -1.0568994283676147,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.4670203626155853,
+        "p_answer_slot": 0.4592813551425934,
+        "answer_slot_change_pp": -0.7739007472991943,
+        "native_p_first_output": 0.4670203626155853,
+        "p_first_output": 0.4592813551425934,
+        "native_log_odds_answer_slot": -0.13211041688919067,
+        "log_odds_answer_slot": -0.16323614120483398,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "at",
+            "raw": 0.2704603672027588,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.9014731645584106,
+            "threshold": 0.6023741364479065,
+            "gate": 1.9014731645584106,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 16.59783363342285
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "at",
+            "raw": -1.0656039714813232,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "CH",
+        "answer": "cheat: CH",
+        "greedy_response_changed": true,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.4670203626155853,
+        "p_answer_slot": 0.29140958189964294,
+        "answer_slot_change_pp": -17.56107807159424,
+        "native_p_first_output": 0.4670203626155853,
+        "p_first_output": 0.29140958189964294,
+        "native_log_odds_answer_slot": -0.13211041688919067,
+        "log_odds_answer_slot": -0.8885480165481567,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "che",
+            "raw": 1.1252057552337646,
+            "threshold": 0.7585287094116211,
+            "gate": 1.1252057552337646,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.2584247589111328
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "at",
+            "raw": 0.2704603672027588,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "che",
+            "raw": 1.928216814994812,
+            "threshold": 0.6023741364479065,
+            "gate": 1.928216814994812,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 16.78854751586914
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "at",
+            "raw": -1.0568994283676147,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      }
+    },
+    {
+      "case_id": "upper_chimney",
+      "word": "chimney",
+      "letter_case": "upper",
+      "native_answer": "CH",
+      "matched_prefix": "",
+      "native_p_answer_slot": 0.9812561273574829,
+      "probability_scale_interaction_pp": -0.0773012638092041,
+      "joint_vs_stronger_single_pp": 0.32340288162231445,
+      "L29_gates_native": [
+        4.665111064910889,
+        2.6011157035827637,
+        0.0
+      ],
+      "L29_gates_after_L3_off": [
+        4.665111064910889,
+        2.5623950958251953,
+        0.0
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.9812561273574829,
+        "p_answer_slot": 0.9852631688117981,
+        "answer_slot_change_pp": 0.40070414543151855,
+        "native_p_first_output": 0.9812561273574829,
+        "p_first_output": 0.9852631688117981,
+        "native_log_odds_answer_slot": 3.957964565604925,
+        "log_odds_answer_slot": 4.202554118819535,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "ch",
+            "raw": -1.611979365348816,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "im",
+            "raw": 1.4052443504333496,
+            "threshold": 0.7585287094116211,
+            "gate": 1.4052443504333496,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.9779802560806274
+          },
+          {
+            "layer": 3,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.35917502641677856,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "ch",
+            "raw": 4.665111064910889,
+            "threshold": 0.6023741364479065,
+            "gate": 4.665111064910889,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "im",
+            "raw": 2.5623950958251953,
+            "threshold": 0.6023741364479065,
+            "gate": 2.5623950958251953,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.9360319375991821,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.9812561273574829,
+        "p_answer_slot": 0.9851974248886108,
+        "answer_slot_change_pp": 0.39412975311279297,
+        "native_p_first_output": 0.9812561273574829,
+        "p_first_output": 0.9851974248886108,
+        "native_log_odds_answer_slot": 3.957964565604925,
+        "log_odds_answer_slot": 4.198044716380537,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "ch",
+            "raw": -1.611979365348816,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "im",
+            "raw": 1.4052443504333496,
+            "threshold": 0.7585287094116211,
+            "gate": 1.4052443504333496,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.35917502641677856,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "ch",
+            "raw": 4.665111064910889,
+            "threshold": 0.6023741364479065,
+            "gate": 4.665111064910889,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 80.67428588867188
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "im",
+            "raw": 2.6011157035827637,
+            "threshold": 0.6023741364479065,
+            "gate": 2.6011157035827637,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 43.66117477416992
+          },
+          {
+            "layer": 29,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.9379994869232178,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "CH",
+        "answer": "CH",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "CH"
+        },
+        "native_p_answer_slot": 0.9812561273574829,
+        "p_answer_slot": 0.988431453704834,
+        "answer_slot_change_pp": 0.7175326347351074,
+        "native_p_first_output": 0.9812561273574829,
+        "p_first_output": 0.988431453704834,
+        "native_log_odds_answer_slot": 3.957964565604925,
+        "log_odds_answer_slot": 4.447831523604691,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "ch",
+            "raw": -1.611979365348816,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "im",
+            "raw": 1.4052443504333496,
+            "threshold": 0.7585287094116211,
+            "gate": 1.4052443504333496,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.9779802560806274
+          },
+          {
+            "layer": 3,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.35917502641677856,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "ch",
+            "raw": 4.665111064910889,
+            "threshold": 0.6023741364479065,
+            "gate": 4.665111064910889,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 80.67428588867188
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "im",
+            "raw": 2.5623950958251953,
+            "threshold": 0.6023741364479065,
+            "gate": 2.5623950958251953,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 43.07682418823242
+          },
+          {
+            "layer": 29,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.9360319375991821,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "CH",
+        "native_final_answer_atom": "CH",
+        "edited_final_answer_atom": "CH",
+        "final_answer_letters_changed": false
+      }
+    },
+    {
+      "case_id": "lower_chin",
+      "word": "chin",
+      "letter_case": "lower",
+      "native_answer": "chin: ch",
+      "matched_prefix": "chin:",
+      "native_p_answer_slot": 0.9981153607368469,
+      "probability_scale_interaction_pp": -0.03102421760559082,
+      "joint_vs_stronger_single_pp": 0.03170371055603027,
+      "L29_gates_native": [
+        2.3919849395751953
+      ],
+      "L29_gates_after_L3_off": [
+        2.6325268745422363
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "chin: ch",
+        "answer": "chin: ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 2,
+          "prefix": "chin:",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.9981153607368469,
+        "p_answer_slot": 0.9987426400184631,
+        "answer_slot_change_pp": 0.0627279281616211,
+        "native_p_first_output": 0.0009070894448086619,
+        "p_first_output": 0.0001579373492859304,
+        "native_log_odds_answer_slot": 6.272099489811808,
+        "log_odds_answer_slot": 6.677430827519856,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chin",
+            "raw": 3.0498318672180176,
+            "threshold": 0.7585287094116211,
+            "gate": 3.0498318672180176,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 7.494670391082764
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chin",
+            "raw": 2.6325268745422363,
+            "threshold": 0.6023741364479065,
+            "gate": 2.6325268745422363,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "chin: ch",
+        "answer": "chin: ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 2,
+          "prefix": "chin:",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.9981153607368469,
+        "p_answer_slot": 0.9986379146575928,
+        "answer_slot_change_pp": 0.05225539207458496,
+        "native_p_first_output": 0.0009070894448086619,
+        "p_first_output": 0.0010281953727826476,
+        "native_log_odds_answer_slot": 6.272099489811808,
+        "log_odds_answer_slot": 6.597356535028666,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chin",
+            "raw": 3.0498318672180176,
+            "threshold": 0.7585287094116211,
+            "gate": 3.0498318672180176,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chin",
+            "raw": 2.3919849395751953,
+            "threshold": 0.6023741364479065,
+            "gate": 2.3919849395751953,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 29.262269973754883
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "chin: ch",
+        "answer": "chin: ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 2,
+          "prefix": "chin:",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.9981153607368469,
+        "p_answer_slot": 0.9989549517631531,
+        "answer_slot_change_pp": 0.08395910263061523,
+        "native_p_first_output": 0.0009070894448086619,
+        "p_first_output": 0.0001790501264622435,
+        "native_log_odds_answer_slot": 6.272099489811808,
+        "log_odds_answer_slot": 6.8625905035296455,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chin",
+            "raw": 3.0498318672180176,
+            "threshold": 0.7585287094116211,
+            "gate": 3.0498318672180176,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 7.494670391082764
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chin",
+            "raw": 2.6325268745422363,
+            "threshold": 0.6023741364479065,
+            "gate": 2.6325268745422363,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 33.790443420410156
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      }
+    },
+    {
+      "case_id": "lower_chair",
+      "word": "chair",
+      "letter_case": "lower",
+      "native_answer": "ch",
+      "matched_prefix": "",
+      "native_p_answer_slot": 0.7064626216888428,
+      "probability_scale_interaction_pp": 6.233328580856323,
+      "joint_vs_stronger_single_pp": 2.921098470687866,
+      "L29_gates_native": [
+        0.6471443176269531
+      ],
+      "L29_gates_after_L3_off": [
+        0.6689151525497437
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "ch",
+        "answer": "ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.7064626216888428,
+        "p_answer_slot": 0.4577949345111847,
+        "answer_slot_change_pp": -24.866768717765808,
+        "native_p_first_output": 0.7064626216888428,
+        "p_first_output": 0.4577949345111847,
+        "native_log_odds_answer_slot": 0.8782657086849213,
+        "log_odds_answer_slot": -0.16922307014465332,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chair",
+            "raw": 1.2244789600372314,
+            "threshold": 0.7585287094116211,
+            "gate": 1.2244789600372314,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 2.7285921573638916
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chair",
+            "raw": 0.6689151525497437,
+            "threshold": 0.6023741364479065,
+            "gate": 0.6689151525497437,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "ch",
+        "answer": "ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.7064626216888428,
+        "p_answer_slot": 0.6733403205871582,
+        "answer_slot_change_pp": -3.312230110168457,
+        "native_p_first_output": 0.7064626216888428,
+        "p_first_output": 0.6733403205871582,
+        "native_log_odds_answer_slot": 0.8782657086849213,
+        "log_odds_answer_slot": 0.7233317196369171,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chair",
+            "raw": 1.2244789600372314,
+            "threshold": 0.7585287094116211,
+            "gate": 1.2244789600372314,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chair",
+            "raw": 0.6471443176269531,
+            "threshold": 0.6023741364479065,
+            "gate": 0.6471443176269531,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 4.402000904083252
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "ch",
+        "answer": "ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 0,
+          "prefix": "",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.7064626216888428,
+        "p_answer_slot": 0.48700591921806335,
+        "answer_slot_change_pp": -21.945670247077942,
+        "native_p_first_output": 0.7064626216888428,
+        "p_first_output": 0.48700591921806335,
+        "native_log_odds_answer_slot": 0.8782657086849213,
+        "log_odds_answer_slot": -0.05198788642883301,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "chair",
+            "raw": 1.2244789600372314,
+            "threshold": 0.7585287094116211,
+            "gate": 1.2244789600372314,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 2.7285921573638916
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "chair",
+            "raw": 0.6689151525497437,
+            "threshold": 0.6023741364479065,
+            "gate": 0.6689151525497437,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 4.591862201690674
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      }
+    },
+    {
+      "case_id": "lower_chimney",
+      "word": "chimney",
+      "letter_case": "lower",
+      "native_answer": "chimney: ch",
+      "matched_prefix": "chimney:",
+      "native_p_answer_slot": 0.9944330453872681,
+      "probability_scale_interaction_pp": 0.1104593276977539,
+      "joint_vs_stronger_single_pp": 0.272524356842041,
+      "L29_gates_native": [
+        4.853237628936768,
+        2.5974903106689453,
+        0.0
+      ],
+      "L29_gates_after_L3_off": [
+        4.853237628936768,
+        2.561555862426758,
+        0.0
+      ],
+      "L29_remains_active_after_L3_off": true,
+      "L3_off": {
+        "condition": "L3_off",
+        "native_answer": "chimney: ch",
+        "answer": "chimney: ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 4,
+          "prefix": "chimney:",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.9944330453872681,
+        "p_answer_slot": 0.9960536956787109,
+        "answer_slot_change_pp": 0.1620650291442871,
+        "native_p_first_output": 0.9952569603919983,
+        "p_first_output": 0.9969367980957031,
+        "native_log_odds_answer_slot": 5.185336477588862,
+        "log_odds_answer_slot": 5.530990809202194,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "ch",
+            "raw": -1.7827517986297607,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "im",
+            "raw": 1.403477430343628,
+            "threshold": 0.7585287094116211,
+            "gate": 1.403477430343628,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.7197469472885132
+          },
+          {
+            "layer": 3,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.3166687786579132,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "ch",
+            "raw": 4.853237628936768,
+            "threshold": 0.6023741364479065,
+            "gate": 4.853237628936768,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "im",
+            "raw": 2.561555862426758,
+            "threshold": 0.6023741364479065,
+            "gate": 2.561555862426758,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.9673240184783936,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      },
+      "L29_off": {
+        "condition": "L29_off",
+        "native_answer": "chimney: ch",
+        "answer": "chimney: ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 4,
+          "prefix": "chimney:",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.9944330453872681,
+        "p_answer_slot": 0.9928053617477417,
+        "answer_slot_change_pp": -0.16276836395263672,
+        "native_p_first_output": 0.9952569603919983,
+        "p_first_output": 0.9966874718666077,
+        "native_log_odds_answer_slot": 5.185336477588862,
+        "log_odds_answer_slot": 4.927191300783306,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "ch",
+            "raw": -1.7827517986297607,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "im",
+            "raw": 1.403477430343628,
+            "threshold": 0.7585287094116211,
+            "gate": 1.403477430343628,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.3166687786579132,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 0.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "ch",
+            "raw": 4.853237628936768,
+            "threshold": 0.6023741364479065,
+            "gate": 4.853237628936768,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 81.30487060546875
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "im",
+            "raw": 2.5974903106689453,
+            "threshold": 0.6023741364479065,
+            "gate": 2.5974903106689453,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 43.25497055053711
+          },
+          {
+            "layer": 29,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.9796196818351746,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      },
+      "both_off": {
+        "condition": "both_off",
+        "native_answer": "chimney: ch",
+        "answer": "chimney: ch",
+        "greedy_response_changed": false,
+        "answer_slot": {
+          "index": 4,
+          "prefix": "chimney:",
+          "method": "first_token_overlapping_final_two_letter_answer",
+          "native_answer_atom": "ch"
+        },
+        "native_p_answer_slot": 0.9944330453872681,
+        "p_answer_slot": 0.9955306053161621,
+        "answer_slot_change_pp": 0.1097559928894043,
+        "native_p_first_output": 0.9952569603919983,
+        "p_first_output": 0.996542751789093,
+        "native_log_odds_answer_slot": 5.185336477588862,
+        "log_odds_answer_slot": 5.40599005157128,
+        "gates": [
+          {
+            "layer": 3,
+            "position": 27,
+            "token": "ch",
+            "raw": -1.7827517986297607,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 3,
+            "position": 28,
+            "token": "im",
+            "raw": 1.403477430343628,
+            "threshold": 0.7585287094116211,
+            "gate": 1.403477430343628,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 1.7197469472885132
+          },
+          {
+            "layer": 3,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.3166687786579132,
+            "threshold": 0.7585287094116211,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          },
+          {
+            "layer": 29,
+            "position": 27,
+            "token": "ch",
+            "raw": 4.853237628936768,
+            "threshold": 0.6023741364479065,
+            "gate": 4.853237628936768,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 81.30487060546875
+          },
+          {
+            "layer": 29,
+            "position": 28,
+            "token": "im",
+            "raw": 2.561555862426758,
+            "threshold": 0.6023741364479065,
+            "gate": 2.561555862426758,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 42.75909423828125
+          },
+          {
+            "layer": 29,
+            "position": 29,
+            "token": "ney",
+            "raw": -0.9673240184783936,
+            "threshold": 0.6023741364479065,
+            "gate": 0.0,
+            "removed_fraction": 1.0,
+            "actual_bf16_delta_norm": 0.0
+          }
+        ],
+        "expected_answer": "ch",
+        "native_final_answer_atom": "ch",
+        "edited_final_answer_atom": "ch",
+        "final_answer_letters_changed": false
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "upper_chin",
+      "word": "chin",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchin:",
+      "target_span": [
+        87,
+        91
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chair",
+      "word": "chair",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchair:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chief",
+      "word": "chief",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchief:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_cheek",
+      "word": "cheek",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncheek:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chest",
+      "word": "chest",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchest:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_child",
+      "word": "child",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchild:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_church",
+      "word": "church",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchurch:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_cheese",
+      "word": "cheese",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncheese:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chicken",
+      "word": "chicken",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchicken:",
+      "target_span": [
+        87,
+        94
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_cherry",
+      "word": "cherry",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncherry:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chocolate",
+      "word": "chocolate",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchocolate:",
+      "target_span": [
+        87,
+        96
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_choice",
+      "word": "choice",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchoice:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_change",
+      "word": "change",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchange:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chain",
+      "word": "chain",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchain:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_charge",
+      "word": "charge",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncharge:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_check",
+      "word": "check",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncheck:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chalk",
+      "word": "chalk",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchalk:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chase",
+      "word": "chase",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchase:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_cheat",
+      "word": "cheat",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncheat:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chimney",
+      "word": "chimney",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchimney:",
+      "target_span": [
+        87,
+        94
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chapter",
+      "word": "chapter",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchapter:",
+      "target_span": [
+        87,
+        94
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chip",
+      "word": "chip",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchip:",
+      "target_span": [
+        87,
+        91
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_choir",
+      "word": "choir",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchoir:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_chess",
+      "word": "chess",
+      "letter_case": "upper",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nchess:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "CH"
+    },
+    {
+      "id": "upper_ship",
+      "word": "ship",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nship:",
+      "target_span": [
+        87,
+        91
+      ],
+      "expected": "SH"
+    },
+    {
+      "id": "upper_shell",
+      "word": "shell",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nshell:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "SH"
+    },
+    {
+      "id": "upper_share",
+      "word": "share",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nshare:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "SH"
+    },
+    {
+      "id": "upper_shore",
+      "word": "shore",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nshore:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "SH"
+    },
+    {
+      "id": "upper_cat",
+      "word": "cat",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ncat:",
+      "target_span": [
+        87,
+        90
+      ],
+      "expected": "CA"
+    },
+    {
+      "id": "upper_table",
+      "word": "table",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\ntable:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "TA"
+    },
+    {
+      "id": "upper_peach",
+      "word": "peach",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\npeach:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "PE"
+    },
+    {
+      "id": "upper_school",
+      "word": "school",
+      "letter_case": "upper",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in uppercase.\n\ngarden: GA\nwindow: WI\ntable: TA\nschool:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "SC"
+    },
+    {
+      "id": "lower_chin",
+      "word": "chin",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchin:",
+      "target_span": [
+        87,
+        91
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chair",
+      "word": "chair",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchair:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chief",
+      "word": "chief",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchief:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_cheek",
+      "word": "cheek",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncheek:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chest",
+      "word": "chest",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchest:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_child",
+      "word": "child",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchild:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_church",
+      "word": "church",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchurch:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_cheese",
+      "word": "cheese",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncheese:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chicken",
+      "word": "chicken",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchicken:",
+      "target_span": [
+        87,
+        94
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_cherry",
+      "word": "cherry",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncherry:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chocolate",
+      "word": "chocolate",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchocolate:",
+      "target_span": [
+        87,
+        96
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_choice",
+      "word": "choice",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchoice:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_change",
+      "word": "change",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchange:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chain",
+      "word": "chain",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchain:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_charge",
+      "word": "charge",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncharge:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_check",
+      "word": "check",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncheck:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chalk",
+      "word": "chalk",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchalk:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chase",
+      "word": "chase",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchase:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_cheat",
+      "word": "cheat",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncheat:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chimney",
+      "word": "chimney",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchimney:",
+      "target_span": [
+        87,
+        94
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chapter",
+      "word": "chapter",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchapter:",
+      "target_span": [
+        87,
+        94
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chip",
+      "word": "chip",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchip:",
+      "target_span": [
+        87,
+        91
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_choir",
+      "word": "choir",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchoir:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_chess",
+      "word": "chess",
+      "letter_case": "lower",
+      "group": "ch_words",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nchess:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ch"
+    },
+    {
+      "id": "lower_ship",
+      "word": "ship",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nship:",
+      "target_span": [
+        87,
+        91
+      ],
+      "expected": "sh"
+    },
+    {
+      "id": "lower_shell",
+      "word": "shell",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nshell:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "sh"
+    },
+    {
+      "id": "lower_share",
+      "word": "share",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nshare:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "sh"
+    },
+    {
+      "id": "lower_shore",
+      "word": "shore",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nshore:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "sh"
+    },
+    {
+      "id": "lower_cat",
+      "word": "cat",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ncat:",
+      "target_span": [
+        87,
+        90
+      ],
+      "expected": "ca"
+    },
+    {
+      "id": "lower_table",
+      "word": "table",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\ntable:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "ta"
+    },
+    {
+      "id": "lower_peach",
+      "word": "peach",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\npeach:",
+      "target_span": [
+        87,
+        92
+      ],
+      "expected": "pe"
+    },
+    {
+      "id": "lower_school",
+      "word": "school",
+      "letter_case": "lower",
+      "group": "non_ch_control",
+      "user": "Give the first two letters of each word in lowercase.\n\ngarden: ga\nwindow: wi\ntable: ta\nschool:",
+      "target_span": [
+        87,
+        93
+      ],
+      "expected": "sc"
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "scan_prompts": 64,
+    "eligible_CH_prompts": 9,
+    "intervention_comparisons": 27,
+    "cpu_vector_files_audited": 182,
+    "runs_audited": 182,
+    "previous_native_baselines_exact": 12,
+    "zero_controls_exact": 64,
+    "all_BF16_edits_exact": true,
+    "full_greedy_response_changes": 2,
+    "final_answer_letter_changes": 0,
+    "hooks_remaining": 0,
+    "child_feature_manipulated": false,
+    "max_raw_gate_abs_error": 4.697918072338325e-07,
+    "max_operator_relative_l2_error": 2.5735943249178635e-07,
+    "max_probability_reconstruction_error": 1.8291175354345768e-06
+  },
+  "runtime": {
+    "python": "3.11.14",
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "RTX 3090",
+    "native_dtype": "BF16",
+    "molt_dtype": "FP32",
+    "attention": "eager"
+  }
+}

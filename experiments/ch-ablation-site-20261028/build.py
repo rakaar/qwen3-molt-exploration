@@ -12,6 +12,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 import numpy as np
+from joint import collect as collect_joint, render as render_joint
 
 HERE = Path(__file__).resolve().parent
 WORKSPACE = HERE.parents[1]
@@ -120,6 +121,8 @@ def main():
     parser.add_argument('--output', type=Path, default=WORKSPACE / 'results/2026-10-28-ch-gate-ablations')
     args = parser.parse_args()
     data = json.loads(args.data.read_text()) if args.data else collect()
+    if not args.data:
+        data['followup'] = collect_joint(WORKSPACE)
     rows = data['rows']
     assert len(rows) == 60 and len(data['cases']) == 12 and len(data['gates']) == 5
     assert sum(x['active'] for x in rows) == sum(x['nonzero_edit'] for x in rows) == 15
@@ -127,6 +130,10 @@ def main():
     assert all(x['zero_control_exact'] for x in rows)
     assert all(x['native_answer'] in ('CH', 'ch', x['word'] + ': ch') for x in rows)
     output = args.output; output.mkdir(parents=True, exist_ok=True)
+    joint_section = render_joint(data['followup'], output,
+                                args.data.parent / 'joint-probabilities.svg' if args.data else
+                                WORKSPACE / 'results/2026-10-28-ch-coactivation/probability-comparison.svg')
+    data['validation']['coactivation_followup'] = data['followup']['validation']
     dump(output / 'data.json', data); dump(output / 'validation.json', data['validation'])
     columns = ['feature', 'case_id', 'word', 'letter_case', 'prompt', 'native_answer', 'gate_off_answer',
                'active', 'nonzero_edit', 'native_p_first_output', 'gate_off_p_first_output',
@@ -151,14 +158,16 @@ def main():
     template = (HERE / 'template.html').read_text()
     replacements = {'__GATE_ROWS__': ''.join(gate_rows), '__INITIAL_ROWS__': initial_rows(rows),
                     '__GATE_OPTIONS__': ''.join(f'<option value="{x["feature"]}">{x["feature"]}</option>' for x in data['gates']),
-                    '__PROMPTS__': prompts, '__DATA_JSON__': json.dumps(data, ensure_ascii=False).replace('<', '\\u003c')}
+                    '__PROMPTS__': prompts, '__JOINT_FOLLOWUP__': joint_section,
+                    '__DATA_JSON__': json.dumps(data, ensure_ascii=False).replace('<', '\\u003c')}
     for token, value in replacements.items():template = template.replace(token, value)
     assert '__DATA_JSON__' not in template
     (output / 'index.html').write_text(template)
     for file in ['style.css', 'report.js']:shutil.copy2(HERE / file, output / file)
     files = [{'file':str(p.relative_to(output)), 'bytes':p.stat().st_size,
               'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(output.rglob('*')) if p.is_file() and p.name != 'publication-manifest.json']
-    dump(output / 'publication-manifest.json', {'data_rows':60, 'unique_prompts':12, 'active_ablations':15, 'inactive_noops':45, 'files':files})
+    dump(output / 'publication-manifest.json', {'initial_study':{'data_rows':60, 'unique_prompts':12, 'active_ablations':15, 'inactive_noops':45},
+                                              'joint_followup':{'scan_prompts':64, 'eligible_CH_prompts':9, 'intervention_comparisons':27}, 'files':files})
     print(json.dumps({'output':str(output), 'comparisons':len(rows), 'active':15, 'files':len(files) + 1}))
 
 

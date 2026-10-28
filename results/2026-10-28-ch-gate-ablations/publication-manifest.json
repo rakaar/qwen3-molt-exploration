@@ -1,8 +1,15 @@
 {
-  "data_rows": 60,
-  "unique_prompts": 12,
-  "active_ablations": 15,
-  "inactive_noops": 45,
+  "initial_study": {
+    "data_rows": 60,
+    "unique_prompts": 12,
+    "active_ablations": 15,
+    "inactive_noops": 45
+  },
+  "joint_followup": {
+    "scan_prompts": 64,
+    "eligible_CH_prompts": 9,
+    "intervention_comparisons": 27
+  },
   "files": [
     {
       "file": "comparisons.csv",
@@ -11,13 +18,43 @@
     },
     {
       "file": "data.json",
-      "bytes": 70709,
-      "sha256": "f77aea3678bea04bde22a696bfee2ac285f1fe1fae38373e84c852debe5cca48"
+      "bytes": 226859,
+      "sha256": "b86c9f0b516a205df8d17aca0805928181294cc355655879ea6572187fb283f0"
     },
     {
       "file": "index.html",
-      "bytes": 95033,
-      "sha256": "0bd456d52939707230a0b80646a18a3c6df0b60384d43712188de1853240fe0d"
+      "bytes": 213872,
+      "sha256": "c4a7d8a5dc7214641636e142b37d19e5c2ef240128c66b870a1549009398c592"
+    },
+    {
+      "file": "joint-activation.csv",
+      "bytes": 30065,
+      "sha256": "c09ea166cd5199bc3a55223a7f09c0a06e3688ce2a2a3947e1b166c9ec1a790b"
+    },
+    {
+      "file": "joint-comparisons.csv",
+      "bytes": 29435,
+      "sha256": "7cfc181e3da4064afc478a7f77e09d4160850983b754227d4a74ccf758e1de65"
+    },
+    {
+      "file": "joint-data.json",
+      "bytes": 145220,
+      "sha256": "24cdb27962ee1cdf337e22937a048df18b63d1a867d17e876224904f26b67105"
+    },
+    {
+      "file": "joint-probabilities.svg",
+      "bytes": 16059,
+      "sha256": "f2391db601e0ada21925fb3cdc25d18929be51687ea25b94c9c39d8178c86b55"
+    },
+    {
+      "file": "joint-prompts.json",
+      "bytes": 18731,
+      "sha256": "99ea4e4f094b5c2bb73a17a46e0637814941ff1961aafc924e09e0da9c52b203"
+    },
+    {
+      "file": "joint-validation.json",
+      "bytes": 581,
+      "sha256": "b1eefcf63b190c05523a5ca785218efbaa9f3501c4a03e4c8850bbba48856a8e"
     },
     {
       "file": "probability-changes.svg",
@@ -26,18 +63,18 @@
     },
     {
       "file": "report.js",
-      "bytes": 2479,
-      "sha256": "df734fd5a10c89dc938d8b26d0a5f34696889aaf8e4aaa702503b1ddabd5e9d0"
+      "bytes": 3374,
+      "sha256": "40db277c3e2217a9588ad076676677928f62126707d0817c8ee15d1d839c50c9"
     },
     {
       "file": "style.css",
-      "bytes": 7465,
-      "sha256": "7c2e778349f3a5f22129a693e2a367a813577804c3650e754f533c18eddd9b65"
+      "bytes": 7689,
+      "sha256": "8fb947de72bbe101000b372eb381ce5c9b13abd8db896be2fc10c025138b1e0f"
     },
     {
       "file": "validation.json",
-      "bytes": 1449,
-      "sha256": "f87f9e429c3dc739632d02e4c5a86da8e32968677f22005d2a456799040fbf9a"
+      "bytes": 2092,
+      "sha256": "572097d482b30b72883b9de6211eebcc0cf4fe08fb610d9eb8da9d1629d65da8"
     }
   ]
 }

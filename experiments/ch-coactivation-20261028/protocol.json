@@ -1,0 +1,51 @@
+{
+  "name": "CH coactivation before conditional joint ablation",
+  "created_date_local": "2026-10-28",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "features": [
+    {
+      "layer": 3,
+      "transform": 2334,
+      "rank": 32,
+      "file": "L3-T2334.npz",
+      "sha256": "5518abe4614b25b7653837da6530f91c1b5c562a8bf303f6790a446f60abe79a"
+    },
+    {
+      "layer": 29,
+      "transform": 2334,
+      "rank": 32,
+      "file": "L29-T2334.npz",
+      "sha256": "61df2ce485f5d7a496e49dd0687c2f44d58432f04f55074ce4fe2a25dc46c7a1"
+    }
+  ],
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "model_dtype": "BF16",
+  "molt_dtype": "FP32",
+  "attention": "eager; native attention unmodified",
+  "tf32": false,
+  "max_new_tokens": 16,
+  "max_runtime_minutes": 40,
+  "phase_1": "64 fixed prompts: 24 CH words and 8 non-CH words, two output cases. Scan naturally gated input-word contributions with zero-strength hooks; compare exactly to unhooked native baseline.",
+  "phase_2_eligibility": "CH prompts where each of L3-T2334 and L29-T2334 has a positive gate on at least one token overlapping the input target word in the unmodified native pass. Also report whether both are active at the same token.",
+  "phase_2_conditions": [
+    "native",
+    "zero_control",
+    "L3_off",
+    "L29_off",
+    "both_off"
+  ],
+  "joint_semantics": "Recompute each selected gate and low-rank operator from that condition current residual; in both_off L29 is evaluated downstream of the L3 edit. Subtract estimated naturally gated contribution from native MLP at target input tokens only. Generated tokens unedited; native remainder retained.",
+  "metrics": "Greedy text; immediate next-token mass for CH/ch variants; same-native-prefix answer-slot CH/ch mass; expected-prefix mass; log odds of target mass vs all other tokens. None is full-sequence correctness probability.",
+  "selection_reporting": "Gate selection precedes ablation outcomes. Report all scanned words, including inactive cases and controls; joint intervention only on eligible CH prompts.",
+  "non_goals": [
+    "No Child L3-T1372 edits",
+    "No unrelated-feature specificity controls in this targeted coactivation/joint follow-up",
+    "No claim of exhaustive CH feature discovery or feature absorption"
+  ]
+}

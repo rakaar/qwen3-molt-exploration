@@ -29,4 +29,20 @@
   }
   el('filters').addEventListener('change', render);
   render();
+  if (data.followup) {
+    function renderJoint() {
+      const metric = el('joint-metric').value;
+      el('joint-rows').innerHTML = data.followup.ablations.map(row => {
+        const first = row.L3_off;
+        const native = first[`native_p_${metric}`];
+        const prefix = metric === 'first_output' ? 'prompt alone' : (row.matched_prefix || 'prompt alone');
+        return `<tr data-case="${escape(row.case_id)}"><td><code>${escape(row.case_id)}</code></td>`
+          + `<td class="joint-prefix"><code>${escape(prefix)}</code></td><td class="joint-p">${percent(native)}</td>`
+          + ['L3_off', 'L29_off', 'both_off'].map(c => `<td class="joint-p">${percent(row[c][`p_${metric}`])}</td>`).join('')
+          + `<td><code>${escape(row.both_off.answer)}</code></td></tr>`;
+      }).join('');
+    }
+    el('joint-metric').addEventListener('change', renderJoint);
+    renderJoint();
+  }
 })();
