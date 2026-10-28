@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One input token, a different ordinal answer · Qwen3 MOLT</title>
+<meta name="description" content="Token-level comparisons of verified Qwen3-4B MOLT gate ablations: November to December, K to L, XI to XII, and D to E.">
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="../../">Qwen3 · MOLT exploration</a><a href="#method">Method &amp; limits ↗</a></header>
+<main>
+<section class="hero">
+  <p class="eyebrow">Qwen3-4B · selected gate-off experiments</p>
+  <h1>One input token.<br>A different ordinal answer.</h1>
+  <p class="lede">In these selected raw prefixes, removing one MOLT’s contribution at the final input token shifts the initial answer to the next ordinal.</p>
+  <div class="overview">
+    <a class="overview-card" href="#eleven"><span class="big-number">11 <span>→</span> 12</span><span>L29–T2375</span><small>4 prefixes · 3 task families</small></a>
+    <a class="overview-card" href="#four"><span class="big-number">4 <span>→</span> 5</span><span>L29–T2397</span><small>1 prefix · 1 task family</small></a>
+  </div>
+  <p class="scope-note">These are initial-completion effects. Longer continuations can repeat or contain errors. We have <strong>no confirmed 2→3 shift</strong>.</p>
+</section>
+
+<section class="reading-guide" aria-label="How to read the comparisons">
+ <div><h2>Read the gate, then remove it</h2><p>A token’s color shows the natural gate while the model processes that token. The final <code> is</code> token helps predict the answer that follows.</p></div>
+ <div class="legend"><span>Gate activation</span><div class="ramp"></div><div class="ticks"><span>0</span><span>1</span><span>2</span><span>3+</span></div><small>One shared scale across all examples.</small></div>
+ <label class="boundary-control"><input id="boundaries" type="checkbox" checked> Show token boundaries</label>
+ <p class="inspect-help">Click or focus any token for its position and exact value. “·” shows a space; “↵” shows a newline.</p>
+ <div id="inspector" class="inspector" aria-live="polite"><span class="inspector-dot"></span><span>Select a token to inspect its measured gate.</span></div>
+</section>
+
+<section id="eleven" class="result-group">
+ <div class="section-heading"><div><p class="eyebrow">Result 01 · L29–T2375</p><h2>Eleventh → twelfth</h2></div><span class="family-count">4 prefixes, not 4 independent families</span></div>
+ <p class="section-intro">November becomes December, K becomes L, and XI becomes XII. The two month examples use the original misspelling and its corrected wording.</p>
+ <div id="eleven-examples" class="examples"><p class="loading">Loading measured token data…</p></div>
+</section>
+
+<section id="four" class="result-group">
+ <div class="section-heading"><div><p class="eyebrow">Result 02 · L29–T2397</p><h2>Fourth letter → fifth letter</h2></div><span class="family-count">1 verified prefix</span></div>
+ <p class="section-intro">The native model starts with D. Zeroing the final input token’s contribution makes it start with E. This result depends on the exact prompt below.</p>
+ <div id="four-examples" class="examples"></div>
+</section>
+
+<section class="context-section" aria-labelledby="coverage-title">
+ <p class="eyebrow">Keep the result in proportion</p><h2 id="coverage-title">Selected successes, with limits</h2>
+ <div class="context-grid">
+  <article><h3>The base model knows both answers</h3><p>Native ordinal controls were checked before intervention: November/December, K/L, XI/XII and D/E. An incorrect native pair was excluded from causal comparisons.</p></article>
+  <article><h3>The whole continuation is not the result</h3><p>The first answer shifts. The longer text can be repetitive or wrong, including in the unmodified model. Expand a comparison to see the complete recorded outputs.</p></article>
+  <article><h3>This is not a universal increment rule</h3><p>Other tested domains did not always shift. An active gate can leave the initial answer unchanged; removing an inactive contribution is a no-op.</p></article>
+ </div>
+ <details class="control-details"><summary>What did not work?</summary>
+  <div class="control-content">
+   <h3>L29–T2375: selected other raw-prefix checks</h3>
+   <div class="table-scroll"><table><thead><tr><th>Task</th><th>Native → gate off</th><th>At the final input token</th></tr></thead><tbody>
+    <tr><td>11th element</td><td>Sodium → Sodium</td><td>Active; no initial flip</td></tr>
+    <tr><td>11th integer, prime, square, triangular number</td><td>11, 31, 121, 66 → unchanged</td><td>Inactive; no-op</td></tr>
+   </tbody></table></div>
+   <h3>L29–T2397: other fourth-position checks</h3>
+   <div class="table-scroll"><table><thead><tr><th>Task</th><th>Native → gate off</th><th>Input activity</th></tr></thead><tbody>
+    <tr><td>Roman numeral</td><td>IV → IV</td><td>Active at final input; no flip</td></tr>
+    <tr><td>Month, element, integer, prime, square, triangular number</td><td>April, Beryllium, 4, 7, 16, 10 → unchanged</td><td>Inactive before initial answer on input</td></tr>
+    <tr><td>US president / explicit-list fourth item</td><td>Excluded</td><td>Required paired native answers failed or were unvalidated</td></tr>
+   </tbody></table></div>
+   <p>Generated-space edits were also tested in earlier experiments, but they are not the intervention shown in these five comparisons.</p>
+   <h3>And the before-2 gates?</h3><p>L9–T1981, L13–T1829 and L19–T1645 were tested separately on months, Roman numerals and integer positions. All input-only ablations retained February, II and 2; native third-ordinal controls gave March, III and 3.</p><p>Only L9–T1981 was active in these tested inputs, at chat-formatting tokens in the integer case. Turning it off across the input changed the next-token probability of “2” from 99.9280% to 99.9440%; the answer remained 2. The final-input-only masks were inactive. These tests did not produce a 2→3 shift.</p>
+  </div>
+ </details>
+</section>
+
+<section id="method" class="method-section">
+ <p class="eyebrow">How these comparisons were made</p><h2>A single-position contribution ablation</h2>
+ <ol class="method-steps"><li><b>Run the native prefix.</b> Verify that the model gives the expected initial ordinal answer and the correct next-ordinal control.</li><li><b>Measure the natural gate.</b> A zero-strength observer must reproduce the native tokens and probabilities exactly.</li><li><b>Remove one contribution.</b> At the marked final input token, subtract its natural gate × input-dependent MOLT output. Keep the native MLP remainder.</li><li><b>Generate again.</b> Greedy decoding with a fresh cache. Every generated position remains unedited.</li></ol>
+ <p class="method-note">The edited column is deliberately neutral. <strong>Only its outlined token was clamped to zero.</strong> Other token gates were not set to zero; their measured natural values remain available in the inspector.</p>
+ <details><summary>Reproducibility, precision and evidence</summary><div class="method-content">
+  <p>Layer, transform and token positions are zero-based. Base model: native BF16 Qwen3-4B, eager attention, TF32 off. MOLT gate and low-rank operator calculations use FP32, followed by one BF16 cast after the edit. The model’s other contributions are retained. These runs use raw completion prefixes without a chat template.</p>
+  <p>The pinned base revision is <code>1cfa9a7208912126459214e8b04321603b3df60c</code>; the MOLT revision is <code>081ce901b090b64aeecf9bc8709b57c10411e32a</code>. Labels describe activation conditions and do not establish the operator’s causal function.</p>
+  <p>The observed token gates, edit positions, exact responses, paired native control text and source-record hashes are in <a href="data.json">the curated evidence JSON</a>. <a href="validation.json">Export validation</a> checks single-input-token edits, zero generated-token edits and exact native/zero-observer matches. Underlying CPU audits also reconstructed sampled gates, operators, deltas and BF16 rounding.</p>
+  <p>Token rows preserve the exact lowercase output; headline answer labels use conventional capitalization. The last emitted token was not processed by another forward step, so its gate is marked “not measured,” rather than zero. A Unicode character can span more than one token; ◌ marks a token that contributes an incomplete byte fragment.</p>
+  <p>These examples were selected from exploratory experiments. There is no broad paraphrase validation or active norm-matched unrelated-transform control. The two month prefixes test one task family. The observations establish these exact initial-completion changes, not a general counting circuit.</p>
+  <p>Weights: <a href="https://huggingface.co/Qwen/Qwen3-4B">Qwen3-4B</a> · <a href="https://huggingface.co/georglange/qwen3-4b-molt">MOLT checkpoint</a> · <a href="https://github.com/rakaar/qwen3-molt-exploration">Project repository</a></p>
+ </div></details>
+</section>
+<footer><span>Qwen3 · MOLT exploration</span><span>Measured runs from 28–29 October 2026 · Selected initial completions</span></footer>
+</main>
+</body></html>
