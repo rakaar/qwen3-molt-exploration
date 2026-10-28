@@ -50,7 +50,7 @@ def render(data, output, figure_source):
                                                       letter_case=r['letter_case'], **r[c])
                                                   for r in data['ablations'] for c in ['L3_off', 'L29_off', 'both_off']])]:
         with (output / file).open('w', newline='') as stream:
-            writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+            writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
             writer.writeheader()
             for row in rows:
                 writer.writerow({k: json.dumps(v, ensure_ascii=False) if isinstance(v, (list, dict)) else v

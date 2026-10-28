@@ -140,7 +140,7 @@ def main():
                'matched_prefix', 'native_p_answer_slot', 'gate_off_p_answer_slot', 'answer_slot_change_pp',
                'target_tokens', 'natural_gates', 'actual_edit_norms']
     with (output / 'comparisons.csv').open('w', newline='') as stream:
-        writer = csv.DictWriter(stream, fieldnames=columns); writer.writeheader()
+        writer = csv.DictWriter(stream, fieldnames=columns, lineterminator="\n"); writer.writeheader()
         for row in rows:
             record = {key: row[key] for key in columns if key in row}
             record['matched_prefix'] = row['answer_slot']['prefix']
