@@ -1,0 +1,19 @@
+Experiment source backup — 29 October 2026
+
+Extract source-code.tar.gz with: tar -xzf source-code.tar.gz
+
+remote-workspace/ preserves the source/configuration layout on the experiment GPU.
+local-workspace/ preserves local preparation, launch, analysis, audit and report scripts,
+including the ordinal results-site exporter. All 117 remote Python/shell source files
+are included unchanged. See source-manifest.json for exact file hashes and pinned
+public base/MOLT checkpoint revisions.
+
+This is a source backup, not an inference-ready environment. The original scripts
+include task-specific paths and some expect an already loaded native model. Restore
+the recorded environment and supporting data/weights before executing them. Nothing
+in the backup starts a GPU or runs inference automatically.
+
+The full private backup (all 5,640 remote files, including raw generations, audit
+vectors, logs and selected transform weights) was retained and hash-verified locally.
+Large public base weights and virtual environments are reproducible and excluded.
+No dashboard disk contents are part of this experiment backup.
