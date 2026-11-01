@@ -1,13 +1,17 @@
-Multilingual L29-T2375 experiment code — 1 November 2026
+Multilingual L29-T2375 source backup, refreshed 2 November 2026
 
 Extract source-code.tar.gz with tar -xzf source-code.tar.gz.
 
-Both the primary raw-prefix pilot and the separately logged no-thinking chat
-followup are included. Exact code/configuration hashes are in source-manifest.json.
-Measured responses, manual reviews, selected MOLT NPZ weights and the original
-English calibration fixture are preserved in the verified LOCAL private backup,
-not in this public code bundle. Restore those supporting files before running
-the original scripts. The pinned public base/MOLT revisions and slice hashes
-are recorded in each protocol and weights manifest.
+Includes both experiment stages, setup/download code, numerical auditors,
+the report renderer and GPU bootstrap script. All20 source/configuration
+file hashes are listed in source-manifest.json.
 
-No code executes merely by downloading or extracting this archive.
+Measured response records, manual reviews, selected MOLT NPZ weights and
+the original English calibration fixture remain in the verified LOCAL
+private backup. Restore those supporting files before running the original
+scripts or rebuilding the report. Pinned public base/MOLT revisions and
+slice hashes are recorded in each protocol and weights manifest.
+
+Bootstrap reads task-specific connection records and the existing local SSH
+key; neither credentials nor connection records are included in this bundle.
+No code runs simply by downloading or extracting the archive.

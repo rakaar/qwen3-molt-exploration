@@ -1,7 +1,12 @@
 {
-  "source_files": 18,
-  "archive_sha256": "c0dbef756a02bb331fecef16f021e176e6dc04a86b12d9e1bc71acf6b3bb75b9",
+  "source_files": 20,
+  "archive_sha256": "1e6b90bddb9e2f1dc25df07ffe3281fb53931f90fd1d8b417b1f72a03a58f304",
   "files": [
+    {
+      "path": "comparisons/2026-11-01-eleven-multilingual/build_report.py",
+      "bytes": 9804,
+      "sha256": "81c40e8a328ad793955b102e4499371b6b7b3608d7839272a915c5efe62626aa"
+    },
     {
       "path": "experiments/eleven-multilingual-20261101/audit.py",
       "bytes": 7372,
@@ -91,7 +96,12 @@
       "path": "experiments/eleven-multilingual-chat-20261101/weights/manifest.json",
       "bytes": 4403,
       "sha256": "38d8ceace57f524afbc839fc2a0e2539a19a8dd89ef350bd9044201249589c31"
+    },
+    {
+      "path": "gpu-rentals/2026-11-01-eleven-multilingual/bootstrap.py",
+      "bytes": 4425,
+      "sha256": "578e5d78785aab000035cb281a02cd8ea590f8216df84e1cb1d218fc22d03c0d"
     }
   ],
-  "scope": "Experiment run/audit code and planned prompt/configuration files only. No measured outputs, response reviews, calibration fixture, transform weights, credentials or GPU connection records."
+  "scope": "Experiment run/audit/setup code, prompt/configuration files, report renderer and GPU bootstrap source. Measured response records, manual reviews, calibration fixture, transform weights and credentials are excluded."
 }
