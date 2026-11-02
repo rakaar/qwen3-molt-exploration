@@ -1,0 +1,1019 @@
+{
+  "status": "pass",
+  "feature": "L29-T2375",
+  "source_results_sha256": "5a4257e0c563968d7ab9ad3d1be382130c229a73e8b2b0503f365a0ede1767d0",
+  "gate_threshold": 0.5448488593101501,
+  "intervention": null,
+  "cases": [
+    {
+      "case_id": "numeric_11",
+      "prompt": "the 11th month of the year is",
+      "response": " November. The 11th month of the year is November. The 11th month of the year is November. The 11th month",
+      "observer_full_logits_exact": true,
+      "z_max_error": 0.0,
+      "raw_max_error": 7.152557373046875e-07,
+      "gate_max_error": 7.152557373046875e-07,
+      "input_tokens": [
+        {
+          "position": 0,
+          "token_id": 1782,
+          "token": "the",
+          "phase": "input",
+          "raw": -0.4728950262069702,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 1,
+          "token_id": 220,
+          "token": " ",
+          "phase": "input",
+          "raw": -0.5947693586349487,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 2,
+          "token_id": 16,
+          "token": "1",
+          "phase": "input",
+          "raw": -0.695804238319397,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 3,
+          "token_id": 16,
+          "token": "1",
+          "phase": "input",
+          "raw": -0.6503264904022217,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 4,
+          "token_id": 339,
+          "token": "th",
+          "phase": "input",
+          "raw": -1.0328487157821655,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 5,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "input",
+          "raw": -0.559719443321228,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 6,
+          "token_id": 315,
+          "token": " of",
+          "phase": "input",
+          "raw": -1.1273274421691895,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 7,
+          "token_id": 279,
+          "token": " the",
+          "phase": "input",
+          "raw": -0.8264602422714233,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 8,
+          "token_id": 1042,
+          "token": " year",
+          "phase": "input",
+          "raw": -0.6105026006698608,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 9,
+          "token_id": 374,
+          "token": " is",
+          "phase": "input",
+          "raw": 1.0411484241485596,
+          "natural_gate": 1.0411484241485596
+        }
+      ],
+      "generated_tokens_observed": [
+        {
+          "position": 10,
+          "token_id": 6702,
+          "token": " November",
+          "phase": "generated",
+          "raw": -0.3515505790710449,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 11,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.3017670512199402,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 12,
+          "token_id": 576,
+          "token": " The",
+          "phase": "generated",
+          "raw": 0.5281141400337219,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 13,
+          "token_id": 220,
+          "token": " ",
+          "phase": "generated",
+          "raw": 1.084392786026001,
+          "natural_gate": 1.084392786026001
+        },
+        {
+          "position": 14,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": -0.3314271569252014,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 15,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": -0.5189229249954224,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 16,
+          "token_id": 339,
+          "token": "th",
+          "phase": "generated",
+          "raw": -0.3139645457267761,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 17,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -0.7849069833755493,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 18,
+          "token_id": 315,
+          "token": " of",
+          "phase": "generated",
+          "raw": -1.0770901441574097,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 19,
+          "token_id": 279,
+          "token": " the",
+          "phase": "generated",
+          "raw": -0.46811723709106445,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 20,
+          "token_id": 1042,
+          "token": " year",
+          "phase": "generated",
+          "raw": -1.0178463459014893,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 21,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": 1.0757334232330322,
+          "natural_gate": 1.0757334232330322
+        },
+        {
+          "position": 22,
+          "token_id": 6702,
+          "token": " November",
+          "phase": "generated",
+          "raw": -0.42512086033821106,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 23,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.19577115774154663,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 24,
+          "token_id": 576,
+          "token": " The",
+          "phase": "generated",
+          "raw": 0.14957839250564575,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 25,
+          "token_id": 220,
+          "token": " ",
+          "phase": "generated",
+          "raw": -0.06656283140182495,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 26,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": -0.2491697072982788,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 27,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": -0.19527393579483032,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 28,
+          "token_id": 339,
+          "token": "th",
+          "phase": "generated",
+          "raw": -0.5863145589828491,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 29,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -1.0519846677780151,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 30,
+          "token_id": 315,
+          "token": " of",
+          "phase": "generated",
+          "raw": -0.8616809844970703,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 31,
+          "token_id": 279,
+          "token": " the",
+          "phase": "generated",
+          "raw": -0.6014564037322998,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 32,
+          "token_id": 1042,
+          "token": " year",
+          "phase": "generated",
+          "raw": -0.999397337436676,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 33,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": 0.32856887578964233,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 34,
+          "token_id": 6702,
+          "token": " November",
+          "phase": "generated",
+          "raw": -0.4909358024597168,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 35,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.274009644985199,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 36,
+          "token_id": 576,
+          "token": " The",
+          "phase": "generated",
+          "raw": 0.1999034285545349,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 37,
+          "token_id": 220,
+          "token": " ",
+          "phase": "generated",
+          "raw": -1.1156772375106812,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 38,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": -1.4448992013931274,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 39,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": -0.3321205973625183,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 40,
+          "token_id": 339,
+          "token": "th",
+          "phase": "generated",
+          "raw": -0.4937412738800049,
+          "natural_gate": 0.0
+        }
+      ],
+      "historical_anchor_max_probability_error": null
+    },
+    {
+      "case_id": "spelled_11_anchor",
+      "prompt": "the eleventh month of the year is",
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "observer_full_logits_exact": true,
+      "z_max_error": 0.0,
+      "raw_max_error": 4.76837158203125e-07,
+      "gate_max_error": 4.76837158203125e-07,
+      "input_tokens": [
+        {
+          "position": 0,
+          "token_id": 1782,
+          "token": "the",
+          "phase": "input",
+          "raw": -0.4728950262069702,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 1,
+          "token_id": 10510,
+          "token": " ele",
+          "phase": "input",
+          "raw": -0.4800146222114563,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 2,
+          "token_id": 44607,
+          "token": "venth",
+          "phase": "input",
+          "raw": -0.6906867623329163,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 3,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "input",
+          "raw": -0.562616229057312,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 4,
+          "token_id": 315,
+          "token": " of",
+          "phase": "input",
+          "raw": -0.8864617347717285,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 5,
+          "token_id": 279,
+          "token": " the",
+          "phase": "input",
+          "raw": -0.779305100440979,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 6,
+          "token_id": 1042,
+          "token": " year",
+          "phase": "input",
+          "raw": -0.4940764904022217,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 7,
+          "token_id": 374,
+          "token": " is",
+          "phase": "input",
+          "raw": 1.1585536003112793,
+          "natural_gate": 1.1585536003112793
+        }
+      ],
+      "generated_tokens_observed": [
+        {
+          "position": 8,
+          "token_id": 84223,
+          "token": " november",
+          "phase": "generated",
+          "raw": -0.24994617700576782,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 9,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.33625298738479614,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 10,
+          "token_id": 279,
+          "token": " the",
+          "phase": "generated",
+          "raw": 0.27585965394973755,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 11,
+          "token_id": 4384,
+          "token": " tw",
+          "phase": "generated",
+          "raw": -0.2931143641471863,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 12,
+          "token_id": 87698,
+          "token": "elfth",
+          "phase": "generated",
+          "raw": -0.512029230594635,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 13,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -0.6893844604492188,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 14,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": -0.3947311043739319,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 15,
+          "token_id": 89011,
+          "token": " december",
+          "phase": "generated",
+          "raw": -0.8270121216773987,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 16,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.08063209056854248,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 17,
+          "token_id": 279,
+          "token": " the",
+          "phase": "generated",
+          "raw": 0.0195121169090271,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 18,
+          "token_id": 1156,
+          "token": " first",
+          "phase": "generated",
+          "raw": -0.023200392723083496,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 19,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -1.0926119089126587,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 20,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": -0.5232859253883362,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 21,
+          "token_id": 32862,
+          "token": " jan",
+          "phase": "generated",
+          "raw": -1.3540890216827393,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 22,
+          "token_id": 3536,
+          "token": "uary",
+          "phase": "generated",
+          "raw": -0.7001020908355713,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 23,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.5797632336616516,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 24,
+          "token_id": 279,
+          "token": " the",
+          "phase": "generated",
+          "raw": -1.6243934631347656,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 25,
+          "token_id": 2086,
+          "token": " second",
+          "phase": "generated",
+          "raw": -0.7314814329147339,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 26,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -0.8222640752792358,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 27,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": -0.8845199346542358,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 28,
+          "token_id": 1152,
+          "token": " fe",
+          "phase": "generated",
+          "raw": -0.8700159192085266,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 29,
+          "token_id": 6812,
+          "token": "bruary",
+          "phase": "generated",
+          "raw": -0.6682799458503723,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 30,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.8976589441299438,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 31,
+          "token_id": 279,
+          "token": " the",
+          "phase": "generated",
+          "raw": -1.320296287536621,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 32,
+          "token_id": 4843,
+          "token": " third",
+          "phase": "generated",
+          "raw": -0.9180969595909119,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 33,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -0.5637887716293335,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 34,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": -0.9877598285675049,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 35,
+          "token_id": 15217,
+          "token": " march",
+          "phase": "generated",
+          "raw": -0.9198124408721924,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 36,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.970794677734375,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 37,
+          "token_id": 279,
+          "token": " the",
+          "phase": "generated",
+          "raw": -0.9470903277397156,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 38,
+          "token_id": 11737,
+          "token": " fourth",
+          "phase": "generated",
+          "raw": -0.7698102593421936,
+          "natural_gate": 0.0
+        }
+      ],
+      "historical_anchor_max_probability_error": 5.960464477539063e-08
+    },
+    {
+      "case_id": "numeric_12_control",
+      "prompt": "the 12th month of the year is",
+      "response": " December. The 12th month is December. The 12th month is December. The 12th month is December. The 1",
+      "observer_full_logits_exact": true,
+      "z_max_error": 0.0,
+      "raw_max_error": 4.76837158203125e-07,
+      "gate_max_error": 0.0,
+      "input_tokens": [
+        {
+          "position": 0,
+          "token_id": 1782,
+          "token": "the",
+          "phase": "input",
+          "raw": -0.4728950262069702,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 1,
+          "token_id": 220,
+          "token": " ",
+          "phase": "input",
+          "raw": -0.5947693586349487,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 2,
+          "token_id": 16,
+          "token": "1",
+          "phase": "input",
+          "raw": -0.695804238319397,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 3,
+          "token_id": 17,
+          "token": "2",
+          "phase": "input",
+          "raw": -0.9032602906227112,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 4,
+          "token_id": 339,
+          "token": "th",
+          "phase": "input",
+          "raw": -1.2215399742126465,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 5,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "input",
+          "raw": -0.817981481552124,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 6,
+          "token_id": 315,
+          "token": " of",
+          "phase": "input",
+          "raw": -1.2245275974273682,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 7,
+          "token_id": 279,
+          "token": " the",
+          "phase": "input",
+          "raw": -0.9426921606063843,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 8,
+          "token_id": 1042,
+          "token": " year",
+          "phase": "input",
+          "raw": -0.8377162218093872,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 9,
+          "token_id": 374,
+          "token": " is",
+          "phase": "input",
+          "raw": -0.2359325885772705,
+          "natural_gate": 0.0
+        }
+      ],
+      "generated_tokens_observed": [
+        {
+          "position": 10,
+          "token_id": 6652,
+          "token": " December",
+          "phase": "generated",
+          "raw": -0.6873598098754883,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 11,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.5344164371490479,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 12,
+          "token_id": 576,
+          "token": " The",
+          "phase": "generated",
+          "raw": -0.03386235237121582,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 13,
+          "token_id": 220,
+          "token": " ",
+          "phase": "generated",
+          "raw": 0.06630361080169678,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 14,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": 0.039169907569885254,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 15,
+          "token_id": 17,
+          "token": "2",
+          "phase": "generated",
+          "raw": -0.7427281141281128,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 16,
+          "token_id": 339,
+          "token": "th",
+          "phase": "generated",
+          "raw": -0.7405588030815125,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 17,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -1.0251737833023071,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 18,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": -0.44277268648147583,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 19,
+          "token_id": 6652,
+          "token": " December",
+          "phase": "generated",
+          "raw": -0.8103703260421753,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 20,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.5995718240737915,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 21,
+          "token_id": 576,
+          "token": " The",
+          "phase": "generated",
+          "raw": -0.02595651149749756,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 22,
+          "token_id": 220,
+          "token": " ",
+          "phase": "generated",
+          "raw": -0.055714309215545654,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 23,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": -0.28350651264190674,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 24,
+          "token_id": 17,
+          "token": "2",
+          "phase": "generated",
+          "raw": -0.6272263526916504,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 25,
+          "token_id": 339,
+          "token": "th",
+          "phase": "generated",
+          "raw": -0.6928831338882446,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 26,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -1.0453557968139648,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 27,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": -0.8391721248626709,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 28,
+          "token_id": 6652,
+          "token": " December",
+          "phase": "generated",
+          "raw": -0.7936558723449707,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 29,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.3918306231498718,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 30,
+          "token_id": 576,
+          "token": " The",
+          "phase": "generated",
+          "raw": -0.22148633003234863,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 31,
+          "token_id": 220,
+          "token": " ",
+          "phase": "generated",
+          "raw": -0.9303078055381775,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 32,
+          "token_id": 16,
+          "token": "1",
+          "phase": "generated",
+          "raw": -1.2809882164001465,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 33,
+          "token_id": 17,
+          "token": "2",
+          "phase": "generated",
+          "raw": -0.390363484621048,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 34,
+          "token_id": 339,
+          "token": "th",
+          "phase": "generated",
+          "raw": -0.7044315934181213,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 35,
+          "token_id": 2254,
+          "token": " month",
+          "phase": "generated",
+          "raw": -0.8602768778800964,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 36,
+          "token_id": 374,
+          "token": " is",
+          "phase": "generated",
+          "raw": -0.7170007228851318,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 37,
+          "token_id": 6652,
+          "token": " December",
+          "phase": "generated",
+          "raw": -0.8179622888565063,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 38,
+          "token_id": 13,
+          "token": ".",
+          "phase": "generated",
+          "raw": -0.4382082521915436,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 39,
+          "token_id": 576,
+          "token": " The",
+          "phase": "generated",
+          "raw": -0.2975901961326599,
+          "natural_gate": 0.0
+        },
+        {
+          "position": 40,
+          "token_id": 220,
+          "token": " ",
+          "phase": "generated",
+          "raw": -0.9580322504043579,
+          "natural_gate": 0.0
+        }
+      ],
+      "historical_anchor_max_probability_error": null
+    }
+  ]
+}

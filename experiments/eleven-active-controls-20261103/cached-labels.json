@@ -1,0 +1,51 @@
+{
+  "source": "comparisons/2026-10-21-toxic-persona-survey/hf-labels/layer-29.jsonl",
+  "source_sha256": "41ad94d6905ea5c401ff15e8a2566f6f0ceeb32e27a3330e81f4e5133409c089",
+  "cached_source_date": "2026-10-21",
+  "not_a_live_dashboard_lookup": true,
+  "labels_are_gate_activation_hypotheses_not_causal_output_descriptions": true,
+  "rows": [
+    {
+      "layer": 29,
+      "feature_id": 34,
+      "rank": 512,
+      "title": "Creative Writing Task Requests",
+      "explanation": "The gate activates on user prompts requesting specific creative writing tasks, such as essays, stories, or lists, often ending with a preposition or conjunction indicating the topic."
+    },
+    {
+      "layer": 29,
+      "feature_id": 587,
+      "rank": 64,
+      "title": "Temporal and Spatial Context Gate",
+      "explanation": "The gate activates on tokens indicating temporal or spatial context, such as prepositions \"in\", \"of\", \"for\", or date components like months, days, and years, often within phrases specifying when or where an event occurs."
+    },
+    {
+      "layer": 29,
+      "feature_id": 799,
+      "rank": 64,
+      "title": "Copula Verb and Predicate Context",
+      "explanation": "The gate activates on copula verbs (is, are, was, were, be, 's) and their immediate preceding or following context, particularly when linking a subject to a predicate adjective, noun, or state of being."
+    },
+    {
+      "layer": 29,
+      "feature_id": 858,
+      "rank": 64,
+      "title": "Temporal Phrases Triggering Seasonal Gate",
+      "explanation": "The gate activates on temporal phrases indicating seasons, times of year, or specific periods (e.g., \"best time,\" \"during,\" \"off-season,\" \"winter\"). It frequently fires on words like \"during,\" \"time,\" \"season,\" and specific months or seasons, often in the context of travel, events, or general timing."
+    },
+    {
+      "layer": 29,
+      "feature_id": 1181,
+      "rank": 64,
+      "title": "Christmas Holiday Season Token Activation",
+      "explanation": "The gate activates on tokens associated with the Christmas holiday season, including specific items like trees, snow, and gingerbread, as well as general references to the holidays or festive decorations."
+    },
+    {
+      "layer": 29,
+      "feature_id": 2375,
+      "rank": 32,
+      "title": "High-Activation \"Water\" Token",
+      "explanation": "The token \"water\" (or \"Water\") appearing in diverse contexts, often as a list item, ingredient, or environmental factor, with high activation strength."
+    }
+  ]
+}

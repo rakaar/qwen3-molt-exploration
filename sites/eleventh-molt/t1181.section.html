@@ -1,0 +1,44 @@
+<section id="t1181" class="section">
+  <div class="section-title"><span class="number">07</span><h2>T1181 and the November–December competition</h2></div>
+  <p class="intro">Turning off T2375 makes December win on the eleventh-month prompt. <strong>Turning off T1181 alongside it restores November.</strong> The probabilities below compare four conditions on the same native model, prompt, and input position.</p>
+  <div class="t1181-prompt"><span class="answer-label">Exact raw completion prefix</span><code>the eleventh month of the year <mark>is</mark></code><p>Only final input position 7, token <code> is</code>, is edited. Each contribution is removed at its natural magnitude. No generated token receives an edit.</p></div>
+  <div class="t1181-key"><strong>Both off → November</strong><span>P(November) 46.61% · P(December) 40.80%</span><p>Compared with T2375-only removal: 8.83% November and 83.68% December. The joint ablation repeats exactly.</p></div>
+  <div id="t1181-joint-table"></div>
+  <p class="t1181-small">Probabilities sum complete leading-space lowercase/title-case answer prefixes. They exclude punctuation, end tokens, and other answer formats. Each row starts from a fresh native prompt/cache.</p>
+  <details class="methods-details"><summary>Natural input-token gates for both MOLTs</summary><div class="details-body"><p>These are gates on the unmodified prompt. Orange marks a positive gate on a fixed 0–3 scale. The red outline marks the only position selected for ablation. A scalar gate φ(x) multiplies the full operator UVx; the contribution removed is φ(x) × UVx.</p><div id="t1181-native-maps"></div></div></details>
+  <h3 class="t1181-subtitle">The four recorded responses</h3>
+  <p class="t1181-small">The native and both-off continuations are identical across all 32 generated token IDs. Confidence differs. Responses are shown verbatim without unmeasured output-gate colors.</p>
+  <div id="t1181-joint-responses" class="t1181-response-grid"></div>
+  <details class="methods-details"><summary>All twelve month-name probabilities</summary><div class="details-body" id="t1181-all-months"></div></details>
+
+  <h3 class="t1181-subtitle">Does T1181 support the genuine twelfth-month answer?</h3>
+  <div class="t1181-prompt compact"><code>the twelfth month of the year <mark>is</mark></code><p>T1181’s natural gate at <code> is</code>: 1.489. Only T1181 is removed, at position 7.</p></div>
+  <div id="t1181-twelfth-table"></div>
+  <p class="body-copy">Removing T1181 reduces P(December) from <strong>88.03% to 56.30%</strong>, while January rises from 0.57% to 7.33%. The answer remains December and the complete 32-token continuation is unchanged. This is a confidence effect, without an initial-answer shift.</p>
+  <div id="t1181-twelfth-responses" class="t1181-response-grid"></div>
+
+  <h3 class="t1181-subtitle">Activation examples: beyond the holiday label</h3>
+  <p class="body-copy">The cached label is <strong>“Christmas Holiday Season Token Activation”</strong> (21 October). Saved examples include Yuletide, shopping seasons, birthdays and holidays. The label is an activation hypothesis, not a causal description of the operator.</p>
+  <div class="note"><p><strong>In the same numbered list, T2375 fires before 11 and T1181 fires before 12.</strong> The active token is the preceding newline—not the number itself. This is an observed activation example, not evidence of a general twelve operation.</p></div>
+  <div id="t1181-preview-pair"></div>
+  <p class="t1181-small">These preview windows come from <strong>64 conversations / 54,828 tokens</strong>, not the original ten-million-token campaign. Peaks are selected once per conversation. They do not establish the feature’s globally dominant meaning.</p>
+  <details class="methods-details"><summary>All five saved T1181 preview windows</summary><div class="details-body" id="t1181-preview-all"></div></details>
+  <details class="methods-details"><summary>Cross-domain gates and the eleventh/twelfth comparison</summary><div class="details-body"><p>Apply the pinned gate encoders to saved native states at the final input token. These CPU FP32 calculations require no new inference; tiny differences from GPU reductions are numerical.</p><div id="t1181-gate-comparisons"></div><p>T1181 is inactive at the Roman prompt’s final token, where T2375 removal still gives XI → XII. It is therefore not a shared active final-token component across all three successful domains. This does not exclude activity at other positions.</p></div></details>
+
+  <h3 class="t1181-subtitle">Controls: every active MOLT at this token</h3>
+  <p class="body-copy">All 2,480 L29 gates were scanned on the native eleventh-month prompt. Exactly six were active at the final <code> is</code>. Each was removed separately, selected by activity before observing ablation outcomes. All five other removals retain the entire native continuation.</p>
+  <div id="t1181-active-table"></div>
+  <p class="t1181-small">The removals have different natural contribution norms; they are not norm-matched perturbations. T34, T587, and T1181 remove larger contributions than T2375 and retain November.</p>
+  <details class="methods-details"><summary>Full active-control responses and cached labels</summary><div class="details-body" id="t1181-control-responses"></div></details>
+  <div class="t1181-conclusion"><strong>What this establishes</strong><p>On this prompt, removing T1181 reverses the initial-answer flip caused by T2375 removal. T1181 helps sustain December’s advantage when T2375 is absent, while substantial December probability remains with both off. These interventions do not establish a universal ordinal mechanism or a direct connection between the two MOLTs.</p></div>
+  <details class="methods-details"><summary>Intervention, precision, verification, and limits</summary><div class="details-body"><pre>Contribution c = φ(x) × UVx
+
+T1181 off: edited MLP = native MLP − c1181
+T2375 off: edited MLP = native MLP − c2375
+Both off: edited MLP = native MLP − (c1181 + c2375)
+
+Only input position 7, " is", is edited.
+Both native contributions are computed from the same unmodified input.
+Sum and subtract in FP32; cast the selected output to BF16 once.</pre><p>Native Qwen3-4B with pinned model/MOLT revisions; raw lowercase completion prefixes; normal downstream computation; checkpoint input/output standardizers retained; no extra contribution normalization. Eager attention, TF32 off, greedy decoding, 32-token continuations. Every displayed intervention continuation reaches the token limit.</p><p>Native/observer/zero controls match exactly. Fresh single-ablation runs reproduce earlier token IDs and every full-vocabulary logit hash. Both joint and twelfth-month ablations repeat exactly. Independent CPU audits reconstruct gates, operators, complete answer-prefix probabilities, selected-position masks and exact BF16 edits. Raw archives and files are hash-verified. This site update adds no inference.</p><p>Probability tables sum exact prefixes, not every semantic way to answer. Long raw continuations can repeat or drift; the full recorded text remains visible. Results cover these exact prompts, not numeric “11th/12th” variants, all-input/output interventions, or language-independent number operations.</p></div></details>
+  <div class="downloads"><a href="t1181-results.json" download>Site records & provenance</a><a href="t1181-joint.json" download>Joint-ablation exact records</a><a href="t1181-joint-probabilities.csv" download>Joint probabilities CSV</a><a href="t1181-twelfth.json" download>Twelfth-month exact records</a><a href="t1181-twelfth-probabilities.csv" download>Twelfth probabilities CSV</a><a href="t1181-active-controls.json" download>Active-control exact records</a><a href="t1181-controls.csv" download>Active controls CSV</a><a href="t1181-activation-evidence.json" download>Activation examples & source hashes</a></div>
+</section>

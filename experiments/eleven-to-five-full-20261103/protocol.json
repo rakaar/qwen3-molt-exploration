@@ -1,0 +1,75 @@
+{
+  "date_local": "2026-11-03",
+  "feature": "L29-T2375",
+  "donor_prompt": "the eleventh month of the year is",
+  "recipient_prompt": "the fifth month of the year is",
+  "donor_gate": 1.1585536003112793,
+  "reference_prefixes": {
+    "donor": [
+      84223,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      374,
+      89011,
+      13,
+      279,
+      1156,
+      2254
+    ],
+    "recipient": [
+      1231,
+      13,
+      279,
+      17702,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      1231,
+      13,
+      279
+    ]
+  },
+  "fixed_gates": [
+    0,
+    0.5,
+    1,
+    1.1585536003112793,
+    2,
+    3,
+    5,
+    10,
+    15,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90
+  ],
+  "max_new_tokens": 32,
+  "scope": "Only final input token in recipient: zero-based position 6, space+is. No generated-token edits.",
+  "edit": "native recipient MLP + fixed_gate * frozen donor operator - native recipient gate * current recipient operator; FP32 then one BF16 cast at input position 6 only.",
+  "scalar_only": false,
+  "copy_donor_operator": true,
+  "copy_donor_contribution": true,
+  "reference_source": "results/2026-11-03-eleven-ordinal-specificity/summary.json",
+  "limits": [
+    "One lowercase raw recipient prompt. Only one feature at one input position is replaced.",
+    "Donor operator is larger in norm as well as differently directed; norm-matched controls are reported separately.",
+    "The initial-answer criterion is separate from self-correction or full-continuation coherence.",
+    "Report lowest successful gate tested, not a global threshold."
+  ],
+  "controls": [
+    "Unhooked and observer native donor/recipient; zero strength; gate zero.",
+    "Scalar-only at the donor gate, retaining recipient UVx.",
+    "Recipient-operator scalar control norm-matched to full donor patch at natural donor gate and first initial-November grid value if any.",
+    "Exact repetitions at natural donor value, first initial-November value if any, and maximum gate."
+  ]
+}

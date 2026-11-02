@@ -1,0 +1,27 @@
+{
+  "date_local": "2026-11-03",
+  "feature_layer": 29,
+  "prompt": "the eleventh month of the year is",
+  "position": 7,
+  "token": " is",
+  "selected_transforms": [
+    34,
+    587,
+    799,
+    858,
+    1181,
+    2375
+  ],
+  "selection_rule": "All transforms with a positive natural thresholded gate at final input position; no ablation outcomes used.",
+  "max_new_tokens": 32,
+  "scope": "One selected MOLT off at final input token only; no generated-token edits; each run independent.",
+  "edit": "native MLP - natural selected gate * selected current operator; FP32 followed by one BF16 cast.",
+  "reference_transform": 2375,
+  "natural_strength_only": true,
+  "operator_normalized": false,
+  "limits": [
+    "One raw lowercase month prefix.",
+    "Natural ablations differ in contribution norms; report sizes rather than claim norm-matched controls.",
+    "All six active transforms tested individually; no joint ablation."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "experiment": "L29-T2375 multilingual 11-to-12 exploratory ablation",
+  "date_local": "2026-11-01",
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "layer": 29,
+  "transform": 2375,
+  "prompt_format": "raw",
+  "decode": "greedy",
+  "max_new_tokens": 32,
+  "max_runtime_minutes": 45,
+  "audit_steps": [
+    0,
+    1,
+    2,
+    8
+  ],
+  "scopes": [
+    "last_input_only",
+    "input_only",
+    "all_positions",
+    "output_only"
+  ],
+  "eligibility": "Both native eleventh and twelfth initial answers must be correct after manual review, hash-bound before nonzero edits. Zero observer must exactly match native. Do not infer failure of the feature from a failed native control.",
+  "specificity": "For each eligible case, apply an all-input gate-off control to its native twelfth prompt. Keep all-position and output-only effects separate from input-mediated initial-answer changes.",
+  "primary_outcome": "Initial complete answer changes from the case eleventh value to its twelfth value; preserve full continuations and judge later coherence separately.",
+  "language_limits": "Chinese month names contain numbers. Alphabet and Roman domains help distinguish month-name or numeral-form effects. A multilingual success alone does not establish a universal increment mechanism.",
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "base_dtype": "BF16",
+    "edit_dtype": "FP32 then one BF16 cast",
+    "attention": "eager",
+    "tf32": false
+  },
+  "engine_parent_sha256": "372b0d5d0eb90a8f3e9626b7611fbd4515ac3519c610a8c5438ca3708a3a34b1",
+  "status": "authorized_ready_to_rent",
+  "spending_limit": {
+    "total_usd": 5,
+    "hourly_usd": 0.3,
+    "authorization": "Yes—up to $5 total and $0.30/hour"
+  },
+  "lifecycle": "Preserve dashboard storage. No GPU lifecycle action without applicable authorization."
+}

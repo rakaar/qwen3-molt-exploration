@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "sampled_output_rows": 132,
+  "maximum_shared_norm_score_error": 2.7418136596679688e-06,
+  "maximum_raw_score_error": 1.430511474609375e-05,
+  "native_final_rmsnorm_exact": true,
+  "vectors_match_saved_intervention": true,
+  "ideal_additivity_max_error": 3.5762786865234375e-07,
+  "remainder_top_token_robust_to_bf16_rounding": true,
+  "remainder_top_token_id": 9307,
+  "ideal_remainder_top_token_id": 9307,
+  "contrast_pair": [
+    " xi",
+    " x"
+  ],
+  "contrast_margin": {
+    "full_mlp": 0.5983322560787201,
+    "removed_molt": 0.5636559128761292,
+    "after_removal": 0.03435349464416504
+  },
+  "vector_l2": {
+    "full_mlp": 73.89398956298828,
+    "removed_molt": 39.18781661987305,
+    "after_removal": 57.469818115234375
+  },
+  "source_results_sha256": "471fb128b157a7ecf9b641589382f4346ea263b043e62ad8f049eab06a5c355d",
+  "limits": [
+    "Output-row dot products are audited for the saved sample of rows, not all vocabulary rows.",
+    "These direct readouts exclude incoming residual and later-layer computations and are not answer probabilities."
+  ]
+}

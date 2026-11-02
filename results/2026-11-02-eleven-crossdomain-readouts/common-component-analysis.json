@@ -1,0 +1,42 @@
+{
+  "method": "For each held-out prompt, average unit contribution vectors from the other two domains, normalize that average, and project the held-out contribution onto this direction. No GPU inference or intervention was run.",
+  "results": {
+    "month": {
+      "donors": [
+        "alphabet",
+        "roman"
+      ],
+      "held_out_cosine_with_common_direction": 0.9882345961896907,
+      "shared_squared_norm_fraction": 0.9766076171061994,
+      "shared_l2": 17.153652894661338,
+      "residual_l2": 2.654812147898686,
+      "original_l2": 17.357875306936457,
+      "source_arrays_sha256": "9954031f06abae9b353ccf43fbd88bf96d4ac1aa409dcd33d058490c885a9e36"
+    },
+    "alphabet": {
+      "donors": [
+        "month",
+        "roman"
+      ],
+      "held_out_cosine_with_common_direction": 0.9924227790243607,
+      "shared_squared_norm_fraction": 0.984902972326436,
+      "shared_l2": 40.970968164808106,
+      "residual_l2": 5.072537054301401,
+      "original_l2": 41.28378452284839,
+      "source_arrays_sha256": "6b5c969955494eee771e035f3093a2cd1e4499e0c848cfe939279a1f4163e0be"
+    },
+    "roman": {
+      "donors": [
+        "month",
+        "alphabet"
+      ],
+      "held_out_cosine_with_common_direction": 0.989125684065323,
+      "shared_squared_norm_fraction": 0.9783696188776947,
+      "shared_l2": 38.761679746107234,
+      "residual_l2": 5.763458837503063,
+      "original_l2": 39.187820486872866,
+      "source_arrays_sha256": "fd07840819de5d3a7f121e60c16417ce30c4007c55dd76f079987b8a9b08b9a2"
+    }
+  },
+  "limits": "Squared-norm fraction measures geometric overlap, not causal responsibility or information content."
+}

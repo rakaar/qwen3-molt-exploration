@@ -1,0 +1,143 @@
+{
+  "feature": "L29-T2375",
+  "date_local": "2026-11-03",
+  "goal": "Natural input gate activation only; no contribution interventions.",
+  "formats": [
+    "raw completion prefix",
+    "single-user no-thinking chat question"
+  ],
+  "comparison": "11th versus 12th month within each fixed language and template",
+  "cases": [
+    {
+      "id": "en-raw-11",
+      "language": "English",
+      "format": "raw",
+      "ordinal": 11,
+      "prompt": "the eleventh month of the year is"
+    },
+    {
+      "id": "en-raw-12",
+      "language": "English",
+      "format": "raw",
+      "ordinal": 12,
+      "prompt": "the twelfth month of the year is"
+    },
+    {
+      "id": "es-raw-11",
+      "language": "Spanish",
+      "format": "raw",
+      "ordinal": 11,
+      "prompt": "el undécimo mes del año es"
+    },
+    {
+      "id": "es-raw-12",
+      "language": "Spanish",
+      "format": "raw",
+      "ordinal": 12,
+      "prompt": "el duodécimo mes del año es"
+    },
+    {
+      "id": "es-chat-11",
+      "language": "Spanish",
+      "format": "chat",
+      "ordinal": 11,
+      "prompt": "¿Cuál es el undécimo mes del año? Responde solo con el nombre del mes."
+    },
+    {
+      "id": "es-chat-12",
+      "language": "Spanish",
+      "format": "chat",
+      "ordinal": 12,
+      "prompt": "¿Cuál es el duodécimo mes del año? Responde solo con el nombre del mes."
+    },
+    {
+      "id": "zh-raw-11",
+      "language": "Chinese",
+      "format": "raw",
+      "ordinal": 11,
+      "prompt": "一年中的第十一个月是"
+    },
+    {
+      "id": "zh-raw-12",
+      "language": "Chinese",
+      "format": "raw",
+      "ordinal": 12,
+      "prompt": "一年中的第十二个月是"
+    },
+    {
+      "id": "zh-chat-11",
+      "language": "Chinese",
+      "format": "chat",
+      "ordinal": 11,
+      "prompt": "一年中的第十一个月叫什么？请只回答月份名称。"
+    },
+    {
+      "id": "zh-chat-12",
+      "language": "Chinese",
+      "format": "chat",
+      "ordinal": 12,
+      "prompt": "一年中的第十二个月叫什么？请只回答月份名称。"
+    },
+    {
+      "id": "fr-raw-11",
+      "language": "French",
+      "format": "raw",
+      "ordinal": 11,
+      "prompt": "le onzième mois de l'année est"
+    },
+    {
+      "id": "fr-raw-12",
+      "language": "French",
+      "format": "raw",
+      "ordinal": 12,
+      "prompt": "le douzième mois de l'année est"
+    },
+    {
+      "id": "fr-chat-11",
+      "language": "French",
+      "format": "chat",
+      "ordinal": 11,
+      "prompt": "Quel est le onzième mois de l'année ? Réponds uniquement par le nom du mois."
+    },
+    {
+      "id": "fr-chat-12",
+      "language": "French",
+      "format": "chat",
+      "ordinal": 12,
+      "prompt": "Quel est le douzième mois de l'année ? Réponds uniquement par le nom du mois."
+    },
+    {
+      "id": "hi-raw-11",
+      "language": "Hindi",
+      "format": "raw",
+      "ordinal": 11,
+      "prompt": "वर्ष का ग्यारहवाँ महीना है"
+    },
+    {
+      "id": "hi-raw-12",
+      "language": "Hindi",
+      "format": "raw",
+      "ordinal": 12,
+      "prompt": "वर्ष का बारहवाँ महीना है"
+    },
+    {
+      "id": "hi-chat-11",
+      "language": "Hindi",
+      "format": "chat",
+      "ordinal": 11,
+      "prompt": "वर्ष का ग्यारहवाँ महीना कौन-सा है? केवल महीने का नाम बताइए।"
+    },
+    {
+      "id": "hi-chat-12",
+      "language": "Hindi",
+      "format": "chat",
+      "ordinal": 12,
+      "prompt": "वर्ष का बारहवाँ महीना कौन-सा है? केवल महीने का नाम बताइए।"
+    }
+  ],
+  "limits": [
+    "One wording per added language and format; exploratory, no prevalence claim.",
+    "Chat-template token activation is reported separately from activation inside the user question.",
+    "Raw Chinese month names explicitly include the month number; no claim of language-independent abstraction."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "feature": "L29-T2375",
+  "date_local": "2026-11-03",
+  "names": [
+    "Month",
+    "Alphabet",
+    "Roman"
+  ],
+  "vector_definition": "Positive intended contribution c = gate(z) * ((z @ V @ U) * output_std), where z = (native_residual - input_mean) / input_std.",
+  "space": "Native MLP output/residual-stream units, before BF16 edit rounding and before final RMSNorm or vocabulary readout.",
+  "extra_rmsnorm_applied": false,
+  "molt_input_output_standardizers_retained": true,
+  "matrix_compares": "Original full prompt-specific contribution vectors, rather than fitted shared-component projections.",
+  "similarity": [
+    [
+      1.0,
+      0.9876729038710144,
+      0.9832845614702453
+    ],
+    [
+      0.9876729038710144,
+      1.0,
+      0.9888608598482779
+    ],
+    [
+      0.9832845614702453,
+      0.9888608598482779,
+      1.0
+    ]
+  ],
+  "magnitudes": [
+    {
+      "name": "Month",
+      "prompt": "the eleventh month of the year is",
+      "position": 7,
+      "token": " is",
+      "gate": 1.1585536003112793,
+      "operator_l2": 14.982367065601979,
+      "contribution_l2": 17.357875306936457,
+      "source_arrays": "comparisons/2026-11-02-eleven-contribution-readout/remote-export/eleven-contribution-readout-20261102/artifacts/readout-arrays.npz",
+      "source_arrays_sha256": "9954031f06abae9b353ccf43fbd88bf96d4ac1aa409dcd33d058490c885a9e36"
+    },
+    {
+      "name": "Alphabet",
+      "prompt": "the eleventh letter of the english alphabet is",
+      "position": 8,
+      "token": " is",
+      "gate": 1.9065866470336914,
+      "operator_l2": 21.653243277327515,
+      "contribution_l2": 41.28378452284839,
+      "source_arrays": "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/alphabet/artifacts/readout-arrays.npz",
+      "source_arrays_sha256": "6b5c969955494eee771e035f3093a2cd1e4499e0c848cfe939279a1f4163e0be"
+    },
+    {
+      "name": "Roman",
+      "prompt": "the eleventh positive integer in roman numerals is",
+      "position": 9,
+      "token": " is",
+      "gate": 1.6967718601226807,
+      "operator_l2": 23.09551531738195,
+      "contribution_l2": 39.187820486872866,
+      "source_arrays": "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/roman/artifacts/readout-arrays.npz",
+      "source_arrays_sha256": "fd07840819de5d3a7f121e60c16417ce30c4007c55dd76f079987b8a9b08b9a2"
+    }
+  ],
+  "cosine_note": "Cosine itself divides by vector L2 lengths. A positive scalar gate changes magnitude but not direction or cosine.",
+  "limits": "Three selected prompts with the same ordinal wording; alignment is not proof of a general ordinal mechanism or causal importance."
+}

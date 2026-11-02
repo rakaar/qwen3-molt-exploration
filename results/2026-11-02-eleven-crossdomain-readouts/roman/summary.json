@@ -1,0 +1,127 @@
+{
+  "case": {
+    "id": "roman",
+    "prior_case_id": "en_roman_1",
+    "prompt": "the eleventh positive integer in roman numerals is",
+    "position": 9,
+    "target_tokens": [
+      " xi",
+      " XI",
+      " x",
+      " X"
+    ],
+    "contrast_pair": [
+      " xi",
+      " x"
+    ],
+    "target_title": "XI tokens and XII first-token prefixes — all three parts",
+    "source_label": "XI",
+    "target_label": "XII",
+    "family": "Roman numerals",
+    "token_note": "XII is multi-token here: the gate-off response starts with the tokens ` x` and `ii`. The x/X rows are first-token prefixes, not complete XII answers."
+  },
+  "prompt": "the eleventh positive integer in roman numerals is",
+  "position": 9,
+  "normalization_scale": 0.05713202431797981,
+  "target_rows": [
+    {
+      "token_id": 37590,
+      "token": " xi",
+      "scores": {
+        "full_mlp": 0.7253914475440979,
+        "removed_molt": 0.43340879678726196,
+        "after_removal": 0.2919643223285675
+      },
+      "ranks": {
+        "full_mlp": 44,
+        "removed_molt": 174,
+        "after_removal": 817
+      },
+      "ideal_after_score": 0.29198265075683594,
+      "raw_scores": {
+        "full_mlp": 5.183664798736572,
+        "removed_molt": 2.6841158866882324,
+        "after_removal": 2.499643564224243
+      },
+      "actual_native_final_logit": 19.125
+    },
+    {
+      "token_id": 53243,
+      "token": " XI",
+      "scores": {
+        "full_mlp": 1.2002438306808472,
+        "removed_molt": 0.6589831709861755,
+        "after_removal": 0.5414056181907654
+      },
+      "ranks": {
+        "full_mlp": 8,
+        "removed_molt": 20,
+        "after_removal": 24
+      },
+      "ideal_after_score": 0.5412606000900269,
+      "raw_scores": {
+        "full_mlp": 7.600714683532715,
+        "removed_molt": 4.178322792053223,
+        "after_removal": 3.4237213134765625
+      },
+      "actual_native_final_logit": 17.75
+    },
+    {
+      "token_id": 856,
+      "token": " x",
+      "scores": {
+        "full_mlp": 0.1270591914653778,
+        "removed_molt": -0.1302471160888672,
+        "after_removal": 0.25761082768440247
+      },
+      "ranks": {
+        "full_mlp": 11812,
+        "removed_molt": 121590,
+        "after_removal": 1339
+      },
+      "ideal_after_score": 0.2573062777519226,
+      "raw_scores": {
+        "full_mlp": -0.35282009840011597,
+        "removed_molt": -0.6817383170127869,
+        "after_removal": 0.3300570547580719
+      },
+      "actual_native_final_logit": 18.25
+    },
+    {
+      "token_id": 1599,
+      "token": " X",
+      "scores": {
+        "full_mlp": 0.400246798992157,
+        "removed_molt": -0.14182035624980927,
+        "after_removal": 0.5419638752937317
+      },
+      "ranks": {
+        "full_mlp": 1183,
+        "removed_molt": 125059,
+        "after_removal": 23
+      },
+      "ideal_after_score": 0.5420671701431274,
+      "raw_scores": {
+        "full_mlp": 1.4069093465805054,
+        "removed_molt": -0.8302561044692993,
+        "after_removal": 2.23610782623291
+      },
+      "actual_native_final_logit": 16.0
+    }
+  ],
+  "direct_contrast_margin": {
+    "full_mlp": 0.5983322560787201,
+    "removed_molt": 0.5636559128761292,
+    "after_removal": 0.03435349464416504
+  },
+  "actual_model_first_token_margin": {
+    "native": 0.8750000411666194,
+    "gate_off": -1.7499998613359249
+  },
+  "actual_model_first_token_margin_change": -2.6249999025025446,
+  "direct_margin_change": -0.563978761434555,
+  "vocabulary_rows": 151936,
+  "audit": "pass",
+  "native_response": " xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the question is about the eleventh positive integer",
+  "saved_gate_off_response": " xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii, but the eleventh letter is k"
+}

@@ -1,0 +1,70 @@
+{
+  "new_inference": false,
+  "method": "Apply pinned FP32 gate encoders on CPU to saved native standardized states at final input token. Tiny differences from GPU reductions expected. No intervention.",
+  "source_controls_sha256": "870ec40e18025ea233e6656c234cdb279cff991ddab15bd22f654818db591342",
+  "rows": [
+    {
+      "ordinal": 1,
+      "prompt": "the first month of the year is",
+      "position": 6,
+      "token": " is",
+      "gates": {
+        "1181": {
+          "raw": 0.48339295387268066,
+          "threshold": 0.524233877658844,
+          "gate": 0.0
+        },
+        "2375": {
+          "raw": -0.4717293381690979,
+          "threshold": 0.5448488593101501,
+          "gate": 0.0
+        }
+      },
+      "response": " January, the second is February, and so on. The first day of the year is January 1. The first day of the year is also the first day of the year, and the last day of the year is December 31. The first day of the year is also the first day of the year",
+      "arrays": "comparisons/2026-10-28-water-raw-ordinal-ablation/remote-export/water-raw-ordinal-ablation-20261028/artifacts/month--ordinal-1--zero--step-0.npz",
+      "arrays_sha256": "191f7a536e3ea9343c7f96cec26f23e41d85b3bde43c86d64f950477d15f675b"
+    },
+    {
+      "ordinal": 11,
+      "prompt": "the eleventh month of the year is",
+      "position": 7,
+      "token": " is",
+      "gates": {
+        "1181": {
+          "raw": 1.516171932220459,
+          "threshold": 0.524233877658844,
+          "gate": 1.516171932220459
+        },
+        "2375": {
+          "raw": 1.1585543155670166,
+          "threshold": 0.5448488593101501,
+          "gate": 1.1585543155670166
+        }
+      },
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month is april. the fifth month is may. the sixth month is june. the seventh month is july. the eighth month is august. the ninth month",
+      "arrays": "comparisons/2026-10-28-water-raw-ordinal-ablation/remote-export/water-raw-ordinal-ablation-20261028/artifacts/month--ordinal-11--zero--step-0.npz",
+      "arrays_sha256": "2b4520c73faa737045eab7942194142c97daaafe2b0aeaa57ada45845673dea4"
+    },
+    {
+      "ordinal": 12,
+      "prompt": "the twelfth month of the year is",
+      "position": 7,
+      "token": " is",
+      "gates": {
+        "1181": {
+          "raw": 1.4894661903381348,
+          "threshold": 0.524233877658844,
+          "gate": 1.4894661903381348
+        },
+        "2375": {
+          "raw": -0.1557367444038391,
+          "threshold": 0.5448488593101501,
+          "gate": 0.0
+        }
+      },
+      "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the tw",
+      "arrays": "comparisons/2026-10-28-water-raw-ordinal-ablation/remote-export/water-raw-ordinal-ablation-20261028/artifacts/month--ordinal-12--zero--step-0.npz",
+      "arrays_sha256": "ca8f2882fe64c605131ee1c29eae3c064a2c6fc7c896da476715ec333ac087b3"
+    }
+  ]
+}

@@ -1,0 +1,5843 @@
+{
+  "feature": "L29-T1181",
+  "protocol": {
+    "date_local": "2026-11-03",
+    "feature": "L29-T1181",
+    "prompt": "the twelfth month of the year is",
+    "position": 7,
+    "token": " is",
+    "max_new_tokens": 32,
+    "probe_texts": [
+      " january",
+      " January",
+      " february",
+      " February",
+      " march",
+      " March",
+      " april",
+      " April",
+      " may",
+      " May",
+      " june",
+      " June",
+      " july",
+      " July",
+      " august",
+      " August",
+      " september",
+      " September",
+      " october",
+      " October",
+      " november",
+      " November",
+      " december",
+      " December"
+    ],
+    "scope": "T1181 off only at final input position 7; no generated-token edits; no other MOLT edits.",
+    "reference_native_first_32_tokens": [
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13
+    ],
+    "reference_cpu_gate": 1.4894661903381348,
+    "reference_controls_path": "comparisons/2026-10-28-water-raw-ordinal-ablation/remote-export/water-raw-ordinal-ablation-20261028/artifacts/controls.json",
+    "reference_controls_sha256": "870ec40e18025ea233e6656c234cdb279cff991ddab15bd22f654818db591342",
+    "feature_sha256": "063a1ce3819c264231b37d4fadf24e933f38b21ee1acf8c189f07d3ec71fd733",
+    "weights_manifest_sha256": "ee810842426eee4ee05916b2005016f0025e4d866600385ad00b3a1151fdf2e6",
+    "edit": "native MLP - natural T1181 gate * current T1181 operator; FP32 then one BF16 cast.",
+    "limits": [
+      "One spelled-out raw completion prefix.",
+      "Natural contribution removal at one input position; no all-input or output manipulation.",
+      "Exact answer-prefix probabilities exclude other answer formats."
+    ]
+  },
+  "native": {
+    "name": "native",
+    "prompt": "the twelfth month of the year is",
+    "prompt_token_ids": [
+      1782,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374
+    ],
+    "prompt_tokens": [
+      "the",
+      " tw",
+      "elfth",
+      " month",
+      " of",
+      " the",
+      " year",
+      " is"
+    ],
+    "position": 7,
+    "token": " is",
+    "target_gate": null,
+    "alpha": 1.0,
+    "output_token_ids": [
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13
+    ],
+    "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.",
+    "stop_reason": "token_limit",
+    "steps": [
+      {
+        "step": 0,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.5479656457901001,
+        "logits_sha256": "02be9eaf6eb484282adf5dd9e43988f5e613a188123b3b58f09d63226296f02c",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.5479656457901001
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 0.3323579728603363
+          },
+          {
+            "token_id": 2598,
+            "token": " called",
+            "probability": 0.024075929075479507
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.016547128558158875
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.010036340914666653
+          },
+          {
+            "token_id": 5267,
+            "token": "?\n",
+            "probability": 0.007816310040652752
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.005372066516429186
+          },
+          {
+            "token_id": 32671,
+            "token": " ______",
+            "probability": 0.003692163387313485
+          }
+        ]
+      },
+      {
+        "step": 1,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.45903196930885315,
+        "logits_sha256": "08c450370d04e17d6252273ec24e4a24bf81f1422daf98c3f6554e41f02a2513",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.45903196930885315
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.191352978348732
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.09038874506950378
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.07976778596639633
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.0703948363661766
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.03325216472148895
+          },
+          {
+            "token_id": 58883,
+            "token": "．",
+            "probability": 0.025896811857819557
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.01079539768397808
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.24166150391101837,
+        "logits_sha256": "2a81c4a233a21ad07a4faa014000d108cbce928ce8d90edd55fbf2373758902b",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.24166150391101837
+          },
+          {
+            "token_id": 576,
+            "token": " The",
+            "probability": 0.11415281146764755
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.07845599949359894
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.06923718005418777
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.05392197147011757
+          },
+          {
+            "token_id": 320,
+            "token": " (",
+            "probability": 0.04758596792817116
+          },
+          {
+            "token_id": 2055,
+            "token": " So",
+            "probability": 0.04199446737766266
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.028862349689006805
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.43709897994995117,
+        "logits_sha256": "f99a3bec54a6a9927a5585c9ae95f5048a83ecc43678a9400d921d7fe2d46109",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.43709897994995117
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 0.20647095143795013
+          },
+          {
+            "token_id": 11737,
+            "token": " fourth",
+            "probability": 0.04065653681755066
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.04065653681755066
+          },
+          {
+            "token_id": 4843,
+            "token": " third",
+            "probability": 0.03166334703564644
+          },
+          {
+            "token_id": 10510,
+            "token": " ele",
+            "probability": 0.03166334703564644
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.02465943992137909
+          },
+          {
+            "token_id": 17702,
+            "token": " fifth",
+            "probability": 0.019204789772629738
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9945015907287598,
+        "logits_sha256": "906da07bfd869cc84528a7b227a3a69b2913bfbf9c915c04afc0ae4dddedfa7d",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9945015907287598
+          },
+          {
+            "token_id": 301,
+            "token": "el",
+            "probability": 0.0052186655811965466
+          },
+          {
+            "token_id": 490,
+            "token": "elf",
+            "probability": 0.00020234961993992329
+          },
+          {
+            "token_id": 273,
+            "token": "le",
+            "probability": 3.984499926446006e-05
+          },
+          {
+            "token_id": 306,
+            "token": "ent",
+            "probability": 1.0074393685499672e-05
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 7.845946129236836e-06
+          },
+          {
+            "token_id": 4275,
+            "token": "elves",
+            "probability": 3.270676870670286e-06
+          },
+          {
+            "token_id": 268,
+            "token": "en",
+            "probability": 2.3928782866278198e-06
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.9914480447769165,
+        "logits_sha256": "0db3cbe88c7a823903b33f2fdf29abb051761a584e592e83009af80f0455761b",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.9914480447769165
+          },
+          {
+            "token_id": 6524,
+            "token": " letter",
+            "probability": 0.0058953650295734406
+          },
+          {
+            "token_id": 1899,
+            "token": " day",
+            "probability": 0.0024575539864599705
+          },
+          {
+            "token_id": 2355,
+            "token": " power",
+            "probability": 6.549159297719598e-05
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 3.093604027526453e-05
+          },
+          {
+            "token_id": 9864,
+            "token": " animal",
+            "probability": 1.6558868082938716e-05
+          },
+          {
+            "token_id": 3951,
+            "token": " months",
+            "probability": 8.863323273544665e-06
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 7.821855433576275e-06
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9574998021125793,
+        "logits_sha256": "e4d7dd9cd2c18e8b2d0fa2a6988aadae1c59a9e8f2a94680af42db676a11c908",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9574998021125793
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.025516506284475327
+          },
+          {
+            "token_id": 504,
+            "token": " from",
+            "probability": 0.00828399695456028
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 0.0073106009513139725
+          },
+          {
+            "token_id": 1283,
+            "token": " after",
+            "probability": 0.0004124359111301601
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 0.00036397340591065586
+          },
+          {
+            "token_id": 594,
+            "token": "'s",
+            "probability": 0.00011816486221505329
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 5.5817130487412214e-05
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9992741942405701,
+        "logits_sha256": "4d4265b5959b5a0501815d91f3f77c6a978454dd51ac9223b17cac40dc925923",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9992741942405701
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 0.000335219141561538
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 0.00017942987324204296
+          },
+          {
+            "token_id": 1790,
+            "token": " next",
+            "probability": 0.00017942987324204296
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 1.299785708397394e-05
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 2.5594297312636627e-06
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.258688937217812e-06
+          },
+          {
+            "token_id": 458,
+            "token": " an",
+            "probability": 1.9932858776883222e-06
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9998466968536377,
+        "logits_sha256": "02f131c03a76fbc0f57e47312b09afc0a899c86911ec1d8443b57608a5ef7d26",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9998466968536377
+          },
+          {
+            "token_id": 13168,
+            "token": " calendar",
+            "probability": 3.535208088578656e-05
+          },
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 1.8922604795079678e-05
+          },
+          {
+            "token_id": 56711,
+            "token": " lunar",
+            "probability": 1.473693919251673e-05
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 1.473693919251673e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.3005304026592057e-05
+          },
+          {
+            "token_id": 41193,
+            "token": " french",
+            "probability": 8.938405699154828e-06
+          },
+          {
+            "token_id": 1790,
+            "token": " next",
+            "probability": 7.888114851084538e-06
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.9827530384063721,
+        "logits_sha256": "9d77495aa1957fc445044dc12ec8d3d3a1c68f77f248e569f53e219fdcfa8d21",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.9827530384063721
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 0.010917400941252708
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.0016742376610636711
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 0.0004233135550748557
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.00025675262440927327
+          },
+          {
+            "token_id": 1283,
+            "token": " after",
+            "probability": 0.00025675262440927327
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 0.00017646333435550332
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.00017646333435550332
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.6964007616043091,
+        "logits_sha256": "441501820ef015cf4bee117245dc3b804c1c1f6ef9b7900f2e0248fca85b912e",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.6964007616043091
+          },
+          {
+            "token_id": 1083,
+            "token": " also",
+            "probability": 0.19952215254306793
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.030597714707255363
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 0.018558451905846596
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.009933622553944588
+          },
+          {
+            "token_id": 502,
+            "token": " j",
+            "probability": 0.004140949808061123
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 0.003654375672340393
+          },
+          {
+            "token_id": 5990,
+            "token": " usually",
+            "probability": 0.002359442412853241
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9216121435165405,
+        "logits_sha256": "ea03b0f481b211adb5fcf5a4be2b33d023eb09eea14bd4d6c8c18903c71b9420",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9216121435165405
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.040492814034223557
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.02167424187064171
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.009035168215632439
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.0008404015097767115
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.0007416517473757267
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.000509729259647429
+          },
+          {
+            "token_id": 323,
+            "token": " and",
+            "probability": 0.0004498345369938761
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.821422278881073,
+        "logits_sha256": "6f3483705673692bc3ce78f8311c2c28b7d2085f1146e9ea3a913161c578291f",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.821422278881073
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.04634147509932518
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.02189016155898571
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.0091251777485013
+          },
+          {
+            "token_id": 4710,
+            "token": " \n\n",
+            "probability": 0.008052940480411053
+          },
+          {
+            "token_id": 320,
+            "token": " (",
+            "probability": 0.006271636113524437
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.006271636113524437
+          },
+          {
+            "token_id": 4486,
+            "token": " please",
+            "probability": 0.005534699652343988
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.9890201687812805,
+        "logits_sha256": "9435a2620994288951be29e08c7c6d0682fa26aee20333a8a958f78fb9beffe0",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.9890201687812805
+          },
+          {
+            "token_id": 29235,
+            "token": " twelve",
+            "probability": 0.0019092580769211054
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 0.0016849144594743848
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.0007023767684586346
+          },
+          {
+            "token_id": 4226,
+            "token": " answer",
+            "probability": 0.0005470116157084703
+          },
+          {
+            "token_id": 270,
+            "token": " th",
+            "probability": 0.0005470116157084703
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.00048273606807924807
+          },
+          {
+            "token_id": 2086,
+            "token": " second",
+            "probability": 0.0003317793016321957
+          }
+        ]
+      },
+      {
+        "step": 14,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9999203681945801,
+        "logits_sha256": "9bfa2b1349eeb7c8c5f7d5f354bc82fb3865ce19499443868542d06151ff4bdb",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9999203681945801
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 6.605124508496374e-05
+          },
+          {
+            "token_id": 47021,
+            "token": "inth",
+            "probability": 1.0129286238225177e-05
+          },
+          {
+            "token_id": 490,
+            "token": "elf",
+            "probability": 1.99457485905441e-06
+          },
+          {
+            "token_id": 301,
+            "token": "el",
+            "probability": 5.714552457902755e-07
+          },
+          {
+            "token_id": 51131,
+            "token": "entieth",
+            "probability": 3.058779611819773e-07
+          },
+          {
+            "token_id": 7166,
+            "token": "enty",
+            "probability": 1.2750889766266482e-07
+          },
+          {
+            "token_id": 21877,
+            "token": "ighth",
+            "probability": 1.1252621590074341e-07
+          }
+        ]
+      },
+      {
+        "step": 15,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.9995473027229309,
+        "logits_sha256": "d28c6d6e055d9e93ed24a63f823387201c2c32e61b3cffc70b8f6332688942cd",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.9995473027229309
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 5.826827327837236e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 3.5341494367457926e-05
+          },
+          {
+            "token_id": 6524,
+            "token": " letter",
+            "probability": 3.5341494367457926e-05
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 3.5341494367457926e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.5341494367457926e-05
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 2.7523985409061424e-05
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 2.1435700546135195e-05
+          }
+        ]
+      },
+      {
+        "step": 16,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9983772039413452,
+        "logits_sha256": "bdb57a190fef14b9e25201bbdd3a7e479d06901ac6ee13cff13c0b5c9e4da181",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9983772039413452
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.0015009994385764003
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 3.11522489937488e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.6674597645760514e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.0113653843291104e-05
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 6.134241630206816e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 5.413449343905086e-06
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 4.215998615109129e-06
+          }
+        ]
+      },
+      {
+        "step": 17,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9997865557670593,
+        "logits_sha256": "100bad5d39e1b5f517a02b457ad804f5942817ccbb6f3b287c4d80df863739aa",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9997865557670593
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 4.0056740544969216e-05
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 2.7530573788681068e-05
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 2.7530573788681068e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.6698135368642397e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.47360524351825e-05
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 1.47360524351825e-05
+          },
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 1.300452095165383e-05
+          }
+        ]
+      },
+      {
+        "step": 18,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9999979734420776,
+        "logits_sha256": "9e0ded19bf10bb480155700a2f29e075fc13b33f172c823c734b2c2a8e9cbdfd",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9999979734420776
+          },
+          {
+            "token_id": 3157,
+            "token": "year",
+            "probability": 1.0677018735805177e-06
+          },
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 1.8553878078364505e-07
+          },
+          {
+            "token_id": 1635,
+            "token": " years",
+            "probability": 1.4449773289015866e-07
+          },
+          {
+            "token_id": 14645,
+            "token": "_year",
+            "probability": 8.76423058571163e-08
+          },
+          {
+            "token_id": 24414,
+            "token": ".year",
+            "probability": 8.76423058571163e-08
+          },
+          {
+            "token_id": 9742,
+            "token": " Year",
+            "probability": 7.734406182180464e-08
+          },
+          {
+            "token_id": 3409,
+            "token": " word",
+            "probability": 7.734406182180464e-08
+          }
+        ]
+      },
+      {
+        "step": 19,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.9998855590820312,
+        "logits_sha256": "43411f77107bd2d7db825c925243964878cc2b9bab2841b19c16981a53201b6c",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.9998855590820312
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 1.1477586667751893e-05
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 1.1477586667751893e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.0128933354280889e-05
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 6.961508006497752e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 6.961508006497752e-06
+          },
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 6.143509381217882e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 4.222367806505645e-06
+          }
+        ]
+      },
+      {
+        "step": 20,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.9990971088409424,
+        "logits_sha256": "47b718283877891192ab8e1dcd4aee87566696150faa9461cb456505e7cce61d",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.9990971088409424
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.0008040064130909741
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 4.535893822321668e-05
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 7.88220131653361e-06
+          },
+          {
+            "token_id": 53202,
+            "token": " christmas",
+            "probability": 6.9560182964778505e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 4.780797098646872e-06
+          },
+          {
+            "token_id": 84223,
+            "token": " november",
+            "probability": 4.780797098646872e-06
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.2582885321753565e-06
+          }
+        ]
+      },
+      {
+        "step": 21,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9307449460029602,
+        "logits_sha256": "c10ecc01b4fb95e977854912797f4f861bf2e5b998ac335fa4edb05e0f77aa2c",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9307449460029602
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.04633906111121178
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.02188902348279953
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.00021459243725985289
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.0001474870805395767
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.0001148630544776097
+          },
+          {
+            "token_id": 1189,
+            "token": ".\"",
+            "probability": 6.966797081986442e-05
+          },
+          {
+            "token_id": 1773,
+            "token": "。",
+            "probability": 6.148176180431619e-05
+          }
+        ]
+      },
+      {
+        "step": 22,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9430941939353943,
+        "logits_sha256": "3704a3332bad81673d81596afc903c2f569f11bba9043020f4ded3242c789dea",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9430941939353943
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.011871804483234882
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.008159363642334938
+          },
+          {
+            "token_id": 4710,
+            "token": " \n\n",
+            "probability": 0.004367392975836992
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.003001662204042077
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.002337696962058544
+          },
+          {
+            "token_id": 576,
+            "token": " The",
+            "probability": 0.0016066741663962603
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 0.0016066741663962603
+          }
+        ]
+      },
+      {
+        "step": 23,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.9985958933830261,
+        "logits_sha256": "e9402cfe5a03405d03d334079451d0f888a4ae18a287e4e8b0696cae8cb83cc2",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.9985958933830261
+          },
+          {
+            "token_id": 29235,
+            "token": " twelve",
+            "probability": 0.00033499160781502724
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.00015823882131371647
+          },
+          {
+            "token_id": 11737,
+            "token": " fourth",
+            "probability": 0.00013964528625365347
+          },
+          {
+            "token_id": 270,
+            "token": " th",
+            "probability": 0.0001087558557628654
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 9.597670577932149e-05
+          },
+          {
+            "token_id": 42541,
+            "token": " ninth",
+            "probability": 5.821281229145825e-05
+          },
+          {
+            "token_id": 61420,
+            "token": " twentieth",
+            "probability": 5.1372629968682304e-05
+          }
+        ]
+      },
+      {
+        "step": 24,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9769251346588135,
+        "logits_sha256": "4c25f813632b184197263ad48db332a095485070fd4fb2d33e72803100cdc9c6",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9769251346588135
+          },
+          {
+            "token_id": 47021,
+            "token": "inth",
+            "probability": 0.020275434479117393
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 0.0027439817786216736
+          },
+          {
+            "token_id": 21877,
+            "token": "ighth",
+            "probability": 1.6316311302944086e-05
+          },
+          {
+            "token_id": 26872,
+            "token": "entine",
+            "probability": 1.4399093743122648e-05
+          },
+          {
+            "token_id": 7166,
+            "token": "enty",
+            "probability": 4.674701813200954e-06
+          },
+          {
+            "token_id": 51131,
+            "token": "entieth",
+            "probability": 4.125409304833738e-06
+          },
+          {
+            "token_id": 43409,
+            "token": "entin",
+            "probability": 2.208172645623563e-06
+          }
+        ]
+      },
+      {
+        "step": 25,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.9999589920043945,
+        "logits_sha256": "d09c69c7602b51e8561529253bc39e7d327004ce55dced813759497c880422f4",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.9999589920043945
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 3.726500381162623e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 3.2886250664887484e-06
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 2.902201686083572e-06
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 2.902201686083572e-06
+          },
+          {
+            "token_id": 9754,
+            "token": "月",
+            "probability": 2.5611836917960318e-06
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.260236669826554e-06
+          },
+          {
+            "token_id": 27053,
+            "token": ".month",
+            "probability": 1.994651938730385e-06
+          }
+        ]
+      },
+      {
+        "step": 26,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9999173879623413,
+        "logits_sha256": "5e9030c2238f721d9dcbe9b88594ec006f32ec76e899fc315313a2cef806282c",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9999173879623413
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 6.605104863410816e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.260142764498596e-06
+          },
+          {
+            "token_id": 59735,
+            "token": " của",
+            "probability": 1.7602009165784693e-06
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 1.7602009165784693e-06
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 1.3708458936889656e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.3708458936889656e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 8.31460056360811e-07
+          }
+        ]
+      },
+      {
+        "step": 27,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9999785423278809,
+        "logits_sha256": "d1aecda08433c5b52dcd2e9429de616ccdeacfca498799421ceda9fb0bdf30b9",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9999785423278809
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.288689413238899e-06
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 2.2602810076932656e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 2.2602810076932656e-06
+          },
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 1.7603085780137917e-06
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 1.6536569091840647e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.2098412298655603e-06
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 6.893467343616067e-07
+          }
+        ]
+      },
+      {
+        "step": 28,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9999996423721313,
+        "logits_sha256": "8bedcb6ebeba84ac5dfec2d60d116d8b28f1dfba45b3a144e1957c81b2c595a1",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9999996423721313
+          },
+          {
+            "token_id": 3157,
+            "token": "year",
+            "probability": 3.4663264614209766e-07
+          },
+          {
+            "token_id": 24414,
+            "token": ".year",
+            "probability": 9.23744636338597e-09
+          },
+          {
+            "token_id": 14645,
+            "token": "_year",
+            "probability": 9.23744636338597e-09
+          },
+          {
+            "token_id": 9742,
+            "token": " Year",
+            "probability": 5.602794228565244e-09
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.850740615263248e-09
+          },
+          {
+            "token_id": 4666,
+            "token": "-year",
+            "probability": 2.9989597472024343e-09
+          },
+          {
+            "token_id": 50905,
+            "token": " YEAR",
+            "probability": 9.736197403853453e-10
+          }
+        ]
+      },
+      {
+        "step": 29,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.9999864101409912,
+        "logits_sha256": "7f228977fc297c58d57fe7a4275f3f47365efb79ce1cd09694ccf0c4554b4e82",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.9999864101409912
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.994706735786167e-06
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 9.4223270252769e-07
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 7.338115892707719e-07
+          },
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 6.475864324784197e-07
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 5.714929898203991e-07
+          },
+          {
+            "token_id": 525,
+            "token": " are",
+            "probability": 5.714929898203991e-07
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 5.043407895755081e-07
+          }
+        ]
+      },
+      {
+        "step": 30,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.9996432065963745,
+        "logits_sha256": "ff589034e2493211cb2df96753953c2767fa6e345e7684cda2e232e78f683a3f",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.9996432065963745
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.0003353429492563009
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 1.147480452345917e-05
+          },
+          {
+            "token_id": 53202,
+            "token": " christmas",
+            "probability": 1.7597182022655034e-06
+          },
+          {
+            "token_id": 84223,
+            "token": " november",
+            "probability": 1.3704699313166202e-06
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 1.0673230690372293e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 8.312320574077603e-07
+          },
+          {
+            "token_id": 134829,
+            "token": " décembre",
+            "probability": 7.335597160817997e-07
+          }
+        ]
+      },
+      {
+        "step": 31,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9575552344322205,
+        "logits_sha256": "6dfceca5fcb227ef8cb278cc3328e9a4a80d8fa6b09b288e17cdd3fc0c183de3",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9575552344322205
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.03276573866605759
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.009387541562318802
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 5.582036101259291e-05
+          },
+          {
+            "token_id": 1189,
+            "token": ".\"",
+            "probability": 2.636767203512136e-05
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 2.32693873840617e-05
+          },
+          {
+            "token_id": 4192,
+            "token": ".\n\n\n",
+            "probability": 1.8122216715710238e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.2455206160666421e-05
+          }
+        ]
+      }
+    ],
+    "first_token_probabilities": {
+      " january": 0.002875459846109152,
+      " January": 0.002875459846109152,
+      " february": 0.00019567747949622571,
+      " February": 0.00011149367492180318,
+      " march": 2.648207009769976e-05,
+      " March": 9.151957783615217e-06,
+      " april": 4.1016231989488006e-05,
+      " April": 7.127552180463681e-06,
+      " may": 1.5089028238435276e-05,
+      " May": 8.512647582392674e-07,
+      " june": 0.0004996799980290234,
+      " June": 1.238582854057313e-06,
+      " july": 0.0004996799980290234,
+      " July": 1.0268212236042018e-06,
+      " august": 4.366154826129787e-05,
+      " August": 2.9712057312281104e-06,
+      " september": 3.619669587351382e-05,
+      " September": 1.9183546555723296e-06,
+      " october": 1.5903718804111122e-06,
+      " October": 7.127552180463681e-06,
+      " november": 0.0008238329901359975,
+      " November": 0.00010473860311321914,
+      " december": 0.5479656457901001,
+      " December": 0.3323579728603363
+    },
+    "candidate_scores": {
+      " january": {
+        "token_ids": [
+          32862,
+          3536
+        ],
+        "conditional_probabilities": [
+          0.002875459846109152,
+          0.9974919557571411
+        ],
+        "probability": 0.002868248065596546
+      },
+      " January": {
+        "token_ids": [
+          6058
+        ],
+        "conditional_probabilities": [
+          0.002875459846109152
+        ],
+        "probability": 0.002875459846109152
+      },
+      " february": {
+        "token_ids": [
+          1152,
+          6812
+        ],
+        "conditional_probabilities": [
+          0.00019567747949622571,
+          0.8344504237174988
+        ],
+        "probability": 0.00016328315567759773
+      },
+      " February": {
+        "token_ids": [
+          7400
+        ],
+        "conditional_probabilities": [
+          0.00011149367492180318
+        ],
+        "probability": 0.00011149367492180318
+      },
+      " march": {
+        "token_ids": [
+          15217
+        ],
+        "conditional_probabilities": [
+          2.648207009769976e-05
+        ],
+        "probability": 2.648207009769976e-05
+      },
+      " March": {
+        "token_ids": [
+          5470
+        ],
+        "conditional_probabilities": [
+          9.151957783615217e-06
+        ],
+        "probability": 9.151957783615217e-06
+      },
+      " april": {
+        "token_ids": [
+          73700
+        ],
+        "conditional_probabilities": [
+          4.1016231989488006e-05
+        ],
+        "probability": 4.1016231989488006e-05
+      },
+      " April": {
+        "token_ids": [
+          5813
+        ],
+        "conditional_probabilities": [
+          7.127552180463681e-06
+        ],
+        "probability": 7.127552180463681e-06
+      },
+      " may": {
+        "token_ids": [
+          1231
+        ],
+        "conditional_probabilities": [
+          1.5089028238435276e-05
+        ],
+        "probability": 1.5089028238435276e-05
+      },
+      " May": {
+        "token_ids": [
+          3217
+        ],
+        "conditional_probabilities": [
+          8.512647582392674e-07
+        ],
+        "probability": 8.512647582392674e-07
+      },
+      " june": {
+        "token_ids": [
+          502,
+          2886
+        ],
+        "conditional_probabilities": [
+          0.0004996799980290234,
+          0.26040124893188477
+        ],
+        "probability": 0.00013011729555303941
+      },
+      " June": {
+        "token_ids": [
+          5534
+        ],
+        "conditional_probabilities": [
+          1.238582854057313e-06
+        ],
+        "probability": 1.238582854057313e-06
+      },
+      " july": {
+        "token_ids": [
+          502,
+          3901
+        ],
+        "conditional_probabilities": [
+          0.0004996799980290234,
+          0.03751435875892639
+        ],
+        "probability": 1.8745174710720416e-05
+      },
+      " July": {
+        "token_ids": [
+          5768
+        ],
+        "conditional_probabilities": [
+          1.0268212236042018e-06
+        ],
+        "probability": 1.0268212236042018e-06
+      },
+      " august": {
+        "token_ids": [
+          70619
+        ],
+        "conditional_probabilities": [
+          4.366154826129787e-05
+        ],
+        "probability": 4.366154826129787e-05
+      },
+      " August": {
+        "token_ids": [
+          6156
+        ],
+        "conditional_probabilities": [
+          2.9712057312281104e-06
+        ],
+        "probability": 2.9712057312281104e-06
+      },
+      " september": {
+        "token_ids": [
+          83649
+        ],
+        "conditional_probabilities": [
+          3.619669587351382e-05
+        ],
+        "probability": 3.619669587351382e-05
+      },
+      " September": {
+        "token_ids": [
+          6122
+        ],
+        "conditional_probabilities": [
+          1.9183546555723296e-06
+        ],
+        "probability": 1.9183546555723296e-06
+      },
+      " october": {
+        "token_ids": [
+          18491,
+          5923
+        ],
+        "conditional_probabilities": [
+          1.5903718804111122e-06,
+          0.9948651194572449
+        ],
+        "probability": 1.5822055107866443e-06
+      },
+      " October": {
+        "token_ids": [
+          6527
+        ],
+        "conditional_probabilities": [
+          7.127552180463681e-06
+        ],
+        "probability": 7.127552180463681e-06
+      },
+      " november": {
+        "token_ids": [
+          84223
+        ],
+        "conditional_probabilities": [
+          0.0008238329901359975
+        ],
+        "probability": 0.0008238329901359975
+      },
+      " November": {
+        "token_ids": [
+          6702
+        ],
+        "conditional_probabilities": [
+          0.00010473860311321914
+        ],
+        "probability": 0.00010473860311321914
+      },
+      " december": {
+        "token_ids": [
+          89011
+        ],
+        "conditional_probabilities": [
+          0.5479656457901001
+        ],
+        "probability": 0.5479656457901001
+      },
+      " December": {
+        "token_ids": [
+          6652
+        ],
+        "conditional_probabilities": [
+          0.3323579728603363
+        ],
+        "probability": 0.3323579728603363
+      }
+    },
+    "selected_input_positions": [],
+    "generated_positions_edited": [],
+    "edit_calls": 0,
+    "generated_passes_without_edit": 0,
+    "arrays": {
+      "file": "native-arrays.npz",
+      "sha256": "3f87f08e3aca6de9ecc4832ef914c852f12536ae08e8ba19d1e6c4036127014b"
+    },
+    "month_probabilities": {
+      "january": 0.005743707911705698,
+      "february": 0.0002747768305994009,
+      "march": 3.563402788131498e-05,
+      "april": 4.814378416995169e-05,
+      "may": 1.5940292996674543e-05,
+      "june": 0.00013135587840709673,
+      "july": 1.9771995934324618e-05,
+      "august": 4.663275399252598e-05,
+      "september": 3.811505052908615e-05,
+      "october": 8.709757691250325e-06,
+      "november": 0.0009285715932492167,
+      "december": 0.8803236186504364
+    },
+    "initial_word": "december"
+  },
+  "observed": {
+    "name": "observed",
+    "prompt": "the twelfth month of the year is",
+    "prompt_token_ids": [
+      1782,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374
+    ],
+    "prompt_tokens": [
+      "the",
+      " tw",
+      "elfth",
+      " month",
+      " of",
+      " the",
+      " year",
+      " is"
+    ],
+    "position": 7,
+    "token": " is",
+    "target_gate": null,
+    "alpha": 1.0,
+    "output_token_ids": [
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13
+    ],
+    "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.",
+    "stop_reason": "token_limit",
+    "steps": [
+      {
+        "step": 0,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.5479656457901001,
+        "logits_sha256": "02be9eaf6eb484282adf5dd9e43988f5e613a188123b3b58f09d63226296f02c",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.5479656457901001
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 0.3323579728603363
+          },
+          {
+            "token_id": 2598,
+            "token": " called",
+            "probability": 0.024075929075479507
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.016547128558158875
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.010036340914666653
+          },
+          {
+            "token_id": 5267,
+            "token": "?\n",
+            "probability": 0.007816310040652752
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.005372066516429186
+          },
+          {
+            "token_id": 32671,
+            "token": " ______",
+            "probability": 0.003692163387313485
+          }
+        ]
+      },
+      {
+        "step": 1,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.45903196930885315,
+        "logits_sha256": "08c450370d04e17d6252273ec24e4a24bf81f1422daf98c3f6554e41f02a2513",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.45903196930885315
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.191352978348732
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.09038874506950378
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.07976778596639633
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.0703948363661766
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.03325216472148895
+          },
+          {
+            "token_id": 58883,
+            "token": "．",
+            "probability": 0.025896811857819557
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.01079539768397808
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.24166150391101837,
+        "logits_sha256": "2a81c4a233a21ad07a4faa014000d108cbce928ce8d90edd55fbf2373758902b",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.24166150391101837
+          },
+          {
+            "token_id": 576,
+            "token": " The",
+            "probability": 0.11415281146764755
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.07845599949359894
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.06923718005418777
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.05392197147011757
+          },
+          {
+            "token_id": 320,
+            "token": " (",
+            "probability": 0.04758596792817116
+          },
+          {
+            "token_id": 2055,
+            "token": " So",
+            "probability": 0.04199446737766266
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.028862349689006805
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.43709897994995117,
+        "logits_sha256": "f99a3bec54a6a9927a5585c9ae95f5048a83ecc43678a9400d921d7fe2d46109",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.43709897994995117
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 0.20647095143795013
+          },
+          {
+            "token_id": 11737,
+            "token": " fourth",
+            "probability": 0.04065653681755066
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.04065653681755066
+          },
+          {
+            "token_id": 4843,
+            "token": " third",
+            "probability": 0.03166334703564644
+          },
+          {
+            "token_id": 10510,
+            "token": " ele",
+            "probability": 0.03166334703564644
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.02465943992137909
+          },
+          {
+            "token_id": 17702,
+            "token": " fifth",
+            "probability": 0.019204789772629738
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9945015907287598,
+        "logits_sha256": "906da07bfd869cc84528a7b227a3a69b2913bfbf9c915c04afc0ae4dddedfa7d",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9945015907287598
+          },
+          {
+            "token_id": 301,
+            "token": "el",
+            "probability": 0.0052186655811965466
+          },
+          {
+            "token_id": 490,
+            "token": "elf",
+            "probability": 0.00020234961993992329
+          },
+          {
+            "token_id": 273,
+            "token": "le",
+            "probability": 3.984499926446006e-05
+          },
+          {
+            "token_id": 306,
+            "token": "ent",
+            "probability": 1.0074393685499672e-05
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 7.845946129236836e-06
+          },
+          {
+            "token_id": 4275,
+            "token": "elves",
+            "probability": 3.270676870670286e-06
+          },
+          {
+            "token_id": 268,
+            "token": "en",
+            "probability": 2.3928782866278198e-06
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.9914480447769165,
+        "logits_sha256": "0db3cbe88c7a823903b33f2fdf29abb051761a584e592e83009af80f0455761b",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.9914480447769165
+          },
+          {
+            "token_id": 6524,
+            "token": " letter",
+            "probability": 0.0058953650295734406
+          },
+          {
+            "token_id": 1899,
+            "token": " day",
+            "probability": 0.0024575539864599705
+          },
+          {
+            "token_id": 2355,
+            "token": " power",
+            "probability": 6.549159297719598e-05
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 3.093604027526453e-05
+          },
+          {
+            "token_id": 9864,
+            "token": " animal",
+            "probability": 1.6558868082938716e-05
+          },
+          {
+            "token_id": 3951,
+            "token": " months",
+            "probability": 8.863323273544665e-06
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 7.821855433576275e-06
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9574998021125793,
+        "logits_sha256": "e4d7dd9cd2c18e8b2d0fa2a6988aadae1c59a9e8f2a94680af42db676a11c908",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9574998021125793
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.025516506284475327
+          },
+          {
+            "token_id": 504,
+            "token": " from",
+            "probability": 0.00828399695456028
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 0.0073106009513139725
+          },
+          {
+            "token_id": 1283,
+            "token": " after",
+            "probability": 0.0004124359111301601
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 0.00036397340591065586
+          },
+          {
+            "token_id": 594,
+            "token": "'s",
+            "probability": 0.00011816486221505329
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 5.5817130487412214e-05
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9992741942405701,
+        "logits_sha256": "4d4265b5959b5a0501815d91f3f77c6a978454dd51ac9223b17cac40dc925923",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9992741942405701
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 0.000335219141561538
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 0.00017942987324204296
+          },
+          {
+            "token_id": 1790,
+            "token": " next",
+            "probability": 0.00017942987324204296
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 1.299785708397394e-05
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 2.5594297312636627e-06
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.258688937217812e-06
+          },
+          {
+            "token_id": 458,
+            "token": " an",
+            "probability": 1.9932858776883222e-06
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9998466968536377,
+        "logits_sha256": "02f131c03a76fbc0f57e47312b09afc0a899c86911ec1d8443b57608a5ef7d26",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9998466968536377
+          },
+          {
+            "token_id": 13168,
+            "token": " calendar",
+            "probability": 3.535208088578656e-05
+          },
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 1.8922604795079678e-05
+          },
+          {
+            "token_id": 56711,
+            "token": " lunar",
+            "probability": 1.473693919251673e-05
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 1.473693919251673e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.3005304026592057e-05
+          },
+          {
+            "token_id": 41193,
+            "token": " french",
+            "probability": 8.938405699154828e-06
+          },
+          {
+            "token_id": 1790,
+            "token": " next",
+            "probability": 7.888114851084538e-06
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.9827530384063721,
+        "logits_sha256": "9d77495aa1957fc445044dc12ec8d3d3a1c68f77f248e569f53e219fdcfa8d21",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.9827530384063721
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 0.010917400941252708
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.0016742376610636711
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 0.0004233135550748557
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.00025675262440927327
+          },
+          {
+            "token_id": 1283,
+            "token": " after",
+            "probability": 0.00025675262440927327
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 0.00017646333435550332
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.00017646333435550332
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.6964007616043091,
+        "logits_sha256": "441501820ef015cf4bee117245dc3b804c1c1f6ef9b7900f2e0248fca85b912e",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.6964007616043091
+          },
+          {
+            "token_id": 1083,
+            "token": " also",
+            "probability": 0.19952215254306793
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.030597714707255363
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 0.018558451905846596
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.009933622553944588
+          },
+          {
+            "token_id": 502,
+            "token": " j",
+            "probability": 0.004140949808061123
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 0.003654375672340393
+          },
+          {
+            "token_id": 5990,
+            "token": " usually",
+            "probability": 0.002359442412853241
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9216121435165405,
+        "logits_sha256": "ea03b0f481b211adb5fcf5a4be2b33d023eb09eea14bd4d6c8c18903c71b9420",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9216121435165405
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.040492814034223557
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.02167424187064171
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.009035168215632439
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.0008404015097767115
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.0007416517473757267
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.000509729259647429
+          },
+          {
+            "token_id": 323,
+            "token": " and",
+            "probability": 0.0004498345369938761
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.821422278881073,
+        "logits_sha256": "6f3483705673692bc3ce78f8311c2c28b7d2085f1146e9ea3a913161c578291f",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.821422278881073
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.04634147509932518
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.02189016155898571
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.0091251777485013
+          },
+          {
+            "token_id": 4710,
+            "token": " \n\n",
+            "probability": 0.008052940480411053
+          },
+          {
+            "token_id": 320,
+            "token": " (",
+            "probability": 0.006271636113524437
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.006271636113524437
+          },
+          {
+            "token_id": 4486,
+            "token": " please",
+            "probability": 0.005534699652343988
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.9890201687812805,
+        "logits_sha256": "9435a2620994288951be29e08c7c6d0682fa26aee20333a8a958f78fb9beffe0",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.9890201687812805
+          },
+          {
+            "token_id": 29235,
+            "token": " twelve",
+            "probability": 0.0019092580769211054
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 0.0016849144594743848
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.0007023767684586346
+          },
+          {
+            "token_id": 4226,
+            "token": " answer",
+            "probability": 0.0005470116157084703
+          },
+          {
+            "token_id": 270,
+            "token": " th",
+            "probability": 0.0005470116157084703
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.00048273606807924807
+          },
+          {
+            "token_id": 2086,
+            "token": " second",
+            "probability": 0.0003317793016321957
+          }
+        ]
+      },
+      {
+        "step": 14,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9999203681945801,
+        "logits_sha256": "9bfa2b1349eeb7c8c5f7d5f354bc82fb3865ce19499443868542d06151ff4bdb",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9999203681945801
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 6.605124508496374e-05
+          },
+          {
+            "token_id": 47021,
+            "token": "inth",
+            "probability": 1.0129286238225177e-05
+          },
+          {
+            "token_id": 490,
+            "token": "elf",
+            "probability": 1.99457485905441e-06
+          },
+          {
+            "token_id": 301,
+            "token": "el",
+            "probability": 5.714552457902755e-07
+          },
+          {
+            "token_id": 51131,
+            "token": "entieth",
+            "probability": 3.058779611819773e-07
+          },
+          {
+            "token_id": 7166,
+            "token": "enty",
+            "probability": 1.2750889766266482e-07
+          },
+          {
+            "token_id": 21877,
+            "token": "ighth",
+            "probability": 1.1252621590074341e-07
+          }
+        ]
+      },
+      {
+        "step": 15,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.9995473027229309,
+        "logits_sha256": "d28c6d6e055d9e93ed24a63f823387201c2c32e61b3cffc70b8f6332688942cd",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.9995473027229309
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 5.826827327837236e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 3.5341494367457926e-05
+          },
+          {
+            "token_id": 6524,
+            "token": " letter",
+            "probability": 3.5341494367457926e-05
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 3.5341494367457926e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.5341494367457926e-05
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 2.7523985409061424e-05
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 2.1435700546135195e-05
+          }
+        ]
+      },
+      {
+        "step": 16,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9983772039413452,
+        "logits_sha256": "bdb57a190fef14b9e25201bbdd3a7e479d06901ac6ee13cff13c0b5c9e4da181",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9983772039413452
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.0015009994385764003
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 3.11522489937488e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.6674597645760514e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.0113653843291104e-05
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 6.134241630206816e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 5.413449343905086e-06
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 4.215998615109129e-06
+          }
+        ]
+      },
+      {
+        "step": 17,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9997865557670593,
+        "logits_sha256": "100bad5d39e1b5f517a02b457ad804f5942817ccbb6f3b287c4d80df863739aa",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9997865557670593
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 4.0056740544969216e-05
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 2.7530573788681068e-05
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 2.7530573788681068e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.6698135368642397e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.47360524351825e-05
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 1.47360524351825e-05
+          },
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 1.300452095165383e-05
+          }
+        ]
+      },
+      {
+        "step": 18,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9999979734420776,
+        "logits_sha256": "9e0ded19bf10bb480155700a2f29e075fc13b33f172c823c734b2c2a8e9cbdfd",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9999979734420776
+          },
+          {
+            "token_id": 3157,
+            "token": "year",
+            "probability": 1.0677018735805177e-06
+          },
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 1.8553878078364505e-07
+          },
+          {
+            "token_id": 1635,
+            "token": " years",
+            "probability": 1.4449773289015866e-07
+          },
+          {
+            "token_id": 14645,
+            "token": "_year",
+            "probability": 8.76423058571163e-08
+          },
+          {
+            "token_id": 24414,
+            "token": ".year",
+            "probability": 8.76423058571163e-08
+          },
+          {
+            "token_id": 9742,
+            "token": " Year",
+            "probability": 7.734406182180464e-08
+          },
+          {
+            "token_id": 3409,
+            "token": " word",
+            "probability": 7.734406182180464e-08
+          }
+        ]
+      },
+      {
+        "step": 19,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.9998855590820312,
+        "logits_sha256": "43411f77107bd2d7db825c925243964878cc2b9bab2841b19c16981a53201b6c",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.9998855590820312
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 1.1477586667751893e-05
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 1.1477586667751893e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.0128933354280889e-05
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 6.961508006497752e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 6.961508006497752e-06
+          },
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 6.143509381217882e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 4.222367806505645e-06
+          }
+        ]
+      },
+      {
+        "step": 20,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.9990971088409424,
+        "logits_sha256": "47b718283877891192ab8e1dcd4aee87566696150faa9461cb456505e7cce61d",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.9990971088409424
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.0008040064130909741
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 4.535893822321668e-05
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 7.88220131653361e-06
+          },
+          {
+            "token_id": 53202,
+            "token": " christmas",
+            "probability": 6.9560182964778505e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 4.780797098646872e-06
+          },
+          {
+            "token_id": 84223,
+            "token": " november",
+            "probability": 4.780797098646872e-06
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.2582885321753565e-06
+          }
+        ]
+      },
+      {
+        "step": 21,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9307449460029602,
+        "logits_sha256": "c10ecc01b4fb95e977854912797f4f861bf2e5b998ac335fa4edb05e0f77aa2c",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9307449460029602
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.04633906111121178
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.02188902348279953
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.00021459243725985289
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.0001474870805395767
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.0001148630544776097
+          },
+          {
+            "token_id": 1189,
+            "token": ".\"",
+            "probability": 6.966797081986442e-05
+          },
+          {
+            "token_id": 1773,
+            "token": "。",
+            "probability": 6.148176180431619e-05
+          }
+        ]
+      },
+      {
+        "step": 22,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9430941939353943,
+        "logits_sha256": "3704a3332bad81673d81596afc903c2f569f11bba9043020f4ded3242c789dea",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9430941939353943
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.011871804483234882
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.008159363642334938
+          },
+          {
+            "token_id": 4710,
+            "token": " \n\n",
+            "probability": 0.004367392975836992
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.003001662204042077
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.002337696962058544
+          },
+          {
+            "token_id": 576,
+            "token": " The",
+            "probability": 0.0016066741663962603
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 0.0016066741663962603
+          }
+        ]
+      },
+      {
+        "step": 23,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.9985958933830261,
+        "logits_sha256": "e9402cfe5a03405d03d334079451d0f888a4ae18a287e4e8b0696cae8cb83cc2",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.9985958933830261
+          },
+          {
+            "token_id": 29235,
+            "token": " twelve",
+            "probability": 0.00033499160781502724
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.00015823882131371647
+          },
+          {
+            "token_id": 11737,
+            "token": " fourth",
+            "probability": 0.00013964528625365347
+          },
+          {
+            "token_id": 270,
+            "token": " th",
+            "probability": 0.0001087558557628654
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 9.597670577932149e-05
+          },
+          {
+            "token_id": 42541,
+            "token": " ninth",
+            "probability": 5.821281229145825e-05
+          },
+          {
+            "token_id": 61420,
+            "token": " twentieth",
+            "probability": 5.1372629968682304e-05
+          }
+        ]
+      },
+      {
+        "step": 24,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9769251346588135,
+        "logits_sha256": "4c25f813632b184197263ad48db332a095485070fd4fb2d33e72803100cdc9c6",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9769251346588135
+          },
+          {
+            "token_id": 47021,
+            "token": "inth",
+            "probability": 0.020275434479117393
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 0.0027439817786216736
+          },
+          {
+            "token_id": 21877,
+            "token": "ighth",
+            "probability": 1.6316311302944086e-05
+          },
+          {
+            "token_id": 26872,
+            "token": "entine",
+            "probability": 1.4399093743122648e-05
+          },
+          {
+            "token_id": 7166,
+            "token": "enty",
+            "probability": 4.674701813200954e-06
+          },
+          {
+            "token_id": 51131,
+            "token": "entieth",
+            "probability": 4.125409304833738e-06
+          },
+          {
+            "token_id": 43409,
+            "token": "entin",
+            "probability": 2.208172645623563e-06
+          }
+        ]
+      },
+      {
+        "step": 25,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.9999589920043945,
+        "logits_sha256": "d09c69c7602b51e8561529253bc39e7d327004ce55dced813759497c880422f4",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.9999589920043945
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 3.726500381162623e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 3.2886250664887484e-06
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 2.902201686083572e-06
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 2.902201686083572e-06
+          },
+          {
+            "token_id": 9754,
+            "token": "月",
+            "probability": 2.5611836917960318e-06
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.260236669826554e-06
+          },
+          {
+            "token_id": 27053,
+            "token": ".month",
+            "probability": 1.994651938730385e-06
+          }
+        ]
+      },
+      {
+        "step": 26,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9999173879623413,
+        "logits_sha256": "5e9030c2238f721d9dcbe9b88594ec006f32ec76e899fc315313a2cef806282c",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9999173879623413
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 6.605104863410816e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.260142764498596e-06
+          },
+          {
+            "token_id": 59735,
+            "token": " của",
+            "probability": 1.7602009165784693e-06
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 1.7602009165784693e-06
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 1.3708458936889656e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.3708458936889656e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 8.31460056360811e-07
+          }
+        ]
+      },
+      {
+        "step": 27,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9999785423278809,
+        "logits_sha256": "d1aecda08433c5b52dcd2e9429de616ccdeacfca498799421ceda9fb0bdf30b9",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9999785423278809
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.288689413238899e-06
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 2.2602810076932656e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 2.2602810076932656e-06
+          },
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 1.7603085780137917e-06
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 1.6536569091840647e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.2098412298655603e-06
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 6.893467343616067e-07
+          }
+        ]
+      },
+      {
+        "step": 28,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9999996423721313,
+        "logits_sha256": "8bedcb6ebeba84ac5dfec2d60d116d8b28f1dfba45b3a144e1957c81b2c595a1",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9999996423721313
+          },
+          {
+            "token_id": 3157,
+            "token": "year",
+            "probability": 3.4663264614209766e-07
+          },
+          {
+            "token_id": 24414,
+            "token": ".year",
+            "probability": 9.23744636338597e-09
+          },
+          {
+            "token_id": 14645,
+            "token": "_year",
+            "probability": 9.23744636338597e-09
+          },
+          {
+            "token_id": 9742,
+            "token": " Year",
+            "probability": 5.602794228565244e-09
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.850740615263248e-09
+          },
+          {
+            "token_id": 4666,
+            "token": "-year",
+            "probability": 2.9989597472024343e-09
+          },
+          {
+            "token_id": 50905,
+            "token": " YEAR",
+            "probability": 9.736197403853453e-10
+          }
+        ]
+      },
+      {
+        "step": 29,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.9999864101409912,
+        "logits_sha256": "7f228977fc297c58d57fe7a4275f3f47365efb79ce1cd09694ccf0c4554b4e82",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.9999864101409912
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.994706735786167e-06
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 9.4223270252769e-07
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 7.338115892707719e-07
+          },
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 6.475864324784197e-07
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 5.714929898203991e-07
+          },
+          {
+            "token_id": 525,
+            "token": " are",
+            "probability": 5.714929898203991e-07
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 5.043407895755081e-07
+          }
+        ]
+      },
+      {
+        "step": 30,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.9996432065963745,
+        "logits_sha256": "ff589034e2493211cb2df96753953c2767fa6e345e7684cda2e232e78f683a3f",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.9996432065963745
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.0003353429492563009
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 1.147480452345917e-05
+          },
+          {
+            "token_id": 53202,
+            "token": " christmas",
+            "probability": 1.7597182022655034e-06
+          },
+          {
+            "token_id": 84223,
+            "token": " november",
+            "probability": 1.3704699313166202e-06
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 1.0673230690372293e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 8.312320574077603e-07
+          },
+          {
+            "token_id": 134829,
+            "token": " décembre",
+            "probability": 7.335597160817997e-07
+          }
+        ]
+      },
+      {
+        "step": 31,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9575552344322205,
+        "logits_sha256": "6dfceca5fcb227ef8cb278cc3328e9a4a80d8fa6b09b288e17cdd3fc0c183de3",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9575552344322205
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.03276573866605759
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.009387541562318802
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 5.582036101259291e-05
+          },
+          {
+            "token_id": 1189,
+            "token": ".\"",
+            "probability": 2.636767203512136e-05
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 2.32693873840617e-05
+          },
+          {
+            "token_id": 4192,
+            "token": ".\n\n\n",
+            "probability": 1.8122216715710238e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.2455206160666421e-05
+          }
+        ]
+      }
+    ],
+    "first_token_probabilities": {
+      " january": 0.002875459846109152,
+      " January": 0.002875459846109152,
+      " february": 0.00019567747949622571,
+      " February": 0.00011149367492180318,
+      " march": 2.648207009769976e-05,
+      " March": 9.151957783615217e-06,
+      " april": 4.1016231989488006e-05,
+      " April": 7.127552180463681e-06,
+      " may": 1.5089028238435276e-05,
+      " May": 8.512647582392674e-07,
+      " june": 0.0004996799980290234,
+      " June": 1.238582854057313e-06,
+      " july": 0.0004996799980290234,
+      " July": 1.0268212236042018e-06,
+      " august": 4.366154826129787e-05,
+      " August": 2.9712057312281104e-06,
+      " september": 3.619669587351382e-05,
+      " September": 1.9183546555723296e-06,
+      " october": 1.5903718804111122e-06,
+      " October": 7.127552180463681e-06,
+      " november": 0.0008238329901359975,
+      " November": 0.00010473860311321914,
+      " december": 0.5479656457901001,
+      " December": 0.3323579728603363
+    },
+    "candidate_scores": {
+      " january": {
+        "token_ids": [
+          32862,
+          3536
+        ],
+        "conditional_probabilities": [
+          0.002875459846109152,
+          0.9974919557571411
+        ],
+        "probability": 0.002868248065596546
+      },
+      " January": {
+        "token_ids": [
+          6058
+        ],
+        "conditional_probabilities": [
+          0.002875459846109152
+        ],
+        "probability": 0.002875459846109152
+      },
+      " february": {
+        "token_ids": [
+          1152,
+          6812
+        ],
+        "conditional_probabilities": [
+          0.00019567747949622571,
+          0.8344504237174988
+        ],
+        "probability": 0.00016328315567759773
+      },
+      " February": {
+        "token_ids": [
+          7400
+        ],
+        "conditional_probabilities": [
+          0.00011149367492180318
+        ],
+        "probability": 0.00011149367492180318
+      },
+      " march": {
+        "token_ids": [
+          15217
+        ],
+        "conditional_probabilities": [
+          2.648207009769976e-05
+        ],
+        "probability": 2.648207009769976e-05
+      },
+      " March": {
+        "token_ids": [
+          5470
+        ],
+        "conditional_probabilities": [
+          9.151957783615217e-06
+        ],
+        "probability": 9.151957783615217e-06
+      },
+      " april": {
+        "token_ids": [
+          73700
+        ],
+        "conditional_probabilities": [
+          4.1016231989488006e-05
+        ],
+        "probability": 4.1016231989488006e-05
+      },
+      " April": {
+        "token_ids": [
+          5813
+        ],
+        "conditional_probabilities": [
+          7.127552180463681e-06
+        ],
+        "probability": 7.127552180463681e-06
+      },
+      " may": {
+        "token_ids": [
+          1231
+        ],
+        "conditional_probabilities": [
+          1.5089028238435276e-05
+        ],
+        "probability": 1.5089028238435276e-05
+      },
+      " May": {
+        "token_ids": [
+          3217
+        ],
+        "conditional_probabilities": [
+          8.512647582392674e-07
+        ],
+        "probability": 8.512647582392674e-07
+      },
+      " june": {
+        "token_ids": [
+          502,
+          2886
+        ],
+        "conditional_probabilities": [
+          0.0004996799980290234,
+          0.26040124893188477
+        ],
+        "probability": 0.00013011729555303941
+      },
+      " June": {
+        "token_ids": [
+          5534
+        ],
+        "conditional_probabilities": [
+          1.238582854057313e-06
+        ],
+        "probability": 1.238582854057313e-06
+      },
+      " july": {
+        "token_ids": [
+          502,
+          3901
+        ],
+        "conditional_probabilities": [
+          0.0004996799980290234,
+          0.03751435875892639
+        ],
+        "probability": 1.8745174710720416e-05
+      },
+      " July": {
+        "token_ids": [
+          5768
+        ],
+        "conditional_probabilities": [
+          1.0268212236042018e-06
+        ],
+        "probability": 1.0268212236042018e-06
+      },
+      " august": {
+        "token_ids": [
+          70619
+        ],
+        "conditional_probabilities": [
+          4.366154826129787e-05
+        ],
+        "probability": 4.366154826129787e-05
+      },
+      " August": {
+        "token_ids": [
+          6156
+        ],
+        "conditional_probabilities": [
+          2.9712057312281104e-06
+        ],
+        "probability": 2.9712057312281104e-06
+      },
+      " september": {
+        "token_ids": [
+          83649
+        ],
+        "conditional_probabilities": [
+          3.619669587351382e-05
+        ],
+        "probability": 3.619669587351382e-05
+      },
+      " September": {
+        "token_ids": [
+          6122
+        ],
+        "conditional_probabilities": [
+          1.9183546555723296e-06
+        ],
+        "probability": 1.9183546555723296e-06
+      },
+      " october": {
+        "token_ids": [
+          18491,
+          5923
+        ],
+        "conditional_probabilities": [
+          1.5903718804111122e-06,
+          0.9948651194572449
+        ],
+        "probability": 1.5822055107866443e-06
+      },
+      " October": {
+        "token_ids": [
+          6527
+        ],
+        "conditional_probabilities": [
+          7.127552180463681e-06
+        ],
+        "probability": 7.127552180463681e-06
+      },
+      " november": {
+        "token_ids": [
+          84223
+        ],
+        "conditional_probabilities": [
+          0.0008238329901359975
+        ],
+        "probability": 0.0008238329901359975
+      },
+      " November": {
+        "token_ids": [
+          6702
+        ],
+        "conditional_probabilities": [
+          0.00010473860311321914
+        ],
+        "probability": 0.00010473860311321914
+      },
+      " december": {
+        "token_ids": [
+          89011
+        ],
+        "conditional_probabilities": [
+          0.5479656457901001
+        ],
+        "probability": 0.5479656457901001
+      },
+      " December": {
+        "token_ids": [
+          6652
+        ],
+        "conditional_probabilities": [
+          0.3323579728603363
+        ],
+        "probability": 0.3323579728603363
+      }
+    },
+    "selected_input_positions": [],
+    "generated_positions_edited": [],
+    "edit_calls": 0,
+    "generated_passes_without_edit": 0,
+    "arrays": {
+      "file": "observed-arrays.npz",
+      "sha256": "df51878d16055519844a1a773865ff8cbe45a41354e755424d414916a7f5e570"
+    },
+    "natural_gate": 1.4894633293151855,
+    "operator_l2": 16.421873092651367,
+    "contribution_l2": 24.4597775664392
+  },
+  "gate_off": {
+    "name": "T1181-off",
+    "prompt": "the twelfth month of the year is",
+    "prompt_token_ids": [
+      1782,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374
+    ],
+    "prompt_tokens": [
+      "the",
+      " tw",
+      "elfth",
+      " month",
+      " of",
+      " the",
+      " year",
+      " is"
+    ],
+    "position": 7,
+    "token": " is",
+    "target_gate": 0.0,
+    "alpha": 1.0,
+    "output_token_ids": [
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      89011,
+      13
+    ],
+    "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.",
+    "stop_reason": "token_limit",
+    "steps": [
+      {
+        "step": 0,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.38240623474121094,
+        "logits_sha256": "f3cfc784856a8394880bced401979b7b24976a21a0df744dfdca53f2f117ba9b",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.38240623474121094
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 0.18063592910766602
+          },
+          {
+            "token_id": 2598,
+            "token": " called",
+            "probability": 0.07530024647712708
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.05175305902957916
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 0.045671913772821426
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.027701416984200478
+          },
+          {
+            "token_id": 6058,
+            "token": " January",
+            "probability": 0.027701416984200478
+          },
+          {
+            "token_id": 5267,
+            "token": "?\n",
+            "probability": 0.024446412920951843
+          }
+        ]
+      },
+      {
+        "step": 1,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.4262755215167999,
+        "logits_sha256": "509432b48de83baa6c7c837c57f9a704fab353c4f6e2db57be8236f57ec1bcfe",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.4262755215167999
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.20135831832885742
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.09511493146419525
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.08393862098455429
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.07407557219266891
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.0349908247590065
+          },
+          {
+            "token_id": 58883,
+            "token": "．",
+            "probability": 0.027250882238149643
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.012872406281530857
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.24287842214107513,
+        "logits_sha256": "1a792db2dc0c1c9709a40cefb17739006b651128c34bcf4c3fb641ab32671d4c",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.24287842214107513
+          },
+          {
+            "token_id": 576,
+            "token": " The",
+            "probability": 0.11472765356302261
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.06958583742380142
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.06958583742380142
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.05419350415468216
+          },
+          {
+            "token_id": 320,
+            "token": " (",
+            "probability": 0.04782559350132942
+          },
+          {
+            "token_id": 2055,
+            "token": " So",
+            "probability": 0.04220593720674515
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.029007691890001297
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.42658475041389465,
+        "logits_sha256": "f1a24f1c825025e30bdea17cb7366de663b49fc812fc01e6615976a7403dd3b7",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.42658475041389465
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 0.20150436460971832
+          },
+          {
+            "token_id": 11737,
+            "token": " fourth",
+            "probability": 0.04496169835329056
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.04496169835329056
+          },
+          {
+            "token_id": 4843,
+            "token": " third",
+            "probability": 0.030901696532964706
+          },
+          {
+            "token_id": 10510,
+            "token": " ele",
+            "probability": 0.030901696532964706
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.024066265672445297
+          },
+          {
+            "token_id": 25031,
+            "token": " sixth",
+            "probability": 0.021238403394818306
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9937718510627747,
+        "logits_sha256": "50b23c2a15172487ff760e5972bd0710c5625acacf8c071a537c0e8784631162",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9937718510627747
+          },
+          {
+            "token_id": 301,
+            "token": "el",
+            "probability": 0.00590918306261301
+          },
+          {
+            "token_id": 490,
+            "token": "elf",
+            "probability": 0.00022912389249540865
+          },
+          {
+            "token_id": 273,
+            "token": "le",
+            "probability": 4.5117172703612596e-05
+          },
+          {
+            "token_id": 306,
+            "token": "ent",
+            "probability": 1.1407407328078989e-05
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 1.0067001312563661e-05
+          },
+          {
+            "token_id": 4275,
+            "token": "elves",
+            "probability": 3.703443098856951e-06
+          },
+          {
+            "token_id": 268,
+            "token": "en",
+            "probability": 2.884244395318092e-06
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.990313708782196,
+        "logits_sha256": "2712e8e361af09cba3aa8a24899f90d1c4f13579b617021ee7795792ba9df65a",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.990313708782196
+          },
+          {
+            "token_id": 6524,
+            "token": " letter",
+            "probability": 0.00667268130928278
+          },
+          {
+            "token_id": 1899,
+            "token": " day",
+            "probability": 0.002781587652862072
+          },
+          {
+            "token_id": 2355,
+            "token": " power",
+            "probability": 7.412680133711547e-05
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 3.501501851133071e-05
+          },
+          {
+            "token_id": 9864,
+            "token": " animal",
+            "probability": 2.123768354067579e-05
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 1.0031970305135474e-05
+          },
+          {
+            "token_id": 3951,
+            "token": " months",
+            "probability": 8.853183317114599e-06
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9603475332260132,
+        "logits_sha256": "d0964f871e930dd4840d51df8b69cf9155037e5c67bcca2d85bcd0ea9ea7cbdf",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9603475332260132
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.02258520945906639
+          },
+          {
+            "token_id": 504,
+            "token": " from",
+            "probability": 0.008308634161949158
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 0.0073323436081409454
+          },
+          {
+            "token_id": 1283,
+            "token": " after",
+            "probability": 0.00041366255027242005
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 0.00036505592288449407
+          },
+          {
+            "token_id": 594,
+            "token": "'s",
+            "probability": 0.00013429656974039972
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 5.598313873633742e-05
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9991488456726074,
+        "logits_sha256": "62d665002e8bc95e37f50057d02a4bf6f96f2b010a68e99de808c11746eb7f29",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9991488456726074
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 0.0003798054240178317
+          },
+          {
+            "token_id": 1790,
+            "token": " next",
+            "probability": 0.00023036362836137414
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 0.00020329518883954734
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 1.4726652807439677e-05
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 2.8998504149058135e-06
+          },
+          {
+            "token_id": 892,
+            "token": " which",
+            "probability": 2.559108679633937e-06
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.559108679633937e-06
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9998371601104736,
+        "logits_sha256": "0b09791fd849e26cb71bcc344770742e4d4f221affef84dd4b2f42fa464f56b8",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9998371601104736
+          },
+          {
+            "token_id": 13168,
+            "token": " calendar",
+            "probability": 3.535174619173631e-05
+          },
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 2.144191603292711e-05
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 1.6698981198715046e-05
+          },
+          {
+            "token_id": 56711,
+            "token": " lunar",
+            "probability": 1.4736798220837954e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.3005179425817914e-05
+          },
+          {
+            "token_id": 41193,
+            "token": " french",
+            "probability": 8.938321116147563e-06
+          },
+          {
+            "token_id": 1790,
+            "token": " next",
+            "probability": 8.938321116147563e-06
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.980461835861206,
+        "logits_sha256": "2878084d0a0886e194379724fc0ad4e523731f11e72e2a38411f915ec87e0ded",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.980461835861206
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 0.01234219316393137
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.0018927366472780704
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 0.0004785587952937931
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.00029026056290604174
+          },
+          {
+            "token_id": 1283,
+            "token": " after",
+            "probability": 0.00029026056290604174
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.00019949297711718827
+          },
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.00019949297711718827
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.6846089363098145,
+        "logits_sha256": "73eafec6cff1832ef9d89676b08380b88f93f8ae46678bc0aca78ee970f43b16",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.6846089363098145
+          },
+          {
+            "token_id": 1083,
+            "token": " also",
+            "probability": 0.1961437612771988
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.030079618096351624
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 0.026545168831944466
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.01106567308306694
+          },
+          {
+            "token_id": 502,
+            "token": " j",
+            "probability": 0.005227053537964821
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 0.0033748396672308445
+          },
+          {
+            "token_id": 5990,
+            "token": " usually",
+            "probability": 0.002628327812999487
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9212087392807007,
+        "logits_sha256": "603c61788a9aff598d214ce8efc7f0a27bd5bff32f4efee63e3eb32a6f6d4579",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9212087392807007
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.040475089102983475
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.021664753556251526
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.009031212888658047
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.0009518828010186553
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.0007413271232508123
+          },
+          {
+            "token_id": 323,
+            "token": " and",
+            "probability": 0.0005095061496831477
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.0005095061496831477
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.8024666905403137,
+        "logits_sha256": "cc105eec8e5fc06871d0175ce34c0f8e7036a4a486955200450ad99ceea20733",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.8024666905403137
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.05129997804760933
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.024232394993305206
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.008914600126445293
+          },
+          {
+            "token_id": 4710,
+            "token": " \n\n",
+            "probability": 0.008914600126445293
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.006942697335034609
+          },
+          {
+            "token_id": 4486,
+            "token": " please",
+            "probability": 0.006126908585429192
+          },
+          {
+            "token_id": 320,
+            "token": " (",
+            "probability": 0.006126908585429192
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.9885613322257996,
+        "logits_sha256": "66b9b70174285c18e2e997b35ff74bff59c215302d7e34d8b255cc5cf3f94789",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.9885613322257996
+          },
+          {
+            "token_id": 29235,
+            "token": " twelve",
+            "probability": 0.0019083722727373242
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 0.001684132730588317
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.0007955279434099793
+          },
+          {
+            "token_id": 4226,
+            "token": " answer",
+            "probability": 0.0006195577443577349
+          },
+          {
+            "token_id": 270,
+            "token": " th",
+            "probability": 0.0006195577443577349
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.0005467577720992267
+          },
+          {
+            "token_id": 2086,
+            "token": " second",
+            "probability": 0.00033162537147291005
+          }
+        ]
+      },
+      {
+        "step": 14,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9999206066131592,
+        "logits_sha256": "33e1b4da8ceacde0db5670d66f00a3d819a22277ab538ee0be667a46eda5ecef",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9999206066131592
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 6.605125963687897e-05
+          },
+          {
+            "token_id": 47021,
+            "token": "inth",
+            "probability": 1.0129288966709282e-05
+          },
+          {
+            "token_id": 490,
+            "token": "elf",
+            "probability": 1.7602066009203554e-06
+          },
+          {
+            "token_id": 301,
+            "token": "el",
+            "probability": 5.714554163205321e-07
+          },
+          {
+            "token_id": 51131,
+            "token": "entieth",
+            "probability": 3.058780464471056e-07
+          },
+          {
+            "token_id": 7166,
+            "token": "enty",
+            "probability": 1.444865631583525e-07
+          },
+          {
+            "token_id": 21877,
+            "token": "ighth",
+            "probability": 1.1252624432245284e-07
+          }
+        ]
+      },
+      {
+        "step": 15,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.99951171875,
+        "logits_sha256": "e2dac64f6e65aa62021bf9506a6a5b6f1ebb49196bca33df2070b767858c8a52",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.99951171875
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 6.602425128221512e-05
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 4.0045732021098956e-05
+          },
+          {
+            "token_id": 6524,
+            "token": " letter",
+            "probability": 3.534023562679067e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 3.534023562679067e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.534023562679067e-05
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 3.118765016552061e-05
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 2.1434936570585705e-05
+          }
+        ]
+      },
+      {
+        "step": 16,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9983755350112915,
+        "logits_sha256": "afff9a579a2e90b769b14d702f8eb7fbef6d8c6e04f2e9afb1ca1cd09556f408",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9983755350112915
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.00150099687743932
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 3.11521980620455e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.667457036091946e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.0113637472386472e-05
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 6.134231625765096e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 5.413440248958068e-06
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 4.215991339151515e-06
+          }
+        ]
+      },
+      {
+        "step": 17,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9997938275337219,
+        "logits_sha256": "9c395ba5b583ad625884947040a7e3b757a3a3309cba83609bafee7a8e008c58",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9997938275337219
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 4.005703158327378e-05
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 2.7530773877515458e-05
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 2.7530773877515458e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 1.473615975555731e-05
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 1.473615975555731e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.3004615539102815e-05
+          },
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 1.147653347288724e-05
+          }
+        ]
+      },
+      {
+        "step": 18,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9999982118606567,
+        "logits_sha256": "10cfe78ce16f80e6006a90f2146fadf731618db410d718621cad7283b5b90ca1",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9999982118606567
+          },
+          {
+            "token_id": 3157,
+            "token": "year",
+            "probability": 9.422437869943678e-07
+          },
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 1.6373741118513863e-07
+          },
+          {
+            "token_id": 1635,
+            "token": " years",
+            "probability": 1.2751883105011075e-07
+          },
+          {
+            "token_id": 14645,
+            "token": "_year",
+            "probability": 7.734408313808672e-08
+          },
+          {
+            "token_id": 24414,
+            "token": ".year",
+            "probability": 7.734408313808672e-08
+          },
+          {
+            "token_id": 9742,
+            "token": " Year",
+            "probability": 6.825591469805659e-08
+          },
+          {
+            "token_id": 3409,
+            "token": " word",
+            "probability": 6.825591469805659e-08
+          }
+        ]
+      },
+      {
+        "step": 19,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.999887228012085,
+        "logits_sha256": "b762d50dd5ab4b98c96d897764f591b4eeacc2bb8bee329ee5fa873109c0dc56",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.999887228012085
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 1.147760576714063e-05
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 1.147760576714063e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 8.938768587540835e-06
+          },
+          {
+            "token_id": 702,
+            "token": " has",
+            "probability": 6.961519829928875e-06
+          },
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 6.1435193856596015e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 6.1435193856596015e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 4.222375082463259e-06
+          }
+        ]
+      },
+      {
+        "step": 20,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.9990872144699097,
+        "logits_sha256": "d28618e301362ce3d3e82d7cc2e368c65a0141949340bd2aafb734a8a261c8a5",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.9990872144699097
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.0008039984968490899
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 4.535849075182341e-05
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 1.29954250951414e-05
+          },
+          {
+            "token_id": 53202,
+            "token": " christmas",
+            "probability": 7.882123099989258e-06
+          },
+          {
+            "token_id": 84223,
+            "token": " november",
+            "probability": 6.13860402154387e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 5.41729878023034e-06
+          },
+          {
+            "token_id": 502,
+            "token": " j",
+            "probability": 2.5589508823031792e-06
+          }
+        ]
+      },
+      {
+        "step": 21,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9331932067871094,
+        "logits_sha256": "9ff835331c7f7ef76b78ca5c5ef3cf26dd117d0e252fc9a62ae9f7812eda6ba2",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9331932067871094
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.04646095260977745
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.019367806613445282
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 0.0001898752962006256
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 0.00013049926201347262
+          },
+          {
+            "token_id": 11,
+            "token": ",",
+            "probability": 0.00011516518861753866
+          },
+          {
+            "token_id": 1189,
+            "token": ".\"",
+            "probability": 6.985122308833525e-05
+          },
+          {
+            "token_id": 1773,
+            "token": "。",
+            "probability": 6.164348451420665e-05
+          }
+        ]
+      },
+      {
+        "step": 22,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9367309212684631,
+        "logits_sha256": "6f14cb7b9a0e954ea0abd0fbe44788342d4e5a7ce1536ede77b61cc954c47504",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9367309212684631
+          },
+          {
+            "token_id": 1128,
+            "token": " what",
+            "probability": 0.013361748307943344
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.009183387272059917
+          },
+          {
+            "token_id": 4710,
+            "token": " \n\n",
+            "probability": 0.004337924998253584
+          },
+          {
+            "token_id": 1246,
+            "token": " how",
+            "probability": 0.0033783791586756706
+          },
+          {
+            "token_id": 3555,
+            "token": " What",
+            "probability": 0.0026310845278203487
+          },
+          {
+            "token_id": 576,
+            "token": " The",
+            "probability": 0.0018083160975947976
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 0.0018083160975947976
+          }
+        ]
+      },
+      {
+        "step": 23,
+        "token_id": 4384,
+        "token": " tw",
+        "probability": 0.9985927939414978,
+        "logits_sha256": "7167804595621c7a56a3d7ecd4a38377e840bbf716cce0f1df674b543391db38",
+        "top_tokens": [
+          {
+            "token_id": 4384,
+            "token": " tw",
+            "probability": 0.9985927939414978
+          },
+          {
+            "token_id": 29235,
+            "token": " twelve",
+            "probability": 0.0003349905600771308
+          },
+          {
+            "token_id": 55666,
+            "token": " tenth",
+            "probability": 0.00015823834110051394
+          },
+          {
+            "token_id": 11737,
+            "token": " fourth",
+            "probability": 0.00013964484969619662
+          },
+          {
+            "token_id": 270,
+            "token": " th",
+            "probability": 0.00010875552106881514
+          },
+          {
+            "token_id": 1156,
+            "token": " first",
+            "probability": 9.597640746505931e-05
+          },
+          {
+            "token_id": 42541,
+            "token": " ninth",
+            "probability": 5.8212630392517895e-05
+          },
+          {
+            "token_id": 61420,
+            "token": " twentieth",
+            "probability": 5.137246989761479e-05
+          }
+        ]
+      },
+      {
+        "step": 24,
+        "token_id": 87698,
+        "token": "elfth",
+        "probability": 0.9742891192436218,
+        "logits_sha256": "8b3d7e6446a513ee5e3505d888131f359dc3e0dbb3ccdb4b1ed5d2e0d7dfe12d",
+        "top_tokens": [
+          {
+            "token_id": 87698,
+            "token": "elfth",
+            "probability": 0.9742891192436218
+          },
+          {
+            "token_id": 47021,
+            "token": "inth",
+            "probability": 0.02291308529675007
+          },
+          {
+            "token_id": 20684,
+            "token": "enth",
+            "probability": 0.0027365777641534805
+          },
+          {
+            "token_id": 26872,
+            "token": "entine",
+            "probability": 1.6272284483420663e-05
+          },
+          {
+            "token_id": 21877,
+            "token": "ighth",
+            "probability": 1.6272284483420663e-05
+          },
+          {
+            "token_id": 7166,
+            "token": "enty",
+            "probability": 5.282837719278177e-06
+          },
+          {
+            "token_id": 51131,
+            "token": "entieth",
+            "probability": 4.662088031182066e-06
+          },
+          {
+            "token_id": 43409,
+            "token": "entin",
+            "probability": 2.827699518093141e-06
+          }
+        ]
+      },
+      {
+        "step": 25,
+        "token_id": 2254,
+        "token": " month",
+        "probability": 0.9999600648880005,
+        "logits_sha256": "89bbe6c7e7be269b22434b799b40786015a68c3a074adb030b588f4f724d9883",
+        "top_tokens": [
+          {
+            "token_id": 2254,
+            "token": " month",
+            "probability": 0.9999600648880005
+          },
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 3.7265042465151055e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 3.28862847709388e-06
+          },
+          {
+            "token_id": 17788,
+            "token": " moon",
+            "probability": 2.9022046419413527e-06
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 2.9022046419413527e-06
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.260239170936984e-06
+          },
+          {
+            "token_id": 9754,
+            "token": "月",
+            "probability": 2.260239170936984e-06
+          },
+          {
+            "token_id": 27053,
+            "token": ".month",
+            "probability": 1.9946542124671396e-06
+          }
+        ]
+      },
+      {
+        "step": 26,
+        "token_id": 315,
+        "token": " of",
+        "probability": 0.9999172687530518,
+        "logits_sha256": "bc2b80130c8729df3a9eb54124a3def96e8ddd5d7e0465fa8baed0fec25650a2",
+        "top_tokens": [
+          {
+            "token_id": 315,
+            "token": " of",
+            "probability": 0.9999172687530518
+          },
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 6.605104135815054e-05
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.2601425371249206e-06
+          },
+          {
+            "token_id": 59735,
+            "token": " của",
+            "probability": 1.7602006892047939e-06
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 1.7602006892047939e-06
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 1.3708456663152901e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.3708456663152901e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 8.314599426739733e-07
+          }
+        ]
+      },
+      {
+        "step": 27,
+        "token_id": 279,
+        "token": " the",
+        "probability": 0.9999762773513794,
+        "logits_sha256": "a73ba185672a0344b0d080bdd3a39e6e323eac16a9c4c18191e629cdd6ebe180",
+        "top_tokens": [
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 0.9999762773513794
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.7265647279127734e-06
+          },
+          {
+            "token_id": 264,
+            "token": " a",
+            "probability": 2.561228029662743e-06
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 2.561228029662743e-06
+          },
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 1.873834435173194e-06
+          },
+          {
+            "token_id": 419,
+            "token": " this",
+            "probability": 1.7603045989744714e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.370926611343748e-06
+          },
+          {
+            "token_id": 481,
+            "token": " -",
+            "probability": 7.338041427829012e-07
+          }
+        ]
+      },
+      {
+        "step": 28,
+        "token_id": 1042,
+        "token": " year",
+        "probability": 0.9999996423721313,
+        "logits_sha256": "a0509d555ad484ff0e7c47baa595ae10ff4b29ff429968a8e513f6cfca92d97d",
+        "top_tokens": [
+          {
+            "token_id": 1042,
+            "token": " year",
+            "probability": 0.9999996423721313
+          },
+          {
+            "token_id": 3157,
+            "token": "year",
+            "probability": 3.9278620533877984e-07
+          },
+          {
+            "token_id": 24414,
+            "token": ".year",
+            "probability": 9.23744636338597e-09
+          },
+          {
+            "token_id": 14645,
+            "token": "_year",
+            "probability": 9.23744636338597e-09
+          },
+          {
+            "token_id": 9742,
+            "token": " Year",
+            "probability": 4.944448406263291e-09
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 3.3982667790866117e-09
+          },
+          {
+            "token_id": 4666,
+            "token": "-year",
+            "probability": 2.9989597472024343e-09
+          },
+          {
+            "token_id": 50905,
+            "token": " YEAR",
+            "probability": 8.592163647236362e-10
+          }
+        ]
+      },
+      {
+        "step": 29,
+        "token_id": 374,
+        "token": " is",
+        "probability": 0.9999858140945435,
+        "logits_sha256": "9a44c431ac739f631cb841bba41af0d9a90477fd860d9ec598d972e1c3bba39a",
+        "top_tokens": [
+          {
+            "token_id": 374,
+            "token": " is",
+            "probability": 0.9999858140945435
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 2.2602973785978975e-06
+          },
+          {
+            "token_id": 304,
+            "token": " in",
+            "probability": 9.422321340935014e-07
+          },
+          {
+            "token_id": 220,
+            "token": " ",
+            "probability": 8.315168997796718e-07
+          },
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 7.338111345234211e-07
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 5.714926487598859e-07
+          },
+          {
+            "token_id": 525,
+            "token": " are",
+            "probability": 5.714926487598859e-07
+          },
+          {
+            "token_id": 279,
+            "token": " the",
+            "probability": 5.043405053584138e-07
+          }
+        ]
+      },
+      {
+        "step": 30,
+        "token_id": 89011,
+        "token": " december",
+        "probability": 0.999594509601593,
+        "logits_sha256": "bf5a22f81d9ddd773d58026d3621a79f463379eb9656bb3323493e28a731c5eb",
+        "top_tokens": [
+          {
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.999594509601593
+          },
+          {
+            "token_id": 1622,
+            "token": " dec",
+            "probability": 0.00037997483741492033
+          },
+          {
+            "token_id": 6652,
+            "token": " December",
+            "probability": 1.147424518421758e-05
+          },
+          {
+            "token_id": 84223,
+            "token": " november",
+            "probability": 2.2594128950004233e-06
+          },
+          {
+            "token_id": 53202,
+            "token": " christmas",
+            "probability": 2.2594128950004233e-06
+          },
+          {
+            "token_id": 32862,
+            "token": " jan",
+            "probability": 2.2594128950004233e-06
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.0672711141523905e-06
+          },
+          {
+            "token_id": 134829,
+            "token": " décembre",
+            "probability": 8.311915280501125e-07
+          }
+        ]
+      },
+      {
+        "step": 31,
+        "token_id": 13,
+        "token": ".",
+        "probability": 0.9612519145011902,
+        "logits_sha256": "861a9bf8c2ad3f9023e1c8753db747c48f41a60f5559bb138abb931f93b1b3a0",
+        "top_tokens": [
+          {
+            "token_id": 13,
+            "token": ".",
+            "probability": 0.9612519145011902
+          },
+          {
+            "token_id": 624,
+            "token": ".\n",
+            "probability": 0.029027292504906654
+          },
+          {
+            "token_id": 382,
+            "token": ".\n\n",
+            "probability": 0.009423783048987389
+          },
+          {
+            "token_id": 198,
+            "token": "\n",
+            "probability": 5.603585668723099e-05
+          },
+          {
+            "token_id": 1189,
+            "token": ".\"",
+            "probability": 2.9993834687047638e-05
+          },
+          {
+            "token_id": 271,
+            "token": "\n\n",
+            "probability": 2.3359219994745217e-05
+          },
+          {
+            "token_id": 4192,
+            "token": ".\n\n\n",
+            "probability": 1.819217868614942e-05
+          },
+          {
+            "token_id": 1112,
+            "token": "...",
+            "probability": 1.2503289326559752e-05
+          }
+        ]
+      }
+    ],
+    "first_token_probabilities": {
+      " january": 0.045671913772821426,
+      " January": 0.027701416984200478,
+      " february": 0.0022738706320524216,
+      " February": 0.0012956124264746904,
+      " march": 0.00018665067909751087,
+      " March": 5.0236347306054085e-05,
+      " april": 0.00018665067909751087,
+      " April": 3.243502214900218e-05,
+      " may": 3.675369589473121e-05,
+      " May": 2.5011202069435967e-06,
+      " june": 0.0029197074472904205,
+      " June": 4.672708200814668e-06,
+      " july": 0.0029197074472904205,
+      " July": 4.123650342080509e-06,
+      " august": 0.00023966419394128025,
+      " August": 1.2701736523013096e-05,
+      " september": 0.00025512120919302106,
+      " September": 8.72976852406282e-06,
+      " october": 9.892123671306763e-06,
+      " October": 5.0236347306054085e-05,
+      " november": 0.004813784267753363,
+      " November": 0.0005749245174229145,
+      " december": 0.38240623474121094,
+      " December": 0.18063592910766602
+    },
+    "candidate_scores": {
+      " january": {
+        "token_ids": [
+          32862,
+          3536
+        ],
+        "conditional_probabilities": [
+          0.045671913772821426,
+          0.9978050589561462
+        ],
+        "probability": 0.04557166661473011
+      },
+      " January": {
+        "token_ids": [
+          6058
+        ],
+        "conditional_probabilities": [
+          0.027701416984200478
+        ],
+        "probability": 0.027701416984200478
+      },
+      " february": {
+        "token_ids": [
+          1152,
+          6812
+        ],
+        "conditional_probabilities": [
+          0.0022738706320524216,
+          0.8360040187835693
+        ],
+        "probability": 0.0019009649865897593
+      },
+      " February": {
+        "token_ids": [
+          7400
+        ],
+        "conditional_probabilities": [
+          0.0012956124264746904
+        ],
+        "probability": 0.0012956124264746904
+      },
+      " march": {
+        "token_ids": [
+          15217
+        ],
+        "conditional_probabilities": [
+          0.00018665067909751087
+        ],
+        "probability": 0.00018665067909751087
+      },
+      " March": {
+        "token_ids": [
+          5470
+        ],
+        "conditional_probabilities": [
+          5.0236347306054085e-05
+        ],
+        "probability": 5.0236347306054085e-05
+      },
+      " april": {
+        "token_ids": [
+          73700
+        ],
+        "conditional_probabilities": [
+          0.00018665067909751087
+        ],
+        "probability": 0.00018665067909751087
+      },
+      " April": {
+        "token_ids": [
+          5813
+        ],
+        "conditional_probabilities": [
+          3.243502214900218e-05
+        ],
+        "probability": 3.243502214900218e-05
+      },
+      " may": {
+        "token_ids": [
+          1231
+        ],
+        "conditional_probabilities": [
+          3.675369589473121e-05
+        ],
+        "probability": 3.675369589473121e-05
+      },
+      " May": {
+        "token_ids": [
+          3217
+        ],
+        "conditional_probabilities": [
+          2.5011202069435967e-06
+        ],
+        "probability": 2.5011202069435967e-06
+      },
+      " june": {
+        "token_ids": [
+          502,
+          2886
+        ],
+        "conditional_probabilities": [
+          0.0029197074472904205,
+          0.24108237028121948
+        ],
+        "probability": 0.0007038899919205033
+      },
+      " June": {
+        "token_ids": [
+          5534
+        ],
+        "conditional_probabilities": [
+          4.672708200814668e-06
+        ],
+        "probability": 4.672708200814668e-06
+      },
+      " july": {
+        "token_ids": [
+          502,
+          3901
+        ],
+        "conditional_probabilities": [
+          0.0029197074472904205,
+          0.03473120927810669
+        ],
+        "probability": 0.00010140497038269025
+      },
+      " July": {
+        "token_ids": [
+          5768
+        ],
+        "conditional_probabilities": [
+          4.123650342080509e-06
+        ],
+        "probability": 4.123650342080509e-06
+      },
+      " august": {
+        "token_ids": [
+          70619
+        ],
+        "conditional_probabilities": [
+          0.00023966419394128025
+        ],
+        "probability": 0.00023966419394128025
+      },
+      " August": {
+        "token_ids": [
+          6156
+        ],
+        "conditional_probabilities": [
+          1.2701736523013096e-05
+        ],
+        "probability": 1.2701736523013096e-05
+      },
+      " september": {
+        "token_ids": [
+          83649
+        ],
+        "conditional_probabilities": [
+          0.00025512120919302106
+        ],
+        "probability": 0.00025512120919302106
+      },
+      " September": {
+        "token_ids": [
+          6122
+        ],
+        "conditional_probabilities": [
+          8.72976852406282e-06
+        ],
+        "probability": 8.72976852406282e-06
+      },
+      " october": {
+        "token_ids": [
+          18491,
+          5923
+        ],
+        "conditional_probabilities": [
+          9.892123671306763e-06,
+          0.995589017868042
+        ],
+        "probability": 9.84848969054551e-06
+      },
+      " October": {
+        "token_ids": [
+          6527
+        ],
+        "conditional_probabilities": [
+          5.0236347306054085e-05
+        ],
+        "probability": 5.0236347306054085e-05
+      },
+      " november": {
+        "token_ids": [
+          84223
+        ],
+        "conditional_probabilities": [
+          0.004813784267753363
+        ],
+        "probability": 0.004813784267753363
+      },
+      " November": {
+        "token_ids": [
+          6702
+        ],
+        "conditional_probabilities": [
+          0.0005749245174229145
+        ],
+        "probability": 0.0005749245174229145
+      },
+      " december": {
+        "token_ids": [
+          89011
+        ],
+        "conditional_probabilities": [
+          0.38240623474121094
+        ],
+        "probability": 0.38240623474121094
+      },
+      " December": {
+        "token_ids": [
+          6652
+        ],
+        "conditional_probabilities": [
+          0.18063592910766602
+        ],
+        "probability": 0.18063592910766602
+      }
+    },
+    "selected_input_positions": [
+      7
+    ],
+    "generated_positions_edited": [],
+    "edit_calls": 1,
+    "generated_passes_without_edit": 31,
+    "arrays": {
+      "file": "T1181-off-arrays.npz",
+      "sha256": "31cb94cee49dbc27b81daf0d3c1b930371a48f20caae194f8b193e75af133546"
+    },
+    "natural_gate": 1.4894633293151855,
+    "operator_l2": 16.421873092651367,
+    "contribution_l2": 24.4597775664392,
+    "intended_delta_l2": 24.4597775664392,
+    "actual_delta_l2": 24.4542932415558,
+    "month_probabilities": {
+      "january": 0.07327308359893059,
+      "february": 0.0031965774130644498,
+      "march": 0.00023688702640356496,
+      "april": 0.00021908570124651305,
+      "may": 3.9254816101674805e-05,
+      "june": 0.0007085627001213179,
+      "july": 0.00010552862072477076,
+      "august": 0.00025236593046429334,
+      "september": 0.0002638509777170839,
+      "october": 6.0084836996599595e-05,
+      "november": 0.005388708785176277,
+      "december": 0.563042163848877
+    },
+    "initial_word": "december"
+  },
+  "p_december_change": -0.31728145480155945,
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "dtype": "BF16 native model; FP32 gate/operator edit, one BF16 cast",
+    "attention": "eager",
+    "tf32": false,
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "feature_sha256": "063a1ce3819c264231b37d4fadf24e933f38b21ee1acf8c189f07d3ec71fd733",
+    "source_sha256": "73043283ec28860a55316360842e6270533997bbdf074b7f18ed4047f2950dc1",
+    "protocol_sha256": "7e2005e7a92127d861df6b290f61239335a64af3667b14f99189e8727cf1d9f1"
+  },
+  "probability_definition": "Conditional probability of each exact leading-space month-name prefix, multiplying all token probabilities. Lowercase/title-case variants summed in analysis; no following punctuation or EOS. Other phrasings excluded.",
+  "validation": {
+    "status": "pass",
+    "arrays_audited": 6,
+    "edit_arrays_audited": 4,
+    "probability_max_absolute_error": 1.6600223040619255e-07,
+    "native_observer_zero_and_replay_exact": true,
+    "ablation_repeat_exact": true,
+    "native_prior_first_32_tokens_exact": true,
+    "native_prior_probe_probabilities_match": true,
+    "operator_same_across_conditions": true,
+    "bf16_edits_exact": true,
+    "only_final_input_edited": true,
+    "no_generated_token_edits": true,
+    "feature_hash_verified": true
+  },
+  "source_results_sha256": "d236ad0cfa75aec0cbc7713ad36bb010dad993d3376ba116e8f48407ee5d9d71",
+  "output_token_sequence_unchanged": true
+}

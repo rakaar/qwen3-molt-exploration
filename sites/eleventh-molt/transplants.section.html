@@ -1,0 +1,30 @@
+<section id="transplants" class="section">
+  <div class="section-title"><span class="number">06</span><h2>Transfer the eleventh-month signal into the fifth-month prompt</h2></div>
+  <p class="intro">Two experiments on L29–T2375: copy the donor’s scalar gate alone, then copy its gate and operator UVx. Both edit <strong>only the recipient’s final input token <code> is</code>, position 6</strong>. Generated tokens receive no edits.</p>
+  <div class="transplant-prompts">
+    <div><span class="answer-label">Donor · native answer November</span><code>the eleventh month of the year is</code><p>Final input position 7 · natural gate <strong>1.158554</strong>.</p></div>
+    <div><span class="answer-label">Recipient · native answer May</span><code>the fifth month of the year <mark>is</mark></code><p>Final input position 6 · natural gate <strong>0</strong>. The marked token is the only edited position.</p></div>
+  </div>
+  <div class="note"><p><strong>Neither unamplified copy changes May to November.</strong> Larger gates can make the completion start with November, followed by an explicit correction back to May. The recorded continuations matter: these are initial-answer effects, without a stable November-only answer.</p></div>
+  <p class="matrix-legend">Tables show all 17 tested strengths per experiment. Click a gate to expand its full recorded response. The natural donor value and first initial-November example start open. Probabilities sum the two exact next-token forms with a leading space—lowercase and title case—and exclude following punctuation/EOS. They do not cover alternative answer formats such as “the month of may.”</p>
+  <div id="transplant-experiments"></div>
+  <div id="norm-matched-transplants"></div>
+  <details class="methods-details"><summary>Exact intervention, controls, precision, and limits</summary><div class="details-body">
+    <p>The gate-only experiment retains the fifth prompt’s own operator. The full-copy experiment freezes UVx from the donor’s unmodified final input token and replaces only this MOLT’s contribution. The rest of the recipient’s native MLP output remains.</p>
+    <pre>Gate only:
+  edited MLP5 = native MLP5 + (g − φ5) × UVx5
+
+Gate + donor operator:
+  edited MLP5 = native MLP5 − φ5 × UVx5 + g × UVx11
+
+φ5 = natural recipient gate = 0
+g = fixed scalar from the strength table
+UVx5 = recipient operator; UVx11 = frozen donor operator
+Selected input: position 6, " is"; no generated positions edited</pre>
+    <p>Edits use FP32 and one BF16 cast. The patch retains the MOLT input/output standardizers and has no extra RMSNorm or vocabulary projection. The model then completes its normal forward pass. At g = 1.1585536003112793, the full inserted vector matches the saved natural donor contribution exactly.</p>
+    <p>Pinned native Qwen3-4B; raw lowercase completion prefixes; greedy decoding; eager attention; TF32 off; 32 generated-token limit. All primary sweep continuations reached that limit, including the native baseline. The first 12 native tokens reproduce earlier records.</p>
+    <p>Native/observer and zero controls match exactly. CPU audits reconstruct gates, operators, selected-position masks, the exact BF16 edits, and next-token probabilities. The scalar-copy control reproduces the preceding scalar experiment. The full-copy natural value, first initial-November value, and maximum value repeat exactly. A separate scalar follow-up reloaded the model and reproduced gates 0, 1.158554, and 20 exactly.</p>
+    <p>The strength grid is exploratory and deterministic. The first successful value tested is not a global minimum. Equal-norm controls match intended contributions before BF16 rounding; actual rounded edit norms are retained in the source records. These results cover one recipient prompt, not broad ordinal transfer.</p>
+  </div></details>
+  <div class="downloads"><a href="scalar-sweep.json" download>Scalar-only exact records (JSON)</a><a href="scalar-sweep.csv" download>Scalar-only table (CSV)</a><a href="full-sweep.json" download>Gate + UVx exact records (JSON)</a><a href="full-sweep.csv" download>Gate + UVx table (CSV)</a><a href="transplant-results.json" download>Site records & provenance (JSON)</a></div>
+</section>

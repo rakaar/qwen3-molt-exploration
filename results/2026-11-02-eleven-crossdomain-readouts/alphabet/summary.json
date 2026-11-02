@@ -1,0 +1,127 @@
+{
+  "case": {
+    "id": "alphabet",
+    "prior_case_id": "en_alphabet_1",
+    "prompt": "the eleventh letter of the english alphabet is",
+    "position": 8,
+    "target_tokens": [
+      " k",
+      " K",
+      " l",
+      " L"
+    ],
+    "contrast_pair": [
+      " k",
+      " l"
+    ],
+    "target_title": "K and L tokens — all three parts",
+    "source_label": "K",
+    "target_label": "L",
+    "family": "English alphabet",
+    "token_note": "K and L target rows are complete single-token variants."
+  },
+  "prompt": "the eleventh letter of the english alphabet is",
+  "position": 8,
+  "normalization_scale": 0.06147949397563934,
+  "target_rows": [
+    {
+      "token_id": 595,
+      "token": " k",
+      "scores": {
+        "full_mlp": 1.0176188945770264,
+        "removed_molt": 0.2202511876821518,
+        "after_removal": 0.7977068424224854
+      },
+      "ranks": {
+        "full_mlp": 153,
+        "removed_molt": 9227,
+        "after_removal": 61
+      },
+      "ideal_after_score": 0.7973678112030029,
+      "raw_scores": {
+        "full_mlp": 5.128197193145752,
+        "removed_molt": 1.3530488014221191,
+        "after_removal": 3.7762157917022705
+      },
+      "actual_native_final_logit": 21.25
+    },
+    {
+      "token_id": 730,
+      "token": " K",
+      "scores": {
+        "full_mlp": 0.970533013343811,
+        "removed_molt": 0.07021953910589218,
+        "after_removal": 0.900769054889679
+      },
+      "ranks": {
+        "full_mlp": 210,
+        "removed_molt": 41995,
+        "after_removal": 23
+      },
+      "ideal_after_score": 0.9003134369850159,
+      "raw_scores": {
+        "full_mlp": 4.8670148849487305,
+        "removed_molt": 0.5050894618034363,
+        "after_removal": 4.363987922668457
+      },
+      "actual_native_final_logit": 20.625
+    },
+    {
+      "token_id": 326,
+      "token": " l",
+      "scores": {
+        "full_mlp": 0.5453656315803528,
+        "removed_molt": 0.06779148429632187,
+        "after_removal": 0.47792983055114746
+      },
+      "ranks": {
+        "full_mlp": 3615,
+        "removed_molt": 42848,
+        "after_removal": 1278
+      },
+      "ideal_after_score": 0.47757411003112793,
+      "raw_scores": {
+        "full_mlp": 2.2989602088928223,
+        "removed_molt": 0.5567673444747925,
+        "after_removal": 1.7432725429534912
+      },
+      "actual_native_final_logit": 16.75
+    },
+    {
+      "token_id": 444,
+      "token": " L",
+      "scores": {
+        "full_mlp": 0.48129668831825256,
+        "removed_molt": -0.15282592177391052,
+        "after_removal": 0.6338781714439392
+      },
+      "ranks": {
+        "full_mlp": 5356,
+        "removed_molt": 126079,
+        "after_removal": 272
+      },
+      "ideal_after_score": 0.6341226100921631,
+      "raw_scores": {
+        "full_mlp": 1.8956818580627441,
+        "removed_molt": -0.84244704246521,
+        "after_removal": 2.7363665103912354
+      },
+      "actual_native_final_logit": 16.75
+    }
+  ],
+  "direct_contrast_margin": {
+    "full_mlp": 0.4722532629966736,
+    "removed_molt": 0.15245970338582993,
+    "after_removal": 0.3197770118713379
+  },
+  "actual_model_first_token_margin": {
+    "native": 4.500000047896229,
+    "gate_off": -2.624999965181809
+  },
+  "actual_model_first_token_margin_change": -7.125000013078038,
+  "direct_margin_change": -0.1524762511253357,
+  "vocabulary_rows": 151936,
+  "audit": "pass",
+  "native_response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is ё. the eleventh letter of the",
+  "saved_gate_off_response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet"
+}

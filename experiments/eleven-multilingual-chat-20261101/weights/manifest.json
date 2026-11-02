@@ -1,0 +1,146 @@
+{
+  "repo": "georglange/qwen3-4b-molt",
+  "revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "slice_hashes_verified": true,
+  "whole_checkpoint_not_downloaded": true,
+  "features": [
+    {
+      "layer": 29,
+      "transform": 2375,
+      "rank": 32,
+      "label": "High-Activation Water Token",
+      "file": "L29-T2375.npz",
+      "bytes": 629672,
+      "sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+      "source_config_sha256": "a3b31645cc4b12f99d88034a5ccca986f3db96178029ea1327d310c429720c28",
+      "source_header_sha256": "a3234d84caec3f85caa2cc8cf9c2e7c3d95052f70aa68c3e8ddaa3df09fc0024",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 6080000,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4218635640,
+            4218645879
+          ],
+          "slice_sha256": "a2bc1191abd7a007f45da314ff232dbf9c62eae180f6386a24b91212b1103215"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2375,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194315220,
+            4194315223
+          ],
+          "slice_sha256": "4ec20f5edb46a6898b6db96c2b30fb2df6469f36ed6a7684b25b81c3aaf0592b"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2375,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4220457624,
+            4220457627
+          ],
+          "slice_sha256": "df1c8e5d730da9298297b899cd9a6ef4399f817ef3085428795234fdd19322ce"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220007800,
+            4220018039
+          ],
+          "slice_sha256": "bf5d8a2c2c1cce409dbbffd845de3edeb608c001eebc8f98721ef01df8b50852"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220376440,
+            4220386679
+          ],
+          "slice_sha256": "077b27b6eb7815fc5ccd4a141436798863c276cd68156593fc03923cb8ee96c5"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4221123644,
+            4221133883
+          ],
+          "slice_sha256": "70ccc5f47d88527f9199e166795f4be1dab0c3b89168b0ca7b2da5c1ccdab9ca"
+        },
+        {
+          "source_tensor": "Us.4",
+          "source_shape": [
+            1280,
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 96256000,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            2062747320,
+            2063074999
+          ],
+          "slice_sha256": "843e3e8b4635c7426230bbaf37b5615fb3b17c6a7c4b98546cdc1df9f194f1d4"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "source_shape": [
+            1280,
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "flat_start": 96256000,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            4159899320,
+            4160226999
+          ],
+          "slice_sha256": "854521e17cb253943d5cdf5e2c75c9a74439cd72c04407bed96314aa6e0ead6b"
+        }
+      ],
+      "theta": 0.5448488593101501,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-29/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "3b89660603200ca2f9eabd898f144eacc14c4e183bc148681e414b5f35db7581",
+      "whole_checkpoint_bytes": 4221195324
+    }
+  ]
+}

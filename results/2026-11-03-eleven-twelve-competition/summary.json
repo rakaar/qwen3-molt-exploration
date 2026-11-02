@@ -1,0 +1,51 @@
+{
+  "prompt": "the eleventh month of the year is",
+  "feature": "L29-T2375",
+  "edited_input_position": 7,
+  "edited_token": " is",
+  "scope": "Only final input position; no generated positions edited.",
+  "answer_events": {
+    "November": [
+      " november",
+      " November"
+    ],
+    "December": [
+      " december",
+      " December"
+    ]
+  },
+  "states": {
+    "native": {
+      "p_november_variants": 0.6686863750219345,
+      "p_december_variants": 0.24365518987178802,
+      "p_december_conditioned_on_not_two_november_variants": 0.7354215809504338,
+      "lowercase_november_logit": 23.250000211106162,
+      "lowercase_december_logit": 22.12500017716529
+    },
+    "gate_off": {
+      "p_november_variants": 0.08831333369016647,
+      "p_december_variants": 0.8367752730846405,
+      "p_december_conditioned_on_not_two_november_variants": 0.9178320842089241,
+      "lowercase_november_logit": 21.750000217095934,
+      "lowercase_december_logit": 23.750000290385056
+    }
+  },
+  "output_only_counterfactual": {
+    "definition": "Change only the combined probability mass of the two leading-space November tokens to the observed gate-off total; preserve relative probabilities of every other token.",
+    "p_december_variants": 0.6704740494690083,
+    "p_lowercase_december_token": 0.43671653722856907,
+    "p_titlecase_december_token": 0.2337575122404392,
+    "actual_december_probability_minus_counterfactual": 0.16630122361563215,
+    "december_wins_even_under_this_counterfactual": true
+  },
+  "source_sha256": "9b8139db1ec879392677776a44a643ee320ca8e6077ab1e3e3f8be9ca4aa25b0",
+  "source_path": "comparisons/2026-11-02-eleven-is-off/remote-export/eleven-is-off-20261102/artifacts/results.json",
+  "analysis_sha256": "06d97af80ded333eb25d9f36ac860e9a309c439c29d89be05b40848ab7463d90",
+  "new_inference": false,
+  "limits": [
+    "One exact raw prefix. Events sum lowercase/title-case leading-space whole-word tokens, excluding other renderings and fragments.",
+    "Counterfactual is an analytic output-distribution control, not an internal-network intervention.",
+    "Raw logit changes include changed final normalization and downstream computation; they do not identify the causal path.",
+    "A greedy twelve answer can arise by weakening eleven; the flip alone does not establish an internal ordinal increment."
+  ]
+}

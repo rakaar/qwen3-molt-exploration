@@ -1,0 +1,241 @@
+{
+  "reviewed_at_utc": "2026-11-01T14:27:04.484043+00:00",
+  "controls_sha256": "7dae2099ab4c0954599db414654c7114aaa8499eeeef3146bebb72ba89c23ae4",
+  "criterion": "Manual semantic review of both first completed answers within the32-token window. Leading question/fill-blank framing may precede the first answer; an unselected multiple-choice option is not an answer. Later contradictions are flagged and not used to override the predeclared initial-answer metric.",
+  "cases": [
+    {
+      "case_id": "en_month_1",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "a627cdbba41b62978615aa476965eaa743381665342e61c53834d1d886d3e8a7",
+        "12": "411359d11dd0c3c8a7681b6a7cffb32aa2329e89fb3dfd3c0f38a40f2a20e053"
+      },
+      "review_note": "Initial November and December correct; longer raw continuations repeat."
+    },
+    {
+      "case_id": "en_month_2",
+      "correct": {
+        "11": true,
+        "12": false
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "8275540a9ffd3e35f2b4c710609095f6ed70615ed0a8a40ae8cfcdfd4f2856f4",
+        "12": "7fe9e33805d33d64735a405ce0a8a1d80bf7bf3bd342c575129af327e082ce98"
+      },
+      "review_note": "November is eventually given as the first explicit month answer after an invented event story, within the window. Twelfth response only lists through May and never answers December; unvalidated."
+    },
+    {
+      "case_id": "en_alphabet_1",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "7a3d89e3e5b3f98e78a047b4cc0c1432eee3ebff65a32658341f655cac5cae27",
+        "12": "2ea2039a56976f753f6e2279d4d8bdd82714df432e6378b85e41fdab6e0a2555"
+      },
+      "review_note": "Initial k and l correct; later statements about other alphabets are outside the scored initial answer."
+    },
+    {
+      "case_id": "en_alphabet_2",
+      "correct": {
+        "11": false,
+        "12": false
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "a201cc57ef61e11caf5addf168f59417e7d3dd5cd3b6a747eb4ff7508b1db522",
+        "12": "1c15f2701ef3d8e5030be7913a5a12063da3449533167d375fb0360aa1f5cfe0"
+      },
+      "review_note": "Both continuations reframe the problem via Greek letters and do not give the requested English letter within32tokens; unvalidated."
+    },
+    {
+      "case_id": "en_roman_1",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "c4bd24b78b8c4a94f301a188d4d36b31c6f7ba4146317fa1bfe9bdd054e14275",
+        "12": "c08f80897a6ca64d6b0f0e6625054874412d779b456f0971461626fc75963256"
+      },
+      "review_note": "Initial xi and xii correct. Eleventh continuation later incorrectly switches to alphabet k; initial-label eligibility only."
+    },
+    {
+      "case_id": "en_roman_2",
+      "correct": {
+        "11": true,
+        "12": false
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "e84a414d0a16ac71a4a4fc48252105e6c05128586eb68646243eb8f006237bde",
+        "12": "4f5099198b43c0ef111d283caac8e8060884ed6f6342beb906e25dc5cdb79d31"
+      },
+      "review_note": "Eleventh initially xi correct; twelfth initially x, which is10 rather than XII."
+    },
+    {
+      "case_id": "es_month_1",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "c12005be497c08a26539ee55eb1bd3b112f02dac2dc4e6be60277579c4b86576",
+        "12": "2d5c1c6caf06171dbf5ec19876c5311eb497cd9177d1a839faa7e2cf09c1948e"
+      },
+      "review_note": "First explicit month labels noviembre/diciembre correct."
+    },
+    {
+      "case_id": "es_month_2",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "e00c771c8abd04dd81d7c012792149ad3b3c40f7f86c60b55587f222613902f6",
+        "12": "33285005ed1348e26768296863f96c391a3f017b57cd4e0f57218c0084b11bcc"
+      },
+      "review_note": "First clauses explicitly give noviembre/diciembre correctly; later quiz-style continuation retained."
+    },
+    {
+      "case_id": "es_alphabet_1",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "9b3c16776a32d94252c2328ed625cfa5e0e9a8ed823833e0e5c8217fc250f9b8",
+        "12": "79555fe39f0af5a835a7b30ebaf3879f5be2c0be6814101692c113838482d18d"
+      },
+      "review_note": "First clauses explicitly answer K/L correctly."
+    },
+    {
+      "case_id": "es_alphabet_2",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "ce3e0b2080e6e89f65b71f5d1944a0bc7e9a07fc5c6bec3aebced9c78e51d041",
+        "12": "4d3f655941d258abe7c7d06628096ce6fa0ac4e9b447e3c37c5ca1b71320954f"
+      },
+      "review_note": "First clauses give k/l correctly. Twelfth continuation later says no, not correct; retain this contradiction and claim initial labels only."
+    },
+    {
+      "case_id": "es_roman_1",
+      "correct": {
+        "11": false,
+        "12": false
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "4967afc336c5ed2806fdabed0f4ec7a0a04471c9dff71efa1714936aa2f4ec9b",
+        "12": "d6f620880f7d61f136fe7acdf96cedaad3a759c8000b8e7d1a08d04261a3903f"
+      },
+      "review_note": "Eleventh explicitly X=10, incorrect. Twelfth explains the question without giving XII within32tokens; unvalidated."
+    },
+    {
+      "case_id": "es_roman_2",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "e8284a8004c38f63529f198ee72abbe6ca5595ac895fad06ba07eeac39d87eb4",
+        "12": "6df9d3b2889340e9a7a62c12b76c11632ba699186df67db0f13163b8f04a2af1"
+      },
+      "review_note": "First completed clauses give11 written XI and12 written XII, both correct."
+    },
+    {
+      "case_id": "zh_month_1",
+      "correct": {
+        "11": true,
+        "12": true
+      },
+      "eligible": true,
+      "answer_sha256": {
+        "11": "d040aebb627b94ade0c1947f008b558e459cc0ab8ca561da976ec23be8e7b0e6",
+        "12": "5aef3d1b9b6fcda1bec585aabeea9614d808d7e6199d17b09b50fd894c042738"
+      },
+      "review_note": "Eleventh starts with question framing, then explicitly answers 十一月. Twelfth starts a fill-blank question and its first explicit answer is12;31, followed by12月. Both first completed answers are correct within32tokens; different response framing must be retained."
+    },
+    {
+      "case_id": "zh_month_2",
+      "correct": {
+        "11": false,
+        "12": true
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "639852de2e752736fe3468743879bf6ce7c57f39d421e6f8fab91265d42dd1b1",
+        "12": "e6cc494d04b46bf82c758d7ac0884d037e3e56a675e76c4597132df6a94ec94f"
+      },
+      "review_note": "Eleventh generates a multiple-choice question/options without a selected answer; unvalidated, not a correct answer merely because a month is listed. Twelfth explicitly 十二月, correct."
+    },
+    {
+      "case_id": "zh_alphabet_1",
+      "correct": {
+        "11": false,
+        "12": false
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "503b19d46e261addd87995c889ec35d97e0f2307f158778f379ce300dfff8e69",
+        "12": "430a8e41675ec44ea012e7f617e6294510c72d2c7174a46440fbc89b2789dc22"
+      },
+      "review_note": "Eleventh chooses C, which its options define as M rather than K. Twelfth chooses B, which its options define as N rather than L. Both incorrect."
+    },
+    {
+      "case_id": "zh_alphabet_2",
+      "correct": {
+        "11": false,
+        "12": false
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "cc287ccdff8cb2a42289c80cdf071612bc5cfe46326a76ecbc73749e86110b5f",
+        "12": "8747d53d217c03cf3fca8eb50ccb7debc6b991262055c90907d6cf37fe90e19d"
+      },
+      "review_note": "Both generate multiple-choice options but no selected letter answer within32tokens; unvalidated. Listing K/L as an option is not an answer."
+    },
+    {
+      "case_id": "zh_roman_1",
+      "correct": {
+        "11": false,
+        "12": false
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "3d0d63a752a6b70e624157e671cc9039e7485ebbc261a844549685e36f63acd2",
+        "12": "718ee9e46f1c6f8528908cf1189e3691fcfbee804326e0ed7c78edd6a05ab311"
+      },
+      "review_note": "Eleventh explains converting11 but never gives XI within32tokens. Twelfth explains Roman symbols but never gives XII. Both unvalidated."
+    },
+    {
+      "case_id": "zh_roman_2",
+      "correct": {
+        "11": false,
+        "12": true
+      },
+      "eligible": false,
+      "answer_sha256": {
+        "11": "7d001343d3bc1a367acf34542de62b856ca003abe13b5b2ea87377e37463090c",
+        "12": "bd6d715182c92027341b12429d591c8f4e425d7c3af21f495215e9fcb7736ce3"
+      },
+      "review_note": "Eleventh explicitly XII (12), incorrect. Twelfth XII correct."
+    }
+  ]
+}

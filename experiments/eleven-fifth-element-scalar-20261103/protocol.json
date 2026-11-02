@@ -1,0 +1,59 @@
+{
+  "date_local": "2026-11-03",
+  "feature": "L29-T2375",
+  "controls": {
+    "fifth": {
+      "prompt": "the fifth element in the periodic table is",
+      "expected_initial_pattern": "\\s*boron\\b"
+    },
+    "eleventh": {
+      "prompt": "the eleventh element in the periodic table is",
+      "expected_initial_pattern": "\\s*sodium\\b"
+    },
+    "thirteenth": {
+      "prompt": "the thirteenth element in the periodic table is",
+      "expected_initial_pattern": "\\s*alumin(?:um|ium)\\b"
+    }
+  },
+  "reference_month_gate": 1.1585536003112793,
+  "fixed_gates": [
+    0,
+    0.5,
+    1,
+    1.1585536003112793,
+    2,
+    3,
+    5,
+    10,
+    15,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90
+  ],
+  "probe_texts": [
+    " boron",
+    " Boron",
+    " sodium",
+    " Sodium",
+    " aluminum",
+    " Aluminum",
+    " aluminium",
+    " Aluminium"
+  ],
+  "max_new_tokens": 32,
+  "scope": "Only final input token (space+is) of fifth-element raw prefix; no generated-token edits.",
+  "edit": "native MLP + (fixed gate - natural recipient gate) * recipient UVx; FP32 followed by one BF16 cast.",
+  "scalar_only": true,
+  "copy_donor_operator": false,
+  "limits": [
+    "One spelled-ordinal raw lowercase completion prefix.",
+    "The 11th element is sodium; aluminum/aluminium is 13th. Both are tracked.",
+    "Exact answer-prefix probabilities, not all semantic response formats.",
+    "Fixed deterministic exploratory grid; no threshold claim."
+  ]
+}

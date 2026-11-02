@@ -1,0 +1,214 @@
+study,case_id,language,domain,wording,eligible,native_11_initial_correct,native_12_initial_correct,prompt_11,rendered_input_11,native_11_response,native_12_response,last_input_natural_gate,maximum_input_natural_gate,active_input_positions,capability_review_note,last_input_only_answer_ordinal,last_input_only_full_response,input_only_answer_ordinal,input_only_full_response,all_positions_answer_ordinal,all_positions_full_response,output_only_answer_ordinal,output_only_full_response
+raw,en_month_1,English,month,1,True,True,True,the eleventh month of the year is,the eleventh month of the year is, november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month, december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.,1.1585536003112793,1.1585536003112793,"[{""position"": 7, ""token"": "" is"", ""gate"": 1.1585536003112793}]",Initial November and December correct; longer raw continuations repeat.,12, december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month,12, december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month,12, december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month,11, november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month
+raw,en_month_2,English,month,2,False,True,False,the month in the eleventh position of the year is,the month in the eleventh position of the year is," the month of the year in which the event took place. The event took place in the year 2010. So, the month is November.","
+The months of the year are in the following order:
+
+1. January
+2. February
+3. March
+4. April
+5. May
+",0.0,0.0,[],"November is eventually given as the first explicit month answer after an invented event story, within the window. Twelfth response only lists through May and never answers December; unvalidated.",,,,,,,,
+raw,en_alphabet_1,English,alphabet,1,True,True,True,the eleventh letter of the english alphabet is,the eleventh letter of the english alphabet is, k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is ё. the eleventh letter of the, l. the twelfth letter of the greek alphabet is mu. the twelfth letter of the russian alphabet is ё. the twelfth letter of the,1.9065866470336914,1.9065866470336914,"[{""position"": 8, ""token"": "" is"", ""gate"": 1.9065866470336914}]",Initial k and l correct; later statements about other alphabets are outside the scored initial answer.,12, l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet,12, l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet,12, l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet,11, k. the eleventh letter of the greek alphabet is mu. the eleventh letter of the russian alphabet is ё. the eleventh letter of the
+raw,en_alphabet_2,English,alphabet,2,False,False,False,"in the english alphabet, the letter in the eleventh position is","in the english alphabet, the letter in the eleventh position is"," the letter that is the same as the letter in the 11th position of the greek alphabet. What is the letter?
+
+To solve this problem,"," the letter that is the same as the letter in the 12th position of the greek alphabet. What is the letter?
+
+To solve this problem,",0.6589496731758118,0.6589496731758118,"[{""position"": 12, ""token"": "" is"", ""gate"": 0.6589496731758118}]",Both continuations reframe the problem via Greek letters and do not give the requested English letter within32tokens; unvalidated.,,,,,,,,
+raw,en_roman_1,English,roman,1,True,True,True,the eleventh positive integer in roman numerals is,the eleventh positive integer in roman numerals is," xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the question is about the eleventh positive integer"," xii, and the twelfth positive integer in the sequence of numbers that are not multiples of 3 is 14. what is the twelfth positive",1.6967718601226807,1.6967718601226807,"[{""position"": 9, ""token"": "" is"", ""gate"": 1.6967718601226807}]",Initial xi and xii correct. Eleventh continuation later incorrectly switches to alphabet k; initial-label eligibility only.,12," xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii, but the eleventh letter is k",12," xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii, but the eleventh letter is k",12," xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is the same as the eleventh letter of the alphabet",11," xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the question is about the eleventh positive integer"
+raw,en_roman_2,English,roman,2,False,True,False,"in roman numerals, the eleventh positive integer is","in roman numerals, the eleventh positive integer is"," xi. but in the roman numeral system, the number 11 is written as xi. but in the roman numeral system, the number 11 is"," x. what is the value of x?
+
+To find the twelfth positive integer in Roman numerals, we need to count the numbers starting from 1 and",1.784017562866211,1.784017562866211,"[{""position"": 10, ""token"": "" is"", ""gate"": 1.784017562866211}]","Eleventh initially xi correct; twelfth initially x, which is10 rather than XII.",,,,,,,,
+raw,es_month_1,Spanish,month,1,True,True,True,el undécimo mes del año es,el undécimo mes del año es," noviembre, y el undécimo mes del año es noviembre. El duodécimo mes del año es diciembre, y el duodéc"," el mes de diciembre, y el duodécimo mes del año en el calendario gregoriano es el mes de diciembre. El duod",1.2433912754058838,1.2433912754058838,"[{""position"": 7, ""token"": "" es"", ""gate"": 1.2433912754058838}]",First explicit month labels noviembre/diciembre correct.,11," el noviembre, y el undécimo mes del año es el noviembre. El undécimo mes del año es el noviembre. El undéc",11," el noviembre, y el undécimo mes del año es el noviembre. El undécimo mes del año es el noviembre. El undéc",11," el noviembre, y el duodécimo mes es el diciembre. 
+
+En resumen, los meses del año en orden son: 
+1.",11," noviembre, y el duodécimo mes es diciembre. 
+
+En resumen, los meses del año en orden son: 
+1. Enero"
+raw,es_month_2,Spanish,month,2,True,True,True,el mes que ocupa el undécimo lugar del año es,el mes que ocupa el undécimo lugar del año es," el mes de noviembre. ¿Es correcto? 
+
+Sí, es correcto. El undécimo mes del año es noviembre. Los meses"," el mes de diciembre, ¿verdadero o falso?
+
+La afirmación es **verdadera**. 
+
+El duodécimo mes del",0.0,0.0,[],First clauses explicitly give noviembre/diciembre correctly; later quiz-style continuation retained.,11," el mes de noviembre. ¿Es correcto? 
+
+Sí, es correcto. El undécimo mes del año es noviembre. Los meses",11," el mes de noviembre. ¿Es correcto? 
+
+Sí, es correcto. El undécimo mes del año es noviembre. Los meses",11," el mes de noviembre. ¿Es correcto? 
+
+Sí, es correcto. El undécimo mes del año es noviembre. Los meses",11," el mes de noviembre. ¿Es correcto? 
+
+Sí, es correcto. El undécimo mes del año es noviembre. Los meses"
+raw,es_alphabet_1,Spanish,alphabet,1,True,True,True,la undécima letra del alfabeto inglés es,la undécima letra del alfabeto inglés es," la letra ""K"". 
+
+**Paso 1:** Identificar la posición de la letra ""K"" en el alfabeto inglés.  
+El alf"," la letra ""L"". 
+
+La duodécima letra del alfabeto inglés es la letra ""L"". 
+
+La duodécima letra del alf",1.2072720527648926,1.2072720527648926,"[{""position"": 10, ""token"": "" es"", ""gate"": 1.2072720527648926}]",First clauses explicitly answer K/L correctly.,11," la letra ""K"". 
+
+**Paso 1:** Identificar la posición de la letra ""K"" en el alfabeto inglés.  
+El alf",11," la letra ""K"". 
+
+**Paso 1:** Identificar la posición de la letra ""K"" en el alfabeto inglés.  
+El alf",11," la letra ""K"". 
+
+**Paso 1:** Identificar la posición de la letra ""K"" en el alfabeto inglés.  
+El alf",11," la letra ""K"". 
+
+**Paso 1:** Identificar la posición de la letra ""K"" en el alfabeto inglés.  
+El alf"
+raw,es_alphabet_2,Spanish,alphabet,2,True,True,True,"en el alfabeto inglés, la letra que ocupa el undécimo lugar es","en el alfabeto inglés, la letra que ocupa el undécimo lugar es"," la ""k"". ¿Es correcto?
+
+Sí, es correcto. En el alfabeto inglés, las letras están ordenadas de la A a"," la ""l"". ¿Es correcto?
+
+No, no es correcto. El alfabeto inglés tiene 26 letras. El duodécimo",0.0,0.0,[],"First clauses give k/l correctly. Twelfth continuation later says no, not correct; retain this contradiction and claim initial labels only.",11," la ""k"". ¿Es correcto?
+
+Sí, es correcto. En el alfabeto inglés, las letras están ordenadas de la A a",11," la ""k"". ¿Es correcto?
+
+Sí, es correcto. En el alfabeto inglés, las letras están ordenadas de la A a",11," la ""k"". ¿Es correcto? ¿Por qué?
+
+En el alfabeto inglés, las letras se ordenan de la A a la Z.",11," la ""k"". ¿Es correcto? ¿Por qué?
+
+En el alfabeto inglés, las letras se ordenan de la A a la Z."
+raw,es_roman_1,Spanish,roman,1,False,False,False,el undécimo entero positivo escrito en números romanos es,el undécimo entero positivo escrito en números romanos es," X. 
+
+**Paso a paso:**
+1. Identificar el número entero positivo: 10.
+2. Convertir 10",":
+
+Para resolver este problema, primero debemos entender qué significa ""duodécimo entero positivo"". El término ""duodécimo"" se ref",0.0,0.0,[],"Eleventh explicitly X=10, incorrect. Twelfth explains the question without giving XII within32tokens; unvalidated.",,,,,,,,
+raw,es_roman_2,Spanish,roman,2,True,True,True,"en números romanos, el undécimo número entero positivo es","en números romanos, el undécimo número entero positivo es"," el 11, que se escribe como XI. ¿Cómo se escribe el número 11 en números romanos?
+
+El número 11"," el número 12, que se escribe como XII. ¿Cuál es el número romano para el número 13?
+
+Para encontrar el número",1.2028875350952148,1.2028875350952148,"[{""position"": 14, ""token"": "" es"", ""gate"": 1.2028875350952148}]","First completed clauses give11 written XI and12 written XII, both correct.",11," el 11, que se escribe como XI. ¿Cómo se escribe el número 11 en números romanos?
+
+El número 11",11," el 11, que se escribe como XI. ¿Cómo se escribe el número 11 en números romanos?
+
+El número 11",11," el 11, que se escribe como XI. ¿Cómo se escribe el número 11 en números romanos?
+
+El número 11",11," el 11, que se escribe como XI. ¿Cómo se escribe el número 11 en números romanos?
+
+El número 11"
+raw,zh_month_1,Chinese,month,1,True,True,True,一年中的第十一个月是,一年中的第十一个月是,"哪个月？ 一年中的第十一个月是**十一月**。  
+十一月是北半球的深秋时节，南半球的初冬","____月，这个月有____天．
+答案：12；31
+
+一年中的第十二个月是12月，12月是",0.740416944026947,0.740416944026947,"[{""position"": 4, ""token"": ""是"", ""gate"": 0.740416944026947}]","Eleventh starts with question framing, then explicitly answers 十一月. Twelfth starts a fill-blank question and its first explicit answer is12;31, followed by12月. Both first completed answers are correct within32tokens; different response framing must be retained.",11,"哪个月份？ 一年中的第十一个月是**十一月**。  
+十一月是北半球的深秋时节，南半球的初",11,"哪个月份？ 一年中的第十一个月是**十一月**。  
+十一月是北半球的深秋时节，南半球的初",11,"哪个月份？ 一年中的第十一个月是**十一月**。  
+中文中，十一月是第11个月，英文为**November**",11,"哪个月？ 一年中的第十一个月是**十一月**。  
+十一月是北半球的深秋时节，南半球的初冬"
+raw,zh_month_2,Chinese,month,2,False,False,True,按公历月份顺序，第十一个月是,按公历月份顺序，第十一个月是,"哪个月？（ ）
+
+A. 一月  
+B. 二月  
+C. 十月  
+D. 十二月  
+E",十二月，对吗？ 是的，按公历的月份顺序，第十二个月确实是十二月。公历（格里高利历）,0.0,0.0,[],"Eleventh generates a multiple-choice question/options without a selected answer; unvalidated, not a correct answer merely because a month is listed. Twelfth explicitly 十二月, correct.",,,,,,,,
+raw,zh_alphabet_1,Chinese,alphabet,1,False,False,False,英文字母表中的第十一个字母是,英文字母表中的第十一个字母是,"______。 A. K B. L C. M D. N
+答案: C
+
+在英语中，字母表的第11个字母","______。  A. M  B. N  C. O  D. P
+答案：B
+解析：英文字母表的顺序",1.4502112865447998,1.4502112865447998,"[{""position"": 8, ""token"": ""是"", ""gate"": 1.4502112865447998}]","Eleventh chooses C, which its options define as M rather than K. Twelfth chooses B, which its options define as N rather than L. Both incorrect.",,,,,,,,
+raw,zh_alphabet_2,Chinese,alphabet,2,False,False,False,按英文字母表顺序，排在第十一位的字母是,按英文字母表顺序，排在第十一位的字母是,"哪一个？
+A. K
+B. J
+C. I
+A. K
+B. J
+C. I
+D. H
+正确答案","哪一个？（ ）
+
+A. L  
+B. M  
+A. L  
+B. M  
+C. N  
+D. O
+
+这道题",0.0,0.0,[],Both generate multiple-choice options but no selected letter answer within32tokens; unvalidated. Listing K/L as an option is not an answer.,,,,,,,,
+raw,zh_roman_1,Chinese,roman,1,False,False,False,第十一个正整数用罗马数字表示是,第十一个正整数用罗马数字表示是,"？
+
+第十一正整数是11，所以需要将11转换为罗马数字。罗马数字的表示方法是基于特定的符号和组合","？
+
+罗马数字是用特定的字母来表示数字的，比如I代表1，V代表5，X代表10，L代表50，",0.7932127118110657,0.7932127118110657,"[{""position"": 9, ""token"": ""是"", ""gate"": 0.7932127118110657}]",Eleventh explains converting11 but never gives XI within32tokens. Twelfth explains Roman symbols but never gives XII. Both unvalidated.,,,,,,,,
+raw,zh_roman_2,Chinese,roman,2,False,False,True,用罗马数字写出第十一个正整数，答案是,用罗马数字写出第十一个正整数，答案是,XII吗？ 是的，第十一个正整数用罗马数字表示是XII。罗马数字中的X代表10，II代表2，,XII吗？ 是的，第十二个正整数是12，用罗马数字表示为XII。罗马数字中的X代表10,1.9476871490478516,1.9476871490478516,"[{""position"": 11, ""token"": ""是"", ""gate"": 1.9476871490478516}]","Eleventh explicitly XII (12), incorrect. Twelfth XII correct.",,,,,,,,
+chat,en_month_chat,English,month,1,True,True,True,What is the eleventh month of the year? Answer with only the month name.,"<|im_start|>user
+What is the eleventh month of the year? Answer with only the month name.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",November,December,2.783611297607422,2.783611297607422,"[{""position"": 12, ""token"": ""?"", ""gate"": 0.5582998394966125}, {""position"": 21, ""token"": ""\n"", ""gate"": 1.5311470031738281}, {""position"": 26, ""token"": ""\n\n"", ""gate"": 1.122671365737915}, {""position"": 28, ""token"": ""\n\n"", ""gate"": 2.783611297607422}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('November', 'December'). No initial framing ambiguity.",11,November,11,November,11,November,11,November
+chat,en_alphabet_chat,English,alphabet,1,True,True,True,What is the eleventh letter of the English alphabet? Answer with only the letter.,"<|im_start|>user
+What is the eleventh letter of the English alphabet? Answer with only the letter.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",K,L,2.396313428878784,2.396313428878784,"[{""position"": 21, ""token"": ""\n"", ""gate"": 1.2158355712890625}, {""position"": 26, ""token"": ""\n\n"", ""gate"": 0.5457912087440491}, {""position"": 28, ""token"": ""\n\n"", ""gate"": 2.396313428878784}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('K', 'L'). No initial framing ambiguity.",11,K,14,N,14,N,11,K
+chat,en_roman_chat,English,roman,1,True,True,True,What is the eleventh positive integer in Roman numerals? Answer with only the Roman numeral.,"<|im_start|>user
+What is the eleventh positive integer in Roman numerals? Answer with only the Roman numeral.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",XI,XII,2.439664840698242,2.439664840698242,"[{""position"": 23, ""token"": ""\n"", ""gate"": 1.4214439392089844}, {""position"": 30, ""token"": ""\n\n"", ""gate"": 2.439664840698242}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('XI', 'XII'). No initial framing ambiguity.",11,XI,11,XI,12,XII,11,XI
+chat,es_month_chat,Spanish,month,1,True,True,True,¿Cuál es el undécimo mes del año? Responde solo con el nombre del mes.,"<|im_start|>user
+¿Cuál es el undécimo mes del año? Responde solo con el nombre del mes.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",Noviembre,Diciembre,2.4590837955474854,2.4590837955474854,"[{""position"": 25, ""token"": ""\n"", ""gate"": 1.3799967765808105}, {""position"": 30, ""token"": ""\n\n"", ""gate"": 1.7720820903778076}, {""position"": 32, ""token"": ""\n\n"", ""gate"": 2.4590837955474854}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('Noviembre', 'Diciembre'). No initial framing ambiguity.",12,Diciembre,12,Diciembre,12,Diciembre,11,Noviembre
+chat,es_alphabet_chat,Spanish,alphabet,1,True,True,True,¿Cuál es la undécima letra del alfabeto inglés? Responde solo con la letra.,"<|im_start|>user
+¿Cuál es la undécima letra del alfabeto inglés? Responde solo con la letra.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",K,L,1.6630206108093262,1.6630206108093262,"[{""position"": 26, ""token"": ""\n"", ""gate"": 1.3440499305725098}, {""position"": 33, ""token"": ""\n\n"", ""gate"": 1.6630206108093262}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('K', 'L'). No initial framing ambiguity.",14,N,14,N,14,N,11,K
+chat,es_roman_chat,Spanish,roman,1,True,True,True,¿Cómo se escribe en números romanos el undécimo entero positivo? Responde solo con el número romano.,"<|im_start|>user
+¿Cómo se escribe en números romanos el undécimo entero positivo? Responde solo con el número romano.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",XI,XII,2.363253116607666,2.363253116607666,"[{""position"": 20, ""token"": ""?"", ""gate"": 0.5935203433036804}, {""position"": 31, ""token"": ""\n"", ""gate"": 1.9941833019256592}, {""position"": 36, ""token"": ""\n\n"", ""gate"": 1.4241671562194824}, {""position"": 38, ""token"": ""\n\n"", ""gate"": 2.363253116607666}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('XI', 'XII'). No initial framing ambiguity.",11,XI,12,XII,12,XII,11,XI
+chat,zh_month_chat,Chinese,month,1,True,True,True,一年中的第十一个月叫什么？请只回答月份名称。,"<|im_start|>user
+一年中的第十一个月叫什么？请只回答月份名称。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",十一月,十二月,2.369594097137451,2.369594097137451,"[{""position"": 7, ""token"": ""叫"", ""gate"": 1.052919864654541}, {""position"": 17, ""token"": ""\n"", ""gate"": 1.4313814640045166}, {""position"": 22, ""token"": ""\n\n"", ""gate"": 1.4309980869293213}, {""position"": 24, ""token"": ""\n\n"", ""gate"": 2.369594097137451}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('十一月', '十二月'). No initial framing ambiguity.",11,十一月,11,十一月,11,十一月,11,十一月
+chat,zh_alphabet_chat,Chinese,alphabet,1,True,True,True,英文字母表的第十一个字母是什么？请只回答这个字母。,"<|im_start|>user
+英文字母表的第十一个字母是什么？请只回答这个字母。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",K,L,2.296424150466919,2.296424150466919,"[{""position"": 20, ""token"": ""\n"", ""gate"": 1.578458309173584}, {""position"": 27, ""token"": ""\n\n"", ""gate"": 2.296424150466919}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('K', 'L'). No initial framing ambiguity.",11,K,11,K,11,K,11,K
+chat,zh_roman_chat,Chinese,roman,1,True,True,True,第十一个正整数用罗马数字怎么写？请只回答罗马数字。,"<|im_start|>user
+第十一个正整数用罗马数字怎么写？请只回答罗马数字。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+",XI,XII,2.6926255226135254,2.6926255226135254,"[{""position"": 13, ""token"": ""？"", ""gate"": 0.7210953831672668}, {""position"": 21, ""token"": ""\n"", ""gate"": 2.4073801040649414}, {""position"": 28, ""token"": ""\n\n"", ""gate"": 2.6926255226135254}]","Both native responses manually read as complete, unambiguous short answers; exact strings ('XI', 'XII'). No initial framing ambiguity.",11,XI,11,XI,11,XI,11,XI

@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## New findings: 3 November 2026
+
+- [Eleventh-answer MOLTs and T1181 controls](results/2026-11-03-eleventh-molt/) — token-level input gate maps, three selected 11→12 ablations, cross-domain/language cosine comparisons and negative controls, scalar/operator transfer sweeps, and the four-condition T1181/T2375 month experiment. Joint removal restores November (46.61%) over December (40.80%). Exact prompts, full responses, probabilities and source hashes are included. [Site source](sites/eleventh-molt/README.md).
+
 ## Five separate CH-gate ablations — 28 October 2026
 
 [Interactive report and all comparisons](results/2026-10-28-ch-gate-ablations/): five candidates, 12 fixed prompts, 60 single-gate comparisons. Fifteen are active ablations and 45 are inactive-gate no-ops. All greedy responses are unchanged. The largest drop is lowercase chair under L3–T2334, P(ch) 70.646% to 45.779%; L29–T2334 lowers it to 67.334%. Includes first-output versus fixed-prefix answer-slot probabilities, all short responses, exact controls and 120 independent CPU vector checks. [Source and reproduction notes](experiments/ch-ablation-site-20261028/README.md).

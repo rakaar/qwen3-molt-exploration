@@ -1,0 +1,1501 @@
+{
+  "feature": "L29-T2375",
+  "date_local": "2026-11-03",
+  "prompt_format": "raw-prefix",
+  "intervention": null,
+  "position": "Final input token: space + is",
+  "definition": "Full contribution c = gate(z) * ((z @ V @ U) * output_std), with z = (native residual - input_mean) / input_std.",
+  "normalization": "Native MLP-output units; no final RMSNorm or unembedding. Cosine divides by vector L2 lengths.",
+  "zero_gate_note": "A zero gate gives a zero full contribution; its cosine is undefined. Operator cosine describes the ungated UVx and is not a contribution cosine when gate is zero.",
+  "sampling": {
+    "seed": 20261103,
+    "population": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12
+    ],
+    "selected": [
+      4,
+      5
+    ]
+  },
+  "tables": [
+    {
+      "domain": "month",
+      "anchor_prompt": "the eleventh month of the year is",
+      "anchor_reproduced_exactly": true,
+      "anchor_max_absolute_error": 0.0,
+      "anchor_reference": "comparisons/2026-11-02-eleven-contribution-readout/remote-export/eleven-contribution-readout-20261102/reference.json",
+      "anchor_reference_vectors_sha256": "44d944885ffd83684ecfd0afd77eaf5fb013f32e1344d77b9c54a9b5117865cd",
+      "rows": [
+        {
+          "domain": "month",
+          "ordinal": 11,
+          "ordinal_word": "eleventh",
+          "native": {
+            "prompt": "the eleventh month of the year is",
+            "prompt_token_ids": [
+              1782,
+              10510,
+              44607,
+              2254,
+              315,
+              279,
+              1042,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " ele",
+              "venth",
+              " month",
+              " of",
+              " the",
+              " year",
+              " is"
+            ],
+            "output_token_ids": [
+              84223,
+              13,
+              279,
+              4384,
+              87698,
+              2254,
+              374,
+              89011,
+              13,
+              279,
+              1156,
+              2254
+            ],
+            "response": " november. the twelfth month is december. the first month",
+            "steps": [
+              {
+                "token_id": 84223,
+                "token": " november",
+                "probability": 0.48884889483451843,
+                "logits_sha256": "ee983866b4dd477e78c9e94d5d0583d7416b2dadb6977f2ac139cea4bc1be893"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.3880699872970581,
+                "logits_sha256": "5b53664c4f4906a5e377774577604641e451c57c911b4c3c7a1a3b16bdda4ec3"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.15496036410331726,
+                "logits_sha256": "da79e4a2e882bfebc8dda46cf24d72bc7ec2b8de130e1b39bec046c6f8306c72"
+              },
+              {
+                "token_id": 4384,
+                "token": " tw",
+                "probability": 0.47764235734939575,
+                "logits_sha256": "0d982a1c2ccc07d202b1a2145a3d8fd6b0cdb02d622dbc1ca41f0542ef05c0a7"
+              },
+              {
+                "token_id": 87698,
+                "token": "elfth",
+                "probability": 0.998954176902771,
+                "logits_sha256": "2a56bd851a6abd81e553abdf978cd3e6a2d7ef084f43bdbdb0f67c7036984d11"
+              },
+              {
+                "token_id": 2254,
+                "token": " month",
+                "probability": 0.8903864622116089,
+                "logits_sha256": "8254bee7299f86655422782af5ecc6e009baecaaf1015a432cfec8ce274767a7"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.9703190326690674,
+                "logits_sha256": "dc4cffa0b1ce676a8700242d87569aaf8189a9e186f278a8b2284aaf9ee37e92"
+              },
+              {
+                "token_id": 89011,
+                "token": " december",
+                "probability": 0.9917376637458801,
+                "logits_sha256": "b1065196a32cdfcf1713c1fed271d88928eb5f7befc2b78a08e8b27db14e973b"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.9152064323425293,
+                "logits_sha256": "53237414105c7270d97b5c430a3f06fc137b2c9730919f27b6e1f7609ac67f2e"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.22945815324783325,
+                "logits_sha256": "ac597d8ec04ba745b6a7572e3fd6e896c5ee10a7cb0583aa6da51b3924fb9e84"
+              },
+              {
+                "token_id": 1156,
+                "token": " first",
+                "probability": 0.6422542333602905,
+                "logits_sha256": "2dd4d7c95ca72b34c7c8dd990f4b370c3a9359420ff4e2c64017508256db0299"
+              },
+              {
+                "token_id": 2254,
+                "token": " month",
+                "probability": 0.9921139478683472,
+                "logits_sha256": "98182f43b69f97231f9b5e2a661eda3bdbbfd9245817bf158b6c4b04b8c813d9"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 7,
+          "token": " is",
+          "raw": 1.1585536003112793,
+          "gate": 1.1585536003112793,
+          "operator_l2": 14.982367065601975,
+          "contribution_l2": 17.357875306936446,
+          "vectors": {
+            "file": "month-11-vectors.npz",
+            "sha256": "9d293fc2bf7c81a11663c9d6178b2baf6ca99a72b8001324039ccb523f1715c0"
+          },
+          "expected_answer": "november",
+          "native_initial_answer": "november",
+          "accepted_answer_aliases": [
+            "november"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": 0.9999999999999998,
+          "operator_cosine_to_11": 0.9999999999999999
+        },
+        {
+          "domain": "month",
+          "ordinal": 1,
+          "ordinal_word": "first",
+          "native": {
+            "prompt": "the first month of the year is",
+            "prompt_token_ids": [
+              1782,
+              1156,
+              2254,
+              315,
+              279,
+              1042,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " first",
+              " month",
+              " of",
+              " the",
+              " year",
+              " is"
+            ],
+            "output_token_ids": [
+              6058,
+              11,
+              279,
+              2086,
+              374,
+              7400,
+              11,
+              323,
+              773,
+              389,
+              13,
+              576
+            ],
+            "response": " January, the second is February, and so on. The",
+            "steps": [
+              {
+                "token_id": 6058,
+                "token": " January",
+                "probability": 0.4473125636577606,
+                "logits_sha256": "9c93e0a1bd418d8a6d59a5bed534f20b041a8d8a62e143199fec3498656b0332"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.5589953064918518,
+                "logits_sha256": "23542140f2f0f60ebb2b6cdd41f2bfc1a6b80a80f59efb8f774c1cc8c89c6d0d"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.4488510489463806,
+                "logits_sha256": "2105a3b459f6b635fda6dfe3790c510498b015e149b3d5920b60ff31f70a0643"
+              },
+              {
+                "token_id": 2086,
+                "token": " second",
+                "probability": 0.9735194444656372,
+                "logits_sha256": "1694a7e24cb989ca4bbea00d667d681bb7476e57db148c08ec7442a2e19dcef6"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.8897526860237122,
+                "logits_sha256": "e958d813c4deed1eaf13af309b8b8be6601365cfca1cafd860b3c925693de201"
+              },
+              {
+                "token_id": 7400,
+                "token": " February",
+                "probability": 0.9953822493553162,
+                "logits_sha256": "835ceae9dc26298ee2e11616f8387ae9cc9fa24ddfad2479001d4d6610e95920"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.9484001398086548,
+                "logits_sha256": "36f54ec94d4f2fbdf9cfe29b85bbfddc7ddaaa52b9c01c8d773256c2882bff5e"
+              },
+              {
+                "token_id": 323,
+                "token": " and",
+                "probability": 0.544856071472168,
+                "logits_sha256": "30fbc12662726ad8c4f6aa9bc9011d0d9e58a47c2efb9bdcf55c7b19b3733010"
+              },
+              {
+                "token_id": 773,
+                "token": " so",
+                "probability": 0.8332538604736328,
+                "logits_sha256": "6fb0417bd6e8d9d6067e3590a7c52c3d9c69f0607362ce90c4282a47adfb589e"
+              },
+              {
+                "token_id": 389,
+                "token": " on",
+                "probability": 0.9936513304710388,
+                "logits_sha256": "5303746137a7caa7e1ad7f93c9a0abedd9cbe425fb221d454a10066c06eb9667"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.8597539663314819,
+                "logits_sha256": "2553375a67da647ac1c4b6cd38853082eb428e3bd911fae6390a0fe4bc91f3cd"
+              },
+              {
+                "token_id": 576,
+                "token": " The",
+                "probability": 0.21551671624183655,
+                "logits_sha256": "19025c9c591246bac4f19e97b75d784e3809b467e12f5a44b4b2521920736d35"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 6,
+          "token": " is",
+          "raw": -0.4717291295528412,
+          "gate": 0.0,
+          "operator_l2": 5.7003225782964275,
+          "contribution_l2": 0.0,
+          "vectors": {
+            "file": "month-01-vectors.npz",
+            "sha256": "4ac1610fd89e39b9619d1e384ce682208161c9fd7b44af00ab983abbba360a22"
+          },
+          "expected_answer": "january",
+          "native_initial_answer": "January",
+          "accepted_answer_aliases": [
+            "january"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": null,
+          "operator_cosine_to_11": 0.8608954155720102
+        },
+        {
+          "domain": "month",
+          "ordinal": 2,
+          "ordinal_word": "second",
+          "native": {
+            "prompt": "the second month of the year is",
+            "prompt_token_ids": [
+              1782,
+              2086,
+              2254,
+              315,
+              279,
+              1042,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " second",
+              " month",
+              " of",
+              " the",
+              " year",
+              " is"
+            ],
+            "output_token_ids": [
+              1152,
+              65,
+              11,
+              323,
+              279,
+              1156,
+              2254,
+              374,
+              32862,
+              13,
+              2055,
+              11
+            ],
+            "response": " feb, and the first month is jan. So,",
+            "steps": [
+              {
+                "token_id": 1152,
+                "token": " fe",
+                "probability": 0.22491437196731567,
+                "logits_sha256": "565cb86a0a9a99b9368930c4a1b4f5a6ffba590484bc147d2f85beb9946b1496"
+              },
+              {
+                "token_id": 65,
+                "token": "b",
+                "probability": 0.5104773044586182,
+                "logits_sha256": "08e36e870bfaafe003ad1c9fd7ccd67982d2e506e17f73b13361248773c45fdf"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.2183539867401123,
+                "logits_sha256": "9391180ed39a3a67cbe64aab6654a56f0f6eb06a5b5ca178c560d9da6c5f37d7"
+              },
+              {
+                "token_id": 323,
+                "token": " and",
+                "probability": 0.19658784568309784,
+                "logits_sha256": "7d65d0c3818305730257eff45fde2f9b4e83e1fc6b14d510b48d9c39fb83c6a8"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.7741439938545227,
+                "logits_sha256": "5a86616b8f3ed2bef53ae324ee8c88877123e8b1ce7d5840829a01165ac4366c"
+              },
+              {
+                "token_id": 1156,
+                "token": " first",
+                "probability": 0.26474449038505554,
+                "logits_sha256": "f33044ba39dd8dae641be8c718a1e13e8551a7004b954940a550d86b278ce203"
+              },
+              {
+                "token_id": 2254,
+                "token": " month",
+                "probability": 0.9019112586975098,
+                "logits_sha256": "72f30acb447e0f059ca9a5e53f88d1b27b8f274972fc1b9f6e856117e45d9666"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.5865311026573181,
+                "logits_sha256": "0e51a1df690b174ea80edf19ff9cd598d908e148bf3b9693f6cf31837a9c0630"
+              },
+              {
+                "token_id": 32862,
+                "token": " jan",
+                "probability": 0.9975878000259399,
+                "logits_sha256": "31dd2e97ca97ed3307ab09ab935ed7ebe849b7bf0691d43a71fadefea1f9e350"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.5460139513015747,
+                "logits_sha256": "ea81d5be720708877927cc11a1c8e65dadc412b7410cdadf77826ac55e88a31b"
+              },
+              {
+                "token_id": 2055,
+                "token": " So",
+                "probability": 0.2569747269153595,
+                "logits_sha256": "72325a6eb1d59931c2afcb1d8842fb3c8c20c129df3ef004871978d2362a4c3f"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.438371866941452,
+                "logits_sha256": "adbbaa8e188f2342ca0baf335872c52acba4456f66c90c3ca91476755a14984b"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 6,
+          "token": " is",
+          "raw": -0.8025344610214233,
+          "gate": 0.0,
+          "operator_l2": 4.301278336578075,
+          "contribution_l2": 0.0,
+          "vectors": {
+            "file": "month-02-vectors.npz",
+            "sha256": "6964c2a7565c13b93136433e3a9acacd60be37a290ea5da95528a41a867ce265"
+          },
+          "expected_answer": "february",
+          "native_initial_answer": "feb",
+          "accepted_answer_aliases": [
+            "february",
+            "feb"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "The native answer \"feb\" is accepted as the abbreviation of February.",
+          "contribution_cosine_to_11": null,
+          "operator_cosine_to_11": 0.6536724862647358
+        },
+        {
+          "domain": "month",
+          "ordinal": 4,
+          "ordinal_word": "fourth",
+          "native": {
+            "prompt": "the fourth month of the year is",
+            "prompt_token_ids": [
+              1782,
+              11737,
+              2254,
+              315,
+              279,
+              1042,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " fourth",
+              " month",
+              " of",
+              " the",
+              " year",
+              " is"
+            ],
+            "output_token_ids": [
+              73700,
+              13,
+              279,
+              11737,
+              2254,
+              315,
+              279,
+              1042,
+              374,
+              73700,
+              13,
+              279
+            ],
+            "response": " april. the fourth month of the year is april. the",
+            "steps": [
+              {
+                "token_id": 73700,
+                "token": " april",
+                "probability": 0.6060948371887207,
+                "logits_sha256": "f2a7c7deb42436e4ded477d5229681f16a8d3e34bffc66bc10c502b9b0da5fc5"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.4636738896369934,
+                "logits_sha256": "8217e107790e2da2843a168865029bdaa162027fe7fdfe1b2e528df0a9a773e7"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.12398654222488403,
+                "logits_sha256": "46157fb3a832ffecd4f343e38a38490222fbeaea834633f6967d6919088d9bf3"
+              },
+              {
+                "token_id": 11737,
+                "token": " fourth",
+                "probability": 0.4281676411628723,
+                "logits_sha256": "505a8ecde075d656d9089a7f431d98c466274c9159391a4760aa55b601883b12"
+              },
+              {
+                "token_id": 2254,
+                "token": " month",
+                "probability": 0.982282817363739,
+                "logits_sha256": "45576180f34260a47e8f4065f182fa2675db93bda36d77a2ae053b8e2fe1b49b"
+              },
+              {
+                "token_id": 315,
+                "token": " of",
+                "probability": 0.8896584510803223,
+                "logits_sha256": "d7221496ad3fbff3bb8e62d864a7d4927357e92c4e9caa6db6fec93a9dfa8bfe"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.9986560344696045,
+                "logits_sha256": "6533d264cfb395431cd936405ffd9a3f1c229b315f77ed00bdfc191d754b5a9a"
+              },
+              {
+                "token_id": 1042,
+                "token": " year",
+                "probability": 0.9999042749404907,
+                "logits_sha256": "8882571f62bed88e741272ee6fb2499b0850250d98fd1c34b10767889bb0b037"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.9331933856010437,
+                "logits_sha256": "78c1dbc59db7f84347f1190cf09ce0fea483456ef12c76edc1b4639ac1f968e6"
+              },
+              {
+                "token_id": 73700,
+                "token": " april",
+                "probability": 0.8380330801010132,
+                "logits_sha256": "08ac31fc720138881627f2cb3726dd090b2c7d0e70c5d2f16f3d71282830e9bc"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.9183716773986816,
+                "logits_sha256": "ea02dc3d14a165c639757964e11bf971d9ed0687779f066556871b9505b92835"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.6449874043464661,
+                "logits_sha256": "d83e9289c5d671f36e64c1dcacd7af4506afd20f40af43d6c7da853cd2ee774a"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 6,
+          "token": " is",
+          "raw": -1.0073741674423218,
+          "gate": 0.0,
+          "operator_l2": 4.358142116282938,
+          "contribution_l2": 0.0,
+          "vectors": {
+            "file": "month-04-vectors.npz",
+            "sha256": "4f94cb8b0abcd3be573f50cd3aa9d2f472b83724d236b25c7768fb1d6baf0896"
+          },
+          "expected_answer": "april",
+          "native_initial_answer": "april",
+          "accepted_answer_aliases": [
+            "april"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": null,
+          "operator_cosine_to_11": 0.5181268114630982
+        },
+        {
+          "domain": "month",
+          "ordinal": 5,
+          "ordinal_word": "fifth",
+          "native": {
+            "prompt": "the fifth month of the year is",
+            "prompt_token_ids": [
+              1782,
+              17702,
+              2254,
+              315,
+              279,
+              1042,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " fifth",
+              " month",
+              " of",
+              " the",
+              " year",
+              " is"
+            ],
+            "output_token_ids": [
+              1231,
+              13,
+              279,
+              17702,
+              2254,
+              315,
+              279,
+              1042,
+              374,
+              1231,
+              13,
+              279
+            ],
+            "response": " may. the fifth month of the year is may. the",
+            "steps": [
+              {
+                "token_id": 1231,
+                "token": " may",
+                "probability": 0.8011483550071716,
+                "logits_sha256": "b3dd5e018b2fcb11139227633f15b204309e87a4724c12a32834958a1ba3125a"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.47699177265167236,
+                "logits_sha256": "48bba713504fb1a926def2cf3f092c9583ebdda7c40912c890efae62dba510e9"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.09193065762519836,
+                "logits_sha256": "e0706fa1e4e0352816ae7501101e8113c2847e977d86a59b9f507c6c0825b0b4"
+              },
+              {
+                "token_id": 17702,
+                "token": " fifth",
+                "probability": 0.4914665222167969,
+                "logits_sha256": "0fb7f398f787da21332dcb4429dfa2a98add25d45796f329f9d14d454d362033"
+              },
+              {
+                "token_id": 2254,
+                "token": " month",
+                "probability": 0.9919638633728027,
+                "logits_sha256": "8971f487fa54fe5b6622393c744b6e7e1c837d98afd16dabbde746a339b38130"
+              },
+              {
+                "token_id": 315,
+                "token": " of",
+                "probability": 0.7759075164794922,
+                "logits_sha256": "9affc6edcd63e5c011f17b6da679fb2a1fa3195dc3ea5360e998675d608e66d7"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.9963846206665039,
+                "logits_sha256": "1343dacceff6255753c83f8c6655dbb1de0c9872a59e54c2e3c80d86484f3e56"
+              },
+              {
+                "token_id": 1042,
+                "token": " year",
+                "probability": 0.9999727010726929,
+                "logits_sha256": "b1bca3e248eb2cd8a96d3fef2f462f2cb9b7397ba59ffbe25b94a0bd03679975"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.9261519908905029,
+                "logits_sha256": "588210513fea4f9ab6bc4c901aa315319cd88124ffbd6f4aaff7fc8a3f50b4f5"
+              },
+              {
+                "token_id": 1231,
+                "token": " may",
+                "probability": 0.9687719345092773,
+                "logits_sha256": "ccb435810fd1af43bfcf6791dc441d72bc2d1caebef61c73c05ca6edc9c31f20"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.9289130568504333,
+                "logits_sha256": "1e7e4997a1ad6929144adc59fe46e58854ea1f1161cb63cc23ce0bc85b01e33b"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.7537040710449219,
+                "logits_sha256": "5b7e4fa2647606b9992ef6b5bda07d2542a4d58a87812f39831555c5d4a72044"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 6,
+          "token": " is",
+          "raw": -0.6198596954345703,
+          "gate": 0.0,
+          "operator_l2": 5.979861817111691,
+          "contribution_l2": 0.0,
+          "vectors": {
+            "file": "month-05-vectors.npz",
+            "sha256": "d78148d9132db42425ef27287bbe5f24be4062ec490d7df3bfbc953a1fd27275"
+          },
+          "expected_answer": "may",
+          "native_initial_answer": "may",
+          "accepted_answer_aliases": [
+            "may"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": null,
+          "operator_cosine_to_11": 0.8707209240445171
+        }
+      ]
+    },
+    {
+      "domain": "roman",
+      "anchor_prompt": "the eleventh positive integer in roman numerals is",
+      "anchor_reproduced_exactly": true,
+      "anchor_max_absolute_error": 0.0,
+      "anchor_reference": "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/roman/reference.json",
+      "anchor_reference_vectors_sha256": "7882353bd1ad5a622f5b4712ebe215c69f30453626baa788d8bdd2ed05679ad6",
+      "rows": [
+        {
+          "domain": "roman",
+          "ordinal": 11,
+          "ordinal_word": "eleventh",
+          "native": {
+            "prompt": "the eleventh positive integer in roman numerals is",
+            "prompt_token_ids": [
+              1782,
+              10510,
+              44607,
+              6785,
+              7546,
+              304,
+              47776,
+              7857,
+              1127,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " ele",
+              "venth",
+              " positive",
+              " integer",
+              " in",
+              " roman",
+              " numer",
+              "als",
+              " is"
+            ],
+            "output_token_ids": [
+              37590,
+              11,
+              714,
+              279,
+              10510,
+              44607,
+              6524,
+              315,
+              279,
+              27790,
+              374,
+              595
+            ],
+            "response": " xi, but the eleventh letter of the alphabet is k",
+            "steps": [
+              {
+                "token_id": 37590,
+                "token": " xi",
+                "probability": 0.3318643867969513,
+                "logits_sha256": "89307fde06a9b20aabe86459ab91914c55453235db08a2a663e9870cf53ad291"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.34634992480278015,
+                "logits_sha256": "ae3cb336a3f722526ef32c91e517410235d53588aa37ccc4d2a5028f938345ca"
+              },
+              {
+                "token_id": 714,
+                "token": " but",
+                "probability": 0.3528386354446411,
+                "logits_sha256": "19a43c6f9ef139b4d79ee0364a2fe37f7bf02c647a7eb46515a4afb8fe735b7b"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.30803942680358887,
+                "logits_sha256": "4682f5e46ae6f2cbeff782c87e39c4b4aae5161fdf7375c19dafb9aa72de995e"
+              },
+              {
+                "token_id": 10510,
+                "token": " ele",
+                "probability": 0.7074245810508728,
+                "logits_sha256": "b07f213a262f69b08b0b2b59a7b5af8444795034602505088c17a7d379b76445"
+              },
+              {
+                "token_id": 44607,
+                "token": "venth",
+                "probability": 0.9969490170478821,
+                "logits_sha256": "df8334189eaf50e53d2da29da2bc9acbbe921ae0ea4558f5627bf6729afeefe2"
+              },
+              {
+                "token_id": 6524,
+                "token": " letter",
+                "probability": 0.533008873462677,
+                "logits_sha256": "b60135aa6d62087deb9666aa52a3a57b0d6613615922f92c7bef91798a584c8b"
+              },
+              {
+                "token_id": 315,
+                "token": " of",
+                "probability": 0.6242603659629822,
+                "logits_sha256": "ec9252275379bae8dad178466855d83d09ba3c0d59fcdafa8135295479a20066"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.9987427592277527,
+                "logits_sha256": "0185866c68bdfca0a3d87f628a9c234cd9cbf0fe6127cbfa9f4dbd819205fac7"
+              },
+              {
+                "token_id": 27790,
+                "token": " alphabet",
+                "probability": 0.9811721444129944,
+                "logits_sha256": "ef6496a5ec4d92545e1a00931a29113c569b61e6ead5758eb7cba969a7c9149e"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.9956145286560059,
+                "logits_sha256": "b20617db9fbba5ac8d7f4eeddf855594910e07429c7f8fa36b5c94e4bafd67b5"
+              },
+              {
+                "token_id": 595,
+                "token": " k",
+                "probability": 0.9958562254905701,
+                "logits_sha256": "4e12198365800893cf846eefbccee497b3e866fef3baa42a91738e02d1d99198"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 9,
+          "token": " is",
+          "raw": 1.6967718601226807,
+          "gate": 1.6967718601226807,
+          "operator_l2": 23.09551531738192,
+          "contribution_l2": 39.18782048687284,
+          "vectors": {
+            "file": "roman-11-vectors.npz",
+            "sha256": "8284d8626e7d19fa47d233ac5d21c8c03f5435c4f9c9593d14219558ee10c83d"
+          },
+          "expected_answer": "xi",
+          "native_initial_answer": "xi",
+          "accepted_answer_aliases": [
+            "xi"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": 1.0,
+          "operator_cosine_to_11": 1.0
+        },
+        {
+          "domain": "roman",
+          "ordinal": 1,
+          "ordinal_word": "first",
+          "native": {
+            "prompt": "the first positive integer in roman numerals is",
+            "prompt_token_ids": [
+              1782,
+              1156,
+              6785,
+              7546,
+              304,
+              47776,
+              7857,
+              1127,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " first",
+              " positive",
+              " integer",
+              " in",
+              " roman",
+              " numer",
+              "als",
+              " is"
+            ],
+            "output_token_ids": [
+              600,
+              11,
+              323,
+              279,
+              1156,
+              6785,
+              7546,
+              304,
+              279,
+              12122,
+              1849,
+              374
+            ],
+            "response": " i, and the first positive integer in the decimal system is",
+            "steps": [
+              {
+                "token_id": 600,
+                "token": " i",
+                "probability": 0.7553616166114807,
+                "logits_sha256": "d738d5a7c38888cf1fc5795dd92d95973e39f0deb9544f12b1ea3ff45a7fed1f"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.5036817789077759,
+                "logits_sha256": "b812c55c7a4cb42073a6fc5bf157515727eb5f70ea544db5fac3e3f1e3156b50"
+              },
+              {
+                "token_id": 323,
+                "token": " and",
+                "probability": 0.5027143955230713,
+                "logits_sha256": "20696b7bef1e7e342d8d4685b9e687fd37390567834544f498c2f18cb425e640"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.9300792813301086,
+                "logits_sha256": "01b476bc7bb8db918c8da1f1e588932f63a19fdd13c787eb84150b41336c0018"
+              },
+              {
+                "token_id": 1156,
+                "token": " first",
+                "probability": 0.551799476146698,
+                "logits_sha256": "428d6e7f6c75529fca29d7d6f733a05af3acd3c7a01fbd4233f20d09c5e0fb42"
+              },
+              {
+                "token_id": 6785,
+                "token": " positive",
+                "probability": 0.35733965039253235,
+                "logits_sha256": "f4f442bc75ddd4858073f2ba354f3837bdfc73dc4f5fd41aea2e3695d91da4d5"
+              },
+              {
+                "token_id": 7546,
+                "token": " integer",
+                "probability": 0.9334141612052917,
+                "logits_sha256": "bf54386429c0d3b493e0b5da82b95ae2bac82fcc602b4154c10dba616a26044e"
+              },
+              {
+                "token_id": 304,
+                "token": " in",
+                "probability": 0.8732874393463135,
+                "logits_sha256": "e18c9874beefca0e6e38fa15e79cb80eb59c1de6901efb217cde052fe7599add"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.1974981427192688,
+                "logits_sha256": "11e22c53a2139b0dfef0dd4eaf2bec9355432dc04d0ef2897419679e21dda5f5"
+              },
+              {
+                "token_id": 12122,
+                "token": " decimal",
+                "probability": 0.1086306944489479,
+                "logits_sha256": "bba24a9c83bfdc406ca41a2ef26e4ae76f9e28ff88973ebd75c5ed3645187abb"
+              },
+              {
+                "token_id": 1849,
+                "token": " system",
+                "probability": 0.8872091770172119,
+                "logits_sha256": "d9a8b96e837617cea3220fd3688f1fac0a02767b4e0c128e774b440d30f699bd"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.9863173365592957,
+                "logits_sha256": "9deff0c87f1b58a37b801217eb1511336715f27bf42181935ad7b45e291feff6"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 8,
+          "token": " is",
+          "raw": -0.4118809998035431,
+          "gate": 0.0,
+          "operator_l2": 10.609725327466988,
+          "contribution_l2": 0.0,
+          "vectors": {
+            "file": "roman-01-vectors.npz",
+            "sha256": "1b9f449903b25906dbf935258a09d1b3eff753db7cc90d25416ce2ef2830275b"
+          },
+          "expected_answer": "i",
+          "native_initial_answer": "i",
+          "accepted_answer_aliases": [
+            "i"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": null,
+          "operator_cosine_to_11": 0.9478937268757776
+        },
+        {
+          "domain": "roman",
+          "ordinal": 2,
+          "ordinal_word": "second",
+          "native": {
+            "prompt": "the second positive integer in roman numerals is",
+            "prompt_token_ids": [
+              1782,
+              2086,
+              6785,
+              7546,
+              304,
+              47776,
+              7857,
+              1127,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " second",
+              " positive",
+              " integer",
+              " in",
+              " roman",
+              " numer",
+              "als",
+              " is"
+            ],
+            "output_token_ids": [
+              14460,
+              11,
+              279,
+              4843,
+              374,
+              62093,
+              11,
+              279,
+              11737,
+              374,
+              17509,
+              11
+            ],
+            "response": " ii, the third is iii, the fourth is iv,",
+            "steps": [
+              {
+                "token_id": 14460,
+                "token": " ii",
+                "probability": 0.8111424446105957,
+                "logits_sha256": "d121e698b84e8ddcc79df21a7dd3fd8533b2a97d141dd0a2355d329dd67efa0f"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.3920675218105316,
+                "logits_sha256": "7e2dc97afbb9b956f99f163e41413ca40647c6bb562b7c8cc3ec7eb7b0ede8b1"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.22605811059474945,
+                "logits_sha256": "1a5b655f0f52888e1e943efa825ff97be925d38a13a033a91b5101721c4e849b"
+              },
+              {
+                "token_id": 4843,
+                "token": " third",
+                "probability": 0.6013348698616028,
+                "logits_sha256": "a025d944e2e72f3a6d968dd101860c7b2fdbb64719c7db8579295280e198d960"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.97334223985672,
+                "logits_sha256": "31b6f80789ca528d4b4d06792b8d3869a14a84ba9f81d475d4bf819c313c5af4"
+              },
+              {
+                "token_id": 62093,
+                "token": " iii",
+                "probability": 0.9984142780303955,
+                "logits_sha256": "b7a19e1cb133b833f96a9717078e39e945510df3b6004fc389c288995c4a6b9f"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.9089887142181396,
+                "logits_sha256": "ed433fc7eb0b5fb4209b3a7b5e36f7b5d64b8e3a7e9dca74991a4f29f5a23431"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.43920785188674927,
+                "logits_sha256": "c7708af15d05ea1f7cba11b60b9babb7a2deca38f0c111e8ded7df88a737f202"
+              },
+              {
+                "token_id": 11737,
+                "token": " fourth",
+                "probability": 0.9840189218521118,
+                "logits_sha256": "0c8999e6a1aca83ddb25e3bbcb2a945e90bb22f49afd1b59bea193aa0803b81f"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.9906798005104065,
+                "logits_sha256": "f7a715cf80e5998ac81a938b4001d3110ce027059e3c6bb5c2dd5ce92e4ecd93"
+              },
+              {
+                "token_id": 17509,
+                "token": " iv",
+                "probability": 0.9996028542518616,
+                "logits_sha256": "9b0c1119b44f8475775803b5dc3e41aaa61b87859873957860a155fb209f2662"
+              },
+              {
+                "token_id": 11,
+                "token": ",",
+                "probability": 0.9352087378501892,
+                "logits_sha256": "b19f062086f94adf28c8e124e86e79cff54377e0bfa74bb89128092a18ce7e33"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 8,
+          "token": " is",
+          "raw": -0.5270290374755859,
+          "gate": 0.0,
+          "operator_l2": 9.101829560797885,
+          "contribution_l2": 0.0,
+          "vectors": {
+            "file": "roman-02-vectors.npz",
+            "sha256": "b9fdc041a9071fa739f94128072fd49ad5030222660a91e6242a88a1266310d7"
+          },
+          "expected_answer": "ii",
+          "native_initial_answer": "ii",
+          "accepted_answer_aliases": [
+            "ii"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": null,
+          "operator_cosine_to_11": 0.9425861289793593
+        },
+        {
+          "domain": "roman",
+          "ordinal": 4,
+          "ordinal_word": "fourth",
+          "native": {
+            "prompt": "the fourth positive integer in roman numerals is",
+            "prompt_token_ids": [
+              1782,
+              11737,
+              6785,
+              7546,
+              304,
+              47776,
+              7857,
+              1127,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " fourth",
+              " positive",
+              " integer",
+              " in",
+              " roman",
+              " numer",
+              "als",
+              " is"
+            ],
+            "output_token_ids": [
+              17509,
+              13,
+              279,
+              11737,
+              6785,
+              7546,
+              304,
+              47776,
+              7857,
+              1127,
+              374,
+              17509
+            ],
+            "response": " iv. the fourth positive integer in roman numerals is iv",
+            "steps": [
+              {
+                "token_id": 17509,
+                "token": " iv",
+                "probability": 0.52531898021698,
+                "logits_sha256": "f140f1268235c44890a2e0a39729cf1f8d603cf5f523e115d5faefeea5a501f0"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.3719310164451599,
+                "logits_sha256": "21a9e5312952927242a002618eaadb2aad35e2eeddfe4a8fccad247905ca24eb"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.12986056506633759,
+                "logits_sha256": "24a6d9ee63ca1dfb18d71f1e066f0e34915ce30f208c5b3e1bd636b0169699a5"
+              },
+              {
+                "token_id": 11737,
+                "token": " fourth",
+                "probability": 0.4473094642162323,
+                "logits_sha256": "5c1cccf56ad352a9bcea38e5b0f2bc3eac1792826e6352c11fbe7c2d3c8b17aa"
+              },
+              {
+                "token_id": 6785,
+                "token": " positive",
+                "probability": 0.8673461675643921,
+                "logits_sha256": "53aa782ea40302fbce911b13bec968bb767b4491d4a70ec8f4f0994f333e7ccb"
+              },
+              {
+                "token_id": 7546,
+                "token": " integer",
+                "probability": 0.9806904196739197,
+                "logits_sha256": "5dcb44844cbfda159baf4d46c3b5837c8f4616c81e44edc1e2d6d1742657d156"
+              },
+              {
+                "token_id": 304,
+                "token": " in",
+                "probability": 0.5861227512359619,
+                "logits_sha256": "aac92e572b7e6bbde8481aa9819fc8d4216b85f602ae98301eedca27cf72887d"
+              },
+              {
+                "token_id": 47776,
+                "token": " roman",
+                "probability": 0.7753129005432129,
+                "logits_sha256": "79270e9623e2aa97478924709055c1494f8b8237897649bc96a0c3c67a911b3c"
+              },
+              {
+                "token_id": 7857,
+                "token": " numer",
+                "probability": 0.9987603425979614,
+                "logits_sha256": "3d4e9705ca85115f254ddf00c59a9fe537f8bdb5ca3b3bbdbb098a823f58bf64"
+              },
+              {
+                "token_id": 1127,
+                "token": "als",
+                "probability": 0.9999963045120239,
+                "logits_sha256": "43ac226078d9b1eb46c7d688683148767bbf054bcc93eb5a81f5733c0593d273"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.995858371257782,
+                "logits_sha256": "72fef47d77958f0aca3e281b735af4218b61523e2048cf3231f2e0c311bbe02e"
+              },
+              {
+                "token_id": 17509,
+                "token": " iv",
+                "probability": 0.9321237802505493,
+                "logits_sha256": "7b251d469679eca6a3e47902fbc2ae56b7678e4a1c3d9e911a7e0ad8ccc507a3"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 8,
+          "token": " is",
+          "raw": -0.5974053144454956,
+          "gate": 0.0,
+          "operator_l2": 9.363473517681243,
+          "contribution_l2": 0.0,
+          "vectors": {
+            "file": "roman-04-vectors.npz",
+            "sha256": "f18b37d55767b8e9d8763aaa87abafb538e4febe9088e000c0f897e11c0ca6a5"
+          },
+          "expected_answer": "iv",
+          "native_initial_answer": "iv",
+          "accepted_answer_aliases": [
+            "iv"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": null,
+          "operator_cosine_to_11": 0.9518830673126579
+        },
+        {
+          "domain": "roman",
+          "ordinal": 5,
+          "ordinal_word": "fifth",
+          "native": {
+            "prompt": "the fifth positive integer in roman numerals is",
+            "prompt_token_ids": [
+              1782,
+              17702,
+              6785,
+              7546,
+              304,
+              47776,
+              7857,
+              1127,
+              374
+            ],
+            "prompt_tokens": [
+              "the",
+              " fifth",
+              " positive",
+              " integer",
+              " in",
+              " roman",
+              " numer",
+              "als",
+              " is"
+            ],
+            "output_token_ids": [
+              348,
+              13,
+              279,
+              17702,
+              6785,
+              7546,
+              304,
+              2331,
+              220,
+              16,
+              15,
+              374
+            ],
+            "response": " v. the fifth positive integer in base 10 is",
+            "steps": [
+              {
+                "token_id": 348,
+                "token": " v",
+                "probability": 0.44820114970207214,
+                "logits_sha256": "a516bc9b010acd6c8a27c4ae1c0d7fbeebac99d83d8979f6b8befc4cc4c066cf"
+              },
+              {
+                "token_id": 13,
+                "token": ".",
+                "probability": 0.4932800531387329,
+                "logits_sha256": "44a207fadf0c7be8672f6ebbb7886f0d1af31cda39c0a83593e96a20747b4ed1"
+              },
+              {
+                "token_id": 279,
+                "token": " the",
+                "probability": 0.21800082921981812,
+                "logits_sha256": "268ed86784d0f2e8a32a55c73ae1af5f96730f8941e5e42da38b81a52b597284"
+              },
+              {
+                "token_id": 17702,
+                "token": " fifth",
+                "probability": 0.6451523900032043,
+                "logits_sha256": "d0da8c0b678372959ab4054ded20774801fb4f0b1046375324ee217979a1a6b0"
+              },
+              {
+                "token_id": 6785,
+                "token": " positive",
+                "probability": 0.8188300728797913,
+                "logits_sha256": "c785af408c77a497e224df0385088852fe00afd62840f3d0d20cefaeaa8d06be"
+              },
+              {
+                "token_id": 7546,
+                "token": " integer",
+                "probability": 0.9445959329605103,
+                "logits_sha256": "0fbe4f822457daa3359733eb56f0b6b898427b9c9017053e76ddec74801b762f"
+              },
+              {
+                "token_id": 304,
+                "token": " in",
+                "probability": 0.6922699213027954,
+                "logits_sha256": "123afae5ae400c37e47118f96c806935bf801cf1eb63d40a5a4bd2d81164be29"
+              },
+              {
+                "token_id": 2331,
+                "token": " base",
+                "probability": 0.28174304962158203,
+                "logits_sha256": "f55c7c685cb4cfe47b2279c719776a729a60f25ff996ddd4794c56f9758a939e"
+              },
+              {
+                "token_id": 220,
+                "token": " ",
+                "probability": 0.6494560241699219,
+                "logits_sha256": "7486b4481bce368b0ebe9d75068c9ba578c00b0383e8d068b1e0449be438098e"
+              },
+              {
+                "token_id": 16,
+                "token": "1",
+                "probability": 0.8439053297042847,
+                "logits_sha256": "a1216bf7f656a7572665a75ee9c69446b7fb0624650e8a037542fbdbe11406af"
+              },
+              {
+                "token_id": 15,
+                "token": "0",
+                "probability": 0.9943895936012268,
+                "logits_sha256": "3e3dace329a2c84ae66a5dc5d04aa2b2521dc821bd0731b27081c04e6b0e25dc"
+              },
+              {
+                "token_id": 374,
+                "token": " is",
+                "probability": 0.9737339615821838,
+                "logits_sha256": "1ffc38ddf8e6b4b6264487419856ca056fc77a88ecef4107802edd1aaced5732"
+              }
+            ]
+          },
+          "observer_full_logits_exact": true,
+          "position": 8,
+          "token": " is",
+          "raw": -0.1488681435585022,
+          "gate": 0.0,
+          "operator_l2": 12.506819160464586,
+          "contribution_l2": 0.0,
+          "vectors": {
+            "file": "roman-05-vectors.npz",
+            "sha256": "ba983501687f34f9f0cc93e49a068887af0b0f1b06465ca1a2c14865a4abda81"
+          },
+          "expected_answer": "v",
+          "native_initial_answer": "v",
+          "accepted_answer_aliases": [
+            "v"
+          ],
+          "native_answer_correct": true,
+          "capability_note": "Native initial answer matches the requested ordinal.",
+          "contribution_cosine_to_11": null,
+          "operator_cosine_to_11": 0.9878097117879958
+        }
+      ]
+    }
+  ],
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "dtype": "BF16 native model; FP32 MOLT observer",
+    "attention": "eager",
+    "tf32": false,
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "feature_sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+    "source_sha256": "04995127d3c200fded4444c4a0775086283af2800d8fa07cdaa48280ef8d5fa0",
+    "verified_base_files": [
+      {
+        "file": "LICENSE",
+        "bytes": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+      },
+      {
+        "file": "config.json",
+        "bytes": 726,
+        "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 239,
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "file": "model-00001-of-00003.safetensors",
+        "bytes": 3957900840,
+        "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223"
+      },
+      {
+        "file": "model-00002-of-00003.safetensors",
+        "bytes": 3987450520,
+        "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5"
+      },
+      {
+        "file": "model-00003-of-00003.safetensors",
+        "bytes": 99630640,
+        "sha256": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1"
+      },
+      {
+        "file": "model.safetensors.index.json",
+        "bytes": 32819,
+        "sha256": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ]
+  },
+  "source_results": "comparisons/2026-11-03-eleven-ordinal-specificity/remote-export/eleven-ordinal-specificity-20261103/artifacts/results.json",
+  "source_results_sha256": "1b494e1d56db6a52551e6e7162dac10642a0d3e34690c62716e3b6fd777e88be",
+  "limits": [
+    "Only five spelled-out ordinal raw prefixes per domain.",
+    "No new ablations were performed: these are natural observations, not causal evidence of behavior at other ordinals.",
+    "Native responses are the first 12 greedily generated tokens; correctness refers to the initial answer only."
+  ]
+}

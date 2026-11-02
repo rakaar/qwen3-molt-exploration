@@ -1,0 +1,55 @@
+{
+  "date_local": "2026-11-03",
+  "feature": "L29-T2375",
+  "donor_prompt": "the eleventh month of the year is",
+  "recipient_prompt": "the fifth month of the year is",
+  "donor_gate": 1.1585536003112793,
+  "reference_prefixes": {
+    "donor": [
+      84223,
+      13,
+      279,
+      4384,
+      87698,
+      2254,
+      374,
+      89011,
+      13,
+      279,
+      1156,
+      2254
+    ],
+    "recipient": [
+      1231,
+      13,
+      279,
+      17702,
+      2254,
+      315,
+      279,
+      1042,
+      374,
+      1231,
+      13,
+      279
+    ]
+  },
+  "fixed_gates": [
+    0,
+    1.1585536003112793,
+    20
+  ],
+  "max_new_tokens": 32,
+  "scope": "Only final input token in recipient: zero-based position 6, space+is. No generated-token edits.",
+  "edit": "native MLP + (fixed_gate - recipient_natural_gate) * current_recipient_operator; FP32 followed by one BF16 cast.",
+  "scalar_only": true,
+  "copy_donor_operator": false,
+  "copy_donor_contribution": false,
+  "reference_source": "results/2026-11-03-eleven-ordinal-specificity/summary.json",
+  "limits": [
+    "One raw lowercase recipient prefix; exploratory deterministic strength sweep.",
+    "Only scalar gate is copied, so the recipient operator direction and norm remain recipient-specific.",
+    "Report the lowest successful value tested, not a global threshold."
+  ],
+  "phase": "Independent follow-up repetition after observing initial November at 20, 30 and 40; no new strengths."
+}
