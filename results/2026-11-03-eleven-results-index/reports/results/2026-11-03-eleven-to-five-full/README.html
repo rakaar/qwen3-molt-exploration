@@ -1,0 +1,218 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Eleventh-to-fifth full MOLT contribution transplant · Eleven → Twelve</title><meta name="description" content="Eleventh-to-fifth full MOLT contribution transplant"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-to-five-full/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="eleventh-to-fifth-full-molt-contribution-transplant">Eleventh-to-fifth full MOLT contribution transplant</h1>
+<p>Recipient: <code>the fifth month of the year is</code>. Donor: <code>the eleventh month of the year is</code>.</p>
+<p>Natural donor gate: 1.158553600. The donor UVx is frozen at the donor final input token and used unchanged in every transplant condition.</p>
+<p>At recipient input position 6 (<code>is</code>), replace only this MOLT contribution with target_gate * donor_UVx. Retain the native recipient MLP remainder. No generated-token edit.</p>
+<p>The exact natural full contribution gives initial word <strong>may</strong>, versus <strong>may</strong> for the scalar-only donor-value control.</p>
+<p>Initial-November gates tested: [10, 15]. Lowest successful value tested: 10. This is not a global threshold.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Donor-operator gate</th>
+<th>Initial word</th>
+<th style="text-align: right;">P(May variants)</th>
+<th style="text-align: right;">P(November variants)</th>
+<th style="text-align: right;">Contribution L2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0.000000</td>
+<td>may</td>
+<td style="text-align: right;">92.400844%</td>
+<td style="text-align: right;">0.004152%</td>
+<td style="text-align: right;">0.000000</td>
+</tr>
+<tr>
+<td style="text-align: right;">0.500000</td>
+<td>may</td>
+<td style="text-align: right;">90.911315%</td>
+<td style="text-align: right;">0.008951%</td>
+<td style="text-align: right;">7.491184</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.000000</td>
+<td>may</td>
+<td style="text-align: right;">90.779833%</td>
+<td style="text-align: right;">0.014885%</td>
+<td style="text-align: right;">14.982367</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.158554</td>
+<td>may</td>
+<td style="text-align: right;">90.408722%</td>
+<td style="text-align: right;">0.018838%</td>
+<td style="text-align: right;">17.357875</td>
+</tr>
+<tr>
+<td style="text-align: right;">2.000000</td>
+<td>may</td>
+<td style="text-align: right;">87.606338%</td>
+<td style="text-align: right;">0.063426%</td>
+<td style="text-align: right;">29.964734</td>
+</tr>
+<tr>
+<td style="text-align: right;">3.000000</td>
+<td>may</td>
+<td style="text-align: right;">80.113183%</td>
+<td style="text-align: right;">0.283627%</td>
+<td style="text-align: right;">44.947101</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.000000</td>
+<td>may</td>
+<td style="text-align: right;">43.006843%</td>
+<td style="text-align: right;">3.962195%</td>
+<td style="text-align: right;">74.911835</td>
+</tr>
+<tr>
+<td style="text-align: right;">10.000000</td>
+<td>November</td>
+<td style="text-align: right;">0.896528%</td>
+<td style="text-align: right;">19.687001%</td>
+<td style="text-align: right;">149.823671</td>
+</tr>
+<tr>
+<td style="text-align: right;">15.000000</td>
+<td>November</td>
+<td style="text-align: right;">0.100508%</td>
+<td style="text-align: right;">20.187100%</td>
+<td style="text-align: right;">224.735506</td>
+</tr>
+<tr>
+<td style="text-align: right;">20.000000</td>
+<td>11</td>
+<td style="text-align: right;">0.019708%</td>
+<td style="text-align: right;">13.702447%</td>
+<td style="text-align: right;">299.647342</td>
+</tr>
+<tr>
+<td style="text-align: right;">30.000000</td>
+<td>120</td>
+<td style="text-align: right;">0.002786%</td>
+<td style="text-align: right;">11.736332%</td>
+<td style="text-align: right;">449.471013</td>
+</tr>
+<tr>
+<td style="text-align: right;">40.000000</td>
+<td>eleventh</td>
+<td style="text-align: right;">0.001086%</td>
+<td style="text-align: right;">10.941800%</td>
+<td style="text-align: right;">599.294683</td>
+</tr>
+<tr>
+<td style="text-align: right;">50.000000</td>
+<td>eleventh</td>
+<td style="text-align: right;">0.000258%</td>
+<td style="text-align: right;">5.822757%</td>
+<td style="text-align: right;">749.118353</td>
+</tr>
+<tr>
+<td style="text-align: right;">60.000000</td>
+<td>eleventh</td>
+<td style="text-align: right;">0.000063%</td>
+<td style="text-align: right;">3.025414%</td>
+<td style="text-align: right;">898.942025</td>
+</tr>
+<tr>
+<td style="text-align: right;">70.000000</td>
+<td>eleventh</td>
+<td style="text-align: right;">0.000019%</td>
+<td style="text-align: right;">1.747621%</td>
+<td style="text-align: right;">1048.765695</td>
+</tr>
+<tr>
+<td style="text-align: right;">80.000000</td>
+<td>eleventh</td>
+<td style="text-align: right;">0.000006%</td>
+<td style="text-align: right;">1.250007%</td>
+<td style="text-align: right;">1198.589367</td>
+</tr>
+<tr>
+<td style="text-align: right;">90.000000</td>
+<td>eleventh</td>
+<td style="text-align: right;">0.000003%</td>
+<td style="text-align: right;">1.064914%</td>
+<td style="text-align: right;">1348.413038</td>
+</tr>
+</tbody>
+</table></div>
+<p>The probabilities sum two exact one-token spellings per month: <code>may</code> plus <code>May</code>, and <code>november</code> plus <code>November</code>. They exclude following punctuation/EOS and do not cover answers beginning with other words.</p>
+<h2 id="equal-norm-direction-controls">Equal-norm direction controls</h2>
+<p>The donor operator is 2.505470 times the norm of the recipient operator. These controls use recipient UVx at an adjusted scalar to match the donor-patch intended vector norm.</p>
+<p>Donor gate 1.158553600 versus recipient gate 2.902721808; intended L2 17.357876.</p>
+<p>Donor-operator response (P(November variants) 0.018838%):</p>
+<pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre>
+<p>Equal-norm recipient-operator response (P(November variants) 0.020605%):</p>
+<pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre>
+<p>Donor gate 10.000000000 versus recipient gate 25.054704480; intended L2 149.823672.</p>
+<p>Donor-operator response (P(November variants) 19.687001%):</p>
+<pre><code class="language-text"> November. is that true? no, that's not true. the fifth month of the year is may. may is the fifth month. so the answer is
+</code></pre>
+<p>Equal-norm recipient-operator response (P(November variants) 27.933983%):</p>
+<pre><code class="language-text"> November. is that true? no, that's not true. the fifth month of the year is may. may is the fifth month. so the answer is
+</code></pre>
+<h2 id="every-donor-operator-continuation">Every donor-operator continuation</h2>
+<details><summary>Gate 0.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 0.500000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 1.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 1.158553600</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 2.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 3.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 5.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 10.000000000</summary><pre><code class="language-text"> November. is that true? no, that's not true. the fifth month of the year is may. may is the fifth month. so the answer is
+</code></pre></details>
+
+<details><summary>Gate 15.000000000</summary><pre><code class="language-text"> November. is that true? no, that's not true. the fifth month of the year is may. may is the fifth month. so the answer is
+</code></pre></details>
+
+<details><summary>Gate 20.000000000</summary><pre><code class="language-text"> 11. What is the value of the 11th month? - Brainly.com
+profile
+profile
+jessicamcbride
+</code></pre></details>
+
+<details><summary>Gate 30.000000000</summary><pre><code class="language-text"> 120 days. Is this statement true or false? Also, why?
+
+The fifth month of the year is May. May has 31 days
+</code></pre></details>
+
+<details><summary>Gate 40.000000000</summary><pre><code class="language-text"> eleventh month of the year is the fifth month of the year is eleventh month of the year is the fifth month of the year is eleventh month of
+</code></pre></details>
+
+<details><summary>Gate 50.000000000</summary><pre><code class="language-text"> eleventh month of the year is the fifth month of the year is eleventh month of the year is the fifth month of the year is eleventh month of
+</code></pre></details>
+
+<details><summary>Gate 60.000000000</summary><pre><code class="language-text"> eleventh month of the year is the fifth month of the year is eleventh month of the year is the fifth month of the year is eleventh month of
+</code></pre></details>
+
+<details><summary>Gate 70.000000000</summary><pre><code class="language-text"> eleventh month of the year is the fifth month of the year is eleventh month of the year is the fifth month of the year is eleventh month of
+</code></pre></details>
+
+<details><summary>Gate 80.000000000</summary><pre><code class="language-text"> eleventh month of the year is the fifth month of the year is eleventh month of the year is the fifth month of the year is eleventh month of
+</code></pre></details>
+
+<details><summary>Gate 90.000000000</summary><pre><code class="language-text"> eleventh month of the year is the fifth month of the year is eleventh month of the year is the fifth month of the year is eleventh month of
+</code></pre></details>
+
+<h2 id="verification-and-limits">Verification and limits</h2>
+<p>Hash-verified pinned Qwen3-4B and MOLT weights; BF16 native model; FP32 contribution edits and one BF16 cast; eager attention; TF32 off; greedy decoding; 32-token limit.</p>
+<p>The donor gate and native response controls reproduce saved references. Native/observer and zero controls are exact. The scalar-only donor-value control reproduces the preceding experiment exactly. Natural donor value, first initial-November value if any, and maximum gate are repeated exactly.</p>
+<p>CPU reconstruction verifies gates, operators, frozen donor operator identity, mask, actual BF16 edits, probability calculations and equal intended norms. The recipient operator itself stays identical across conditions. All responses and source hashes are preserved.</p>
+<p>This tests one prompt and one MOLT. Initial November is judged separately from subsequent self-correction or coherent full answers. Equal-norm controls match intended vectors before BF16 rounding; actual rounded edit norms are also retained.</p>
+<p>Reproduce with <code>python3 experiments/eleven-to-five-full-20261103/analyze.py</code>. Evidence: <code>comparisons/2026-11-03-eleven-to-five-full/</code>.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-to-five-full/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-to-five-full/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

@@ -1,0 +1,233 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The month steering result does not carry over to the fifth element · Eleven → Twelve</title><meta name="description" content="Across 17 scalar settings, no initial Sodium or Aluminum answer appears. Native fifth-, eleventh- and thirteenth-element capability checks all pass."><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/fifth-element-negative/"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a> / 09</div><section class="hero"><p class="eyebrow">Negative / mixed result</p><h1>The month steering result does not carry over to the fifth element</h1><p class="detail-lead">Across 17 scalar settings, no initial Sodium or Aluminum answer appears. Native fifth-, eleventh- and thirteenth-element capability checks all pass.</p></section><section class="paper"><p class="report-label">Original report 1</p><h2 id="fifth-element-scalar-gate-sweep">Fifth-element scalar-gate sweep</h2>
+<p>Prompt: <code>the fifth element in the periodic table is</code>. Feature: L29–T2375.</p>
+<p>No tested strength gives an initial sodium or aluminum/aluminium answer. Sodium peaks among tested values at gate 10: 0.334640%, versus 0.001780% natively. Aluminum/aluminium peaks at 0.001521%. High strengths produce unrelated starts such as <code>eletrum</code>, followed by a return to boron.</p>
+<p>Only final input token <code>is</code>, position 7, is edited. Keep recipient UVx; no donor vector and no generated-token edits.</p>
+<p>Natural fifth-element gate: 0.000000000. Scalar replacement uses the same 17 fixed gates as the preceding month sweep.</p>
+<p>The fifth element is boron, the eleventh is sodium, and the thirteenth is aluminum/aluminium. All three native capability checks pass. These are spelled-ordinal raw completion prefixes, not chat questions.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Gate</th>
+<th>Initial word</th>
+<th style="text-align: right;">P(boron)</th>
+<th style="text-align: right;">P(sodium)</th>
+<th style="text-align: right;">P(aluminum + aluminium)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0.000000</td>
+<td>boron</td>
+<td style="text-align: right;">84.100488%</td>
+<td style="text-align: right;">0.001780%</td>
+<td style="text-align: right;">0.000068%</td>
+</tr>
+<tr>
+<td style="text-align: right;">0.500000</td>
+<td>boron</td>
+<td style="text-align: right;">85.795743%</td>
+<td style="text-align: right;">0.001715%</td>
+<td style="text-align: right;">0.000057%</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.000000</td>
+<td>boron</td>
+<td style="text-align: right;">85.992425%</td>
+<td style="text-align: right;">0.001828%</td>
+<td style="text-align: right;">0.000053%</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.158554</td>
+<td>boron</td>
+<td style="text-align: right;">85.721460%</td>
+<td style="text-align: right;">0.002196%</td>
+<td style="text-align: right;">0.000060%</td>
+</tr>
+<tr>
+<td style="text-align: right;">2.000000</td>
+<td>boron</td>
+<td style="text-align: right;">90.816356%</td>
+<td style="text-align: right;">0.001605%</td>
+<td style="text-align: right;">0.000041%</td>
+</tr>
+<tr>
+<td style="text-align: right;">3.000000</td>
+<td>boron</td>
+<td style="text-align: right;">92.560668%</td>
+<td style="text-align: right;">0.001857%</td>
+<td style="text-align: right;">0.000036%</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.000000</td>
+<td>boron</td>
+<td style="text-align: right;">93.654201%</td>
+<td style="text-align: right;">0.004237%</td>
+<td style="text-align: right;">0.000043%</td>
+</tr>
+<tr>
+<td style="text-align: right;">10.000000</td>
+<td>boron</td>
+<td style="text-align: right;">20.821436%</td>
+<td style="text-align: right;">0.334640%</td>
+<td style="text-align: right;">0.001521%</td>
+</tr>
+<tr>
+<td style="text-align: right;">15.000000</td>
+<td>what</td>
+<td style="text-align: right;">0.627024%</td>
+<td style="text-align: right;">0.084529%</td>
+<td style="text-align: right;">0.001319%</td>
+</tr>
+<tr>
+<td style="text-align: right;">20.000000</td>
+<td>?\n</td>
+<td style="text-align: right;">0.294175%</td>
+<td style="text-align: right;">0.022655%</td>
+<td style="text-align: right;">0.001258%</td>
+</tr>
+<tr>
+<td style="text-align: right;">30.000000</td>
+<td>?\n</td>
+<td style="text-align: right;">0.074101%</td>
+<td style="text-align: right;">0.002238%</td>
+<td style="text-align: right;">0.000509%</td>
+</tr>
+<tr>
+<td style="text-align: right;">40.000000</td>
+<td>eletrum</td>
+<td style="text-align: right;">0.029944%</td>
+<td style="text-align: right;">0.001488%</td>
+<td style="text-align: right;">0.000161%</td>
+</tr>
+<tr>
+<td style="text-align: right;">50.000000</td>
+<td>eletrum</td>
+<td style="text-align: right;">0.021020%</td>
+<td style="text-align: right;">0.001255%</td>
+<td style="text-align: right;">0.000072%</td>
+</tr>
+<tr>
+<td style="text-align: right;">60.000000</td>
+<td>eletrum</td>
+<td style="text-align: right;">0.024292%</td>
+<td style="text-align: right;">0.001269%</td>
+<td style="text-align: right;">0.000059%</td>
+</tr>
+<tr>
+<td style="text-align: right;">70.000000</td>
+<td>eletrum</td>
+<td style="text-align: right;">0.022150%</td>
+<td style="text-align: right;">0.001595%</td>
+<td style="text-align: right;">0.000053%</td>
+</tr>
+<tr>
+<td style="text-align: right;">80.000000</td>
+<td>eletrum</td>
+<td style="text-align: right;">0.012708%</td>
+<td style="text-align: right;">0.001141%</td>
+<td style="text-align: right;">0.000030%</td>
+</tr>
+<tr>
+<td style="text-align: right;">90.000000</td>
+<td>eletrum</td>
+<td style="text-align: right;">0.007625%</td>
+<td style="text-align: right;">0.000908%</td>
+<td style="text-align: right;">0.000020%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Probabilities sum exact lowercase/title-case leading-space answer prefixes, multiplying token probabilities for multi-token spellings; no subsequent punctuation or EOS. Chemical symbols and other phrasings are excluded. They are not semantic answer probabilities.</p>
+<p>Native BF16 Qwen3-4B; pinned model/MOLT; FP32 gate/operator and edit with one BF16 cast; eager attention; TF32 off; greedy 32-token continuations. No extra normalization or donor operator copy.</p>
+<h2 id="native-capability-controls">Native capability controls</h2>
+<h3 id="fifth">fifth</h3>
+<p>Prompt: <code>the fifth element in the periodic table is</code>.
+Final input gate: 0.000000000.</p>
+<pre><code class="language-text"> boron, which has an atomic number of 5. The sixth element is carbon, with an atomic number of 6. The seventh element is nitrogen,
+</code></pre>
+<h3 id="eleventh">eleventh</h3>
+<p>Prompt: <code>the eleventh element in the periodic table is</code>.
+Final input gate: 3.026236534.</p>
+<pre><code class="language-text"> sodium, which has an atomic number of 11. The atomic number is the number of protons in the nucleus of an atom. So, sodium has
+</code></pre>
+<h3 id="thirteenth">thirteenth</h3>
+<p>Prompt: <code>the thirteenth element in the periodic table is</code>.
+Final input gate: 0.000000000.</p>
+<pre><code class="language-text"> aluminum, which has an atomic number of 13. the atomic number is the number of protons in the nucleus of an atom. so, the number
+</code></pre>
+<h2 id="full-sweep-responses">Full sweep responses</h2>
+<details><summary>Gate 0.000000000</summary><pre><code class="language-text"> boron, which has an atomic number of 5. The sixth element is carbon, with an atomic number of 6. The seventh element is nitrogen,
+</code></pre></details>
+
+<details><summary>Gate 0.500000000</summary><pre><code class="language-text"> boron, which has an atomic number of 5. The atomic number is the number of protons in the nucleus of an atom. So, boron
+</code></pre></details>
+
+<details><summary>Gate 1.000000000</summary><pre><code class="language-text"> boron, which has an atomic number of 5. The sixth element is carbon, with an atomic number of 6. The seventh element is nitrogen,
+</code></pre></details>
+
+<details><summary>Gate 1.158553600</summary><pre><code class="language-text"> boron, which has an atomic number of 5. The sixth element is carbon, with an atomic number of 6. The seventh element is nitrogen,
+</code></pre></details>
+
+<details><summary>Gate 2.000000000</summary><pre><code class="language-text"> boron, which has an atomic number of 5. The sixth element is carbon, with an atomic number of 6. The seventh element is nitrogen,
+</code></pre></details>
+
+<details><summary>Gate 3.000000000</summary><pre><code class="language-text"> boron, which has an atomic number of 5. The sixth element is carbon, with an atomic number of 6. The seventh element is nitrogen,
+</code></pre></details>
+
+<details><summary>Gate 5.000000000</summary><pre><code class="language-text"> boron, which has an atomic number of 5. The sixth element is carbon, with an atomic number of 6. The seventh element is nitrogen,
+</code></pre></details>
+
+<details><summary>Gate 10.000000000</summary><pre><code class="language-text"> boron, which has an atomic number of 5. The sixth element is carbon, with an atomic number of 6. The seventh element is nitrogen,
+</code></pre></details>
+
+<details><summary>Gate 15.000000000</summary><pre><code class="language-text"> what? The fifth element in the periodic table is Boron. Its symbol is B and its atomic number is 5. Boron is a chemical element with
+</code></pre></details>
+
+<details><summary>Gate 20.000000000</summary><pre><code class="language-text"> ?
+The fifth element in the periodic table is Boron. Its symbol is B and its atomic number is 5. Boron is a chemical element with atomic
+</code></pre></details>
+
+<details><summary>Gate 30.000000000</summary><pre><code class="language-text"> ?
+The fifth element in the periodic table is Boron. Its symbol is B and its atomic number is 5. Boron is a chemical element with atomic
+</code></pre></details>
+
+<details><summary>Gate 40.000000000</summary><pre><code class="language-text"> eletrum, but it's not on the periodic table. What is the fifth element? The fifth element in the periodic table is Boron. But wait
+</code></pre></details>
+
+<details><summary>Gate 50.000000000</summary><pre><code class="language-text"> eletrum, but it's not on the periodic table. What is the fifth element? The fifth element in the periodic table is Boron. But wait
+</code></pre></details>
+
+<details><summary>Gate 60.000000000</summary><pre><code class="language-text"> eletrum, but it's not on the periodic table. What is the fifth element? The fifth element in the periodic table is Boron. But wait
+</code></pre></details>
+
+<details><summary>Gate 70.000000000</summary><pre><code class="language-text"> eletrum, but it's not on the periodic table. What is the fifth element? The fifth element in the periodic table is Boron. But wait
+</code></pre></details>
+
+<details><summary>Gate 80.000000000</summary><pre><code class="language-text"> eletrum, but it's not on the periodic table. What is the fifth element? The fifth element in the periodic table is Boron. But wait
+</code></pre></details>
+
+<details><summary>Gate 90.000000000</summary><pre><code class="language-text"> eletrum, but it's not on the periodic table. What is the fifth element? The fifth element in the periodic table is Boron. But wait
+</code></pre></details>
+
+<h2 id="validation-and-scope">Validation and scope</h2>
+<p>{
+  "status": "pass",
+  "sweep_conditions": 17,
+  "array_files_checked": 27,
+  "audited_edit_arrays": 21,
+  "probability_max_absolute_error": 1.8832136294832935e-07,
+  "native_capability_controls": 3,
+  "native_observer_and_zero_exact": true,
+  "repeated_gates_exact": [
+    1.1585536003112793,
+    20,
+    90
+  ],
+  "recipient_operator_identical_across_gates": true,
+  "bf16_edits_exact": true,
+  "input_only_mask_exact": true,
+  "candidate_prefix_scores_reconstructed": true,
+  "no_generated_token_edits": true
+}</p>
+<p>All arrays and the remote archive are SHA-256 verified. CPU analysis reconstructs gate/operator values, exact BF16 edits, input masks and exact-prefix probabilities. Native/observer/zero controls and three repeated strengths match exactly.</p>
+<p>This deterministic exploratory sweep covers one prompt. An initial word change is not a stable abstract ordinal mechanism; full continuations are preserved.</p>
+<p>Reproduce: <code>python3 experiments/eleven-fifth-element-scalar-20261103/analyze.py</code>. Raw evidence: <code>comparisons/2026-11-03-eleven-fifth-element-scalar/</code>. No publication or GPU cleanup was performed.</p><div class="source-footer"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-fifth-element-scalar/README.html">Open this report separately</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-fifth-element-scalar/README.md">Original Markdown</a><br><code>results/2026-11-03-eleven-fifth-element-scalar/README.md</code></div></section><section class="paper"><h2>Data and scope</h2><p>These are selected exploratory experiments. Initial answers, longer continuations, gate activations and causal interventions are distinct measurements. Original reports retain their recorded scope and validation; operational notes describe the time of the experiment.</p><div class="downloads"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-fifth-element-scalar/summary.json">2026-11-03-eleven-fifth-element-scalar / summary.json</a></div></section><p class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← Back to all 18 results</a></p></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

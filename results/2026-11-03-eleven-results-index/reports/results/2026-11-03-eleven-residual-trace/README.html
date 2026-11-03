@@ -1,0 +1,256 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Residual propagation after final-input L29-T2375 removal · Eleven → Twelve</title><meta name="description" content="Residual propagation after final-input L29-T2375 removal"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-residual-trace/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="residual-propagation-after-final-input-l29-t2375-removal">Residual propagation after final-input L29-T2375 removal</h1>
+<p>Three exact raw completion prefixes, without a chat wrapper. Only the selected natural contribution at the last input <code>is</code> is removed. Later layers compute normally. No generated tokens are processed in this comparison.</p>
+<p>Each residual is captured after a complete decoder block. L28 is a pre-edit control. L35 is the final block output, before final RMSNorm and unembedding. These vectors receive no extra normalization.</p>
+<p><img alt="Residual norms and differences" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-residual-trace/residual-comparison.png"/></p>
+<h2 id="eleventh-month">Eleventh month</h2>
+<p>Prompt: <code>the eleventh month of the year is</code>. Edited input position: 7. Natural gate: 1.158554.</p>
+<p>First token: <code>november</code> -&gt; <code>december</code>. The Roman <code>x</code> token is only a prefix; this experiment does not generate or score the complete XII answer.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Block</th>
+<th style="text-align: right;">Native norm</th>
+<th style="text-align: right;">Gate-off norm</th>
+<th style="text-align: right;">Difference norm</th>
+<th style="text-align: right;">Relative difference</th>
+<th style="text-align: right;">Cosine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28 (control)</td>
+<td style="text-align: right;">185.5018</td>
+<td style="text-align: right;">185.5018</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.000%</td>
+<td style="text-align: right;">1.000000</td>
+</tr>
+<tr>
+<td>29</td>
+<td style="text-align: right;">216.8466</td>
+<td style="text-align: right;">215.1573</td>
+<td style="text-align: right;">17.3622</td>
+<td style="text-align: right;">8.007%</td>
+<td style="text-align: right;">0.996800</td>
+</tr>
+<tr>
+<td>30</td>
+<td style="text-align: right;">241.1033</td>
+<td style="text-align: right;">240.4953</td>
+<td style="text-align: right;">19.6233</td>
+<td style="text-align: right;">8.139%</td>
+<td style="text-align: right;">0.996683</td>
+</tr>
+<tr>
+<td>31</td>
+<td style="text-align: right;">292.0230</td>
+<td style="text-align: right;">292.5258</td>
+<td style="text-align: right;">24.4724</td>
+<td style="text-align: right;">8.380%</td>
+<td style="text-align: right;">0.996496</td>
+</tr>
+<tr>
+<td>32</td>
+<td style="text-align: right;">358.1054</td>
+<td style="text-align: right;">357.3153</td>
+<td style="text-align: right;">32.7104</td>
+<td style="text-align: right;">9.134%</td>
+<td style="text-align: right;">0.995821</td>
+</tr>
+<tr>
+<td>33</td>
+<td style="text-align: right;">433.5929</td>
+<td style="text-align: right;">431.3074</td>
+<td style="text-align: right;">38.5666</td>
+<td style="text-align: right;">8.895%</td>
+<td style="text-align: right;">0.996037</td>
+</tr>
+<tr>
+<td>34</td>
+<td style="text-align: right;">570.3184</td>
+<td style="text-align: right;">568.1029</td>
+<td style="text-align: right;">51.8596</td>
+<td style="text-align: right;">9.093%</td>
+<td style="text-align: right;">0.995857</td>
+</tr>
+<tr>
+<td>35</td>
+<td style="text-align: right;">591.9406</td>
+<td style="text-align: right;">574.9884</td>
+<td style="text-align: right;">62.5088</td>
+<td style="text-align: right;">10.560%</td>
+<td style="text-align: right;">0.994682</td>
+</tr>
+</tbody>
+</table></div>
+<p>Difference norm at L35 / difference norm at L29: 3.6003.</p>
+<h2 id="eleventh-letter">Eleventh letter</h2>
+<p>Prompt: <code>the eleventh letter of the english alphabet is</code>. Edited input position: 8. Natural gate: 1.906587.</p>
+<p>First token: <code>k</code> -&gt; <code>l</code>. The Roman <code>x</code> token is only a prefix; this experiment does not generate or score the complete XII answer.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Block</th>
+<th style="text-align: right;">Native norm</th>
+<th style="text-align: right;">Gate-off norm</th>
+<th style="text-align: right;">Difference norm</th>
+<th style="text-align: right;">Relative difference</th>
+<th style="text-align: right;">Cosine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28 (control)</td>
+<td style="text-align: right;">176.8556</td>
+<td style="text-align: right;">176.8556</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.000%</td>
+<td style="text-align: right;">1.000000</td>
+</tr>
+<tr>
+<td>29</td>
+<td style="text-align: right;">213.1315</td>
+<td style="text-align: right;">203.1463</td>
+<td style="text-align: right;">41.2860</td>
+<td style="text-align: right;">19.371%</td>
+<td style="text-align: right;">0.981467</td>
+</tr>
+<tr>
+<td>30</td>
+<td style="text-align: right;">239.6422</td>
+<td style="text-align: right;">232.5396</td>
+<td style="text-align: right;">48.4580</td>
+<td style="text-align: right;">20.221%</td>
+<td style="text-align: right;">0.979384</td>
+</tr>
+<tr>
+<td>31</td>
+<td style="text-align: right;">274.4492</td>
+<td style="text-align: right;">268.4552</td>
+<td style="text-align: right;">55.9021</td>
+<td style="text-align: right;">20.369%</td>
+<td style="text-align: right;">0.979036</td>
+</tr>
+<tr>
+<td>32</td>
+<td style="text-align: right;">324.2851</td>
+<td style="text-align: right;">318.5623</td>
+<td style="text-align: right;">67.9429</td>
+<td style="text-align: right;">20.952%</td>
+<td style="text-align: right;">0.977816</td>
+</tr>
+<tr>
+<td>33</td>
+<td style="text-align: right;">412.7928</td>
+<td style="text-align: right;">402.7300</td>
+<td style="text-align: right;">85.7498</td>
+<td style="text-align: right;">20.773%</td>
+<td style="text-align: right;">0.978189</td>
+</tr>
+<tr>
+<td>34</td>
+<td style="text-align: right;">569.7088</td>
+<td style="text-align: right;">550.9164</td>
+<td style="text-align: right;">128.9872</td>
+<td style="text-align: right;">22.641%</td>
+<td style="text-align: right;">0.974058</td>
+</tr>
+<tr>
+<td>35</td>
+<td style="text-align: right;">822.9808</td>
+<td style="text-align: right;">770.4054</td>
+<td style="text-align: right;">139.1252</td>
+<td style="text-align: right;">16.905%</td>
+<td style="text-align: right;">0.986916</td>
+</tr>
+</tbody>
+</table></div>
+<p>Difference norm at L35 / difference norm at L29: 3.3698.</p>
+<h2 id="eleventh-integer-in-roman-numerals">Eleventh integer in Roman numerals</h2>
+<p>Prompt: <code>the eleventh positive integer in roman numerals is</code>. Edited input position: 9. Natural gate: 1.696772.</p>
+<p>First token: <code>xi</code> -&gt; <code>x</code>. The Roman <code>x</code> token is only a prefix; this experiment does not generate or score the complete XII answer.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Block</th>
+<th style="text-align: right;">Native norm</th>
+<th style="text-align: right;">Gate-off norm</th>
+<th style="text-align: right;">Difference norm</th>
+<th style="text-align: right;">Relative difference</th>
+<th style="text-align: right;">Cosine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28 (control)</td>
+<td style="text-align: right;">190.9906</td>
+<td style="text-align: right;">190.9906</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.000%</td>
+<td style="text-align: right;">1.000000</td>
+</tr>
+<tr>
+<td>29</td>
+<td style="text-align: right;">220.4835</td>
+<td style="text-align: right;">216.0404</td>
+<td style="text-align: right;">39.1798</td>
+<td style="text-align: right;">17.770%</td>
+<td style="text-align: right;">0.984094</td>
+</tr>
+<tr>
+<td>30</td>
+<td style="text-align: right;">261.2750</td>
+<td style="text-align: right;">257.7248</td>
+<td style="text-align: right;">47.3450</td>
+<td style="text-align: right;">18.121%</td>
+<td style="text-align: right;">0.983449</td>
+</tr>
+<tr>
+<td>31</td>
+<td style="text-align: right;">304.5653</td>
+<td style="text-align: right;">305.4936</td>
+<td style="text-align: right;">56.7199</td>
+<td style="text-align: right;">18.623%</td>
+<td style="text-align: right;">0.982716</td>
+</tr>
+<tr>
+<td>32</td>
+<td style="text-align: right;">376.4853</td>
+<td style="text-align: right;">374.4948</td>
+<td style="text-align: right;">70.5102</td>
+<td style="text-align: right;">18.729%</td>
+<td style="text-align: right;">0.982383</td>
+</tr>
+<tr>
+<td>33</td>
+<td style="text-align: right;">449.3422</td>
+<td style="text-align: right;">446.4595</td>
+<td style="text-align: right;">87.6036</td>
+<td style="text-align: right;">19.496%</td>
+<td style="text-align: right;">0.980893</td>
+</tr>
+<tr>
+<td>34</td>
+<td style="text-align: right;">599.9720</td>
+<td style="text-align: right;">590.1056</td>
+<td style="text-align: right;">105.5239</td>
+<td style="text-align: right;">17.588%</td>
+<td style="text-align: right;">0.984412</td>
+</tr>
+<tr>
+<td>35</td>
+<td style="text-align: right;">885.6056</td>
+<td style="text-align: right;">841.9465</td>
+<td style="text-align: right;">122.8813</td>
+<td style="text-align: right;">13.875%</td>
+<td style="text-align: right;">0.991153</td>
+</tr>
+</tbody>
+</table></div>
+<p>Difference norm at L35 / difference norm at L29: 3.1363.</p>
+<h2 id="interpretation-and-verification">Interpretation and verification</h2>
+<p>Vector-change magnitude localizes amplification or contraction. It does not identify which attention/MLP computation causes the answer change or establish a general ordinal increment.</p>
+<p>Earlier prompt positions stay exactly unchanged across all observed layers. L28 is unchanged. Unhooked/observed/zero-strength native logits agree exactly, ablation repeats agree on every saved array, and the prior native full logits and pre-final-norm residual reproduce exactly. The natural MOLT contribution, BF16 MLP edit, and subsequent L29 residual addition were independently reconstructed locally.</p>
+<p>The full native/ablated vectors for every input position are in the hash-verified remote export; the CSV includes L28 and all requested L29-L35 measurements. Metrics are recomputed in FP64 from the saved FP32 copies of BF16 vectors.</p>
+<p>Reproduce: <code>python3 experiments/eleven-residual-trace-20261103/analyze.py</code>.</p>
+<p>Sources: <code>comparisons/2026-11-03-eleven-residual-trace/remote-export/eleven-residual-20261103/</code>. Pinned model/runtime versions, source hashes, exact prompts and numerical audit errors are in <code>summary.json</code>.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-residual-trace/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-residual-trace/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

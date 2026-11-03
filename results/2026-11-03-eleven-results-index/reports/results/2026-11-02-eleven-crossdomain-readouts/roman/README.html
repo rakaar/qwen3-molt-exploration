@@ -1,0 +1,676 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Roman numerals: three-part L29 MLP readout · Eleven → Twelve</title><meta name="description" content="Roman numerals: three-part L29 MLP readout"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-02-eleven-crossdomain-readouts/roman/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="roman-numerals-three-part-l29-mlp-readout">Roman numerals: three-part L29 MLP readout</h1>
+<p>Exact raw prompt: <code>the eleventh positive integer in roman numerals is</code>; final input position 9, token <code>is</code>.</p>
+<p>The three primary vectors are native L29 MLP output M, positive intended L29-T2375 contribution c, and the actual edited output BF16(M - c). The contribution is displayed with its original positive sign; the gate-off intervention subtracts it.</p>
+<p>All three use <code>W_out @ (gamma * vector / sqrt(mean(native_final_residual^2) + epsilon))</code>. The denominator comes from the whole native final residual for this prompt, after layer 35 at the same position. Learned final RMSNorm gamma is included. The three vectors share that scale and are not independently normalized.</p>
+<p>These are direct vocabulary scores, not probabilities or complete-model answers. Incoming residual and later-layer computations are excluded from these three MLP-part projections.</p>
+<p>XII is multi-token here: the gate-off response starts with the tokens <code>x</code> and <code>ii</code>. The x/X rows are first-token prefixes, not complete XII answers.</p>
+<p><img alt="Three-part vocabulary readout" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-crossdomain-readouts/roman/three-part-readout.png"/></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Token</th>
+<th style="text-align: right;">Full MLP</th>
+<th style="text-align: right;">Removed MOLT</th>
+<th style="text-align: right;">After removal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>·xi</code></td>
+<td style="text-align: right;">+0.725391</td>
+<td style="text-align: right;">+0.433409</td>
+<td style="text-align: right;">+0.291964</td>
+</tr>
+<tr>
+<td><code>·XI</code></td>
+<td style="text-align: right;">+1.200244</td>
+<td style="text-align: right;">+0.658983</td>
+<td style="text-align: right;">+0.541406</td>
+</tr>
+<tr>
+<td><code>·x</code></td>
+<td style="text-align: right;">+0.127059</td>
+<td style="text-align: right;">-0.130247</td>
+<td style="text-align: right;">+0.257611</td>
+</tr>
+<tr>
+<td><code>·X</code></td>
+<td style="text-align: right;">+0.400247</td>
+<td style="text-align: right;">-0.141820</td>
+<td style="text-align: right;">+0.541964</td>
+</tr>
+</tbody>
+</table></div>
+<p>The highest full-MLP readout token is <code>·November</code>; the highest remainder token is <code>ati</code>.</p>
+<p>For the displayed contrast <code>·xi</code> versus <code>·x</code>, the direct margin changes from +0.598332 to +0.034353. The saved complete-model first-token margin changes from +0.875000 to -1.750000. This first-token comparison does not give complete-answer probabilities.</p>
+<p>The native MLP vector reproduced exactly on the new forward pass, and the native final RMSNorm output reconstructed exactly. CPU auditing passed over 132 saved output-matrix rows, including the highest and lowest tokens for every part and all target tokens.</p>
+<p>The ideal FP32 decomposition is additive to within 0.00000036 over the full vocabulary. The primary display uses the actual BF16 remainder. Its maximum score difference from ideal M-minus-c is 0.00161195.</p>
+<p>The direct readout is a diagnostic of these saved vectors. It does not by itself explain the full generated-answer change or establish a general add-one mechanism.</p>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-crossdomain-readouts/roman/all-vocabulary-scores.csv.gz">All vocabulary scores and ranks</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-crossdomain-readouts/roman/target-token-scores.csv">Target scores</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-crossdomain-readouts/roman/audit.json">CPU audit</a></p>
+<p>The CSV preserves raw tokenizer-piece strings and explicitly labels unmapped output rows. Ranks use competition ranking, so exact ties share a rank.</p>
+<h2 id="recorded-native-continuation">Recorded native continuation</h2>
+<blockquote>
+<p>xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the question is about the eleventh positive integer</p>
+</blockquote>
+<h2 id="recorded-final-input-only-gate-off-continuation">Recorded final-input-only gate-off continuation</h2>
+<blockquote>
+<p>xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii, but the eleventh letter is k</p>
+</blockquote>
+<p>These historical continuations hit the 32-token cap and can drift. This readout analysis adds a fresh native prefill to reproduce the vectors and obtain the contextual normalization scale; it does not rerun generation or gate-off inference.</p>
+<h2 id="1-full-mlp-output">1  Full MLP output</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>Token</th>
+<th style="text-align: right;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><code>·November</code></td>
+<td style="text-align: right;">+1.462047</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><code>·ele</code></td>
+<td style="text-align: right;">+1.382491</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><code>·nov</code></td>
+<td style="text-align: right;">+1.306946</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><code>·Nov</code></td>
+<td style="text-align: right;">+1.280360</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><code>ele</code></td>
+<td style="text-align: right;">+1.237414</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><code>·november</code></td>
+<td style="text-align: right;">+1.224263</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><code>November</code></td>
+<td style="text-align: right;">+1.217908</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><code>·XI</code></td>
+<td style="text-align: right;">+1.200244</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><code>Ele</code></td>
+<td style="text-align: right;">+1.195362</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td><code>·Ele</code></td>
+<td style="text-align: right;">+1.169637</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td><code>XI</code></td>
+<td style="text-align: right;">+1.168226</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><code>十一</code></td>
+<td style="text-align: right;">+1.152088</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td><code>·novel</code></td>
+<td style="text-align: right;">+1.145606</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td><code>Nov</code></td>
+<td style="text-align: right;">+1.143499</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td><code>nov</code></td>
+<td style="text-align: right;">+1.108659</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td><code>-Nov</code></td>
+<td style="text-align: right;">+1.097600</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td><code>ati</code></td>
+<td style="text-align: right;">+1.044051</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td><code>·Novel</code></td>
+<td style="text-align: right;">+1.040217</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td><code>·eleven</code></td>
+<td style="text-align: right;">+1.036547</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td><code>·ноя</code></td>
+<td style="text-align: right;">+0.984186</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td><code>_ele</code></td>
+<td style="text-align: right;">+0.974330</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td><code>NI</code></td>
+<td style="text-align: right;">+0.929781</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td><code>·ноября</code></td>
+<td style="text-align: right;">+0.927770</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td><code>(ele</code></td>
+<td style="text-align: right;">+0.916249</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td><code>·eligible</code></td>
+<td style="text-align: right;">+0.841180</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td><code>·�</code></td>
+<td style="text-align: right;">+0.840498</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td><code>?</code></td>
+<td style="text-align: right;">+0.840019</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td><code>halb</code></td>
+<td style="text-align: right;">+0.833062</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td><code>·EI</code></td>
+<td style="text-align: right;">+0.794007</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td><code>atori</code></td>
+<td style="text-align: right;">+0.780111</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="2-removed-molt-contribution">2  Removed MOLT contribution</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>Token</th>
+<th style="text-align: right;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><code>·nov</code></td>
+<td style="text-align: right;">+1.142051</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><code>·ele</code></td>
+<td style="text-align: right;">+1.030377</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><code>nov</code></td>
+<td style="text-align: right;">+0.972005</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><code>·Nov</code></td>
+<td style="text-align: right;">+0.968644</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><code>Nov</code></td>
+<td style="text-align: right;">+0.916271</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><code>·novel</code></td>
+<td style="text-align: right;">+0.898449</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><code>ele</code></td>
+<td style="text-align: right;">+0.883598</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><code>_ele</code></td>
+<td style="text-align: right;">+0.857863</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><code>-Nov</code></td>
+<td style="text-align: right;">+0.818684</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td><code>Ele</code></td>
+<td style="text-align: right;">+0.810965</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td><code>·November</code></td>
+<td style="text-align: right;">+0.795227</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><code>·Novel</code></td>
+<td style="text-align: right;">+0.791120</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td><code>·Ele</code></td>
+<td style="text-align: right;">+0.771141</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td><code>November</code></td>
+<td style="text-align: right;">+0.754355</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td><code>(ele</code></td>
+<td style="text-align: right;">+0.746863</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td><code>十一</code></td>
+<td style="text-align: right;">+0.746148</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td><code>·november</code></td>
+<td style="text-align: right;">+0.746021</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td><code>illi</code></td>
+<td style="text-align: right;">+0.700232</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td><code>lli</code></td>
+<td style="text-align: right;">+0.683187</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td><code>·XI</code></td>
+<td style="text-align: right;">+0.658983</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td><code>XI</code></td>
+<td style="text-align: right;">+0.654031</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td><code>eli</code></td>
+<td style="text-align: right;">+0.649950</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td><code>新型</code></td>
+<td style="text-align: right;">+0.648700</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td><code>·ноября</code></td>
+<td style="text-align: right;">+0.648474</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td><code>·novels</code></td>
+<td style="text-align: right;">+0.643053</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td><code>·novembre</code></td>
+<td style="text-align: right;">+0.641132</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td><code>·نوفمبر</code></td>
+<td style="text-align: right;">+0.631599</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td><code>·EI</code></td>
+<td style="text-align: right;">+0.622510</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td><code>小说</code></td>
+<td style="text-align: right;">+0.593054</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td><code>·Ellison</code></td>
+<td style="text-align: right;">+0.592913</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-mlp-after-removal">3  MLP after removal</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>Token</th>
+<th style="text-align: right;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><code>ati</code></td>
+<td style="text-align: right;">+0.775289</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><code>?</code></td>
+<td style="text-align: right;">+0.700832</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><code>·November</code></td>
+<td style="text-align: right;">+0.666985</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><code>·M</code></td>
+<td style="text-align: right;">+0.657155</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><code>·capital</code></td>
+<td style="text-align: right;">+0.652697</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><code>·January</code></td>
+<td style="text-align: right;">+0.646164</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><code>·K</code></td>
+<td style="text-align: right;">+0.636348</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><code>·fine</code></td>
+<td style="text-align: right;">+0.620896</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><code>·what</code></td>
+<td style="text-align: right;">+0.616559</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td><code>·GG</code></td>
+<td style="text-align: right;">+0.607665</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td><code>·cross</code></td>
+<td style="text-align: right;">+0.593415</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><code>·One</code></td>
+<td style="text-align: right;">+0.589739</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td><code>·Hamilton</code></td>
+<td style="text-align: right;">+0.588909</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td><code>·tor</code></td>
+<td style="text-align: right;">+0.588552</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td><code>·Cont</code></td>
+<td style="text-align: right;">+0.578506</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td><code>·Help</code></td>
+<td style="text-align: right;">+0.578126</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td><code>·one</code></td>
+<td style="text-align: right;">+0.571012</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td><code>·December</code></td>
+<td style="text-align: right;">+0.563817</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td><code>·What</code></td>
+<td style="text-align: right;">+0.559657</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td><code>1</code></td>
+<td style="text-align: right;">+0.545782</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td><code>·Monument</code></td>
+<td style="text-align: right;">+0.542862</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td><code>·stor</code></td>
+<td style="text-align: right;">+0.542448</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td><code>·X</code></td>
+<td style="text-align: right;">+0.541964</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td><code>·XI</code></td>
+<td style="text-align: right;">+0.541406</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td><code>·eligible</code></td>
+<td style="text-align: right;">+0.538664</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td><code>-capital</code></td>
+<td style="text-align: right;">+0.536935</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td><code>tor</code></td>
+<td style="text-align: right;">+0.534525</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td><code>·J</code></td>
+<td style="text-align: right;">+0.532035</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td><code>·Recall</code></td>
+<td style="text-align: right;">+0.522767</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td><code>·Y</code></td>
+<td style="text-align: right;">+0.522106</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="lowest-scoring-tokens-for-the-removed-contribution">Lowest-scoring tokens for the removed contribution</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Token</th>
+<th style="text-align: right;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>·thirteen</code></td>
+<td style="text-align: right;">-0.720563</td>
+</tr>
+<tr>
+<td><code>特朗</code></td>
+<td style="text-align: right;">-0.652275</td>
+</tr>
+<tr>
+<td><code>xz</code></td>
+<td style="text-align: right;">-0.627859</td>
+</tr>
+<tr>
+<td><code>·bz</code></td>
+<td style="text-align: right;">-0.606441</td>
+</tr>
+<tr>
+<td><code>esan</code></td>
+<td style="text-align: right;">-0.605277</td>
+</tr>
+<tr>
+<td><code>(keys</code></td>
+<td style="text-align: right;">-0.602873</td>
+</tr>
+<tr>
+<td><code>cce</code></td>
+<td style="text-align: right;">-0.596200</td>
+</tr>
+<tr>
+<td><code>パー�</code></td>
+<td style="text-align: right;">-0.583040</td>
+</tr>
+<tr>
+<td><code>·Saturdays</code></td>
+<td style="text-align: right;">-0.577708</td>
+</tr>
+<tr>
+<td><code>gow</code></td>
+<td style="text-align: right;">-0.575301</td>
+</tr>
+<tr>
+<td><code>_SENS</code></td>
+<td style="text-align: right;">-0.571052</td>
+</tr>
+<tr>
+<td><code>筏</code></td>
+<td style="text-align: right;">-0.569777</td>
+</tr>
+<tr>
+<td><code>·LZ</code></td>
+<td style="text-align: right;">-0.566906</td>
+</tr>
+<tr>
+<td><code>谟</code></td>
+<td style="text-align: right;">-0.566752</td>
+</tr>
+<tr>
+<td><code>ду</code></td>
+<td style="text-align: right;">-0.562494</td>
+</tr>
+<tr>
+<td><code>�</code></td>
+<td style="text-align: right;">-0.561389</td>
+</tr>
+<tr>
+<td><code>CCA</code></td>
+<td style="text-align: right;">-0.559879</td>
+</tr>
+<tr>
+<td><code>·qw</code></td>
+<td style="text-align: right;">-0.555652</td>
+</tr>
+<tr>
+<td><code>anos</code></td>
+<td style="text-align: right;">-0.555495</td>
+</tr>
+<tr>
+<td><code>ISO</code></td>
+<td style="text-align: right;">-0.555311</td>
+</tr>
+<tr>
+<td><code>黯</code></td>
+<td style="text-align: right;">-0.552817</td>
+</tr>
+<tr>
+<td><code>otropic</code></td>
+<td style="text-align: right;">-0.547820</td>
+</tr>
+<tr>
+<td><code>加盖</code></td>
+<td style="text-align: right;">-0.547658</td>
+</tr>
+<tr>
+<td><code>七大</code></td>
+<td style="text-align: right;">-0.546469</td>
+</tr>
+<tr>
+<td><code>诤</code></td>
+<td style="text-align: right;">-0.538008</td>
+</tr>
+<tr>
+<td><code>Rails</code></td>
+<td style="text-align: right;">-0.535676</td>
+</tr>
+<tr>
+<td><code>·gag</code></td>
+<td style="text-align: right;">-0.532801</td>
+</tr>
+<tr>
+<td><code>除夕</code></td>
+<td style="text-align: right;">-0.531296</td>
+</tr>
+<tr>
+<td><code>EZ</code></td>
+<td style="text-align: right;">-0.529063</td>
+</tr>
+<tr>
+<td><code>OfYear</code></td>
+<td style="text-align: right;">-0.527420</td>
+</tr>
+</tbody>
+</table></div><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-crossdomain-readouts/roman/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-02-eleven-crossdomain-readouts/roman/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

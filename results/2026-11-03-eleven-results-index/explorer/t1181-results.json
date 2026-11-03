@@ -1,0 +1,1736 @@
+{
+  "feature": "L29-T1181",
+  "prompt": "the eleventh month of the year is",
+  "position": 7,
+  "joint_conditions": [
+    {
+      "label": "Native",
+      "off": [],
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "output_token_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279,
+        4843,
+        2254,
+        374,
+        15217,
+        13,
+        279,
+        11737,
+        2254
+      ],
+      "first_answer": "november",
+      "probabilities": {
+        "january": 0.00018896899519786267,
+        "february": 2.146056233250424e-05,
+        "march": 1.857646111602662e-05,
+        "april": 7.691438668189221e-06,
+        "may": 1.0230260812704728e-05,
+        "june": 3.414206228350737e-05,
+        "july": 6.018801641071662e-06,
+        "august": 5.230743170159258e-06,
+        "september": 8.562825041735778e-05,
+        "october": 9.97004733455021e-05,
+        "november": 0.6686863750219345,
+        "december": 0.24365518987178802
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 0.0,
+      "actual_delta_l2": 0.0
+    },
+    {
+      "label": "T1181 off",
+      "off": [
+        1181
+      ],
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "output_token_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279,
+        4843,
+        2254,
+        374,
+        15217,
+        13,
+        279,
+        11737,
+        2254
+      ],
+      "first_answer": "november",
+      "probabilities": {
+        "january": 0.00033657166051627896,
+        "february": 3.471168344991275e-05,
+        "march": 1.9578836372602382e-05,
+        "april": 6.172590587993909e-06,
+        "may": 6.97869197097134e-06,
+        "june": 2.531892185598226e-05,
+        "july": 4.467479849328264e-06,
+        "august": 6.196711979100655e-06,
+        "september": 0.00012099068408133462,
+        "october": 0.00023244124876950793,
+        "november": 0.8891087472438812,
+        "december": 0.034474486485123634
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 23.383360376248305,
+      "actual_delta_l2": 23.38806275139162
+    },
+    {
+      "label": "T2375 off",
+      "off": [
+        2375
+      ],
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month",
+      "output_token_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377,
+        2254,
+        374,
+        502,
+        3901,
+        13,
+        279,
+        30387,
+        2254
+      ],
+      "first_answer": "december",
+      "probabilities": {
+        "january": 0.00030717267055032456,
+        "february": 2.1769718942283027e-05,
+        "march": 1.1746508903343056e-05,
+        "april": 6.036475497239735e-06,
+        "may": 7.47460390471133e-06,
+        "june": 1.907484259088487e-05,
+        "july": 3.8222538824768686e-06,
+        "august": 5.947157887931098e-06,
+        "september": 6.923572300365777e-05,
+        "october": 8.028825253433478e-05,
+        "november": 0.08831333927810192,
+        "december": 0.8367752730846405
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 17.357875306936457,
+      "actual_delta_l2": 17.359550358675747
+    },
+    {
+      "label": "Both off",
+      "off": [
+        1181,
+        2375
+      ],
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "output_token_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279,
+        4843,
+        2254,
+        374,
+        15217,
+        13,
+        279,
+        11737,
+        2254
+      ],
+      "first_answer": "november",
+      "probabilities": {
+        "january": 0.0021861337001883793,
+        "february": 8.550922697509638e-05,
+        "march": 2.9900013714723173e-05,
+        "april": 1.0131586236639123e-05,
+        "may": 1.0859847293431812e-05,
+        "june": 3.340807698435505e-05,
+        "july": 5.932654303550302e-06,
+        "august": 1.5888736129454628e-05,
+        "september": 0.00025282916794822086,
+        "october": 0.0006856025058031737,
+        "november": 0.46606528013944626,
+        "december": 0.4080129414796829
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 31.00053025684885,
+      "actual_delta_l2": 31.0043517735961
+    }
+  ],
+  "joint_native_gates": {
+    "1181": 1.5161690711975098,
+    "2375": 1.1585536003112793
+  },
+  "joint_gate_maps": [
+    {
+      "feature": 1181,
+      "tokens": [
+        {
+          "text": "the",
+          "position": 0,
+          "gate": 0.0
+        },
+        {
+          "text": " ele",
+          "position": 1,
+          "gate": 0.0
+        },
+        {
+          "text": "venth",
+          "position": 2,
+          "gate": 0.0
+        },
+        {
+          "text": " month",
+          "position": 3,
+          "gate": 0.0
+        },
+        {
+          "text": " of",
+          "position": 4,
+          "gate": 0.0
+        },
+        {
+          "text": " the",
+          "position": 5,
+          "gate": 0.0
+        },
+        {
+          "text": " year",
+          "position": 6,
+          "gate": 0.0
+        },
+        {
+          "text": " is",
+          "position": 7,
+          "gate": 1.5161690711975098
+        }
+      ]
+    },
+    {
+      "feature": 2375,
+      "tokens": [
+        {
+          "text": "the",
+          "position": 0,
+          "gate": 0.0
+        },
+        {
+          "text": " ele",
+          "position": 1,
+          "gate": 0.0
+        },
+        {
+          "text": "venth",
+          "position": 2,
+          "gate": 0.0
+        },
+        {
+          "text": " month",
+          "position": 3,
+          "gate": 0.0
+        },
+        {
+          "text": " of",
+          "position": 4,
+          "gate": 0.0
+        },
+        {
+          "text": " the",
+          "position": 5,
+          "gate": 0.0
+        },
+        {
+          "text": " year",
+          "position": 6,
+          "gate": 0.0
+        },
+        {
+          "text": " is",
+          "position": 7,
+          "gate": 1.1585536003112793
+        }
+      ]
+    }
+  ],
+  "twelfth": {
+    "prompt": "the twelfth month of the year is",
+    "natural_gate": 1.4894633293151855,
+    "conditions": [
+      {
+        "label": "Native",
+        "off": [],
+        "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.",
+        "output_token_ids": [
+          89011,
+          13,
+          279,
+          4384,
+          87698,
+          2254,
+          315,
+          279,
+          1042,
+          374,
+          89011,
+          13,
+          279,
+          4384,
+          87698,
+          2254,
+          315,
+          279,
+          1042,
+          374,
+          89011,
+          13,
+          279,
+          4384,
+          87698,
+          2254,
+          315,
+          279,
+          1042,
+          374,
+          89011,
+          13
+        ],
+        "first_answer": "december",
+        "probabilities": {
+          "january": 0.005743707911705698,
+          "february": 0.0002747768305994009,
+          "march": 3.563402788131498e-05,
+          "april": 4.814378416995169e-05,
+          "may": 1.5940292996674543e-05,
+          "june": 0.00013135587840709673,
+          "july": 1.9771995934324618e-05,
+          "august": 4.663275399252598e-05,
+          "september": 3.811505052908615e-05,
+          "october": 8.709757691250325e-06,
+          "november": 0.0009285715932492167,
+          "december": 0.8803236186504364
+        },
+        "stop_reason": "token_limit",
+        "intended_delta_l2": 0.0,
+        "actual_delta_l2": 0.0
+      },
+      {
+        "label": "T1181 off",
+        "off": [
+          1181
+        ],
+        "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.",
+        "output_token_ids": [
+          89011,
+          13,
+          279,
+          4384,
+          87698,
+          2254,
+          315,
+          279,
+          1042,
+          374,
+          89011,
+          13,
+          279,
+          4384,
+          87698,
+          2254,
+          315,
+          279,
+          1042,
+          374,
+          89011,
+          13,
+          279,
+          4384,
+          87698,
+          2254,
+          315,
+          279,
+          1042,
+          374,
+          89011,
+          13
+        ],
+        "first_answer": "december",
+        "probabilities": {
+          "january": 0.07327308359893059,
+          "february": 0.0031965774130644498,
+          "march": 0.00023688702640356496,
+          "april": 0.00021908570124651305,
+          "may": 3.9254816101674805e-05,
+          "june": 0.0007085627001213179,
+          "july": 0.00010552862072477076,
+          "august": 0.00025236593046429334,
+          "september": 0.0002638509777170839,
+          "october": 6.0084836996599595e-05,
+          "november": 0.005388708785176277,
+          "december": 0.563042163848877
+        },
+        "stop_reason": "token_limit",
+        "intended_delta_l2": 24.4597775664392,
+        "actual_delta_l2": 24.4542932415558
+      }
+    ],
+    "gate_maps": [
+      {
+        "feature": 1181,
+        "tokens": [
+          {
+            "text": "the",
+            "position": 0,
+            "gate": 0.0
+          },
+          {
+            "text": " tw",
+            "position": 1,
+            "gate": 0.0
+          },
+          {
+            "text": "elfth",
+            "position": 2,
+            "gate": 0.0
+          },
+          {
+            "text": " month",
+            "position": 3,
+            "gate": 0.0
+          },
+          {
+            "text": " of",
+            "position": 4,
+            "gate": 0.0
+          },
+          {
+            "text": " the",
+            "position": 5,
+            "gate": 0.0
+          },
+          {
+            "text": " year",
+            "position": 6,
+            "gate": 0.0
+          },
+          {
+            "text": " is",
+            "position": 7,
+            "gate": 1.4894633293151855
+          }
+        ]
+      }
+    ]
+  },
+  "active_controls": [
+    {
+      "transform": 34,
+      "gate": 1.2672163248062134,
+      "contribution_l2": 19.90808480672861,
+      "cached_title": "Creative Writing Task Requests",
+      "same_native_output": true,
+      "label": "T34 off",
+      "off": [
+        34
+      ],
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "output_token_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279,
+        4843,
+        2254,
+        374,
+        15217,
+        13,
+        279,
+        11737,
+        2254
+      ],
+      "first_answer": "november",
+      "probabilities": {
+        "january": 0.00023071751138321233,
+        "february": 3.6437909763380356e-05,
+        "march": 3.0072126719460357e-05,
+        "april": 1.3181284657548531e-05,
+        "may": 2.364524470976903e-05,
+        "june": 5.02939874496601e-05,
+        "july": 8.895792324625155e-06,
+        "august": 9.34285492348863e-06,
+        "september": 0.00014275857392931357,
+        "october": 0.00020338331920169992,
+        "november": 0.7119972258806229,
+        "december": 0.20411967486143112
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 19.90808480672861,
+      "actual_delta_l2": 19.90636627667334
+    },
+    {
+      "transform": 587,
+      "gate": 1.3960320949554443,
+      "contribution_l2": 31.49789137804577,
+      "cached_title": "Temporal and Spatial Context Gate",
+      "same_native_output": true,
+      "label": "T587 off",
+      "off": [
+        587
+      ],
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "output_token_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279,
+        4843,
+        2254,
+        374,
+        15217,
+        13,
+        279,
+        11737,
+        2254
+      ],
+      "first_answer": "november",
+      "probabilities": {
+        "january": 0.00027156596585093784,
+        "february": 9.700323777042061e-06,
+        "march": 7.011999514361378e-06,
+        "april": 2.4069499886536505e-06,
+        "may": 1.8759648128252593e-06,
+        "june": 1.5895699907100304e-05,
+        "july": 3.6050215837496024e-06,
+        "august": 2.5241390630981186e-06,
+        "september": 6.7822222263203e-05,
+        "october": 7.890816969661525e-05,
+        "november": 0.7641972899436951,
+        "december": 0.09730928018689156
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 31.49789137804577,
+      "actual_delta_l2": 31.496393118021054
+    },
+    {
+      "transform": 799,
+      "gate": 0.8940267562866211,
+      "contribution_l2": 5.245037881737878,
+      "cached_title": "Copula Verb and Predicate Context",
+      "same_native_output": true,
+      "label": "T799 off",
+      "off": [
+        799
+      ],
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "output_token_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279,
+        4843,
+        2254,
+        374,
+        15217,
+        13,
+        279,
+        11737,
+        2254
+      ],
+      "first_answer": "november",
+      "probabilities": {
+        "january": 0.00019168712358301942,
+        "february": 2.237546049725994e-05,
+        "march": 1.8836197114069364e-05,
+        "april": 8.766209134591918e-06,
+        "may": 1.1687865963949662e-05,
+        "june": 3.3189871618836226e-05,
+        "july": 6.628058255833647e-06,
+        "august": 5.902242662614299e-06,
+        "september": 8.66556802066043e-05,
+        "october": 0.00010920181907467979,
+        "november": 0.6966580301523209,
+        "december": 0.21627500653266907
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 5.245037881737878,
+      "actual_delta_l2": 5.24542226024087
+    },
+    {
+      "transform": 858,
+      "gate": 0.7775146961212158,
+      "contribution_l2": 8.12720305758347,
+      "cached_title": "Temporal Phrases Triggering Seasonal Gate",
+      "same_native_output": true,
+      "label": "T858 off",
+      "off": [
+        858
+      ],
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "output_token_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279,
+        4843,
+        2254,
+        374,
+        15217,
+        13,
+        279,
+        11737,
+        2254
+      ],
+      "first_answer": "november",
+      "probabilities": {
+        "january": 0.0002323856680503788,
+        "february": 1.957548401655923e-05,
+        "march": 1.4644949487774284e-05,
+        "april": 6.225264996828628e-06,
+        "may": 6.990703468545689e-06,
+        "june": 2.7508536889684276e-05,
+        "july": 4.8584487539178145e-06,
+        "august": 4.3239552383056434e-06,
+        "september": 7.501654408770264e-05,
+        "october": 9.546437587391009e-05,
+        "november": 0.6833865642547607,
+        "december": 0.22200347483158112
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 8.12720305758347,
+      "actual_delta_l2": 8.129223946374168
+    },
+    {
+      "transform": 1181,
+      "gate": 1.5161690711975098,
+      "contribution_l2": 23.383360376248305,
+      "cached_title": "Christmas Holiday Season Token Activation",
+      "same_native_output": true,
+      "label": "T1181 off",
+      "off": [
+        1181
+      ],
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "output_token_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279,
+        4843,
+        2254,
+        374,
+        15217,
+        13,
+        279,
+        11737,
+        2254
+      ],
+      "first_answer": "november",
+      "probabilities": {
+        "january": 0.00033657166051627896,
+        "february": 3.471168344991275e-05,
+        "march": 1.9578836372602382e-05,
+        "april": 6.172590587993909e-06,
+        "may": 6.97869197097134e-06,
+        "june": 2.531892185598226e-05,
+        "july": 4.467479849328264e-06,
+        "august": 6.196711979100655e-06,
+        "september": 0.00012099068408133462,
+        "october": 0.00023244124876950793,
+        "november": 0.8891087472438812,
+        "december": 0.034474486485123634
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 23.383360376248305,
+      "actual_delta_l2": 23.38806275139162
+    },
+    {
+      "transform": 2375,
+      "gate": 1.1585536003112793,
+      "contribution_l2": 17.357875306936457,
+      "cached_title": "High-Activation \"Water\" Token",
+      "same_native_output": false,
+      "label": "T2375 off",
+      "off": [
+        2375
+      ],
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month",
+      "output_token_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377,
+        2254,
+        374,
+        502,
+        3901,
+        13,
+        279,
+        30387,
+        2254
+      ],
+      "first_answer": "december",
+      "probabilities": {
+        "january": 0.00030717267055032456,
+        "february": 2.1769718942283027e-05,
+        "march": 1.1746508903343056e-05,
+        "april": 6.036475497239735e-06,
+        "may": 7.47460390471133e-06,
+        "june": 1.907484259088487e-05,
+        "july": 3.8222538824768686e-06,
+        "august": 5.947157887931098e-06,
+        "september": 6.923572300365777e-05,
+        "october": 8.028825253433478e-05,
+        "november": 0.08831333927810192,
+        "december": 0.8367752730846405
+      },
+      "stop_reason": "token_limit",
+      "intended_delta_l2": 17.357875306936457,
+      "actual_delta_l2": 17.359550358675747
+    }
+  ],
+  "preview": {
+    "sample": "64 conversations / 54,828 tokens",
+    "pair": [
+      {
+        "feature": 1181,
+        "start": 320,
+        "tokens": [
+          {
+            "text": "Aud",
+            "position": 320,
+            "gate": -0.0
+          },
+          {
+            "text": "iences",
+            "position": 321,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 322,
+            "gate": -0.0
+          },
+          {
+            "text": "1",
+            "position": 323,
+            "gate": -0.0
+          },
+          {
+            "text": "0",
+            "position": 324,
+            "gate": -0.0
+          },
+          {
+            "text": ".",
+            "position": 325,
+            "gate": -0.0
+          },
+          {
+            "text": " The",
+            "position": 326,
+            "gate": -0.0
+          },
+          {
+            "text": " Art",
+            "position": 327,
+            "gate": -0.0
+          },
+          {
+            "text": "Beat",
+            "position": 328,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 329,
+            "gate": 0.0
+          },
+          {
+            "text": "1",
+            "position": 330,
+            "gate": -0.0
+          },
+          {
+            "text": "1",
+            "position": 331,
+            "gate": -0.0
+          },
+          {
+            "text": ".",
+            "position": 332,
+            "gate": -0.0
+          },
+          {
+            "text": " Art",
+            "position": 333,
+            "gate": -0.0
+          },
+          {
+            "text": "Re",
+            "position": 334,
+            "gate": -0.0
+          },
+          {
+            "text": "bel",
+            "position": 335,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 336,
+            "gate": 0.73828125
+          },
+          {
+            "text": "1",
+            "position": 337,
+            "gate": -0.0
+          },
+          {
+            "text": "2",
+            "position": 338,
+            "gate": -0.0
+          },
+          {
+            "text": ".",
+            "position": 339,
+            "gate": -0.0
+          },
+          {
+            "text": " Audience",
+            "position": 340,
+            "gate": -0.0
+          },
+          {
+            "text": "H",
+            "position": 341,
+            "gate": -0.0
+          },
+          {
+            "text": "ive",
+            "position": 342,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 343,
+            "gate": 0.0
+          },
+          {
+            "text": "1",
+            "position": 344,
+            "gate": -0.0
+          },
+          {
+            "text": "3",
+            "position": 345,
+            "gate": -0.0
+          },
+          {
+            "text": ".",
+            "position": 346,
+            "gate": -0.0
+          },
+          {
+            "text": " Arts",
+            "position": 347,
+            "gate": -0.0
+          },
+          {
+            "text": "V",
+            "position": 348,
+            "gate": -0.0
+          },
+          {
+            "text": "ib",
+            "position": 349,
+            "gate": -0.0
+          },
+          {
+            "text": "es",
+            "position": 350,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 351,
+            "gate": 0.0
+          },
+          {
+            "text": "1",
+            "position": 352,
+            "gate": -0.0
+          }
+        ]
+      },
+      {
+        "feature": 2375,
+        "start": 313,
+        "tokens": [
+          {
+            "text": " Culture",
+            "position": 313,
+            "gate": -0.0
+          },
+          {
+            "text": "Drive",
+            "position": 314,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 315,
+            "gate": -0.0
+          },
+          {
+            "text": "9",
+            "position": 316,
+            "gate": -0.0
+          },
+          {
+            "text": ".",
+            "position": 317,
+            "gate": -0.0
+          },
+          {
+            "text": " Next",
+            "position": 318,
+            "gate": -0.0
+          },
+          {
+            "text": "Gen",
+            "position": 319,
+            "gate": -0.0
+          },
+          {
+            "text": "Aud",
+            "position": 320,
+            "gate": -0.0
+          },
+          {
+            "text": "iences",
+            "position": 321,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 322,
+            "gate": 0.0
+          },
+          {
+            "text": "1",
+            "position": 323,
+            "gate": -0.0
+          },
+          {
+            "text": "0",
+            "position": 324,
+            "gate": -0.0
+          },
+          {
+            "text": ".",
+            "position": 325,
+            "gate": -0.0
+          },
+          {
+            "text": " The",
+            "position": 326,
+            "gate": -0.0
+          },
+          {
+            "text": " Art",
+            "position": 327,
+            "gate": -0.0
+          },
+          {
+            "text": "Beat",
+            "position": 328,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 329,
+            "gate": 1.96875
+          },
+          {
+            "text": "1",
+            "position": 330,
+            "gate": -0.0
+          },
+          {
+            "text": "1",
+            "position": 331,
+            "gate": -0.0
+          },
+          {
+            "text": ".",
+            "position": 332,
+            "gate": -0.0
+          },
+          {
+            "text": " Art",
+            "position": 333,
+            "gate": -0.0
+          },
+          {
+            "text": "Re",
+            "position": 334,
+            "gate": -0.0
+          },
+          {
+            "text": "bel",
+            "position": 335,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 336,
+            "gate": 0.0
+          },
+          {
+            "text": "1",
+            "position": 337,
+            "gate": -0.0
+          },
+          {
+            "text": "2",
+            "position": 338,
+            "gate": -0.0
+          },
+          {
+            "text": ".",
+            "position": 339,
+            "gate": -0.0
+          },
+          {
+            "text": " Audience",
+            "position": 340,
+            "gate": -0.0
+          },
+          {
+            "text": "H",
+            "position": 341,
+            "gate": -0.0
+          },
+          {
+            "text": "ive",
+            "position": 342,
+            "gate": -0.0
+          },
+          {
+            "text": "\n",
+            "position": 343,
+            "gate": -0.0
+          },
+          {
+            "text": "1",
+            "position": 344,
+            "gate": -0.0
+          },
+          {
+            "text": "3",
+            "position": 345,
+            "gate": -0.0
+          }
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "conversation": 44,
+        "peak": 2.390625,
+        "start": 376,
+        "tokens": [
+          " screen",
+          ".",
+          " Tall",
+          " cam",
+          "ell",
+          "ia",
+          " cultiv",
+          "ars",
+          " that",
+          " work",
+          " as",
+          " a",
+          " hedge",
+          " include",
+          " \"",
+          "Y",
+          "ulet",
+          "ide",
+          "\"",
+          " or",
+          " \"",
+          "Spring",
+          "'s",
+          " Promise",
+          "\"",
+          " Ice",
+          " Angels",
+          " cam",
+          "ell",
+          "ia",
+          ".",
+          " \"",
+          "Y"
+        ],
+        "gates": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          2.390625,
+          1.6484375,
+          -0.0,
+          1.390625,
+          2.03125,
+          0.6015625,
+          0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "conversation": 40,
+        "peak": 1.5,
+        "start": 851,
+        "tokens": [
+          " be",
+          " useful",
+          " in",
+          " different",
+          " industries",
+          " or",
+          " contexts",
+          ":\n\n",
+          "1",
+          ".",
+          " Retail",
+          ":",
+          " In",
+          " a",
+          " retail",
+          " environment",
+          " during",
+          " peak",
+          " shopping",
+          " seasons",
+          ",",
+          " more",
+          " customers",
+          " may",
+          " be",
+          " waiting",
+          " in",
+          " line",
+          " to",
+          " complete",
+          " their",
+          " purchases",
+          "."
+        ],
+        "gates": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          -0.0,
+          -0.0,
+          1.5,
+          0.0,
+          1.125,
+          0.0,
+          0.0,
+          0.58203125,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ]
+      },
+      {
+        "conversation": 51,
+        "peak": 0.92578125,
+        "start": 887,
+        "tokens": [
+          " and",
+          " her",
+          " constant",
+          " gig",
+          "ging",
+          " often",
+          " meant",
+          " that",
+          " she",
+          " missed",
+          " important",
+          " family",
+          " events",
+          ",",
+          " like",
+          " birthdays",
+          " and",
+          " holidays",
+          ".",
+          " It",
+          " strained",
+          " her",
+          " relationship",
+          " with",
+          " her",
+          " parents",
+          ",",
+          " who",
+          " felt",
+          " like",
+          " they",
+          " were",
+          " losing"
+        ],
+        "gates": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0,
+          0.0,
+          0.77734375,
+          0.0,
+          0.92578125,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ]
+      },
+      {
+        "conversation": 39,
+        "peak": 0.73828125,
+        "start": 320,
+        "tokens": [
+          "Aud",
+          "iences",
+          "\n",
+          "1",
+          "0",
+          ".",
+          " The",
+          " Art",
+          "Beat",
+          "\n",
+          "1",
+          "1",
+          ".",
+          " Art",
+          "Re",
+          "bel",
+          "\n",
+          "1",
+          "2",
+          ".",
+          " Audience",
+          "H",
+          "ive",
+          "\n",
+          "1",
+          "3",
+          ".",
+          " Arts",
+          "V",
+          "ib",
+          "es",
+          "\n",
+          "1"
+        ],
+        "gates": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.73828125,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ]
+      },
+      {
+        "conversation": 62,
+        "peak": 0.64453125,
+        "start": 75,
+        "tokens": [
+          " is",
+          " dissolved",
+          " and",
+          " mixture",
+          " is",
+          " smooth",
+          ".\n",
+          "My",
+          " family",
+          " loves",
+          " this",
+          " bread",
+          " pudding",
+          " and",
+          " it",
+          " is",
+          " a",
+          " hit",
+          " where",
+          " ever",
+          " I",
+          " take",
+          " it",
+          ".",
+          "<|im_end|>",
+          "\n",
+          "<|im_start|>",
+          "assistant",
+          "\n",
+          "This",
+          " sauce",
+          " would",
+          " pair"
+        ],
+        "gates": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.64453125,
+          0.0,
+          0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ]
+      }
+    ],
+    "labels": {
+      "title": "Christmas Holiday Season Token Activation",
+      "date": "2026-10-21"
+    },
+    "hash": "c0d8a189699e779c938042698853184cb57db1c76f424f34de1282e2f482fe99"
+  },
+  "cross_domain_gates": [
+    {
+      "case": "month",
+      "gate": 1.516171932220459,
+      "raw": 1.516171932220459,
+      "threshold": 0.524233877658844,
+      "position": 7
+    },
+    {
+      "case": "alphabet",
+      "gate": 0.5521929264068604,
+      "raw": 0.5521929264068604,
+      "threshold": 0.524233877658844,
+      "position": 8
+    },
+    {
+      "case": "roman",
+      "gate": 0.0,
+      "raw": 0.39039289951324463,
+      "threshold": 0.524233877658844,
+      "position": 9
+    },
+    {
+      "case": "element",
+      "gate": 0.0,
+      "raw": -0.6034796237945557,
+      "threshold": 0.524233877658844,
+      "position": 8
+    }
+  ],
+  "month_gate_check": [
+    {
+      "ordinal": 1,
+      "prompt": "the first month of the year is",
+      "position": 6,
+      "token": " is",
+      "gates": {
+        "1181": {
+          "raw": 0.48339295387268066,
+          "threshold": 0.524233877658844,
+          "gate": 0.0
+        },
+        "2375": {
+          "raw": -0.4717293381690979,
+          "threshold": 0.5448488593101501,
+          "gate": 0.0
+        }
+      },
+      "response": " January, the second is February, and so on. The first day of the year is January 1. The first day of the year is also the first day of the year, and the last day of the year is December 31. The first day of the year is also the first day of the year",
+      "arrays": "comparisons/2026-10-28-water-raw-ordinal-ablation/remote-export/water-raw-ordinal-ablation-20261028/artifacts/month--ordinal-1--zero--step-0.npz",
+      "arrays_sha256": "191f7a536e3ea9343c7f96cec26f23e41d85b3bde43c86d64f950477d15f675b"
+    },
+    {
+      "ordinal": 11,
+      "prompt": "the eleventh month of the year is",
+      "position": 7,
+      "token": " is",
+      "gates": {
+        "1181": {
+          "raw": 1.516171932220459,
+          "threshold": 0.524233877658844,
+          "gate": 1.516171932220459
+        },
+        "2375": {
+          "raw": 1.1585543155670166,
+          "threshold": 0.5448488593101501,
+          "gate": 1.1585543155670166
+        }
+      },
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month is april. the fifth month is may. the sixth month is june. the seventh month is july. the eighth month is august. the ninth month",
+      "arrays": "comparisons/2026-10-28-water-raw-ordinal-ablation/remote-export/water-raw-ordinal-ablation-20261028/artifacts/month--ordinal-11--zero--step-0.npz",
+      "arrays_sha256": "2b4520c73faa737045eab7942194142c97daaafe2b0aeaa57ada45845673dea4"
+    },
+    {
+      "ordinal": 12,
+      "prompt": "the twelfth month of the year is",
+      "position": 7,
+      "token": " is",
+      "gates": {
+        "1181": {
+          "raw": 1.4894661903381348,
+          "threshold": 0.524233877658844,
+          "gate": 1.4894661903381348
+        },
+        "2375": {
+          "raw": -0.1557367444038391,
+          "threshold": 0.5448488593101501,
+          "gate": 0.0
+        }
+      },
+      "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the tw",
+      "arrays": "comparisons/2026-10-28-water-raw-ordinal-ablation/remote-export/water-raw-ordinal-ablation-20261028/artifacts/month--ordinal-12--zero--step-0.npz",
+      "arrays_sha256": "ca8f2882fe64c605131ee1c29eae3c064a2c6fc7c896da476715ec333ac087b3"
+    }
+  ],
+  "sources": {
+    "t1181-active-controls": {
+      "summary_sha256": "f2be3606950c5658088816d857fa41e461f9f25aab7fcef7b2636f8f98656651",
+      "raw_results_sha256": "c4ac8fb473506ed6232f4d897430dabef5a921e3afde13f7fd721cbb05379c66",
+      "source": "results/2026-11-03-eleven-active-controls/summary.json"
+    },
+    "t1181-twelfth": {
+      "summary_sha256": "261dd6299dc89bb482b754b20c88ec02eb175b1e4b7e2da7b2b8828956d7dbcb",
+      "raw_results_sha256": "d236ad0cfa75aec0cbc7713ad36bb010dad993d3376ba116e8f48407ee5d9d71",
+      "source": "results/2026-11-03-t1181-twelfth-month-off/summary.json"
+    },
+    "t1181-joint": {
+      "summary_sha256": "9874efa8768ef711285b1fca0e4cadc04935043f5b0d725d9ad901c46676ad24",
+      "raw_results_sha256": "f68ef28d0493799881dd8fac4ad67c1c10b74efbca1f64628303ecc32d6fc24b",
+      "source": "results/2026-11-03-eleven-joint-1181-2375-off/summary.json"
+    }
+  },
+  "new_inference": false,
+  "probability_definition": "Sum of complete leading-space lowercase/title-case month-name prefix probabilities; no punctuation/EOS or other response formats."
+}

@@ -1,0 +1,295 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Raw-prefix ordinal ablations — 28 October 2026 · Eleven → Twelve</title><meta name="description" content="Raw-prefix ordinal ablations — 28 October 2026"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-10-28-water-raw-ordinal-ablation/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="raw-prefix-ordinal-ablations-28-october-2026">Raw-prefix ordinal ablations — 28 October 2026</h1>
+<p><strong>The month finding generalizes to alphabet letters and Roman numerals in these raw completion prefixes.</strong> Turning off L29–T2375 only at the final input token changes November → December, K → L, and XI → XII. These are initial-completion effects; long raw continuations are not generally coherent or factually reliable.</p>
+<p><img alt="Gate activity and completion outcomes" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-10-28-water-raw-ordinal-ablation/outcomes.png"/></p>
+<h2 id="capability-controls-before-interventions">Capability controls before interventions</h2>
+<p>Ten primary domains were screened with native first, eleventh and twelfth prefixes, each plus an exact zero-strength observer. All three initial labels had to pass manual review before any ablation. Eight passed. The lowercase president and ordered-list prefixes failed. Two adaptive president rephrasings were then tested; neither correctly completed the eleventh-president name, so neither was ablated.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Native first / eleventh / twelfth expected labels</th>
+<th>Eligible?</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>month</td>
+<td>January / November / December</td>
+<td>yes</td>
+<td>All three initial answer labels/numbers correct on manual review.</td>
+</tr>
+<tr>
+<td>president</td>
+<td>Washington / Polk / Taylor</td>
+<td>no</td>
+<td>Prefixes continue into false descriptive clauses rather than correct direct president-name completions. A later Taylor mention does not repair the incorrect initial description; no ablation.</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>A / K / L</td>
+<td>yes</td>
+<td>All three initial answer labels/numbers correct on manual review.</td>
+</tr>
+<tr>
+<td>element</td>
+<td>Hydrogen / Sodium / Magnesium</td>
+<td>yes</td>
+<td>All three initial answer labels/numbers correct on manual review.</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>1 / 11 / 12</td>
+<td>yes</td>
+<td>All three initial answer labels/numbers correct on manual review.</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>I / XI / XII</td>
+<td>yes</td>
+<td>Initial I, XI and XII numerals are correct. Later XI continuation confuses this with letter K. Eligibility is restricted to the initial completion, not whole-response coherence.</td>
+</tr>
+<tr>
+<td>prime</td>
+<td>2 / 31 / 37</td>
+<td>yes</td>
+<td>All three initial answer labels/numbers correct on manual review.</td>
+</tr>
+<tr>
+<td>square</td>
+<td>1 / 121 / 144</td>
+<td>yes</td>
+<td>All three initial answer labels/numbers correct on manual review.</td>
+</tr>
+<tr>
+<td>triangular</td>
+<td>1 / 66 / 78</td>
+<td>yes</td>
+<td>All three initial answer labels/numbers correct on manual review.</td>
+</tr>
+<tr>
+<td>list</td>
+<td>apple / violin / window</td>
+<td>no</td>
+<td>Eleventh prefix initially answers jungle (tenth item); twelfth starts a derivation/enumeration rather than the required window. No verified direct 11th/12th completion; no ablation.</td>
+</tr>
+<tr>
+<td>president_standard_case</td>
+<td>Washington / Polk / Taylor</td>
+<td>no</td>
+<td>First prefix leads into a quiz rather than a direct name; eleventh and twelfth both incorrectly answer John Quincy Adams.</td>
+</tr>
+<tr>
+<td>president_name_field</td>
+<td>Washington / Polk / Taylor</td>
+<td>no</td>
+<td>First Washington and twelfth Taylor identifiable, but eleventh incorrectly answers Martin Van Buren. No ablation.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Initial-label correctness is separate from whole-continuation coherence. For example, the native Roman completion begins XI and later confuses the task with the English letter K. All raw continuations and exclusions are retained.</p>
+<p>The prime, square and triangular controls now produce the correct initial eleventh/twelfth values. Their earlier chat-question exclusions do not apply automatically to these new raw-prefix prompts.</p>
+<h2 id="ablation-outcomes">Ablation outcomes</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Native eleventh</th>
+<th>Expected twelfth</th>
+<th style="text-align: right;">Gate at last input</th>
+<th>All tokens off</th>
+<th>Input only off</th>
+<th>Last input only off</th>
+<th>Output only off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Calendar month</td>
+<td>November</td>
+<td>December</td>
+<td style="text-align: right;">1.158554</td>
+<td>December</td>
+<td>December</td>
+<td>December</td>
+<td>November</td>
+</tr>
+<tr>
+<td>English letter</td>
+<td>K</td>
+<td>L</td>
+<td style="text-align: right;">1.906587</td>
+<td>L</td>
+<td>L</td>
+<td>L</td>
+<td>K</td>
+</tr>
+<tr>
+<td>Element by atomic number</td>
+<td>Sodium</td>
+<td>Magnesium</td>
+<td style="text-align: right;">2.939096</td>
+<td>Sodium</td>
+<td>Sodium</td>
+<td>Sodium</td>
+<td>Sodium</td>
+</tr>
+<tr>
+<td>Positive integer</td>
+<td>11</td>
+<td>12</td>
+<td style="text-align: right;">0.000000</td>
+<td>11</td>
+<td>11</td>
+<td>11</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Positive integer in Roman numerals</td>
+<td>XI</td>
+<td>XII</td>
+<td style="text-align: right;">1.696772</td>
+<td>XII</td>
+<td>XII</td>
+<td>XII</td>
+<td>XI</td>
+</tr>
+<tr>
+<td>Prime number</td>
+<td>31</td>
+<td>37</td>
+<td style="text-align: right;">0.000000</td>
+<td>31</td>
+<td>31</td>
+<td>31</td>
+<td>31</td>
+</tr>
+<tr>
+<td>Positive perfect square</td>
+<td>121</td>
+<td>144</td>
+<td style="text-align: right;">0.000000</td>
+<td>121</td>
+<td>121</td>
+<td>121</td>
+<td>121</td>
+</tr>
+<tr>
+<td>Positive triangular number</td>
+<td>66</td>
+<td>78</td>
+<td style="text-align: right;">0.000000</td>
+<td>66</td>
+<td>66</td>
+<td>66</td>
+<td>66</td>
+</tr>
+</tbody>
+</table></div>
+<p>A gray plot cell means the selected intervention made no actual local MLP edit; this is distinct from removing an active contribution without changing the first label. Integers, primes, squares and triangular numbers have zero natural gate on the final input token in their eleventh prefixes. Their final-token ablation exactly reproduces the native generation. Sodium is an active-gate case that retains its original first label after removal.</p>
+<p>All first- and twelfth-prefix specificity controls retain their original initial labels after final-input ablation. Several twelfth-prefix gates are active; unchanged greedy output does not establish zero confidence effect.</p>
+<h2 id="successful-single-position-conditions">Successful single-position conditions</h2>
+<h3 id="calendar-month">Calendar month</h3>
+<p>Prompt: <code>the eleventh month of the year is</code></p>
+<p>Native initial label: <strong>November</strong>. Gate off initial label: <strong>December</strong>. Natural final-token gate: 1.158553600. Only one input position is edited; generated positions receive no edit.</p>
+<p><strong>Native continuation</strong></p>
+<pre><code class="language-text"> november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month is april. the fifth month is may. the sixth month is june. the seventh month is july. the eighth month is august. the ninth month
+</code></pre>
+<p><strong>Final-input ablation continuation</strong></p>
+<pre><code class="language-text"> december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month is june. the sixth month is may. the fifth month is april. the fourth month is march. the third month is february. the second month
+</code></pre>
+<h3 id="english-letter">English letter</h3>
+<p>Prompt: <code>the eleventh letter of the english alphabet is</code></p>
+<p>Native initial label: <strong>K</strong>. Gate off initial label: <strong>L</strong>. Natural final-token gate: 1.906586647. Only one input position is edited; generated positions receive no edit.</p>
+<p><strong>Native continuation</strong></p>
+<pre><code class="language-text"> k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is ё. the eleventh letter of the chinese alphabet is 什么？ The eleventh letter of the Chinese alphabet is not applicable, as the Chinese alphabet does not have letters in the same way as the
+</code></pre>
+<p><strong>Final-input ablation continuation</strong></p>
+<pre><code class="language-text"> l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l. the eleventh letter of the english
+</code></pre>
+<h3 id="positive-integer-in-roman-numerals">Positive integer in Roman numerals</h3>
+<p>Prompt: <code>the eleventh positive integer in roman numerals is</code></p>
+<p>Native initial label: <strong>XI</strong>. Gate off initial label: <strong>XII</strong>. Natural final-token gate: 1.696771860. Only one input position is edited; generated positions receive no edit.</p>
+<p><strong>Native continuation</strong></p>
+<pre><code class="language-text"> xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the question is about the eleventh positive integer, not the eleventh letter. So, the eleventh positive integer is 11, which is xi in Roman numerals. But the question is asking
+</code></pre>
+<p><strong>Final-input ablation continuation</strong></p>
+<pre><code class="language-text"> xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii, but the eleventh letter is k. So, the eleventh positive integer is xii, but the eleventh letter is k. So, the eleventh positive integer is xii, but
+</code></pre>
+<h2 id="conditional-probability-diagnostics">Conditional probability diagnostics</h2>
+<p>For each eligible domain, compare the first differing token in the actual native eleventh and twelfth initial completions. Probabilities are compared only if the ablated generation shares the preceding native output prefix. This is a conditional branch-token diagnostic, not a full-answer probability or a sum across answer spellings. Exact token strings, positions and values are in branch-probabilities.json.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Native eleventh branch token</th>
+<th>Native twelfth branch token</th>
+<th style="text-align: right;">Native P(twelfth branch)</th>
+<th style="text-align: right;">Ablated P(twelfth branch)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>month</td>
+<td>' november'</td>
+<td>' december'</td>
+<td style="text-align: right;">15.870599%</td>
+<td style="text-align: right;">52.085859%</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>' k'</td>
+<td>' l'</td>
+<td style="text-align: right;">0.514288%</td>
+<td style="text-align: right;">19.408286%</td>
+</tr>
+<tr>
+<td>element</td>
+<td>' sodium'</td>
+<td>' magnesium'</td>
+<td style="text-align: right;">0.000067%</td>
+<td style="text-align: right;">0.000676%</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>'1'</td>
+<td>'2'</td>
+<td style="text-align: right;">0.458701%</td>
+<td style="text-align: right;">0.458701%</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>' xi'</td>
+<td>' x'</td>
+<td style="text-align: right;">13.834167%</td>
+<td style="text-align: right;">44.199491%</td>
+</tr>
+<tr>
+<td>prime</td>
+<td>'1'</td>
+<td>'7'</td>
+<td style="text-align: right;">0.001893%</td>
+<td style="text-align: right;">0.001893%</td>
+</tr>
+<tr>
+<td>square</td>
+<td>'2'</td>
+<td>'4'</td>
+<td style="text-align: right;">0.006546%</td>
+<td style="text-align: right;">0.006546%</td>
+</tr>
+<tr>
+<td>triangular</td>
+<td>'6'</td>
+<td>'7'</td>
+<td style="text-align: right;">0.020280%</td>
+<td style="text-align: right;">0.020280%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="method-checks-and-limits">Method, checks and limits</h2>
+<p>Same pinned native BF16 Qwen3-4B and FP32 MOLT layer-29 slice as the previous replication. Raw text only, no chat/BOS tokens, greedy decoding, 64 generated tokens, eager attention, TF32 off, fresh cache per run. Each selected native MLP output receives <code>-natural_gate * ((z @ V) @ U) * output_std</code>, FP32 then one BF16 cast. Native MLP remainder retained; all other features remain native. No high fixed gates or trained weights.</p>
+<p>Independent CPU audit passed: 136 runs, 460 saved vector files / 672 sampled positions, 6585 processed-position checks. Encoder, gate, operator and exact BF16 edits reconstructed. Native/zero-strength controls and repeated native/all-off runs match exactly. Hooks removed. Native and one-position-ablated month completions exactly reproduce the previous experiment over the shared generated prefix.</p>
+<p>These selected raw-prefix results establish effects beyond month names; they do not establish a universal ordinal operation or an exclusive interpretation of the gate. The input-dependent operator and native answer margins differ across domains. No active norm-matched other-transform controls or broad paraphrase study was performed. Inactive-gate cases are no-ops, not evidence that removing an active feature failed.</p>
+<p>Ground truth for mathematical sequences, alphabet indices and the explicit list was checked independently in ground-truth.json. Expected presidential and element names were checked against primary sources: <a href="https://www.inaugural.senate.gov/16th-inaugural-ceremonies/">US Senate, Taylor as 12th president</a> and <a href="https://periodic-table.rsc.org/element/12/magnesium">Royal Society of Chemistry, magnesium atomic number 12</a>.</p>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-10-28-water-raw-ordinal-ablation/responses.csv">All ablated continuations</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-10-28-water-raw-ordinal-ablation/controls.json">Capability controls</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-10-28-water-raw-ordinal-ablation/branch-probabilities.json">Conditional branch probabilities</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-10-28-water-raw-ordinal-ablation/validation.json">Validation</a></p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-10-28-water-raw-ordinal-ablation/README.md">Download original Markdown</a><br>Source: <code>results/2026-10-28-water-raw-ordinal-ablation/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

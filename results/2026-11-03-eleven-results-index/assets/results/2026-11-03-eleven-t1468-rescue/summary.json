@@ -1,0 +1,339 @@
+{
+  "protocol": {
+    "date_local": "2026-11-03",
+    "model": "Qwen/Qwen3-4B",
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "max_new_tokens": 24,
+    "maximum_runtime_minutes": 15,
+    "prompt_format": "raw",
+    "probes": {
+      "month": {
+        "11": [
+          " november",
+          " November"
+        ],
+        "12": [
+          " december",
+          " December"
+        ]
+      },
+      "alphabet": {
+        "11": [
+          " k",
+          " K"
+        ],
+        "12": [
+          " l",
+          " L"
+        ]
+      },
+      "roman": {
+        "11": [
+          " xi",
+          " XI"
+        ],
+        "12": [
+          " xii",
+          " XII"
+        ]
+      }
+    },
+    "probability_definition": "Sum of exact leading-space lower/title-case answer-prefix token-sequence probabilities. Multi-token candidates are teacher-forced from the corresponding prefill cache without additional edits. Punctuation, EOS and other spellings are excluded.",
+    "ablation": {
+      "layer": 29,
+      "transform": 2375,
+      "position": "final input is",
+      "target": 0
+    },
+    "rescue": {
+      "layer": 34,
+      "transform": 1468,
+      "position": "same final input is",
+      "native_gate": "delta34 = (native_phi34 - current_phi34) * current_operator34",
+      "native_contribution": "delta34 = native_contribution34 - current_contribution34"
+    },
+    "conditions": [
+      "native",
+      "observed",
+      "zero-strength",
+      "T2375-off",
+      "off-zero-rescue",
+      "native-gate-rescue",
+      "native-contribution-rescue",
+      "T2375-off-repeat",
+      "native-gate-rescue-repeat",
+      "native-contribution-rescue-repeat"
+    ],
+    "scope": "Only two possible edit sites: L29-T2375 and L34-T1468, each at final input is during prefill. Every later native attention/MLP runs normally. No generated-token edits.",
+    "arithmetic": "FP32 intended deltas added to each native MLP output, followed by one BF16 cast at each edit site.",
+    "interpretation": "Compare both rescues against T2375-off. Scalar rescue keeps the changed-input UVx; full contribution rescue restores the native phi(x)*UVx vector. Neither experiment clamps other transforms or later residual streams."
+  },
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "attention": "eager",
+    "TF32": false,
+    "source_sha256": "007eab69211118174799a9c2f129c657dcfe81f8b6817aba9034b4610e74706a",
+    "weights_manifest_sha256": "ea02bb78a5cb6ee558da8612231ee17e41e406e2f2aedf9a884a936da472c42c"
+  },
+  "cases": [
+    {
+      "case": "month",
+      "prompt": "the eleventh month of the year is",
+      "position": 7,
+      "native_gate34": 1.2899932861328125,
+      "off_gate34": 0.7175989151000977,
+      "conditions": {
+        "native": {
+          "condition": "native",
+          "P11": 0.6686863750219345,
+          "P12": 0.24365518987178802,
+          "initial_answer_ordinal": 11,
+          "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+          "stop_reason": "token_limit",
+          "current_gate34": null,
+          "native_gate34": 1.2899932861328125,
+          "delta34_l2": 0.0
+        },
+        "T2375-off": {
+          "condition": "T2375-off",
+          "P11": 0.08831333927810192,
+          "P12": 0.8367752730846405,
+          "initial_answer_ordinal": 12,
+          "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+          "stop_reason": "token_limit",
+          "current_gate34": 0.7175989151000977,
+          "native_gate34": 1.2899932861328125,
+          "delta34_l2": 0.0
+        },
+        "native-gate-rescue": {
+          "condition": "native-gate-rescue",
+          "P11": 0.07834631763398647,
+          "P12": 0.8411779701709747,
+          "initial_answer_ordinal": 12,
+          "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+          "stop_reason": "token_limit",
+          "current_gate34": 0.7175989151000977,
+          "native_gate34": 1.2899932861328125,
+          "delta34_l2": 7.990013342871299,
+          "P11_gain_vs_off_percentage_points": -0.9967021644115448,
+          "P12_gain_vs_off_percentage_points": 0.44026970863342285,
+          "logodds_recovery_fraction": -0.03836441275825992,
+          "initial_answer_restored_to_11": false,
+          "greedy_token_ids_match_T2375_off": true
+        },
+        "native-contribution-rescue": {
+          "condition": "native-contribution-rescue",
+          "P11": 0.08480893727391958,
+          "P12": 0.8230892717838287,
+          "initial_answer_ordinal": 12,
+          "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+          "stop_reason": "token_limit",
+          "current_gate34": 0.7175989151000977,
+          "native_gate34": 1.2899932861328125,
+          "delta34_l2": 11.885856102158472,
+          "P11_gain_vs_off_percentage_points": -0.35044020041823387,
+          "P12_gain_vs_off_percentage_points": -1.3686001300811768,
+          "logodds_recovery_fraction": -0.0073657753345081475,
+          "initial_answer_restored_to_11": false,
+          "greedy_token_ids_match_T2375_off": true
+        }
+      }
+    },
+    {
+      "case": "alphabet",
+      "prompt": "the eleventh letter of the english alphabet is",
+      "position": 8,
+      "native_gate34": 1.084717035293579,
+      "off_gate34": 0.6811662912368774,
+      "conditions": {
+        "native": {
+          "condition": "native",
+          "P11": 0.710745245218277,
+          "P12": 0.010285762138664722,
+          "initial_answer_ordinal": 11,
+          "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+          "stop_reason": "token_limit",
+          "current_gate34": null,
+          "native_gate34": 1.084717035293579,
+          "delta34_l2": 0.0
+        },
+        "T2375-off": {
+          "condition": "T2375-off",
+          "P11": 0.026466616429388523,
+          "P12": 0.3274739235639572,
+          "initial_answer_ordinal": 12,
+          "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+          "stop_reason": "token_limit",
+          "current_gate34": 0.6811662912368774,
+          "native_gate34": 1.084717035293579,
+          "delta34_l2": 0.0
+        },
+        "native-gate-rescue": {
+          "condition": "native-gate-rescue",
+          "P11": 0.02583808172494173,
+          "P12": 0.344925120472908,
+          "initial_answer_ordinal": 12,
+          "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+          "stop_reason": "token_limit",
+          "current_gate34": 0.6811662912368774,
+          "native_gate34": 1.084717035293579,
+          "delta34_l2": 5.022200215239423,
+          "P11_gain_vs_off_percentage_points": -0.06285347044467926,
+          "P12_gain_vs_off_percentage_points": 1.7451196908950806,
+          "logodds_recovery_fraction": -0.011250598443630418,
+          "initial_answer_restored_to_11": false,
+          "greedy_token_ids_match_T2375_off": true
+        },
+        "native-contribution-rescue": {
+          "condition": "native-contribution-rescue",
+          "P11": 0.02598939649760723,
+          "P12": 0.32156921923160553,
+          "initial_answer_ordinal": 12,
+          "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+          "stop_reason": "token_limit",
+          "current_gate34": 0.6811662912368774,
+          "native_gate34": 1.084717035293579,
+          "delta34_l2": 7.811833623013774,
+          "P11_gain_vs_off_percentage_points": -0.047721993178129196,
+          "P12_gain_vs_off_percentage_points": -0.5904704332351685,
+          "logodds_recovery_fraction": 8.02733700370325e-09,
+          "initial_answer_restored_to_11": false,
+          "greedy_token_ids_match_T2375_off": true
+        }
+      }
+    },
+    {
+      "case": "roman",
+      "prompt": "the eleventh positive integer in roman numerals is",
+      "position": 9,
+      "native_gate34": 2.429365873336792,
+      "off_gate34": 1.3194339275360107,
+      "conditions": {
+        "native": {
+          "condition": "native",
+          "P11": 0.41577284783124924,
+          "P12": 0.035345629783947174,
+          "initial_answer_ordinal": 11,
+          "response": " xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the",
+          "stop_reason": "token_limit",
+          "current_gate34": null,
+          "native_gate34": 2.429365873336792,
+          "delta34_l2": 0.0
+        },
+        "T2375-off": {
+          "condition": "T2375-off",
+          "P11": 0.12339311093091965,
+          "P12": 0.15040824919095286,
+          "initial_answer_ordinal": 12,
+          "response": " xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii",
+          "stop_reason": "token_limit",
+          "current_gate34": 1.3194339275360107,
+          "native_gate34": 2.429365873336792,
+          "delta34_l2": 0.0
+        },
+        "native-gate-rescue": {
+          "condition": "native-gate-rescue",
+          "P11": 0.1237223632633686,
+          "P12": 0.13231943679799318,
+          "initial_answer_ordinal": 12,
+          "response": " xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii",
+          "stop_reason": "token_limit",
+          "current_gate34": 1.3194339275360107,
+          "native_gate34": 2.429365873336792,
+          "delta34_l2": 23.40312509517762,
+          "P11_gain_vs_off_percentage_points": 0.032925233244895935,
+          "P12_gain_vs_off_percentage_points": -1.8088812392959674,
+          "logodds_recovery_fraction": 0.04911824432123443,
+          "initial_answer_restored_to_11": false,
+          "greedy_token_ids_match_T2375_off": true
+        },
+        "native-contribution-rescue": {
+          "condition": "native-contribution-rescue",
+          "P11": 0.1198081485927105,
+          "P12": 0.12787386963656733,
+          "initial_answer_ordinal": 12,
+          "response": " xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii",
+          "stop_reason": "token_limit",
+          "current_gate34": 1.3194339275360107,
+          "native_gate34": 2.429365873336792,
+          "delta34_l2": 35.04693153657224,
+          "P11_gain_vs_off_percentage_points": -0.3584962338209152,
+          "P12_gain_vs_off_percentage_points": -2.253437955438553,
+          "logodds_recovery_fraction": 0.049879148003907345,
+          "initial_answer_restored_to_11": false,
+          "greedy_token_ids_match_T2375_off": true
+        }
+      }
+    }
+  ],
+  "validation": {
+    "status": "pass",
+    "array_files_hash_verified": 30,
+    "independent_CPU_MOLT_evaluations": 54,
+    "BF16_patch_edits_verified_exactly": 42,
+    "max_absolute_operator_error": 5.183748055248572e-07,
+    "max_absolute_contribution_error": 7.325503741384409e-07,
+    "max_absolute_independent_candidate_probability_error": 3.374254768373497e-07,
+    "native_and_T2375_off_reference_logits_exact": true,
+    "zero_strength_and_zero_rescue_controls_exact": true,
+    "all_three_intervention_repeats_exact": true,
+    "only_final_input_token_edited_at_each_site": true,
+    "no_generated_token_edits": true,
+    "upstream_L29_input_always_native_exact": true,
+    "L34_input_identical_for_off_and_both_rescues": true,
+    "earlier_input_final_residuals_unchanged": true,
+    "candidate_token_prefix_events_disjoint": true
+  },
+  "source_sha256": {
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/results.json": "17a921741d0d7833fca9a007f318a0092782436ef81972a4b481f34c550a67ed",
+    "experiments/eleven-t1468-rescue-20261103/analyze.py": "ddbd820bdc845f1326690caa79ca42bf63b276448f5ceb1f45a22507cc6884f3",
+    "experiments/eleven-t1468-rescue-20261103/weights/L29-T2375.npz": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+    "experiments/eleven-t1468-rescue-20261103/weights/L34-T1468.npz": "4bb5bfc43a9e18bf7dc9f0d55d59a8e7d7d774951dd1e43d998e9f26442d57c9",
+    "experiments/eleven-t1468-rescue-20261103/references.json": "8dbb4d7e25a3da97ffa31c4bd7e864de51cd81bcd81e229165b68c115948f792",
+    "experiments/eleven-t1468-rescue-20261103/references.npz": "c6722d85438da81a3f55160b2a88e0ef56b8d15226124fb3aa9d7ac9d6e1c0b2",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--native.npz": "ce2159f0fa7897606b459281b5320185474232842db7839d578de4cfef9b6140",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--observed.npz": "9701b03071136800c95dcf2867cf77accc8d7b1d418d453723686e79f08059fa",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--zero-strength.npz": "d171b91788f40746dde468c00e128ae26811076d38ba223fc121140fc284fd94",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--T2375-off.npz": "3d1e9a7730d02d9ed62712aa5d44d89aa09b8080aa703656803ec4ba721d025f",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--off-zero-rescue.npz": "a5924e97e93469a508c2c6b64d58c1fc79f4bdefb5dc38fdc752907575b46dd8",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--native-gate-rescue.npz": "538f02b2d0a67565607ba6fe7f08fa8c263f995b951077f829e024804e817ade",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--native-contribution-rescue.npz": "b129b83848b7d1cf2bd3016623f7d96e46b6f67afc47054939c92d1271b6ac64",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--T2375-off-repeat.npz": "3d1e9a7730d02d9ed62712aa5d44d89aa09b8080aa703656803ec4ba721d025f",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--native-gate-rescue-repeat.npz": "538f02b2d0a67565607ba6fe7f08fa8c263f995b951077f829e024804e817ade",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/month--native-contribution-rescue-repeat.npz": "b129b83848b7d1cf2bd3016623f7d96e46b6f67afc47054939c92d1271b6ac64",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--native.npz": "56f1e0b3fe50b54b6d22474482df452032486d2ca0e5e47fce41d37459a5eba8",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--observed.npz": "d4f45eeb7c602cbfa516fb0f2e379e27dbc56c1cccddc4ab7ed8fbb0d9d5637e",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--zero-strength.npz": "3442481558876d055f2f37d9757fd42d7c811952021774eed3eef65a25f102a8",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--T2375-off.npz": "99fd004f9fd384f1d4b22f3cd6d0ae3dd26930bf6f7d43df4dc4f5010c50bd2f",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--off-zero-rescue.npz": "fcb053534a1586901c7ed0c666954d0aeaf408daece420a22767a785eeb62207",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--native-gate-rescue.npz": "b3277ff19c36602c60122d5ba0b58dd25cd0e89baa81a799b30227b43ecdc157",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--native-contribution-rescue.npz": "e56db81ed3397ca15cd03d1a799d8b0b30a0fe506ec4699fc8450dbda70c58e1",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--T2375-off-repeat.npz": "99fd004f9fd384f1d4b22f3cd6d0ae3dd26930bf6f7d43df4dc4f5010c50bd2f",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--native-gate-rescue-repeat.npz": "b3277ff19c36602c60122d5ba0b58dd25cd0e89baa81a799b30227b43ecdc157",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/alphabet--native-contribution-rescue-repeat.npz": "e56db81ed3397ca15cd03d1a799d8b0b30a0fe506ec4699fc8450dbda70c58e1",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--native.npz": "f443d0f754b933f2fc5afe129299a2e0c775faf839fbbf839a89520681cb79f7",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--observed.npz": "0381aeec3d2f30a4b7153cf49ef0be289cf0f8e5c92a67967c310be6406424cc",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--zero-strength.npz": "23b5dff54838021d758f3016f65c06c7448f9b1188e2293a730850055d2b744c",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--T2375-off.npz": "b2e42fbab1e84790be4e0670bdef37a083d624de6cf2d68d4f57560fec6d6856",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--off-zero-rescue.npz": "d12aa6023047358bb9e09965f940717ea5a772d40b791501007434e4de418464",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--native-gate-rescue.npz": "d274522d6d9e15ac7e12d2cddfab0a08ba77d3d0b6156540d3869744ac6ec66f",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--native-contribution-rescue.npz": "f2ab43336b21d56c1ff20974f1751edec019fcfb93bc333a282a2ba1d7f84ba2",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--T2375-off-repeat.npz": "b2e42fbab1e84790be4e0670bdef37a083d624de6cf2d68d4f57560fec6d6856",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--native-gate-rescue-repeat.npz": "d274522d6d9e15ac7e12d2cddfab0a08ba77d3d0b6156540d3869744ac6ec66f",
+    "comparisons/2026-11-03-eleven-t1468-rescue/remote-export/eleven-t1468-rescue-20261103/artifacts/roman--native-contribution-rescue-repeat.npz": "f2ab43336b21d56c1ff20974f1751edec019fcfb93bc333a282a2ba1d7f84ba2"
+  },
+  "initial_answer_rescues": {
+    "native-gate-rescue": 0,
+    "native-contribution-rescue": 0
+  },
+  "limits": [
+    "Three selected raw prefixes; not a generality test.",
+    "The interventions patch MOLT approximation contributions within native MLP outputs. No MLP is replaced wholesale.",
+    "Gate rescue preserves the changed-input operator; full-contribution rescue changes both effective gate and operator contribution.",
+    "Answer-prefix probabilities sum the specified lower/uppercase leading-space spellings, excluding punctuation and EOS.",
+    "Correlative coactivation and standalone ablation did not establish a uniformly positive eleven-support role for T1468."
+  ]
+}

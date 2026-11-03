@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Where the gate activates—and where it does not · Eleven → Twelve</title><meta name="description" content="T2375 activates at final “is” in the original eleven templates. Matched first, second, fourth and fifth month/Roman prefixes have zero gate there."><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/activation-and-ordinal-controls/"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a> / 02</div><section class="hero"><p class="eyebrow">observation</p><h1>Where the gate activates—and where it does not</h1><p class="detail-lead">T2375 activates at final “is” in the original eleven templates. Matched first, second, fourth and fifth month/Roman prefixes have zero gate there.</p></section><section class="paper"><h2>Matched ordinal controls</h2><p>A zero contribution has no defined contribution cosine. An ungated operator cosine is a different measurement.</p><div class="table-scroll"><table><thead><tr><th>Domain</th><th>Requested position</th><th>Gate at final is</th><th>Prompt</th></tr></thead><tbody><tr><td>month</td><td>11</td><td>1.158554</td><td>the eleventh month of the year is</td></tr><tr><td>month</td><td>1</td><td>0.000000</td><td>the first month of the year is</td></tr><tr><td>month</td><td>2</td><td>0.000000</td><td>the second month of the year is</td></tr><tr><td>month</td><td>4</td><td>0.000000</td><td>the fourth month of the year is</td></tr><tr><td>month</td><td>5</td><td>0.000000</td><td>the fifth month of the year is</td></tr><tr><td>roman</td><td>11</td><td>1.696772</td><td>the eleventh positive integer in roman numerals is</td></tr><tr><td>roman</td><td>1</td><td>0.000000</td><td>the first positive integer in roman numerals is</td></tr><tr><td>roman</td><td>2</td><td>0.000000</td><td>the second positive integer in roman numerals is</td></tr><tr><td>roman</td><td>4</td><td>0.000000</td><td>the fourth positive integer in roman numerals is</td></tr><tr><td>roman</td><td>5</td><td>0.000000</td><td>the fifth positive integer in roman numerals is</td></tr></tbody></table></div></section><section class="paper"><p class="report-label">Original report 1</p><h2 id="l29-t2375-month-prompts-natural-activation-and-one-token-gate-off">L29-T2375 month prompts: natural activation and one-token gate-off</h2>
+<p>Recorded 2 November 2026. Native Qwen3-4B, raw prefixes, greedy decoding, 32 generated-token cap. The first three observations left all contributions unchanged. The follow-up below removes one selected MOLT contribution at one input position.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th>Initial answer</th>
+<th>Nonzero input gate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>the 11th month of the year is</code></td>
+<td>November</td>
+<td>position 9, <code>is</code>, 1.041148</td>
+</tr>
+<tr>
+<td><code>the eleventh month of the year is</code></td>
+<td>november</td>
+<td>position 7, <code>is</code>, 1.158554</td>
+</tr>
+<tr>
+<td><code>the 12th month of the year is</code></td>
+<td>December</td>
+<td>None</td>
+</tr>
+</tbody>
+</table></div>
+<p>All other input gates are exactly zero. The first generated answer token also has zero activation when processed on the next decoding step. A leading space is part of tokens shown as <code>is</code>.</p>
+<p>The observation hook only reads the residual before L29 post-attention normalization. Unobserved and observed runs have identical output token IDs and full-vocabulary logit hashes at all 32 decoding steps for all three prompts. The historical spelled-out reference reproduced its token IDs, with maximum selected-probability error 5.96e-8.</p>
+<p>An independent local CPU audit reconstructed standardization, raw gate preactivation and thresholded activation from saved residuals and pinned feature weights. Maximum gate error was below 0.000001.</p>
+<p>The initial month answers are correct; the full raw continuations repeat and hit the 32-token cap. These observations localize activity on these prompts; they do not establish a general ordinal computation.</p>
+<p><img alt="Natural activations and one-token gate-off" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-activation/gate-off-token-comparison.png"/></p>
+<p>Raw responses, residual vectors, runtime identity, source hashes and selected weights are in the hash-verified private local backup. Public base model files and the runtime environment are reproducible from pinned manifests and are excluded from that archive.</p>
+<h2 id="one-token-gate-off-follow-up">One-token gate-off follow-up</h2>
+<p>Exact raw prompt: <code>the eleventh month of the year is</code>. Native initial answer: <code>november</code>. With L29-T2375 off only at input position 7 (<code>is</code>), the initial answer becomes <code>december</code>. The natural gate at that position was 1.1585536003 and the replacement value is zero.</p>
+<p>The edit subtracts the selected MOLT contribution from the native MLP output, using FP32 arithmetic and one BF16 cast. Other MLP output positions are not directly edited; zero generated positions are edited. The only nonzero local intervention is at input position 7. Later model computations can respond to that edit.</p>
+<p>A fresh native run and zero-strength control matched exactly. The recent native reference reproduced its output IDs, with maximum selected-probability error below 0.000001. The CPU audit passed encoder, operator, mask, subtraction and BF16-rounding checks over eight saved vector files and ten sampled positions. These samples start from saved standardized residuals; they do not independently reproduce the full model forward pass.</p>
+<p>Full native continuation (32-token cap):</p>
+<blockquote>
+<p>november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month</p>
+</blockquote>
+<p>Full gate-off continuation (32-token cap):</p>
+<blockquote>
+<p>december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month</p>
+</blockquote>
+<p>The displayed effect concerns the initial answer. The longer raw continuation still drifts. No additional prompt families or intervention positions were tested in this follow-up. All 22 remote research files were downloaded and hash-verified locally.</p>
+<h2 id="three-part-vocabulary-readout">Three-part vocabulary readout</h2>
+<p>The native L29 MLP output, removed L29-T2375 contribution, and actual BF16 remainder were each projected through the same output matrix and frozen native final RMSNorm. The capitalized November token ranks first before subtraction; the capitalized December token ranks first afterward. This is a direct vocabulary readout, separate from full-model generation probabilities.</p>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-02-eleven-contribution-readout/README.html">Readout figure, complete vocabulary scores, and audit</a>.</p>
+<h2 id="alphabet-and-roman-numeral-readout-figures">Alphabet and Roman-numeral readout figures</h2>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-02-eleven-crossdomain-readouts/README.html">Two further figures and audited vocabulary exports</a> apply the same shared-normalization, three-part readout to the exact successful alphabet and Roman-numeral prompts.</p><div class="source-footer"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-02-eleven-activation/README.html">Open this report separately</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-activation/README.md">Original Markdown</a><br><code>results/2026-11-02-eleven-activation/README.md</code></div></section><section class="paper"><h2>Data and scope</h2><p>These are selected exploratory experiments. Initial answers, longer continuations, gate activations and causal interventions are distinct measurements. Original reports retain their recorded scope and validation; operational notes describe the time of the experiment.</p><div class="downloads"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-ordinal-specificity/summary.json">2026-11-03-eleven-ordinal-specificity / summary.json</a></div></section><p class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← Back to all 18 results</a></p></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

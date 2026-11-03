@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Similar directions, different magnitudes · Eleven → Twelve</title><meta name="description" content="Month, alphabet and Roman contributions have cosine similarities of 0.983–0.989, with different lengths. High alignment also occurs in cases without a flip."><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/contribution-geometry/"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a> / 04</div><section class="hero"><p class="eyebrow">observation</p><h1>Similar directions, different magnitudes</h1><p class="detail-lead">Month, alphabet and Roman contributions have cosine similarities of 0.983–0.989, with different lengths. High alignment also occurs in cases without a flip.</p></section><section class="paper"><h2>High alignment also occurs without a flip</h2><p>Same final-input position per prompt; full natural contributions before final RMSNorm or unembedding. Capability failures and zero contributions are handled separately in the source data.</p><div class="table-scroll"><table><thead><tr><th>Case</th><th>Language</th><th>Domain</th><th>Final-input ablation outcome</th><th>Maximum cosine to an English success</th></tr></thead><tbody><tr><td>EN-M</td><td>English</td><td>month</td><td>success</td><td>1.000000</td></tr><tr><td>EN-A</td><td>English</td><td>alphabet</td><td>success</td><td>1.000000</td></tr><tr><td>EN-R</td><td>English</td><td>Roman numerals</td><td>success</td><td>1.000000</td></tr><tr><td>ES-M</td><td>Spanish</td><td>month</td><td>unchanged</td><td>0.990704</td></tr><tr><td>ES-A</td><td>Spanish</td><td>alphabet</td><td>unchanged</td><td>0.994445</td></tr><tr><td>ES-R</td><td>Spanish</td><td>Roman numerals</td><td>unchanged</td><td>0.997134</td></tr><tr><td>ZH-M</td><td>Chinese</td><td>month</td><td>unchanged</td><td>0.987373</td></tr><tr><td>EN-Mc</td><td>English</td><td>month</td><td>unchanged</td><td>0.991295</td></tr><tr><td>EN-Ac</td><td>English</td><td>alphabet</td><td>unchanged</td><td>0.993787</td></tr><tr><td>EN-Rc</td><td>English</td><td>Roman numerals</td><td>unchanged</td><td>0.993862</td></tr><tr><td>ES-Mc</td><td>Spanish</td><td>month</td><td>success</td><td>0.991108</td></tr><tr><td>ES-Ac</td><td>Spanish</td><td>alphabet</td><td>off_target</td><td>0.991543</td></tr><tr><td>ES-Rc</td><td>Spanish</td><td>Roman numerals</td><td>unchanged</td><td>0.993638</td></tr><tr><td>ZH-Mc</td><td>Chinese</td><td>month</td><td>unchanged</td><td>0.994005</td></tr><tr><td>ZH-Ac</td><td>Chinese</td><td>alphabet</td><td>unchanged</td><td>0.991402</td></tr><tr><td>ZH-Rc</td><td>Chinese</td><td>Roman numerals</td><td>unchanged</td><td>0.994264</td></tr></tbody></table></div></section><section class="paper"><p class="report-label">Original report 1</p><h2 id="original-molt-contribution-similarities-and-magnitudes">Original MOLT contribution similarities and magnitudes</h2>
+<p>The compared vector is the full positive intended contribution c = gate(x) × UV(x), in native L29 MLP-output units, at the final input token <code>is</code>. The three original vectors are compared directly; no fitted shared component is substituted.</p>
+<p>No final RMSNorm, learned final RMSNorm gamma, or output-vocabulary matrix is applied for this comparison. Cosine itself divides out each vector’s L2 length.</p>
+<p>The MOLT checkpoint’s input and output standardizers remain part of computing c:</p>
+<pre><code class="language-text">z = (residual - input_mean) / input_std
+operator = (z @ V @ U) * output_std
+c = gate(z) * operator
+</code></pre>
+<p>These standardizers are separate from the model’s final RMSNorm. There is no additional RMSNorm applied to the MOLT contribution here. Values use the intended contribution before BF16 subtraction rounding.</p>
+<p><img alt="Cosine similarity and magnitude" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-contribution-similarity/contribution-similarity.png"/></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Alphabet</th>
+<th style="text-align: right;">Roman</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month</td>
+<td style="text-align: right;">1.000000</td>
+<td style="text-align: right;">0.987673</td>
+<td style="text-align: right;">0.983285</td>
+</tr>
+<tr>
+<td>Alphabet</td>
+<td style="text-align: right;">0.987673</td>
+<td style="text-align: right;">1.000000</td>
+<td style="text-align: right;">0.988861</td>
+</tr>
+<tr>
+<td>Roman</td>
+<td style="text-align: right;">0.983285</td>
+<td style="text-align: right;">0.988861</td>
+<td style="text-align: right;">1.000000</td>
+</tr>
+</tbody>
+</table></div>
+<p>| Prompt | Gate | Operator L2 | Contribution L2 |
+|---|---:|---:|---:|---:|
+| Month | 1.158554 | 14.982367 | 17.357875 |
+| Alphabet | 1.906587 | 21.653243 | 41.283785 |
+| Roman | 1.696772 | 23.095515 | 39.187820 |</p>
+<p>All three gates are positive scalars. Their scaling changes the contribution magnitudes but mathematically leaves cosine similarities unchanged, so the operator-output directions are aligned as well. The standardizers’ coordinatewise scaling is retained because it defines the actual contribution in native output space.</p>
+<p>Exact prompts and positions:</p>
+<ul>
+<li>Month: <code>the eleventh month of the year is</code>, position 7.</li>
+<li>Alphabet: <code>the eleventh letter of the english alphabet is</code>, position 8.</li>
+<li>Roman: <code>the eleventh positive integer in roman numerals is</code>, position 9.</li>
+</ul>
+<p>This is a descriptive comparison of three selected prompts with shared ordinal wording. Geometric alignment is not a measure of causal importance or proof of a general ordinal mechanism. No GPU inference was needed.</p>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-contribution-similarity/cosine-similarity.csv">Cosine CSV</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-contribution-similarity/magnitudes.csv">Magnitude CSV</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-contribution-similarity/summary.json">Values and source hashes</a></p><div class="source-footer"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-contribution-similarity/README.html">Open this report separately</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-contribution-similarity/README.md">Original Markdown</a><br><code>results/2026-11-03-eleven-contribution-similarity/README.md</code></div></section><section class="paper"><h2>Data and scope</h2><p>These are selected exploratory experiments. Initial answers, longer continuations, gate activations and causal interventions are distinct measurements. Original reports retain their recorded scope and validation; operational notes describe the time of the experiment.</p><div class="downloads"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/sites/eleventh-molt/dist/outcome-geometry.json">dist / outcome-geometry.json</a></div></section><p class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← Back to all 18 results</a></p></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

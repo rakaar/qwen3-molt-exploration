@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Do the month candidates generalize to alphabet and Roman prompts? · Eleven → Twelve</title><meta name="description" content="Do the month candidates generalize to alphabet and Roman prompts?"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-downstream-gates/SHARED_CANDIDATES.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="do-the-month-candidates-generalize-to-alphabet-and-roman-prompts">Do the month candidates generalize to alphabet and Roman prompts?</h1>
+<p>L29-T2375 contribution subtracted only at final input is; later native layers run normally. L31-T797/T949 are observed offline, not ablated.</p>
+<p>This is an independent CPU re-evaluation of previously captured paired native-model inputs. No new generation or GPU inference was needed.</p>
+<h2 id="final-input-is">Final input <code>is</code></h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th>L31-T797 native -&gt; off</th>
+<th>L31-T949 native -&gt; off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>the eleventh month of the year is</code></td>
+<td>0.000000 -&gt; 0.655309</td>
+<td>0.000000 -&gt; 0.562312</td>
+</tr>
+<tr>
+<td><code>the eleventh letter of the english alphabet is</code></td>
+<td>0.000000 -&gt; 0.000000</td>
+<td>0.000000 -&gt; 0.000000</td>
+</tr>
+<tr>
+<td><code>the eleventh positive integer in roman numerals is</code></td>
+<td>0.000000 -&gt; 0.000000</td>
+<td>0.000000 -&gt; 0.000000</td>
+</tr>
+</tbody>
+</table></div>
+<p>A zero gate means the raw encoder score did not pass its learned threshold. It is not a rounded small positive activation.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Transform</th>
+<th style="text-align: right;">Threshold</th>
+<th style="text-align: right;">Native raw score</th>
+<th style="text-align: right;">Ablated raw score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>month</td>
+<td>L31-T797</td>
+<td style="text-align: right;">0.526637</td>
+<td style="text-align: right;">0.474743</td>
+<td style="text-align: right;">0.655309</td>
+</tr>
+<tr>
+<td>month</td>
+<td>L31-T949</td>
+<td style="text-align: right;">0.551812</td>
+<td style="text-align: right;">0.495338</td>
+<td style="text-align: right;">0.562312</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>L31-T797</td>
+<td style="text-align: right;">0.526637</td>
+<td style="text-align: right;">-0.956087</td>
+<td style="text-align: right;">-0.516661</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>L31-T949</td>
+<td style="text-align: right;">0.551812</td>
+<td style="text-align: right;">-1.144418</td>
+<td style="text-align: right;">-0.978929</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>L31-T797</td>
+<td style="text-align: right;">0.526637</td>
+<td style="text-align: right;">-0.761149</td>
+<td style="text-align: right;">-0.376841</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>L31-T949</td>
+<td style="text-align: right;">0.551812</td>
+<td style="text-align: right;">-0.610160</td>
+<td style="text-align: right;">-0.352482</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="all-input-positions">All input positions</h2>
+<ul>
+<li>month: L31-T797: native [], after ablation [7]; L31-T949: native [4, 5], after ablation [4, 5, 7].</li>
+<li>alphabet: L31-T797: native [], after ablation []; L31-T949: native [], after ablation [].</li>
+<li>roman: L31-T797: native [], after ablation []; L31-T949: native [], after ablation [].</li>
+</ul>
+<p>Positions are zero-based. Earlier input captures were identical between conditions. No generated tokens were evaluated.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Both candidates switch on only in the month case among these three prompts. They are not a shared gate-activation explanation at final is across these cases. A month-specific causal role remains untested; the later native MLPs were not replaced with MOLTs.</p>
+<p>In particular, both gates stay off throughout the alphabet and Roman input sequences, including final <code>is</code>. Their raw scores increase after ablation but remain negative and below threshold.</p>
+<p>The saved off first token is x, a prefix compatible with XII; this prefill-only check does not regenerate or score the full XII sequence.</p>
+<h2 id="verification">Verification</h2>
+<p>All six capture files and the L31 gate-weight archive passed SHA-256 checks. Independent FP64/FP32 evaluation agreed on every active/inactive decision. Final-token values match the original all-gate table within 1e-12.</p>
+<p>Reproduce: <code>python3 experiments/eleven-downstream-gates-20261103/check_shared_candidates.py</code>.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-downstream-gates/SHARED_CANDIDATES.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-downstream-gates/SHARED_CANDIDATES.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

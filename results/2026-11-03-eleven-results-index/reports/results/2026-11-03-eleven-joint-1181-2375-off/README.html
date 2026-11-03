@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Joint T1181/T2375 ablation on the eleventh-month prompt · Eleven → Twelve</title><meta name="description" content="Joint T1181/T2375 ablation on the eleventh-month prompt"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-joint-1181-2375-off/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="joint-t1181t2375-ablation-on-the-eleventh-month-prompt">Joint T1181/T2375 ablation on the eleventh-month prompt</h1>
+<p>Prompt: <code>the eleventh month of the year is</code>. Only final input position 7 (<code>is</code>) edited. Natural contributions removed independently or together; no generated-token edit.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Initial word</th>
+<th style="text-align: right;">P(November)</th>
+<th style="text-align: right;">P(December)</th>
+<th style="text-align: right;">P(January)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>november</td>
+<td style="text-align: right;">66.868638%</td>
+<td style="text-align: right;">24.365519%</td>
+<td style="text-align: right;">0.018897%</td>
+</tr>
+<tr>
+<td>T1181 off</td>
+<td>november</td>
+<td style="text-align: right;">88.910875%</td>
+<td style="text-align: right;">3.447449%</td>
+<td style="text-align: right;">0.033657%</td>
+</tr>
+<tr>
+<td>T2375 off</td>
+<td>december</td>
+<td style="text-align: right;">8.831334%</td>
+<td style="text-align: right;">83.677527%</td>
+<td style="text-align: right;">0.030717%</td>
+</tr>
+<tr>
+<td>Both off</td>
+<td>november</td>
+<td style="text-align: right;">46.606528%</td>
+<td style="text-align: right;">40.801294%</td>
+<td style="text-align: right;">0.218613%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Probabilities sum exact leading-space lowercase/title-case complete answer prefixes, excluding following punctuation/EOS and other answer formats. Multi-token month names use complete sequence probabilities. All twelve months are retained in month-probabilities.csv.</p>
+<h2 id="full-recorded-responses">Full recorded responses</h2>
+<details><summary>Native</summary><pre><code class="language-text"> november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month
+</code></pre></details>
+
+<details><summary>T1181 off</summary><pre><code class="language-text"> november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month
+</code></pre></details>
+
+<details><summary>T2375 off</summary><pre><code class="language-text"> december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month
+</code></pre></details>
+
+<details><summary>Both off</summary><pre><code class="language-text"> november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month
+</code></pre></details>
+
+<h2 id="method-and-validation">Method and validation</h2>
+<p>Same pinned native BF16 Qwen3-4B and MOLT checkpoint. Contributions use native pre-MLP residual and checkpoint input/output standardizers. For the joint edit, sum c1181 and c2375 in FP32, subtract from native local MLP output, then cast once to BF16. No sequential BF16 edits or extra vector normalization. Native MLP remainder and normal downstream computation retained.</p>
+<p>Native, observer and zero-strength controls match exactly. Fresh native/single-ablation runs reproduce all earlier generated token IDs and full-vocabulary logit hashes. Joint ablation repeats exactly. Independent CPU auditing reconstructs every candidate score, both gates/operators, selected-position masks and exact FP32-sum/BF16 edit. Raw archive/files are hash-verified.</p>
+<p>One exact lowercase raw prefix; greedy 32-token continuations, eager attention, TF32 off. This tests dependence of this December result on T1181, not a universal ordinal circuit or direct connection between the MOLTs.</p>
+<details><summary>Recorded validation data</summary><pre><code class="language-json">{
+  "status": "pass",
+  "arrays_audited": 7,
+  "edit_arrays_audited": 5,
+  "probability_max_absolute_error": 6.057564768680024e-07,
+  "native_observer_zero_exact": true,
+  "native_and_both_single_references_exact": true,
+  "joint_repeat_exact": true,
+  "both_contribution_vectors_identical_across_conditions": true,
+  "FP32_sum_before_single_BF16_cast_exact": true,
+  "native_local_MLP_same_across_conditions": true,
+  "only_final_input_edited": true,
+  "no_generated_token_edits": true,
+  "all_feature_hashes_verified": true
+}
+</code></pre></details>
+<p>Reproduce: <code>python3 experiments/eleven-joint-1181-2375-off-20261103/analyze.py</code>. Raw evidence: <code>comparisons/2026-11-03-eleven-joint-1181-2375-off/</code>. No publication or GPU cleanup was performed.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-joint-1181-2375-off/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-joint-1181-2375-off/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

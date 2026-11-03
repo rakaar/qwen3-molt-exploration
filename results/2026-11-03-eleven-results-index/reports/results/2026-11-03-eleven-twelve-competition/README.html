@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Why eleven-off produces twelve: saved output competition · Eleven → Twelve</title><meta name="description" content="Why eleven-off produces twelve: saved output competition"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-twelve-competition/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="why-eleven-off-produces-twelve-saved-output-competition">Why eleven-off produces twelve: saved output competition</h1>
+<p>Prompt: <code>the eleventh month of the year is</code>. L29–T2375 removed only at final input <code>is</code>, position 7. No new inference.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Answer event</th>
+<th style="text-align: right;">Native</th>
+<th style="text-align: right;">Gate off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>November variants</td>
+<td style="text-align: right;">66.8686%</td>
+<td style="text-align: right;">8.8313%</td>
+</tr>
+<tr>
+<td>December variants</td>
+<td style="text-align: right;">24.3655%</td>
+<td style="text-align: right;">83.6775%</td>
+</tr>
+</tbody>
+</table></div>
+<p>If only the two November tokens lose combined probability mass to their observed gate-off level, with all other relative preferences fixed, December reaches 67.0474%. It already becomes the greedy answer under this analytic control. Actual ablation gives 83.6775%, a further 16.6301 percentage points.</p>
+<p>December as a fraction of probability outside those two November tokens rises from 73.5422% to 91.7832%. Thus the actual edit changes relative preferences among the remaining tokens as well.</p>
+<p>Lowercase November raw logit: 23.250000 to 21.750000. Lowercase December: 22.125000 to 23.750000. These include downstream computation and changed final normalization.</p>
+<p>This supports separating two questions: why December is the fallback competitor, and why ablation further favors it. It does not show an internal plus-one computation.</p>
+<p>Probabilities sum exact leading-space lowercase/title-case one-token forms. Other spellings/fragments and following punctuation/EOS are excluded. The control is an output-distribution calculation, not a run in which internal MOLT activity was preserved and logits were edited.</p>
+<p>Reproduce: <code>python3 experiments/eleven-twelve-competition-20261103/analyze.py</code>. Exact values, source hash and limitations are in summary.json.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-twelve-competition/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-twelve-competition/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

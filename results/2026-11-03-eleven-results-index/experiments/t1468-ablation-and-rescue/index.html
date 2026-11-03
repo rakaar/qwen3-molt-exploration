@@ -1,0 +1,236 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>T1468 does not reproduce or rescue the flip · Eleven → Twelve</title><meta name="description" content="T1468 removal alone causes no eleven→twelve flips. During T2375 ablation, restoring its native scalar or full contribution rescues 0/3 initial answers."><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/t1468-ablation-and-rescue/"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a> / 18</div><section class="hero"><p class="eyebrow">Negative / mixed result</p><h1>T1468 does not reproduce or rescue the flip</h1><p class="detail-lead">T1468 removal alone causes no eleven→twelve flips. During T2375 ablation, restoring its native scalar or full contribution rescues 0/3 initial answers.</p></section><section class="paper"><p class="report-label">Original report 1</p><h2 id="l34-t1468-alone-off-at-final-input-is">L34-T1468 alone off at final input is</h2>
+<p>Subtract only the natural L34-T1468 contribution at final input is. L29-T2375 untouched. Later native layers compute normally. No generated-token edits.</p>
+<p><strong>0 of 3 initial answers changed from eleven to twelve.</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt family</th>
+<th>Native first answer -&gt; T1468 off</th>
+<th style="text-align: right;">P(eleven answer), native -&gt; off</th>
+<th style="text-align: right;">P(twelve answer), native -&gt; off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>month</td>
+<td>November -&gt; November</td>
+<td style="text-align: right;">66.8686% -&gt; 68.3161%</td>
+<td style="text-align: right;">24.3655% -&gt; 25.4165%</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>K -&gt; K</td>
+<td style="text-align: right;">71.0745% -&gt; 71.6458%</td>
+<td style="text-align: right;">1.0286% -&gt; 0.9759%</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>XI -&gt; XI</td>
+<td style="text-align: right;">41.5773% -&gt; 48.5013%</td>
+<td style="text-align: right;">3.5346% -&gt; 3.6955%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Probability definition: Sum of exact leading-space lower/title-case answer-prefix token-sequence probabilities. Multi-token candidates are teacher-forced from the corresponding prefill cache without additional edits. Punctuation, EOS and other spellings are excluded.</p>
+<p>Roman XI/XII include every token of the listed prefixes, rather than using the probability of the shared-looking x prefix. Each candidate is scored from that condition’s prefill cache without further interventions.</p>
+<p>All captured greedy token sequences identical to native after ablation: True.</p>
+<p>A change in P(eleven) alone does not determine the eleven-versus-twelve preference, because both answer probabilities can move together. Exact changes in their log probability ratio are retained in summary.json.</p>
+<h2 id="month">Month</h2>
+<p>Prompt: <code>the eleventh month of the year is</code></p>
+<p>Only L34-T1468 at input position 7 (<code>is</code>) was removed. Natural gate 1.289993; removed contribution L2 21.863927.</p>
+<p>Native continuation:</p>
+<pre><code class="language-text"> november. the twelfth month is december. the first month is january. the second month is february. the
+</code></pre>
+<p>T1468-off continuation:</p>
+<pre><code class="language-text"> november. the twelfth month is december. the first month is january. the second month is february. the
+</code></pre>
+<h2 id="alphabet">Alphabet</h2>
+<p>Prompt: <code>the eleventh letter of the english alphabet is</code></p>
+<p>Only L34-T1468 at input position 8 (<code>is</code>) was removed. Natural gate 1.084717; removed contribution L2 16.189846.</p>
+<p>Native continuation:</p>
+<pre><code class="language-text"> k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �
+</code></pre>
+<p>T1468-off continuation:</p>
+<pre><code class="language-text"> k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �
+</code></pre>
+<h2 id="roman">Roman</h2>
+<p>Prompt: <code>the eleventh positive integer in roman numerals is</code></p>
+<p>Only L34-T1468 at input position 9 (<code>is</code>) was removed. Natural gate 2.429366; removed contribution L2 62.700717.</p>
+<p>Native continuation:</p>
+<pre><code class="language-text"> xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the
+</code></pre>
+<p>T1468-off continuation:</p>
+<pre><code class="language-text"> xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the
+</code></pre>
+<h2 id="verification-and-limits">Verification and limits</h2>
+<p>Native first logits and layer inputs reproduce the saved anchors. Native, read-only observer and zero-strength continuations/probabilities are exact. Each ablation repeats exactly. Independent CPU checks reproduce the MOLT contribution and the BF16 edit rounding; candidate probabilities are recomputed from saved logits.</p>
+<ul>
+<li>Three selected raw completion prefixes; no claim of generality.</li>
+<li>Ablation subtracts one MOLT approximation contribution from the native MLP; native MLPs are not replaced.</li>
+<li>Probabilities are specified answer-prefix events, including all tokens of XI/XII, not EOS-terminated answer probabilities.</li>
+<li>Full raw continuations are retained even when they repeat or hit the 24-token limit. Initial-answer changes are classified separately.</li>
+</ul>
+<p>Code: experiments/eleven-t1468-alone-20261103/. Raw captures and source hashes are retained under comparisons/2026-11-03-eleven-t1468-alone/.</p><div class="source-footer"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-t1468-alone/README.html">Open this report separately</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-t1468-alone/README.md">Original Markdown</a><br><code>results/2026-11-03-eleven-t1468-alone/README.md</code></div></section><section class="paper"><p class="report-label">Original report 2</p><h2 id="can-native-t1468-rescue-l29-t2375-removal">Can native T1468 rescue L29-T2375 removal?</h2>
+<p>Only two possible edit sites: L29-T2375 and L34-T1468, each at final input is during prefill. Every later native attention/MLP runs normally. No generated-token edits.</p>
+<p>Initial eleven answers restored: scalar gate 0/3; full contribution 0/3.</p>
+<p>Two rescues are tested separately. Scalar rescue: <code>delta34 = (native_phi34 - current_phi34) * current_operator34</code>. Full-contribution rescue: <code>delta34 = native_contribution34 - current_contribution34</code>. Both use that same prompt’s native donor at final input <code>is</code>, without extra amplification.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th>Condition</th>
+<th>Initial answer</th>
+<th style="text-align: right;">P(11th answer)</th>
+<th style="text-align: right;">P(12th answer)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>month</td>
+<td>Native</td>
+<td>November</td>
+<td style="text-align: right;">66.8686%</td>
+<td style="text-align: right;">24.3655%</td>
+</tr>
+<tr>
+<td>month</td>
+<td>L29-T2375 off</td>
+<td>December</td>
+<td style="text-align: right;">8.8313%</td>
+<td style="text-align: right;">83.6775%</td>
+</tr>
+<tr>
+<td>month</td>
+<td>T2375 off + native T1468 scalar gate</td>
+<td>December</td>
+<td style="text-align: right;">7.8346%</td>
+<td style="text-align: right;">84.1178%</td>
+</tr>
+<tr>
+<td>month</td>
+<td>T2375 off + full native T1468 contribution</td>
+<td>December</td>
+<td style="text-align: right;">8.4809%</td>
+<td style="text-align: right;">82.3089%</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>Native</td>
+<td>K</td>
+<td style="text-align: right;">71.0745%</td>
+<td style="text-align: right;">1.0286%</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>L29-T2375 off</td>
+<td>L</td>
+<td style="text-align: right;">2.6467%</td>
+<td style="text-align: right;">32.7474%</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>T2375 off + native T1468 scalar gate</td>
+<td>L</td>
+<td style="text-align: right;">2.5838%</td>
+<td style="text-align: right;">34.4925%</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td>T2375 off + full native T1468 contribution</td>
+<td>L</td>
+<td style="text-align: right;">2.5989%</td>
+<td style="text-align: right;">32.1569%</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>Native</td>
+<td>XI</td>
+<td style="text-align: right;">41.5773%</td>
+<td style="text-align: right;">3.5346%</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>L29-T2375 off</td>
+<td>XII</td>
+<td style="text-align: right;">12.3393%</td>
+<td style="text-align: right;">15.0408%</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>T2375 off + native T1468 scalar gate</td>
+<td>XII</td>
+<td style="text-align: right;">12.3722%</td>
+<td style="text-align: right;">13.2319%</td>
+</tr>
+<tr>
+<td>roman</td>
+<td>T2375 off + full native T1468 contribution</td>
+<td>XII</td>
+<td style="text-align: right;">11.9808%</td>
+<td style="text-align: right;">12.7874%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Probability definition: Sum of exact leading-space lower/title-case answer-prefix token-sequence probabilities. Multi-token candidates are teacher-forced from the corresponding prefill cache without additional edits. Punctuation, EOS and other spellings are excluded.</p>
+<p>Roman XI/XII probabilities include every token in those answer prefixes. Native and off references reproduce exactly. Model computations after the patched sites are recomputed normally.</p>
+<h2 id="month">Month</h2>
+<p>Prompt: <code>the eleventh month of the year is</code>; final input position 7 (<code>is</code>).</p>
+<p>T1468 gate: native 1.289993; after T2375 removal 0.717599.</p>
+<p>Native:</p>
+<pre><code class="language-text"> november. the twelfth month is december. the first month is january. the second month is february. the
+</code></pre>
+<p>L29-T2375 off:</p>
+<pre><code class="language-text"> december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth
+</code></pre>
+<p>T2375 off + native T1468 scalar gate:</p>
+<pre><code class="language-text"> december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth
+</code></pre>
+<p>P(11th answer) change vs T2375-off: -0.9967 percentage points; P(12th): +0.4403 points. Log-odds recovery fraction: -0.038364 (0 = off baseline; 1 = native).</p>
+<p>T2375 off + full native T1468 contribution:</p>
+<pre><code class="language-text"> december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth
+</code></pre>
+<p>P(11th answer) change vs T2375-off: -0.3504 percentage points; P(12th): -1.3686 points. Log-odds recovery fraction: -0.007366 (0 = off baseline; 1 = native).</p>
+<h2 id="alphabet">Alphabet</h2>
+<p>Prompt: <code>the eleventh letter of the english alphabet is</code>; final input position 8 (<code>is</code>).</p>
+<p>T1468 gate: native 1.084717; after T2375 removal 0.681166.</p>
+<p>Native:</p>
+<pre><code class="language-text"> k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �
+</code></pre>
+<p>L29-T2375 off:</p>
+<pre><code class="language-text"> l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.
+</code></pre>
+<p>T2375 off + native T1468 scalar gate:</p>
+<pre><code class="language-text"> l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.
+</code></pre>
+<p>P(11th answer) change vs T2375-off: -0.0629 percentage points; P(12th): +1.7451 points. Log-odds recovery fraction: -0.011251 (0 = off baseline; 1 = native).</p>
+<p>T2375 off + full native T1468 contribution:</p>
+<pre><code class="language-text"> l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.
+</code></pre>
+<p>P(11th answer) change vs T2375-off: -0.0477 percentage points; P(12th): -0.5905 points. Log-odds recovery fraction: 0.000000 (0 = off baseline; 1 = native).</p>
+<h2 id="roman">Roman</h2>
+<p>Prompt: <code>the eleventh positive integer in roman numerals is</code>; final input position 9 (<code>is</code>).</p>
+<p>T1468 gate: native 2.429366; after T2375 removal 1.319434.</p>
+<p>Native:</p>
+<pre><code class="language-text"> xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the
+</code></pre>
+<p>L29-T2375 off:</p>
+<pre><code class="language-text"> xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii
+</code></pre>
+<p>T2375 off + native T1468 scalar gate:</p>
+<pre><code class="language-text"> xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii
+</code></pre>
+<p>P(11th answer) change vs T2375-off: +0.0329 percentage points; P(12th): -1.8089 points. Log-odds recovery fraction: 0.049118 (0 = off baseline; 1 = native).</p>
+<p>T2375 off + full native T1468 contribution:</p>
+<pre><code class="language-text"> xii, but the eleventh letter of the alphabet is k. So, the eleventh positive integer is xii
+</code></pre>
+<p>P(11th answer) change vs T2375-off: -0.3585 percentage points; P(12th): -2.2534 points. Log-odds recovery fraction: 0.049879 (0 = off baseline; 1 = native).</p>
+<h2 id="verification-and-limits">Verification and limits</h2>
+<p>The native unhooked run, observed run and zero-strength two-site edits agree exactly. T2375-off and a zero-strength L34 rescue agree exactly. Both rescue variants and T2375-off repeat exactly. Independent CPU checks reproduce each MOLT and every BF16 patch; candidate probabilities are recomputed from saved logits. Earlier input positions remain unchanged.</p>
+<ul>
+<li>Three selected raw prefixes; not a generality test.</li>
+<li>The interventions patch MOLT approximation contributions within native MLP outputs. No MLP is replaced wholesale.</li>
+<li>Gate rescue preserves the changed-input operator; full-contribution rescue changes both effective gate and operator contribution.</li>
+<li>Answer-prefix probabilities sum the specified lower/uppercase leading-space spellings, excluding punctuation and EOS.</li>
+<li>Correlative coactivation and standalone ablation did not establish a uniformly positive eleven-support role for T1468.</li>
+</ul>
+<p>Source: experiments/eleven-t1468-rescue-20261103/. Raw arrays, manifests and source hashes: comparisons/2026-11-03-eleven-t1468-rescue/.</p><div class="source-footer"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-t1468-rescue/README.html">Open this report separately</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-t1468-rescue/README.md">Original Markdown</a><br><code>results/2026-11-03-eleven-t1468-rescue/README.md</code></div></section><section class="paper"><h2>Data and scope</h2><p>These are selected exploratory experiments. Initial answers, longer continuations, gate activations and causal interventions are distinct measurements. Original reports retain their recorded scope and validation; operational notes describe the time of the experiment.</p><div class="downloads"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-t1468-alone/summary.json">2026-11-03-eleven-t1468-alone / summary.json</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-t1468-rescue/summary.json">2026-11-03-eleven-t1468-rescue / summary.json</a></div></section><p class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← Back to all 18 results</a></p></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

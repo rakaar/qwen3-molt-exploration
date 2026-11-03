@@ -1,0 +1,207 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Eleventh-to-fifth scalar gate transplant and sweep · Eleven → Twelve</title><meta name="description" content="Eleventh-to-fifth scalar gate transplant and sweep"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-to-five-scalar/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="eleventh-to-fifth-scalar-gate-transplant-and-sweep">Eleventh-to-fifth scalar gate transplant and sweep</h1>
+<p>Prompt: <code>the fifth month of the year is</code>.</p>
+<p>Donor: <code>the eleventh month of the year is</code>; natural final-input gate 1.158553600.</p>
+<p>Only recipient input position 6 (<code>is</code>) is edited. The recipient’s own current UVx is retained; neither donor operator nor donor contribution is transferred. No generated token is edited.</p>
+<p>Native initial answer: <strong>may</strong>. Natural recipient gate: 0.</p>
+<p>Copying the donor scalar gives initial answer <strong>may</strong>.</p>
+<p>November-initial gates: [20, 30, 40]. These are values tested, not a global threshold.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Fixed gate</th>
+<th>Initial word</th>
+<th style="text-align: right;">P(May variants)</th>
+<th style="text-align: right;">P(November variants)</th>
+<th>Stop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0.000000</td>
+<td>may</td>
+<td style="text-align: right;">92.400844%</td>
+<td style="text-align: right;">0.004152%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">0.500000</td>
+<td>may</td>
+<td style="text-align: right;">91.638121%</td>
+<td style="text-align: right;">0.005288%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.000000</td>
+<td>may</td>
+<td style="text-align: right;">91.372531%</td>
+<td style="text-align: right;">0.006770%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.158554</td>
+<td>may</td>
+<td style="text-align: right;">91.179289%</td>
+<td style="text-align: right;">0.007554%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">2.000000</td>
+<td>may</td>
+<td style="text-align: right;">89.095610%</td>
+<td style="text-align: right;">0.012826%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">3.000000</td>
+<td>may</td>
+<td style="text-align: right;">88.377216%</td>
+<td style="text-align: right;">0.019489%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.000000</td>
+<td>may</td>
+<td style="text-align: right;">83.678918%</td>
+<td style="text-align: right;">0.067339%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">10.000000</td>
+<td>may</td>
+<td style="text-align: right;">55.043788%</td>
+<td style="text-align: right;">1.294506%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">15.000000</td>
+<td>The</td>
+<td style="text-align: right;">14.798084%</td>
+<td style="text-align: right;">9.619911%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">20.000000</td>
+<td>November</td>
+<td style="text-align: right;">2.806989%</td>
+<td style="text-align: right;">20.543640%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">30.000000</td>
+<td>November</td>
+<td style="text-align: right;">0.360070%</td>
+<td style="text-align: right;">29.411769%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">40.000000</td>
+<td>November</td>
+<td style="text-align: right;">0.139710%</td>
+<td style="text-align: right;">20.885039%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">50.000000</td>
+<td>the</td>
+<td style="text-align: right;">0.054489%</td>
+<td style="text-align: right;">12.350069%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">60.000000</td>
+<td>the</td>
+<td style="text-align: right;">0.022355%</td>
+<td style="text-align: right;">9.449018%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">70.000000</td>
+<td>the</td>
+<td style="text-align: right;">0.012282%</td>
+<td style="text-align: right;">10.333669%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">80.000000</td>
+<td>11</td>
+<td style="text-align: right;">0.006854%</td>
+<td style="text-align: right;">9.841101%</td>
+<td>token_limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">90.000000</td>
+<td>11</td>
+<td style="text-align: right;">0.005248%</td>
+<td style="text-align: right;">9.464663%</td>
+<td>token_limit</td>
+</tr>
+</tbody>
+</table></div>
+<p>Probabilities sum the lowercase and title-case leading-space one-token forms: <code>may</code> plus <code>May</code>, and <code>november</code> plus <code>November</code>. Following punctuation/EOS is not included. These events do not cover answers beginning with other text such as <code>the month of may</code>. All four exact case-sensitive probabilities are retained in summary.json; lowercase probabilities and case sums are in sweep.csv.</p>
+<h2 id="full-recorded-responses">Full recorded responses</h2>
+<details><summary>Gate 0.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 0.500000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 1.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 1.158553600</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 2.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 3.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 5.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 10.000000000</summary><pre><code class="language-text"> may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may. the fifth month
+</code></pre></details>
+
+<details><summary>Gate 15.000000000</summary><pre><code class="language-text">
+The fifth month of the year is **May**. 
+
+In the Gregorian calendar, the months are ordered as follows:
+1. January  
+2.
+</code></pre></details>
+
+<details><summary>Gate 20.000000000</summary><pre><code class="language-text"> November. is that true? no, that's not true. the fifth month of the year is may. may is the fifth month. so the answer is
+</code></pre></details>
+
+<details><summary>Gate 30.000000000</summary><pre><code class="language-text"> November. is that true? no, that's not true. the fifth month of the year is may. may is the fifth month. so the answer is
+</code></pre></details>
+
+<details><summary>Gate 40.000000000</summary><pre><code class="language-text"> November. is that true? no, that's not true. the fifth month of the year is may. may is the fifth month. so the answer is
+</code></pre></details>
+
+<details><summary>Gate 50.000000000</summary><pre><code class="language-text"> the month of may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may.
+</code></pre></details>
+
+<details><summary>Gate 60.000000000</summary><pre><code class="language-text"> the month of may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may.
+</code></pre></details>
+
+<details><summary>Gate 70.000000000</summary><pre><code class="language-text"> the month of may. the fifth month of the year is may. the fifth month of the year is may. the fifth month of the year is may.
+</code></pre></details>
+
+<details><summary>Gate 80.000000000</summary><pre><code class="language-text"> 11. What is the value of the 11th month?
+
+Okay, so the question is: "The fifth month of the year is 
+</code></pre></details>
+
+<details><summary>Gate 90.000000000</summary><pre><code class="language-text"> 11. What is the value of the 11th month?
+
+Okay, so the question is: "The fifth month of the year is 
+</code></pre></details>
+
+<h2 id="checks-and-limits">Checks and limits</h2>
+<p>Pinned native BF16 Qwen3-4B; FP32 gate/operator and contribution edit; one BF16 cast; eager attention; TF32 off; raw lowercase prefixes; greedy decoding; 32 generated-token cap.</p>
+<p>Native donor and recipient responses reproduce their previously saved first 12 tokens. Native/observer, zero-strength and gate-zero controls match exactly. Donor-scalar and maximum-gate repetitions match exactly. An independent CPU audit verifies hashes, gates, operators, full recipient-operator identity, intervention mask, exact BF16 edits and probability reconstruction.</p>
+<p>This is one prompt and one feature. A high-gate initial-word flip is not a guarantee of coherent full continuation, ordinary-strength sufficiency or broad ordinal transfer. Full continuations and failures are preserved.</p>
+<p>Reproduce local analysis: <code>python3 experiments/eleven-to-five-scalar-20261103/analyze.py</code>. Scientific evidence: <code>comparisons/2026-11-03-eleven-to-five-scalar/</code>.</p>
+<p>An independent follow-up reloaded the model and repeated gates 0, 1.158553600 and 20. All generated token IDs, every recorded full-vocabulary logit hash and the gate-20 self-correction reproduced exactly. This follow-up used no new strengths.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-to-five-scalar/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-to-five-scalar/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

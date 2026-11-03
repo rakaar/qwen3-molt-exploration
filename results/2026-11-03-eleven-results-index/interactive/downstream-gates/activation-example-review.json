@@ -1,0 +1,822 @@
+{
+  "scope": "The four transforms newly on/off in the month experiment, inspected on the authenticated original dashboard.",
+  "selection": "All 12 strongest, 6 medium and 6 lower-strength displayed windows per feature were inspected. This is not an exhaustive scan of all active positions in the ten-million-token corpus.",
+  "timing": "Gate belongs to the displayed active token. Following text is examined separately. Displayed tooltip strengths are rounded to three decimals, not exact FP32 experiment values.",
+  "inference": "No model inference, GPU edits or downstream causal interventions were performed in this inspection.",
+  "features": [
+    {
+      "layer": 30,
+      "transform": 433,
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-30/features/433.html",
+      "live_label": "Temporal and Calendar Token Gate",
+      "live_description_matches_saved_description": true,
+      "displayed_windows_reviewed": 24,
+      "corpus_token_count_reported": 10000000,
+      "active_token_count_reported": 5745,
+      "native_gate_in_month_prompt": 0.5658266525110913,
+      "ablated_gate_in_month_prompt": 0.0,
+      "finding": "Broad calendar, seasonal and date contexts. Peaks include spaces before 28 days, leap-year divisor 4, February 31st and December 21st, as well as autumn and calendar names. The reviewed windows do not suggest eleven-specific or twelve-specific activation.",
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 0,
+          "active_token": " ",
+          "token_id": 220,
+          "conversation": 6955,
+          "position": 346,
+          "gate_display_rounded": 4.094,
+          "excerpt": " has[·]28",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.703",
+              "conversation": 6955,
+              "display_token": " has",
+              "gate_display_rounded": 2.703,
+              "position_display": "conversation 6955, token 345",
+              "token_id": 702,
+              "token_position": 345,
+              "tooltip_token": " has (702)"
+            },
+            {
+              "activation_display": "+4.094",
+              "conversation": 6955,
+              "display_token": " ",
+              "gate_display_rounded": 4.094,
+              "position_display": "conversation 6955, token 346",
+              "token_id": 220,
+              "token_position": 346,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+3.531",
+              "conversation": 6955,
+              "display_token": "2",
+              "gate_display_rounded": 3.531,
+              "position_display": "conversation 6955, token 347",
+              "token_id": 17,
+              "token_position": 347,
+              "tooltip_token": "2 (17)"
+            },
+            {
+              "activation_display": "+1.797",
+              "conversation": 6955,
+              "display_token": "8",
+              "gate_display_rounded": 1.797,
+              "position_display": "conversation 6955, token 348",
+              "token_id": 23,
+              "token_position": 348,
+              "tooltip_token": "8 (23)"
+            }
+          ],
+          "note": "Space immediately before 28 days"
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 3,
+          "active_token": " ",
+          "token_id": 220,
+          "conversation": 7492,
+          "position": 293,
+          "gate_display_rounded": 3.781,
+          "excerpt": " by[·]4",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.672",
+              "conversation": 7492,
+              "display_token": " by",
+              "gate_display_rounded": 2.672,
+              "position_display": "conversation 7492, token 292",
+              "token_id": 553,
+              "token_position": 292,
+              "tooltip_token": " by (553)"
+            },
+            {
+              "activation_display": "+3.781",
+              "conversation": 7492,
+              "display_token": " ",
+              "gate_display_rounded": 3.781,
+              "position_display": "conversation 7492, token 293",
+              "token_id": 220,
+              "token_position": 293,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 7492,
+              "display_token": "4",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 7492, token 294",
+              "token_id": 19,
+              "token_position": 294,
+              "tooltip_token": "4 (19)"
+            }
+          ],
+          "note": "Space immediately before leap-year divisor 4"
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 9,
+          "active_token": " ",
+          "token_id": 220,
+          "conversation": 3977,
+          "position": 243,
+          "gate_display_rounded": 3.422,
+          "excerpt": " December[·]21",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.766",
+              "conversation": 3977,
+              "display_token": " December",
+              "gate_display_rounded": 2.766,
+              "position_display": "conversation 3977, token 242",
+              "token_id": 6652,
+              "token_position": 242,
+              "tooltip_token": " December (6652)"
+            },
+            {
+              "activation_display": "+3.422",
+              "conversation": 3977,
+              "display_token": " ",
+              "gate_display_rounded": 3.422,
+              "position_display": "conversation 3977, token 243",
+              "token_id": 220,
+              "token_position": 243,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+3.156",
+              "conversation": 3977,
+              "display_token": "2",
+              "gate_display_rounded": 3.156,
+              "position_display": "conversation 3977, token 244",
+              "token_id": 17,
+              "token_position": 244,
+              "tooltip_token": "2 (17)"
+            },
+            {
+              "activation_display": "+1.094",
+              "conversation": 3977,
+              "display_token": "1",
+              "gate_display_rounded": 1.094,
+              "position_display": "conversation 3977, token 245",
+              "token_id": 16,
+              "token_position": 245,
+              "tooltip_token": "1 (16)"
+            }
+          ],
+          "note": "Space immediately before December 21st"
+        }
+      ]
+    },
+    {
+      "layer": 31,
+      "transform": 797,
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-31/features/797.html",
+      "live_label": "Winter Weather Context Gate",
+      "live_description_matches_saved_description": true,
+      "displayed_windows_reviewed": 24,
+      "corpus_token_count_reported": 10000000,
+      "active_token_count_reported": 13864,
+      "native_gate_in_month_prompt": 0.0,
+      "ablated_gate_in_month_prompt": 0.655308568680516,
+      "finding": "Strongest windows consistently concern snow, snowflakes, white winter landscapes and cold conditions. Peaks occur on prepositions before that content and on snow tokens themselves. This supports a winter-context lead for the month task, without establishing a twelve feature.",
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 0,
+          "active_token": " in",
+          "token_id": 304,
+          "conversation": 3650,
+          "position": 351,
+          "gate_display_rounded": 5.188,
+          "excerpt": " covered[·in] deep snow",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.609",
+              "conversation": 3650,
+              "display_token": " covered",
+              "gate_display_rounded": 2.609,
+              "position_display": "conversation 3650, token 350",
+              "token_id": 9761,
+              "token_position": 350,
+              "tooltip_token": " covered (9761)"
+            },
+            {
+              "activation_display": "+5.188",
+              "conversation": 3650,
+              "display_token": " in",
+              "gate_display_rounded": 5.188,
+              "position_display": "conversation 3650, token 351",
+              "token_id": 304,
+              "token_position": 351,
+              "tooltip_token": " in (304)"
+            },
+            {
+              "activation_display": "+4.438",
+              "conversation": 3650,
+              "display_token": " deep",
+              "gate_display_rounded": 4.438,
+              "position_display": "conversation 3650, token 352",
+              "token_id": 5538,
+              "token_position": 352,
+              "tooltip_token": " deep (5538)"
+            },
+            {
+              "activation_display": "+1.734",
+              "conversation": 3650,
+              "display_token": " snow",
+              "gate_display_rounded": 1.734,
+              "position_display": "conversation 3650, token 353",
+              "token_id": 11794,
+              "token_position": 353,
+              "tooltip_token": " snow (11794)"
+            }
+          ],
+          "note": "Preposition before deep snow"
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 2,
+          "active_token": " of",
+          "token_id": 315,
+          "conversation": 8327,
+          "position": 448,
+          "gate_display_rounded": 4.938,
+          "excerpt": " layer[·of] white",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.219",
+              "conversation": 8327,
+              "display_token": " layer",
+              "gate_display_rounded": 2.219,
+              "position_display": "conversation 8327, token 447",
+              "token_id": 6193,
+              "token_position": 447,
+              "tooltip_token": " layer (6193)"
+            },
+            {
+              "activation_display": "+4.938",
+              "conversation": 8327,
+              "display_token": " of",
+              "gate_display_rounded": 4.938,
+              "position_display": "conversation 8327, token 448",
+              "token_id": 315,
+              "token_position": 448,
+              "tooltip_token": " of (315)"
+            },
+            {
+              "activation_display": "+2.813",
+              "conversation": 8327,
+              "display_token": " white",
+              "gate_display_rounded": 2.813,
+              "position_display": "conversation 8327, token 449",
+              "token_id": 4158,
+              "token_position": 449,
+              "tooltip_token": " white (4158)"
+            }
+          ],
+          "note": "Preposition before white winter landscape"
+        }
+      ]
+    },
+    {
+      "layer": 31,
+      "transform": 949,
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-31/features/949.html",
+      "live_label": "Temporal and Financial Timeframe Prepositions",
+      "live_description_matches_saved_description": true,
+      "displayed_windows_reviewed": 24,
+      "corpus_token_count_reported": 10000000,
+      "active_token_count_reported": 6817,
+      "native_gate_in_month_prompt": 0.0,
+      "ablated_gate_in_month_prompt": 0.5623121046828405,
+      "finding": "The strongest window peaks on of before December. Another strongest window peaks on and before 12 months, with an intervening space. A lower-strength window peaks on the space immediately before 12th in a horse-racing result. Counterexamples include June, a space before arithmetic result 24, and to before 8th grades. This is a concrete before-twelve lead with substantial broader activation.",
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 0,
+          "active_token": " of",
+          "token_id": 315,
+          "conversation": 3055,
+          "position": 141,
+          "gate_display_rounded": 4.875,
+          "excerpt": " end[·of] December",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.234",
+              "conversation": 3055,
+              "display_token": " end",
+              "gate_display_rounded": 2.234,
+              "position_display": "conversation 3055, token 140",
+              "token_id": 835,
+              "token_position": 140,
+              "tooltip_token": " end (835)"
+            },
+            {
+              "activation_display": "+4.875",
+              "conversation": 3055,
+              "display_token": " of",
+              "gate_display_rounded": 4.875,
+              "position_display": "conversation 3055, token 141",
+              "token_id": 315,
+              "token_position": 141,
+              "tooltip_token": " of (315)"
+            },
+            {
+              "activation_display": "+0.906",
+              "conversation": 3055,
+              "display_token": " December",
+              "gate_display_rounded": 0.906,
+              "position_display": "conversation 3055, token 142",
+              "token_id": 6652,
+              "token_position": 142,
+              "tooltip_token": " December (6652)"
+            }
+          ],
+          "note": "Before December"
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 6,
+          "active_token": " and",
+          "token_id": 323,
+          "conversation": 3943,
+          "position": 571,
+          "gate_display_rounded": 4.063,
+          "excerpt": " 6[·and] 12 months",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.438",
+              "conversation": 3943,
+              "display_token": " ",
+              "gate_display_rounded": 2.438,
+              "position_display": "conversation 3943, token 569",
+              "token_id": 220,
+              "token_position": 569,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3943,
+              "display_token": "6",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3943, token 570",
+              "token_id": 21,
+              "token_position": 570,
+              "tooltip_token": "6 (21)"
+            },
+            {
+              "activation_display": "+4.063",
+              "conversation": 3943,
+              "display_token": " and",
+              "gate_display_rounded": 4.063,
+              "position_display": "conversation 3943, token 571",
+              "token_id": 323,
+              "token_position": 571,
+              "tooltip_token": " and (323)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3943,
+              "display_token": " ",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3943, token 572",
+              "token_id": 220,
+              "token_position": 572,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+0.641",
+              "conversation": 3943,
+              "display_token": "1",
+              "gate_display_rounded": 0.641,
+              "position_display": "conversation 3943, token 573",
+              "token_id": 16,
+              "token_position": 573,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.828",
+              "conversation": 3943,
+              "display_token": "2",
+              "gate_display_rounded": 0.828,
+              "position_display": "conversation 3943, token 574",
+              "token_id": 17,
+              "token_position": 574,
+              "tooltip_token": "2 (17)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3943,
+              "display_token": " months",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3943, token 575",
+              "token_id": 3951,
+              "token_position": 575,
+              "tooltip_token": " months (3951)"
+            }
+          ],
+          "note": "Before 12 months; one intervening space"
+        },
+        {
+          "group": "Lower-strength examples",
+          "example_index_zero_based": 5,
+          "active_token": " ",
+          "token_id": 220,
+          "conversation": 8832,
+          "position": 950,
+          "gate_display_rounded": 0.555,
+          "excerpt": " finished[·]12th",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 8832,
+              "display_token": " finished",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 8832, token 949",
+              "token_id": 8060,
+              "token_position": 949,
+              "tooltip_token": " finished (8060)"
+            },
+            {
+              "activation_display": "+0.555",
+              "conversation": 8832,
+              "display_token": " ",
+              "gate_display_rounded": 0.555,
+              "position_display": "conversation 8832, token 950",
+              "token_id": 220,
+              "token_position": 950,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 8832,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 8832, token 951",
+              "token_id": 16,
+              "token_position": 951,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 8832,
+              "display_token": "2",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 8832, token 952",
+              "token_id": 17,
+              "token_position": 952,
+              "tooltip_token": "2 (17)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 8832,
+              "display_token": "th",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 8832, token 953",
+              "token_id": 339,
+              "token_position": 953,
+              "tooltip_token": "th (339)"
+            }
+          ],
+          "note": "Space immediately before ordinal 12th"
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 1,
+          "active_token": " of",
+          "token_id": 315,
+          "conversation": 2680,
+          "position": 400,
+          "gate_display_rounded": 4.844,
+          "excerpt": " end[·of] June",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.453",
+              "conversation": 2680,
+              "display_token": " end",
+              "gate_display_rounded": 2.453,
+              "position_display": "conversation 2680, token 399",
+              "token_id": 835,
+              "token_position": 399,
+              "tooltip_token": " end (835)"
+            },
+            {
+              "activation_display": "+4.844",
+              "conversation": 2680,
+              "display_token": " of",
+              "gate_display_rounded": 4.844,
+              "position_display": "conversation 2680, token 400",
+              "token_id": 315,
+              "token_position": 400,
+              "tooltip_token": " of (315)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 2680,
+              "display_token": " June",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 2680, token 401",
+              "token_id": 5534,
+              "token_position": 401,
+              "tooltip_token": " June (5534)"
+            }
+          ],
+          "note": "Counterexample: before June"
+        },
+        {
+          "group": "Medium-strength examples",
+          "example_index_zero_based": 0,
+          "active_token": " ",
+          "token_id": 220,
+          "conversation": 9075,
+          "position": 929,
+          "gate_display_rounded": 1.227,
+          "excerpt": " returns[·]24",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+1.039",
+              "conversation": 9075,
+              "display_token": " returns",
+              "gate_display_rounded": 1.039,
+              "position_display": "conversation 9075, token 928",
+              "token_id": 4675,
+              "token_position": 928,
+              "tooltip_token": " returns (4675)"
+            },
+            {
+              "activation_display": "+1.227",
+              "conversation": 9075,
+              "display_token": " ",
+              "gate_display_rounded": 1.227,
+              "position_display": "conversation 9075, token 929",
+              "token_id": 220,
+              "token_position": 929,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9075,
+              "display_token": "2",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9075, token 930",
+              "token_id": 17,
+              "token_position": 930,
+              "tooltip_token": "2 (17)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9075,
+              "display_token": "4",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9075, token 931",
+              "token_id": 19,
+              "token_position": 931,
+              "tooltip_token": "4 (19)"
+            }
+          ],
+          "note": "Counterexample: space before arithmetic result 24"
+        },
+        {
+          "group": "Medium-strength examples",
+          "example_index_zero_based": 3,
+          "active_token": " to",
+          "token_id": 311,
+          "conversation": 3193,
+          "position": 85,
+          "gate_display_rounded": 1.219,
+          "excerpt": "6th[·to] 8th",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 3193,
+              "display_token": "6",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3193, token 83",
+              "token_id": 21,
+              "token_position": 83,
+              "tooltip_token": "6 (21)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3193,
+              "display_token": "th",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3193, token 84",
+              "token_id": 339,
+              "token_position": 84,
+              "tooltip_token": "th (339)"
+            },
+            {
+              "activation_display": "+1.219",
+              "conversation": 3193,
+              "display_token": " to",
+              "gate_display_rounded": 1.219,
+              "position_display": "conversation 3193, token 85",
+              "token_id": 311,
+              "token_position": 85,
+              "tooltip_token": " to (311)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3193,
+              "display_token": " ",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3193, token 86",
+              "token_id": 220,
+              "token_position": 86,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3193,
+              "display_token": "8",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3193, token 87",
+              "token_id": 23,
+              "token_position": 87,
+              "tooltip_token": "8 (23)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3193,
+              "display_token": "th",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3193, token 88",
+              "token_id": 339,
+              "token_position": 88,
+              "tooltip_token": "th (339)"
+            }
+          ],
+          "note": "Counterexample: to before 8th grades"
+        }
+      ]
+    },
+    {
+      "layer": 34,
+      "transform": 84,
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-34/features/84.html",
+      "live_label": "Connector Tokens in Compounds and Idioms",
+      "live_description_matches_saved_description": true,
+      "displayed_windows_reviewed": 24,
+      "corpus_token_count_reported": 10000000,
+      "active_token_count_reported": 6736,
+      "native_gate_in_month_prompt": 0.0,
+      "ablated_gate_in_month_prompt": 0.5874034839018321,
+      "finding": "Strong windows include x in dimension notation, in within in-depth, or between alternatives, and email/format boundaries. No clear before-eleven or before-twelve pattern appears in the reviewed windows; the broad connector explanation remains provisional.",
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 0,
+          "active_token": " x",
+          "token_id": 856,
+          "conversation": 9649,
+          "position": 155,
+          "gate_display_rounded": 3.203,
+          "excerpt": " h[·x] d",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 9649,
+              "display_token": " h",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9649, token 154",
+              "token_id": 305,
+              "token_position": 154,
+              "tooltip_token": " h (305)"
+            },
+            {
+              "activation_display": "+3.203",
+              "conversation": 9649,
+              "display_token": " x",
+              "gate_display_rounded": 3.203,
+              "position_display": "conversation 9649, token 155",
+              "token_id": 856,
+              "token_position": 155,
+              "tooltip_token": " x (856)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9649,
+              "display_token": " d",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9649, token 156",
+              "token_id": 294,
+              "token_position": 156,
+              "tooltip_token": " d (294)"
+            }
+          ],
+          "note": "Connector x in dimension notation"
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 3,
+          "active_token": " in",
+          "token_id": 304,
+          "conversation": 3213,
+          "position": 658,
+          "gate_display_rounded": 2.672,
+          "excerpt": "[·in]-depth information",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.672",
+              "conversation": 3213,
+              "display_token": " in",
+              "gate_display_rounded": 2.672,
+              "position_display": "conversation 3213, token 658",
+              "token_id": 304,
+              "token_position": 658,
+              "tooltip_token": " in (304)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3213,
+              "display_token": "-depth",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3213, token 659",
+              "token_id": 30310,
+              "token_position": 659,
+              "tooltip_token": "-depth (30310)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3213,
+              "display_token": " information",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3213, token 660",
+              "token_id": 1995,
+              "token_position": 660,
+              "tooltip_token": " information (1995)"
+            }
+          ],
+          "note": "Word fragment in before -depth"
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_index_zero_based": 2,
+          "active_token": " or",
+          "token_id": 476,
+          "conversation": 9552,
+          "position": 349,
+          "gate_display_rounded": 2.688,
+          "excerpt": "[·or] decrease the",
+          "excerpt_tokens": [
+            {
+              "activation_display": "+2.688",
+              "conversation": 9552,
+              "display_token": " or",
+              "gate_display_rounded": 2.688,
+              "position_display": "conversation 9552, token 349",
+              "token_id": 476,
+              "token_position": 349,
+              "tooltip_token": " or (476)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9552,
+              "display_token": " decrease",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9552, token 350",
+              "token_id": 18472,
+              "token_position": 350,
+              "tooltip_token": " decrease (18472)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9552,
+              "display_token": " the",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9552, token 351",
+              "token_id": 279,
+              "token_position": 351,
+              "tooltip_token": " the (279)"
+            }
+          ],
+          "note": "Connector or before an alternative"
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "comparisons/2026-11-03-eleven-downstream-gates/activation-example-inspection/L30-T433.json": "80f8936c8e65c91dc5b6c0715a59f6656ce17761ce9972bfb2b545ede8e94b4b",
+    "comparisons/2026-11-03-eleven-downstream-gates/activation-example-inspection/L31-T797.json": "46d741a419d275343953320fa2f5205c4f9c1ff7c4b921d9ba1b9d7333bfc6c5",
+    "comparisons/2026-11-03-eleven-downstream-gates/activation-example-inspection/L31-T949.json": "3ac89e474ca2890fc5771efcaff4f8db1ec1a21435cb3ea35dc2671299e75e5a",
+    "comparisons/2026-11-03-eleven-downstream-gates/activation-example-inspection/L34-T84.json": "01bb008c72c5735262d1272888373fa87e226ba99419ee47fcf681297a6dd155"
+  },
+  "validation": {
+    "status": "pass",
+    "features": 4,
+    "windows": 96,
+    "token_tooltip_records": 3163,
+    "groups_per_feature": [
+      12,
+      6,
+      6
+    ],
+    "coordinates_contiguous_within_windows": true,
+    "token_ids_and_displayed_strengths_present": true,
+    "live_descriptions_match_cache": true,
+    "T949_before_12_and_12th_token_sequences_verified": true
+  },
+  "analysis_sha256": "821e422badc39d85739880a76442842075cef7b53d27850ad29cbcd793130d92"
+}

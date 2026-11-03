@@ -1,0 +1,106 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Native versus ablated residual cosine at each input token · Eleven → Twelve</title><meta name="description" content="Native versus ablated residual cosine at each input token"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-residual-trace/COSINES.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="native-versus-ablated-residual-cosine-at-each-input-token">Native versus ablated residual cosine at each input token</h1>
+<p>Native versus T2375-off full residual vectors at the same input position after the same decoder block. All later layers compute normally.</p>
+<p>Only L29-T2375 at the final input is. L28 is a pre-edit control. L35 is before final RMSNorm and unembedding.</p>
+<p><img alt="Residual cosine across layers and input positions" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-residual-trace/residual-cosine-comparison.png"/></p>
+<p>The left panels show the edited final input <code>is</code>. The right panels compare every input token at every saved layer, with the edited row outlined in orange. All earlier positions are exactly unchanged: cosine 1, angle 0 degrees. Both axes and colors are zoomed to 0.97–1.00.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Block</th>
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Alphabet</th>
+<th style="text-align: right;">Roman numerals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28 (control)</td>
+<td style="text-align: right;">1.000000</td>
+<td style="text-align: right;">1.000000</td>
+<td style="text-align: right;">1.000000</td>
+</tr>
+<tr>
+<td>29</td>
+<td style="text-align: right;">0.996800</td>
+<td style="text-align: right;">0.981467</td>
+<td style="text-align: right;">0.984094</td>
+</tr>
+<tr>
+<td>30</td>
+<td style="text-align: right;">0.996683</td>
+<td style="text-align: right;">0.979384</td>
+<td style="text-align: right;">0.983449</td>
+</tr>
+<tr>
+<td>31</td>
+<td style="text-align: right;">0.996496</td>
+<td style="text-align: right;">0.979036</td>
+<td style="text-align: right;">0.982716</td>
+</tr>
+<tr>
+<td>32</td>
+<td style="text-align: right;">0.995821</td>
+<td style="text-align: right;">0.977816</td>
+<td style="text-align: right;">0.982383</td>
+</tr>
+<tr>
+<td>33</td>
+<td style="text-align: right;">0.996037</td>
+<td style="text-align: right;">0.978189</td>
+<td style="text-align: right;">0.980893</td>
+</tr>
+<tr>
+<td>34</td>
+<td style="text-align: right;">0.995857</td>
+<td style="text-align: right;">0.974058</td>
+<td style="text-align: right;">0.984412</td>
+</tr>
+<tr>
+<td>35</td>
+<td style="text-align: right;">0.994682</td>
+<td style="text-align: right;">0.986916</td>
+<td style="text-align: right;">0.991153</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th style="text-align: right;">L29 angle</th>
+<th style="text-align: right;">L35 angle</th>
+<th style="text-align: right;">Largest angle after edit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month</td>
+<td style="text-align: right;">4.585 degrees</td>
+<td style="text-align: right;">5.912 degrees</td>
+<td style="text-align: right;">5.912 degrees at L35</td>
+</tr>
+<tr>
+<td>Alphabet</td>
+<td style="text-align: right;">11.048 degrees</td>
+<td style="text-align: right;">9.279 degrees</td>
+<td style="text-align: right;">13.079 degrees at L34</td>
+</tr>
+<tr>
+<td>Roman numerals</td>
+<td style="text-align: right;">10.233 degrees</td>
+<td style="text-align: right;">7.627 degrees</td>
+<td style="text-align: right;">11.218 degrees at L33</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="exact-prompts">Exact prompts</h2>
+<ul>
+<li>Month: <code>the eleventh month of the year is</code>. Edited position 7.</li>
+<li>Alphabet: <code>the eleventh letter of the english alphabet is</code>. Edited position 8.</li>
+<li>Roman numerals: <code>the eleventh positive integer in roman numerals is</code>. Edited position 9.</li>
+</ul>
+<p>Cosine does not decrease monotonically. Alphabet and Roman cases become more aligned again at L35. The comparison concerns whole residual vectors, not isolated MOLT contributions and not vectors from different prompts.</p>
+<p>FP64 cosine and arccos in degrees on saved FP32 copies of BF16 residuals. No extra RMSNorm. Exact equality is recorded as cosine 1 and angle 0.</p>
+<p>Only input positions were saved; no generated-token residuals are inferred. High whole-residual cosine can coexist with an answer change.</p>
+<p>Raw file hashes and all per-token cosine/angle values are in <code>residual-cosines.json</code> and <code>residual-cosines-all-input-tokens.csv</code>.</p>
+<p>Reproduce: <code>python3 experiments/eleven-residual-trace-20261103/plot_cosines.py</code>.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-residual-trace/COSINES.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-residual-trace/COSINES.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

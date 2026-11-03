@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>T1181 off on the genuine twelfth-month prompt · Eleven → Twelve</title><meta name="description" content="T1181 off on the genuine twelfth-month prompt"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-t1181-twelfth-month-off/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="t1181-off-on-the-genuine-twelfth-month-prompt">T1181 off on the genuine twelfth-month prompt</h1>
+<p>Removing T1181 reduces the exact December-prefix probability from 88.032362% to 56.304216%, but December remains the initial answer and all 32 generated token IDs are unchanged. January rises from 0.574371% to 7.327308%. This is a confidence effect in this prompt, without an initial-answer shift.</p>
+<p>Prompt: <code>the twelfth month of the year is</code>. Remove only L29–T1181 at final input position 7 (<code>is</code>). No other MOLT or generated token edited.</p>
+<p>Natural gate: 1.489463329. Natural contribution L2: 24.459778. Actual BF16-rounded edit L2: 24.454293.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Initial word</th>
+<th style="text-align: right;">P(December)</th>
+<th style="text-align: right;">P(November)</th>
+<th style="text-align: right;">P(January)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>december</td>
+<td style="text-align: right;">88.032362%</td>
+<td style="text-align: right;">0.092857%</td>
+<td style="text-align: right;">0.574371%</td>
+</tr>
+<tr>
+<td>T1181 off</td>
+<td>december</td>
+<td style="text-align: right;">56.304216%</td>
+<td style="text-align: right;">0.538871%</td>
+<td style="text-align: right;">7.327308%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Probabilities sum exact leading-space lowercase/title-case answer prefixes, multiplying token probabilities for multi-token names. Other answer formats and following punctuation/EOS excluded. All twelve month probabilities are in month-probabilities.csv.</p>
+<h2 id="full-native-continuation">Full native continuation</h2>
+<pre><code class="language-text"> december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.
+</code></pre>
+<h2 id="full-t1181-off-continuation">Full T1181-off continuation</h2>
+<pre><code class="language-text"> december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.
+</code></pre>
+<h2 id="checks-and-limits">Checks and limits</h2>
+<p>Pinned native BF16 Qwen3-4B; FP32 gate/operator and subtraction; one BF16 cast; normal downstream computation and normalization; eager attention; TF32 off; greedy 32-token continuations. The selected contribution retains checkpoint input/output standardizers and receives no extra normalization.</p>
+<p>Native observation, zero-strength and exact natural-gate replay reproduce the native run bit-exactly in recorded full-vocabulary logit hashes and tokens. Native output reproduces the earlier first 32 tokens. Repeated ablation matches exactly. CPU auditing reconstructs probabilities, gate/operator values, selected-position masks and exact BF16 edits. Raw archive/files are hash-verified.</p>
+<p>One exact raw completion prefix; this does not test numeric <code>12th</code> wording, all-input/output edits, or joint removal with T2375.</p>
+<details><summary>Recorded validation data</summary><pre><code class="language-json">{
+  "status": "pass",
+  "arrays_audited": 6,
+  "edit_arrays_audited": 4,
+  "probability_max_absolute_error": 1.6600223040619255e-07,
+  "native_observer_zero_and_replay_exact": true,
+  "ablation_repeat_exact": true,
+  "native_prior_first_32_tokens_exact": true,
+  "native_prior_probe_probabilities_match": true,
+  "operator_same_across_conditions": true,
+  "bf16_edits_exact": true,
+  "only_final_input_edited": true,
+  "no_generated_token_edits": true,
+  "feature_hash_verified": true
+}
+</code></pre></details>
+<p>Reproduce: <code>python3 experiments/t1181-twelfth-month-off-20261103/analyze.py</code>. Raw evidence: <code>comparisons/2026-11-03-t1181-twelfth-month-off/</code>. No publication or GPU cleanup was performed.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-t1181-twelfth-month-off/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-t1181-twelfth-month-off/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

@@ -1,0 +1,248 @@
+{
+  "title": "Eleven → Twelve · Experiment Index",
+  "updated": "2026-11-03",
+  "results": [
+    {
+      "slug": "final-token-ablation",
+      "title": "Removing T2375 changes eleven to twelve",
+      "kind": "intervention",
+      "brief": "At the final input “is”, removing L29–T2375 changes the initial answers November→December, K→L and XI→XII in three selected raw prompts.",
+      "reports": [
+        "results/2026-10-28-water-raw-ordinal-ablation/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-t1468-rescue/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/final-token-ablation/"
+    },
+    {
+      "slug": "activation-and-ordinal-controls",
+      "title": "Where the gate activates—and where it does not",
+      "kind": "observation",
+      "brief": "T2375 activates at final “is” in the original eleven templates. Matched first, second, fourth and fifth month/Roman prefixes have zero gate there.",
+      "reports": [
+        "results/2026-11-02-eleven-activation/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-ordinal-specificity/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/activation-and-ordinal-controls/"
+    },
+    {
+      "slug": "domain-limits",
+      "title": "Activation does not guarantee an answer flip",
+      "kind": "negative",
+      "brief": "The eleventh-element prompt has an active T2375 contribution but retains Sodium after removal. The effect is not a general next-item operation.",
+      "reports": [
+        "results/2026-10-28-water-raw-ordinal-ablation/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-contribution-similarity/element-control.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/domain-limits/"
+    },
+    {
+      "slug": "contribution-geometry",
+      "title": "Similar directions, different magnitudes",
+      "kind": "observation",
+      "brief": "Month, alphabet and Roman contributions have cosine similarities of 0.983–0.989, with different lengths. High alignment also occurs in cases without a flip.",
+      "reports": [
+        "results/2026-11-03-eleven-contribution-similarity/README.md"
+      ],
+      "data": [
+        "sites/eleventh-molt/dist/outcome-geometry.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/contribution-geometry/"
+    },
+    {
+      "slug": "multilingual-activation",
+      "title": "Related activity and geometry across five languages",
+      "kind": "observation",
+      "brief": "Matched chat setups show highly aligned month contributions across five languages. Activation varies with wording and format, and can occur on chat-prefix tokens.",
+      "reports": [
+        "results/2026-11-03-eleven-month-languages/README.md",
+        "results/2026-11-03-eleven-month-language-similarity/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-month-language-similarity/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/multilingual-activation/"
+    },
+    {
+      "slug": "multilingual-ablation",
+      "title": "Causal transfer depends on language and format",
+      "kind": "negative",
+      "brief": "Some translated prompts shift to twelve, others retain eleven. Some alphabet questions shift K→N rather than K→L. This is not a universal multilingual rule.",
+      "reports": [],
+      "data": [
+        "results/2026-11-01-eleven-multilingual/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/multilingual-ablation/"
+    },
+    {
+      "slug": "fifth-month-scalar",
+      "title": "A stronger scalar can make the fifth-month answer start November",
+      "kind": "intervention",
+      "brief": "Copying the natural eleventh-month gate leaves May unchanged. Larger tested gates produce November initially, followed by self-correction.",
+      "reports": [
+        "results/2026-11-03-eleven-to-five-scalar/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-to-five-scalar/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/fifth-month-scalar/"
+    },
+    {
+      "slug": "fifth-month-operator",
+      "title": "Borrowing the donor operator still requires amplification",
+      "kind": "intervention",
+      "brief": "Copying the natural full contribution leaves May unchanged. Amplification can produce an initial November; equal-norm recipient controls can do so too.",
+      "reports": [
+        "results/2026-11-03-eleven-to-five-full/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-to-five-full/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/fifth-month-operator/"
+    },
+    {
+      "slug": "fifth-element-negative",
+      "title": "The month steering result does not carry over to the fifth element",
+      "kind": "negative",
+      "brief": "Across 17 scalar settings, no initial Sodium or Aluminum answer appears. Native fifth-, eleventh- and thirteenth-element capability checks all pass.",
+      "reports": [
+        "results/2026-11-03-eleven-fifth-element-scalar/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-fifth-element-scalar/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/fifth-element-negative/"
+    },
+    {
+      "slug": "direct-vector-readouts",
+      "title": "Direct vocabulary readouts do not explain all three flips",
+      "kind": "negative",
+      "brief": "Readouts of the MLP, removed contribution and remainder weaken the eleven preference, but do not fully reproduce the complete model’s alphabet/Roman flips.",
+      "reports": [
+        "results/2026-11-02-eleven-contribution-readout/README.md",
+        "results/2026-11-02-eleven-crossdomain-readouts/README.md"
+      ],
+      "data": [
+        "results/2026-11-02-eleven-crossdomain-readouts/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/direct-vector-readouts/"
+    },
+    {
+      "slug": "native-alternatives",
+      "title": "Twelve is not always the native runner-up",
+      "kind": "observation",
+      "brief": "December is already a strong competitor; L is outside the alphabet top five. The edit also changes relative preferences beyond simply removing eleven’s probability.",
+      "reports": [
+        "results/2026-11-03-eleven-twelve-competition/README.md"
+      ],
+      "data": [
+        "sites/eleventh-molt/dist/native-top-five.json",
+        "results/2026-11-03-eleven-t1468-rescue/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/native-alternatives/"
+    },
+    {
+      "slug": "active-layer29-controls",
+      "title": "Only T2375 flips the month among six active L29 controls",
+      "kind": "intervention",
+      "brief": "Each naturally active transform is removed separately. The five other removals preserve the initial November answer, including some larger contribution edits.",
+      "reports": [
+        "results/2026-11-03-eleven-active-controls/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-active-controls/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/active-layer29-controls/"
+    },
+    {
+      "slug": "t1181-competition",
+      "title": "T1181 removal counteracts the December result",
+      "kind": "intervention",
+      "brief": "Removing L29–T1181 together with T2375 restores an initial November. On a genuine twelfth-month prompt, T1181 removal lowers December probability without flipping it.",
+      "reports": [
+        "results/2026-11-03-eleven-joint-1181-2375-off/README.md",
+        "results/2026-11-03-t1181-twelfth-month-off/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-joint-1181-2375-off/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/t1181-competition/"
+    },
+    {
+      "slug": "residual-propagation",
+      "title": "The perturbation propagates through later layers",
+      "kind": "observation",
+      "brief": "Absolute vector distance grows after the L29 edit. Residual directions stay relatively close, and their angular separation does not grow monotonically.",
+      "reports": [
+        "results/2026-11-03-eleven-residual-trace/README.md",
+        "results/2026-11-03-eleven-residual-trace/COSINES.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-residual-trace/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/residual-propagation/"
+    },
+    {
+      "slug": "downstream-gates",
+      "title": "Different downstream gates change across domains",
+      "kind": "observation",
+      "brief": "The month, alphabet and Roman prompts have different gate changes. The four month-case switches stay inactive at final “is” in the other two prompts.",
+      "reports": [
+        "results/2026-11-03-eleven-downstream-gates/README.md",
+        "results/2026-11-03-eleven-downstream-gates/SHARED_CANDIDATES.md",
+        "results/2026-11-03-eleven-downstream-gates/ACTIVATION_EXAMPLES.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-downstream-gates/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/downstream-gates/"
+    },
+    {
+      "slug": "downstream-activation-examples",
+      "title": "Alphabet examples reveal before-K down and before-L up",
+      "kind": "observation",
+      "brief": "Three gates with before-K examples weaken; two with before-L examples strengthen. Roman examples suggest broader numeral/X/I contexts, without clear XII specificity.",
+      "reports": [
+        "results/2026-11-03-eleven-downstream-gates/ALPHABET_ROMAN_EXAMPLES.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-downstream-gates/alphabet-roman-example-review.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/downstream-activation-examples/"
+    },
+    {
+      "slug": "t2375-t1468-coactivation",
+      "title": "T2375 and T1468 often coactivate, with clear exceptions",
+      "kind": "observation",
+      "brief": "Across 56 prompts, 43 token pairs have both gates active, 21 only T2375 and two only T1468. Correlation among the 66 plotted nonzero pairs is 0.39.",
+      "reports": [
+        "results/2026-11-03-eleven-gate-coactivation/README.md",
+        "results/2026-11-03-eleven-downstream-gates/T1468_EXAMPLES.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-gate-coactivation/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/t2375-t1468-coactivation/"
+    },
+    {
+      "slug": "t1468-ablation-and-rescue",
+      "title": "T1468 does not reproduce or rescue the flip",
+      "kind": "negative",
+      "brief": "T1468 removal alone causes no eleven→twelve flips. During T2375 ablation, restoring its native scalar or full contribution rescues 0/3 initial answers.",
+      "reports": [
+        "results/2026-11-03-eleven-t1468-alone/README.md",
+        "results/2026-11-03-eleven-t1468-rescue/README.md"
+      ],
+      "data": [
+        "results/2026-11-03-eleven-t1468-alone/summary.json",
+        "results/2026-11-03-eleven-t1468-rescue/summary.json"
+      ],
+      "detail_url": "/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/t1468-ablation-and-rescue/"
+    }
+  ]
+}

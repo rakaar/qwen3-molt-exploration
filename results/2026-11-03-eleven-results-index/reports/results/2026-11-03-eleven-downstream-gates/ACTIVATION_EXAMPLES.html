@@ -1,0 +1,158 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Activating-example review of the four switched month gates · Eleven → Twelve</title><meta name="description" content="Activating-example review of the four switched month gates"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-downstream-gates/ACTIVATION_EXAMPLES.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="activating-example-review-of-the-four-switched-month-gates">Activating-example review of the four switched month gates</h1>
+<p>Inspected the authenticated original dashboard: 12 strongest, 6 medium and 6 lower-strength windows for each of four transforms. All 96 displayed windows were read, including exact active-token locations and following context. These are the original dashboard examples, not the separate 64-conversation preview.</p>
+<p><strong>The clearest before-twelve lead is L31-T949.</strong> Its strongest window peaks before December; another strongest window activates before 12 months, and a lower-strength example activates immediately before 12th in a horse-racing result. It also activates before other months, numbers and ordinals, so these examples do not establish twelve selectivity.</p>
+<p>Square brackets mark the active token. A middle dot inside brackets denotes a space. Tooltip strengths are displayed rounded to three decimals.</p>
+<h2 id="l30-t433-temporal-and-calendar-token-gate">L30-T433: Temporal and Calendar Token Gate</h2>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-30/features/433.html">Original dashboard examples</a></p>
+<p>Month prompt gate: 0.565827 -&gt; 0.000000 after L29-T2375 removal.</p>
+<p>Broad calendar, seasonal and date contexts. Peaks include spaces before 28 days, leap-year divisor 4, February 31st and December 21st, as well as autumn and calendar names. The reviewed windows do not suggest eleven-specific or twelve-specific activation.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Short source excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Location</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>has[·]28</code></td>
+<td style="text-align: right;">4.094</td>
+<td>Conversation 6955, token 346</td>
+<td>Space immediately before 28 days; Strongest examples (one per conversation), example 1</td>
+</tr>
+<tr>
+<td><code>by[·]4</code></td>
+<td style="text-align: right;">3.781</td>
+<td>Conversation 7492, token 293</td>
+<td>Space immediately before leap-year divisor 4; Strongest examples (one per conversation), example 4</td>
+</tr>
+<tr>
+<td><code>December[·]21</code></td>
+<td style="text-align: right;">3.422</td>
+<td>Conversation 3977, token 243</td>
+<td>Space immediately before December 21st; Strongest examples (one per conversation), example 10</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="l31-t797-winter-weather-context-gate">L31-T797: Winter Weather Context Gate</h2>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-31/features/797.html">Original dashboard examples</a></p>
+<p>Month prompt gate: 0.000000 -&gt; 0.655309 after L29-T2375 removal.</p>
+<p>Strongest windows consistently concern snow, snowflakes, white winter landscapes and cold conditions. Peaks occur on prepositions before that content and on snow tokens themselves. This supports a winter-context lead for the month task, without establishing a twelve feature.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Short source excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Location</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>covered[·in] deep snow</code></td>
+<td style="text-align: right;">5.188</td>
+<td>Conversation 3650, token 351</td>
+<td>Preposition before deep snow; Strongest examples (one per conversation), example 1</td>
+</tr>
+<tr>
+<td><code>layer[·of] white</code></td>
+<td style="text-align: right;">4.938</td>
+<td>Conversation 8327, token 448</td>
+<td>Preposition before white winter landscape; Strongest examples (one per conversation), example 3</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="l31-t949-temporal-and-financial-timeframe-prepositions">L31-T949: Temporal and Financial Timeframe Prepositions</h2>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-31/features/949.html">Original dashboard examples</a></p>
+<p>Month prompt gate: 0.000000 -&gt; 0.562312 after L29-T2375 removal.</p>
+<p>The strongest window peaks on of before December. Another strongest window peaks on and before 12 months, with an intervening space. A lower-strength window peaks on the space immediately before 12th in a horse-racing result. Counterexamples include June, a space before arithmetic result 24, and to before 8th grades. This is a concrete before-twelve lead with substantial broader activation.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Short source excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Location</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>end[·of] December</code></td>
+<td style="text-align: right;">4.875</td>
+<td>Conversation 3055, token 141</td>
+<td>Before December; Strongest examples (one per conversation), example 1</td>
+</tr>
+<tr>
+<td><code>6[·and] 12 months</code></td>
+<td style="text-align: right;">4.063</td>
+<td>Conversation 3943, token 571</td>
+<td>Before 12 months; one intervening space; Strongest examples (one per conversation), example 7</td>
+</tr>
+<tr>
+<td><code>finished[·]12th</code></td>
+<td style="text-align: right;">0.555</td>
+<td>Conversation 8832, token 950</td>
+<td>Space immediately before ordinal 12th; Lower-strength examples, example 6</td>
+</tr>
+<tr>
+<td><code>end[·of] June</code></td>
+<td style="text-align: right;">4.844</td>
+<td>Conversation 2680, token 400</td>
+<td>Counterexample: before June; Strongest examples (one per conversation), example 2</td>
+</tr>
+<tr>
+<td><code>returns[·]24</code></td>
+<td style="text-align: right;">1.227</td>
+<td>Conversation 9075, token 929</td>
+<td>Counterexample: space before arithmetic result 24; Medium-strength examples, example 1</td>
+</tr>
+<tr>
+<td><code>6th[·to] 8th</code></td>
+<td style="text-align: right;">1.219</td>
+<td>Conversation 3193, token 85</td>
+<td>Counterexample: to before 8th grades; Medium-strength examples, example 4</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="l34-t84-connector-tokens-in-compounds-and-idioms">L34-T84: Connector Tokens in Compounds and Idioms</h2>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/84.html">Original dashboard examples</a></p>
+<p>Month prompt gate: 0.000000 -&gt; 0.587403 after L29-T2375 removal.</p>
+<p>Strong windows include x in dimension notation, in within in-depth, or between alternatives, and email/format boundaries. No clear before-eleven or before-twelve pattern appears in the reviewed windows; the broad connector explanation remains provisional.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Short source excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Location</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h[·x] d</code></td>
+<td style="text-align: right;">3.203</td>
+<td>Conversation 9649, token 155</td>
+<td>Connector x in dimension notation; Strongest examples (one per conversation), example 1</td>
+</tr>
+<tr>
+<td><code>[·in]-depth information</code></td>
+<td style="text-align: right;">2.672</td>
+<td>Conversation 3213, token 658</td>
+<td>Word fragment in before -depth; Strongest examples (one per conversation), example 4</td>
+</tr>
+<tr>
+<td><code>[·or] decrease the</code></td>
+<td style="text-align: right;">2.688</td>
+<td>Conversation 9552, token 349</td>
+<td>Connector or before an alternative; Strongest examples (one per conversation), example 3</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="what-this-suggests">What this suggests</h2>
+<p>L31-T949 deserves a causal follow-up because it has genuine precursor timing for twelve-related completions, including a non-month ordinal example. The counterexamples remain essential: its displayed evidence also supports broad timeframe/range behavior.</p>
+<p>L31-T797 supplies a different lead: a winter-context change could fit a December preference in this month task. This is a hypothesis about the month case, not an explanation of the alphabet or Roman flips.</p>
+<p>Neither label descriptions nor activation examples show that these transforms cause the answer change. An appropriate next causal check would remove each newly active L31 contribution separately in the L29-T2375-off month run and measure November/December support. That intervention has not been run here.</p>
+<p>The scope is the displayed example selection, not every activation in the corpus. Full live label descriptions matched the saved descriptions. Original page URLs, retrieved timestamps, group identities, coordinates, token IDs and displayed strengths are preserved in the raw inspection records under comparisons/2026-11-03-eleven-downstream-gates/activation-example-inspection/. Their hashes and selected evidence are in activation-example-review.json.</p>
+<p>Reproduce the audit/report from those saved records: <code>python3 experiments/eleven-downstream-gates-20261103/inspect_examples.py</code>. No model inference or downstream intervention is performed.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-downstream-gates/ACTIVATION_EXAMPLES.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-downstream-gates/ACTIVATION_EXAMPLES.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

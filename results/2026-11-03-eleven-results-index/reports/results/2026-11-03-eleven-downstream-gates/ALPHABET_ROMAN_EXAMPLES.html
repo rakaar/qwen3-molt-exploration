@@ -1,0 +1,451 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Activating examples of changed alphabet and Roman gates · Eleven → Twelve</title><meta name="description" content="Activating examples of changed alphabet and Roman gates"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-downstream-gates/ALPHABET_ROMAN_EXAMPLES.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="activating-examples-of-changed-alphabet-and-roman-gates">Activating examples of changed alphabet and Roman gates</h1>
+<p><strong>Alphabet: a coherent before-K down / before-L up pattern is visible in the examples.</strong> L33-T14, L34-T965 and L35-T760 weaken or turn off; L34-T1440 and L35-T2117 strengthen. These activation observations are candidates for causal tests, not a demonstrated mechanism.</p>
+<p>All 13 on/off switches in alphabet/Roman plus the top three absolute continuously-active gate changes per prompt, excluding L34-T1468 already inspected separately.</p>
+<p>Authenticated original dashboard: all 12 strongest, 6 medium and 6 lower-strength displayed windows per feature.</p>
+<p>Square brackets mark the active token. Following token strings/IDs are recorded separately. Gate strengths in examples are rounded dashboard values.</p>
+<p><strong>Roman: broader numeral-format leads.</strong> L35-T1221 has X and I/i code contexts (and a Y counterexample); L35-T111 precedes several Roman numerals as well as dates. No comparably clean XI-versus-XII separation was found in the displayed examples.</p>
+<p><strong>Shared numerical lead:</strong> L33-T587 peaks before Twelve and 12, with clear 11/13 counterexamples. Its gate rises in both alphabet and Roman prompts, but falls in the month prompt, so it is not established as a general twelve feature.</p>
+<h2 id="alphabet">Alphabet</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: right;">Native gate -&gt; T2375 off</th>
+<th>Observed example pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-32/features/1181.html">L32-T1181</a></td>
+<td style="text-align: right;">0.647703 -&gt; 0.000000</td>
+<td>Broad Christmas/Halloween/autumn contexts. Frequently active on prepositions, conjunctions and punctuation before seasonal content. No K/L or twelve-specific pattern established in the displayed selection.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/391.html">L33-T391</a></td>
+<td style="text-align: right;">0.000000 -&gt; 0.613793</td>
+<td>Many strongest examples concern quantities and units such as ounces, plus mixed technical contexts. The broad list label is incomplete; no clear K/L or twelve-specific pattern was found.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/587.html">L33-T587</a></td>
+<td style="text-align: right;">0.000000 -&gt; 0.638122</td>
+<td>Strong precursor examples before the word Twelve and literal 12, but also before 11 and 13, dates, chemistry and code. This is a numerical-sequence lead, not a twelve-selective feature. Medium/lower windows all repeat activation on the chat-start marker.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/968.html">L33-T968</a></td>
+<td style="text-align: right;">0.000000 -&gt; 0.622768</td>
+<td>Strongly active on copulas is/was/are in ordinary prose. No clear K/L or twelve-specific activation pattern in the displayed windows.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/666.html">L34-T666</a></td>
+<td style="text-align: right;">0.646823 -&gt; 0.000000</td>
+<td>Copulas in prose, particularly was/is and continuations such as still/all/only. No clear ordinal-specific pattern in the reviewed windows.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/965.html">L34-T965</a></td>
+<td style="text-align: right;">1.258173 -&gt; 0.000000</td>
+<td>Strong before-K/k pattern across DISK, honky-tonk, 4K, 14k, Westerkerk and other words. This feature turns off in the alphabet experiment. The moderate/high programming window is a counterexample to a simple immediate-K-only description.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/760.html">L35-T760</a></td>
+<td style="text-align: right;">0.919535 -&gt; 0.000000</td>
+<td>Strong before-K/k pattern across 8K, 14K, kg, Hawking, Maersk and Korea. This feature also turns off in the alphabet experiment. Some non-Latin windows contain undecodable fragments and are not used for the K interpretation.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/1177.html">L35-T1177</a></td>
+<td style="text-align: right;">0.000000 -&gt; 0.534274</td>
+<td>Mixed short fields, names, dates and output entities. One strongest window includes activation on the quote and digits of 11th Infantry Regiment, but no clear L/twelve precursor pattern.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/1440.html">L34-T1440</a></td>
+<td style="text-align: right;">1.036863 -&gt; 1.690837</td>
+<td>Strong before-L/l pattern across a literal quoted l, 1L, London, Lab, -law, LA and code fragments. Gate increases in the alphabet experiment. A K. L. initials window has an intervening punctuation token.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/2117.html">L35-T2117</a></td>
+<td style="text-align: right;">0.889082 -&gt; 1.431669</td>
+<td>Strong before-L/l pattern across stapler, a literal quoted l, demi-glace, charlidamelio and dlon. Gate increases in the alphabet experiment. It shares the exact quote-before-l corpus coordinate with L34-T1440.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/14.html">L33-T14</a></td>
+<td style="text-align: right;">0.998945 -&gt; 0.529324</td>
+<td>Many strongest windows anticipate K/k: 14k, kg, GKE/SKE, kinesis, knee and code variable k. Its gate decreases, while remaining active, in the alphabet experiment.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="roman">Roman</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: right;">Native gate -&gt; T2375 off</th>
+<th>Observed example pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-31/features/50.html">L31-T50</a></td>
+<td style="text-align: right;">0.539794 -&gt; 0.000000</td>
+<td>Broad mathematical definitions and programming. A lower-strength window activates on the space immediately before 11 percent (0.531). This is a weak before-eleven example, not twelve specificity.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-32/features/979.html">L32-T979</a></td>
+<td style="text-align: right;">0.000000 -&gt; 0.512836</td>
+<td>Mostly book/citation/title endings and entity fragments. No clear XI/XII-specific precursor pattern in the reviewed examples.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/1873.html">L33-T1873</a></td>
+<td style="text-align: right;">0.741494 -&gt; 0.000000</td>
+<td>Strongest examples often precede rhyming line endings such as tall, all, call, swell and whole. Other examples include a French word fragment and chat-start markers. No clear XI/XII pattern.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/1837.html">L34-T1837</a></td>
+<td style="text-align: right;">1.187115 -&gt; 0.000000</td>
+<td>Acronym/entity fragments, parentheses and HTML list formatting. No clear XI/XII or before-twelve pattern in the displayed examples.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/1221.html">L35-T1221</a></td>
+<td style="text-align: right;">0.000000 -&gt; 0.701498</td>
+<td>Several strong windows anticipate X or I/i in code: PIC X(10), Mouse X and loop-index i. The same Mouse example also activates before Y. This suggests a broad token/notation lead, not a XII-selective gate.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/111.html">L35-T111</a></td>
+<td style="text-align: right;">1.720280 -&gt; 2.001411</td>
+<td>Strong Roman-numeral-format examples before XVIII, VIII, I and III, alongside many date/month prepositions. A lower window activates on the space before literal 12. This is a broad numeral/date lead, not XII specificity.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/909.html">L33-T909</a></td>
+<td style="text-align: right;">1.389652 -&gt; 1.143805</td>
+<td>Broad lowercase institutional/entity names and grammatical bridges, including United Nations, OECD and IMF contexts. No clear XI/XII-specific pattern.</td>
+</tr>
+<tr>
+<td><a href="https://amsterdam.taild80f17.ts.net/layers/layer-32/features/1082.html">L32-T1082</a></td>
+<td style="text-align: right;">2.173589 -&gt; 2.415748</td>
+<td>Numerical/date/range contexts with varied values. Strong examples include a hyphen before the 11 in 2010-11, April before 11, and many 13/14/15 values. Broad numerical continuation evidence, not twelve specificity.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="selected-token-level-evidence">Selected token-level evidence</h2>
+<p>The next token is recorded separately from the active token; for example <code>[·DIS]K</code> means activation belongs to DIS, before K. A middle dot marks a space.</p>
+<h3 id="l33-t587">L33-T587</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/587.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Children:[·"]Twelve!"↵↵</code></td>
+<td style="text-align: right;">5.313</td>
+<td>556 / 725</td>
+<td>Quote before Twelve</td>
+</tr>
+<tr>
+<td><code>: r[·=] 12↵</code></td>
+<td style="text-align: right;">4.750</td>
+<td>4805 / 712</td>
+<td>Equals sign then active space before 12</td>
+</tr>
+<tr>
+<td><code>will return[·]13,</code></td>
+<td style="text-align: right;">4.844</td>
+<td>2043 / 205</td>
+<td>Counterexample: space before 13</td>
+</tr>
+<tr>
+<td><code>Sept.[·]11,</code></td>
+<td style="text-align: right;">4.688</td>
+<td>11010 / 156</td>
+<td>Counterexample: space before September 11</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l34-t965">L34-T965</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/965.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ASSIGN TO[·DIS]K↵</code></td>
+<td style="text-align: right;">3.719</td>
+<td>8714 / 650</td>
+<td>DIS before K</td>
+</tr>
+<tr>
+<td><code>record [4]K videos</code></td>
+<td style="text-align: right;">3.531</td>
+<td>6956 / 558</td>
+<td>4 before K</td>
+</tr>
+<tr>
+<td><code>low/mod[erate]/high): ")↵</code></td>
+<td style="text-align: right;">3.391</td>
+<td>4507 / 313</td>
+<td>Counterexample: moderate/high input option</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l35-t760">L35-T760</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/760.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.↵↵H[aw]king's work</code></td>
+<td style="text-align: right;">2.953</td>
+<td>10885 / 421</td>
+<td>aw before king in Hawking</td>
+</tr>
+<tr>
+<td><code>record [8]K videos</code></td>
+<td style="text-align: right;">2.844</td>
+<td>6956 / 534</td>
+<td>8 before K</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l31-t50">L31-T50</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-31/features/50.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>represent an[·]11 percent</code></td>
+<td style="text-align: right;">0.531</td>
+<td>3055 / 381</td>
+<td>Lower-strength space before 11 percent</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l33-t1873">L33-T1873</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/1873.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>spirit stands[·so] tall.↵</code></td>
+<td style="text-align: right;">4.344</td>
+<td>3904 / 256</td>
+<td>so before poetic tall</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l35-t1221">L35-T1221</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/1221.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0    [·PIC] X(1</code></td>
+<td style="text-align: right;">4.250</td>
+<td>9482 / 851</td>
+<td>PIC before X</td>
+</tr>
+<tr>
+<td><code>.GetAxis("[Mouse] X")</code></td>
+<td style="text-align: right;">3.766</td>
+<td>9680 / 768</td>
+<td>Mouse before X; same window also contains Mouse before Y</td>
+</tr>
+<tr>
+<td><code>&lt;= drops[;] i++)↵</code></td>
+<td style="text-align: right;">3.688</td>
+<td>2689 / 727</td>
+<td>Semicolon before loop index i</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l34-t1440">L34-T1440</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/1440.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>l",[·"]l", "</code></td>
+<td style="text-align: right;">4.063</td>
+<td>6035 / 914</td>
+<td>Quote immediately before literal l</td>
+</tr>
+<tr>
+<td><code>of [1]L.↵</code></td>
+<td style="text-align: right;">3.703</td>
+<td>9443 / 609</td>
+<td>1 immediately before L</td>
+</tr>
+<tr>
+<td><code>,[·K]. L. (</code></td>
+<td style="text-align: right;">3.859</td>
+<td>7016 / 595</td>
+<td>Initial K before dot then L</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l35-t2117">L35-T2117</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/2117.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>heavy-duty[·stap]ler uses</code></td>
+<td style="text-align: right;">4.594</td>
+<td>447 / 237</td>
+<td>stap before ler</td>
+</tr>
+<tr>
+<td><code>l",[·"]l", "</code></td>
+<td style="text-align: right;">4.344</td>
+<td>6035 / 914</td>
+<td>Same quote-before-l coordinate as L34-T1440</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l33-t14">L33-T14</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-33/features/14.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1[4]k yellow gold</code></td>
+<td style="text-align: right;">2.328</td>
+<td>11097 / 334</td>
+<td>4 before k in 14k gold</td>
+</tr>
+<tr>
+<td><code>([int] k =</code></td>
+<td style="text-align: right;">2.234</td>
+<td>5522 / 470</td>
+<td>int before code variable k</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l35-t111">L35-T111</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-35/features/111.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>del sec[.] XVIII°</code></td>
+<td style="text-align: right;">3.250</td>
+<td>7965 / 747</td>
+<td>Period before XVIII</td>
+</tr>
+<tr>
+<td><code>son became[·Henry] VIII.↵</code></td>
+<td style="text-align: right;">2.828</td>
+<td>9937 / 402</td>
+<td>Henry before VIII</td>
+</tr>
+<tr>
+<td><code>." ([Act] III,</code></td>
+<td style="text-align: right;">2.703</td>
+<td>9469 / 1014</td>
+<td>Act before III</td>
+</tr>
+<tr>
+<td><code>with remainder[·]12.</code></td>
+<td style="text-align: right;">0.516</td>
+<td>10747 / 810</td>
+<td>Lower-strength space before literal 12</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="l32-t1082">L32-T1082</h3>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-32/features/1082.html">Original examples</a></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Excerpt</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / token</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>10[-]11 regular</code></td>
+<td style="text-align: right;">4.063</td>
+<td>3914 / 334</td>
+<td>Hyphen before 11 in the season 2010-11</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="what-remains-to-test">What remains to test</h2>
+<p>The clearest alphabet follow-ups would preserve the native contributions of the K-related gates during T2375 ablation, or remove the L-related contributions individually. Roman candidates and the shared numerical T587 remain less specific. None of these causal follow-ups was performed here.</p>
+<p>The earlier failed T1468 rescue does not rule out these distinct candidates or combinations of them.</p>
+<h2 id="limits">Limits</h2>
+<ul>
+<li>Displayed examples are a selected subset of a ten-million-token corpus, not an exhaustive selectivity test.</li>
+<li>Before-K/L includes word fragments and case/whitespace variants; it is not a claim that every example predicts the exact answer BPE token.</li>
+<li>Medium/lower windows for several features repeat chat-start markers and add limited semantic diversity.</li>
+<li>These MOLT gates are diagnostics on native states; neither examples nor gate-value shifts establish a causal contribution direction.</li>
+<li>No causal tests were run on these new candidates. Existing T1468 negative ablation/rescue results do not rule out these other features.</li>
+</ul>
+<p>Validation: 19 features, 456 displayed windows, 13921 tooltip token records; all source identities, contiguous coordinates and label matches verified.</p>
+<p>Raw pages and SHA-256 hashes are preserved under comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/. Reproduce this audit: <code>python3 experiments/eleven-downstream-gates-20261103/inspect_alphabet_roman.py</code>.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-downstream-gates/ALPHABET_ROMAN_EXAMPLES.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-downstream-gates/ALPHABET_ROMAN_EXAMPLES.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

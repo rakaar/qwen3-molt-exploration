@@ -1,0 +1,176 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Downstream MOLT gates after L29-T2375 removal · Eleven → Twelve</title><meta name="description" content="Downstream MOLT gates after L29-T2375 removal"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-downstream-gates/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="downstream-molt-gates-after-l29-t2375-removal">Downstream MOLT gates after L29-T2375 removal</h1>
+<p>Final input is in native and L29-T2375-off runs; L30-L35 encoders are observed offline. Every later native MLP runs normally. No later gate or MLP is replaced.</p>
+<p>Native MLPs are unchanged. Each later MOLT encoder receives its own layer's post-attention residual before native post_attention_layernorm, using checkpoint mean/std. Gate values are scored offline in FP64; independent FP32 evaluation gives identical active sets.</p>
+<p>Labels are cached from 21 October and describe activation hypotheses. This is a gate comparison, not a measurement of full MOLT contributions or later-transform causal effects.</p>
+<h2 id="month">Month</h2>
+<p>Prompt: <code>the eleventh month of the year is</code>. Only input position 7 (<code>is</code>) is directly edited at L29.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Native active gates</th>
+<th>After L29-T2375 off</th>
+<th>Largest gate changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L30</td>
+<td>T15 (1.105), T433 (0.566), T858 (0.972), T949 (0.556), T1724 (0.945)</td>
+<td>T15 (1.105), T858 (0.936), T949 (0.545), T1724 (0.893)</td>
+<td>T433: 0.566 -&gt; 0.000 (-0.566); Temporal and Calendar Token Gate; T1724: 0.945 -&gt; 0.893 (-0.052); Range Hyphens and Sentence Punctuation; T858: 0.972 -&gt; 0.936 (-0.036); Prepositions framing temporal and spatial contexts; T949: 0.556 -&gt; 0.545 (-0.011); Temporal and Spatial Prepositions; T15: 1.105 -&gt; 1.105 (+0.000); User Token Newline Gate</td>
+</tr>
+<tr>
+<td>L31</td>
+<td>T135 (1.321), T760 (0.529), T2294 (2.023)</td>
+<td>T135 (1.322), T760 (0.531), T797 (0.655), T949 (0.562), T2294 (2.033)</td>
+<td>T797: 0.000 -&gt; 0.655 (+0.655); Winter Weather Context Gate; T949: 0.000 -&gt; 0.562 (+0.562); Temporal and Financial Timeframe Prepositions; T2294: 2.023 -&gt; 2.033 (+0.010); Temporal and Spatial Context Prepositions; T760: 0.529 -&gt; 0.531 (+0.002); Final Token of Titles and Headers; T135: 1.321 -&gt; 1.322 (+0.000); User Prompt and Response Start</td>
+</tr>
+<tr>
+<td>L32</td>
+<td>T15 (1.123), T224 (0.705), T335 (3.268), T962 (1.068), T1181 (0.829)</td>
+<td>T15 (1.114), T224 (0.707), T335 (3.251), T962 (1.191), T1181 (0.785)</td>
+<td>T962: 1.068 -&gt; 1.191 (+0.122); Food Ingredient and Substitute Nouns; T1181: 0.829 -&gt; 0.785 (-0.044); Seasonal Holiday Token Activation; T335: 3.268 -&gt; 3.251 (-0.017); Temporal Reference Token Activation; T15: 1.123 -&gt; 1.114 (-0.009); End-of-Turn Token Detection; T224: 0.705 -&gt; 0.707 (+0.002); Prepositions Introducing Specific Entities</td>
+</tr>
+<tr>
+<td>L33</td>
+<td>T422 (1.590), T587 (1.125), T795 (1.187), T909 (1.251), T968 (0.892)</td>
+<td>T422 (1.580), T587 (0.945), T795 (1.203), T909 (1.173), T968 (0.862)</td>
+<td>T587: 1.125 -&gt; 0.945 (-0.180); List and Sequence Token Activation; T909: 1.251 -&gt; 1.173 (-0.077); Proper Noun and Entity Token Activation; T968: 0.892 -&gt; 0.862 (-0.030); Copula Verb Gate Activation; T795: 1.187 -&gt; 1.203 (+0.016); Multi-word phrase and idiom detection; T422: 1.590 -&gt; 1.580 (-0.010); Temporal Marker Gate</td>
+</tr>
+<tr>
+<td>L34</td>
+<td>T65 (0.795), T90 (1.552), T159 (1.845), T391 (1.445), T666 (0.794), T1267 (0.711), T1468 (1.290), T1593 (2.087)</td>
+<td>T65 (0.763), T84 (0.587), T90 (1.496), T159 (1.836), T391 (1.454), T666 (0.737), T1267 (0.682), T1468 (0.718), T1593 (2.119)</td>
+<td>T84: 0.000 -&gt; 0.587 (+0.587); Connector Tokens in Compounds and Idioms; T1468: 1.290 -&gt; 0.718 (-0.572); Article "An" Preceding Noun; T666: 0.794 -&gt; 0.737 (-0.058); Copula Verb Main Clause Trigger; T90: 1.552 -&gt; 1.496 (-0.055); Proper Noun and Entity Reference Gate; T65: 0.795 -&gt; 0.763 (-0.032); Punctuation and Format Nouns Trigger</td>
+</tr>
+<tr>
+<td>L35</td>
+<td>T111 (1.107), T253 (1.723), T1716 (1.266)</td>
+<td>T111 (1.101), T253 (1.720), T1716 (1.283)</td>
+<td>T1716: 1.266 -&gt; 1.283 (+0.017); Proper Noun and Location Gate; T111: 1.107 -&gt; 1.101 (-0.006); Temporal Preposition and Date Gate; T253: 1.723 -&gt; 1.720 (-0.003); Prompt Start Token Detection</td>
+</tr>
+</tbody>
+</table></div>
+<p>Exact newly on/off sets and full labels, raw scores, thresholds and all active-gate values are in summary.json and the interactive table.</p>
+<h2 id="alphabet">Alphabet</h2>
+<p>Prompt: <code>the eleventh letter of the english alphabet is</code>. Only input position 8 (<code>is</code>) is directly edited at L29.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Native active gates</th>
+<th>After L29-T2375 off</th>
+<th>Largest gate changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L30</td>
+<td>T15 (1.084), T241 (0.653), T1724 (0.892)</td>
+<td>T15 (1.085), T241 (0.768), T1724 (0.731)</td>
+<td>T1724: 0.892 -&gt; 0.731 (-0.162); Range Hyphens and Sentence Punctuation; T241: 0.653 -&gt; 0.768 (+0.115); Linguistic Structure and Phonetic Mechanics; T15: 1.084 -&gt; 1.085 (+0.001); User Token Newline Gate</td>
+</tr>
+<tr>
+<td>L31</td>
+<td>T135 (1.221), T438 (0.683), T626 (1.169), T760 (0.863)</td>
+<td>T135 (1.245), T438 (0.782), T626 (1.114), T760 (0.887)</td>
+<td>T438: 0.683 -&gt; 0.782 (+0.099); Code and Formula Syntax Token Gate; T626: 1.169 -&gt; 1.114 (-0.055); Character Classification and String Manipulation; T760: 0.863 -&gt; 0.887 (+0.024); Final Token of Titles and Headers; T135: 1.221 -&gt; 1.245 (+0.024); User Prompt and Response Start</td>
+</tr>
+<tr>
+<td>L32</td>
+<td>T15 (1.015), T438 (1.809), T1181 (0.648)</td>
+<td>T15 (1.050), T438 (1.944)</td>
+<td>T1181: 0.648 -&gt; 0.000 (-0.648); Seasonal Holiday Token Activation; T438: 1.809 -&gt; 1.944 (+0.135); Structural Delimiters and Classification Labels; T15: 1.015 -&gt; 1.050 (+0.034); End-of-Turn Token Detection</td>
+</tr>
+<tr>
+<td>L33</td>
+<td>T14 (0.999), T157 (0.702), T438 (2.016), T795 (1.127), T909 (0.848)</td>
+<td>T14 (0.529), T157 (0.648), T391 (0.614), T438 (2.210), T587 (0.638), T795 (1.122), T909 (0.793), T968 (0.623)</td>
+<td>T587: 0.000 -&gt; 0.638 (+0.638); List and Sequence Token Activation; T968: 0.000 -&gt; 0.623 (+0.623); Copula Verb Gate Activation; T391: 0.000 -&gt; 0.614 (+0.614); List and Enumeration Token Detection; T14: 0.999 -&gt; 0.529 (-0.470); Proper Noun and Acronym Gate; T438: 2.016 -&gt; 2.210 (+0.193); Structural Delimiters and Formatting Tokens</td>
+</tr>
+<tr>
+<td>L34</td>
+<td>T90 (0.966), T159 (1.928), T241 (1.991), T666 (0.647), T965 (1.258), T1440 (1.037), T1468 (1.085), T1475 (0.699)</td>
+<td>T90 (0.834), T159 (1.902), T241 (1.919), T1440 (1.691), T1468 (0.681), T1475 (0.733)</td>
+<td>T965: 1.258 -&gt; 0.000 (-1.258); End-of-Sequence Completion Signal; T1440: 1.037 -&gt; 1.691 (+0.654); Suffix and Acronym Token Gate; T666: 0.647 -&gt; 0.000 (-0.647); Copula Verb Main Clause Trigger; T1468: 1.085 -&gt; 0.681 (-0.404); Article "An" Preceding Noun; T90: 0.966 -&gt; 0.834 (-0.132); Proper Noun and Entity Reference Gate</td>
+</tr>
+<tr>
+<td>L35</td>
+<td>T200 (0.911), T253 (1.812), T760 (0.920), T1221 (0.580), T1269 (0.831), T2117 (0.889)</td>
+<td>T200 (0.844), T253 (1.805), T1177 (0.534), T1221 (0.652), T1269 (0.561), T2117 (1.432)</td>
+<td>T760: 0.920 -&gt; 0.000 (-0.920); Mid-Word Proper Noun and Spec Tokens; T2117: 0.889 -&gt; 1.432 (+0.543); Proper Noun First-Token Gate; T1177: 0.000 -&gt; 0.534 (+0.534); Proper Noun Termination Gate; T1269: 0.831 -&gt; 0.561 (-0.270); Multi-Token Proper Noun and Acronym Activation; T1221: 0.580 -&gt; 0.652 (+0.072); Multi-token proper noun and brand activation</td>
+</tr>
+</tbody>
+</table></div>
+<p>Exact newly on/off sets and full labels, raw scores, thresholds and all active-gate values are in summary.json and the interactive table.</p>
+<h2 id="roman">Roman</h2>
+<p>Prompt: <code>the eleventh positive integer in roman numerals is</code>. Only input position 9 (<code>is</code>) is directly edited at L29.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Native active gates</th>
+<th>After L29-T2375 off</th>
+<th>Largest gate changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L30</td>
+<td>T15 (1.071), T412 (0.751), T1724 (1.394), T2088 (1.019)</td>
+<td>T15 (1.069), T412 (0.709), T1724 (1.210), T2088 (1.060)</td>
+<td>T1724: 1.394 -&gt; 1.210 (-0.184); Range Hyphens and Sentence Punctuation; T412: 0.751 -&gt; 0.709 (-0.042); Copula Verb Gate; T2088: 1.019 -&gt; 1.060 (+0.042); Product Size Availability Tokens; T15: 1.071 -&gt; 1.069 (-0.002); User Token Newline Gate</td>
+</tr>
+<tr>
+<td>L31</td>
+<td>T50 (0.540), T135 (1.127), T250 (1.778), T760 (0.577), T1798 (0.845)</td>
+<td>T135 (1.150), T250 (1.744), T760 (0.624), T1798 (0.805)</td>
+<td>T50: 0.540 -&gt; 0.000 (-0.540); Technical and Mathematical Token Gate; T760: 0.577 -&gt; 0.624 (+0.047); Final Token of Titles and Headers; T1798: 0.845 -&gt; 0.805 (-0.040); Thresholds and Division Triggers; T250: 1.778 -&gt; 1.744 (-0.034); Preceding Tokens for Numerical Values; T135: 1.127 -&gt; 1.150 (+0.023); User Prompt and Response Start</td>
+</tr>
+<tr>
+<td>L32</td>
+<td>T15 (0.934), T190 (0.642), T438 (1.964), T1082 (2.174), T1164 (1.123), T1465 (1.436), T2401 (0.884)</td>
+<td>T15 (0.934), T190 (0.732), T438 (2.162), T979 (0.513), T1082 (2.416), T1164 (1.363), T1465 (1.587), T2401 (0.975)</td>
+<td>T979: 0.000 -&gt; 0.513 (+0.513); Final Token of Proper Noun; T1082: 2.174 -&gt; 2.416 (+0.242); Numeric Sequence and Range Token Gate; T1164: 1.123 -&gt; 1.363 (+0.241); Nouns, Articles, and Suffixes; T438: 1.964 -&gt; 2.162 (+0.197); Structural Delimiters and Classification Labels; T1465: 1.436 -&gt; 1.587 (+0.152); Syntactic Bridge Function Words</td>
+</tr>
+<tr>
+<td>L33</td>
+<td>T157 (0.953), T383 (1.040), T438 (1.003), T490 (1.832), T587 (2.363), T795 (0.745), T909 (1.390), T968 (0.722), T1873 (0.741)</td>
+<td>T157 (0.930), T383 (1.281), T438 (1.141), T490 (1.862), T587 (2.574), T795 (0.645), T909 (1.144), T968 (0.788)</td>
+<td>T1873: 0.741 -&gt; 0.000 (-0.741); Syntactic Closure Point; T909: 1.390 -&gt; 1.144 (-0.246); Proper Noun and Entity Token Activation; T383: 1.040 -&gt; 1.281 (+0.241); Suffix Tokens Completing Multi-Token Entities; T587: 2.363 -&gt; 2.574 (+0.212); List and Sequence Token Activation; T438: 1.003 -&gt; 1.141 (+0.138); Structural Delimiters and Formatting Tokens</td>
+</tr>
+<tr>
+<td>L34</td>
+<td>T90 (1.226), T157 (1.522), T159 (1.937), T241 (1.225), T1468 (2.429), T1837 (1.187)</td>
+<td>T90 (1.034), T157 (1.575), T159 (1.899), T241 (1.108), T1468 (1.319)</td>
+<td>T1837: 1.187 -&gt; 0.000 (-1.187); Proper Noun and Entity Start Trigger; T1468: 2.429 -&gt; 1.319 (-1.110); Article "An" Preceding Noun; T90: 1.226 -&gt; 1.034 (-0.192); Proper Noun and Entity Reference Gate; T241: 1.225 -&gt; 1.108 (-0.116); Mathematical and Code Symbol Gate; T157: 1.522 -&gt; 1.575 (+0.054); Proper Nouns for Software and Platforms</td>
+</tr>
+<tr>
+<td>L35</td>
+<td>T111 (1.720), T253 (1.868), T254 (0.618), T314 (0.581), T1278 (0.699)</td>
+<td>T111 (2.001), T253 (1.835), T254 (0.630), T314 (0.518), T1221 (0.701), T1278 (0.606)</td>
+<td>T1221: 0.000 -&gt; 0.701 (+0.701); Multi-token proper noun and brand activation; T111: 1.720 -&gt; 2.001 (+0.281); Temporal Preposition and Date Gate; T1278: 0.699 -&gt; 0.606 (-0.093); Multi-token word and proper noun suffixes; T314: 0.581 -&gt; 0.518 (-0.063); Scattered Weak Activations on General Text Structure; T253: 1.868 -&gt; 1.835 (-0.032); Prompt Start Token Detection</td>
+</tr>
+</tbody>
+</table></div>
+<p>Exact newly on/off sets and full labels, raw scores, thresholds and all active-gate values are in summary.json and the interactive table.</p>
+<h2 id="verification">Verification</h2>
+<p>{
+  "status": "pass",
+  "captured_array_files_hash_verified": 15,
+  "native_observer_zero_and_off_repeat_exact": true,
+  "all_block_residuals_match_previous_study_exactly": true,
+  "earlier_input_states_exactly_unchanged": true,
+  "native_MLPs_replaced": false,
+  "gate_layers": 6,
+  "transforms_per_layer": 2480,
+  "case_layer_transform_pairs": 44640,
+  "FP32_FP64_membership_checks": 89280,
+  "FP32_FP64_membership_disagreements": 0,
+  "FP32_FP64_raw_max_absolute_error": 6.6268289287130244e-06,
+  "gate_cache_and_original_checkpoint_tensor_hashes_verified": true
+}</p>
+<p>All 44,640 case/layer/transform pairs are retained in all-gate-values.csv, including gates inactive in both conditions. Active-gate-changes.csv retains the full active union. No new native-model inference was required for the offline gate scoring, after the paired input captures.</p>
+<p>Reproduce: <code>python3 experiments/eleven-downstream-gates-20261103/analyze.py</code>, then <code>python3 experiments/eleven-downstream-gates-20261103/render.py</code>.</p>
+<p>These observations identify candidate downstream gates for follow-up; they do not establish which one mediates the answer change.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-downstream-gates/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-downstream-gates/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

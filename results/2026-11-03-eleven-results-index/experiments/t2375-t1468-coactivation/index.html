@@ -1,0 +1,130 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>T2375 and T1468 often coactivate, with clear exceptions · Eleven → Twelve</title><meta name="description" content="Across 56 prompts, 43 token pairs have both gates active, 21 only T2375 and two only T1468. Correlation among the 66 plotted nonzero pairs is 0.39."><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/experiments/t2375-t1468-coactivation/"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a> / 17</div><section class="hero"><p class="eyebrow">observation</p><h1>T2375 and T1468 often coactivate, with clear exceptions</h1><p class="detail-lead">Across 56 prompts, 43 token pairs have both gates active, 21 only T2375 and two only T1468. Correlation among the 66 plotted nonzero pairs is 0.39.</p></section><section class="paper"><p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/interactive/coactivation/">Explore the token scatter with filters and point details →</a></p></section><section class="paper"><p class="report-label">Original report 1</p><h2 id="natural-coactivation-of-l29-t2375-and-l34-t1468">Natural coactivation of L29-T2375 and L34-T1468</h2>
+<p>Measured all input tokens in <strong>56 distinct historical eleven-related inputs</strong>, spanning five languages, ten domains and raw/chat formats. Both gates are scored on the unmodified native model. No ablation or new generation was performed.</p>
+<p><img alt="Gate coactivation" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-gate-coactivation/gate-coactivation.png"/></p>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/interactive/coactivation/">Interactive scatter</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-gate-coactivation/all-token-pairs.csv">All token pairs, including zeros</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-gate-coactivation/plotted-token-pairs.csv">Plotted points</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-gate-coactivation/prompt-summary.csv">Prompt summary</a></p>
+<p><strong>One point = the same prompt and token position in L29 and L34.</strong> x is L29-T2375 and y is L34-T1468. Values use each checkpoint encoder, learned threshold and input standardizers. No UVx, contribution normalization or final RMSNorm is applied.</p>
+<p>Of 1121 input-token pairs, 43 have both gates active, 21 have only T2375 active, 2 have only T1468 active and 1055 have both zero. Only the last group is omitted from the scatter. It remains in the downloadable data.</p>
+<p>T2375 activates somewhere in 37/56 prompts; T1468 in 30/56; both activate at the same token in 30/56 prompts.</p>
+<p>Pearson r is 0.389 among the retained points and 0.769 when all double-zero points are included. The higher zero-inclusive value partly reflects shared silence; these dependent token observations do not support a significance claim.</p>
+<h2 id="interpretation-limits">Interpretation limits</h2>
+<ul>
+<li>Gate scalars only: no UVx, full MOLT contribution, contribution norm or causal support is measured.</li>
+<li>Native later MLPs remain unchanged; MOLT encoders are diagnostics on the native hidden states.</li>
+<li>These are selected historical eleven-related inputs, not a held-out sample or eleven-vs-other-ordinal specificity control.</li>
+<li>Token points within/across related prompts are dependent; Pearson values are descriptive, with no significance claim.</li>
+<li>Dropping (0,0) conditions the plotted sample and can change its apparent correlation. All points are retained in the CSV.</li>
+<li>Every point pairs the same token coordinate across layers. Separate per-prompt maxima are never paired.</li>
+<li>Input tokens only, including recorded chat wrappers; generated continuations are excluded.</li>
+</ul>
+<p>The scatter checks coactivation. Positive coactivation does not by itself show that either transform supports the eleven answer, and this eleven-only set does not establish ordinal specificity.</p>
+<h2 id="verification">Verification</h2>
+<p>All 56 captures have SHA-256-verified files and exact unhooked/observed full-vocabulary logits at the final input position. The three original month/alphabet/Roman inputs also reproduce their prior native input states and logits exactly and repeat exactly. FP32/FP64 evaluation agrees on every one of 2242 gate membership decisions.</p>
+<h2 id="original-reference-prompts">Original reference prompts</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th style="text-align: right;">L29-T2375 at final is</th>
+<th style="text-align: right;">L34-T1468 at final is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>the eleventh month of the year is</code></td>
+<td style="text-align: right;">1.158554</td>
+<td style="text-align: right;">1.289993</td>
+</tr>
+<tr>
+<td><code>the eleventh letter of the english alphabet is</code></td>
+<td style="text-align: right;">1.906587</td>
+<td style="text-align: right;">1.084717</td>
+</tr>
+<tr>
+<td><code>the eleventh positive integer in roman numerals is</code></td>
+<td style="text-align: right;">1.696772</td>
+<td style="text-align: right;">2.429366</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="reproduce">Reproduce</h2>
+<p>Source: experiments/eleven-gate-coactivation-20261103/. Build the catalog, capture native layer-specific inputs on the pinned model, then run analyze.py and render.py. catalog.json enumerates every included prompt and its historical source; summary.json retains source hashes, raw encoder scores and all zero pairs.</p><div class="source-footer"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-gate-coactivation/README.html">Open this report separately</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-gate-coactivation/README.md">Original Markdown</a><br><code>results/2026-11-03-eleven-gate-coactivation/README.md</code></div></section><section class="paper"><p class="report-label">Original report 2</p><h2 id="l34-t1468-activating-examples-of-the-shared-decreasing-gate">L34-T1468: activating examples of the shared decreasing gate</h2>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/1468.html">Original authenticated dashboard</a></p>
+<p>All 12 strongest, 6 medium and 6 lower-strength windows shown on the authenticated original dashboard; not an exhaustive corpus scan.</p>
+<p>All 18 strongest/medium window maxima fall on the an/An token, including word fragments in Anubis, Anagram, Ankh, Annotating and Anxiety.</p>
+<p>One strongest example activates on an, the following space and the first digit of 11-year-old. A lower example activates on the space immediately before 11.4; another activates on 9 before the final 11 in 1911.</p>
+<p>No clear twelve-related activation example was found in the 24 displayed windows.</p>
+<p>Square brackets mark the active token. Gate values are rounded dashboard tooltip values.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Active token</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>about an 11-year-old</td>
+<td><code>an</code></td>
+<td style="text-align: right;">6.094</td>
+<td>3936 / 247</td>
+</tr>
+<tr>
+<td>about an [space]11-year-old</td>
+<td>space immediately before 11</td>
+<td style="text-align: right;">4.438</td>
+<td>3936 / 248</td>
+</tr>
+<tr>
+<td>about an 11-year-old</td>
+<td>first digit <code>1</code></td>
+<td style="text-align: right;">2.391</td>
+<td>3936 / 249</td>
+</tr>
+<tr>
+<td>rate is at [space]11.4 percent</td>
+<td>space immediately before 11.4</td>
+<td style="text-align: right;">0.617</td>
+<td>9329 / 469</td>
+</tr>
+<tr>
+<td>dynasty in 1911</td>
+<td>digit <code>9</code>, before the remaining <code>11</code></td>
+<td style="text-align: right;">0.602</td>
+<td>5243 / 865</td>
+</tr>
+</tbody>
+</table></div>
+<p>The second digit of 11-year-old and both digits of 11.4 have zero displayed gate. The word-fragment examples argue for a broader lexical pattern than the label description alone suggests.</p>
+<h2 id="gate-at-final-input-is-in-our-paired-experiment">Gate at final input <code>is</code> in our paired experiment</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt family</th>
+<th style="text-align: right;">Native</th>
+<th style="text-align: right;">After L29-T2375 ablation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>month</td>
+<td style="text-align: right;">1.289993</td>
+<td style="text-align: right;">0.717599</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td style="text-align: right;">1.084717</td>
+<td style="text-align: right;">0.681166</td>
+</tr>
+<tr>
+<td>roman</td>
+<td style="text-align: right;">2.429366</td>
+<td style="text-align: right;">1.319434</td>
+</tr>
+</tbody>
+</table></div>
+<p>The examples support a broad an/An token pattern with some before-11 timing. They do not establish an abstract eleven feature or explain why its gate decreases at is across the three intervention cases. No causal role for this later transform has been tested.</p>
+<p>This is a review of gate activation examples, not a measurement of the full operator contribution or a downstream intervention. No model inference was run.</p>
+<p>Source token IDs, coordinates, displayed strengths, the source hash and all window texts are retained in the raw capture and T1468-examples.json.</p>
+<p>Reproduce: <code>python3 experiments/eleven-downstream-gates-20261103/inspect_t1468.py</code>.</p><div class="source-footer"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-downstream-gates/T1468_EXAMPLES.html">Open this report separately</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-downstream-gates/T1468_EXAMPLES.md">Original Markdown</a><br><code>results/2026-11-03-eleven-downstream-gates/T1468_EXAMPLES.md</code></div></section><section class="paper"><h2>Data and scope</h2><p>These are selected exploratory experiments. Initial answers, longer continuations, gate activations and causal interventions are distinct measurements. Original reports retain their recorded scope and validation; operational notes describe the time of the experiment.</p><div class="downloads"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-gate-coactivation/summary.json">2026-11-03-eleven-gate-coactivation / summary.json</a></div></section><p class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← Back to all 18 results</a></p></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>L34-T1468: activating examples of the shared decreasing gate · Eleven → Twelve</title><meta name="description" content="L34-T1468: activating examples of the shared decreasing gate"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-downstream-gates/T1468_EXAMPLES.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="l34-t1468-activating-examples-of-the-shared-decreasing-gate">L34-T1468: activating examples of the shared decreasing gate</h1>
+<p><a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/1468.html">Original authenticated dashboard</a></p>
+<p>All 12 strongest, 6 medium and 6 lower-strength windows shown on the authenticated original dashboard; not an exhaustive corpus scan.</p>
+<p>All 18 strongest/medium window maxima fall on the an/An token, including word fragments in Anubis, Anagram, Ankh, Annotating and Anxiety.</p>
+<p>One strongest example activates on an, the following space and the first digit of 11-year-old. A lower example activates on the space immediately before 11.4; another activates on 9 before the final 11 in 1911.</p>
+<p>No clear twelve-related activation example was found in the 24 displayed windows.</p>
+<p>Square brackets mark the active token. Gate values are rounded dashboard tooltip values.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Active token</th>
+<th style="text-align: right;">Displayed gate</th>
+<th>Conversation / position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>about an 11-year-old</td>
+<td><code>an</code></td>
+<td style="text-align: right;">6.094</td>
+<td>3936 / 247</td>
+</tr>
+<tr>
+<td>about an [space]11-year-old</td>
+<td>space immediately before 11</td>
+<td style="text-align: right;">4.438</td>
+<td>3936 / 248</td>
+</tr>
+<tr>
+<td>about an 11-year-old</td>
+<td>first digit <code>1</code></td>
+<td style="text-align: right;">2.391</td>
+<td>3936 / 249</td>
+</tr>
+<tr>
+<td>rate is at [space]11.4 percent</td>
+<td>space immediately before 11.4</td>
+<td style="text-align: right;">0.617</td>
+<td>9329 / 469</td>
+</tr>
+<tr>
+<td>dynasty in 1911</td>
+<td>digit <code>9</code>, before the remaining <code>11</code></td>
+<td style="text-align: right;">0.602</td>
+<td>5243 / 865</td>
+</tr>
+</tbody>
+</table></div>
+<p>The second digit of 11-year-old and both digits of 11.4 have zero displayed gate. The word-fragment examples argue for a broader lexical pattern than the label description alone suggests.</p>
+<h2 id="gate-at-final-input-is-in-our-paired-experiment">Gate at final input <code>is</code> in our paired experiment</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt family</th>
+<th style="text-align: right;">Native</th>
+<th style="text-align: right;">After L29-T2375 ablation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>month</td>
+<td style="text-align: right;">1.289993</td>
+<td style="text-align: right;">0.717599</td>
+</tr>
+<tr>
+<td>alphabet</td>
+<td style="text-align: right;">1.084717</td>
+<td style="text-align: right;">0.681166</td>
+</tr>
+<tr>
+<td>roman</td>
+<td style="text-align: right;">2.429366</td>
+<td style="text-align: right;">1.319434</td>
+</tr>
+</tbody>
+</table></div>
+<p>The examples support a broad an/An token pattern with some before-11 timing. They do not establish an abstract eleven feature or explain why its gate decreases at is across the three intervention cases. No causal role for this later transform has been tested.</p>
+<p>This is a review of gate activation examples, not a measurement of the full operator contribution or a downstream intervention. No model inference was run.</p>
+<p>Source token IDs, coordinates, displayed strengths, the source hash and all window texts are retained in the raw capture and T1468-examples.json.</p>
+<p>Reproduce: <code>python3 experiments/eleven-downstream-gates-20261103/inspect_t1468.py</code>.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-03-eleven-downstream-gates/T1468_EXAMPLES.md">Download original Markdown</a><br>Source: <code>results/2026-11-03-eleven-downstream-gates/T1468_EXAMPLES.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

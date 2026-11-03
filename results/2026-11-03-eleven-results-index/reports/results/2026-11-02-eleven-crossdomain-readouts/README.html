@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Alphabet and Roman-numeral three-part readouts · Eleven → Twelve</title><meta name="description" content="Alphabet and Roman-numeral three-part readouts"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-02-eleven-crossdomain-readouts/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="alphabet-and-roman-numeral-three-part-readouts">Alphabet and Roman-numeral three-part readouts</h1>
+<p>Two separate figures use the same method and layout as the month analysis. Each prompt has its own native final RMSNorm scalar, shared across its three vectors, and the same learned RMSNorm weights and output matrix. The vectors are the full native L29 MLP output, the removed L29-T2375 contribution, and the actual BF16 remainder.</p>
+<p>These are direct vector readouts; top-ranked table tokens are not generated responses. This analysis adds one new native prefill per prompt to reproduce the original MLP vectors exactly and obtain each prompt’s normalization scale. Gate-off vectors and generation records come from the previously audited raw-prefix study.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Prompt family</th>
+<th>Lowercase contrast</th>
+<th style="text-align: right;">Full MLP margin</th>
+<th style="text-align: right;">After-removal margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English alphabet</td>
+<td><code>k</code> versus <code>l</code></td>
+<td style="text-align: right;">+0.472253</td>
+<td style="text-align: right;">+0.319777</td>
+</tr>
+<tr>
+<td>Roman numerals</td>
+<td><code>xi</code> versus <code>x</code></td>
+<td style="text-align: right;">+0.598332</td>
+<td style="text-align: right;">+0.034353</td>
+</tr>
+</tbody>
+</table></div>
+<p>For the alphabet, the isolated remainder still favors k over l. For Roman numerals, the lowercase xi advantage over the x prefix nearly disappears but remains positive. The uppercase XI/X pair changes order by a small amount. These readouts weaken the eleventh-answer preference without fully reproducing the complete model’s initial-answer changes.</p>
+<p>The removed contribution’s highest-scoring tokens include nov/ele fragments in both prompts, despite their different answer domains. This is a prompt-specific observation, not a general semantic label for the transform.</p>
+<h2 id="english-alphabet">English alphabet</h2>
+<p><img alt="Alphabet readout" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-crossdomain-readouts/alphabet/three-part-readout.png"/></p>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-02-eleven-crossdomain-readouts/alphabet/README.html">Alphabet report and complete vocabulary scores</a></p>
+<h2 id="roman-numerals">Roman numerals</h2>
+<p><img alt="Roman readout" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-crossdomain-readouts/roman/three-part-readout.png"/></p>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-02-eleven-crossdomain-readouts/roman/README.html">Roman report and complete vocabulary scores</a></p>
+<p>XII is multi-token in the recorded continuation: <code>x</code> followed by <code>ii</code>. The figure’s x/X rows are shared first-token prefixes, not complete XII tokens.</p>
+<p>Both CPU audits passed, all 151,936 CSV rows per case were checked against the saved arrays, and the remote research files were downloaded and hash-verified.</p>
+<h2 id="original-contribution-cosine-matrix">Original contribution cosine matrix</h2>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-03-eleven-contribution-similarity/README.html">Three-by-three cosine matrix and gate/operator/contribution magnitudes</a> compare the original native-space contributions before final RMSNorm or vocabulary projection.</p><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-crossdomain-readouts/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-02-eleven-crossdomain-readouts/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>

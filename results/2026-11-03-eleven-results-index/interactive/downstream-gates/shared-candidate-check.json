@@ -1,0 +1,875 @@
+{
+  "question": "Do the two month candidates also switch on in the alphabet and Roman-numeral cases?",
+  "protocol": {
+    "model": "Qwen/Qwen3-4B",
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "layer": 29,
+    "transform": 2375,
+    "edit_scope": "Subtract only selected natural contribution at the final input is; no generated-position edits; later layers compute normally.",
+    "observed_block_outputs": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "reported_block_outputs": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "residual_definition": "Output of each complete decoder block, after both residual additions, before the next block; L35 is before final RMSNorm and unembedding. L28 is an unchanged pre-edit control.",
+    "conditions": [
+      "native-unhooked",
+      "native-observed",
+      "zero-strength",
+      "gate-off",
+      "gate-off-repeat"
+    ],
+    "new_tokens": 0,
+    "comparison": "Same input token position and text in all conditions. Only the first-answer distribution is evaluated; no autoregressive text divergence.",
+    "metrics": [
+      "native_l2",
+      "off_l2",
+      "difference_l2",
+      "relative_difference_l2",
+      "cosine",
+      "norm_ratio"
+    ],
+    "maximum_runtime_minutes": 15,
+    "gate_layers": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "downstream_gate_evaluation": "Offline gate encoders on captured layer-specific post-attention residuals, before native post_attention_layernorm; checkpoint input standardization retained. Native later MLPs run normally.",
+    "gate_primary_precision": "CPU FP64, with independent FP32 gate/mask comparison",
+    "later_MLPs_replaced": false
+  },
+  "scope": "L29-T2375 contribution subtracted only at final input is; later native layers run normally. L31-T797/T949 are observed offline, not ablated.",
+  "new_model_inference": false,
+  "gate_rule": "raw = encoder @ ((post-attention residual - mean) / std) + bias; gate = raw if raw > threshold and raw > 0, otherwise 0.",
+  "cases": [
+    {
+      "case": "month",
+      "prompt": "the eleventh month of the year is",
+      "edited_position": 7,
+      "native_greedy_first_token": " november",
+      "off_greedy_first_token": " december",
+      "active_input_positions": {
+        "797": {
+          "native": [],
+          "off": [
+            7
+          ]
+        },
+        "949": {
+          "native": [
+            4,
+            5
+          ],
+          "off": [
+            4,
+            5,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "case": "alphabet",
+      "prompt": "the eleventh letter of the english alphabet is",
+      "edited_position": 8,
+      "native_greedy_first_token": " k",
+      "off_greedy_first_token": " l",
+      "active_input_positions": {
+        "797": {
+          "native": [],
+          "off": []
+        },
+        "949": {
+          "native": [],
+          "off": []
+        }
+      }
+    },
+    {
+      "case": "roman",
+      "prompt": "the eleventh positive integer in roman numerals is",
+      "edited_position": 9,
+      "native_greedy_first_token": " xi",
+      "off_greedy_first_token": " x",
+      "active_input_positions": {
+        "797": {
+          "native": [],
+          "off": []
+        },
+        "949": {
+          "native": [],
+          "off": []
+        }
+      }
+    }
+  ],
+  "final_is_rows": [
+    {
+      "case": "month",
+      "position": 7,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": 0.4747430574835958,
+      "off_raw": 0.655308568680516,
+      "native_gate": 0.0,
+      "off_gate": 0.655308568680516
+    },
+    {
+      "case": "month",
+      "position": 7,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": 0.49533774608201164,
+      "off_raw": 0.5623121046828405,
+      "native_gate": 0.0,
+      "off_gate": 0.5623121046828405
+    },
+    {
+      "case": "alphabet",
+      "position": 8,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9560865585835582,
+      "off_raw": -0.5166607412729671,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 8,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.1444179590074166,
+      "off_raw": -0.9789289286555635,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 9,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.761148642501011,
+      "off_raw": -0.37684074822533675,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 9,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.6101602829535128,
+      "off_raw": -0.35248202120746996,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    }
+  ],
+  "all_input_rows": [
+    {
+      "case": "month",
+      "position": 0,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.46372973689532976,
+      "off_raw": -0.46372973689532976,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 0,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.44484254459326633,
+      "off_raw": -0.44484254459326633,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 1,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -1.236768933564862,
+      "off_raw": -1.236768933564862,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 1,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.631082565710132,
+      "off_raw": -1.631082565710132,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 2,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9695513194048578,
+      "off_raw": -0.9695513194048578,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 2,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.2952087541140151,
+      "off_raw": -1.2952087541140151,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 3,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.26542737798033533,
+      "off_raw": -0.26542737798033533,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 3,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": 0.2523425550777818,
+      "off_raw": 0.2523425550777818,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 4,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.17779376360193555,
+      "off_raw": -0.17779376360193555,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 4,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": 1.367016634009472,
+      "off_raw": 1.367016634009472,
+      "native_gate": 1.367016634009472,
+      "off_gate": 1.367016634009472
+    },
+    {
+      "case": "month",
+      "position": 5,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9150521660392607,
+      "off_raw": -0.9150521660392607,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 5,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": 0.8097167150074422,
+      "off_raw": 0.8097167150074422,
+      "native_gate": 0.8097167150074422,
+      "off_gate": 0.8097167150074422
+    },
+    {
+      "case": "month",
+      "position": 6,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.23904778887418343,
+      "off_raw": -0.23904778887418343,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 6,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.2790354390418993,
+      "off_raw": -0.2790354390418993,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "month",
+      "position": 7,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": 0.4747430574835958,
+      "off_raw": 0.655308568680516,
+      "native_gate": 0.0,
+      "off_gate": 0.655308568680516
+    },
+    {
+      "case": "month",
+      "position": 7,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": 0.49533774608201164,
+      "off_raw": 0.5623121046828405,
+      "native_gate": 0.0,
+      "off_gate": 0.5623121046828405
+    },
+    {
+      "case": "alphabet",
+      "position": 0,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.46372973689532976,
+      "off_raw": -0.46372973689532976,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 0,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.44484254459326633,
+      "off_raw": -0.44484254459326633,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 1,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -1.236768933564862,
+      "off_raw": -1.236768933564862,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 1,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.631082565710132,
+      "off_raw": -1.631082565710132,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 2,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9695513194048578,
+      "off_raw": -0.9695513194048578,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 2,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.2952087541140151,
+      "off_raw": -1.2952087541140151,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 3,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.8970280377856708,
+      "off_raw": -0.8970280377856708,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 3,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.7863670458476182,
+      "off_raw": -0.7863670458476182,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 4,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.3898401660997124,
+      "off_raw": -0.3898401660997124,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 4,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.23355285502768397,
+      "off_raw": -0.23355285502768397,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 5,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -1.0456271609270664,
+      "off_raw": -1.0456271609270664,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 5,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.8859788012091603,
+      "off_raw": -0.8859788012091603,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 6,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.8334793702114658,
+      "off_raw": -0.8334793702114658,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 6,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.3687755260134191,
+      "off_raw": -0.3687755260134191,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 7,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9933843325951381,
+      "off_raw": -0.9933843325951381,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 7,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.9007460041400802,
+      "off_raw": -0.9007460041400802,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 8,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9560865585835582,
+      "off_raw": -0.5166607412729671,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "alphabet",
+      "position": 8,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.1444179590074166,
+      "off_raw": -0.9789289286555635,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 0,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.46372973689532976,
+      "off_raw": -0.46372973689532976,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 0,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.44484254459326633,
+      "off_raw": -0.44484254459326633,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 1,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -1.236768933564862,
+      "off_raw": -1.236768933564862,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 1,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.631082565710132,
+      "off_raw": -1.631082565710132,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 2,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9695513194048578,
+      "off_raw": -0.9695513194048578,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 2,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.2952087541140151,
+      "off_raw": -1.2952087541140151,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 3,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.6376659086584099,
+      "off_raw": -0.6376659086584099,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 3,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.7641908055073807,
+      "off_raw": -0.7641908055073807,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 4,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9999221448319273,
+      "off_raw": -0.9999221448319273,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 4,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.021817100160979,
+      "off_raw": -1.021817100160979,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 5,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.7344398190870643,
+      "off_raw": -0.7344398190870643,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 5,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.067348830271834,
+      "off_raw": -1.067348830271834,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 6,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -1.0379140281766128,
+      "off_raw": -1.0379140281766128,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 6,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.6318246222261608,
+      "off_raw": -1.6318246222261608,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 7,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.980943501638818,
+      "off_raw": -0.980943501638818,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 7,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -1.411012979923687,
+      "off_raw": -1.411012979923687,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 8,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.9392306778018763,
+      "off_raw": -0.9392306778018763,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 8,
+      "is_final_input_is": false,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.7598055079481617,
+      "off_raw": -0.7598055079481617,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 9,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 797,
+      "threshold": 0.5266372561454773,
+      "native_raw": -0.761148642501011,
+      "off_raw": -0.37684074822533675,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    },
+    {
+      "case": "roman",
+      "position": 9,
+      "is_final_input_is": true,
+      "layer": 31,
+      "transform": 949,
+      "threshold": 0.5518115758895874,
+      "native_raw": -0.6101602829535128,
+      "off_raw": -0.35248202120746996,
+      "native_gate": 0.0,
+      "off_gate": 0.0
+    }
+  ],
+  "validation": {
+    "status": "pass",
+    "source_capture_hashes_verified": 6,
+    "L31_gate_cache_hash_verified": true,
+    "matches_existing_final_is_values_to_absolute_tolerance": 1e-12,
+    "FP32_FP64_membership_checks": 108,
+    "FP32_FP64_membership_disagreements": 0,
+    "FP32_FP64_max_raw_error": 1.8272179449496662e-06,
+    "earlier_input_captures_identical": true
+  },
+  "source_sha256": {
+    "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/results.json": "1e229413be07c08918ce10c3be8c98baafae778d0386802a224ceabe81e061a7",
+    "results/2026-11-03-eleven-downstream-gates/summary.json": "252709a2ea4f30c384894b6b0bf82a82281a1de5c35f814a4a3fdfbe4e5d6ec6",
+    "experiments/eleven-downstream-gates-20261103/gate-cache-manifest.json": "3e93c5064e8d0578ce4ace3c2a0d3354ccb220f4ad7ce7a2b9f40170c1463dd2",
+    "experiments/ch-alllayer-causal-screen/gates/layer-31-gates.npz": "02812880e2eee160db13c5e204926829486f8f9cc3cc27730c5c5364d8d8b515",
+    "results/2026-11-03-eleven-downstream-gates/all-gate-values.csv": "177e713cc287a7de46810be9633186e09d4886d929c881a3a8f33ec07b11765f",
+    "experiments/eleven-downstream-gates-20261103/check_shared_candidates.py": "3dedca891bd2956b066499d1417bda7813fa6877d8f16603d7c314976424545e",
+    "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/month--native-observed.npz": "6cf6944149818e639971013d0a89846b909ef53465ea21884e281c599a22f5e3",
+    "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/month--gate-off.npz": "8989bf44e0484aa1259c6f376edbb46c2ea16f61dc93999c7cf66634ad3a9e86",
+    "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/alphabet--native-observed.npz": "6d872ad8da4166b91ffa2654a1ee15ef763c0ba8c8b90354dd80e4c73f7445cc",
+    "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/alphabet--gate-off.npz": "efb99f1304576e15d250db00f73e6d5ae6279bd6f22762701ee4ad2eac92fd10",
+    "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/roman--native-observed.npz": "a11c1b768fb54b86921050d0c067f64e14073d0e47682ba2ca06ea70c03183d9",
+    "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/roman--gate-off.npz": "aae385e06c0aca1d1dc7609de1030ff9bfe52b19921eb2400e89bee7c1dba7d2"
+  },
+  "interpretation": "Both candidates switch on only in the month case among these three prompts. They are not a shared gate-activation explanation at final is across these cases. A month-specific causal role remains untested; the later native MLPs were not replaced with MOLTs.",
+  "roman_caveat": "The saved off first token is x, a prefix compatible with XII; this prefill-only check does not regenerate or score the full XII sequence."
+}

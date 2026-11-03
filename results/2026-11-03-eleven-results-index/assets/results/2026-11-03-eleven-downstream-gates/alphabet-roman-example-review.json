@@ -1,0 +1,1874 @@
+{
+  "scope": "All 13 on/off switches in alphabet/Roman plus the top three absolute continuously-active gate changes per prompt, excluding L34-T1468 already inspected separately.",
+  "source": "Authenticated original dashboard: all 12 strongest, 6 medium and 6 lower-strength displayed windows per feature.",
+  "timing": "Square brackets mark the active token. Following token strings/IDs are recorded separately. Gate strengths in examples are rounded dashboard values.",
+  "intervention_scope": "No GPU inference or new intervention. These are examples from a separate corpus, related to the existing final-input is gate comparisons.",
+  "features": [
+    {
+      "case": "alphabet",
+      "layer": 32,
+      "transform": 1181,
+      "label": "Seasonal Holiday Token Activation",
+      "explanation": "The gate activates on tokens associated with seasonal holidays, particularly Christmas, Halloween, and autumn/fall. It fires on specific holiday names, related adjectives (festive, traditional), and contextual phrases describing seasonal activities, decorations, or events.",
+      "native_gate": 0.6477033789516873,
+      "off_gate": 0.0,
+      "change": "newly_off",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-32/features/1181.html",
+      "retrieved_at": "2026-11-03T12:36:34.993Z",
+      "finding": "Broad Christmas/Halloween/autumn contexts. Frequently active on prepositions, conjunctions and punctuation before seasonal content. No K/L or twelve-specific pattern established in the displayed selection.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.828868054665882,
+          "off_gate": 0.7845393989265956,
+          "gate_delta": -0.04432865573928635
+        },
+        "alphabet": {
+          "native_gate": 0.6477033789516873,
+          "off_gate": 0.0,
+          "gate_delta": -0.6477033789516873
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": []
+    },
+    {
+      "case": "alphabet",
+      "layer": 33,
+      "transform": 391,
+      "label": "List and Enumeration Token Detection",
+      "explanation": "The gate activates on tokens that are part of a list, enumeration, or a sequence of items, often following a number or a conjunction.",
+      "native_gate": 0.0,
+      "off_gate": 0.6137928570411548,
+      "change": "newly_on",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-33/features/391.html",
+      "retrieved_at": "2026-11-03T12:36:46.828Z",
+      "finding": "Many strongest examples concern quantities and units such as ounces, plus mixed technical contexts. The broad list label is incomplete; no clear K/L or twelve-specific pattern was found.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.6137928570411548,
+          "gate_delta": 0.6137928570411548
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": []
+    },
+    {
+      "case": "alphabet",
+      "layer": 33,
+      "transform": 587,
+      "label": "List and Sequence Token Activation",
+      "explanation": "The gate fires on tokens that are part of a list, sequence, or enumeration, often separated by commas, or representing a specific item in a series, such as a number in a list, a chemical formula, or a date.",
+      "native_gate": 0.0,
+      "off_gate": 0.6381222183134443,
+      "change": "newly_on",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-33/features/587.html",
+      "retrieved_at": "2026-11-03T12:36:51.209Z",
+      "finding": "Strong precursor examples before the word Twelve and literal 12, but also before 11 and 13, dates, chemistry and code. This is a numerical-sequence lead, not a twelve-selective feature. Medium/lower windows all repeat activation on the chat-start marker.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 1.1252140368535253,
+          "off_gate": 0.944743824556725,
+          "gate_delta": -0.18047021229680027
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.6381222183134443,
+          "gate_delta": 0.6381222183134443
+        },
+        "roman": {
+          "native_gate": 2.3625631729989074,
+          "off_gate": 2.574250820048771,
+          "gate_delta": 0.21168764704986343
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 1,
+          "note": "Quote before Twelve",
+          "excerpt": "Children:[·\"]Twelve!\"↵↵",
+          "active_token": {
+            "activation_display": "+5.313",
+            "conversation": 556,
+            "display_token": " \"",
+            "gate_display_rounded": 5.313,
+            "position_display": "conversation 556, token 725",
+            "token_id": 330,
+            "token_position": 725,
+            "tooltip_token": " \" (330)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+4.500",
+              "conversation": 556,
+              "display_token": "Tw",
+              "gate_display_rounded": 4.5,
+              "position_display": "conversation 556, token 726",
+              "token_id": 22816,
+              "token_position": 726,
+              "tooltip_token": "Tw (22816)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 556,
+              "display_token": "elve",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 556, token 727",
+              "token_id": 21210,
+              "token_position": 727,
+              "tooltip_token": "elve (21210)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 556,
+              "display_token": "!\"↵↵",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 556, token 728",
+              "token_id": 17199,
+              "token_position": 728,
+              "tooltip_token": "!\"↵↵ (17199)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 4,
+          "note": "Equals sign then active space before 12",
+          "excerpt": ": r[·=] 12↵",
+          "active_token": {
+            "activation_display": "+4.750",
+            "conversation": 4805,
+            "display_token": " =",
+            "gate_display_rounded": 4.75,
+            "position_display": "conversation 4805, token 712",
+            "token_id": 284,
+            "token_position": 712,
+            "tooltip_token": " = (284)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+3.563",
+              "conversation": 4805,
+              "display_token": " ",
+              "gate_display_rounded": 3.563,
+              "position_display": "conversation 4805, token 713",
+              "token_id": 220,
+              "token_position": 713,
+              "tooltip_token": "  (220)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 4805,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 4805, token 714",
+              "token_id": 16,
+              "token_position": 714,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 4805,
+              "display_token": "2",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 4805, token 715",
+              "token_id": 17,
+              "token_position": 715,
+              "tooltip_token": "2 (17)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 4805,
+              "display_token": "↵",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 4805, token 716",
+              "token_id": 198,
+              "token_position": 716,
+              "tooltip_token": "↵ (198)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 3,
+          "note": "Counterexample: space before 13",
+          "excerpt": " will return[·]13,",
+          "active_token": {
+            "activation_display": "+4.844",
+            "conversation": 2043,
+            "display_token": " ",
+            "gate_display_rounded": 4.844,
+            "position_display": "conversation 2043, token 205",
+            "token_id": 220,
+            "token_position": 205,
+            "tooltip_token": "  (220)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 2043,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 2043, token 206",
+              "token_id": 16,
+              "token_position": 206,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 2043,
+              "display_token": "3",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 2043, token 207",
+              "token_id": 18,
+              "token_position": 207,
+              "tooltip_token": "3 (18)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 2043,
+              "display_token": ",",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 2043, token 208",
+              "token_id": 11,
+              "token_position": 208,
+              "tooltip_token": ", (11)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 9,
+          "note": "Counterexample: space before September 11",
+          "excerpt": " Sept.[·]11,",
+          "active_token": {
+            "activation_display": "+4.688",
+            "conversation": 11010,
+            "display_token": " ",
+            "gate_display_rounded": 4.688,
+            "position_display": "conversation 11010, token 156",
+            "token_id": 220,
+            "token_position": 156,
+            "tooltip_token": "  (220)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 11010,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 11010, token 157",
+              "token_id": 16,
+              "token_position": 157,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 11010,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 11010, token 158",
+              "token_id": 16,
+              "token_position": 158,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 11010,
+              "display_token": ",",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 11010, token 159",
+              "token_id": 11,
+              "token_position": 159,
+              "tooltip_token": ", (11)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "alphabet",
+      "layer": 33,
+      "transform": 968,
+      "label": "Copula Verb Gate Activation",
+      "explanation": "The gate activates on copula verbs (is, are, be, was) and their contractions (’s, ’t) that link a subject to a predicate, often following a noun phrase or at the start of a sentence.",
+      "native_gate": 0.0,
+      "off_gate": 0.6227683328613296,
+      "change": "newly_on",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-33/features/968.html",
+      "retrieved_at": "2026-11-03T12:37:08.591Z",
+      "finding": "Strongly active on copulas is/was/are in ordinary prose. No clear K/L or twelve-specific activation pattern in the displayed windows.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.8921778805373035,
+          "off_gate": 0.8623657203467694,
+          "gate_delta": -0.02981216019053412
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.6227683328613296,
+          "gate_delta": 0.6227683328613296
+        },
+        "roman": {
+          "native_gate": 0.7218190670246565,
+          "off_gate": 0.7884362228210653,
+          "gate_delta": 0.06661715579640881
+        }
+      },
+      "selected_evidence": []
+    },
+    {
+      "case": "alphabet",
+      "layer": 34,
+      "transform": 666,
+      "label": "Copula Verb Main Clause Trigger",
+      "explanation": "The gate activates on copula verbs (is, was, are, be, remains) and their contractions, particularly when they serve as the main verb in a sentence or clause, often preceding adjectives, nouns, or adverbs.",
+      "native_gate": 0.6468233878960317,
+      "off_gate": 0.0,
+      "change": "newly_off",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-34/features/666.html",
+      "retrieved_at": "2026-11-03T12:37:13.535Z",
+      "finding": "Copulas in prose, particularly was/is and continuations such as still/all/only. No clear ordinal-specific pattern in the reviewed windows.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.794434177134163,
+          "off_gate": 0.7367581990983321,
+          "gate_delta": -0.05767597803583091
+        },
+        "alphabet": {
+          "native_gate": 0.6468233878960317,
+          "off_gate": 0.0,
+          "gate_delta": -0.6468233878960317
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": []
+    },
+    {
+      "case": "alphabet",
+      "layer": 34,
+      "transform": 965,
+      "label": "End-of-Sequence Completion Signal",
+      "explanation": "The gate activates on the final token of a word or phrase, often occurring at the end of a line, sentence, or specific data field. It fires on diverse content types including numbers, proper nouns, technical terms, and common words, suggesting a general end-of-sequence or completion signal rather than a specific semantic theme.",
+      "native_gate": 1.258173398409804,
+      "off_gate": 0.0,
+      "change": "newly_off",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-34/features/965.html",
+      "retrieved_at": "2026-11-03T12:37:17.407Z",
+      "finding": "Strong before-K/k pattern across DISK, honky-tonk, 4K, 14k, Westerkerk and other words. This feature turns off in the alphabet experiment. The moderate/high programming window is a counterexample to a simple immediate-K-only description.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 1.258173398409804,
+          "off_gate": 0.0,
+          "gate_delta": -1.258173398409804
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 2,
+          "note": "DIS before K",
+          "excerpt": " ASSIGN TO[·DIS]K↵",
+          "active_token": {
+            "activation_display": "+3.719",
+            "conversation": 8714,
+            "display_token": " DIS",
+            "gate_display_rounded": 3.719,
+            "position_display": "conversation 8714, token 650",
+            "token_id": 11977,
+            "token_position": 650,
+            "tooltip_token": " DIS (11977)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 8714,
+              "display_token": "K",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 8714, token 651",
+              "token_id": 42,
+              "token_position": 651,
+              "tooltip_token": "K (42)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 8714,
+              "display_token": "↵",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 8714, token 652",
+              "token_id": 198,
+              "token_position": 652,
+              "tooltip_token": "↵ (198)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 4,
+          "note": "4 before K",
+          "excerpt": " record [4]K videos",
+          "active_token": {
+            "activation_display": "+3.531",
+            "conversation": 6956,
+            "display_token": "4",
+            "gate_display_rounded": 3.531,
+            "position_display": "conversation 6956, token 558",
+            "token_id": 19,
+            "token_position": 558,
+            "tooltip_token": "4 (19)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 6956,
+              "display_token": "K",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6956, token 559",
+              "token_id": 42,
+              "token_position": 559,
+              "tooltip_token": "K (42)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 6956,
+              "display_token": " videos",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6956, token 560",
+              "token_id": 6803,
+              "token_position": 560,
+              "tooltip_token": " videos (6803)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 7,
+          "note": "Counterexample: moderate/high input option",
+          "excerpt": "low/mod[erate]/high): \")↵",
+          "active_token": {
+            "activation_display": "+3.391",
+            "conversation": 4507,
+            "display_token": "erate",
+            "gate_display_rounded": 3.391,
+            "position_display": "conversation 4507, token 313",
+            "token_id": 58668,
+            "token_position": 313,
+            "tooltip_token": "erate (58668)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 4507,
+              "display_token": "/high",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 4507, token 314",
+              "token_id": 58135,
+              "token_position": 314,
+              "tooltip_token": "/high (58135)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 4507,
+              "display_token": "):",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 4507, token 315",
+              "token_id": 1648,
+              "token_position": 315,
+              "tooltip_token": "): (1648)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 4507,
+              "display_token": " \")↵",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 4507, token 316",
+              "token_id": 14167,
+              "token_position": 316,
+              "tooltip_token": " \")↵ (14167)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "alphabet",
+      "layer": 35,
+      "transform": 760,
+      "label": "Mid-Word Proper Noun and Spec Tokens",
+      "explanation": "The gate activates on tokens that are part of a specific proper noun, brand name, or technical specification, often appearing in the middle of a word or phrase.",
+      "native_gate": 0.9195347852543381,
+      "off_gate": 0.0,
+      "change": "newly_off",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-35/features/760.html",
+      "retrieved_at": "2026-11-03T12:37:50.790Z",
+      "finding": "Strong before-K/k pattern across 8K, 14K, kg, Hawking, Maersk and Korea. This feature also turns off in the alphabet experiment. Some non-Latin windows contain undecodable fragments and are not used for the K interpretation.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.9195347852543381,
+          "off_gate": 0.0,
+          "gate_delta": -0.9195347852543381
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 4,
+          "note": "aw before king in Hawking",
+          "excerpt": ".↵↵H[aw]king's work",
+          "active_token": {
+            "activation_display": "+2.953",
+            "conversation": 10885,
+            "display_token": "aw",
+            "gate_display_rounded": 2.953,
+            "position_display": "conversation 10885, token 421",
+            "token_id": 672,
+            "token_position": 421,
+            "tooltip_token": "aw (672)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 10885,
+              "display_token": "king",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 10885, token 422",
+              "token_id": 10566,
+              "token_position": 422,
+              "tooltip_token": "king (10566)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 10885,
+              "display_token": "'s",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 10885, token 423",
+              "token_id": 594,
+              "token_position": 423,
+              "tooltip_token": "'s (594)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 10885,
+              "display_token": " work",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 10885, token 424",
+              "token_id": 975,
+              "token_position": 424,
+              "tooltip_token": " work (975)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 7,
+          "note": "8 before K",
+          "excerpt": " record [8]K videos",
+          "active_token": {
+            "activation_display": "+2.844",
+            "conversation": 6956,
+            "display_token": "8",
+            "gate_display_rounded": 2.844,
+            "position_display": "conversation 6956, token 534",
+            "token_id": 23,
+            "token_position": 534,
+            "tooltip_token": "8 (23)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 6956,
+              "display_token": "K",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6956, token 535",
+              "token_id": 42,
+              "token_position": 535,
+              "tooltip_token": "K (42)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 6956,
+              "display_token": " videos",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6956, token 536",
+              "token_id": 6803,
+              "token_position": 536,
+              "tooltip_token": " videos (6803)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "alphabet",
+      "layer": 35,
+      "transform": 1177,
+      "label": "Proper Noun Termination Gate",
+      "explanation": "The gate activates on the final token of a proper noun, brand name, or specific entity (e.g., \"Group\", \"App\", \"Shubenkov\", \"Ingredients\"). It frequently fires when the model is extracting or generating a specific title, name, or key term from the context, often appearing at the end of a short answer or a highlighted entity.",
+      "native_gate": 0.0,
+      "off_gate": 0.5342739770846501,
+      "change": "newly_on",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-35/features/1177.html",
+      "retrieved_at": "2026-11-03T12:37:57.310Z",
+      "finding": "Mixed short fields, names, dates and output entities. One strongest window includes activation on the quote and digits of 11th Infantry Regiment, but no clear L/twelve precursor pattern.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.5342739770846501,
+          "gate_delta": 0.5342739770846501
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": []
+    },
+    {
+      "case": "roman",
+      "layer": 31,
+      "transform": 50,
+      "label": "Technical and Mathematical Token Gate",
+      "explanation": "The gate activates on tokens within technical, mathematical, or programming contexts, specifically highlighting definitions, formulas, variable names, and code syntax. It fires on terms like \"gamma,\" \"binary,\" \"coordinates,\" \"equation,\" and specific code identifiers, often preceding or following mathematical operators and explanatory phrases.",
+      "native_gate": 0.5397939900153901,
+      "off_gate": 0.0,
+      "change": "newly_off",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-31/features/50.html",
+      "retrieved_at": "2026-11-03T12:38:01.999Z",
+      "finding": "Broad mathematical definitions and programming. A lower-strength window activates on the space immediately before 11 percent (0.531). This is a weak before-eleven example, not twelve specificity.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "roman": {
+          "native_gate": 0.5397939900153901,
+          "off_gate": 0.0,
+          "gate_delta": -0.5397939900153901
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Lower-strength examples",
+          "example_one_based": 1,
+          "note": "Lower-strength space before 11 percent",
+          "excerpt": " represent an[·]11 percent",
+          "active_token": {
+            "activation_display": "+0.531",
+            "conversation": 3055,
+            "display_token": " ",
+            "gate_display_rounded": 0.531,
+            "position_display": "conversation 3055, token 381",
+            "token_id": 220,
+            "token_position": 381,
+            "tooltip_token": "  (220)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 3055,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3055, token 382",
+              "token_id": 16,
+              "token_position": 382,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3055,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3055, token 383",
+              "token_id": 16,
+              "token_position": 383,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3055,
+              "display_token": " percent",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3055, token 384",
+              "token_id": 3266,
+              "token_position": 384,
+              "tooltip_token": " percent (3266)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "roman",
+      "layer": 32,
+      "transform": 979,
+      "label": "Final Token of Proper Noun",
+      "explanation": "The gate activates on the final token of a proper noun, title, or specific entity name, often appearing in bibliographic citations, headers, or the start of a generated response.",
+      "native_gate": 0.0,
+      "off_gate": 0.512835508070353,
+      "change": "newly_on",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-32/features/979.html",
+      "retrieved_at": "2026-11-03T12:38:06.160Z",
+      "finding": "Mostly book/citation/title endings and entity fragments. No clear XI/XII-specific precursor pattern in the reviewed examples.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.512835508070353,
+          "gate_delta": 0.512835508070353
+        }
+      },
+      "selected_evidence": []
+    },
+    {
+      "case": "roman",
+      "layer": 33,
+      "transform": 1873,
+      "label": "Syntactic Closure Point",
+      "explanation": "The gate activates on tokens that complete a phrase or sentence, often serving as a preposition, pronoun, or verb that links the preceding context to the following text, indicating a syntactic or semantic closure point.",
+      "native_gate": 0.7414942521649455,
+      "off_gate": 0.0,
+      "change": "newly_off",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-33/features/1873.html",
+      "retrieved_at": "2026-11-03T12:38:14.860Z",
+      "finding": "Strongest examples often precede rhyming line endings such as tall, all, call, swell and whole. Other examples include a French word fragment and chat-start markers. No clear XI/XII pattern.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "roman": {
+          "native_gate": 0.7414942521649455,
+          "off_gate": 0.0,
+          "gate_delta": -0.7414942521649455
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 1,
+          "note": "so before poetic tall",
+          "excerpt": " spirit stands[·so] tall.↵",
+          "active_token": {
+            "activation_display": "+4.344",
+            "conversation": 3904,
+            "display_token": " so",
+            "gate_display_rounded": 4.344,
+            "position_display": "conversation 3904, token 256",
+            "token_id": 773,
+            "token_position": 256,
+            "tooltip_token": " so (773)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 3904,
+              "display_token": " tall",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3904, token 257",
+              "token_id": 16217,
+              "token_position": 257,
+              "tooltip_token": " tall (16217)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3904,
+              "display_token": ".↵",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3904, token 258",
+              "token_id": 624,
+              "token_position": 258,
+              "tooltip_token": ".↵ (624)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "roman",
+      "layer": 34,
+      "transform": 1837,
+      "label": "Proper Noun and Entity Start Trigger",
+      "explanation": "The gate activates on tokens that are the start of a proper noun, name, or specific entity, often following a space or punctuation. It also fires on the opening tag of HTML list items and specific chemical or product identifiers.",
+      "native_gate": 1.1871146961902403,
+      "off_gate": 0.0,
+      "change": "newly_off",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-34/features/1837.html",
+      "retrieved_at": "2026-11-03T12:38:18.236Z",
+      "finding": "Acronym/entity fragments, parentheses and HTML list formatting. No clear XI/XII or before-twelve pattern in the displayed examples.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "roman": {
+          "native_gate": 1.1871146961902403,
+          "off_gate": 0.0,
+          "gate_delta": -1.1871146961902403
+        }
+      },
+      "selected_evidence": []
+    },
+    {
+      "case": "roman",
+      "layer": 35,
+      "transform": 1221,
+      "label": "Multi-token proper noun and brand activation",
+      "explanation": "The gate activates on tokens that are part of a multi-token proper noun, brand name, or specific entity, often appearing in the middle of the name or as a distinct component within a list or technical specification.",
+      "native_gate": 0.0,
+      "off_gate": 0.7014978393945839,
+      "change": "newly_on",
+      "selection": "All on/off switches at final input is",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-35/features/1221.html",
+      "retrieved_at": "2026-11-03T12:38:22.284Z",
+      "finding": "Several strong windows anticipate X or I/i in code: PIC X(10), Mouse X and loop-index i. The same Mouse example also activates before Y. This suggests a broad token/notation lead, not a XII-selective gate.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.5795984412869359,
+          "off_gate": 0.6517605045781685,
+          "gate_delta": 0.07216206329123254
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.7014978393945839,
+          "gate_delta": 0.7014978393945839
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 2,
+          "note": "PIC before X",
+          "excerpt": "0    [·PIC] X(1",
+          "active_token": {
+            "activation_display": "+4.250",
+            "conversation": 9482,
+            "display_token": " PIC",
+            "gate_display_rounded": 4.25,
+            "position_display": "conversation 9482, token 851",
+            "token_id": 60606,
+            "token_position": 851,
+            "tooltip_token": " PIC (60606)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 9482,
+              "display_token": " X",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9482, token 852",
+              "token_id": 1599,
+              "token_position": 852,
+              "tooltip_token": " X (1599)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9482,
+              "display_token": "(",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9482, token 853",
+              "token_id": 7,
+              "token_position": 853,
+              "tooltip_token": "( (7)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9482,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9482, token 854",
+              "token_id": 16,
+              "token_position": 854,
+              "tooltip_token": "1 (16)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 4,
+          "note": "Mouse before X; same window also contains Mouse before Y",
+          "excerpt": ".GetAxis(\"[Mouse] X\")",
+          "active_token": {
+            "activation_display": "+3.766",
+            "conversation": 9680,
+            "display_token": "Mouse",
+            "gate_display_rounded": 3.766,
+            "position_display": "conversation 9680, token 768",
+            "token_id": 10493,
+            "token_position": 768,
+            "tooltip_token": "Mouse (10493)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 9680,
+              "display_token": " X",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9680, token 769",
+              "token_id": 1599,
+              "token_position": 769,
+              "tooltip_token": " X (1599)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9680,
+              "display_token": "\")",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9680, token 770",
+              "token_id": 899,
+              "token_position": 770,
+              "tooltip_token": "\") (899)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 5,
+          "note": "Semicolon before loop index i",
+          "excerpt": " <= drops[;] i++)↵",
+          "active_token": {
+            "activation_display": "+3.688",
+            "conversation": 2689,
+            "display_token": ";",
+            "gate_display_rounded": 3.688,
+            "position_display": "conversation 2689, token 727",
+            "token_id": 26,
+            "token_position": 727,
+            "tooltip_token": "; (26)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 2689,
+              "display_token": " i",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 2689, token 728",
+              "token_id": 600,
+              "token_position": 728,
+              "tooltip_token": " i (600)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 2689,
+              "display_token": "++)↵",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 2689, token 729",
+              "token_id": 3485,
+              "token_position": 729,
+              "tooltip_token": "++)↵ (3485)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "alphabet",
+      "layer": 34,
+      "transform": 1440,
+      "label": "Suffix and Acronym Token Gate",
+      "explanation": "The gate activates on tokens that are part of a compound word, acronym, or proper noun where the specific token is a suffix, abbreviation, or capitalized component, often appearing in technical, legal, or medical contexts.",
+      "native_gate": 1.036863499640639,
+      "off_gate": 1.6908367765231924,
+      "change": "increased",
+      "selection": "Top three absolute scalar changes among gates active in both conditions, excluding already inspected L34-T1468",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-34/features/1440.html",
+      "retrieved_at": "2026-11-03T12:39:13.359Z",
+      "finding": "Strong before-L/l pattern across a literal quoted l, 1L, London, Lab, -law, LA and code fragments. Gate increases in the alphabet experiment. A K. L. initials window has an intervening punctuation token.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 1.036863499640639,
+          "off_gate": 1.6908367765231924,
+          "gate_delta": 0.6539732768825535
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 5,
+          "note": "Quote immediately before literal l",
+          "excerpt": "l\",[·\"]l\", \"",
+          "active_token": {
+            "activation_display": "+4.063",
+            "conversation": 6035,
+            "display_token": " \"",
+            "gate_display_rounded": 4.063,
+            "position_display": "conversation 6035, token 914",
+            "token_id": 330,
+            "token_position": 914,
+            "tooltip_token": " \" (330)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 6035,
+              "display_token": "l",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6035, token 915",
+              "token_id": 75,
+              "token_position": 915,
+              "tooltip_token": "l (75)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 6035,
+              "display_token": "\",",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6035, token 916",
+              "token_id": 497,
+              "token_position": 916,
+              "tooltip_token": "\", (497)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 6035,
+              "display_token": " \"",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6035, token 917",
+              "token_id": 330,
+              "token_position": 917,
+              "tooltip_token": " \" (330)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 11,
+          "note": "1 immediately before L",
+          "excerpt": " of [1]L.↵",
+          "active_token": {
+            "activation_display": "+3.703",
+            "conversation": 9443,
+            "display_token": "1",
+            "gate_display_rounded": 3.703,
+            "position_display": "conversation 9443, token 609",
+            "token_id": 16,
+            "token_position": 609,
+            "tooltip_token": "1 (16)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 9443,
+              "display_token": "L",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9443, token 610",
+              "token_id": 43,
+              "token_position": 610,
+              "tooltip_token": "L (43)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9443,
+              "display_token": ".↵",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9443, token 611",
+              "token_id": 624,
+              "token_position": 611,
+              "tooltip_token": ".↵ (624)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 7,
+          "note": "Initial K before dot then L",
+          "excerpt": ",[·K]. L. (",
+          "active_token": {
+            "activation_display": "+3.859",
+            "conversation": 7016,
+            "display_token": " K",
+            "gate_display_rounded": 3.859,
+            "position_display": "conversation 7016, token 595",
+            "token_id": 730,
+            "token_position": 595,
+            "tooltip_token": " K (730)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+2.797",
+              "conversation": 7016,
+              "display_token": ".",
+              "gate_display_rounded": 2.797,
+              "position_display": "conversation 7016, token 596",
+              "token_id": 13,
+              "token_position": 596,
+              "tooltip_token": ". (13)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 7016,
+              "display_token": " L",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 7016, token 597",
+              "token_id": 444,
+              "token_position": 597,
+              "tooltip_token": " L (444)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 7016,
+              "display_token": ".",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 7016, token 598",
+              "token_id": 13,
+              "token_position": 598,
+              "tooltip_token": ". (13)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 7016,
+              "display_token": " (",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 7016, token 599",
+              "token_id": 320,
+              "token_position": 599,
+              "tooltip_token": " ( (320)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "alphabet",
+      "layer": 35,
+      "transform": 2117,
+      "label": "Proper Noun First-Token Gate",
+      "explanation": "The gate fires on the first token of a proper noun, name, or specific entity, often following a start-of-turn marker or appearing in a list.",
+      "native_gate": 0.8890817863425404,
+      "off_gate": 1.4316694106517165,
+      "change": "increased",
+      "selection": "Top three absolute scalar changes among gates active in both conditions, excluding already inspected L34-T1468",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-35/features/2117.html",
+      "retrieved_at": "2026-11-03T12:39:15.878Z",
+      "finding": "Strong before-L/l pattern across stapler, a literal quoted l, demi-glace, charlidamelio and dlon. Gate increases in the alphabet experiment. It shares the exact quote-before-l corpus coordinate with L34-T1440.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.8890817863425404,
+          "off_gate": 1.4316694106517165,
+          "gate_delta": 0.5425876243091761
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 1,
+          "note": "stap before ler",
+          "excerpt": " heavy-duty[·stap]ler uses",
+          "active_token": {
+            "activation_display": "+4.594",
+            "conversation": 447,
+            "display_token": " stap",
+            "gate_display_rounded": 4.594,
+            "position_display": "conversation 447, token 237",
+            "token_id": 35014,
+            "token_position": 237,
+            "tooltip_token": " stap (35014)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 447,
+              "display_token": "ler",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 447, token 238",
+              "token_id": 1536,
+              "token_position": 238,
+              "tooltip_token": "ler (1536)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 447,
+              "display_token": " uses",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 447, token 239",
+              "token_id": 5711,
+              "token_position": 239,
+              "tooltip_token": " uses (5711)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 3,
+          "note": "Same quote-before-l coordinate as L34-T1440",
+          "excerpt": "l\",[·\"]l\", \"",
+          "active_token": {
+            "activation_display": "+4.344",
+            "conversation": 6035,
+            "display_token": " \"",
+            "gate_display_rounded": 4.344,
+            "position_display": "conversation 6035, token 914",
+            "token_id": 330,
+            "token_position": 914,
+            "tooltip_token": " \" (330)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 6035,
+              "display_token": "l",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6035, token 915",
+              "token_id": 75,
+              "token_position": 915,
+              "tooltip_token": "l (75)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 6035,
+              "display_token": "\",",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 6035, token 916",
+              "token_id": 497,
+              "token_position": 916,
+              "tooltip_token": "\", (497)"
+            },
+            {
+              "activation_display": "+1.023",
+              "conversation": 6035,
+              "display_token": " \"",
+              "gate_display_rounded": 1.023,
+              "position_display": "conversation 6035, token 917",
+              "token_id": 330,
+              "token_position": 917,
+              "tooltip_token": " \" (330)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "alphabet",
+      "layer": 33,
+      "transform": 14,
+      "label": "Proper Noun and Acronym Gate",
+      "explanation": "The gate activates on the first token of a proper noun, acronym, or specific entity name, often following a capital letter or punctuation.",
+      "native_gate": 0.998944672625065,
+      "off_gate": 0.5293244718681918,
+      "change": "decreased",
+      "selection": "Top three absolute scalar changes among gates active in both conditions, excluding already inspected L34-T1468",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-33/features/14.html",
+      "retrieved_at": "2026-11-03T12:39:18.453Z",
+      "finding": "Many strongest windows anticipate K/k: 14k, kg, GKE/SKE, kinesis, knee and code variable k. Its gate decreases, while remaining active, in the alphabet experiment.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.998944672625065,
+          "off_gate": 0.5293244718681918,
+          "gate_delta": -0.4696202007568733
+        },
+        "roman": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 5,
+          "note": "4 before k in 14k gold",
+          "excerpt": " 1[4]k yellow gold",
+          "active_token": {
+            "activation_display": "+2.328",
+            "conversation": 11097,
+            "display_token": "4",
+            "gate_display_rounded": 2.328,
+            "position_display": "conversation 11097, token 334",
+            "token_id": 19,
+            "token_position": 334,
+            "tooltip_token": "4 (19)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 11097,
+              "display_token": "k",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 11097, token 335",
+              "token_id": 74,
+              "token_position": 335,
+              "tooltip_token": "k (74)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 11097,
+              "display_token": " yellow",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 11097, token 336",
+              "token_id": 13753,
+              "token_position": 336,
+              "tooltip_token": " yellow (13753)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 11097,
+              "display_token": " gold",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 11097, token 337",
+              "token_id": 6623,
+              "token_position": 337,
+              "tooltip_token": " gold (6623)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 10,
+          "note": "int before code variable k",
+          "excerpt": " ([int] k = ",
+          "active_token": {
+            "activation_display": "+2.234",
+            "conversation": 5522,
+            "display_token": "int",
+            "gate_display_rounded": 2.234,
+            "position_display": "conversation 5522, token 470",
+            "token_id": 396,
+            "token_position": 470,
+            "tooltip_token": "int (396)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 5522,
+              "display_token": " k",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 5522, token 471",
+              "token_id": 595,
+              "token_position": 471,
+              "tooltip_token": " k (595)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 5522,
+              "display_token": " =",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 5522, token 472",
+              "token_id": 284,
+              "token_position": 472,
+              "tooltip_token": " = (284)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 5522,
+              "display_token": " ",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 5522, token 473",
+              "token_id": 220,
+              "token_position": 473,
+              "tooltip_token": "  (220)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "roman",
+      "layer": 35,
+      "transform": 111,
+      "label": "Temporal Preposition and Date Gate",
+      "explanation": "The gate activates on tokens indicating temporal or spatial prepositions (e.g., \"on\", \"in\", \"by\", \"since\") and specific dates or time periods. It frequently fires on the preposition immediately preceding a date, month, or year, as well as on the date or time noun itself.",
+      "native_gate": 1.7202799061112994,
+      "off_gate": 2.0014106430571483,
+      "change": "increased",
+      "selection": "Top three absolute scalar changes among gates active in both conditions, excluding already inspected L34-T1468",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-35/features/111.html",
+      "retrieved_at": "2026-11-03T12:39:28.252Z",
+      "finding": "Strong Roman-numeral-format examples before XVIII, VIII, I and III, alongside many date/month prepositions. A lower window activates on the space before literal 12. This is a broad numeral/date lead, not XII specificity.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 1.1074531221913493,
+          "off_gate": 1.1014261280677757,
+          "gate_delta": -0.006026994123573548
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "roman": {
+          "native_gate": 1.7202799061112994,
+          "off_gate": 2.0014106430571483,
+          "gate_delta": 0.2811307369458489
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 1,
+          "note": "Period before XVIII",
+          "excerpt": " del sec[.] XVIII°",
+          "active_token": {
+            "activation_display": "+3.250",
+            "conversation": 7965,
+            "display_token": ".",
+            "gate_display_rounded": 3.25,
+            "position_display": "conversation 7965, token 747",
+            "token_id": 13,
+            "token_position": 747,
+            "tooltip_token": ". (13)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+2.813",
+              "conversation": 7965,
+              "display_token": " XV",
+              "gate_display_rounded": 2.813,
+              "position_display": "conversation 7965, token 748",
+              "token_id": 52594,
+              "token_position": 748,
+              "tooltip_token": " XV (52594)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 7965,
+              "display_token": "III",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 7965, token 749",
+              "token_id": 22615,
+              "token_position": 749,
+              "tooltip_token": "III (22615)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 7965,
+              "display_token": "°",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 7965, token 750",
+              "token_id": 11616,
+              "token_position": 750,
+              "tooltip_token": "° (11616)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 5,
+          "note": "Henry before VIII",
+          "excerpt": " son became[·Henry] VIII.↵",
+          "active_token": {
+            "activation_display": "+2.828",
+            "conversation": 9937,
+            "display_token": " Henry",
+            "gate_display_rounded": 2.828,
+            "position_display": "conversation 9937, token 402",
+            "token_id": 17599,
+            "token_position": 402,
+            "tooltip_token": " Henry (17599)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 9937,
+              "display_token": " VIII",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9937, token 403",
+              "token_id": 57233,
+              "token_position": 403,
+              "tooltip_token": " VIII (57233)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9937,
+              "display_token": ".↵",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9937, token 404",
+              "token_id": 624,
+              "token_position": 404,
+              "tooltip_token": ".↵ (624)"
+            }
+          ]
+        },
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 10,
+          "note": "Act before III",
+          "excerpt": ".\" ([Act] III,",
+          "active_token": {
+            "activation_display": "+2.703",
+            "conversation": 9469,
+            "display_token": "Act",
+            "gate_display_rounded": 2.703,
+            "position_display": "conversation 9469, token 1014",
+            "token_id": 2414,
+            "token_position": 1014,
+            "tooltip_token": "Act (2414)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 9469,
+              "display_token": " III",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9469, token 1015",
+              "token_id": 14429,
+              "token_position": 1015,
+              "tooltip_token": " III (14429)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 9469,
+              "display_token": ",",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 9469, token 1016",
+              "token_id": 11,
+              "token_position": 1016,
+              "tooltip_token": ", (11)"
+            }
+          ]
+        },
+        {
+          "group": "Lower-strength examples",
+          "example_one_based": 6,
+          "note": "Lower-strength space before literal 12",
+          "excerpt": " with remainder[·]12.",
+          "active_token": {
+            "activation_display": "+0.516",
+            "conversation": 10747,
+            "display_token": " ",
+            "gate_display_rounded": 0.516,
+            "position_display": "conversation 10747, token 810",
+            "token_id": 220,
+            "token_position": 810,
+            "tooltip_token": "  (220)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.000",
+              "conversation": 10747,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 10747, token 811",
+              "token_id": 16,
+              "token_position": 811,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 10747,
+              "display_token": "2",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 10747, token 812",
+              "token_id": 17,
+              "token_position": 812,
+              "tooltip_token": "2 (17)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 10747,
+              "display_token": ".",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 10747, token 813",
+              "token_id": 13,
+              "token_position": 813,
+              "tooltip_token": ". (13)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "roman",
+      "layer": 33,
+      "transform": 909,
+      "label": "Proper Noun and Entity Token Activation",
+      "explanation": "The gate activates on tokens that are part of proper nouns, brand names, or specific entities, often appearing in lists, citations, or technical contexts. It fires on the first or last token of multi-word entities (e.g., \"amazon\", \"nex\", \"www\", \"m\") and sometimes on punctuation immediately following them. The activation is weaker for common nouns or generic terms, focusing instead on specific identifiers or capitalized names within the text.",
+      "native_gate": 1.389652250088711,
+      "off_gate": 1.1438049138661173,
+      "change": "decreased",
+      "selection": "Top three absolute scalar changes among gates active in both conditions, excluding already inspected L34-T1468",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-33/features/909.html",
+      "retrieved_at": "2026-11-03T12:39:30.858Z",
+      "finding": "Broad lowercase institutional/entity names and grammatical bridges, including United Nations, OECD and IMF contexts. No clear XI/XII-specific pattern.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 1.2506119181556188,
+          "off_gate": 1.173310208184358,
+          "gate_delta": -0.07730170997126073
+        },
+        "alphabet": {
+          "native_gate": 0.8476916684009499,
+          "off_gate": 0.7929937496751518,
+          "gate_delta": -0.0546979187257981
+        },
+        "roman": {
+          "native_gate": 1.389652250088711,
+          "off_gate": 1.1438049138661173,
+          "gate_delta": -0.2458473362225937
+        }
+      },
+      "selected_evidence": []
+    },
+    {
+      "case": "roman",
+      "layer": 32,
+      "transform": 1082,
+      "label": "Numeric Sequence and Range Token Gate",
+      "explanation": "The gate activates on tokens that are part of a sequence of numbers, dates, or currency values, often including punctuation like periods, commas, or currency symbols. It also fires on specific structural tokens like \"to\" in ranges or \"by\" in mathematical operations.",
+      "native_gate": 2.173588811320927,
+      "off_gate": 2.415748158519828,
+      "change": "increased",
+      "selection": "Top three absolute scalar changes among gates active in both conditions, excluding already inspected L34-T1468",
+      "url": "https://amsterdam.taild80f17.ts.net/layers/layer-32/features/1082.html",
+      "retrieved_at": "2026-11-03T12:39:33.100Z",
+      "finding": "Numerical/date/range contexts with varied values. Strong examples include a hyphen before the 11 in 2010-11, April before 11, and many 13/14/15 values. Broad numerical continuation evidence, not twelve specificity.",
+      "displayed_windows_reviewed": 24,
+      "live_description_matches_cache": true,
+      "changes_across_three_prompts": {
+        "month": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "alphabet": {
+          "native_gate": 0.0,
+          "off_gate": 0.0,
+          "gate_delta": 0.0
+        },
+        "roman": {
+          "native_gate": 2.173588811320927,
+          "off_gate": 2.415748158519828,
+          "gate_delta": 0.2421593471989012
+        }
+      },
+      "selected_evidence": [
+        {
+          "group": "Strongest examples (one per conversation)",
+          "example_one_based": 1,
+          "note": "Hyphen before 11 in the season 2010-11",
+          "excerpt": "10[-]11 regular",
+          "active_token": {
+            "activation_display": "+4.063",
+            "conversation": 3914,
+            "display_token": "-",
+            "gate_display_rounded": 4.063,
+            "position_display": "conversation 3914, token 334",
+            "token_id": 12,
+            "token_position": 334,
+            "tooltip_token": "- (12)"
+          },
+          "following_tokens": [
+            {
+              "activation_display": "+0.582",
+              "conversation": 3914,
+              "display_token": "1",
+              "gate_display_rounded": 0.582,
+              "position_display": "conversation 3914, token 335",
+              "token_id": 16,
+              "token_position": 335,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3914,
+              "display_token": "1",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3914, token 336",
+              "token_id": 16,
+              "token_position": 336,
+              "tooltip_token": "1 (16)"
+            },
+            {
+              "activation_display": "+0.000",
+              "conversation": 3914,
+              "display_token": " regular",
+              "gate_display_rounded": 0,
+              "position_display": "conversation 3914, token 337",
+              "token_id": 5792,
+              "token_position": 337,
+              "tooltip_token": " regular (5792)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/targets.json": "2dfbf6fcb6fcf9f1e50327eb1fbe62c772c8ae8f45d4f326dc721412d37029bf",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L32-T1181.json": "45c04e3e564965fb6687a2381c9a50e6de23f82069ec2c2731dab6d010778677",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L33-T391.json": "44fb63c84e1f194660dd9fae8030e8a932d7eaa0152b28be681ad01ba246329d",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L33-T587.json": "7cc8bdbfe0fd87f9974d83141ceabfc8f3c173d6222df2a1d5333b9017a51a93",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L33-T968.json": "0fa8b96a94d2bfcb6b37760e4134b883ab22b159119db6d441057e63e7007f87",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L34-T666.json": "036bd01be425cd53abb4a30d0331d1d878ce8f0dcdaac6e3dae5de939e240761",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L34-T965.json": "cf282a78f88e208675666f03d9fdf548d90d2dc56320780d8e1534a4955dc129",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L35-T760.json": "bf38fa0e214542894032df43b7d6c688736509556f99ed9bc2b77808c30fdfea",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L35-T1177.json": "ddfd55e89e550c4a8b4229687c073b347d0d9f2289d9a58fb281ad3842e1ec62",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L31-T50.json": "ee29758d16457373c3fc4a679133c47123b33603cf2ca2d96b9667f4e7490019",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L32-T979.json": "cdfed9c85b3afa4c26a7f239457cc1c49c807e1bb5eef5ec87442d47e136b74c",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L33-T1873.json": "63bde631c7bb9994f9319cc50b5a017558f247a509cb76b14c011a19d7f15233",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L34-T1837.json": "f2ac18377b56249967fcfa2c2b9fdf597d54c3b692c51a8b37a2b1210d98fcb4",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L35-T1221.json": "f963420a87c96d53b2dd74cf5122d053132132e6f63905ccfe4f90c10770b89e",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L34-T1440.json": "46b5a05beef31dd6bb75ef8b02b94b400c70be123f52a3db1b762e7068c534a7",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L35-T2117.json": "a82612d4c2da7bff361843d871f67b7872886fc1299042c96a0210722b285eee",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L33-T14.json": "2de6d1338636f07190c15873fb8be7e57c11305fb95fff27c94874a5588bb8b7",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L35-T111.json": "52fa55031edce42d07a79a418e9b5730069507265b04465951103e7327f3f82f",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L33-T909.json": "f5dc2fb7409e88e4ead5211af70a6b9680f404288c8f5132f528aaab1e399597",
+    "comparisons/2026-11-03-eleven-downstream-gates/alphabet-roman-example-inspection/L32-T1082.json": "06251d362f3e199a6929068b7628abb6c1d30b09590090feffe40a67f07d701b"
+  },
+  "validation": {
+    "status": "pass",
+    "features": 19,
+    "windows": 456,
+    "token_tooltip_records": 13921,
+    "all_live_descriptions_match_cache": true,
+    "token_coordinates_contiguous": true,
+    "before_K_token_IDs_verified": true,
+    "shared_before_literal_l_coordinate_verified": true,
+    "T587_before_Twelve_12_and_13_timing_verified": true,
+    "T1221_Mouse_Y_counterexample_verified": true
+  },
+  "limitations": [
+    "Displayed examples are a selected subset of a ten-million-token corpus, not an exhaustive selectivity test.",
+    "Before-K/L includes word fragments and case/whitespace variants; it is not a claim that every example predicts the exact answer BPE token.",
+    "Medium/lower windows for several features repeat chat-start markers and add limited semantic diversity.",
+    "These MOLT gates are diagnostics on native states; neither examples nor gate-value shifts establish a causal contribution direction.",
+    "No causal tests were run on these new candidates. Existing T1468 negative ablation/rescue results do not rule out these other features."
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "protocol": {
+    "date_local": "2026-11-03",
+    "model": "Qwen/Qwen3-4B",
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "layer": 34,
+    "transform": 1468,
+    "target_gate": 0.0,
+    "max_new_tokens": 24,
+    "maximum_runtime_minutes": 15,
+    "prompt_format": "raw",
+    "edit_scope": "Subtract only the natural L34-T1468 contribution at final input is. L29-T2375 untouched. Later native layers compute normally. No generated-token edits.",
+    "edit_arithmetic": "z=(post-attention residual-input_mean)/input_std; phi=raw if raw>theta and raw>0 else 0; operator=(z@V@U)*output_std; edited_MLP=(native_MLP.float()-phi*operator).to(BF16), only at final input position.",
+    "conditions": [
+      "native",
+      "observed",
+      "zero-strength",
+      "T1468-off",
+      "T1468-off-repeat"
+    ],
+    "probes": {
+      "month": {
+        "11": [
+          " november",
+          " November"
+        ],
+        "12": [
+          " december",
+          " December"
+        ]
+      },
+      "alphabet": {
+        "11": [
+          " k",
+          " K"
+        ],
+        "12": [
+          " l",
+          " L"
+        ]
+      },
+      "roman": {
+        "11": [
+          " xi",
+          " XI"
+        ],
+        "12": [
+          " xii",
+          " XII"
+        ]
+      }
+    },
+    "probability_definition": "Sum of exact leading-space lower/title-case answer-prefix token-sequence probabilities. Multi-token candidates are teacher-forced from the corresponding prefill cache without additional edits. Punctuation, EOS and other spellings are excluded."
+  },
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "attention": "eager",
+    "TF32": false,
+    "arithmetic": "Native BF16; FP32 MOLT contribution subtraction with one BF16 cast",
+    "source_sha256": "be55d02a91a31d0d52d881774af82a4c117f6ebcb0466c5a4653ff1e2bc7a176",
+    "weights_manifest_sha256": "f41023196cf38d2646c5b66b415f5b762c24e081bd6eefd62e0f1fe43d6a65e7"
+  },
+  "cases": [
+    {
+      "case": "month",
+      "prompt": "the eleventh month of the year is",
+      "position": 7,
+      "token": " is",
+      "natural_gate": 1.2899932861328125,
+      "removed_contribution_l2": 21.863926917037343,
+      "native": {
+        "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+        "initial_answer_ordinal": 11,
+        "probabilities": {
+          "11": 0.6686863750219345,
+          "12": 0.24365518987178802
+        }
+      },
+      "T1468_off": {
+        "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+        "initial_answer_ordinal": 11,
+        "probabilities": {
+          "11": 0.6831613928079605,
+          "12": 0.2541649341583252
+        }
+      },
+      "flips_11_to_12": false,
+      "greedy_output_token_ids_identical": true,
+      "logodds_11_vs_12_change": -0.02081335578930321,
+      "P12_change_percentage_points": 1.050974428653717
+    },
+    {
+      "case": "alphabet",
+      "prompt": "the eleventh letter of the english alphabet is",
+      "position": 8,
+      "token": " is",
+      "natural_gate": 1.084717035293579,
+      "removed_contribution_l2": 16.18984586677472,
+      "native": {
+        "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+        "initial_answer_ordinal": 11,
+        "probabilities": {
+          "11": 0.710745245218277,
+          "12": 0.010285762138664722
+        }
+      },
+      "T1468_off": {
+        "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+        "initial_answer_ordinal": 11,
+        "probabilities": {
+          "11": 0.7164581418037415,
+          "12": 0.009759276639670134
+        }
+      },
+      "flips_11_to_12": false,
+      "greedy_output_token_ids_identical": true,
+      "logodds_11_vs_12_change": 0.06054810391994714,
+      "P12_change_percentage_points": -0.052648549899458885
+    },
+    {
+      "case": "roman",
+      "prompt": "the eleventh positive integer in roman numerals is",
+      "position": 9,
+      "token": " is",
+      "natural_gate": 2.429365873336792,
+      "removed_contribution_l2": 62.70071677492346,
+      "native": {
+        "response": " xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the",
+        "initial_answer_ordinal": 11,
+        "probabilities": {
+          "11": 0.41577284783124924,
+          "12": 0.035345629783947174
+        }
+      },
+      "T1468_off": {
+        "response": " xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the",
+        "initial_answer_ordinal": 11,
+        "probabilities": {
+          "11": 0.4850129038095474,
+          "12": 0.036955320246899515
+        }
+      },
+      "flips_11_to_12": false,
+      "greedy_output_token_ids_identical": true,
+      "logodds_11_vs_12_change": 0.10950155971019182,
+      "P12_change_percentage_points": 0.160969046295234
+    }
+  ],
+  "validation": {
+    "status": "pass",
+    "array_files_hash_verified": 15,
+    "independent_CPU_MOLT_evaluations": 12,
+    "max_absolute_operator_error": 5.183748055248572e-07,
+    "max_absolute_contribution_error": 7.325503741384409e-07,
+    "independent_BF16_subtraction_rounding_exact": true,
+    "max_absolute_independent_prefix_probability_error": 3.374254768373497e-07,
+    "native_reference_observer_and_zero_controls_exact": true,
+    "off_repeat_exact": true,
+    "upstream_L29_and_L34_gate_inputs_native_exact": true,
+    "only_final_input_position_edited": true,
+    "all_generated_positions_unedited": true,
+    "earlier_input_final_residuals_unchanged": true,
+    "candidate_token_prefix_events_disjoint": true
+  },
+  "source_sha256": {
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/results.json": "35191b442581d65f93f4fdcdb20b20d91a24429779f936f1034434c6d4ebfa5c",
+    "experiments/eleven-t1468-alone-20261103/weights/manifest.json": "f41023196cf38d2646c5b66b415f5b762c24e081bd6eefd62e0f1fe43d6a65e7",
+    "experiments/eleven-t1468-alone-20261103/weights/L34-T1468.npz": "4bb5bfc43a9e18bf7dc9f0d55d59a8e7d7d774951dd1e43d998e9f26442d57c9",
+    "experiments/eleven-t1468-alone-20261103/analyze.py": "4a0fd864f4b3cd151a51b1a1a7691ec2b4d35f60052abadd8b03a3611c2b1f69",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/month--native.npz": "ce2159f0fa7897606b459281b5320185474232842db7839d578de4cfef9b6140",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/month--observed.npz": "7dde1d9f42869e7110ed1a047a0c5af385f7fc853c686fcadf975c06a53d79fc",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/month--zero-strength.npz": "e667b28730bacb53883ecb51799d56e4374ea8cded24f9421927b668f7c9e40b",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/month--T1468-off.npz": "b0e4a78f66114dc2e0a5593c9da7f0c1523757dd1f019cdebcee2b07645c9bb4",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/month--T1468-off-repeat.npz": "b0e4a78f66114dc2e0a5593c9da7f0c1523757dd1f019cdebcee2b07645c9bb4",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/alphabet--native.npz": "56f1e0b3fe50b54b6d22474482df452032486d2ca0e5e47fce41d37459a5eba8",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/alphabet--observed.npz": "c163715e9d63817ebbafff569d6d418d842fbfa4731c7dbe6b5db5b9d380820e",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/alphabet--zero-strength.npz": "284d340a3aec9e1b3cfe0aacd3b4da648856591da06786080b712214b08c1a80",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/alphabet--T1468-off.npz": "e8084b6b1be7f971e2fd6b98944bde05b2ed10e73a59d11d7ac7d683bee21ad2",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/alphabet--T1468-off-repeat.npz": "e8084b6b1be7f971e2fd6b98944bde05b2ed10e73a59d11d7ac7d683bee21ad2",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/roman--native.npz": "f443d0f754b933f2fc5afe129299a2e0c775faf839fbbf839a89520681cb79f7",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/roman--observed.npz": "8d44cc94fc176e54f549a2e35015f5b39cb6b5647893dcb3b2426f84e2e248e8",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/roman--zero-strength.npz": "e351dd25b68b489e2b9990207d04fb2adeca2ca8aae2764b3015171e73a686e2",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/roman--T1468-off.npz": "dbd379bfbf2f9ba35200db12406f8b8ca0bc2c42c4ad55edafa2badbf6e85c6f",
+    "comparisons/2026-11-03-eleven-t1468-alone/remote-export/eleven-t1468-alone-20261103/artifacts/roman--T1468-off-repeat.npz": "dbd379bfbf2f9ba35200db12406f8b8ca0bc2c42c4ad55edafa2badbf6e85c6f"
+  },
+  "flips": 0,
+  "all_captured_greedy_output_token_ids_identical": true,
+  "limits": [
+    "Three selected raw completion prefixes; no claim of generality.",
+    "Ablation subtracts one MOLT approximation contribution from the native MLP; native MLPs are not replaced.",
+    "Probabilities are specified answer-prefix events, including all tokens of XI/XII, not EOS-terminated answer probabilities.",
+    "Full raw continuations are retained even when they repeat or hit the 24-token limit. Initial-answer changes are classified separately."
+  ]
+}

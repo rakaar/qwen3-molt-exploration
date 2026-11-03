@@ -1,0 +1,2481 @@
+{
+  "feature": "L29-T2375",
+  "date_local": "2026-11-03",
+  "languages": [
+    "English",
+    "Spanish",
+    "Chinese",
+    "French",
+    "Hindi"
+  ],
+  "contribution_definition": "c = gate(z) * ((z @ V @ U) * output_std); z = (native residual - input_mean) / input_std.",
+  "position_rule": "Final input position for every language; inspectable token and zero-based position per prompt.",
+  "space": "Original positive full MOLT contribution in native MLP-output units; no final RMSNorm, unembedding or BF16 subtraction rounding.",
+  "intervention": null,
+  "new_inference": false,
+  "records": {
+    "raw": [
+      {
+        "id": "en-raw-11",
+        "prompt": "the eleventh month of the year is",
+        "rendered_input": "the eleventh month of the year is",
+        "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Correct November month label.",
+        "language": "English",
+        "code": "EN",
+        "format": "raw",
+        "position": 7,
+        "token": " is",
+        "token_id": 374,
+        "token_context_span": " is",
+        "gate": 1.1585536003112793,
+        "operator_l2": 14.982367065601979,
+        "contribution_l2": 17.357875306936457,
+        "active": true,
+        "trace": [
+          {
+            "position": 0,
+            "token": "the",
+            "gate": 0.0,
+            "token_id": 1782,
+            "source_span": "the",
+            "region": "completion"
+          },
+          {
+            "position": 1,
+            "token": " ele",
+            "gate": 0.0,
+            "token_id": 10510,
+            "source_span": " ele",
+            "region": "completion"
+          },
+          {
+            "position": 2,
+            "token": "venth",
+            "gate": 0.0,
+            "token_id": 44607,
+            "source_span": "venth",
+            "region": "completion"
+          },
+          {
+            "position": 3,
+            "token": " month",
+            "gate": 0.0,
+            "token_id": 2254,
+            "source_span": " month",
+            "region": "completion"
+          },
+          {
+            "position": 4,
+            "token": " of",
+            "gate": 0.0,
+            "token_id": 315,
+            "source_span": " of",
+            "region": "completion"
+          },
+          {
+            "position": 5,
+            "token": " the",
+            "gate": 0.0,
+            "token_id": 279,
+            "source_span": " the",
+            "region": "completion"
+          },
+          {
+            "position": 6,
+            "token": " year",
+            "gate": 0.0,
+            "token_id": 1042,
+            "source_span": " year",
+            "region": "completion"
+          },
+          {
+            "position": 7,
+            "token": " is",
+            "gate": 1.1585536003112793,
+            "token_id": 374,
+            "source_span": " is",
+            "region": "completion"
+          }
+        ],
+        "active_positions": [
+          {
+            "position": 7,
+            "token": " is",
+            "gate": 1.1585536003112793,
+            "token_id": 374,
+            "source_span": " is",
+            "region": "completion"
+          }
+        ],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/en-raw-11-vectors.npz",
+        "source_vectors_sha256": "9d293fc2bf7c81a11663c9d6178b2baf6ca99a72b8001324039ccb523f1715c0"
+      },
+      {
+        "id": "es-raw-11",
+        "prompt": "el undécimo mes del año es",
+        "rendered_input": "el undécimo mes del año es",
+        "response": " noviembre, y el undécimo mes del año es noviembre. El duodécimo mes del año es",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Correct November month label.",
+        "language": "Spanish",
+        "code": "ES",
+        "format": "raw",
+        "position": 7,
+        "token": " es",
+        "token_id": 1531,
+        "token_context_span": " es",
+        "gate": 1.2433912754058838,
+        "operator_l2": 16.749893839835874,
+        "contribution_l2": 20.826671839808952,
+        "active": true,
+        "trace": [
+          {
+            "position": 0,
+            "token": "el",
+            "gate": 0.0,
+            "token_id": 301,
+            "source_span": "el",
+            "region": "completion"
+          },
+          {
+            "position": 1,
+            "token": " und",
+            "gate": 0.0,
+            "token_id": 2030,
+            "source_span": " und",
+            "region": "completion"
+          },
+          {
+            "position": 2,
+            "token": "éc",
+            "gate": 0.0,
+            "token_id": 19667,
+            "source_span": "éc",
+            "region": "completion"
+          },
+          {
+            "position": 3,
+            "token": "imo",
+            "gate": 0.0,
+            "token_id": 11366,
+            "source_span": "imo",
+            "region": "completion"
+          },
+          {
+            "position": 4,
+            "token": " mes",
+            "gate": 0.0,
+            "token_id": 10846,
+            "source_span": " mes",
+            "region": "completion"
+          },
+          {
+            "position": 5,
+            "token": " del",
+            "gate": 0.0,
+            "token_id": 1594,
+            "source_span": " del",
+            "region": "completion"
+          },
+          {
+            "position": 6,
+            "token": " año",
+            "gate": 0.0,
+            "token_id": 35816,
+            "source_span": " año",
+            "region": "completion"
+          },
+          {
+            "position": 7,
+            "token": " es",
+            "gate": 1.2433912754058838,
+            "token_id": 1531,
+            "source_span": " es",
+            "region": "completion"
+          }
+        ],
+        "active_positions": [
+          {
+            "position": 7,
+            "token": " es",
+            "gate": 1.2433912754058838,
+            "token_id": 1531,
+            "source_span": " es",
+            "region": "completion"
+          }
+        ],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/es-raw-11-vectors.npz",
+        "source_vectors_sha256": "80b81091b7839a7ecba141e8fa3ea9aca2fbd13563cf94e1f4babc3d2c8a5989"
+      },
+      {
+        "id": "zh-raw-11",
+        "prompt": "一年中的第十一个月是",
+        "rendered_input": "一年中的第十一个月是",
+        "response": "哪个月？ 一年中的第十一个月是**十一月**。  \n十一月是北半球的深秋",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Correct month label; raw Chinese first asks which month, then states November.",
+        "language": "Chinese",
+        "code": "ZH",
+        "format": "raw",
+        "position": 4,
+        "token": "是",
+        "token_id": 20412,
+        "token_context_span": "是",
+        "gate": 0.740416944026947,
+        "operator_l2": 12.848305525324706,
+        "contribution_l2": 9.513103130227613,
+        "active": true,
+        "trace": [
+          {
+            "position": 0,
+            "token": "一年",
+            "gate": 0.0,
+            "token_id": 100695,
+            "source_span": "一年",
+            "region": "completion"
+          },
+          {
+            "position": 1,
+            "token": "中的",
+            "gate": 0.0,
+            "token_id": 101047,
+            "source_span": "中的",
+            "region": "completion"
+          },
+          {
+            "position": 2,
+            "token": "第十",
+            "gate": 0.0,
+            "token_id": 105122,
+            "source_span": "第十",
+            "region": "completion"
+          },
+          {
+            "position": 3,
+            "token": "一个月",
+            "gate": 0.0,
+            "token_id": 105033,
+            "source_span": "一个月",
+            "region": "completion"
+          },
+          {
+            "position": 4,
+            "token": "是",
+            "gate": 0.740416944026947,
+            "token_id": 20412,
+            "source_span": "是",
+            "region": "completion"
+          }
+        ],
+        "active_positions": [
+          {
+            "position": 4,
+            "token": "是",
+            "gate": 0.740416944026947,
+            "token_id": 20412,
+            "source_span": "是",
+            "region": "completion"
+          }
+        ],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/zh-raw-11-vectors.npz",
+        "source_vectors_sha256": "74157cb7cc417884218fc5557c70abf838061db702790e944ed4e6fd83df459b"
+      },
+      {
+        "id": "fr-raw-11",
+        "prompt": "le onzième mois de l'année est",
+        "rendered_input": "le onzième mois de l'année est",
+        "response": " décembre. C'est le dernier mois de l'année. En français, le mot \"décembre\" vient du",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Native completion incorrectly says December. Retained as an inactive prompt, not treated as a successful capability control.",
+        "language": "French",
+        "code": "FR",
+        "format": "raw",
+        "position": 9,
+        "token": " est",
+        "token_id": 1788,
+        "token_context_span": " est",
+        "gate": 0.0,
+        "operator_l2": 12.337481914622948,
+        "contribution_l2": 0.0,
+        "active": false,
+        "trace": [
+          {
+            "position": 0,
+            "token": "le",
+            "gate": 0.0,
+            "token_id": 273,
+            "source_span": "le",
+            "region": "completion"
+          },
+          {
+            "position": 1,
+            "token": " on",
+            "gate": 0.0,
+            "token_id": 389,
+            "source_span": " on",
+            "region": "completion"
+          },
+          {
+            "position": 2,
+            "token": "zi",
+            "gate": 0.0,
+            "token_id": 8345,
+            "source_span": "zi",
+            "region": "completion"
+          },
+          {
+            "position": 3,
+            "token": "ème",
+            "gate": 0.0,
+            "token_id": 24267,
+            "source_span": "ème",
+            "region": "completion"
+          },
+          {
+            "position": 4,
+            "token": " mois",
+            "gate": 0.0,
+            "token_id": 45315,
+            "source_span": " mois",
+            "region": "completion"
+          },
+          {
+            "position": 5,
+            "token": " de",
+            "gate": 0.0,
+            "token_id": 409,
+            "source_span": " de",
+            "region": "completion"
+          },
+          {
+            "position": 6,
+            "token": " l",
+            "gate": 0.0,
+            "token_id": 326,
+            "source_span": " l",
+            "region": "completion"
+          },
+          {
+            "position": 7,
+            "token": "'",
+            "gate": 0.0,
+            "token_id": 6,
+            "source_span": "'",
+            "region": "completion"
+          },
+          {
+            "position": 8,
+            "token": "année",
+            "gate": 0.0,
+            "token_id": 84235,
+            "source_span": "année",
+            "region": "completion"
+          },
+          {
+            "position": 9,
+            "token": " est",
+            "gate": 0.0,
+            "token_id": 1788,
+            "source_span": " est",
+            "region": "completion"
+          }
+        ],
+        "active_positions": [],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/fr-raw-11-vectors.npz",
+        "source_vectors_sha256": "bcda7051a07c7b4bc55301d95a6b1c123316cb890ba3dc3a79609b39c6afae49"
+      },
+      {
+        "id": "hi-raw-11",
+        "prompt": "वर्ष का ग्यारहवाँ महीना है",
+        "rendered_input": "वर्ष का ग्यारहवाँ महीना है",
+        "response": "। इसके अंत में एक बड़ा अ",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Native 24-token continuation does not directly answer the month. Retained as an inactive prompt, not treated as a successful capability control.",
+        "language": "Hindi",
+        "code": "HI",
+        "format": "raw",
+        "position": 23,
+        "token": "�",
+        "token_id": 230,
+        "token_context_span": "ै",
+        "gate": 0.0,
+        "operator_l2": 7.354219165786913,
+        "contribution_l2": 0.0,
+        "active": false,
+        "trace": [
+          {
+            "position": 0,
+            "token": "व",
+            "gate": 0.0,
+            "token_id": 145535,
+            "source_span": "व",
+            "region": "completion"
+          },
+          {
+            "position": 1,
+            "token": "र",
+            "gate": 0.0,
+            "token_id": 44179,
+            "source_span": "र",
+            "region": "completion"
+          },
+          {
+            "position": 2,
+            "token": "्�",
+            "gate": 0.0,
+            "token_id": 30484,
+            "source_span": "्ष",
+            "region": "completion"
+          },
+          {
+            "position": 3,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 115,
+            "source_span": "ष",
+            "region": "completion"
+          },
+          {
+            "position": 4,
+            "token": " क",
+            "gate": 0.0,
+            "token_id": 47809,
+            "source_span": " क",
+            "region": "completion"
+          },
+          {
+            "position": 5,
+            "token": "ा",
+            "gate": 0.0,
+            "token_id": 23868,
+            "source_span": "ा",
+            "region": "completion"
+          },
+          {
+            "position": 6,
+            "token": " �",
+            "gate": 0.0,
+            "token_id": 14925,
+            "source_span": " ग",
+            "region": "completion"
+          },
+          {
+            "position": 7,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 245,
+            "source_span": "ग",
+            "region": "completion"
+          },
+          {
+            "position": 8,
+            "token": "्�",
+            "gate": 0.0,
+            "token_id": 30484,
+            "source_span": "्य",
+            "region": "completion"
+          },
+          {
+            "position": 9,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 107,
+            "source_span": "य",
+            "region": "completion"
+          },
+          {
+            "position": 10,
+            "token": "ा�",
+            "gate": 0.0,
+            "token_id": 31411,
+            "source_span": "ार",
+            "region": "completion"
+          },
+          {
+            "position": 11,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 108,
+            "source_span": "र",
+            "region": "completion"
+          },
+          {
+            "position": 12,
+            "token": "ह",
+            "gate": 0.0,
+            "token_id": 93948,
+            "source_span": "ह",
+            "region": "completion"
+          },
+          {
+            "position": 13,
+            "token": "व",
+            "gate": 0.0,
+            "token_id": 145535,
+            "source_span": "व",
+            "region": "completion"
+          },
+          {
+            "position": 14,
+            "token": "ा�",
+            "gate": 0.0,
+            "token_id": 31411,
+            "source_span": "ाँ",
+            "region": "completion"
+          },
+          {
+            "position": 15,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 223,
+            "source_span": "ँ",
+            "region": "completion"
+          },
+          {
+            "position": 16,
+            "token": " म",
+            "gate": 0.0,
+            "token_id": 91217,
+            "source_span": " म",
+            "region": "completion"
+          },
+          {
+            "position": 17,
+            "token": "ह",
+            "gate": 0.0,
+            "token_id": 93948,
+            "source_span": "ह",
+            "region": "completion"
+          },
+          {
+            "position": 18,
+            "token": "ी",
+            "gate": 0.0,
+            "token_id": 43647,
+            "source_span": "ी",
+            "region": "completion"
+          },
+          {
+            "position": 19,
+            "token": "न",
+            "gate": 0.0,
+            "token_id": 60096,
+            "source_span": "न",
+            "region": "completion"
+          },
+          {
+            "position": 20,
+            "token": "ा",
+            "gate": 0.0,
+            "token_id": 23868,
+            "source_span": "ा",
+            "region": "completion"
+          },
+          {
+            "position": 21,
+            "token": " ह",
+            "gate": 0.0,
+            "token_id": 84310,
+            "source_span": " ह",
+            "region": "completion"
+          },
+          {
+            "position": 22,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 12619,
+            "source_span": "ै",
+            "region": "completion"
+          },
+          {
+            "position": 23,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 230,
+            "source_span": "ै",
+            "region": "completion"
+          }
+        ],
+        "active_positions": [],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/hi-raw-11-vectors.npz",
+        "source_vectors_sha256": "b4b45f24e99a13503e51e5fea911b9317e9375cb83cba911b06ff0000549946f"
+      }
+    ],
+    "chat": [
+      {
+        "id": "en-chat-11",
+        "prompt": "What is the eleventh month of the year? Answer with only the month name.",
+        "rendered_input": "<|im_start|>user\nWhat is the eleventh month of the year? Answer with only the month name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "response": "November",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-01-eleven-multilingual/remote-export/eleven-multilingual-chat-20261101/artifacts/controls.json",
+        "source_results_sha256": "6e96e43b125fd90bebd2b5cb893bdbfa8f01822fc1b60fb0793680d7a2fc1ec3",
+        "native_answer_note": "Correct November answer in the saved no-thinking chat run.",
+        "language": "English",
+        "code": "EN",
+        "format": "chat",
+        "position": 28,
+        "token": "\n\n",
+        "token_id": 271,
+        "token_context_span": "\n\n",
+        "gate": 2.783611297607422,
+        "operator_l2": 24.558793291284417,
+        "contribution_l2": 68.3621344715574,
+        "active": true,
+        "trace": [
+          {
+            "position": 0,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_header"
+          },
+          {
+            "position": 1,
+            "token": "user",
+            "gate": 0.0,
+            "token_id": 872,
+            "source_span": "user",
+            "region": "chat_header"
+          },
+          {
+            "position": 2,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_header"
+          },
+          {
+            "position": 3,
+            "token": "What",
+            "gate": 0.0,
+            "token_id": 3838,
+            "source_span": "What",
+            "region": "question"
+          },
+          {
+            "position": 4,
+            "token": " is",
+            "gate": 0.0,
+            "token_id": 374,
+            "source_span": " is",
+            "region": "question"
+          },
+          {
+            "position": 5,
+            "token": " the",
+            "gate": 0.0,
+            "token_id": 279,
+            "source_span": " the",
+            "region": "question"
+          },
+          {
+            "position": 6,
+            "token": " ele",
+            "gate": 0.0,
+            "token_id": 10510,
+            "source_span": " ele",
+            "region": "question"
+          },
+          {
+            "position": 7,
+            "token": "venth",
+            "gate": 0.0,
+            "token_id": 44607,
+            "source_span": "venth",
+            "region": "question"
+          },
+          {
+            "position": 8,
+            "token": " month",
+            "gate": 0.0,
+            "token_id": 2254,
+            "source_span": " month",
+            "region": "question"
+          },
+          {
+            "position": 9,
+            "token": " of",
+            "gate": 0.0,
+            "token_id": 315,
+            "source_span": " of",
+            "region": "question"
+          },
+          {
+            "position": 10,
+            "token": " the",
+            "gate": 0.0,
+            "token_id": 279,
+            "source_span": " the",
+            "region": "question"
+          },
+          {
+            "position": 11,
+            "token": " year",
+            "gate": 0.0,
+            "token_id": 1042,
+            "source_span": " year",
+            "region": "question"
+          },
+          {
+            "position": 12,
+            "token": "?",
+            "gate": 0.5582998394966125,
+            "token_id": 30,
+            "source_span": "?",
+            "region": "question"
+          },
+          {
+            "position": 13,
+            "token": " Answer",
+            "gate": 0.0,
+            "token_id": 21806,
+            "source_span": " Answer",
+            "region": "question"
+          },
+          {
+            "position": 14,
+            "token": " with",
+            "gate": 0.0,
+            "token_id": 448,
+            "source_span": " with",
+            "region": "question"
+          },
+          {
+            "position": 15,
+            "token": " only",
+            "gate": 0.0,
+            "token_id": 1172,
+            "source_span": " only",
+            "region": "question"
+          },
+          {
+            "position": 16,
+            "token": " the",
+            "gate": 0.0,
+            "token_id": 279,
+            "source_span": " the",
+            "region": "question"
+          },
+          {
+            "position": 17,
+            "token": " month",
+            "gate": 0.0,
+            "token_id": 2254,
+            "source_span": " month",
+            "region": "question"
+          },
+          {
+            "position": 18,
+            "token": " name",
+            "gate": 0.0,
+            "token_id": 829,
+            "source_span": " name",
+            "region": "question"
+          },
+          {
+            "position": 19,
+            "token": ".",
+            "gate": 0.0,
+            "token_id": 13,
+            "source_span": ".",
+            "region": "question"
+          },
+          {
+            "position": 20,
+            "token": "<|im_end|>",
+            "gate": 0.0,
+            "token_id": 151645,
+            "source_span": "<|im_end|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 21,
+            "token": "\n",
+            "gate": 1.5311470031738281,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 22,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 23,
+            "token": "assistant",
+            "gate": 0.0,
+            "token_id": 77091,
+            "source_span": "assistant",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 24,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 25,
+            "token": "<think>",
+            "gate": 0.0,
+            "token_id": 151667,
+            "source_span": "<think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 26,
+            "token": "\n\n",
+            "gate": 1.122671365737915,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 27,
+            "token": "</think>",
+            "gate": 0.0,
+            "token_id": 151668,
+            "source_span": "</think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 28,
+            "token": "\n\n",
+            "gate": 2.783611297607422,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "active_positions": [
+          {
+            "position": 12,
+            "token": "?",
+            "gate": 0.5582998394966125,
+            "token_id": 30,
+            "source_span": "?",
+            "region": "question"
+          },
+          {
+            "position": 21,
+            "token": "\n",
+            "gate": 1.5311470031738281,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 26,
+            "token": "\n\n",
+            "gate": 1.122671365737915,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 28,
+            "token": "\n\n",
+            "gate": 2.783611297607422,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "source_vectors": "comparisons/2026-11-01-eleven-multilingual/remote-export/eleven-multilingual-chat-20261101/artifacts/en_month_chat--ordinal-11--zero--step-0.npz",
+        "source_vectors_sha256": "2bafde98e012dd0c597438f0b21947d3c7b7c91b1056acc7af32b496e42a6e75"
+      },
+      {
+        "id": "es-chat-11",
+        "prompt": "¿Cuál es el undécimo mes del año? Responde solo con el nombre del mes.",
+        "rendered_input": "<|im_start|>user\n¿Cuál es el undécimo mes del año? Responde solo con el nombre del mes.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "response": "Noviembre",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Correct November month label.",
+        "language": "Spanish",
+        "code": "ES",
+        "format": "chat",
+        "position": 32,
+        "token": "\n\n",
+        "token_id": 271,
+        "token_context_span": "\n\n",
+        "gate": 2.4590837955474854,
+        "operator_l2": 24.83162758659866,
+        "contribution_l2": 61.06305311319307,
+        "active": true,
+        "trace": [
+          {
+            "position": 0,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_header"
+          },
+          {
+            "position": 1,
+            "token": "user",
+            "gate": 0.0,
+            "token_id": 872,
+            "source_span": "user",
+            "region": "chat_header"
+          },
+          {
+            "position": 2,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_header"
+          },
+          {
+            "position": 3,
+            "token": "¿",
+            "gate": 0.0,
+            "token_id": 30182,
+            "source_span": "¿",
+            "region": "question"
+          },
+          {
+            "position": 4,
+            "token": "Cu",
+            "gate": 0.0,
+            "token_id": 44819,
+            "source_span": "Cu",
+            "region": "question"
+          },
+          {
+            "position": 5,
+            "token": "ál",
+            "gate": 0.0,
+            "token_id": 19003,
+            "source_span": "ál",
+            "region": "question"
+          },
+          {
+            "position": 6,
+            "token": " es",
+            "gate": 0.0,
+            "token_id": 1531,
+            "source_span": " es",
+            "region": "question"
+          },
+          {
+            "position": 7,
+            "token": " el",
+            "gate": 0.0,
+            "token_id": 655,
+            "source_span": " el",
+            "region": "question"
+          },
+          {
+            "position": 8,
+            "token": " und",
+            "gate": 0.0,
+            "token_id": 2030,
+            "source_span": " und",
+            "region": "question"
+          },
+          {
+            "position": 9,
+            "token": "éc",
+            "gate": 0.0,
+            "token_id": 19667,
+            "source_span": "éc",
+            "region": "question"
+          },
+          {
+            "position": 10,
+            "token": "imo",
+            "gate": 0.0,
+            "token_id": 11366,
+            "source_span": "imo",
+            "region": "question"
+          },
+          {
+            "position": 11,
+            "token": " mes",
+            "gate": 0.0,
+            "token_id": 10846,
+            "source_span": " mes",
+            "region": "question"
+          },
+          {
+            "position": 12,
+            "token": " del",
+            "gate": 0.0,
+            "token_id": 1594,
+            "source_span": " del",
+            "region": "question"
+          },
+          {
+            "position": 13,
+            "token": " año",
+            "gate": 0.0,
+            "token_id": 35816,
+            "source_span": " año",
+            "region": "question"
+          },
+          {
+            "position": 14,
+            "token": "?",
+            "gate": 0.0,
+            "token_id": 30,
+            "source_span": "?",
+            "region": "question"
+          },
+          {
+            "position": 15,
+            "token": " Res",
+            "gate": 0.0,
+            "token_id": 1800,
+            "source_span": " Res",
+            "region": "question"
+          },
+          {
+            "position": 16,
+            "token": "ponde",
+            "gate": 0.0,
+            "token_id": 75049,
+            "source_span": "ponde",
+            "region": "question"
+          },
+          {
+            "position": 17,
+            "token": " solo",
+            "gate": 0.0,
+            "token_id": 13529,
+            "source_span": " solo",
+            "region": "question"
+          },
+          {
+            "position": 18,
+            "token": " con",
+            "gate": 0.0,
+            "token_id": 390,
+            "source_span": " con",
+            "region": "question"
+          },
+          {
+            "position": 19,
+            "token": " el",
+            "gate": 0.0,
+            "token_id": 655,
+            "source_span": " el",
+            "region": "question"
+          },
+          {
+            "position": 20,
+            "token": " nombre",
+            "gate": 0.0,
+            "token_id": 12736,
+            "source_span": " nombre",
+            "region": "question"
+          },
+          {
+            "position": 21,
+            "token": " del",
+            "gate": 0.0,
+            "token_id": 1594,
+            "source_span": " del",
+            "region": "question"
+          },
+          {
+            "position": 22,
+            "token": " mes",
+            "gate": 0.0,
+            "token_id": 10846,
+            "source_span": " mes",
+            "region": "question"
+          },
+          {
+            "position": 23,
+            "token": ".",
+            "gate": 0.0,
+            "token_id": 13,
+            "source_span": ".",
+            "region": "question"
+          },
+          {
+            "position": 24,
+            "token": "<|im_end|>",
+            "gate": 0.0,
+            "token_id": 151645,
+            "source_span": "<|im_end|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 25,
+            "token": "\n",
+            "gate": 1.3799967765808105,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 26,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 27,
+            "token": "assistant",
+            "gate": 0.0,
+            "token_id": 77091,
+            "source_span": "assistant",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 28,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 29,
+            "token": "<think>",
+            "gate": 0.0,
+            "token_id": 151667,
+            "source_span": "<think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 30,
+            "token": "\n\n",
+            "gate": 1.7720820903778076,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 31,
+            "token": "</think>",
+            "gate": 0.0,
+            "token_id": 151668,
+            "source_span": "</think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 32,
+            "token": "\n\n",
+            "gate": 2.4590837955474854,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "active_positions": [
+          {
+            "position": 25,
+            "token": "\n",
+            "gate": 1.3799967765808105,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 30,
+            "token": "\n\n",
+            "gate": 1.7720820903778076,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 32,
+            "token": "\n\n",
+            "gate": 2.4590837955474854,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/es-chat-11-vectors.npz",
+        "source_vectors_sha256": "2ae8e932aa3093ac5de8a8dd548f79b0671e7cdc8606639608d3b8aeb43f5db2"
+      },
+      {
+        "id": "zh-chat-11",
+        "prompt": "一年中的第十一个月叫什么？请只回答月份名称。",
+        "rendered_input": "<|im_start|>user\n一年中的第十一个月叫什么？请只回答月份名称。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "response": "十一月",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Correct November month label.",
+        "language": "Chinese",
+        "code": "ZH",
+        "format": "chat",
+        "position": 24,
+        "token": "\n\n",
+        "token_id": 271,
+        "token_context_span": "\n\n",
+        "gate": 2.369594097137451,
+        "operator_l2": 21.690286726957417,
+        "contribution_l2": 51.39717546075581,
+        "active": true,
+        "trace": [
+          {
+            "position": 0,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_header"
+          },
+          {
+            "position": 1,
+            "token": "user",
+            "gate": 0.0,
+            "token_id": 872,
+            "source_span": "user",
+            "region": "chat_header"
+          },
+          {
+            "position": 2,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_header"
+          },
+          {
+            "position": 3,
+            "token": "一年",
+            "gate": 0.0,
+            "token_id": 100695,
+            "source_span": "一年",
+            "region": "question"
+          },
+          {
+            "position": 4,
+            "token": "中的",
+            "gate": 0.0,
+            "token_id": 101047,
+            "source_span": "中的",
+            "region": "question"
+          },
+          {
+            "position": 5,
+            "token": "第十",
+            "gate": 0.0,
+            "token_id": 105122,
+            "source_span": "第十",
+            "region": "question"
+          },
+          {
+            "position": 6,
+            "token": "一个月",
+            "gate": 0.0,
+            "token_id": 105033,
+            "source_span": "一个月",
+            "region": "question"
+          },
+          {
+            "position": 7,
+            "token": "叫",
+            "gate": 1.052919864654541,
+            "token_id": 99882,
+            "source_span": "叫",
+            "region": "question"
+          },
+          {
+            "position": 8,
+            "token": "什么",
+            "gate": 0.0,
+            "token_id": 99245,
+            "source_span": "什么",
+            "region": "question"
+          },
+          {
+            "position": 9,
+            "token": "？",
+            "gate": 0.0,
+            "token_id": 11319,
+            "source_span": "？",
+            "region": "question"
+          },
+          {
+            "position": 10,
+            "token": "请",
+            "gate": 0.0,
+            "token_id": 14880,
+            "source_span": "请",
+            "region": "question"
+          },
+          {
+            "position": 11,
+            "token": "只",
+            "gate": 0.0,
+            "token_id": 91680,
+            "source_span": "只",
+            "region": "question"
+          },
+          {
+            "position": 12,
+            "token": "回答",
+            "gate": 0.0,
+            "token_id": 102104,
+            "source_span": "回答",
+            "region": "question"
+          },
+          {
+            "position": 13,
+            "token": "月份",
+            "gate": 0.0,
+            "token_id": 104081,
+            "source_span": "月份",
+            "region": "question"
+          },
+          {
+            "position": 14,
+            "token": "名称",
+            "gate": 0.0,
+            "token_id": 29991,
+            "source_span": "名称",
+            "region": "question"
+          },
+          {
+            "position": 15,
+            "token": "。",
+            "gate": 0.0,
+            "token_id": 1773,
+            "source_span": "。",
+            "region": "question"
+          },
+          {
+            "position": 16,
+            "token": "<|im_end|>",
+            "gate": 0.0,
+            "token_id": 151645,
+            "source_span": "<|im_end|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 17,
+            "token": "\n",
+            "gate": 1.4313814640045166,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 18,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 19,
+            "token": "assistant",
+            "gate": 0.0,
+            "token_id": 77091,
+            "source_span": "assistant",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 20,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 21,
+            "token": "<think>",
+            "gate": 0.0,
+            "token_id": 151667,
+            "source_span": "<think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 22,
+            "token": "\n\n",
+            "gate": 1.4309980869293213,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 23,
+            "token": "</think>",
+            "gate": 0.0,
+            "token_id": 151668,
+            "source_span": "</think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 24,
+            "token": "\n\n",
+            "gate": 2.369594097137451,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "active_positions": [
+          {
+            "position": 7,
+            "token": "叫",
+            "gate": 1.052919864654541,
+            "token_id": 99882,
+            "source_span": "叫",
+            "region": "question"
+          },
+          {
+            "position": 17,
+            "token": "\n",
+            "gate": 1.4313814640045166,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 22,
+            "token": "\n\n",
+            "gate": 1.4309980869293213,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 24,
+            "token": "\n\n",
+            "gate": 2.369594097137451,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/zh-chat-11-vectors.npz",
+        "source_vectors_sha256": "505f7b26060c7199af6dce94966f9227be9634516925735b7851f754d2aca73f"
+      },
+      {
+        "id": "fr-chat-11",
+        "prompt": "Quel est le onzième mois de l'année ? Réponds uniquement par le nom du mois.",
+        "rendered_input": "<|im_start|>user\nQuel est le onzième mois de l'année ? Réponds uniquement par le nom du mois.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "response": "Novembre.",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Correct November month label.",
+        "language": "French",
+        "code": "FR",
+        "format": "chat",
+        "position": 35,
+        "token": "\n\n",
+        "token_id": 271,
+        "token_context_span": "\n\n",
+        "gate": 2.6252520084381104,
+        "operator_l2": 25.30824274006162,
+        "contribution_l2": 66.44051502873316,
+        "active": true,
+        "trace": [
+          {
+            "position": 0,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_header"
+          },
+          {
+            "position": 1,
+            "token": "user",
+            "gate": 0.0,
+            "token_id": 872,
+            "source_span": "user",
+            "region": "chat_header"
+          },
+          {
+            "position": 2,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_header"
+          },
+          {
+            "position": 3,
+            "token": "Qu",
+            "gate": 0.0,
+            "token_id": 2183,
+            "source_span": "Qu",
+            "region": "question"
+          },
+          {
+            "position": 4,
+            "token": "el",
+            "gate": 0.0,
+            "token_id": 301,
+            "source_span": "el",
+            "region": "question"
+          },
+          {
+            "position": 5,
+            "token": " est",
+            "gate": 0.0,
+            "token_id": 1788,
+            "source_span": " est",
+            "region": "question"
+          },
+          {
+            "position": 6,
+            "token": " le",
+            "gate": 0.0,
+            "token_id": 512,
+            "source_span": " le",
+            "region": "question"
+          },
+          {
+            "position": 7,
+            "token": " on",
+            "gate": 0.0,
+            "token_id": 389,
+            "source_span": " on",
+            "region": "question"
+          },
+          {
+            "position": 8,
+            "token": "zi",
+            "gate": 0.0,
+            "token_id": 8345,
+            "source_span": "zi",
+            "region": "question"
+          },
+          {
+            "position": 9,
+            "token": "ème",
+            "gate": 0.0,
+            "token_id": 24267,
+            "source_span": "ème",
+            "region": "question"
+          },
+          {
+            "position": 10,
+            "token": " mois",
+            "gate": 0.0,
+            "token_id": 45315,
+            "source_span": " mois",
+            "region": "question"
+          },
+          {
+            "position": 11,
+            "token": " de",
+            "gate": 0.0,
+            "token_id": 409,
+            "source_span": " de",
+            "region": "question"
+          },
+          {
+            "position": 12,
+            "token": " l",
+            "gate": 0.0,
+            "token_id": 326,
+            "source_span": " l",
+            "region": "question"
+          },
+          {
+            "position": 13,
+            "token": "'",
+            "gate": 0.0,
+            "token_id": 6,
+            "source_span": "'",
+            "region": "question"
+          },
+          {
+            "position": 14,
+            "token": "année",
+            "gate": 0.0,
+            "token_id": 84235,
+            "source_span": "année",
+            "region": "question"
+          },
+          {
+            "position": 15,
+            "token": " ?",
+            "gate": 0.0,
+            "token_id": 937,
+            "source_span": " ?",
+            "region": "question"
+          },
+          {
+            "position": 16,
+            "token": " Ré",
+            "gate": 0.0,
+            "token_id": 50123,
+            "source_span": " Ré",
+            "region": "question"
+          },
+          {
+            "position": 17,
+            "token": "pond",
+            "gate": 0.0,
+            "token_id": 3511,
+            "source_span": "pond",
+            "region": "question"
+          },
+          {
+            "position": 18,
+            "token": "s",
+            "gate": 0.0,
+            "token_id": 82,
+            "source_span": "s",
+            "region": "question"
+          },
+          {
+            "position": 19,
+            "token": " uniqu",
+            "gate": 0.0,
+            "token_id": 28021,
+            "source_span": " uniqu",
+            "region": "question"
+          },
+          {
+            "position": 20,
+            "token": "ement",
+            "gate": 0.0,
+            "token_id": 1114,
+            "source_span": "ement",
+            "region": "question"
+          },
+          {
+            "position": 21,
+            "token": " par",
+            "gate": 0.0,
+            "token_id": 1346,
+            "source_span": " par",
+            "region": "question"
+          },
+          {
+            "position": 22,
+            "token": " le",
+            "gate": 0.0,
+            "token_id": 512,
+            "source_span": " le",
+            "region": "question"
+          },
+          {
+            "position": 23,
+            "token": " nom",
+            "gate": 0.0,
+            "token_id": 9662,
+            "source_span": " nom",
+            "region": "question"
+          },
+          {
+            "position": 24,
+            "token": " du",
+            "gate": 0.0,
+            "token_id": 3845,
+            "source_span": " du",
+            "region": "question"
+          },
+          {
+            "position": 25,
+            "token": " mois",
+            "gate": 0.0,
+            "token_id": 45315,
+            "source_span": " mois",
+            "region": "question"
+          },
+          {
+            "position": 26,
+            "token": ".",
+            "gate": 0.0,
+            "token_id": 13,
+            "source_span": ".",
+            "region": "question"
+          },
+          {
+            "position": 27,
+            "token": "<|im_end|>",
+            "gate": 0.0,
+            "token_id": 151645,
+            "source_span": "<|im_end|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 28,
+            "token": "\n",
+            "gate": 1.5024199485778809,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 29,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 30,
+            "token": "assistant",
+            "gate": 0.0,
+            "token_id": 77091,
+            "source_span": "assistant",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 31,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 32,
+            "token": "<think>",
+            "gate": 0.0,
+            "token_id": 151667,
+            "source_span": "<think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 33,
+            "token": "\n\n",
+            "gate": 1.583122730255127,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 34,
+            "token": "</think>",
+            "gate": 0.0,
+            "token_id": 151668,
+            "source_span": "</think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 35,
+            "token": "\n\n",
+            "gate": 2.6252520084381104,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "active_positions": [
+          {
+            "position": 28,
+            "token": "\n",
+            "gate": 1.5024199485778809,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 33,
+            "token": "\n\n",
+            "gate": 1.583122730255127,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 35,
+            "token": "\n\n",
+            "gate": 2.6252520084381104,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/fr-chat-11-vectors.npz",
+        "source_vectors_sha256": "6290207bfb117676e8418338f2aaf9578fbde31fc64d651b786f50afb48eca5b"
+      },
+      {
+        "id": "hi-chat-11",
+        "prompt": "वर्ष का ग्यारहवाँ महीना कौन-सा है? केवल महीने का नाम बताइए।",
+        "rendered_input": "<|im_start|>user\nवर्ष का ग्यारहवाँ महीना कौन-सा है? केवल महीने का नाम बताइए।<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "response": "नवंबर",
+        "observer_full_logits_exact": true,
+        "source_results": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/results.json",
+        "source_results_sha256": "671baf591fa9386400b09664cc3a1391b2c45147a262bf164d6f645fb54a5470",
+        "native_answer_note": "Correct November month label.",
+        "language": "Hindi",
+        "code": "HI",
+        "format": "chat",
+        "position": 65,
+        "token": "\n\n",
+        "token_id": 271,
+        "token_context_span": "\n\n",
+        "gate": 1.5293164253234863,
+        "operator_l2": 18.131813796970565,
+        "contribution_l2": 27.729280681807737,
+        "active": true,
+        "trace": [
+          {
+            "position": 0,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_header"
+          },
+          {
+            "position": 1,
+            "token": "user",
+            "gate": 0.0,
+            "token_id": 872,
+            "source_span": "user",
+            "region": "chat_header"
+          },
+          {
+            "position": 2,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_header"
+          },
+          {
+            "position": 3,
+            "token": "व",
+            "gate": 0.0,
+            "token_id": 145535,
+            "source_span": "व",
+            "region": "question"
+          },
+          {
+            "position": 4,
+            "token": "र",
+            "gate": 0.0,
+            "token_id": 44179,
+            "source_span": "र",
+            "region": "question"
+          },
+          {
+            "position": 5,
+            "token": "्�",
+            "gate": 0.0,
+            "token_id": 30484,
+            "source_span": "्ष",
+            "region": "question"
+          },
+          {
+            "position": 6,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 115,
+            "source_span": "ष",
+            "region": "question"
+          },
+          {
+            "position": 7,
+            "token": " क",
+            "gate": 0.0,
+            "token_id": 47809,
+            "source_span": " क",
+            "region": "question"
+          },
+          {
+            "position": 8,
+            "token": "ा",
+            "gate": 0.0,
+            "token_id": 23868,
+            "source_span": "ा",
+            "region": "question"
+          },
+          {
+            "position": 9,
+            "token": " �",
+            "gate": 0.0,
+            "token_id": 14925,
+            "source_span": " ग",
+            "region": "question"
+          },
+          {
+            "position": 10,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 245,
+            "source_span": "ग",
+            "region": "question"
+          },
+          {
+            "position": 11,
+            "token": "्�",
+            "gate": 0.0,
+            "token_id": 30484,
+            "source_span": "्य",
+            "region": "question"
+          },
+          {
+            "position": 12,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 107,
+            "source_span": "य",
+            "region": "question"
+          },
+          {
+            "position": 13,
+            "token": "ा�",
+            "gate": 0.0,
+            "token_id": 31411,
+            "source_span": "ार",
+            "region": "question"
+          },
+          {
+            "position": 14,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 108,
+            "source_span": "र",
+            "region": "question"
+          },
+          {
+            "position": 15,
+            "token": "ह",
+            "gate": 0.0,
+            "token_id": 93948,
+            "source_span": "ह",
+            "region": "question"
+          },
+          {
+            "position": 16,
+            "token": "व",
+            "gate": 0.0,
+            "token_id": 145535,
+            "source_span": "व",
+            "region": "question"
+          },
+          {
+            "position": 17,
+            "token": "ा�",
+            "gate": 0.0,
+            "token_id": 31411,
+            "source_span": "ाँ",
+            "region": "question"
+          },
+          {
+            "position": 18,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 223,
+            "source_span": "ँ",
+            "region": "question"
+          },
+          {
+            "position": 19,
+            "token": " म",
+            "gate": 0.0,
+            "token_id": 91217,
+            "source_span": " म",
+            "region": "question"
+          },
+          {
+            "position": 20,
+            "token": "ह",
+            "gate": 0.0,
+            "token_id": 93948,
+            "source_span": "ह",
+            "region": "question"
+          },
+          {
+            "position": 21,
+            "token": "ी",
+            "gate": 0.0,
+            "token_id": 43647,
+            "source_span": "ी",
+            "region": "question"
+          },
+          {
+            "position": 22,
+            "token": "न",
+            "gate": 0.0,
+            "token_id": 60096,
+            "source_span": "न",
+            "region": "question"
+          },
+          {
+            "position": 23,
+            "token": "ा",
+            "gate": 0.0,
+            "token_id": 23868,
+            "source_span": "ा",
+            "region": "question"
+          },
+          {
+            "position": 24,
+            "token": " क",
+            "gate": 0.0,
+            "token_id": 47809,
+            "source_span": " क",
+            "region": "question"
+          },
+          {
+            "position": 25,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 12619,
+            "source_span": "ौ",
+            "region": "question"
+          },
+          {
+            "position": 26,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 234,
+            "source_span": "ौ",
+            "region": "question"
+          },
+          {
+            "position": 27,
+            "token": "न",
+            "gate": 0.0,
+            "token_id": 60096,
+            "source_span": "न",
+            "region": "question"
+          },
+          {
+            "position": 28,
+            "token": "-",
+            "gate": 0.0,
+            "token_id": 12,
+            "source_span": "-",
+            "region": "question"
+          },
+          {
+            "position": 29,
+            "token": "स",
+            "gate": 0.0,
+            "token_id": 78368,
+            "source_span": "स",
+            "region": "question"
+          },
+          {
+            "position": 30,
+            "token": "ा",
+            "gate": 0.0,
+            "token_id": 23868,
+            "source_span": "ा",
+            "region": "question"
+          },
+          {
+            "position": 31,
+            "token": " ह",
+            "gate": 0.0,
+            "token_id": 84310,
+            "source_span": " ह",
+            "region": "question"
+          },
+          {
+            "position": 32,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 12619,
+            "source_span": "ै",
+            "region": "question"
+          },
+          {
+            "position": 33,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 230,
+            "source_span": "ै",
+            "region": "question"
+          },
+          {
+            "position": 34,
+            "token": "?",
+            "gate": 0.0,
+            "token_id": 30,
+            "source_span": "?",
+            "region": "question"
+          },
+          {
+            "position": 35,
+            "token": " क",
+            "gate": 0.0,
+            "token_id": 47809,
+            "source_span": " क",
+            "region": "question"
+          },
+          {
+            "position": 36,
+            "token": "े�",
+            "gate": 0.0,
+            "token_id": 54784,
+            "source_span": "ेव",
+            "region": "question"
+          },
+          {
+            "position": 37,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 113,
+            "source_span": "व",
+            "region": "question"
+          },
+          {
+            "position": 38,
+            "token": "ल",
+            "gate": 0.0,
+            "token_id": 91811,
+            "source_span": "ल",
+            "region": "question"
+          },
+          {
+            "position": 39,
+            "token": " म",
+            "gate": 0.0,
+            "token_id": 91217,
+            "source_span": " म",
+            "region": "question"
+          },
+          {
+            "position": 40,
+            "token": "ह",
+            "gate": 0.0,
+            "token_id": 93948,
+            "source_span": "ह",
+            "region": "question"
+          },
+          {
+            "position": 41,
+            "token": "ी",
+            "gate": 0.0,
+            "token_id": 43647,
+            "source_span": "ी",
+            "region": "question"
+          },
+          {
+            "position": 42,
+            "token": "न",
+            "gate": 0.0,
+            "token_id": 60096,
+            "source_span": "न",
+            "region": "question"
+          },
+          {
+            "position": 43,
+            "token": "े",
+            "gate": 0.0,
+            "token_id": 34370,
+            "source_span": "े",
+            "region": "question"
+          },
+          {
+            "position": 44,
+            "token": " क",
+            "gate": 0.0,
+            "token_id": 47809,
+            "source_span": " क",
+            "region": "question"
+          },
+          {
+            "position": 45,
+            "token": "ा",
+            "gate": 0.0,
+            "token_id": 23868,
+            "source_span": "ा",
+            "region": "question"
+          },
+          {
+            "position": 46,
+            "token": " �",
+            "gate": 0.0,
+            "token_id": 14925,
+            "source_span": " न",
+            "region": "question"
+          },
+          {
+            "position": 47,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 101,
+            "source_span": "न",
+            "region": "question"
+          },
+          {
+            "position": 48,
+            "token": "ा�",
+            "gate": 0.0,
+            "token_id": 31411,
+            "source_span": "ाम",
+            "region": "question"
+          },
+          {
+            "position": 49,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 106,
+            "source_span": "म",
+            "region": "question"
+          },
+          {
+            "position": 50,
+            "token": " �",
+            "gate": 0.0,
+            "token_id": 14925,
+            "source_span": " ब",
+            "region": "question"
+          },
+          {
+            "position": 51,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 105,
+            "source_span": "ब",
+            "region": "question"
+          },
+          {
+            "position": 52,
+            "token": "त",
+            "gate": 0.0,
+            "token_id": 79238,
+            "source_span": "त",
+            "region": "question"
+          },
+          {
+            "position": 53,
+            "token": "ा�",
+            "gate": 0.0,
+            "token_id": 31411,
+            "source_span": "ाइ",
+            "region": "question"
+          },
+          {
+            "position": 54,
+            "token": "�",
+            "gate": 0.0,
+            "token_id": 229,
+            "source_span": "इ",
+            "region": "question"
+          },
+          {
+            "position": 55,
+            "token": "ए",
+            "gate": 0.0,
+            "token_id": 146049,
+            "source_span": "ए",
+            "region": "question"
+          },
+          {
+            "position": 56,
+            "token": "।",
+            "gate": 0.0,
+            "token_id": 146031,
+            "source_span": "।",
+            "region": "question"
+          },
+          {
+            "position": 57,
+            "token": "<|im_end|>",
+            "gate": 0.0,
+            "token_id": 151645,
+            "source_span": "<|im_end|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 58,
+            "token": "\n",
+            "gate": 0.9295520186424255,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 59,
+            "token": "<|im_start|>",
+            "gate": 0.0,
+            "token_id": 151644,
+            "source_span": "<|im_start|>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 60,
+            "token": "assistant",
+            "gate": 0.0,
+            "token_id": 77091,
+            "source_span": "assistant",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 61,
+            "token": "\n",
+            "gate": 0.0,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 62,
+            "token": "<think>",
+            "gate": 0.0,
+            "token_id": 151667,
+            "source_span": "<think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 63,
+            "token": "\n\n",
+            "gate": 0.0,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 64,
+            "token": "</think>",
+            "gate": 0.0,
+            "token_id": 151668,
+            "source_span": "</think>",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 65,
+            "token": "\n\n",
+            "gate": 1.5293164253234863,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "active_positions": [
+          {
+            "position": 58,
+            "token": "\n",
+            "gate": 0.9295520186424255,
+            "token_id": 198,
+            "source_span": "\n",
+            "region": "chat_suffix"
+          },
+          {
+            "position": 65,
+            "token": "\n\n",
+            "gate": 1.5293164253234863,
+            "token_id": 271,
+            "source_span": "\n\n",
+            "region": "chat_suffix"
+          }
+        ],
+        "source_vectors": "comparisons/2026-11-03-eleven-month-languages/remote-export/eleven-month-languages-20261103/artifacts/hi-chat-11-vectors.npz",
+        "source_vectors_sha256": "752cbaee618db87d7762b9237642acdcf6e6665139d80a05a70bae77f98d75dc"
+      }
+    ]
+  },
+  "cosines": {
+    "raw": [
+      [
+        1.0,
+        0.9907041776574984,
+        0.9873730651964453,
+        null,
+        null
+      ],
+      [
+        0.9907041776574984,
+        1.0,
+        0.9827932687355183,
+        null,
+        null
+      ],
+      [
+        0.9873730651964453,
+        0.9827932687355183,
+        1.0,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "chat": [
+      [
+        1.0,
+        0.9963444879835759,
+        0.997465081210582,
+        0.9966342431231325,
+        0.9933243322325358
+      ],
+      [
+        0.9963444879835759,
+        1.0,
+        0.9944751464661161,
+        0.9985299072955304,
+        0.9964293272862608
+      ],
+      [
+        0.997465081210582,
+        0.9944751464661161,
+        1.0,
+        0.9937706161867813,
+        0.9916111935263228
+      ],
+      [
+        0.9966342431231325,
+        0.9985299072955304,
+        0.9937706161867813,
+        1.0,
+        0.9954142628503343
+      ],
+      [
+        0.9933243322325358,
+        0.9964293272862608,
+        0.9916111935263228,
+        0.9954142628503343,
+        1.0
+      ]
+    ]
+  },
+  "source_audit_sha256": "c7c610bfa301ade2e89bc5e1aa6a1a025093deaff22074a0b550028405cf2dd3",
+  "limits": [
+    "The two formats use different wording as well as a chat template; format and wording effects are not isolated.",
+    "Raw French and Hindi have no active input token and do not supply valid eleventh-month answers in these continuations.",
+    "No causal intervention, cross-language patching or test of a language-independent ordinal mechanism is performed.",
+    "Cosine of a zero contribution is undefined, including its diagonal; no language-specific token search was performed."
+  ],
+  "chat_pairwise_range": [
+    0.9916111935263228,
+    0.9985299072955304
+  ]
+}

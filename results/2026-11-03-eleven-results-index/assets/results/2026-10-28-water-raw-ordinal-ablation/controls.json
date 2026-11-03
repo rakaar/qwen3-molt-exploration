@@ -1,0 +1,314 @@
+[
+  {
+    "stage": "primary",
+    "case_id": "month",
+    "eligible": true,
+    "review_reason": "All three initial answer labels/numbers correct on manual review.",
+    "expected": {
+      "1": "January",
+      "11": "November",
+      "12": "December"
+    },
+    "native_answers": {
+      "1": " January, the second is February, and so on. The first day of the year is January 1. The first day of the year is also the first day of the year, and the last day of the year is December 31. The first day of the year is also the first day of the year",
+      "11": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month is april. the fifth month is may. the sixth month is june. the seventh month is july. the eighth month is august. the ninth month",
+      "12": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december. the tw"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 1.1585536003112793,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "80a325787eb83db57c0614a5708451cf889ef8dcea2279af6901924e71088a47",
+      "11": "cfcafc5df1f2e1eb9aba61d0e95f280194c0565531633d6b8b9c017f383f01e5",
+      "12": "b2062fa7462f9ef951f8acf02f128584a737255589f35cc9a8a094c1677c1b4e"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "president",
+    "eligible": false,
+    "review_reason": "Prefixes continue into false descriptive clauses rather than correct direct president-name completions. A later Taylor mention does not repair the incorrect initial description; no ablation.",
+    "expected": {
+      "1": "Washington",
+      "11": "Polk",
+      "12": "Taylor"
+    },
+    "native_answers": {
+      "1": " a frenchman, and the second was a scottishman, and the third was a irishman. what is the fourth?\n\nThe fourth president of the United States was John Adams, who was born in Massachusetts, but his father was from England. However, this might not be the answer you're looking for",
+      "11": " the first president to be born in a state that was a part of the original thirteen colonies. who was he?\nThe eleventh president of the United States was Grover Cleveland. He was the first president to be born in a state that was part of the original thirteen colonies. However, it's important to note that",
+      "12": " the first president to be elected after the civil war. who was he?\nAnswer: The twelfth president of the United States was Zachary Taylor. He was the first president to be elected after the Civil War. However, it's important to note that Taylor was never actually inaugurated as president because he died shortly after"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 0.0,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "bb26375e41ac36d866bb351436d576e44d00a909a2b781f1585378ad0f0004bd",
+      "11": "4189ac4e7232e65659388e2b1b4dfcee3bd76dff541eb589209a4785b1d1b86c",
+      "12": "65c571d9b70441b40b365eb127507a0467d16ae2f10787a02943a66896ce05e4"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "alphabet",
+    "eligible": true,
+    "review_reason": "All three initial answer labels/numbers correct on manual review.",
+    "expected": {
+      "1": "A",
+      "11": "K",
+      "12": "L"
+    },
+    "native_answers": {
+      "1": " a, and the first letter of the greek alphabet is alpha. So, the first letter of the english alphabet is a, and the first letter of the greek alphabet is alpha. So, the first letter of the english alphabet is a, and the first letter of the greek alphabet is alpha. So,",
+      "11": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is ё. the eleventh letter of the chinese alphabet is 什么？ The eleventh letter of the Chinese alphabet is not applicable, as the Chinese alphabet does not have letters in the same way as the",
+      "12": " l. the twelfth letter of the greek alphabet is mu. the twelfth letter of the russian alphabet is ё. the twelfth letter of the chinese alphabet is 什么？ The twelfth letter of the Chinese alphabet is not applicable, as the Chinese alphabet does not have letters in the same way as the"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 1.9065866470336914,
+      "12": 0.7720231413841248
+    },
+    "answer_hashes": {
+      "1": "ca771f62701042ba13bbd734a92ca2a856f8a1b3a79a8290382b24023980a2c7",
+      "11": "e643e720c072bbd5dbac585372128fbf60a0abfd012d243ced92a4645708d2c2",
+      "12": "357acccc570dff6aa124779838419aa5d5eeee69b413c033f0075d44f0a0a430"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "element",
+    "eligible": true,
+    "review_reason": "All three initial answer labels/numbers correct on manual review.",
+    "expected": {
+      "1": "Hydrogen",
+      "11": "Sodium",
+      "12": "Magnesium"
+    },
+    "native_answers": {
+      "1": " hydrogen, which has an atomic number of 1. The second element is helium, with an atomic number of 2. The third element is lithium, with an atomic number of 3. The fourth element is beryllium, with an atomic number of 4. The fifth element is boron, with",
+      "11": " sodium, which has an atomic number of 11. The atomic number is the number of protons in the nucleus of an atom. So, sodium has 11 protons in its nucleus. The number of protons in an atom is equal to the number of electrons in a neutral atom. Therefore, sodium",
+      "12": " magnesium, which has an atomic number of 12. The atomic number is the number of protons in the nucleus of an atom. The number of protons in the nucleus of an atom is equal to the number of electrons in the atom. So, the number of electrons in a magnesium atom is 12"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 2.9390957355499268,
+      "12": 1.3570222854614258
+    },
+    "answer_hashes": {
+      "1": "bc25e9d0e46025072eaefad8f2e03e198de041a1efa3f1a8d248d8b3556bc574",
+      "11": "7b2327fa517ec5584a01633ba26fb2270153561940546b5c8864e846c11b1359",
+      "12": "25afee0c04e459012ec1b762ddf9bb861032c2ce9e63af58c57da2b9bae993be"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "integer",
+    "eligible": true,
+    "review_reason": "All three initial answer labels/numbers correct on manual review.",
+    "expected": {
+      "1": "1",
+      "11": "11",
+      "12": "12"
+    },
+    "native_answers": {
+      "1": " 1, the second is 2, the third is 3, and so on. So, the 100th positive integer is 100. Therefore, the answer is 100.\n\nWait, but the problem says \"the first positive integer is 1, the second is ",
+      "11": " 11, so the eleventh positive integer is 11. The twelfth positive integer is 12, and so on. So, the nth positive integer is n. Therefore, the 100th positive integer is 100. So, the answer is 100.\n\n",
+      "12": " 12, so the twelfth positive integer is 12. The twelfth positive integer is 12. The twelfth positive integer is 12. The twelfth positive integer is 12. The twelfth positive integer is 12. The twelfth positive integer is 12"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 0.0,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "cac6959a20f51753cd4c850beb5c8a6da28472d13ab40f984a8c5f219abba251",
+      "11": "20f61583574a4cd69661a3882359b802b2f62471efe3f6a791ceaa2d4793b721",
+      "12": "29860f0c05702ed5d911bf12bbc380414a3f871681ee128fca668dfc45b4b5d7"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "roman",
+    "eligible": true,
+    "review_reason": "Initial I, XI and XII numerals are correct. Later XI continuation confuses this with letter K. Eligibility is restricted to the initial completion, not whole-response coherence.",
+    "expected": {
+      "1": "I",
+      "11": "XI",
+      "12": "XII"
+    },
+    "native_answers": {
+      "1": " i, and the first positive integer in the decimal system is 1. So, the first positive integer in both systems is 1. But the first positive integer in the decimal system is 1, and the first positive integer in the roman numerals is i. So, the first positive integer in both systems is",
+      "11": " xi, but the eleventh letter of the alphabet is k. So, the answer is k. But wait, the question is about the eleventh positive integer, not the eleventh letter. So, the eleventh positive integer is 11, which is xi in Roman numerals. But the question is asking",
+      "12": " xii, and the twelfth positive integer in the sequence of numbers that are not multiples of 3 is 14. what is the twelfth positive integer in the sequence of numbers that are not multiples of 5?\n\nTo solve this problem, we need to find the twelfth positive integer in the sequence of"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 1.6967718601226807,
+      "12": 0.9038313031196594
+    },
+    "answer_hashes": {
+      "1": "124231ac15f3883c89b3bea75819f1a5edb2521e23927766c9ac1f71b4ec6d00",
+      "11": "0117456ce622eabd789c128b9d4f87f1eeed55f4896ee9ee0b2aa5899149e669",
+      "12": "5ebdae006772e0e743ccc692a868225a342663265964400542df7608ed9ba2bb"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "prime",
+    "eligible": true,
+    "review_reason": "All three initial answer labels/numbers correct on manual review.",
+    "expected": {
+      "1": "2",
+      "11": "31",
+      "12": "37"
+    },
+    "native_answers": {
+      "1": " 2, the second is 3, the third is 5, the fourth is 7, the fifth is 11, the sixth is 13, the seventh is 17, the eighth is 19, the ninth is 23, the tenth is 29, the",
+      "11": " 31. What is the eleventh prime number after 100?\n\nTo find the eleventh prime number after 100, we need to list the prime numbers starting from 101 and count them until we reach the eleventh one.\n\nStarting from 101:\n1. ",
+      "12": " 37. What is the 24th prime number?\n\nTo find the 24th prime number, we can list the prime numbers in order and count them until we reach the 24th one. \n\nThe first few prime numbers are: 2, 3, 5, 7"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 0.0,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "35ba9a0aa25b9bea207df0a91c73c24247886b679e4bdbeab310da4f8f4fe5dd",
+      "11": "2cb22b70679ac5e188e86bf8c0e02fadc7c1b119deb03008a49648c94b8afd16",
+      "12": "ea61903dee359b6cb5b5a13e9e88ae3c332d4e946c9fa072c6b683cbacb49d4c"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "square",
+    "eligible": true,
+    "review_reason": "All three initial answer labels/numbers correct on manual review.",
+    "expected": {
+      "1": "1",
+      "11": "121",
+      "12": "144"
+    },
+    "native_answers": {
+      "1": " 1, the second is 4, the third is 9, the fourth is 16, and so on. So the nth positive perfect square is n^2. So the 100th positive perfect square is 100^2 = 10,000. So",
+      "11": " 121. 121 is the square of 11. 11 is the 5th prime number. 121 is also a palindrome. 121 is the 11th square number. 121 is the 11th square number. ",
+      "12": " 144, which is 12^2. What is the twelfth positive perfect square?  The twelfth positive perfect square is 144, which is 12^2. So the answer is 144.\n\nThe twelfth positive perfect square is 144,"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 0.0,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "7378dd9978a05706c449959d0c9fdb98475cf2ab0aca3d4a343a4769f857d723",
+      "11": "0b295af414c26567f9fba2df71641f92aeb31ec6bdc37bef0e66f5a344711899",
+      "12": "6007dfa0901574763ed60a259a4dafa4ef95e900ea0a33a922e6000fd7ef5dff"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "triangular",
+    "eligible": true,
+    "review_reason": "All three initial answer labels/numbers correct on manual review.",
+    "expected": {
+      "1": "1",
+      "11": "66",
+      "12": "78"
+    },
+    "native_answers": {
+      "1": " 1, the second is 3, the third is 6, the fourth is 10, and so on. The nth triangular number is given by the formula T(n) = n(n + 1)/2. What is the sum of the first 10 triangular numbers?\n\nTo find the sum",
+      "11": " 66. What is the eleventh triangular number that is divisible by 6?\n\nTo solve this problem, we need to understand what a triangular number is and how to find the eleventh triangular number that is divisible by 6.\n\n---\n\n### Step 1: Understanding Triangular Numbers\n\nA **triangular number",
+      "12": " 78. What is the 12th positive triangular number?\n\nThe twelfth positive triangular number is 78. Therefore, the 12th positive triangular number is $\\boxed{78}$. \n\nThe formula for the $n$th triangular number is $\\frac{n(n+1)}{"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 0.0,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "75f39c1f76153d3a302b7a8d3c6a48e966e8890cf87caee0cdebfb3a3fb5f005",
+      "11": "cff9dea929fe8c8195d0a6951e082c6d7c5d13987f884a25dbb39e05796d32aa",
+      "12": "85aec3ef8160a75b2f9dccb7b4de51dc09bc234531d663ba23336d215148b9ab"
+    }
+  },
+  {
+    "stage": "primary",
+    "case_id": "list",
+    "eligible": false,
+    "review_reason": "Eleventh prefix initially answers jungle (tenth item); twelfth starts a derivation/enumeration rather than the required window. No verified direct 11th/12th completion; no ablation.",
+    "expected": {
+      "1": "apple",
+      "11": "violin",
+      "12": "window"
+    },
+    "native_answers": {
+      "1": " apple, the second is bridge, the third is candle, the fourth is dragon, the fifth is engine, the sixth is forest, the seventh is garden, the eighth is hammer, the ninth is island, the tenth is jungle, the eleventh is violin, the twelfth is window. Now, the task is",
+      "11": " \"jungle\", and the twelfth is \"violin\", and the thirteenth is \"window\". So, the first item is \"apple\", the second is \"bridge\", the third is \"candle\", the fourth is \"dragon\", the fifth is \"engine\", the sixth is \"forest\", the seventh",
+      "12": " what?\n\nTo find the twelfth item in the given ordered list, let's first list out the items in order and count them:\n\n1. apple  \n2. bridge  \n3. candle  \n4. dragon  \n5. engine  \n6. forest  \n7. garden  \n8. hammer  \n9. island  \n1"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 0.0,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "8b359cf3cd251b86fddac47ff3a096a3c848a02867e53964006b0dce1b45f5be",
+      "11": "ae71c9a1b93226c6f70f1d92da80e4f400d404315821860e601b338e031a5257",
+      "12": "5a7fdb19b61e8424f13d6684a70d99c6c56cc3d6710bb078da902db11efba5b0"
+    }
+  },
+  {
+    "stage": "president_rephrasing",
+    "case_id": "president_standard_case",
+    "eligible": false,
+    "review_reason": "First prefix leads into a quiz rather than a direct name; eleventh and twelfth both incorrectly answer John Quincy Adams.",
+    "expected": {
+      "1": "Washington",
+      "11": "Polk",
+      "12": "Taylor"
+    },
+    "native_answers": {
+      "1": " a Founding Father, and the first president to be impeached was a different Founding Father. Who were these two Founding Fathers?\n\nThe first president of the United States was **George Washington**, who was indeed one of the Founding Fathers. The question states that the first president to be impeached was a different",
+      "11": " John Quincy Adams, who served from 1825 to 1829. He was the son of John Adams, the second president of the United States, and Abigail Adams, the wife of John Adams. John Quincy Adams was born in Braintree, Massachusetts, which is now Boston, on January",
+      "12": " John Quincy Adams, who served from 1825 to 1829. He was the son of John Adams, the second president of the United States, and Abigail Adams, the wife of John Adams. John Quincy Adams was born in Braintree, Massachusetts, which is now Boston. He was"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 0.0,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "1d9e1c55b1a10bd24bcdf16c42777087dde37ccf6a300057039ec3cc2203d97f",
+      "11": "42831ee5af474f4cdbe3b0c7a291898782af5a7bdc63356bcaef5ad43e1d9bc4",
+      "12": "7174fcb74d0dbd0e88ce22a26cc35c4b60a5fe7cf6e50d45c59c5bd02c4b486a"
+    }
+  },
+  {
+    "stage": "president_rephrasing",
+    "case_id": "president_name_field",
+    "eligible": false,
+    "review_reason": "First Washington and twelfth Taylor identifiable, but eleventh incorrectly answers Martin Van Buren. No ablation.",
+    "expected": {
+      "1": "Washington",
+      "11": "Polk",
+      "12": "Taylor"
+    },
+    "native_answers": {
+      "1": " George Washington. What is the name of the first president of the United States? George Washington. \n\nThe name of the first president of the United States is George Washington. What is the name of the first president of the United States? George Washington.\n\nThe name of the first president of the United States is George Washington.",
+      "11": "...? The eleventh president of the United States was Martin Van Buren. He served from 1841 to 1845. Van Buren was the first president to be born a citizen of the United States, as he was born in 1782 in what is now upstate",
+      "12": "...? The twelfth president of the United States was Zachary Taylor. He served from 1849 to 1850. Taylor was a military officer who became the 12th president after serving as a general in the Mexican-American War. He was the first president to be born in the"
+    },
+    "last_input_gates": {
+      "1": 0.0,
+      "11": 0.0,
+      "12": 0.0
+    },
+    "answer_hashes": {
+      "1": "83afd477a9af4a50b203f5b4c3c0a5472c047b1d0b99235f3879286759ef66ec",
+      "11": "3c8ee7b3db648e77c4eab8609e4a4fb19ae2861b92b306014d64eec36e1b9ef8",
+      "12": "3e4f02d293b10af46a0037684cc2ae7150ce4caaf4192ac421f142bd214be506"
+    }
+  }
+]

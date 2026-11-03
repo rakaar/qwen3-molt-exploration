@@ -1,0 +1,665 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Three-part L29 MLP vocabulary readout · Eleven → Twelve</title><meta name="description" content="Three-part L29 MLP vocabulary readout"><meta name="color-scheme" content="light"><link rel="canonical" href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/reports/results/2026-11-02-eleven-contribution-readout/README.html"><link rel="stylesheet" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/style.css"></head><body><header><a class="brand" href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">QWEN / MOLT NOTES</a><nav aria-label="Main navigation"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">Result index</a><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/explorer/">Interactive explorer ↗</a></nav></header><main class="detail"><div class="breadcrumbs"><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/">← All results</a></div><article class="paper source-report"><h1 id="three-part-l29-mlp-vocabulary-readout">Three-part L29 MLP vocabulary readout</h1>
+<p>Exact raw prompt: <code>the eleventh month of the year is</code>; final input position 7, token <code>is</code>.</p>
+<p>The three primary vectors are native L29 MLP output M, positive intended L29-T2375 contribution c, and the actual edited output BF16(M - c). The removed vector c is shown with its original positive sign; the intervention was -c.</p>
+<p>Every vector uses the same native final normalization: <code>W_out @ (gamma * vector / sqrt(mean(native_final_residual^2) + epsilon))</code>. The scalar denominator is derived from the whole native residual after layer 35, at the same token. The learned final RMSNorm gamma is included. No vector is independently normalized.</p>
+<p>These are direct vocabulary scores, not probabilities or complete-model answers. They omit the incoming residual contribution and the computations in later layers.</p>
+<p><img alt="Three-part vocabulary readout" loading="lazy" src="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-contribution-readout/three-part-readout.png"/></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Token</th>
+<th style="text-align: right;">Full MLP</th>
+<th style="text-align: right;">Removed MOLT</th>
+<th style="text-align: right;">After removal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>·november</code></td>
+<td style="text-align: right;">+3.669039</td>
+<td style="text-align: right;">+0.499219</td>
+<td style="text-align: right;">+3.169827</td>
+</tr>
+<tr>
+<td><code>·November</code></td>
+<td style="text-align: right;">+5.082721</td>
+<td style="text-align: right;">+0.550551</td>
+<td style="text-align: right;">+4.531908</td>
+</tr>
+<tr>
+<td><code>·december</code></td>
+<td style="text-align: right;">+3.372773</td>
+<td style="text-align: right;">-0.074867</td>
+<td style="text-align: right;">+3.448360</td>
+</tr>
+<tr>
+<td><code>·December</code></td>
+<td style="text-align: right;">+4.639205</td>
+<td style="text-align: right;">-0.168550</td>
+<td style="text-align: right;">+4.807706</td>
+</tr>
+</tbody>
+</table></div>
+<p>The capitalized November token ranks first in the full MLP readout; the capitalized December token ranks first after subtraction. The removed contribution favors November and mildly disfavors December in this context. Its highest-scoring tokens also include fragments such as <code>nov</code>, <code>ele</code> and <code>novel</code>; this does not establish a general numerical operation.</p>
+<p>For lowercase tokens, the direct MLP November-minus-December margin changes from +0.296265 to -0.278533. The actual complete-model margin changes from +1.125000 to -2.000000. The direct readout matches the direction of the effect, but is not a quantitative explanation of the whole forward-pass change. Downstream computation and normalization changes remain to be separated.</p>
+<p>The ideal FP32 decomposition is additive to within 0.00000095 over the full vocabulary. The actual BF16 remainder differs from the ideal remainder, with maximum vocabulary-score difference 0.00330107. The primary display uses the actual BF16 remainder.</p>
+<p>The native MLP vector and native final RMSNorm output reproduced exactly. CPU auditing checked 126 saved output-matrix rows, including the highest and lowest tokens for all parts and the four target tokens. All passed. The full 151,936-row readouts are retained in the verified array archive and exported CSV.</p>
+<p><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-contribution-readout/all-vocabulary-scores.csv.gz">All vocabulary scores and ranks</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-contribution-readout/target-token-scores.csv">Target-token scores</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-contribution-readout/audit.json">Audit</a></p>
+<p>The CSV tokenizer_piece field preserves raw tokenizer vocabulary strings; unmapped output rows are labeled explicitly. All ranks are competition ranks, with ties assigned the same rank.</p>
+<h2 id="1-full-mlp-output">1  Full MLP output</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>Token</th>
+<th style="text-align: right;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><code>·November</code></td>
+<td style="text-align: right;">+5.082721</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><code>·December</code></td>
+<td style="text-align: right;">+4.639205</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><code>November</code></td>
+<td style="text-align: right;">+4.259282</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><code>·April</code></td>
+<td style="text-align: right;">+3.774039</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><code>·november</code></td>
+<td style="text-align: right;">+3.669039</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><code>December</code></td>
+<td style="text-align: right;">+3.629280</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><code>·March</code></td>
+<td style="text-align: right;">+3.525506</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><code>·January</code></td>
+<td style="text-align: right;">+3.399559</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><code>·May</code></td>
+<td style="text-align: right;">+3.395536</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td><code>·december</code></td>
+<td style="text-align: right;">+3.372773</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td><code>·October</code></td>
+<td style="text-align: right;">+3.302915</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><code>·July</code></td>
+<td style="text-align: right;">+3.210929</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td><code>·September</code></td>
+<td style="text-align: right;">+3.196511</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td><code>·February</code></td>
+<td style="text-align: right;">+3.193693</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td><code>·June</code></td>
+<td style="text-align: right;">+3.134406</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td><code>五月</code></td>
+<td style="text-align: right;">+3.048327</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td><code>·August</code></td>
+<td style="text-align: right;">+3.027000</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td><code>·ноя</code></td>
+<td style="text-align: right;">+2.937041</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td><code>·Nov</code></td>
+<td style="text-align: right;">+2.895029</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td><code>April</code></td>
+<td style="text-align: right;">+2.813153</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td><code>十月</code></td>
+<td style="text-align: right;">+2.789181</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td><code>May</code></td>
+<td style="text-align: right;">+2.695022</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td><code>·novembre</code></td>
+<td style="text-align: right;">+2.639594</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td><code>March</code></td>
+<td style="text-align: right;">+2.636927</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td><code>·nov</code></td>
+<td style="text-align: right;">+2.616362</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td><code>十一</code></td>
+<td style="text-align: right;">+2.606900</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td><code>January</code></td>
+<td style="text-align: right;">+2.573559</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td><code>·ноября</code></td>
+<td style="text-align: right;">+2.569403</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td><code>October</code></td>
+<td style="text-align: right;">+2.558687</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td><code>July</code></td>
+<td style="text-align: right;">+2.542009</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="2-removed-molt-contribution">2  Removed MOLT contribution</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>Token</th>
+<th style="text-align: right;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><code>·nov</code></td>
+<td style="text-align: right;">+0.742511</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><code>·ele</code></td>
+<td style="text-align: right;">+0.691156</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><code>nov</code></td>
+<td style="text-align: right;">+0.640028</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><code>·Nov</code></td>
+<td style="text-align: right;">+0.639505</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><code>Nov</code></td>
+<td style="text-align: right;">+0.596964</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><code>·novel</code></td>
+<td style="text-align: right;">+0.594290</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><code>ele</code></td>
+<td style="text-align: right;">+0.584747</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><code>_ele</code></td>
+<td style="text-align: right;">+0.576324</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><code>Ele</code></td>
+<td style="text-align: right;">+0.551916</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td><code>·November</code></td>
+<td style="text-align: right;">+0.550551</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td><code>·Ele</code></td>
+<td style="text-align: right;">+0.542948</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><code>-Nov</code></td>
+<td style="text-align: right;">+0.537568</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td><code>·Novel</code></td>
+<td style="text-align: right;">+0.522335</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td><code>十一</code></td>
+<td style="text-align: right;">+0.521061</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td><code>November</code></td>
+<td style="text-align: right;">+0.514637</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td><code>·november</code></td>
+<td style="text-align: right;">+0.499219</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td><code>(ele</code></td>
+<td style="text-align: right;">+0.497483</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td><code>illi</code></td>
+<td style="text-align: right;">+0.465692</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td><code>lli</code></td>
+<td style="text-align: right;">+0.459350</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td><code>·novembre</code></td>
+<td style="text-align: right;">+0.440553</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td><code>XI</code></td>
+<td style="text-align: right;">+0.438380</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td><code>·ноября</code></td>
+<td style="text-align: right;">+0.434822</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td><code>·novels</code></td>
+<td style="text-align: right;">+0.431392</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td><code>eli</code></td>
+<td style="text-align: right;">+0.427453</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td><code>新型</code></td>
+<td style="text-align: right;">+0.424429</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td><code>·نوفمبر</code></td>
+<td style="text-align: right;">+0.419250</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td><code>·EI</code></td>
+<td style="text-align: right;">+0.416309</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td><code>·XI</code></td>
+<td style="text-align: right;">+0.413949</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td><code>小说</code></td>
+<td style="text-align: right;">+0.404881</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td><code>·Elli</code></td>
+<td style="text-align: right;">+0.393435</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-mlp-after-removal">3  MLP after removal</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>Token</th>
+<th style="text-align: right;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><code>·December</code></td>
+<td style="text-align: right;">+4.807706</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><code>·November</code></td>
+<td style="text-align: right;">+4.531908</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><code>December</code></td>
+<td style="text-align: right;">+3.857619</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><code>·April</code></td>
+<td style="text-align: right;">+3.758133</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><code>November</code></td>
+<td style="text-align: right;">+3.744246</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><code>·January</code></td>
+<td style="text-align: right;">+3.671879</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><code>·March</code></td>
+<td style="text-align: right;">+3.561108</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><code>·May</code></td>
+<td style="text-align: right;">+3.481485</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><code>·december</code></td>
+<td style="text-align: right;">+3.448360</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td><code>·July</code></td>
+<td style="text-align: right;">+3.350027</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td><code>·February</code></td>
+<td style="text-align: right;">+3.334958</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><code>·September</code></td>
+<td style="text-align: right;">+3.280079</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td><code>·June</code></td>
+<td style="text-align: right;">+3.224825</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td><code>·October</code></td>
+<td style="text-align: right;">+3.173063</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td><code>·november</code></td>
+<td style="text-align: right;">+3.169827</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td><code>·August</code></td>
+<td style="text-align: right;">+3.086680</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td><code>五月</code></td>
+<td style="text-align: right;">+2.957999</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td><code>January</code></td>
+<td style="text-align: right;">+2.894396</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td><code>April</code></td>
+<td style="text-align: right;">+2.865243</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td><code>May</code></td>
+<td style="text-align: right;">+2.756820</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td><code>March</code></td>
+<td style="text-align: right;">+2.719562</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td><code>July</code></td>
+<td style="text-align: right;">+2.642758</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td><code>·ноя</code></td>
+<td style="text-align: right;">+2.599064</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td><code>十月</code></td>
+<td style="text-align: right;">+2.576583</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td><code>·Dec</code></td>
+<td style="text-align: right;">+2.508706</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td><code>June</code></td>
+<td style="text-align: right;">+2.493955</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td><code>February</code></td>
+<td style="text-align: right;">+2.482174</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td><code>September</code></td>
+<td style="text-align: right;">+2.460949</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td><code>October</code></td>
+<td style="text-align: right;">+2.451565</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td><code>·april</code></td>
+<td style="text-align: right;">+2.384877</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="lowest-scoring-tokens-for-the-removed-contribution">Lowest-scoring tokens for the removed contribution</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Token</th>
+<th style="text-align: right;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>·thirteen</code></td>
+<td style="text-align: right;">-0.450259</td>
+</tr>
+<tr>
+<td><code>esan</code></td>
+<td style="text-align: right;">-0.417456</td>
+</tr>
+<tr>
+<td><code>cce</code></td>
+<td style="text-align: right;">-0.402862</td>
+</tr>
+<tr>
+<td><code>特朗</code></td>
+<td style="text-align: right;">-0.400733</td>
+</tr>
+<tr>
+<td><code>xz</code></td>
+<td style="text-align: right;">-0.390376</td>
+</tr>
+<tr>
+<td><code>_SENS</code></td>
+<td style="text-align: right;">-0.385524</td>
+</tr>
+<tr>
+<td><code>ISO</code></td>
+<td style="text-align: right;">-0.382415</td>
+</tr>
+<tr>
+<td><code>パー�</code></td>
+<td style="text-align: right;">-0.381185</td>
+</tr>
+<tr>
+<td><code>(keys</code></td>
+<td style="text-align: right;">-0.378583</td>
+</tr>
+<tr>
+<td><code>·qw</code></td>
+<td style="text-align: right;">-0.378244</td>
+</tr>
+<tr>
+<td><code>除夕</code></td>
+<td style="text-align: right;">-0.376387</td>
+</tr>
+<tr>
+<td><code>谟</code></td>
+<td style="text-align: right;">-0.375002</td>
+</tr>
+<tr>
+<td><code>gow</code></td>
+<td style="text-align: right;">-0.374551</td>
+</tr>
+<tr>
+<td><code>·bz</code></td>
+<td style="text-align: right;">-0.370918</td>
+</tr>
+<tr>
+<td><code>·Saturdays</code></td>
+<td style="text-align: right;">-0.370069</td>
+</tr>
+<tr>
+<td><code>anos</code></td>
+<td style="text-align: right;">-0.368760</td>
+</tr>
+<tr>
+<td><code>筏</code></td>
+<td style="text-align: right;">-0.367638</td>
+</tr>
+<tr>
+<td><code>�</code></td>
+<td style="text-align: right;">-0.367303</td>
+</tr>
+<tr>
+<td><code>加盖</code></td>
+<td style="text-align: right;">-0.364953</td>
+</tr>
+<tr>
+<td><code>Rails</code></td>
+<td style="text-align: right;">-0.350620</td>
+</tr>
+<tr>
+<td><code>·LZ</code></td>
+<td style="text-align: right;">-0.349793</td>
+</tr>
+<tr>
+<td><code>CCA</code></td>
+<td style="text-align: right;">-0.348846</td>
+</tr>
+<tr>
+<td><code>erable</code></td>
+<td style="text-align: right;">-0.347345</td>
+</tr>
+<tr>
+<td><code>黯</code></td>
+<td style="text-align: right;">-0.346035</td>
+</tr>
+<tr>
+<td><code>正版</code></td>
+<td style="text-align: right;">-0.344340</td>
+</tr>
+<tr>
+<td><code>·ISO</code></td>
+<td style="text-align: right;">-0.343691</td>
+</tr>
+<tr>
+<td><code>ду</code></td>
+<td style="text-align: right;">-0.343461</td>
+</tr>
+<tr>
+<td><code>七大</code></td>
+<td style="text-align: right;">-0.339632</td>
+</tr>
+<tr>
+<td><code>·gag</code></td>
+<td style="text-align: right;">-0.337490</td>
+</tr>
+<tr>
+<td><code>hev</code></td>
+<td style="text-align: right;">-0.337449</td>
+</tr>
+</tbody>
+</table></div><div class="source-footer">Preserved experiment report. <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/assets/results/2026-11-02-eleven-contribution-readout/README.md">Download original Markdown</a><br>Source: <code>results/2026-11-02-eleven-contribution-readout/README.md</code></div></article></main><footer><span>Qwen3-4B · L29–T2375 · Findings recorded through 3 November 2026</span><span><a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/source-manifest.json">Source provenance</a> · <a href="/qwen3-molt-exploration/results/2026-11-03-eleven-results-index/result-index.json">Result index data</a></span></footer></body></html>
