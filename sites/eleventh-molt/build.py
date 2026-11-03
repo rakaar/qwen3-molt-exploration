@@ -6,6 +6,7 @@ import shutil
 from failure_geometry import build_geometry
 from sweep_data import build_sweeps
 from t1181_data import build_t1181
+from native_top_tokens import build_native_top_tokens
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -22,6 +23,7 @@ specs = [
      'comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/roman'),
 ]
 cases = []
+native_top_tokens = build_native_top_tokens(ROOT, OUT)
 for label, cid, change, caption, off_count, relative in specs:
     path = ROOT / relative / 'reference.json'
     ref = json.loads(path.read_text())
@@ -50,7 +52,10 @@ for label, cid, change, caption, off_count, relative in specs:
         return {'input': inputs, 'output': output, 'answer_tokens': output[:answer_count],
                 'answer': answer, 'probability': p, 'probability_factors': [s['selected_probability'] for s in run['steps'][:answer_count]],
                 'full_response': run['answer'], 'stop_reason': run['stop_reason']}
+    top_five = next(x for x in native_top_tokens['cases'] if x['case_id'] == cid)
+    assert top_five['prompt'] == native['prompt']
     cases.append({'name': label, 'id': cid, 'change': change, 'caption': caption, 'prompt': native['prompt'],
+                  'native_top_five': top_five['tokens'],
                   'position': selected[0]['position'], 'natural_gate': selected[0]['natural_gate'],
                   'native': condition(native, zero['trace'], 1),
                   'off': condition(off, off['trace'], off_count, True),
@@ -77,6 +82,7 @@ sweeps = build_sweeps(ROOT, OUT)
 t1181 = build_t1181(ROOT, OUT)
 data = {'cases': cases, 'geometry': geometry, 'expanded_geometry': expanded_geometry,
         'ordinals': ordinals, 'languages': languages, 'sweeps': sweeps, 't1181': t1181,
+        'native_top_tokens': native_top_tokens,
         'color_max': max(t['gate'] or 0 for c in cases for cond in ['native', 'off'] for t in c[cond]['input'] + c[cond]['output']),
         'model': 'Qwen3-4B', 'layer': 29, 'transform': 2375,
         'base_revision': '1cfa9a7208912126459214e8b04321603b3df60c',

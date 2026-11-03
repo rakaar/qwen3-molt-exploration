@@ -6,6 +6,43 @@
       "change": "November → December",
       "caption": "eleventh month → twelfth month",
       "prompt": "the eleventh month of the year is",
+      "native_top_five": [
+        {
+          "rank": 1,
+          "token_id": 84223,
+          "token": " november",
+          "probability": 0.48884885483836044,
+          "logit": 23.25
+        },
+        {
+          "rank": 2,
+          "token_id": 6702,
+          "token": " November",
+          "probability": 0.17983744353523556,
+          "logit": 22.25
+        },
+        {
+          "rank": 3,
+          "token_id": 89011,
+          "token": " december",
+          "probability": 0.15870598688857745,
+          "logit": 22.125
+        },
+        {
+          "rank": 4,
+          "token_id": 6652,
+          "token": " December",
+          "probability": 0.08494919325649611,
+          "logit": 21.5
+        },
+        {
+          "rank": 5,
+          "token_id": 220,
+          "token": " ",
+          "probability": 0.014761956305115289,
+          "logit": 19.75
+        }
+      ],
       "position": 7,
       "natural_gate": 1.1585536003112793,
       "native": {
@@ -703,6 +740,43 @@
       "change": "K → L",
       "caption": "eleventh letter → twelfth letter",
       "prompt": "the eleventh letter of the english alphabet is",
+      "native_top_five": [
+        {
+          "rank": 1,
+          "token_id": 595,
+          "token": " k",
+          "probability": 0.46294703119634933,
+          "logit": 21.25
+        },
+        {
+          "rank": 2,
+          "token_id": 730,
+          "token": " K",
+          "probability": 0.24779768924678353,
+          "logit": 20.625
+        },
+        {
+          "rank": 3,
+          "token_id": 364,
+          "token": " '",
+          "probability": 0.06265306759050691,
+          "logit": 19.25
+        },
+        {
+          "rank": 4,
+          "token_id": 330,
+          "token": " \"",
+          "probability": 0.03353577045959158,
+          "logit": 18.625
+        },
+        {
+          "rank": 4,
+          "token_id": 6524,
+          "token": " letter",
+          "probability": 0.03353577045959158,
+          "logit": 18.625
+        }
+      ],
       "position": 8,
       "natural_gate": 1.9065866470336914,
       "native": {
@@ -1416,6 +1490,43 @@
       "change": "XI → XII",
       "caption": "eleventh integer → twelfth integer",
       "prompt": "the eleventh positive integer in roman numerals is",
+      "native_top_five": [
+        {
+          "rank": 1,
+          "token_id": 37590,
+          "token": " xi",
+          "probability": 0.3318642700247754,
+          "logit": 19.125
+        },
+        {
+          "rank": 2,
+          "token_id": 856,
+          "token": " x",
+          "probability": 0.13834160986166177,
+          "logit": 18.25
+        },
+        {
+          "rank": 3,
+          "token_id": 220,
+          "token": " ",
+          "probability": 0.10774055409162098,
+          "logit": 18.0
+        },
+        {
+          "rank": 4,
+          "token_id": 53243,
+          "token": " XI",
+          "probability": 0.08390842789510146,
+          "logit": 17.75
+        },
+        {
+          "rank": 5,
+          "token_id": 44214,
+          "token": " eleven",
+          "probability": 0.02724107814830487,
+          "logit": 16.625
+        }
+      ],
       "position": 9,
       "natural_gate": 1.6967718601226807,
       "native": {
@@ -9533,6 +9644,205 @@
     },
     "new_inference": false,
     "probability_definition": "Sum of complete leading-space lowercase/title-case month-name prefix probabilities; no punctuation/EOS or other response formats."
+  },
+  "native_top_tokens": {
+    "model": "Qwen3-4B",
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "condition": "Native model, before any intervention; raw completion prefix without chat formatting.",
+    "method": "FP64 softmax of the saved native final-input full-vocabulary logits. No temperature scaling or top-k renormalization.",
+    "ranking": "Descending logit; equal logits share a rank and are displayed by ascending token ID.",
+    "probability_scope": "Exact next token, including leading whitespace and case. No grouping of answer variants.",
+    "roman_note": "The token \" x\" is a prefix, not a complete XII answer. XII uses two tokens in the recorded ablated response.",
+    "new_inference": false,
+    "new_gpu_spend_usd": 0,
+    "cases": [
+      {
+        "case_id": "en_month_1",
+        "name": "Month",
+        "prompt": "the eleventh month of the year is",
+        "input_token_ids": [
+          1782,
+          10510,
+          44607,
+          2254,
+          315,
+          279,
+          1042,
+          374
+        ],
+        "native_initial_token": " november",
+        "tokens": [
+          {
+            "rank": 1,
+            "token_id": 84223,
+            "token": " november",
+            "probability": 0.48884885483836044,
+            "logit": 23.25
+          },
+          {
+            "rank": 2,
+            "token_id": 6702,
+            "token": " November",
+            "probability": 0.17983744353523556,
+            "logit": 22.25
+          },
+          {
+            "rank": 3,
+            "token_id": 89011,
+            "token": " december",
+            "probability": 0.15870598688857745,
+            "logit": 22.125
+          },
+          {
+            "rank": 4,
+            "token_id": 6652,
+            "token": " December",
+            "probability": 0.08494919325649611,
+            "logit": 21.5
+          },
+          {
+            "rank": 5,
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.014761956305115289,
+            "logit": 19.75
+          }
+        ],
+        "remaining_probability": 0.07289656517621512,
+        "full_vocabulary_size": 151936,
+        "saved_probability_max_absolute_error": 3.99961579966579e-08,
+        "sources": {
+          "comparisons/2026-11-02-eleven-contribution-readout/remote-export/eleven-contribution-readout-20261102/reference.json": "c376c0188b17fa51c539baa101261a40c15b3fdeb95c146216a1fa4e6802ef65",
+          "comparisons/2026-11-02-eleven-contribution-readout/remote-export/eleven-contribution-readout-20261102/artifacts/results.json": "84ea3953a831ce90789a63dbadc559cb9d5556ac34769ffcdfffae040f773050",
+          "comparisons/2026-11-02-eleven-contribution-readout/remote-export/eleven-contribution-readout-20261102/artifacts/readout-arrays.npz": "9954031f06abae9b353ccf43fbd88bf96d4ac1aa409dcd33d058490c885a9e36"
+        }
+      },
+      {
+        "case_id": "en_alphabet_1",
+        "name": "Alphabet",
+        "prompt": "the eleventh letter of the english alphabet is",
+        "input_token_ids": [
+          1782,
+          10510,
+          44607,
+          6524,
+          315,
+          279,
+          28963,
+          27790,
+          374
+        ],
+        "native_initial_token": " k",
+        "tokens": [
+          {
+            "rank": 1,
+            "token_id": 595,
+            "token": " k",
+            "probability": 0.46294703119634933,
+            "logit": 21.25
+          },
+          {
+            "rank": 2,
+            "token_id": 730,
+            "token": " K",
+            "probability": 0.24779768924678353,
+            "logit": 20.625
+          },
+          {
+            "rank": 3,
+            "token_id": 364,
+            "token": " '",
+            "probability": 0.06265306759050691,
+            "logit": 19.25
+          },
+          {
+            "rank": 4,
+            "token_id": 330,
+            "token": " \"",
+            "probability": 0.03353577045959158,
+            "logit": 18.625
+          },
+          {
+            "rank": 4,
+            "token_id": 6524,
+            "token": " letter",
+            "probability": 0.03353577045959158,
+            "logit": 18.625
+          }
+        ],
+        "remaining_probability": 0.1595306710471771,
+        "full_vocabulary_size": 151936,
+        "saved_probability_max_absolute_error": 3.076231544496544e-07,
+        "sources": {
+          "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/alphabet/reference.json": "8796dde1ead21fe89d6595a949ce3f6c18bf0e352baef5fe1b7f62218758e4f0",
+          "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/alphabet/artifacts/results.json": "7765b779428cdd0aa4357586606233c8579168b698de64720e900e64144ec2b7",
+          "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/alphabet/artifacts/readout-arrays.npz": "6b5c969955494eee771e035f3093a2cd1e4499e0c848cfe939279a1f4163e0be"
+        }
+      },
+      {
+        "case_id": "en_roman_1",
+        "name": "Roman numerals",
+        "prompt": "the eleventh positive integer in roman numerals is",
+        "input_token_ids": [
+          1782,
+          10510,
+          44607,
+          6785,
+          7546,
+          304,
+          47776,
+          7857,
+          1127,
+          374
+        ],
+        "native_initial_token": " xi",
+        "tokens": [
+          {
+            "rank": 1,
+            "token_id": 37590,
+            "token": " xi",
+            "probability": 0.3318642700247754,
+            "logit": 19.125
+          },
+          {
+            "rank": 2,
+            "token_id": 856,
+            "token": " x",
+            "probability": 0.13834160986166177,
+            "logit": 18.25
+          },
+          {
+            "rank": 3,
+            "token_id": 220,
+            "token": " ",
+            "probability": 0.10774055409162098,
+            "logit": 18.0
+          },
+          {
+            "rank": 4,
+            "token_id": 53243,
+            "token": " XI",
+            "probability": 0.08390842789510146,
+            "logit": 17.75
+          },
+          {
+            "rank": 5,
+            "token_id": 44214,
+            "token": " eleven",
+            "probability": 0.02724107814830487,
+            "logit": 16.625
+          }
+        ],
+        "remaining_probability": 0.31090405997853554,
+        "full_vocabulary_size": 151936,
+        "saved_probability_max_absolute_error": 1.4657449826094293e-07,
+        "sources": {
+          "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/roman/reference.json": "91db25f4c1657c423217be1d902afb4a4481f5ad0c4be0ef1342f245d8f1be06",
+          "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/roman/artifacts/results.json": "471fb128b157a7ecf9b641589382f4346ea263b043e62ad8f049eab06a5c355d",
+          "comparisons/2026-11-02-eleven-crossdomain-readouts/remote-export/eleven-crossdomain-readouts-20261102/roman/artifacts/readout-arrays.npz": "fd07840819de5d3a7f121e60c16417ce30c4007c55dd76f079987b8a9b08b9a2"
+        }
+      }
+    ]
   },
   "color_max": 3.0033884048461914,
   "model": "Qwen3-4B",
