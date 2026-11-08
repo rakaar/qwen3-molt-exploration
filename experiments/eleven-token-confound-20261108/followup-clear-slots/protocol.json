@@ -1,0 +1,111 @@
+{
+  "date_local": "2026-11-08",
+  "feature": "L29-T2375",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "intervention": null,
+  "maximum_runtime_minutes": 15,
+  "max_new_tokens": 32,
+  "cases": [
+    {
+      "id": "clear_slot_rewrite-month-10",
+      "variant": "clear_slot_rewrite",
+      "domain": "month",
+      "ordinal": 10,
+      "format": "raw",
+      "prompt": "the tenth month of the year is called",
+      "expected_answer": "October"
+    },
+    {
+      "id": "clear_slot_rewrite-month-11",
+      "variant": "clear_slot_rewrite",
+      "domain": "month",
+      "ordinal": 11,
+      "format": "raw",
+      "prompt": "the eleventh month of the year is called",
+      "expected_answer": "November"
+    },
+    {
+      "id": "clear_slot_rewrite-month-12",
+      "variant": "clear_slot_rewrite",
+      "domain": "month",
+      "ordinal": 12,
+      "format": "raw",
+      "prompt": "the twelfth month of the year is called",
+      "expected_answer": "December"
+    },
+    {
+      "id": "clear_slot_rewrite-alphabet-10",
+      "variant": "clear_slot_rewrite",
+      "domain": "alphabet",
+      "ordinal": 10,
+      "format": "raw",
+      "prompt": "the tenth position in the english alphabet contains the letter",
+      "expected_answer": "J"
+    },
+    {
+      "id": "clear_slot_rewrite-alphabet-11",
+      "variant": "clear_slot_rewrite",
+      "domain": "alphabet",
+      "ordinal": 11,
+      "format": "raw",
+      "prompt": "the eleventh position in the english alphabet contains the letter",
+      "expected_answer": "K"
+    },
+    {
+      "id": "clear_slot_rewrite-alphabet-12",
+      "variant": "clear_slot_rewrite",
+      "domain": "alphabet",
+      "ordinal": 12,
+      "format": "raw",
+      "prompt": "the twelfth position in the english alphabet contains the letter",
+      "expected_answer": "L"
+    },
+    {
+      "id": "clear_slot_rewrite-roman-10",
+      "variant": "clear_slot_rewrite",
+      "domain": "roman",
+      "ordinal": 10,
+      "format": "raw",
+      "prompt": "the tenth positive integer in roman numerals is written as",
+      "expected_answer": "X"
+    },
+    {
+      "id": "clear_slot_rewrite-roman-11",
+      "variant": "clear_slot_rewrite",
+      "domain": "roman",
+      "ordinal": 11,
+      "format": "raw",
+      "prompt": "the eleventh positive integer in roman numerals is written as",
+      "expected_answer": "XI"
+    },
+    {
+      "id": "clear_slot_rewrite-roman-12",
+      "variant": "clear_slot_rewrite",
+      "domain": "roman",
+      "ordinal": 12,
+      "format": "raw",
+      "prompt": "the twelfth positive integer in roman numerals is written as",
+      "expected_answer": "XII"
+    }
+  ],
+  "design": [
+    "Nine follow-up prompts: three clearer answer slots x three ordinals. Alphabet cases are exact repeats from the initial phase.",
+    "Raw completion prefixes avoid a shared assistant-template suffix.",
+    "Clear-slot terminal words: called / letter / as; verify three distinct IDs, all different from is.",
+    "Verify terminal token IDs are pairwise different within each rewrite triplet before model inference.",
+    "Observe every input position; retain exact tokens, IDs, raw gate scores, zero gates and native completions.",
+    "Primary fixed-position comparison: final input tokens. Also report every cross-domain active-token pair, separating equal and unequal token IDs.",
+    "Never choose a token or rewrite according to its cosine. Report peak-gate positions only as a separately labelled activation summary.",
+    "Compare full MOLT contribution, ungated operator output, and native residual separately. Zero contributions have undefined cosine.",
+    "Compare tenth/twelfth controls at the same wording and token positions to assess ordinal specificity.",
+    "Retain baseline answer failures; label capability separately from natural activation and geometry.",
+    "Returning-None observer must preserve every generated token and next-token logit hash.",
+    "No gate ablation, full-MLP replacement, final RMSNorm or vocabulary projection in vector comparisons."
+  ],
+  "distinct_final_token_variants": [
+    "clear_slot_rewrite"
+  ],
+  "phase": "Adaptive follow-up after inspecting native responses and gate traces, before computing any new cosines.",
+  "reason": "Original named/symbol/representation rewrites produced etymology, chemical-element continuations or requests for clarification. Use clearer answer slots and retain all original failures."
+}

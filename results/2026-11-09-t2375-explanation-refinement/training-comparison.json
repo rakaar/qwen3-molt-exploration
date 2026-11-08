@@ -1,0 +1,60 @@
+{
+  "feature": "L29-T2375",
+  "scope": "training_diagnostic_not_final_test",
+  "source": "https://amsterdam.taild80f17.ts.net/tools?feature=2375&layer=29",
+  "source_format": "MCP JSON displayed in the two completed dashboard experiments; reduced extraction, not a copy of the full audit",
+  "baseline_diagnostic_sha256": "22cff04baafb45a2473f5c383b8b3ddcadf1212ed1bb99d8d931bcdc2cfd5a28",
+  "candidate_diagnostic_sha256": "7866472ecfbb77d2e9f978bf3c97c66e4fc8aac66f7267e70de5c5622387dd69",
+  "remote_result_directory": "/home/georg/Code/crosslayer-transcoder/results/molt-manual-playground/layer-29/training-scores/2375",
+  "provenance_identical": true,
+  "positive_windows_identical": true,
+  "negative_windows_identical": true,
+  "provenance": {
+    "cache_sha256": "bf961dcf81e9739d8ab086be91c75c916fdd3565a177c21c1a4912fccd3143ce",
+    "diagnostic_size": 16,
+    "display_policy": "escape every Qwen added token in all scorer messages",
+    "manifest_sha256": "59db8b3bbdf2a30e02e87e9c88a116cdac29a62db3baf28c1795fc4aa96fecf0",
+    "manual_scope": "all features; initial windows filtered to manifest training conversations only",
+    "context_tokens": 64,
+    "scope": "training-only; adaptive diagnostic; never final held-out evaluation",
+    "scorer_context_limit": 10000,
+    "scorer_endpoint": "http://127.0.0.1:8000/v1",
+    "scorer_model": "qwen3.8-27b-nvfp4",
+    "scorer_runtime_sha256": "95d90acc49abb6cb2ce51df4719b593a046dd503c9d0dfb3dff72fa2b50eab9b",
+    "seed": 42,
+    "selection_sha256": "fdfef034a47c5ae695f51d11350b672f566bfe9ed66c0fccadd88103186c52e6",
+    "subject_global_step": 100000,
+    "vocab_sha256": "c8c927301214f0451c8a50ffa7722bb36dec89e1787fd6d915c708e237c35d1f"
+  },
+  "methods": {
+    "detection": {
+      "baseline": {"accuracy": 0.8125, "accuracy_ci95": [0.6469084479862404, 0.9111045531043404], "balanced_accuracy": 0.8125, "f1": 0.7692307692307693, "fn": 6, "fp": 0, "parse_failures": 0, "tn": 16, "total": 32, "tp": 10, "valid": 32},
+      "candidate": {"accuracy": 0.90625, "accuracy_ci95": [0.7578184527161212, 0.9675984487016336], "balanced_accuracy": 0.90625, "f1": 0.896551724137931, "fn": 3, "fp": 0, "parse_failures": 0, "tn": 16, "total": 32, "tp": 13, "valid": 32},
+      "exact_context_highlight_label_matches": 32,
+      "activation_arrays_identical": true,
+      "corrected": 3,
+      "regressed": 0,
+      "corrected_windows": [
+        {"conversation": 2911, "start": 2584248, "stop": 2584312, "description": "Digital watercooler context"},
+        {"conversation": 1236, "start": 1090134, "stop": 1090198, "description": "There were 11 lurkers"},
+        {"conversation": 6740, "start": 5956132, "stop": 5956196, "description": "Boundary before recipe step 11"}
+      ]
+    },
+    "fuzz": {
+      "baseline": {"accuracy": 0.8125, "accuracy_ci95": [0.6469084479862404, 0.9111045531043404], "balanced_accuracy": 0.8125, "f1": 0.7692307692307693, "fn": 6, "fp": 0, "parse_failures": 0, "tn": 16, "total": 32, "tp": 10, "valid": 32},
+      "candidate": {"accuracy": 0.875, "accuracy_ci95": [0.7193169451834978, 0.9502986561251991], "balanced_accuracy": 0.875, "f1": 0.8571428571428571, "fn": 4, "fp": 0, "parse_failures": 0, "tn": 16, "total": 32, "tp": 12, "valid": 32},
+      "exact_context_highlight_label_matches": 32,
+      "activation_arrays_identical": true,
+      "corrected": 2,
+      "regressed": 0,
+      "corrected_windows": [
+        {"conversation": 10297, "start": 9088001, "stop": 9088065, "highlighted_positions": [32], "description": "Highlighted water in waterfalls"},
+        {"conversation": 6740, "start": 5956132, "stop": 5956196, "highlighted_positions": [24], "description": "Highlighted period and newlines before recipe step 11"}
+      ]
+    },
+    "active_fuzz": {"status": "not_run", "reason": "The dashboard manual scoring tool exposes only Detection and Fuzz."},
+    "intruder": {"status": "not_rerun", "reason": "Explanation independent; cannot improve merely by rewriting the explanation."}
+  },
+  "canonical_dashboard_explanation_replaced": false,
+  "new_gpu_rented": false
+}

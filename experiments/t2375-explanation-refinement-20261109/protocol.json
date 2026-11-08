@@ -1,0 +1,102 @@
+{
+  "feature": "L29-T2375",
+  "frozen_at_utc": "2026-11-08T18:45:12.939536+00:00",
+  "candidate_title": "Water and eleven-context boundaries",
+  "candidate_words": 68,
+  "baseline_sha256": "1387891255aa34aa61b15db5b94993b2b518cf2030792fcbdc36c618c9cb4be9",
+  "candidate_sha256": "dc149e8b122d8c553276c5807972a529ab4e5495d246363cd16463e6cbf6c00f",
+  "original_judge_model": "qwen3.8-27b-nvfp4",
+  "judge_endpoint_saved": "https://geor.taild80f17.ts.net/v1",
+  "status": "prepared_not_scored",
+  "hypothesis": "Adding the observed ordinal boundary pattern may improve explanation-dependent scores; score improvement is not assumed.",
+  "development_evidence": [
+    "Original water explanation, inherited without inspecting held-out scoring examples.",
+    "Own Qwen3-4B ordinal activation experiments, including multilingual and different-token observations and neighboring-ordinal counterexamples."
+  ],
+  "evaluation_policy": [
+    "Freeze explanation before inspecting T2375 historical held-out example texts or obtaining new judge outputs.",
+    "Use identical held-out contexts, highlight masks, few-shots, token rendering, generation settings and judge version for baseline and candidate.",
+    "Refresh baseline and candidate with the same available judge; report historical and refreshed scores separately.",
+    "Do not replace the canonical dashboard explanation until a comparison is reviewable.",
+    "Report Detection, Fuzz and Active Fuzz accuracy and paired changes, including regressions, parse failures and confusion counts.",
+    "Intruder does not use the explanation; retain it as an explanation-independent control and do not claim text-induced improvement.",
+    "New diagnostic examples used to write the explanation are not held-out evidence for its generalization."
+  ],
+  "historical_metrics": {
+    "detection": {
+      "total": 100,
+      "valid": 100,
+      "parse_failures": 0,
+      "tp": 29,
+      "tn": 50,
+      "fp": 0,
+      "fn": 21,
+      "correct": null,
+      "accuracy": 0.79,
+      "f1": 0.7341772151898734,
+      "balanced_accuracy": 0.79,
+      "accuracy_ci95": [
+        0.7002003116591013,
+        0.858343459380847
+      ],
+      "chance": null
+    },
+    "fuzz": {
+      "total": 100,
+      "valid": 100,
+      "parse_failures": 0,
+      "tp": 27,
+      "tn": 50,
+      "fp": 0,
+      "fn": 23,
+      "correct": null,
+      "accuracy": 0.77,
+      "f1": 0.7012987012987013,
+      "balanced_accuracy": 0.77,
+      "accuracy_ci95": [
+        0.6784561697712622,
+        0.8415673411969654
+      ],
+      "chance": null
+    },
+    "active_fuzz": {
+      "total": 100,
+      "valid": 100,
+      "parse_failures": 0,
+      "tp": 27,
+      "tn": 50,
+      "fp": 0,
+      "fn": 23,
+      "correct": null,
+      "accuracy": 0.77,
+      "f1": 0.7012987012987013,
+      "balanced_accuracy": 0.77,
+      "accuracy_ci95": [
+        0.6784561697712622,
+        0.8415673411969654
+      ],
+      "chance": null
+    },
+    "intruder": {
+      "total": 20,
+      "valid": 20,
+      "parse_failures": 0,
+      "tp": null,
+      "tn": null,
+      "fp": null,
+      "fn": null,
+      "correct": 3,
+      "accuracy": 0.15,
+      "f1": null,
+      "balanced_accuracy": null,
+      "accuracy_ci95": [
+        0.052368745896216595,
+        0.36041886474075696
+      ],
+      "chance": 0.2
+    }
+  },
+  "inference_started": false,
+  "new_gpu_rented": false,
+  "persistent_dashboard_volume_modified": false
+}

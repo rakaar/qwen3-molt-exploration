@@ -1,0 +1,26 @@
+{
+  "source_sha256": "5718e8ab1b6122bc8faaf71b0908470c0b27f528095aba183c0c441295b464fe",
+  "methods": {
+    "detection": {
+      "cases": 100,
+      "positive_labels": 50,
+      "negative_labels": 50
+    },
+    "fuzz": {
+      "cases": 100,
+      "positive_labels": 50,
+      "negative_labels": 50,
+      "true_highlights_have_positive_gate": true,
+      "false_highlights_all_zero_gate": true,
+      "negative_marking_cases_with_positive_gate_elsewhere": 0
+    },
+    "active_fuzz": {
+      "cases": 100,
+      "positive_labels": 50,
+      "negative_labels": 50,
+      "true_highlights_have_positive_gate": true,
+      "false_highlights_all_zero_gate": true,
+      "negative_marking_cases_with_positive_gate_elsewhere": 50
+    }
+  }
+}
