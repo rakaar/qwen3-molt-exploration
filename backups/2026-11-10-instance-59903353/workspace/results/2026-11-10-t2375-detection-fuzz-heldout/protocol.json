@@ -1,0 +1,29 @@
+{
+  "feature": "L29-T2375",
+  "date_local": "2026-11-10",
+  "frozen_before_execution_utc": "2026-11-09T19:20:56.242333+00:00",
+  "methods": [
+    "detection",
+    "fuzz"
+  ],
+  "cases_per_method": 100,
+  "arms": [
+    "baseline",
+    "candidate"
+  ],
+  "requests": 400,
+  "baseline_sha256": "1387891255aa34aa61b15db5b94993b2b518cf2030792fcbdc36c618c9cb4be9",
+  "candidate_sha256": "dc149e8b122d8c553276c5807972a529ab4e5495d246363cd16463e6cbf6c00f",
+  "heldout_plan_sha256": "4574f5808fddc715432297bfc8a9f1f64975d41f9414b00af1b280cd156a30ea",
+  "expected_active_fuzz_runtime_sha256": "bc687574ee5698e54b580d9fb97ed497f0bc96e12c016a9a1e06048ad5619aa1",
+  "expected_judge_verification_sha256": "7514f9eb88ad0aa6f680fcf355808b3262cc4f916350a945bd4b2eae7c07a23e",
+  "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+  "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+  "existing_judge_root": "/workspace/t2375-active-fuzz-local-judge-20261109",
+  "maximum_runtime_minutes": 50,
+  "description_changed": false,
+  "manual_test_example_inspection_before_scoring": false,
+  "processing_policy": "Read test examples only programmatically for scoring; print progress counts only. Inspect decisions only after all 400 requests finish.",
+  "selection_policy": "Every original detection and fuzz case, in original order, both frozen descriptions; no exclusions or adaptive tuning.",
+  "interpretation": "Fresh paired evaluation with the same pinned judge and settings as the completed local Active Fuzz run. Historical dashboard judge remains separate."
+}

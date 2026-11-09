@@ -1,0 +1,124 @@
+{
+  "posthoc": true,
+  "performed_after_scoring_utc": "2026-11-09T19:47:00.850892+00:00",
+  "descriptions_unchanged": true,
+  "judge_decisions_unchanged": true,
+  "all_methods_share_same_50_positive_windows": true,
+  "rules": {
+    "water": "Positive windows containing an actually active token whose displayed string includes water, case-insensitive; includes compounds and subtokens.",
+    "visible_eleven": "Literal standalone 11 or English eleven/eleventh anywhere in the displayed target passage; excludes the explanation and fixed few-shots.",
+    "after_10": "Visible list item 10 and no visible list item 11; candidate pre-11 boundary, NOT confirmed without continuation."
+  },
+  "source_sha256": "5718e8ab1b6122bc8faaf71b0908470c0b27f528095aba183c0c441295b464fe",
+  "methods": {
+    "detection": {
+      "positives": 50,
+      "negatives": 50,
+      "positive_groups": {
+        "water_subtoken_active": {
+          "n": 29,
+          "baseline_correct": 29,
+          "candidate_correct": 29,
+          "visible_literal_eleven": 0,
+          "visible_november": 0,
+          "after_list_item_10": 0,
+          "last_token_active": 29,
+          "last_token_is_activation_maximum": 29
+        },
+        "other_active": {
+          "n": 21,
+          "baseline_correct": 0,
+          "candidate_correct": 1,
+          "visible_literal_eleven": 0,
+          "visible_november": 1,
+          "after_list_item_10": 8,
+          "last_token_active": 21,
+          "last_token_is_activation_maximum": 21
+        }
+      },
+      "target_windows_with_visible_literal_eleven": 0,
+      "water_anywhere_positive": 29,
+      "water_anywhere_negative": 0
+    },
+    "fuzz": {
+      "positives": 50,
+      "negatives": 50,
+      "positive_groups": {
+        "water_subtoken_active": {
+          "n": 29,
+          "baseline_correct": 28,
+          "candidate_correct": 29,
+          "visible_literal_eleven": 0,
+          "visible_november": 0,
+          "after_list_item_10": 0,
+          "last_token_active": 29,
+          "last_token_is_activation_maximum": 29
+        },
+        "other_active": {
+          "n": 21,
+          "baseline_correct": 0,
+          "candidate_correct": 1,
+          "visible_literal_eleven": 0,
+          "visible_november": 1,
+          "after_list_item_10": 8,
+          "last_token_active": 21,
+          "last_token_is_activation_maximum": 21
+        }
+      },
+      "target_windows_with_visible_literal_eleven": 0,
+      "water_anywhere_positive": 29,
+      "water_anywhere_negative": 0
+    },
+    "active_fuzz": {
+      "positives": 50,
+      "negatives": 50,
+      "positive_groups": {
+        "water_subtoken_active": {
+          "n": 29,
+          "baseline_correct": 28,
+          "candidate_correct": 29,
+          "visible_literal_eleven": 0,
+          "visible_november": 0,
+          "after_list_item_10": 0,
+          "last_token_active": 29,
+          "last_token_is_activation_maximum": 29
+        },
+        "other_active": {
+          "n": 21,
+          "baseline_correct": 0,
+          "candidate_correct": 1,
+          "visible_literal_eleven": 0,
+          "visible_november": 1,
+          "after_list_item_10": 8,
+          "last_token_active": 21,
+          "last_token_is_activation_maximum": 21
+        }
+      },
+      "target_windows_with_visible_literal_eleven": 0,
+      "water_anywhere_positive": 29,
+      "water_anywhere_negative": 29
+    }
+  },
+  "unique_corrected_positive_windows": 2,
+  "corrected_window_tags": [
+    {
+      "positive": true,
+      "water": false,
+      "november": true,
+      "methods": [
+        "detection",
+        "fuzz",
+        "active_fuzz"
+      ]
+    },
+    {
+      "positive": true,
+      "water": true,
+      "november": false,
+      "methods": [
+        "fuzz",
+        "active_fuzz"
+      ]
+    }
+  ]
+}

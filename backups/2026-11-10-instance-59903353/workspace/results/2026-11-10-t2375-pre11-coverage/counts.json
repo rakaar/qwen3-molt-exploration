@@ -1,0 +1,1487 @@
+{
+  "performed_at_utc": "2026-11-09T20:10:50.158685+00:00",
+  "posthoc": true,
+  "source_feature_sha256": "5718e8ab1b6122bc8faaf71b0908470c0b27f528095aba183c0c441295b464fe",
+  "matched_unique_windows": 100,
+  "unmatched_windows": 0,
+  "repeated_source_windows": 1,
+  "repeated_source_matches_agree_on_coverage": true,
+  "rule": "Count an evaluated positive passage when a gate-active token is immediately followed by 11, eleven/eleventh, November, XI, or K, allowing whitespace only. Fuzz/Active Fuzz must actually highlight that gate-active boundary. Count one passage once. Separate 11 as the suffix of 2011 from standalone eleven or its equivalents.",
+  "methods_share_same_positive_pre11_contexts": true,
+  "methods": {
+    "detection": {
+      "total_decisions": 100,
+      "positive_decisions": 50,
+      "confirmed_pre11_positive_cases": 12,
+      "strict_eleven_or_equivalent_cases": 10,
+      "families": {
+        "year_2011_suffix": 2,
+        "november": 2,
+        "date_range_8_to_11": 1,
+        "standalone_11": 7
+      },
+      "cases": [
+        {
+          "row_index": 9,
+          "fingerprint": "f94376ea5234a0a5160bcc393e5ba4b0b4a28f4f6ff1c4aa33fe8f3d6799224c",
+          "families": [
+            "year_2011_suffix"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "year_2011_suffix",
+              "prefix": " he encountered. Keith has received recognition for his poetry in various international competitions and his debut collection, Tongues of Ash, won an award in 20",
+              "following": "11.<|im_end|>\n<|im_start|>user\nCan you provide some examples of Keith Westwater's poetry that can be found in his collection No One Home?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nCertainly! Here are a few examples of Keith Westwater's poetry from his collection No One Home:\n\n1) \"Oruru",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                151645,
+                198,
+                151644,
+                872,
+                198,
+                6713,
+                498,
+                3410,
+                1045,
+                10295,
+                315,
+                31502,
+                4312
+              ],
+              "window_position": 63,
+              "token": "0",
+              "gate": 1.2734375,
+              "conversation": 2494,
+              "conversation_position": 433
+            }
+          ]
+        },
+        {
+          "row_index": 13,
+          "fingerprint": "d20a67f09cfa5d3f2c59308d8dcf7c89c3105d7102d8c87aa99c4db5f99bbedf",
+          "families": [
+            "november"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "november",
+              "prefix": " and involves lighting candles, storytelling, and feasting.\n\n3. Diwali - this is a Hindu festival of lights that usually takes place in October or",
+              "following": " November. It involves lighting lamps, decorating homes with rangolis, and exchanging gifts and sweets.\n\n4. Winter Solstice - this is the shortest day of the year, and it happens around December 21st. Many cultures have celebrated this day for centuries, often with special rituals, feasting, and lighting fires",
+              "next_token_ids": [
+                6702,
+                13,
+                1084,
+                17601,
+                17716,
+                49452,
+                11,
+                48582,
+                10415,
+                448,
+                42100,
+                68758,
+                11,
+                323,
+                78431,
+                20609
+              ],
+              "window_position": 63,
+              "token": " or",
+              "gate": 2.1875,
+              "conversation": 3977,
+              "conversation_position": 203
+            }
+          ]
+        },
+        {
+          "row_index": 24,
+          "fingerprint": "a5fe7d33daabc0eb93f6ca406917fe4cb2de0f414ebca43cbcadaa107c3828e7",
+          "families": [
+            "date_range_8_to_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "date_range_8_to_11",
+              "prefix": " demonstrating its VOS360 SaaS for live sports streaming at the 2019 NAB Show in Las Vegas from April 8-",
+              "following": "11. Using VOS360 media processing as a service, the company can deliver exceptional video quality to any screen and scale the delivery of its OTT services based on actual needs. The solution's flexibility ensures that INDYCAR can launch new channels and services quickly without requiring a large upfront investment in equipment necessary",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                12091,
+                647,
+                3126,
+                18,
+                21,
+                15,
+                3687,
+                8692,
+                438,
+                264,
+                2473,
+                11,
+                279
+              ],
+              "window_position": 63,
+              "token": "-",
+              "gate": 1.1953125,
+              "conversation": 887,
+              "conversation_position": 622
+            }
+          ]
+        },
+        {
+          "row_index": 26,
+          "fingerprint": "989287e64c1a633f1dd8920c4acb7a98d7d7d9dca65f7609df89844dfe19a32a",
+          "families": [
+            "year_2011_suffix"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "year_2011_suffix",
+              "prefix": "-13 in front of their home crowd of 83,000+ fans.\n\nThe rivalry came to an abrupt end in 20",
+              "following": "11 when Texas A&M announced their move to the Southeastern Conference (SEC) from the Big 12 Conference. Since then, Texas and Texas A&M haven't played each other in football, which sparked widespread disappointment among fans of both schools.\n\nHowever, in recent years, there have been efforts to revive the",
+              "next_token_ids": [
+                16,
+                16,
+                979,
+                8257,
+                362,
+                39216,
+                7228,
+                862,
+                3271,
+                311,
+                279,
+                35564,
+                932,
+                14872,
+                320,
+                25548
+              ],
+              "window_position": 63,
+              "token": "0",
+              "gate": 1.109375,
+              "conversation": 7169,
+              "conversation_position": 821
+            }
+          ]
+        },
+        {
+          "row_index": 47,
+          "fingerprint": "9e27a6b8db5692badf82545bdaff29122c648d83690552ba6925cfc5afa3a071",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": ". George S. Klein\n8. Rudolf Loewenstein\n9. Paul H. Ornstein\n10. Philip R. Lehrman\n",
+              "following": "11. Charles W. Socarides\n12. Edward M. Weinshel\n13. Nathan M. Szajnberg\n14. James L. Fosshage<|im_end|>\n",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                14927,
+                467,
+                13,
+                26572,
+                277,
+                3341,
+                198,
+                16,
+                17,
+                13,
+                21891,
+                386,
+                13
+              ],
+              "window_position": 63,
+              "token": "\n",
+              "gate": 1.984375,
+              "conversation": 4636,
+              "conversation_position": 331
+            }
+          ]
+        },
+        {
+          "row_index": 63,
+          "fingerprint": "fa2f6a759385583fff99ff2979b44dc4088877f074b6255d0871d943f24c6453",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": ". Check your progress frequently and make sure you’re on track. 10. Stay calm and composed even if you feel stressed or pressed for time.",
+              "following": " 11. If you finish early, use the remaining time to review your answers. 12. Avoid leaving any question unanswered, even if it means making an educated guess. 13. If you’re running out of time, write down key words or points instead of full sentences. 14.",
+              "next_token_ids": [
+                220,
+                16,
+                16,
+                13,
+                1416,
+                498,
+                6248,
+                4124,
+                11,
+                990,
+                279,
+                9664,
+                882,
+                311,
+                3395,
+                697
+              ],
+              "window_position": 62,
+              "token": ".",
+              "gate": 0.8671875,
+              "conversation": 7022,
+              "conversation_position": 706
+            },
+            {
+              "family": "standalone_11",
+              "prefix": " Check your progress frequently and make sure you’re on track. 10. Stay calm and composed even if you feel stressed or pressed for time. ",
+              "following": "11. If you finish early, use the remaining time to review your answers. 12. Avoid leaving any question unanswered, even if it means making an educated guess. 13. If you’re running out of time, write down key words or points instead of full sentences. 14. Pay",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                1416,
+                498,
+                6248,
+                4124,
+                11,
+                990,
+                279,
+                9664,
+                882,
+                311,
+                3395,
+                697,
+                11253
+              ],
+              "window_position": 63,
+              "token": " ",
+              "gate": 1.65625,
+              "conversation": 7022,
+              "conversation_position": 707
+            }
+          ]
+        },
+        {
+          "row_index": 71,
+          "fingerprint": "50676e75adee41a5bb7b19311f322670a9bcf88afaa5dcdf429100bb4a93c83a",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " represents the entire understanding between the parties with respect to the subject matter hereof and supersedes all prior negotiations, understandings and agreements between the parties.\n\n",
+              "following": "11. APPLICABLE LAW\nThis Contract shall be governed by and construed in accordance with the laws of [state/country]. Any disputes arising out of or in connection with this Contract shall be resolved exclusively by the courts located in [state/country].\n\nIN WITNESS WHEREOF, the parties have executed this",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                10106,
+                36435,
+                3494,
+                66603,
+                198,
+                1986,
+                19185,
+                4880,
+                387,
+                26702,
+                553,
+                323,
+                70159
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 0.69140625,
+              "conversation": 7208,
+              "conversation_position": 657
+            }
+          ]
+        },
+        {
+          "row_index": 72,
+          "fingerprint": "1d77836e3e0116ec21fe471e508ff13ba33ce19db19e055d28f64b8d5e34eaa9",
+          "families": [
+            "november"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "november",
+              "prefix": "any's renowned chianti region. If you are interested in experiencing a traditional tuscan harvest event, the grape and olive harvest festivals in october and",
+              "following": " november could be a good choice. If you are a food enthusiast, then the sagra del cinghiale or fiera del tartufo could be perfect as it offers a chance to savor some of the region's most flavorful dishes. For a cultural experience, the mercantia festival might be ideal as",
+              "next_token_ids": [
+                84223,
+                1410,
+                387,
+                264,
+                1661,
+                5754,
+                13,
+                1416,
+                498,
+                525,
+                264,
+                3607,
+                60812,
+                11,
+                1221,
+                279
+              ],
+              "window_position": 63,
+              "token": " and",
+              "gate": 2.140625,
+              "conversation": 6745,
+              "conversation_position": 1021
+            }
+          ]
+        },
+        {
+          "row_index": 73,
+          "fingerprint": "1ff630d07c91657f77e71bc3d2aacb0434f5fa094e643e0034fc843bdd1fbb56",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " to grow your email list.\n\n10. Mailchimp: This tool helps you create and automate email campaigns to promote your content and engage with your subscribers.\n\n",
+              "following": "11. Google Analytics: This tool helps you track your website's traffic, user behavior, and other important metrics for content optimization.\n\n12. CoSchedule Headline Analyzer: This tool helps you craft effective headlines by analyzing their emotional appeal, length, and keyword optimization.\n\n13. Ahrefs: This tool",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                5085,
+                32427,
+                25,
+                1096,
+                5392,
+                8609,
+                498,
+                3754,
+                697,
+                3910,
+                594,
+                9442,
+                11
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 0.76171875,
+              "conversation": 669,
+              "conversation_position": 473
+            }
+          ]
+        },
+        {
+          "row_index": 78,
+          "fingerprint": "0423ecd0ee9ebfcaa2fe8606d4b0b16c219169f79b67c9389f684c1c403877f7",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " attach the hinges.\n\n10. Install the Spring Assembly - Install an additional torsion spring for extra support on larger garage doors as per manufacturer’s instructions.\n\n",
+              "following": "11. Install the Opener – Ensure the opener is of the correct size, has an auto-stop mechanism and is positioned at the right height. Follow the manufacturer's instructions to attach it securely.\n\n12. Test and Adjust - Test the door's function by opening and closing it a few times. Adjust the tension",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                19242,
+                279,
+                10672,
+                798,
+                1365,
+                29279,
+                279,
+                35153,
+                374,
+                315,
+                279,
+                4396,
+                1379
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 1.0859375,
+              "conversation": 7751,
+              "conversation_position": 511
+            }
+          ]
+        },
+        {
+          "row_index": 79,
+          "fingerprint": "e2d6f01e408d4cc8bcd13701ca1bf2660b18f92256c5ae8aa76582917751e05f",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": "-powered cars? a. Very concerned \nb. Somewhat concerned \nc. Neutral \nd. Not very concerned \ne. Not concerned at all \n\n",
+              "following": "11. Which factors do you think an automotive manufacturer should prioritize when developing electric or hybrid vehicles? a. Driving range \nb. Charging time \nc. Cost \nd. Performance \ne. Environmental impact \nf. Other \n\nThank you for your valuable input!<|im_end|>\n<|im_start|>user\nThank you for adding those",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                15920,
+                9363,
+                653,
+                498,
+                1744,
+                458,
+                39408,
+                13963,
+                1265,
+                62552,
+                979,
+                11220,
+                9072
+              ],
+              "window_position": 63,
+              "token": " \n\n",
+              "gate": 1.3125,
+              "conversation": 901,
+              "conversation_position": 617
+            }
+          ]
+        },
+        {
+          "row_index": 89,
+          "fingerprint": "51237c0a321fc5ffa675f9ffa051606d3978935f7fe7544e57e0cebdc44d3e4a",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " to a tortilla with shredded cheese, salsa, and sour cream.\nIngredients: canned black beans, tortilla, shredded cheese, salsa, sour cream.\n\n",
+              "following": "11. Baked Sweet Potato: Pierce sweet potato and microwave for 5-7 minutes. Serve with toppings like butter or cinnamon sugar.\nIngredients: sweet potato, butter, cinnamon sugar.\n\n12. Spinach and Feta Omelette: Whisk eggs with milk and cook in a pan. Add spinach",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                425,
+                7741,
+                26589,
+                77603,
+                25,
+                49830,
+                10226,
+                38734,
+                323,
+                41274,
+                369,
+                220,
+                20
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 1.5859375,
+              "conversation": 3537,
+              "conversation_position": 487
+            }
+          ]
+        }
+      ],
+      "negative_highlight_decisions_reusing_pre11_active_contexts": []
+    },
+    "fuzz": {
+      "total_decisions": 100,
+      "positive_decisions": 50,
+      "confirmed_pre11_positive_cases": 12,
+      "strict_eleven_or_equivalent_cases": 10,
+      "families": {
+        "year_2011_suffix": 2,
+        "november": 2,
+        "date_range_8_to_11": 1,
+        "standalone_11": 7
+      },
+      "cases": [
+        {
+          "row_index": 13,
+          "fingerprint": "f94376ea5234a0a5160bcc393e5ba4b0b4a28f4f6ff1c4aa33fe8f3d6799224c",
+          "families": [
+            "year_2011_suffix"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "year_2011_suffix",
+              "prefix": " he encountered. Keith has received recognition for his poetry in various international competitions and his debut collection, Tongues of Ash, won an award in 20",
+              "following": "11.<|im_end|>\n<|im_start|>user\nCan you provide some examples of Keith Westwater's poetry that can be found in his collection No One Home?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nCertainly! Here are a few examples of Keith Westwater's poetry from his collection No One Home:\n\n1) \"Oruru",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                151645,
+                198,
+                151644,
+                872,
+                198,
+                6713,
+                498,
+                3410,
+                1045,
+                10295,
+                315,
+                31502,
+                4312
+              ],
+              "window_position": 63,
+              "token": "0",
+              "gate": 1.2734375,
+              "conversation": 2494,
+              "conversation_position": 433
+            }
+          ]
+        },
+        {
+          "row_index": 39,
+          "fingerprint": "d20a67f09cfa5d3f2c59308d8dcf7c89c3105d7102d8c87aa99c4db5f99bbedf",
+          "families": [
+            "november"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "november",
+              "prefix": " and involves lighting candles, storytelling, and feasting.\n\n3. Diwali - this is a Hindu festival of lights that usually takes place in October or",
+              "following": " November. It involves lighting lamps, decorating homes with rangolis, and exchanging gifts and sweets.\n\n4. Winter Solstice - this is the shortest day of the year, and it happens around December 21st. Many cultures have celebrated this day for centuries, often with special rituals, feasting, and lighting fires",
+              "next_token_ids": [
+                6702,
+                13,
+                1084,
+                17601,
+                17716,
+                49452,
+                11,
+                48582,
+                10415,
+                448,
+                42100,
+                68758,
+                11,
+                323,
+                78431,
+                20609
+              ],
+              "window_position": 63,
+              "token": " or",
+              "gate": 2.1875,
+              "conversation": 3977,
+              "conversation_position": 203
+            }
+          ]
+        },
+        {
+          "row_index": 45,
+          "fingerprint": "989287e64c1a633f1dd8920c4acb7a98d7d7d9dca65f7609df89844dfe19a32a",
+          "families": [
+            "year_2011_suffix"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "year_2011_suffix",
+              "prefix": "-13 in front of their home crowd of 83,000+ fans.\n\nThe rivalry came to an abrupt end in 20",
+              "following": "11 when Texas A&M announced their move to the Southeastern Conference (SEC) from the Big 12 Conference. Since then, Texas and Texas A&M haven't played each other in football, which sparked widespread disappointment among fans of both schools.\n\nHowever, in recent years, there have been efforts to revive the",
+              "next_token_ids": [
+                16,
+                16,
+                979,
+                8257,
+                362,
+                39216,
+                7228,
+                862,
+                3271,
+                311,
+                279,
+                35564,
+                932,
+                14872,
+                320,
+                25548
+              ],
+              "window_position": 63,
+              "token": "0",
+              "gate": 1.109375,
+              "conversation": 7169,
+              "conversation_position": 821
+            }
+          ]
+        },
+        {
+          "row_index": 47,
+          "fingerprint": "a5fe7d33daabc0eb93f6ca406917fe4cb2de0f414ebca43cbcadaa107c3828e7",
+          "families": [
+            "date_range_8_to_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "date_range_8_to_11",
+              "prefix": " demonstrating its VOS360 SaaS for live sports streaming at the 2019 NAB Show in Las Vegas from April 8-",
+              "following": "11. Using VOS360 media processing as a service, the company can deliver exceptional video quality to any screen and scale the delivery of its OTT services based on actual needs. The solution's flexibility ensures that INDYCAR can launch new channels and services quickly without requiring a large upfront investment in equipment necessary",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                12091,
+                647,
+                3126,
+                18,
+                21,
+                15,
+                3687,
+                8692,
+                438,
+                264,
+                2473,
+                11,
+                279
+              ],
+              "window_position": 63,
+              "token": "-",
+              "gate": 1.1953125,
+              "conversation": 887,
+              "conversation_position": 622
+            }
+          ]
+        },
+        {
+          "row_index": 49,
+          "fingerprint": "fa2f6a759385583fff99ff2979b44dc4088877f074b6255d0871d943f24c6453",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": ". Check your progress frequently and make sure you’re on track. 10. Stay calm and composed even if you feel stressed or pressed for time.",
+              "following": " 11. If you finish early, use the remaining time to review your answers. 12. Avoid leaving any question unanswered, even if it means making an educated guess. 13. If you’re running out of time, write down key words or points instead of full sentences. 14.",
+              "next_token_ids": [
+                220,
+                16,
+                16,
+                13,
+                1416,
+                498,
+                6248,
+                4124,
+                11,
+                990,
+                279,
+                9664,
+                882,
+                311,
+                3395,
+                697
+              ],
+              "window_position": 62,
+              "token": ".",
+              "gate": 0.8671875,
+              "conversation": 7022,
+              "conversation_position": 706
+            },
+            {
+              "family": "standalone_11",
+              "prefix": " Check your progress frequently and make sure you’re on track. 10. Stay calm and composed even if you feel stressed or pressed for time. ",
+              "following": "11. If you finish early, use the remaining time to review your answers. 12. Avoid leaving any question unanswered, even if it means making an educated guess. 13. If you’re running out of time, write down key words or points instead of full sentences. 14. Pay",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                1416,
+                498,
+                6248,
+                4124,
+                11,
+                990,
+                279,
+                9664,
+                882,
+                311,
+                3395,
+                697,
+                11253
+              ],
+              "window_position": 63,
+              "token": " ",
+              "gate": 1.65625,
+              "conversation": 7022,
+              "conversation_position": 707
+            }
+          ]
+        },
+        {
+          "row_index": 55,
+          "fingerprint": "51237c0a321fc5ffa675f9ffa051606d3978935f7fe7544e57e0cebdc44d3e4a",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " to a tortilla with shredded cheese, salsa, and sour cream.\nIngredients: canned black beans, tortilla, shredded cheese, salsa, sour cream.\n\n",
+              "following": "11. Baked Sweet Potato: Pierce sweet potato and microwave for 5-7 minutes. Serve with toppings like butter or cinnamon sugar.\nIngredients: sweet potato, butter, cinnamon sugar.\n\n12. Spinach and Feta Omelette: Whisk eggs with milk and cook in a pan. Add spinach",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                425,
+                7741,
+                26589,
+                77603,
+                25,
+                49830,
+                10226,
+                38734,
+                323,
+                41274,
+                369,
+                220,
+                20
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 1.5859375,
+              "conversation": 3537,
+              "conversation_position": 487
+            }
+          ]
+        },
+        {
+          "row_index": 57,
+          "fingerprint": "0423ecd0ee9ebfcaa2fe8606d4b0b16c219169f79b67c9389f684c1c403877f7",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " attach the hinges.\n\n10. Install the Spring Assembly - Install an additional torsion spring for extra support on larger garage doors as per manufacturer’s instructions.\n\n",
+              "following": "11. Install the Opener – Ensure the opener is of the correct size, has an auto-stop mechanism and is positioned at the right height. Follow the manufacturer's instructions to attach it securely.\n\n12. Test and Adjust - Test the door's function by opening and closing it a few times. Adjust the tension",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                19242,
+                279,
+                10672,
+                798,
+                1365,
+                29279,
+                279,
+                35153,
+                374,
+                315,
+                279,
+                4396,
+                1379
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 1.0859375,
+              "conversation": 7751,
+              "conversation_position": 511
+            }
+          ]
+        },
+        {
+          "row_index": 68,
+          "fingerprint": "50676e75adee41a5bb7b19311f322670a9bcf88afaa5dcdf429100bb4a93c83a",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " represents the entire understanding between the parties with respect to the subject matter hereof and supersedes all prior negotiations, understandings and agreements between the parties.\n\n",
+              "following": "11. APPLICABLE LAW\nThis Contract shall be governed by and construed in accordance with the laws of [state/country]. Any disputes arising out of or in connection with this Contract shall be resolved exclusively by the courts located in [state/country].\n\nIN WITNESS WHEREOF, the parties have executed this",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                10106,
+                36435,
+                3494,
+                66603,
+                198,
+                1986,
+                19185,
+                4880,
+                387,
+                26702,
+                553,
+                323,
+                70159
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 0.69140625,
+              "conversation": 7208,
+              "conversation_position": 657
+            }
+          ]
+        },
+        {
+          "row_index": 69,
+          "fingerprint": "9e27a6b8db5692badf82545bdaff29122c648d83690552ba6925cfc5afa3a071",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": ". George S. Klein\n8. Rudolf Loewenstein\n9. Paul H. Ornstein\n10. Philip R. Lehrman\n",
+              "following": "11. Charles W. Socarides\n12. Edward M. Weinshel\n13. Nathan M. Szajnberg\n14. James L. Fosshage<|im_end|>\n",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                14927,
+                467,
+                13,
+                26572,
+                277,
+                3341,
+                198,
+                16,
+                17,
+                13,
+                21891,
+                386,
+                13
+              ],
+              "window_position": 63,
+              "token": "\n",
+              "gate": 1.984375,
+              "conversation": 4636,
+              "conversation_position": 331
+            }
+          ]
+        },
+        {
+          "row_index": 86,
+          "fingerprint": "e2d6f01e408d4cc8bcd13701ca1bf2660b18f92256c5ae8aa76582917751e05f",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": "-powered cars? a. Very concerned \nb. Somewhat concerned \nc. Neutral \nd. Not very concerned \ne. Not concerned at all \n\n",
+              "following": "11. Which factors do you think an automotive manufacturer should prioritize when developing electric or hybrid vehicles? a. Driving range \nb. Charging time \nc. Cost \nd. Performance \ne. Environmental impact \nf. Other \n\nThank you for your valuable input!<|im_end|>\n<|im_start|>user\nThank you for adding those",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                15920,
+                9363,
+                653,
+                498,
+                1744,
+                458,
+                39408,
+                13963,
+                1265,
+                62552,
+                979,
+                11220,
+                9072
+              ],
+              "window_position": 63,
+              "token": " \n\n",
+              "gate": 1.3125,
+              "conversation": 901,
+              "conversation_position": 617
+            }
+          ]
+        },
+        {
+          "row_index": 90,
+          "fingerprint": "1ff630d07c91657f77e71bc3d2aacb0434f5fa094e643e0034fc843bdd1fbb56",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " to grow your email list.\n\n10. Mailchimp: This tool helps you create and automate email campaigns to promote your content and engage with your subscribers.\n\n",
+              "following": "11. Google Analytics: This tool helps you track your website's traffic, user behavior, and other important metrics for content optimization.\n\n12. CoSchedule Headline Analyzer: This tool helps you craft effective headlines by analyzing their emotional appeal, length, and keyword optimization.\n\n13. Ahrefs: This tool",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                5085,
+                32427,
+                25,
+                1096,
+                5392,
+                8609,
+                498,
+                3754,
+                697,
+                3910,
+                594,
+                9442,
+                11
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 0.76171875,
+              "conversation": 669,
+              "conversation_position": 473
+            }
+          ]
+        },
+        {
+          "row_index": 98,
+          "fingerprint": "1d77836e3e0116ec21fe471e508ff13ba33ce19db19e055d28f64b8d5e34eaa9",
+          "families": [
+            "november"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "november",
+              "prefix": "any's renowned chianti region. If you are interested in experiencing a traditional tuscan harvest event, the grape and olive harvest festivals in october and",
+              "following": " november could be a good choice. If you are a food enthusiast, then the sagra del cinghiale or fiera del tartufo could be perfect as it offers a chance to savor some of the region's most flavorful dishes. For a cultural experience, the mercantia festival might be ideal as",
+              "next_token_ids": [
+                84223,
+                1410,
+                387,
+                264,
+                1661,
+                5754,
+                13,
+                1416,
+                498,
+                525,
+                264,
+                3607,
+                60812,
+                11,
+                1221,
+                279
+              ],
+              "window_position": 63,
+              "token": " and",
+              "gate": 2.140625,
+              "conversation": 6745,
+              "conversation_position": 1021
+            }
+          ]
+        }
+      ],
+      "negative_highlight_decisions_reusing_pre11_active_contexts": []
+    },
+    "active_fuzz": {
+      "total_decisions": 100,
+      "positive_decisions": 50,
+      "confirmed_pre11_positive_cases": 12,
+      "strict_eleven_or_equivalent_cases": 10,
+      "families": {
+        "year_2011_suffix": 2,
+        "november": 2,
+        "date_range_8_to_11": 1,
+        "standalone_11": 7
+      },
+      "cases": [
+        {
+          "row_index": 13,
+          "fingerprint": "f94376ea5234a0a5160bcc393e5ba4b0b4a28f4f6ff1c4aa33fe8f3d6799224c",
+          "families": [
+            "year_2011_suffix"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "year_2011_suffix",
+              "prefix": " he encountered. Keith has received recognition for his poetry in various international competitions and his debut collection, Tongues of Ash, won an award in 20",
+              "following": "11.<|im_end|>\n<|im_start|>user\nCan you provide some examples of Keith Westwater's poetry that can be found in his collection No One Home?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nCertainly! Here are a few examples of Keith Westwater's poetry from his collection No One Home:\n\n1) \"Oruru",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                151645,
+                198,
+                151644,
+                872,
+                198,
+                6713,
+                498,
+                3410,
+                1045,
+                10295,
+                315,
+                31502,
+                4312
+              ],
+              "window_position": 63,
+              "token": "0",
+              "gate": 1.2734375,
+              "conversation": 2494,
+              "conversation_position": 433
+            }
+          ]
+        },
+        {
+          "row_index": 39,
+          "fingerprint": "d20a67f09cfa5d3f2c59308d8dcf7c89c3105d7102d8c87aa99c4db5f99bbedf",
+          "families": [
+            "november"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "november",
+              "prefix": " and involves lighting candles, storytelling, and feasting.\n\n3. Diwali - this is a Hindu festival of lights that usually takes place in October or",
+              "following": " November. It involves lighting lamps, decorating homes with rangolis, and exchanging gifts and sweets.\n\n4. Winter Solstice - this is the shortest day of the year, and it happens around December 21st. Many cultures have celebrated this day for centuries, often with special rituals, feasting, and lighting fires",
+              "next_token_ids": [
+                6702,
+                13,
+                1084,
+                17601,
+                17716,
+                49452,
+                11,
+                48582,
+                10415,
+                448,
+                42100,
+                68758,
+                11,
+                323,
+                78431,
+                20609
+              ],
+              "window_position": 63,
+              "token": " or",
+              "gate": 2.1875,
+              "conversation": 3977,
+              "conversation_position": 203
+            }
+          ]
+        },
+        {
+          "row_index": 45,
+          "fingerprint": "989287e64c1a633f1dd8920c4acb7a98d7d7d9dca65f7609df89844dfe19a32a",
+          "families": [
+            "year_2011_suffix"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "year_2011_suffix",
+              "prefix": "-13 in front of their home crowd of 83,000+ fans.\n\nThe rivalry came to an abrupt end in 20",
+              "following": "11 when Texas A&M announced their move to the Southeastern Conference (SEC) from the Big 12 Conference. Since then, Texas and Texas A&M haven't played each other in football, which sparked widespread disappointment among fans of both schools.\n\nHowever, in recent years, there have been efforts to revive the",
+              "next_token_ids": [
+                16,
+                16,
+                979,
+                8257,
+                362,
+                39216,
+                7228,
+                862,
+                3271,
+                311,
+                279,
+                35564,
+                932,
+                14872,
+                320,
+                25548
+              ],
+              "window_position": 63,
+              "token": "0",
+              "gate": 1.109375,
+              "conversation": 7169,
+              "conversation_position": 821
+            }
+          ]
+        },
+        {
+          "row_index": 47,
+          "fingerprint": "a5fe7d33daabc0eb93f6ca406917fe4cb2de0f414ebca43cbcadaa107c3828e7",
+          "families": [
+            "date_range_8_to_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "date_range_8_to_11",
+              "prefix": " demonstrating its VOS360 SaaS for live sports streaming at the 2019 NAB Show in Las Vegas from April 8-",
+              "following": "11. Using VOS360 media processing as a service, the company can deliver exceptional video quality to any screen and scale the delivery of its OTT services based on actual needs. The solution's flexibility ensures that INDYCAR can launch new channels and services quickly without requiring a large upfront investment in equipment necessary",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                12091,
+                647,
+                3126,
+                18,
+                21,
+                15,
+                3687,
+                8692,
+                438,
+                264,
+                2473,
+                11,
+                279
+              ],
+              "window_position": 63,
+              "token": "-",
+              "gate": 1.1953125,
+              "conversation": 887,
+              "conversation_position": 622
+            }
+          ]
+        },
+        {
+          "row_index": 49,
+          "fingerprint": "fa2f6a759385583fff99ff2979b44dc4088877f074b6255d0871d943f24c6453",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": ". Check your progress frequently and make sure you’re on track. 10. Stay calm and composed even if you feel stressed or pressed for time.",
+              "following": " 11. If you finish early, use the remaining time to review your answers. 12. Avoid leaving any question unanswered, even if it means making an educated guess. 13. If you’re running out of time, write down key words or points instead of full sentences. 14.",
+              "next_token_ids": [
+                220,
+                16,
+                16,
+                13,
+                1416,
+                498,
+                6248,
+                4124,
+                11,
+                990,
+                279,
+                9664,
+                882,
+                311,
+                3395,
+                697
+              ],
+              "window_position": 62,
+              "token": ".",
+              "gate": 0.8671875,
+              "conversation": 7022,
+              "conversation_position": 706
+            },
+            {
+              "family": "standalone_11",
+              "prefix": " Check your progress frequently and make sure you’re on track. 10. Stay calm and composed even if you feel stressed or pressed for time. ",
+              "following": "11. If you finish early, use the remaining time to review your answers. 12. Avoid leaving any question unanswered, even if it means making an educated guess. 13. If you’re running out of time, write down key words or points instead of full sentences. 14. Pay",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                1416,
+                498,
+                6248,
+                4124,
+                11,
+                990,
+                279,
+                9664,
+                882,
+                311,
+                3395,
+                697,
+                11253
+              ],
+              "window_position": 63,
+              "token": " ",
+              "gate": 1.65625,
+              "conversation": 7022,
+              "conversation_position": 707
+            }
+          ]
+        },
+        {
+          "row_index": 55,
+          "fingerprint": "51237c0a321fc5ffa675f9ffa051606d3978935f7fe7544e57e0cebdc44d3e4a",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " to a tortilla with shredded cheese, salsa, and sour cream.\nIngredients: canned black beans, tortilla, shredded cheese, salsa, sour cream.\n\n",
+              "following": "11. Baked Sweet Potato: Pierce sweet potato and microwave for 5-7 minutes. Serve with toppings like butter or cinnamon sugar.\nIngredients: sweet potato, butter, cinnamon sugar.\n\n12. Spinach and Feta Omelette: Whisk eggs with milk and cook in a pan. Add spinach",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                425,
+                7741,
+                26589,
+                77603,
+                25,
+                49830,
+                10226,
+                38734,
+                323,
+                41274,
+                369,
+                220,
+                20
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 1.5859375,
+              "conversation": 3537,
+              "conversation_position": 487
+            }
+          ]
+        },
+        {
+          "row_index": 57,
+          "fingerprint": "0423ecd0ee9ebfcaa2fe8606d4b0b16c219169f79b67c9389f684c1c403877f7",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " attach the hinges.\n\n10. Install the Spring Assembly - Install an additional torsion spring for extra support on larger garage doors as per manufacturer’s instructions.\n\n",
+              "following": "11. Install the Opener – Ensure the opener is of the correct size, has an auto-stop mechanism and is positioned at the right height. Follow the manufacturer's instructions to attach it securely.\n\n12. Test and Adjust - Test the door's function by opening and closing it a few times. Adjust the tension",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                19242,
+                279,
+                10672,
+                798,
+                1365,
+                29279,
+                279,
+                35153,
+                374,
+                315,
+                279,
+                4396,
+                1379
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 1.0859375,
+              "conversation": 7751,
+              "conversation_position": 511
+            }
+          ]
+        },
+        {
+          "row_index": 68,
+          "fingerprint": "50676e75adee41a5bb7b19311f322670a9bcf88afaa5dcdf429100bb4a93c83a",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " represents the entire understanding between the parties with respect to the subject matter hereof and supersedes all prior negotiations, understandings and agreements between the parties.\n\n",
+              "following": "11. APPLICABLE LAW\nThis Contract shall be governed by and construed in accordance with the laws of [state/country]. Any disputes arising out of or in connection with this Contract shall be resolved exclusively by the courts located in [state/country].\n\nIN WITNESS WHEREOF, the parties have executed this",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                10106,
+                36435,
+                3494,
+                66603,
+                198,
+                1986,
+                19185,
+                4880,
+                387,
+                26702,
+                553,
+                323,
+                70159
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 0.69140625,
+              "conversation": 7208,
+              "conversation_position": 657
+            }
+          ]
+        },
+        {
+          "row_index": 69,
+          "fingerprint": "9e27a6b8db5692badf82545bdaff29122c648d83690552ba6925cfc5afa3a071",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": ". George S. Klein\n8. Rudolf Loewenstein\n9. Paul H. Ornstein\n10. Philip R. Lehrman\n",
+              "following": "11. Charles W. Socarides\n12. Edward M. Weinshel\n13. Nathan M. Szajnberg\n14. James L. Fosshage<|im_end|>\n",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                14927,
+                467,
+                13,
+                26572,
+                277,
+                3341,
+                198,
+                16,
+                17,
+                13,
+                21891,
+                386,
+                13
+              ],
+              "window_position": 63,
+              "token": "\n",
+              "gate": 1.984375,
+              "conversation": 4636,
+              "conversation_position": 331
+            }
+          ]
+        },
+        {
+          "row_index": 86,
+          "fingerprint": "e2d6f01e408d4cc8bcd13701ca1bf2660b18f92256c5ae8aa76582917751e05f",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": "-powered cars? a. Very concerned \nb. Somewhat concerned \nc. Neutral \nd. Not very concerned \ne. Not concerned at all \n\n",
+              "following": "11. Which factors do you think an automotive manufacturer should prioritize when developing electric or hybrid vehicles? a. Driving range \nb. Charging time \nc. Cost \nd. Performance \ne. Environmental impact \nf. Other \n\nThank you for your valuable input!<|im_end|>\n<|im_start|>user\nThank you for adding those",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                15920,
+                9363,
+                653,
+                498,
+                1744,
+                458,
+                39408,
+                13963,
+                1265,
+                62552,
+                979,
+                11220,
+                9072
+              ],
+              "window_position": 63,
+              "token": " \n\n",
+              "gate": 1.3125,
+              "conversation": 901,
+              "conversation_position": 617
+            }
+          ]
+        },
+        {
+          "row_index": 90,
+          "fingerprint": "1ff630d07c91657f77e71bc3d2aacb0434f5fa094e643e0034fc843bdd1fbb56",
+          "families": [
+            "standalone_11"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "standalone_11",
+              "prefix": " to grow your email list.\n\n10. Mailchimp: This tool helps you create and automate email campaigns to promote your content and engage with your subscribers.\n\n",
+              "following": "11. Google Analytics: This tool helps you track your website's traffic, user behavior, and other important metrics for content optimization.\n\n12. CoSchedule Headline Analyzer: This tool helps you craft effective headlines by analyzing their emotional appeal, length, and keyword optimization.\n\n13. Ahrefs: This tool",
+              "next_token_ids": [
+                16,
+                16,
+                13,
+                5085,
+                32427,
+                25,
+                1096,
+                5392,
+                8609,
+                498,
+                3754,
+                697,
+                3910,
+                594,
+                9442,
+                11
+              ],
+              "window_position": 63,
+              "token": ".\n\n",
+              "gate": 0.76171875,
+              "conversation": 669,
+              "conversation_position": 473
+            }
+          ]
+        },
+        {
+          "row_index": 98,
+          "fingerprint": "1d77836e3e0116ec21fe471e508ff13ba33ce19db19e055d28f64b8d5e34eaa9",
+          "families": [
+            "november"
+          ],
+          "active_boundary_events": [
+            {
+              "family": "november",
+              "prefix": "any's renowned chianti region. If you are interested in experiencing a traditional tuscan harvest event, the grape and olive harvest festivals in october and",
+              "following": " november could be a good choice. If you are a food enthusiast, then the sagra del cinghiale or fiera del tartufo could be perfect as it offers a chance to savor some of the region's most flavorful dishes. For a cultural experience, the mercantia festival might be ideal as",
+              "next_token_ids": [
+                84223,
+                1410,
+                387,
+                264,
+                1661,
+                5754,
+                13,
+                1416,
+                498,
+                525,
+                264,
+                3607,
+                60812,
+                11,
+                1221,
+                279
+              ],
+              "window_position": 63,
+              "token": " and",
+              "gate": 2.140625,
+              "conversation": 6745,
+              "conversation_position": 1021
+            }
+          ]
+        }
+      ],
+      "negative_highlight_decisions_reusing_pre11_active_contexts": [
+        72,
+        91,
+        46,
+        63,
+        21,
+        95,
+        2,
+        8,
+        28,
+        89,
+        12,
+        42
+      ]
+    }
+  }
+}

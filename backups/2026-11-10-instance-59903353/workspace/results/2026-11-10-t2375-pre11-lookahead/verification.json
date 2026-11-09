@@ -1,0 +1,624 @@
+{
+  "verified_at_utc": "2026-11-09T20:28:12.925253+00:00",
+  "complete_requests": 96,
+  "unique_request_bodies": 72,
+  "exact_plan_messages_verified": true,
+  "exact_saved_input_tokens_verified": true,
+  "labels_unchanged": true,
+  "descriptions_unchanged": true,
+  "no_parse_failures": true,
+  "no_truncated_prompts": true,
+  "no_truncated_responses": true,
+  "runtime_matches_previous_local_judge": true,
+  "identical_requests_have_identical_outputs": true,
+  "lookahead_subject_tokens": 16,
+  "posthoc": true,
+  "methods": {
+    "detection": {
+      "arms": {
+        "baseline": {
+          "prefix_only_positive_correct": 0,
+          "lookahead_positive_correct": 0,
+          "positive_total": 12,
+          "lookahead_positive_rate": 0.0,
+          "prefix_only_control_false_positives": 0,
+          "lookahead_control_false_positives": 0,
+          "control_total": 0
+        },
+        "candidate": {
+          "prefix_only_positive_correct": 0,
+          "lookahead_positive_correct": 10,
+          "positive_total": 12,
+          "lookahead_positive_rate": 0.8333333333333334,
+          "prefix_only_control_false_positives": 0,
+          "lookahead_control_false_positives": 0,
+          "control_total": 0
+        }
+      },
+      "pairs": [
+        {
+          "row_index": 9,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 13,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 24,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 26,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 47,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 63,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 71,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 72,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 73,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 78,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 79,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 89,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        }
+      ],
+      "new_description_corrected": 10,
+      "new_description_regressed": 0
+    },
+    "fuzz": {
+      "arms": {
+        "baseline": {
+          "prefix_only_positive_correct": 0,
+          "lookahead_positive_correct": 0,
+          "positive_total": 12,
+          "lookahead_positive_rate": 0.0,
+          "prefix_only_control_false_positives": 0,
+          "lookahead_control_false_positives": 0,
+          "control_total": 0
+        },
+        "candidate": {
+          "prefix_only_positive_correct": 0,
+          "lookahead_positive_correct": 11,
+          "positive_total": 12,
+          "lookahead_positive_rate": 0.9166666666666666,
+          "prefix_only_control_false_positives": 0,
+          "lookahead_control_false_positives": 0,
+          "control_total": 0
+        }
+      },
+      "pairs": [
+        {
+          "row_index": 13,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 39,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 45,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 47,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 49,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 55,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 57,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 68,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 69,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 86,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 90,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 98,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        }
+      ],
+      "new_description_corrected": 11,
+      "new_description_regressed": 0
+    },
+    "active_fuzz": {
+      "arms": {
+        "baseline": {
+          "prefix_only_positive_correct": 0,
+          "lookahead_positive_correct": 0,
+          "positive_total": 12,
+          "lookahead_positive_rate": 0.0,
+          "prefix_only_control_false_positives": 0,
+          "lookahead_control_false_positives": 0,
+          "control_total": 12
+        },
+        "candidate": {
+          "prefix_only_positive_correct": 0,
+          "lookahead_positive_correct": 11,
+          "positive_total": 12,
+          "lookahead_positive_rate": 0.9166666666666666,
+          "prefix_only_control_false_positives": 0,
+          "lookahead_control_false_positives": 1,
+          "control_total": 12
+        }
+      },
+      "pairs": [
+        {
+          "row_index": 2,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 8,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 12,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 13,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 21,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 28,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 39,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 42,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 45,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 46,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 47,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 49,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 55,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 57,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 63,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 68,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 69,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 72,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 86,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 89,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 90,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 91,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 95,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 98,
+          "activating": true,
+          "role": "positive",
+          "prefix_only_predictions": {
+            "baseline": false,
+            "candidate": false
+          },
+          "baseline": false,
+          "candidate": false
+        }
+      ],
+      "new_description_corrected": 11,
+      "new_description_regressed": 0
+    }
+  }
+}

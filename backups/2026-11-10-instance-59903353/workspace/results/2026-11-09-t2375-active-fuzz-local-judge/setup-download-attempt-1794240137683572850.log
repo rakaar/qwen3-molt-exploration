@@ -1,0 +1,44 @@
+/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py:773: UserWarning: Not enough free disk space to download the file. The expected file size is: 19743.76 MB. The target location /workspace/t2375-active-fuzz-local-judge-20261109/judge/.cache/huggingface/download only has 15337.99 MB free disk space.
+  warnings.warn(
+/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py:773: UserWarning: Not enough free disk space to download the file. The expected file size is: 19743.76 MB. The target location /workspace/t2375-active-fuzz-local-judge-20261109/judge only has 15337.99 MB free disk space.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/download_judge.py", line 15, in <module>
+    snapshot_download(repo_id=p['judge_repo'],revision=p['judge_revision'],
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 276, in _inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/_snapshot_download.py", line 541, in snapshot_download
+    hf_thread_map(
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/utils/tqdm.py", line 441, in hf_thread_map
+    results[future_to_index[future]] = future.result()
+                                       ^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/_snapshot_download.py", line 521, in _inner_hf_hub_download
+    hf_hub_download(  # type: ignore
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 276, in _inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1026, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1505, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 2017, in _download_to_tmp_and_move
+    xet_get(
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/.venv/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 589, in xet_get
+    with session.new_file_download_group(
+RuntimeError: Task error: File reconstruction error: IO Error: No space left on device (os error 28)

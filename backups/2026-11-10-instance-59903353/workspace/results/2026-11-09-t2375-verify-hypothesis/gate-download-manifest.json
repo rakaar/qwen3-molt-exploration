@@ -1,0 +1,91 @@
+{
+  "repo": "georglange/qwen3-4b-molt",
+  "revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "source_checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-29/checkpoint.safetensors",
+  "full_checkpoint_downloaded": false,
+  "all_gate_rows": true,
+  "t2375_matches_previously_verified_slice": true,
+  "tensors": [
+    {
+      "key": "e.weight",
+      "bytes": 25395200,
+      "sha256": "213d3823a45897dbfd83f5f9b53498b29c8d28eca81495ea85c6afeeaec60a42",
+      "shape": [
+        2480,
+        2560
+      ],
+      "dtype": "F32",
+      "range": [
+        4194315640,
+        4219710839
+      ]
+    },
+    {
+      "key": "e.bias",
+      "bytes": 9920,
+      "sha256": "57e2f8be19e0c01d49608b5755df2c3fa75c987e5075fbaa839ea7587ca4935e",
+      "shape": [
+        2480
+      ],
+      "dtype": "F32",
+      "range": [
+        4194305720,
+        4194315639
+      ]
+    },
+    {
+      "key": "nonlinearity.theta",
+      "bytes": 9920,
+      "sha256": "ade5e67c878c652fb9f9d7a5b5c3ac046ffd40a1d42b69628a8d0999078b0fbe",
+      "shape": [
+        1,
+        2480
+      ],
+      "dtype": "F32",
+      "range": [
+        4220448124,
+        4220458043
+      ]
+    },
+    {
+      "key": "nonlinearity.bandwidth",
+      "bytes": 4,
+      "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+      "shape": [],
+      "dtype": "F32",
+      "range": [
+        4220448120,
+        4220448123
+      ]
+    },
+    {
+      "key": "input_standardizer.mean",
+      "bytes": 368640,
+      "sha256": "d420c5f97e6110063f5262dbabb614db59d59d03f2b0566980781bd74dfafff7",
+      "shape": [
+        36,
+        2560
+      ],
+      "dtype": "F32",
+      "range": [
+        4219710840,
+        4220079479
+      ]
+    },
+    {
+      "key": "input_standardizer.std",
+      "bytes": 368640,
+      "sha256": "cf67534aa7562b4ec70fa57f98e1959fb4256269d54b82f34e81a46fe4dd045b",
+      "shape": [
+        36,
+        2560
+      ],
+      "dtype": "F32",
+      "range": [
+        4220079480,
+        4220448119
+      ]
+    }
+  ],
+  "derived_checkpoint_sha256": "238676ae85672da1aaf60f98e8713d92f96726113088a5b71fe4209cac38bdf7"
+}

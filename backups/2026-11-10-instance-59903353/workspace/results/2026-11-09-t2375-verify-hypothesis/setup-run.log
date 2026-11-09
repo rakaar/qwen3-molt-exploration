@@ -1,0 +1,214 @@
+Collecting transformers==4.57.6
+  Downloading transformers-4.57.6-py3-none-any.whl.metadata (43 kB)
+Collecting accelerate==1.10.1
+  Downloading accelerate-1.10.1-py3-none-any.whl.metadata (19 kB)
+Collecting safetensors==0.8.0
+  Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting mcp==1.26.0
+  Downloading mcp-1.26.0-py3-none-any.whl.metadata (89 kB)
+Collecting einops
+  Downloading einops-0.8.2-py3-none-any.whl.metadata (13 kB)
+Collecting jaxtyping
+  Downloading jaxtyping-0.3.11-py3-none-any.whl.metadata (6.2 kB)
+Requirement already satisfied: pyyaml in /opt/conda/lib/python3.11/site-packages (6.0.2)
+Requirement already satisfied: requests in /opt/conda/lib/python3.11/site-packages (2.32.3)
+Requirement already satisfied: filelock in /opt/conda/lib/python3.11/site-packages (from transformers==4.57.6) (3.18.0)
+Collecting huggingface-hub<1.0,>=0.34.0 (from transformers==4.57.6)
+  Downloading huggingface_hub-0.36.2-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: numpy>=1.17 in /opt/conda/lib/python3.11/site-packages (from transformers==4.57.6) (2.2.6)
+Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.11/site-packages (from transformers==4.57.6) (25.0)
+Collecting regex!=2019.12.17 (from transformers==4.57.6)
+  Downloading regex-2026.11.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers==4.57.6)
+  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Requirement already satisfied: tqdm>=4.27 in /opt/conda/lib/python3.11/site-packages (from transformers==4.57.6) (4.67.1)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.11/site-packages (from accelerate==1.10.1) (7.0.0)
+Requirement already satisfied: torch>=2.0.0 in /opt/conda/lib/python3.11/site-packages (from accelerate==1.10.1) (2.7.1+cu126)
+Collecting anyio>=4.5 (from mcp==1.26.0)
+  Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting httpx-sse>=0.4 (from mcp==1.26.0)
+  Downloading httpx_sse-0.4.3-py3-none-any.whl.metadata (9.7 kB)
+Collecting httpx>=0.27.1 (from mcp==1.26.0)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: jsonschema>=4.20.0 in /opt/conda/lib/python3.11/site-packages (from mcp==1.26.0) (4.24.0)
+Collecting pydantic-settings>=2.5.2 (from mcp==1.26.0)
+  Downloading pydantic_settings-2.16.2-py3-none-any.whl.metadata (4.0 kB)
+Collecting pydantic<3.0.0,>=2.11.0 (from mcp==1.26.0)
+  Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->mcp==1.26.0)
+  Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting python-multipart>=0.0.9 (from mcp==1.26.0)
+  Downloading python_multipart-0.0.33-py3-none-any.whl.metadata (6.3 kB)
+Collecting sse-starlette>=1.6.1 (from mcp==1.26.0)
+  Downloading sse_starlette-3.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting starlette>=0.27 (from mcp==1.26.0)
+  Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: typing-extensions>=4.9.0 in /opt/conda/lib/python3.11/site-packages (from mcp==1.26.0) (4.14.0)
+Collecting typing-inspection>=0.4.1 (from mcp==1.26.0)
+  Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting uvicorn>=0.31.1 (from mcp==1.26.0)
+  Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: fsspec>=2023.5.0 in /opt/conda/lib/python3.11/site-packages (from huggingface-hub<1.0,>=0.34.0->transformers==4.57.6) (2025.5.1)
+Collecting hf-xet<2.0.0,>=1.1.3 (from huggingface-hub<1.0,>=0.34.0->transformers==4.57.6)
+  Downloading hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.11.0->mcp==1.26.0)
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.4 (from pydantic<3.0.0,>=2.11.0->mcp==1.26.0)
+  Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+Collecting typing-extensions>=4.9.0 (from mcp==1.26.0)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting wadler-lindig>=0.1.3 (from jaxtyping)
+  Downloading wadler_lindig-0.1.8-py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/conda/lib/python3.11/site-packages (from requests) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in /opt/conda/lib/python3.11/site-packages (from requests) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/conda/lib/python3.11/site-packages (from requests) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.11/site-packages (from requests) (2025.4.26)
+Collecting httpcore==1.* (from httpx>=0.27.1->mcp==1.26.0)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.27.1->mcp==1.26.0)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: attrs>=22.2.0 in /opt/conda/lib/python3.11/site-packages (from jsonschema>=4.20.0->mcp==1.26.0) (25.3.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /opt/conda/lib/python3.11/site-packages (from jsonschema>=4.20.0->mcp==1.26.0) (2025.4.1)
+Requirement already satisfied: referencing>=0.28.4 in /opt/conda/lib/python3.11/site-packages (from jsonschema>=4.20.0->mcp==1.26.0) (0.36.2)
+Requirement already satisfied: rpds-py>=0.7.1 in /opt/conda/lib/python3.11/site-packages (from jsonschema>=4.20.0->mcp==1.26.0) (0.25.1)
+Collecting python-dotenv>=1.2.2 (from pydantic-settings>=2.5.2->mcp==1.26.0)
+  Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Collecting cryptography>=3.4.0 (from pyjwt[crypto]>=2.10.1->mcp==1.26.0)
+  Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+Collecting cffi>=2.0.0 (from cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->mcp==1.26.0)
+  Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Requirement already satisfied: pycparser in /opt/conda/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->mcp==1.26.0) (2.22)
+Requirement already satisfied: sympy>=1.13.3 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (1.14.0)
+Requirement already satisfied: networkx in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (3.5)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (3.1.6)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.6.77 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (12.6.77)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.6.77 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (12.6.77)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.6.80 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (12.6.80)
+Requirement already satisfied: nvidia-cudnn-cu12==9.5.1.17 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (9.5.1.17)
+Requirement already satisfied: nvidia-cublas-cu12==12.6.4.1 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (12.6.4.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.0.4 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (11.3.0.4)
+Requirement already satisfied: nvidia-curand-cu12==10.3.7.77 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (10.3.7.77)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.1.2 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (11.7.1.2)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.4.2 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (12.5.4.2)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.6.3 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (0.6.3)
+Requirement already satisfied: nvidia-nccl-cu12==2.26.2 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (2.26.2)
+Requirement already satisfied: nvidia-nvtx-cu12==12.6.77 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (12.6.77)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.6.85 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (12.6.85)
+Requirement already satisfied: nvidia-cufile-cu12==1.11.1.6 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (1.11.1.6)
+Requirement already satisfied: triton==3.3.1 in /opt/conda/lib/python3.11/site-packages (from torch>=2.0.0->accelerate==1.10.1) (3.3.1)
+Requirement already satisfied: setuptools>=40.8.0 in /opt/conda/lib/python3.11/site-packages (from triton==3.3.1->torch>=2.0.0->accelerate==1.10.1) (75.8.2)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/conda/lib/python3.11/site-packages (from sympy>=1.13.3->torch>=2.0.0->accelerate==1.10.1) (1.3.0)
+Requirement already satisfied: click>=7.0 in /opt/conda/lib/python3.11/site-packages (from uvicorn>=0.31.1->mcp==1.26.0) (8.2.1)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/conda/lib/python3.11/site-packages (from jinja2->torch>=2.0.0->accelerate==1.10.1) (3.0.2)
+Downloading transformers-4.57.6-py3-none-any.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 16.2 MB/s eta 0:00:00
+Downloading accelerate-1.10.1-py3-none-any.whl (374 kB)
+Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+Downloading mcp-1.26.0-py3-none-any.whl (233 kB)
+Downloading huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 12.1 MB/s eta 0:00:00
+Downloading hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 12.5 MB/s eta 0:00:00
+Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 12.0 MB/s eta 0:00:00
+Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 12.5 MB/s eta 0:00:00
+Downloading einops-0.8.2-py3-none-any.whl (65 kB)
+Downloading jaxtyping-0.3.11-py3-none-any.whl (56 kB)
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+Downloading pydantic_settings-2.16.2-py3-none-any.whl (81 kB)
+Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 14.6 MB/s eta 0:00:00
+Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Downloading python_multipart-0.0.33-py3-none-any.whl (32 kB)
+Downloading regex-2026.11.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (805 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.0/806.0 kB 14.5 MB/s eta 0:00:00
+Downloading sse_starlette-3.7.0-py3-none-any.whl (18 kB)
+Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Downloading wadler_lindig-0.1.8-py3-none-any.whl (20 kB)
+Installing collected packages: wadler-lindig, typing-extensions, safetensors, regex, python-multipart, python-dotenv, pyjwt, httpx-sse, hf-xet, h11, einops, cffi, annotated-types, uvicorn, typing-inspection, pydantic-core, jaxtyping, huggingface-hub, httpcore, cryptography, anyio, tokenizers, starlette, pydantic, httpx, transformers, sse-starlette, pydantic-settings, accelerate, mcp
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing_extensions 4.14.0
+    Uninstalling typing_extensions-4.14.0:
+      Successfully uninstalled typing_extensions-4.14.0
+  Attempting uninstall: cffi
+    Found existing installation: cffi 1.17.1
+    Uninstalling cffi-1.17.1:
+      Successfully uninstalled cffi-1.17.1
+
+Successfully installed accelerate-1.10.1 annotated-types-0.8.0 anyio-4.16.0 cffi-2.1.1 cryptography-50.0.2 einops-0.8.2 h11-0.16.0 hf-xet-1.8.0 httpcore-1.0.9 httpx-0.28.1 httpx-sse-0.4.3 huggingface-hub-0.36.2 jaxtyping-0.3.11 mcp-1.26.0 pydantic-2.14.3 pydantic-core-2.50.4 pydantic-settings-2.16.2 pyjwt-2.15.1 python-dotenv-1.2.4 python-multipart-0.0.33 regex-2026.11.9 safetensors-0.8.0 sse-starlette-3.7.0 starlette-1.10.0 tokenizers-0.22.2 transformers-4.57.6 typing-extensions-4.16.0 typing-inspection-0.4.5 uvicorn-0.54.0 wadler-lindig-0.1.8
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+BASE_WEIGHTS_VERIFIED
+GATE_TENSOR_READY e.weight
+GATE_TENSOR_READY e.bias
+GATE_TENSOR_READY nonlinearity.theta
+GATE_TENSOR_READY nonlinearity.bandwidth
+GATE_TENSOR_READY input_standardizer.mean
+GATE_TENSOR_READY input_standardizer.std
+RUNTIME_READY
+/opt/conda/lib/python3.11/site-packages/pydantic_settings/sources/utils.py:51: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(  # noqa: B028  (called from many sources at differing depths, so no stacklevel is correct)
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"id": "water-ingredient", "active": true, "maximum": 1.3046875, "active_tokens": [{"position": 6, "token": " water", "token_id": 3015, "gate": 1.3046875}]}
+{"id": "water-list", "active": true, "maximum": 1.1796875, "active_tokens": [{"position": 8, "token": " water", "token_id": 3015, "gate": 1.1796875}]}
+{"id": "water-environment", "active": true, "maximum": 0.62109375, "active_tokens": [{"position": 4, "token": " water", "token_id": 3015, "gate": 0.62109375}]}
+{"id": "water-capitalized", "active": true, "maximum": 1.125, "active_tokens": [{"position": 1, "token": " is", "token_id": 374, "gate": 1.125}]}
+{"id": "water-sentence", "active": true, "maximum": 0.8828125, "active_tokens": [{"position": 3, "token": " water", "token_id": 3015, "gate": 0.8828125}]}
+{"id": "water-isolated", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "control-ingredient", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "control-list", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "control-environment", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "control-capitalized", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "control-sentence", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "control-isolated", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "month-10-word", "active": true, "maximum": 0.79296875, "active_tokens": [{"position": 6, "token": " is", "token_id": 374, "gate": 0.79296875}]}
+{"id": "month-10-digit", "active": true, "maximum": 0.88671875, "active_tokens": [{"position": 9, "token": " is", "token_id": 374, "gate": 0.88671875}]}
+{"id": "month-11-word", "active": true, "maximum": 1.140625, "active_tokens": [{"position": 7, "token": " is", "token_id": 374, "gate": 1.140625}]}
+{"id": "month-11-digit", "active": true, "maximum": 1.0234375, "active_tokens": [{"position": 9, "token": " is", "token_id": 374, "gate": 1.0234375}]}
+{"id": "month-12-word", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "month-12-digit", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "alphabet-10-word", "active": true, "maximum": 0.7421875, "active_tokens": [{"position": 7, "token": " is", "token_id": 374, "gate": 0.7421875}]}
+{"id": "alphabet-10-digit", "active": true, "maximum": 0.90625, "active_tokens": [{"position": 10, "token": " is", "token_id": 374, "gate": 0.90625}]}
+{"id": "alphabet-11-word", "active": true, "maximum": 1.8984375, "active_tokens": [{"position": 8, "token": " is", "token_id": 374, "gate": 1.8984375}]}
+{"id": "alphabet-11-digit", "active": true, "maximum": 2.21875, "active_tokens": [{"position": 10, "token": " is", "token_id": 374, "gate": 2.21875}]}
+{"id": "alphabet-12-word", "active": true, "maximum": 0.76953125, "active_tokens": [{"position": 8, "token": " is", "token_id": 374, "gate": 0.76953125}]}
+{"id": "alphabet-12-digit", "active": true, "maximum": 0.67578125, "active_tokens": [{"position": 10, "token": " is", "token_id": 374, "gate": 0.67578125}]}
+{"id": "roman-10-word", "active": true, "maximum": 0.90625, "active_tokens": [{"position": 8, "token": " is", "token_id": 374, "gate": 0.90625}]}
+{"id": "roman-10-digit", "active": true, "maximum": 0.640625, "active_tokens": [{"position": 11, "token": " is", "token_id": 374, "gate": 0.640625}]}
+{"id": "roman-11-word", "active": true, "maximum": 1.7109375, "active_tokens": [{"position": 9, "token": " is", "token_id": 374, "gate": 1.7109375}]}
+{"id": "roman-11-digit", "active": true, "maximum": 1.5546875, "active_tokens": [{"position": 11, "token": " is", "token_id": 374, "gate": 1.5546875}]}
+{"id": "roman-12-word", "active": true, "maximum": 0.91796875, "active_tokens": [{"position": 9, "token": " is", "token_id": 374, "gate": 0.91796875}]}
+{"id": "roman-12-digit", "active": true, "maximum": 0.7265625, "active_tokens": [{"position": 11, "token": " is", "token_id": 374, "gate": 0.7265625}]}
+{"id": "integer-10-word", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "integer-10-digit", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "integer-11-word", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "integer-11-digit", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "integer-12-word", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "integer-12-digit", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "recipe-boundary-10", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "recipe-boundary-11", "active": true, "maximum": 0.88671875, "active_tokens": [{"position": 17, "token": "1", "token_id": 16, "gate": 0.88671875}]}
+{"id": "recipe-boundary-12", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "chat-month-10", "active": true, "maximum": 1.625, "active_tokens": [{"position": 16, "token": "\n", "token_id": 198, "gate": 1.2890625}, {"position": 21, "token": "\n\n", "token_id": 271, "gate": 0.546875}, {"position": 23, "token": "\n\n", "token_id": 271, "gate": 1.625}]}
+{"id": "chat-month-11", "active": true, "maximum": 2.4375, "active_tokens": [{"position": 12, "token": "?", "token_id": 30, "gate": 0.609375}, {"position": 15, "token": ".", "token_id": 13, "gate": 0.62109375}, {"position": 17, "token": "\n", "token_id": 198, "gate": 1.734375}, {"position": 22, "token": "\n\n", "token_id": 271, "gate": 0.90234375}, {"position": 24, "token": "\n\n", "token_id": 271, "gate": 2.4375}]}
+{"id": "chat-month-12", "active": true, "maximum": 1.0078125, "active_tokens": [{"position": 17, "token": "\n", "token_id": 198, "gate": 0.5703125}, {"position": 24, "token": "\n\n", "token_id": 271, "gate": 1.0078125}]}
+{"id": "chat-alphabet-10", "active": true, "maximum": 1.0234375, "active_tokens": [{"position": 17, "token": "\n", "token_id": 198, "gate": 0.87109375}, {"position": 24, "token": "\n\n", "token_id": 271, "gate": 1.0234375}]}
+{"id": "chat-alphabet-11", "active": true, "maximum": 1.8203125, "active_tokens": [{"position": 18, "token": "\n", "token_id": 198, "gate": 1.8203125}, {"position": 25, "token": "\n\n", "token_id": 271, "gate": 1.7265625}]}
+{"id": "chat-alphabet-12", "active": true, "maximum": 0.56640625, "active_tokens": [{"position": 25, "token": "\n\n", "token_id": 271, "gate": 0.56640625}]}
+{"id": "chat-roman-10", "active": true, "maximum": 0.890625, "active_tokens": [{"position": 18, "token": "\n", "token_id": 198, "gate": 0.890625}]}
+{"id": "chat-roman-11", "active": true, "maximum": 1.921875, "active_tokens": [{"position": 19, "token": "\n", "token_id": 198, "gate": 1.921875}, {"position": 26, "token": "\n\n", "token_id": 271, "gate": 0.9296875}]}
+{"id": "chat-roman-12", "active": true, "maximum": 0.74609375, "active_tokens": [{"position": 19, "token": "\n", "token_id": 198, "gate": 0.74609375}]}
+{"id": "chat-extra-1", "active": true, "maximum": 1.3359375, "active_tokens": [{"position": 7, "token": " water", "token_id": 3015, "gate": 1.3359375}]}
+{"id": "chat-extra-2", "active": false, "maximum": -0.0, "active_tokens": []}
+{"id": "chat-extra-3", "active": false, "maximum": -0.0, "active_tokens": []}
+{"status": "complete", "cases": 51, "calls": 7, "precision_mask_disagreements": 0}

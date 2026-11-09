@@ -1,0 +1,745 @@
+{
+  "status": "complete",
+  "feature": "L29-T2375",
+  "method": "active_fuzz",
+  "scope": "Fresh paired judge on the original 100 saved held-out cases",
+  "exact_historical_judge_reproduction": false,
+  "runtime": {
+    "torch": "2.14.0+cu130",
+    "transformers": "5.20.2",
+    "vllm": "0.33.0",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "compute_capability": [
+      8,
+      6
+    ],
+    "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+    "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+    "native_NVFP4_arithmetic": false,
+    "backend": "Marlin NVFP4 weights with BF16 activations on Ampere",
+    "exact_historical_judge_reproduction": false,
+    "max_model_len": 4096,
+    "max_num_seqs": 1,
+    "gpu_memory_utilization": 0.95,
+    "enforce_eager": true,
+    "language_model_only": true,
+    "temperature": 0,
+    "max_tokens": 32,
+    "enable_thinking": false,
+    "flashinfer_sampler": false,
+    "longest_prompt_tokens": 1049,
+    "source_sha256": {
+      "run.py": "02ad00f80e8981d9b607aafee8786707cda5bb1237f9ad8643a30ca085b37466",
+      "download_judge.py": "b8d6c9293b305731b8f92cb378631c49df8472b148b59917ace5aa22bd29f9f1"
+    },
+    "started_utc": "2026-11-09T16:15:26.268808+00:00"
+  },
+  "protocol": {
+    "subject_feature": "L29-T2375",
+    "budget_source": "Existing $10 task cap; same rental 59903353",
+    "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+    "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+    "judge_weight_bytes": 19743758648,
+    "methods": [
+      "active_fuzz"
+    ],
+    "cases": 100,
+    "arms": [
+      "baseline",
+      "candidate"
+    ],
+    "temperature": 0,
+    "max_tokens": 32,
+    "enable_thinking": false,
+    "maximum_runtime_minutes": 90,
+    "exact_historical_judge_reproduction": false,
+    "reason": "Original served judge alias lacks a verified checkpoint identity. Fresh paired comparison on a pinned public Qwen3.8-27B NVFP4 build, using Marlin W4A16 on Ampere.",
+    "vllm_version": "0.33.0",
+    "model_files": [
+      {
+        "file": "chat_template.jinja",
+        "bytes": 8952,
+        "sha256": null
+      },
+      {
+        "file": "config.json",
+        "bytes": 20978,
+        "sha256": null
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 202,
+        "sha256": null
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 3353259,
+        "sha256": null
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 19743758648,
+        "sha256": "1dcee3059a4ee8ba6d872ea38aaa61051c3b34a5863b35c96504b5a64f4c7f24"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "bytes": 390,
+        "sha256": null
+      },
+      {
+        "file": "quantization_manifest.json",
+        "bytes": 884,
+        "sha256": null
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 12809320,
+        "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 17928,
+        "sha256": null
+      },
+      {
+        "file": "video_preprocessor_config.json",
+        "bytes": 385,
+        "sha256": null
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 6722759,
+        "sha256": null
+      }
+    ],
+    "heldout_plan_sha256": "4574f5808fddc715432297bfc8a9f1f64975d41f9414b00af1b280cd156a30ea"
+  },
+  "baseline": {
+    "total": 100,
+    "valid": 100,
+    "parse_failures": 0,
+    "tp": 28,
+    "tn": 50,
+    "fp": 0,
+    "fn": 22,
+    "accuracy": 0.78,
+    "balanced_accuracy": 0.78
+  },
+  "candidate": {
+    "total": 100,
+    "valid": 100,
+    "parse_failures": 0,
+    "tp": 30,
+    "tn": 49,
+    "fp": 1,
+    "fn": 20,
+    "accuracy": 0.79,
+    "balanced_accuracy": 0.79
+  },
+  "corrected": 2,
+  "regressed": 1,
+  "paired_valid": 100,
+  "pairs": [
+    {
+      "row_index": 0,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 1,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 2,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 3,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 4,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 5,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 6,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 7,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 8,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 9,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 10,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 11,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 12,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 13,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 14,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 15,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 16,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 17,
+      "activating": true,
+      "baseline": false,
+      "candidate": true
+    },
+    {
+      "row_index": 18,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 19,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 20,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 21,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 22,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 23,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 24,
+      "activating": true,
+      "baseline": false,
+      "candidate": true
+    },
+    {
+      "row_index": 25,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 26,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 27,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 28,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 29,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 30,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 31,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 32,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 33,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 34,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 35,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 36,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 37,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 38,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 39,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 40,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 41,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 42,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 43,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 44,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 45,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 46,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 47,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 48,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 49,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 50,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 51,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 52,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 53,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 54,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 55,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 56,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 57,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 58,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 59,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 60,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 61,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 62,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 63,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 64,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 65,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 66,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 67,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 68,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 69,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 70,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 71,
+      "activating": false,
+      "baseline": false,
+      "candidate": true
+    },
+    {
+      "row_index": 72,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 73,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 74,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 75,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 76,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 77,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 78,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 79,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 80,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 81,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 82,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 83,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 84,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 85,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 86,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 87,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 88,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 89,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 90,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 91,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 92,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 93,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 94,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 95,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 96,
+      "activating": true,
+      "baseline": true,
+      "candidate": true
+    },
+    {
+      "row_index": 97,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 98,
+      "activating": true,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "row_index": 99,
+      "activating": false,
+      "baseline": false,
+      "candidate": false
+    }
+  ],
+  "elapsed_seconds": 259.50736768497154
+}

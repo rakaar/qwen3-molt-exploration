@@ -1,0 +1,80 @@
+{
+  "subject_feature": "L29-T2375",
+  "budget_source": "Existing $10 task cap; same rental 59903353",
+  "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+  "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+  "judge_weight_bytes": 19743758648,
+  "methods": [
+    "active_fuzz"
+  ],
+  "cases": 100,
+  "arms": [
+    "baseline",
+    "candidate"
+  ],
+  "temperature": 0,
+  "max_tokens": 32,
+  "enable_thinking": false,
+  "maximum_runtime_minutes": 90,
+  "exact_historical_judge_reproduction": false,
+  "reason": "Original served judge alias lacks a verified checkpoint identity. Fresh paired comparison on a pinned public Qwen3.8-27B NVFP4 build, using Marlin W4A16 on Ampere.",
+  "vllm_version": "0.33.0",
+  "model_files": [
+    {
+      "file": "chat_template.jinja",
+      "bytes": 8952,
+      "sha256": null
+    },
+    {
+      "file": "config.json",
+      "bytes": 20978,
+      "sha256": null
+    },
+    {
+      "file": "generation_config.json",
+      "bytes": 202,
+      "sha256": null
+    },
+    {
+      "file": "merges.txt",
+      "bytes": 3353259,
+      "sha256": null
+    },
+    {
+      "file": "model.safetensors",
+      "bytes": 19743758648,
+      "sha256": "1dcee3059a4ee8ba6d872ea38aaa61051c3b34a5863b35c96504b5a64f4c7f24"
+    },
+    {
+      "file": "preprocessor_config.json",
+      "bytes": 390,
+      "sha256": null
+    },
+    {
+      "file": "quantization_manifest.json",
+      "bytes": 884,
+      "sha256": null
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 12809320,
+      "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 17928,
+      "sha256": null
+    },
+    {
+      "file": "video_preprocessor_config.json",
+      "bytes": 385,
+      "sha256": null
+    },
+    {
+      "file": "vocab.json",
+      "bytes": 6722759,
+      "sha256": null
+    }
+  ],
+  "heldout_plan_sha256": "4574f5808fddc715432297bfc8a9f1f64975d41f9414b00af1b280cd156a30ea"
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/t2375-active-fuzz-local-judge-20261109/download_judge.py", line 13, in <module>
+    assert shutil.disk_usage(ROOT).free>p['judge_weight_bytes']+2_000_000_000,'Insufficient free disk; preserve existing files'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Insufficient free disk; preserve existing files

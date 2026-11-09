@@ -1,0 +1,425 @@
+{
+  "feature": 2375,
+  "layer": 29,
+  "date_local": "2026-11-09",
+  "description": "Activates on \"water\"/\"Water\" across lists, ingredients, and environmental descriptions, and on tokens at the boundary before eleven-related continuations. The second pattern includes contexts eliciting 11/eleven, November as the eleventh month, K as the eleventh English letter, or XI as the eleventh positive integer. Activation may occur on a preceding word, separator, or assistant-prefix token rather than the number itself; it is wording-dependent and sometimes appears for neighboring ordinals.",
+  "description_sha256": "dc149e8b122d8c553276c5807972a529ab4e5495d246363cd16463e6cbf6c00f",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "tool": "verify_hypothesis",
+  "cases": [
+    {
+      "id": "water-ingredient",
+      "group": "water",
+      "prompt": "Ingredients: flour, sugar, water",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "water-list",
+      "group": "water",
+      "prompt": "Essential supplies: food, shelter, water",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "water-environment",
+      "group": "water",
+      "prompt": "Clean air and fresh water",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "water-capitalized",
+      "group": "water",
+      "prompt": "Water is essential for life.",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "water-sentence",
+      "group": "water",
+      "prompt": "Please pour the water into the glass.",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "water-isolated",
+      "group": "water",
+      "prompt": "water",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "control-ingredient",
+      "group": "matched_nonwater",
+      "prompt": "Ingredients: flour, sugar, milk",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "control-list",
+      "group": "matched_nonwater",
+      "prompt": "Essential supplies: food, shelter, blankets",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "control-environment",
+      "group": "matched_nonwater",
+      "prompt": "Clean air and fresh food",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "control-capitalized",
+      "group": "matched_nonwater",
+      "prompt": "Food is essential for life.",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "control-sentence",
+      "group": "matched_nonwater",
+      "prompt": "Please pour the milk into the glass.",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "control-isolated",
+      "group": "matched_nonwater",
+      "prompt": "milk",
+      "prompt_format": "raw"
+    },
+    {
+      "id": "month-10-word",
+      "group": "ordinal",
+      "prompt": "the tenth month of the year is",
+      "prompt_format": "raw",
+      "domain": "month",
+      "ordinal": 10,
+      "wording": "word"
+    },
+    {
+      "id": "month-10-digit",
+      "group": "ordinal",
+      "prompt": "the 10th month of the year is",
+      "prompt_format": "raw",
+      "domain": "month",
+      "ordinal": 10,
+      "wording": "digit"
+    },
+    {
+      "id": "month-11-word",
+      "group": "ordinal",
+      "prompt": "the eleventh month of the year is",
+      "prompt_format": "raw",
+      "domain": "month",
+      "ordinal": 11,
+      "wording": "word"
+    },
+    {
+      "id": "month-11-digit",
+      "group": "ordinal",
+      "prompt": "the 11th month of the year is",
+      "prompt_format": "raw",
+      "domain": "month",
+      "ordinal": 11,
+      "wording": "digit"
+    },
+    {
+      "id": "month-12-word",
+      "group": "ordinal",
+      "prompt": "the twelfth month of the year is",
+      "prompt_format": "raw",
+      "domain": "month",
+      "ordinal": 12,
+      "wording": "word"
+    },
+    {
+      "id": "month-12-digit",
+      "group": "ordinal",
+      "prompt": "the 12th month of the year is",
+      "prompt_format": "raw",
+      "domain": "month",
+      "ordinal": 12,
+      "wording": "digit"
+    },
+    {
+      "id": "alphabet-10-word",
+      "group": "ordinal",
+      "prompt": "the tenth letter of the english alphabet is",
+      "prompt_format": "raw",
+      "domain": "alphabet",
+      "ordinal": 10,
+      "wording": "word"
+    },
+    {
+      "id": "alphabet-10-digit",
+      "group": "ordinal",
+      "prompt": "the 10th letter of the english alphabet is",
+      "prompt_format": "raw",
+      "domain": "alphabet",
+      "ordinal": 10,
+      "wording": "digit"
+    },
+    {
+      "id": "alphabet-11-word",
+      "group": "ordinal",
+      "prompt": "the eleventh letter of the english alphabet is",
+      "prompt_format": "raw",
+      "domain": "alphabet",
+      "ordinal": 11,
+      "wording": "word"
+    },
+    {
+      "id": "alphabet-11-digit",
+      "group": "ordinal",
+      "prompt": "the 11th letter of the english alphabet is",
+      "prompt_format": "raw",
+      "domain": "alphabet",
+      "ordinal": 11,
+      "wording": "digit"
+    },
+    {
+      "id": "alphabet-12-word",
+      "group": "ordinal",
+      "prompt": "the twelfth letter of the english alphabet is",
+      "prompt_format": "raw",
+      "domain": "alphabet",
+      "ordinal": 12,
+      "wording": "word"
+    },
+    {
+      "id": "alphabet-12-digit",
+      "group": "ordinal",
+      "prompt": "the 12th letter of the english alphabet is",
+      "prompt_format": "raw",
+      "domain": "alphabet",
+      "ordinal": 12,
+      "wording": "digit"
+    },
+    {
+      "id": "roman-10-word",
+      "group": "ordinal",
+      "prompt": "the tenth positive integer in roman numerals is",
+      "prompt_format": "raw",
+      "domain": "roman",
+      "ordinal": 10,
+      "wording": "word"
+    },
+    {
+      "id": "roman-10-digit",
+      "group": "ordinal",
+      "prompt": "the 10th positive integer in roman numerals is",
+      "prompt_format": "raw",
+      "domain": "roman",
+      "ordinal": 10,
+      "wording": "digit"
+    },
+    {
+      "id": "roman-11-word",
+      "group": "ordinal",
+      "prompt": "the eleventh positive integer in roman numerals is",
+      "prompt_format": "raw",
+      "domain": "roman",
+      "ordinal": 11,
+      "wording": "word"
+    },
+    {
+      "id": "roman-11-digit",
+      "group": "ordinal",
+      "prompt": "the 11th positive integer in roman numerals is",
+      "prompt_format": "raw",
+      "domain": "roman",
+      "ordinal": 11,
+      "wording": "digit"
+    },
+    {
+      "id": "roman-12-word",
+      "group": "ordinal",
+      "prompt": "the twelfth positive integer in roman numerals is",
+      "prompt_format": "raw",
+      "domain": "roman",
+      "ordinal": 12,
+      "wording": "word"
+    },
+    {
+      "id": "roman-12-digit",
+      "group": "ordinal",
+      "prompt": "the 12th positive integer in roman numerals is",
+      "prompt_format": "raw",
+      "domain": "roman",
+      "ordinal": 12,
+      "wording": "digit"
+    },
+    {
+      "id": "integer-10-word",
+      "group": "ordinal",
+      "prompt": "the tenth positive integer is",
+      "prompt_format": "raw",
+      "domain": "integer",
+      "ordinal": 10,
+      "wording": "word"
+    },
+    {
+      "id": "integer-10-digit",
+      "group": "ordinal",
+      "prompt": "the 10th positive integer is",
+      "prompt_format": "raw",
+      "domain": "integer",
+      "ordinal": 10,
+      "wording": "digit"
+    },
+    {
+      "id": "integer-11-word",
+      "group": "ordinal",
+      "prompt": "the eleventh positive integer is",
+      "prompt_format": "raw",
+      "domain": "integer",
+      "ordinal": 11,
+      "wording": "word"
+    },
+    {
+      "id": "integer-11-digit",
+      "group": "ordinal",
+      "prompt": "the 11th positive integer is",
+      "prompt_format": "raw",
+      "domain": "integer",
+      "ordinal": 11,
+      "wording": "digit"
+    },
+    {
+      "id": "integer-12-word",
+      "group": "ordinal",
+      "prompt": "the twelfth positive integer is",
+      "prompt_format": "raw",
+      "domain": "integer",
+      "ordinal": 12,
+      "wording": "word"
+    },
+    {
+      "id": "integer-12-digit",
+      "group": "ordinal",
+      "prompt": "the 12th positive integer is",
+      "prompt_format": "raw",
+      "domain": "integer",
+      "ordinal": 12,
+      "wording": "digit"
+    },
+    {
+      "id": "recipe-boundary-10",
+      "group": "list_boundary",
+      "prompt": "9. Pour the remaining sauce over the pasta, then spread it out evenly.\n\n10. Sprinkle extra Parmesan cheese over the top.",
+      "prompt_format": "raw",
+      "ordinal": 10
+    },
+    {
+      "id": "recipe-boundary-11",
+      "group": "list_boundary",
+      "prompt": "10. Pour the remaining sauce over the pasta, then spread it out evenly.\n\n11. Sprinkle extra Parmesan cheese over the top.",
+      "prompt_format": "raw",
+      "ordinal": 11
+    },
+    {
+      "id": "recipe-boundary-12",
+      "group": "list_boundary",
+      "prompt": "11. Pour the remaining sauce over the pasta, then spread it out evenly.\n\n12. Sprinkle extra Parmesan cheese over the top.",
+      "prompt_format": "raw",
+      "ordinal": 12
+    },
+    {
+      "id": "chat-month-10",
+      "group": "chat_ordinal",
+      "prompt": "What is the tenth month of the year? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "month",
+      "ordinal": 10
+    },
+    {
+      "id": "chat-month-11",
+      "group": "chat_ordinal",
+      "prompt": "What is the eleventh month of the year? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "month",
+      "ordinal": 11
+    },
+    {
+      "id": "chat-month-12",
+      "group": "chat_ordinal",
+      "prompt": "What is the twelfth month of the year? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "month",
+      "ordinal": 12
+    },
+    {
+      "id": "chat-alphabet-10",
+      "group": "chat_ordinal",
+      "prompt": "What is the tenth letter of the English alphabet? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "alphabet",
+      "ordinal": 10
+    },
+    {
+      "id": "chat-alphabet-11",
+      "group": "chat_ordinal",
+      "prompt": "What is the eleventh letter of the English alphabet? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "alphabet",
+      "ordinal": 11
+    },
+    {
+      "id": "chat-alphabet-12",
+      "group": "chat_ordinal",
+      "prompt": "What is the twelfth letter of the English alphabet? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "alphabet",
+      "ordinal": 12
+    },
+    {
+      "id": "chat-roman-10",
+      "group": "chat_ordinal",
+      "prompt": "What is the tenth positive integer in Roman numerals? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "roman",
+      "ordinal": 10
+    },
+    {
+      "id": "chat-roman-11",
+      "group": "chat_ordinal",
+      "prompt": "What is the eleventh positive integer in Roman numerals? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "roman",
+      "ordinal": 11
+    },
+    {
+      "id": "chat-roman-12",
+      "group": "chat_ordinal",
+      "prompt": "What is the twelfth positive integer in Roman numerals? Answer briefly.",
+      "prompt_format": "chat",
+      "domain": "roman",
+      "ordinal": 12
+    },
+    {
+      "id": "chat-extra-1",
+      "group": "chat_extra",
+      "prompt": "List three uses of water.",
+      "prompt_format": "chat"
+    },
+    {
+      "id": "chat-extra-2",
+      "group": "chat_extra",
+      "prompt": "List three uses of milk.",
+      "prompt_format": "chat"
+    },
+    {
+      "id": "chat-extra-3",
+      "group": "chat_extra",
+      "prompt": "What is the eleventh positive integer?",
+      "prompt_format": "chat"
+    }
+  ],
+  "maximum_runtime_minutes": 20,
+  "intervention": null,
+  "heldout_benchmark": false,
+  "scope": "Self-authored input-token probes derived from the frozen description; no judge and no generation.",
+  "design_notes": [
+    "The tool accepts texts, not an explanation. The description is frozen metadata used to design probes.",
+    "Preserve zero gates, exact token IDs, added/control tokens, and every input position.",
+    "Use the unmodified upstream MCP verify_hypothesis registration and backing method.",
+    "A self-authored-only session bypasses corpus initialization without fabricating corpus examples.",
+    "The original SteeringEngine and MoltGates run native Qwen3; derived gate-only checkpoint contains exact encoder tensors.",
+    "Compute the original dashboard BF16-autocast gate; FP32 gate values are an additional precision diagnostic.",
+    "Neighboring ordinals are probes of specificity, not pre-labelled negatives; the revised description already allows wording dependence.",
+    "No score of description quality is inferred from these hand-authored probes."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "feature": "L34-T1440",
+  "frozen_at_utc": "2026-11-09T21:13:31.584114+00:00",
+  "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+  "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+  "existing_judge_root": "/workspace/t2375-active-fuzz-local-judge-20261109",
+  "methods": [
+    "detection",
+    "fuzz",
+    "active_fuzz"
+  ],
+  "cases_per_method": {
+    "detection": 56,
+    "fuzz": 56,
+    "active_fuzz": 112
+  },
+  "positive_cases_per_context_per_method": 28,
+  "contexts": [
+    "prefix_only",
+    "plus_16_source_tokens"
+  ],
+  "requests": 448,
+  "unique_request_bodies": 336,
+  "maximum_runtime_minutes": 12,
+  "temperature": 0,
+  "max_tokens": 32,
+  "enable_thinking": false,
+  "prompt_reconstruction": "Original labeled feature rows with the verified shared Delphi system/few-shot prefixes from the previous experiment; last user message reconstructed with the same scoring template. Not claimed as a byte-verified historical request export.",
+  "descriptors_frozen_before_evaluation_inspection": true,
+  "labels_unchanged": true,
+  "highlights_unchanged": true,
+  "feature_source_sha256": "a43df5ec06f0cba9d37e54ba9e1458e7698782c2db0e906c8b2993a9a238a66f",
+  "explanation_freeze_sha256": "922f65e0fe2a90cafc09c76952b6d46bff72215276c0a1dc0e7ad63e64ca127e",
+  "heldout_plan_sha256": "37a43a8ee7e41d4b690817c7190dadd1be1cae9e7d5e49c2790bb6a71e979264",
+  "expected_active_fuzz_runtime_sha256": "bc687574ee5698e54b580d9fb97ed497f0bc96e12c016a9a1e06048ad5619aa1",
+  "expected_judge_verification_sha256": "7514f9eb88ad0aa6f680fcf355808b3262cc4f916350a945bd4b2eae7c07a23e",
+  "baseline_sha256": "9266444cfbac41f077accc1b2c0fef9de18384e9d11e9682c80d93b259c0f14c",
+  "candidate_sha256": "47917cef7f9d616b8100efc2bd4826916e9bceb7db56608b04efddf397683162"
+}

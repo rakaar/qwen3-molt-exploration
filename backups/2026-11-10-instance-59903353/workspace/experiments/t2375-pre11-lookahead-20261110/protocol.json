@@ -1,0 +1,47 @@
+{
+  "frozen_at_utc": "2026-11-09T20:23:14.849347+00:00",
+  "subject_feature": "L29-T2375",
+  "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+  "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+  "existing_judge_root": "/workspace/t2375-active-fuzz-local-judge-20261109",
+  "budget_source": "Reuse authorized SPAR instance 59903353 within existing $10 total cap",
+  "methods": [
+    "detection",
+    "fuzz",
+    "active_fuzz"
+  ],
+  "cases_per_method": {
+    "detection": 12,
+    "fuzz": 12,
+    "active_fuzz": 24
+  },
+  "positive_cases_per_method": 12,
+  "active_fuzz_negative_controls": 12,
+  "arms": [
+    "baseline",
+    "candidate"
+  ],
+  "requests": 96,
+  "unique_request_bodies": 72,
+  "lookahead_subject_tokens": 16,
+  "maximum_runtime_minutes": 25,
+  "temperature": 0,
+  "max_tokens": 32,
+  "enable_thinking": false,
+  "descriptions_unchanged": true,
+  "highlights_unchanged": true,
+  "prefix_labels_unchanged": true,
+  "only_prompt_change": "Append 16 original subject-model source tokens before the final classification instruction; keep fixed few-shots, explanation text, labels and original highlights.",
+  "interpretation": "Post-hoc lookahead diagnostic on previously inspected cases; not a new blind held-out score and not a causal predictor benchmark. Positive Fuzz and Active Fuzz requests are identical. Added tokens are context, not additional highlighted targets.",
+  "source_sha256": {
+    "results/2026-11-10-t2375-pre11-coverage/counts.json": "e98a1207aa5438d27d523999271b29b95e9af899226c50296316a1bad7b29c13",
+    "results/2026-11-10-t2375-pre11-coverage/recovered-windows.json": "8c33080a73f96ce370c333779b4de4e74c239ecf8070dc6cf098637ba0037a41",
+    "comparisons/2026-11-09-t2375-explanation/original-campaign/features/2375.json": "5718e8ab1b6122bc8faaf71b0908470c0b27f528095aba183c0c441295b464fe",
+    "results/2026-11-09-t2375-explanation-refinement/heldout-plan.json": "4574f5808fddc715432297bfc8a9f1f64975d41f9414b00af1b280cd156a30ea"
+  },
+  "heldout_plan_sha256": "c2e0aae672afab4b86b495de66c43fb3964a34329d09c21f955f1e0d791100c7",
+  "expected_active_fuzz_runtime_sha256": "bc687574ee5698e54b580d9fb97ed497f0bc96e12c016a9a1e06048ad5619aa1",
+  "expected_judge_verification_sha256": "7514f9eb88ad0aa6f680fcf355808b3262cc4f916350a945bd4b2eae7c07a23e",
+  "baseline_sha256": "1387891255aa34aa61b15db5b94993b2b518cf2030792fcbdc36c618c9cb4be9",
+  "candidate_sha256": "dc149e8b122d8c553276c5807972a529ab4e5495d246363cd16463e6cbf6c00f"
+}

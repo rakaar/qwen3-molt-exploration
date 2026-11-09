@@ -1,0 +1,127 @@
+[
+  {
+    "name": "get_latent_info",
+    "title": null,
+    "description": "Describe a feature using only its selected training-window gate statistics.",
+    "inputSchema": {
+      "properties": {
+        "feature": {
+          "title": "Feature",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "feature"
+      ],
+      "title": "get_latent_infoArguments",
+      "type": "object"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "_meta": null,
+    "execution": null
+  },
+  {
+    "name": "top_activated_examples",
+    "title": null,
+    "description": "Read strongest selected training windows, with raw per-token gates. Page using offset.",
+    "inputSchema": {
+      "properties": {
+        "feature": {
+          "title": "Feature",
+          "type": "integer"
+        },
+        "count": {
+          "default": 5,
+          "title": "Count",
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "title": "Offset",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "feature"
+      ],
+      "title": "top_activated_examplesArguments",
+      "type": "object"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "_meta": null,
+    "execution": null
+  },
+  {
+    "name": "quantile_samples",
+    "title": null,
+    "description": "Read windows near a quantile of selected training-window maxima (not corpus percentiles).",
+    "inputSchema": {
+      "properties": {
+        "feature": {
+          "title": "Feature",
+          "type": "integer"
+        },
+        "quantile": {
+          "default": 0.5,
+          "title": "Quantile",
+          "type": "number"
+        },
+        "count": {
+          "default": 3,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "feature"
+      ],
+      "title": "quantile_samplesArguments",
+      "type": "object"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "_meta": null,
+    "execution": null
+  },
+  {
+    "name": "verify_hypothesis",
+    "title": null,
+    "description": "Test 1–8 invented texts with actual Qwen3+MOLT; max 2048 tokens each. Known display forms such as ⟪think⟫ and ⟪im_start⟫ are restored to subject-model control tokens for intentional probes. Results escape every Qwen added token; numeric token IDs are preserved.",
+    "inputSchema": {
+      "properties": {
+        "feature": {
+          "title": "Feature",
+          "type": "integer"
+        },
+        "texts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Texts",
+          "type": "array"
+        },
+        "prompt_format": {
+          "default": "raw",
+          "title": "Prompt Format",
+          "type": "string"
+        }
+      },
+      "required": [
+        "feature",
+        "texts"
+      ],
+      "title": "verify_hypothesisArguments",
+      "type": "object"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "_meta": null,
+    "execution": null
+  }
+]

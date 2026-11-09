@@ -1,0 +1,2187 @@
+{
+  "status": "complete",
+  "feature": "L34-T1440",
+  "scope": "The 28 predeclared hidden before-L positive contexts, both frozen descriptions, prefix-only versus plus-16 context; Active Fuzz also includes the 28 matching original inactive-highlight controls",
+  "exact_historical_judge_reproduction": false,
+  "runtime": {
+    "torch": "2.14.0+cu130",
+    "transformers": "5.20.2",
+    "vllm": "0.33.0",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "compute_capability": [
+      8,
+      6
+    ],
+    "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+    "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+    "native_NVFP4_arithmetic": false,
+    "backend": "Marlin NVFP4 weights with BF16 activations on Ampere",
+    "exact_historical_judge_reproduction": false,
+    "max_model_len": 4096,
+    "max_num_seqs": 1,
+    "gpu_memory_utilization": 0.95,
+    "enforce_eager": true,
+    "language_model_only": true,
+    "temperature": 0,
+    "max_tokens": 32,
+    "enable_thinking": false,
+    "flashinfer_sampler": false,
+    "longest_prompt_tokens": 1056,
+    "source_sha256": {
+      "run.py": "10dcbb8be646db1eebe2cd94784e09262dc99ec5e49d2894cf3eb6111006cbbb"
+    },
+    "started_utc": "2026-11-09T21:31:52.640640+00:00"
+  },
+  "protocol": {
+    "feature": "L34-T1440",
+    "frozen_at_utc": "2026-11-09T21:13:31.584114+00:00",
+    "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+    "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+    "existing_judge_root": "/workspace/t2375-active-fuzz-local-judge-20261109",
+    "methods": [
+      "detection",
+      "fuzz",
+      "active_fuzz"
+    ],
+    "cases_per_method": {
+      "detection": 56,
+      "fuzz": 56,
+      "active_fuzz": 112
+    },
+    "positive_cases_per_context_per_method": 28,
+    "contexts": [
+      "prefix_only",
+      "plus_16_source_tokens"
+    ],
+    "requests": 448,
+    "unique_request_bodies": 336,
+    "maximum_runtime_minutes": 12,
+    "temperature": 0,
+    "max_tokens": 32,
+    "enable_thinking": false,
+    "prompt_reconstruction": "Original labeled feature rows with the verified shared Delphi system/few-shot prefixes from the previous experiment; last user message reconstructed with the same scoring template. Not claimed as a byte-verified historical request export.",
+    "descriptors_frozen_before_evaluation_inspection": true,
+    "labels_unchanged": true,
+    "highlights_unchanged": true,
+    "feature_source_sha256": "a43df5ec06f0cba9d37e54ba9e1458e7698782c2db0e906c8b2993a9a238a66f",
+    "explanation_freeze_sha256": "922f65e0fe2a90cafc09c76952b6d46bff72215276c0a1dc0e7ad63e64ca127e",
+    "heldout_plan_sha256": "37a43a8ee7e41d4b690817c7190dadd1be1cae9e7d5e49c2790bb6a71e979264",
+    "expected_active_fuzz_runtime_sha256": "bc687574ee5698e54b580d9fb97ed497f0bc96e12c016a9a1e06048ad5619aa1",
+    "expected_judge_verification_sha256": "7514f9eb88ad0aa6f680fcf355808b3262cc4f916350a945bd4b2eae7c07a23e",
+    "baseline_sha256": "9266444cfbac41f077accc1b2c0fef9de18384e9d11e9682c80d93b259c0f14c",
+    "candidate_sha256": "47917cef7f9d616b8100efc2bd4826916e9bceb7db56608b04efddf397683162"
+  },
+  "methods": {
+    "detection": {
+      "baseline": {
+        "total": 56,
+        "valid": 56,
+        "parse_failures": 0,
+        "tp": 6,
+        "tn": 0,
+        "fp": 0,
+        "fn": 50,
+        "accuracy": 0.10714285714285714,
+        "balanced_accuracy": null
+      },
+      "candidate": {
+        "total": 56,
+        "valid": 56,
+        "parse_failures": 0,
+        "tp": 9,
+        "tn": 0,
+        "fp": 0,
+        "fn": 47,
+        "accuracy": 0.16071428571428573,
+        "balanced_accuracy": null
+      },
+      "corrected": 7,
+      "regressed": 4,
+      "paired_valid": 56,
+      "pairs": [
+        {
+          "row_index": 4,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 4,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 104,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 4,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 7,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 7,
+          "baseline": true,
+          "candidate": true
+        },
+        {
+          "row_index": 107,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 7,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 12,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 12,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 112,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 12,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 17,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 17,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 117,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 17,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 23,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 23,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 123,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 23,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 24,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 24,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 124,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 24,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 26,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 26,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 126,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 26,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 33,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 33,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 133,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 33,
+          "baseline": true,
+          "candidate": true
+        },
+        {
+          "row_index": 36,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 36,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 136,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 36,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 45,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 45,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 145,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 45,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 46,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 46,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 146,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 46,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 50,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 50,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 150,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 50,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 59,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 59,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 159,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 59,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 64,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 64,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 164,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 64,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 66,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 66,
+          "baseline": true,
+          "candidate": false
+        },
+        {
+          "row_index": 166,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 66,
+          "baseline": true,
+          "candidate": false
+        },
+        {
+          "row_index": 68,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 68,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 168,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 68,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 71,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 71,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 171,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 71,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 72,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 72,
+          "baseline": true,
+          "candidate": false
+        },
+        {
+          "row_index": 172,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 72,
+          "baseline": true,
+          "candidate": false
+        },
+        {
+          "row_index": 73,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 73,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 173,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 73,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 77,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 77,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 177,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 77,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 78,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 78,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 178,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 78,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 80,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 80,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 180,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 80,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 84,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 84,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 184,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 84,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 86,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 86,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 186,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 86,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 87,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 87,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 187,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 87,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 90,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 90,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 190,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 90,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 96,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 96,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 196,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 96,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 99,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 99,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 199,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 99,
+          "baseline": false,
+          "candidate": false
+        }
+      ]
+    },
+    "fuzz": {
+      "baseline": {
+        "total": 56,
+        "valid": 56,
+        "parse_failures": 0,
+        "tp": 1,
+        "tn": 0,
+        "fp": 0,
+        "fn": 55,
+        "accuracy": 0.017857142857142856,
+        "balanced_accuracy": null
+      },
+      "candidate": {
+        "total": 56,
+        "valid": 56,
+        "parse_failures": 0,
+        "tp": 3,
+        "tn": 0,
+        "fp": 0,
+        "fn": 53,
+        "accuracy": 0.05357142857142857,
+        "balanced_accuracy": null
+      },
+      "corrected": 2,
+      "regressed": 0,
+      "paired_valid": 56,
+      "pairs": [
+        {
+          "row_index": 0,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 0,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 100,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 0,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 5,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 5,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 105,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 5,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 11,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 11,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 111,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 11,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 14,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 14,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 114,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 14,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 17,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 17,
+          "baseline": true,
+          "candidate": true
+        },
+        {
+          "row_index": 117,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 17,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 20,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 20,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 120,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 20,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 22,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 22,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 122,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 22,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 23,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 23,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 123,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 23,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 24,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 24,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 124,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 24,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 27,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 27,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 127,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 27,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 30,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 30,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 130,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 30,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 36,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 36,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 136,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 36,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 43,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 43,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 143,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 43,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 45,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 45,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 145,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 45,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 47,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 47,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 147,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 47,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 56,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 56,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 156,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 56,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 57,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 57,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 157,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 57,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 58,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 58,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 158,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 58,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 59,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 59,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 159,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 59,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 60,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 60,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 160,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 60,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 68,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 68,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 168,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 68,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 78,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 78,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 178,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 78,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 80,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 80,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 180,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 80,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 83,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 83,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 183,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 83,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 90,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 90,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 190,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 90,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 93,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 93,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 193,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 93,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 96,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 96,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 196,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 96,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 98,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 98,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 198,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 98,
+          "baseline": false,
+          "candidate": false
+        }
+      ]
+    },
+    "active_fuzz": {
+      "baseline": {
+        "total": 112,
+        "valid": 112,
+        "parse_failures": 0,
+        "tp": 1,
+        "tn": 56,
+        "fp": 0,
+        "fn": 55,
+        "accuracy": 0.5089285714285714,
+        "balanced_accuracy": 0.5089285714285714
+      },
+      "candidate": {
+        "total": 112,
+        "valid": 112,
+        "parse_failures": 0,
+        "tp": 3,
+        "tn": 56,
+        "fp": 0,
+        "fn": 53,
+        "accuracy": 0.5267857142857143,
+        "balanced_accuracy": 0.5267857142857143
+      },
+      "corrected": 2,
+      "regressed": 0,
+      "paired_valid": 112,
+      "pairs": [
+        {
+          "row_index": 0,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 0,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 100,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 0,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 1,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 1,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 101,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 1,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 2,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 2,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 102,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 2,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 3,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 3,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 103,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 3,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 4,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 4,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 104,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 4,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 5,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 5,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 105,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 5,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 8,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 8,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 108,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 8,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 10,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 10,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 110,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 10,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 11,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 11,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 111,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 11,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 14,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 14,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 114,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 14,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 17,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 17,
+          "baseline": true,
+          "candidate": true
+        },
+        {
+          "row_index": 117,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 17,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 20,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 20,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 120,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 20,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 22,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 22,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 122,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 22,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 23,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 23,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 123,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 23,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 24,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 24,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 124,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 24,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 27,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 27,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 127,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 27,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 28,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 28,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 128,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 28,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 29,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 29,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 129,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 29,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 30,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 30,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 130,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 30,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 32,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 32,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 132,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 32,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 33,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 33,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 133,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 33,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 36,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 36,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 136,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 36,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 38,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 38,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 138,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 38,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 41,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 41,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 141,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 41,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 43,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 43,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 143,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 43,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 45,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 45,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 145,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 45,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 46,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 46,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 146,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 46,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 47,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 47,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 147,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 47,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 50,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 50,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 150,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 50,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 53,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 53,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 153,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 53,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 56,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 56,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 156,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 56,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 57,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 57,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 157,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 57,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 58,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 58,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 158,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 58,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 59,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 59,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 159,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 59,
+          "baseline": false,
+          "candidate": true
+        },
+        {
+          "row_index": 60,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 60,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 160,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 60,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 63,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 63,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 163,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 63,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 67,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 67,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 167,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 67,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 68,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 68,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 168,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 68,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 71,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 71,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 171,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 71,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 73,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 73,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 173,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 73,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 75,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 75,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 175,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 75,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 76,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 76,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 176,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 76,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 78,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 78,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 178,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 78,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 80,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 80,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 180,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 80,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 81,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 81,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 181,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 81,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 82,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 82,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 182,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 82,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 83,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 83,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 183,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 83,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 84,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 84,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 184,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 84,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 88,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 88,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 188,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 88,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 89,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 89,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 189,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 89,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 90,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 90,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 190,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 90,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 93,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 93,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 193,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 93,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 94,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 94,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 194,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 94,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 96,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 96,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 196,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 96,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 98,
+          "activating": true,
+          "role": "positive",
+          "context": "prefix_only",
+          "original_row_index": 98,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 198,
+          "activating": true,
+          "role": "positive",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 98,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 99,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "prefix_only",
+          "original_row_index": 99,
+          "baseline": false,
+          "candidate": false
+        },
+        {
+          "row_index": 199,
+          "activating": false,
+          "role": "inactive_highlight_control",
+          "context": "plus_16_source_tokens",
+          "original_row_index": 99,
+          "baseline": false,
+          "candidate": false
+        }
+      ]
+    }
+  },
+  "requests": 448,
+  "elapsed_seconds": 141.297368215,
+  "description_unchanged": true,
+  "highlights_unchanged": true,
+  "lookahead_subject_tokens": 16,
+  "same_positive_fuzz_active_fuzz_predictions": true,
+  "manual_test_example_inspection_before_scoring": true,
+  "posthoc": true
+}

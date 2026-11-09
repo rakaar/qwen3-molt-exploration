@@ -1,0 +1,49 @@
+{
+  "checked_at_utc": "2026-11-08",
+  "framework": "EleutherAI/delphi",
+  "delphi_revision": "4fea06e6e8b68eeaf302474325fca13df95c5d6f",
+  "dashboard_repository": "Goreg12345/crosslayer-transcoder",
+  "dashboard_branch": "MOLT",
+  "configured_model": "qwen3.8-27b-nvfp4",
+  "components": {
+    "explanation": "DefaultExplainer",
+    "detection": "DetectionScorer",
+    "fuzz": "AuditedFuzzingScorer default",
+    "active_fuzz": "AuditedFuzzingScorer active",
+    "intruder": "IntruderScorer"
+  },
+  "runtime_location": "Output directory/scorer-runtime.json; base_url/model/context_limit",
+  "direct_judge_access": "Not established; historical geor hostname DNS failure and dashboard-host external port8000 timed out",
+  "sources": [
+    {
+      "role": "setup",
+      "url": "https://github.com/Goreg12345/crosslayer-transcoder/blob/MOLT/tools/setup_molt_autointerp.sh",
+      "git_blob_sha": "b3a6a02488eb7df6c6fcb7f9f7029b74a655f69e"
+    },
+    {
+      "role": "scoring",
+      "url": "https://github.com/Goreg12345/crosslayer-transcoder/blob/MOLT/tools/run_molt_layer_explanations.py",
+      "git_blob_sha": "e0cadde6dc5d7134bd0d4fd483849986a3f00226"
+    },
+    {
+      "role": "delphi",
+      "url": "https://github.com/EleutherAI/delphi/blob/4fea06e6e8b68eeaf302474325fca13df95c5d6f/README.md",
+      "git_blob_sha": "80a5d9c7f777e970f00460e2dfc45dc2985a3c01"
+    },
+    {
+      "role": "agent",
+      "url": "https://github.com/Goreg12345/crosslayer-transcoder/blob/MOLT/tools/run_molt_agentic_full.py",
+      "git_blob_sha": "4c779b220787d52a8ebd9a360d593a9f6bc2da90"
+    },
+    {
+      "role": "runtime",
+      "url": "https://github.com/Goreg12345/crosslayer-transcoder/blob/MOLT/tools/molt_scorer_runtime.py",
+      "git_blob_sha": "22bceecfb3e1731bd6a978ba70a9b8433ca8a26e"
+    },
+    {
+      "role": "docs",
+      "url": "https://github.com/Goreg12345/crosslayer-transcoder/blob/MOLT/tools/MOLT_AUTOINTERP.md",
+      "git_blob_sha": "6f8e2919f50837a405b2d671ef44a3b275a24afc"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "frozen_at_utc": "2026-11-09T20:57:56.137796+00:00",
+  "feature": "L34-T965",
+  "layer": 34,
+  "feature_id": 965,
+  "selection": "Exploratory candidate from the user-linked report; selected for a clear before-K pattern and a description omitting K. Historical aggregate scores were visible, but evaluation passages have not been inspected for this candidate.",
+  "explanation_evidence": "Original dashboard strongest training-partition examples: conversations 3332, 8714, 11097, 10751, 10038, 292, 1791, 3132. Conversation 4507 is an explicit non-K counterexample.",
+  "baseline_sha256": "e6b4762cf1cb1eac44bce1d1df00ca5458416f4ea638d529b9e31cd92b643fe2",
+  "candidate_sha256": "97b2cd7a08721460457642dd7900c3e764ea667decd969b13ac5ef1d05dd6f52",
+  "descriptions_frozen": true,
+  "context_arms": [
+    "prefix_only",
+    "plus_16_source_tokens"
+  ],
+  "intended_methods": [
+    "detection",
+    "fuzz",
+    "active_fuzz"
+  ],
+  "judge_repo": "vrfai/Qwen3.8-27B-NVFP4",
+  "judge_revision": "1561c70b22784dba7c6943b3271fc5f185adda01",
+  "study_type": "Exploratory matched diagnostic, not a preregistered or wholly unseen feature evaluation. Do not change wording after scoring feedback.",
+  "spending": "Reuse existing authorized instance 59903353 within $10 cap; preserve its authorized 03:00 IST Nov10 stop. No new rental authorized by this script."
+}
