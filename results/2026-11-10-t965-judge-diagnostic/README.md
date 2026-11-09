@@ -1,7 +1,9 @@
-# Before K, but scored zero
+# Extended input: old versus new descriptions
 
-Interactive report of the three L34–T965 positive Fuzz failures and the fixed 22-query follow-up. Open index.html through an HTTP server; study-data.json contains every diagnostic prompt and answer.
+The default index.html shows the three extended Fuzz excerpts with every original highlight retained and side-by-side old/new judge answers. Unrelated introductory text is elided; every highlighted span and the 16 added source tokens remain visible. Full scoring conversations open in a dialog.
 
-Tests A–C use original source contexts and the unchanged explanation. D–E use an explicit literal-character task. F–G use constructed short contexts without measured native activations. The page preserves that distinction.
+Both old and new descriptions were actually tested on the extended input: all three selected failure windows return 0 under both. Across the full seven-window before-K positive subset, extended Fuzz results are old 0/7 and new 4/7.
 
-Source data: ../2026-11-10-t965-failed-cases/. Original frozen description: ../2026-11-10-before-k-description/.
+The previous detailed 22-query explorer is preserved at diagnostics.html, using diagnostics.js and diagnostics.css. Constructed short controls have no measured native gate labels.
+
+Data: study-data.json, audit.jsonl, diagnostic-analysis.json and saved-case-audit.json. Source scripts are under source/.
