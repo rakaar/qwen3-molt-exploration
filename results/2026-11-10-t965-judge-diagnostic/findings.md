@@ -59,4 +59,4 @@ Revealing the continuation fixes a real information deficit, but does not guaran
 
 This is a post-hoc diagnostic on already inspected failures. It is not a new held-out benchmark result, no description was refined, and the native subject model was not run on the constructed short examples. Their labels concern the literal pattern, not newly measured gate activity.
 
-[All three original excerpts and gate values](README.md) · [Complete 22-query result table](diagnostic-results.md) · [Machine-readable verified results](diagnostic-analysis.json)
+[All three original excerpts and gate values](index.html#explorer) · [Complete 22-query result table](diagnostic-results.md) · [Machine-readable verified results](diagnostic-analysis.json)
