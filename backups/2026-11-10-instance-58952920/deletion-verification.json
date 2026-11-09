@@ -1,0 +1,36 @@
+{
+  "verified_at_utc": "2026-11-09T20:03:59.324009+00:00",
+  "account_id": 710735,
+  "deleted_instance_id": 58952920,
+  "deleted_instance_absent": true,
+  "old_instance_compute_and_disk_usd_hour": 0,
+  "remaining_instances": [
+    {
+      "id": 59903353,
+      "label": "spar-psy-neuro-t2375-verify-20261109",
+      "actual_status": "running",
+      "cur_state": "running",
+      "intended_status": "running",
+      "storage_total_cost": 0.01111111111111111,
+      "live_costs": {
+        "gpuCostPerHour": 0.18666666666666668,
+        "diskHour": 0.01111111111111111,
+        "totalHour": 0.19777777777777777
+      }
+    }
+  ],
+  "dashboard_volume": {
+    "id": 58518928,
+    "label": "spar_molt_all_layers_20261031",
+    "status": "created",
+    "storage_total_cost": 0.09259259259259257
+  },
+  "github_backup": {
+    "commit": "3cb9cd014d0d14fcae9471ec16a6fbd37a50fe55",
+    "remote_main_verified": true,
+    "archive_sha256_verified": true,
+    "archives": 8,
+    "url": "https://github.com/rakaar/qwen3-molt-exploration/commit/3cb9cd014d0d14fcae9471ec16a6fbd37a50fe55"
+  },
+  "verification_basis": "Old instance absent from live Vast inventory after the authorized destroy command. New instance and dashboard volume remain present."
+}
