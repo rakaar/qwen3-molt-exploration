@@ -7,3 +7,7 @@ All 117 files in the seven remote-download verification receipts were hash-verif
 Re-downloadable third-party judge weights and Python environments are not copied to GitHub. The pinned model identity, revision, weight hashes and environment records are included. The pinned UltraChat source parquet is also re-downloadable; its hash is recorded in the exclusions list. Duplicate tar archives are omitted while their extracted payloads are included. No unique research outputs are excluded.
 
 The dashboard volume 58518928 is outside this cleanup and is preserved. Provider credentials and SSH private keys are not included.
+
+## Cleanup verified
+
+Instance 59903353 and its 40 GB container disk were destroyed after verifying the GitHub backup at commit 64f82e7d9f20310c5fc93f9a7210b480e98265bc. Fresh provider inventories show no remaining instances and only the preserved dashboard volume 58518928. Experiment compute and storage are both $0/hour; dashboard storage continues separately. See cleanup-verification.json and github-backup-verification.json.
