@@ -1,0 +1,113 @@
+{
+  "feature": "L34-T965",
+  "audited_utc": "2026-11-09T22:19:55.169349+00:00",
+  "cases": [
+    {
+      "original_fuzz_row": 13,
+      "exact_excerpt": " a more specific response.⟪im_end⟫\n⟪im_start⟫user\nCan you provide me with more detailed information on how to perform Java coding?⟪im_end⟫\n⟪im_start⟫assistant\nSure! Here are the basic steps for performing Java coding:\n\n1. Install Java<< Development>> Kit (JDK): To perform Java coding, you need to have the Java<< Development>> Kit (JDK) installed on your computer. You can download JDK from the",
+      "exact_final_user_message": "Latent explanation: Often activates on the token immediately before text beginning with K or k, including within words, names, code and quantities. Examples include DIS before K in DISK, 4 before K in 4K, and honky-ton before the final k. Activation belongs to the preceding word fragment, digit, space or punctuation, rather than necessarily to K itself. Some activations have non-K continuations, so this is a frequent pattern, not an exclusive rule.\n\nText examples:\n\nExample 0:  a more specific response.⟪im_end⟫\n⟪im_start⟫user\nCan you provide me with more detailed information on how to perform Java coding?⟪im_end⟫\n⟪im_start⟫assistant\nSure! Here are the basic steps for performing Java coding:\n\n1. Install Java<< Development>> Kit (JDK): To perform Java coding, you need to have the Java<< Development>> Kit (JDK) installed on your computer. You can download JDK from the\n\nClassify only the single Example 0 above. Return exactly [1] or [0], with no additional text.",
+      "highlighted_tokens": [
+        {
+          "highlight": " Development",
+          "following": "Kit (JDK): To perform Java coding, you need to have the Java",
+          "next_character": "K",
+          "matches_before_K": true,
+          "subject_token_position": 46,
+          "measured_gate": 1.625
+        },
+        {
+          "highlight": " Development",
+          "following": "Kit (JDK) installed on your computer. You can download JDK f",
+          "next_character": "K",
+          "matches_before_K": true,
+          "subject_token_position": 63,
+          "measured_gate": 2.046875
+        }
+      ],
+      "all_highlights_fit_before_K": true,
+      "subject_positive_label": true,
+      "recorded_response": "[0]",
+      "request_sha256": "fb81c88b27423bb85e5faba39ad52e209a8e64700596c4002b87113ddbda70b5",
+      "finish_reason": "stop",
+      "prompt_tokens": 1050,
+      "output_tokens": 4
+    },
+    {
+      "original_fuzz_row": 17,
+      "exact_excerpt": " a popular fried dish that consists of seafood or vegetables dipped in a light batter and fried until crispy. Look for specialty tempura shops like Tenichi or Tensuke.\n\n4.<< Ton>>katsu -<< Ton>>katsu is a breaded and fried pork cutlet. Maisen is one of the most famous and beloved<< ton>>katsu eateries in Tokyo.\n\n5. Yakitori - Yakitori is grilled",
+      "exact_final_user_message": "Latent explanation: Often activates on the token immediately before text beginning with K or k, including within words, names, code and quantities. Examples include DIS before K in DISK, 4 before K in 4K, and honky-ton before the final k. Activation belongs to the preceding word fragment, digit, space or punctuation, rather than necessarily to K itself. Some activations have non-K continuations, so this is a frequent pattern, not an exclusive rule.\n\nText examples:\n\nExample 0:  a popular fried dish that consists of seafood or vegetables dipped in a light batter and fried until crispy. Look for specialty tempura shops like Tenichi or Tensuke.\n\n4.<< Ton>>katsu -<< Ton>>katsu is a breaded and fried pork cutlet. Maisen is one of the most famous and beloved<< ton>>katsu eateries in Tokyo.\n\n5. Yakitori - Yakitori is grilled\n\nClassify only the single Example 0 above. Return exactly [1] or [0], with no additional text.",
+      "highlighted_tokens": [
+        {
+          "highlight": " Ton",
+          "following": "katsu - Tonkatsu is a breaded and fried pork cutlet. Maisen ",
+          "next_character": "k",
+          "matches_before_K": true,
+          "subject_token_position": 36,
+          "measured_gate": 1.6796875
+        },
+        {
+          "highlight": " Ton",
+          "following": "katsu is a breaded and fried pork cutlet. Maisen is one of t",
+          "next_character": "k",
+          "matches_before_K": true,
+          "subject_token_position": 40,
+          "measured_gate": 1.8828125
+        },
+        {
+          "highlight": " ton",
+          "following": "katsu eateries in Tokyo.\n\n5. Yakitori - Yakitori is grilled",
+          "next_character": "k",
+          "matches_before_K": true,
+          "subject_token_position": 63,
+          "measured_gate": 2.21875
+        }
+      ],
+      "all_highlights_fit_before_K": true,
+      "subject_positive_label": true,
+      "recorded_response": "[0]",
+      "request_sha256": "4e01b078c334e3c868231044e081ed5f371766a175eb6dce3aec121c94109a93",
+      "finish_reason": "stop",
+      "prompt_tokens": 1033,
+      "output_tokens": 4
+    },
+    {
+      "original_fuzz_row": 20,
+      "exact_excerpt": " y, w<<,>> h) in faces: \n  cv2.rectangle(img, (x, y), (x + w, y<< +>> h), (255, 0, 0), 2) \n\n#display the output \ncv2.imshow('facial recognition', img) \ncv2<<.wait>>key() \n``` \n\nin this code, we first load the face cascade classifier",
+      "exact_final_user_message": "Latent explanation: Often activates on the token immediately before text beginning with K or k, including within words, names, code and quantities. Examples include DIS before K in DISK, 4 before K in 4K, and honky-ton before the final k. Activation belongs to the preceding word fragment, digit, space or punctuation, rather than necessarily to K itself. Some activations have non-K continuations, so this is a frequent pattern, not an exclusive rule.\n\nText examples:\n\nExample 0:  y, w<<,>> h) in faces: \n  cv2.rectangle(img, (x, y), (x + w, y<< +>> h), (255, 0, 0), 2) \n\n#display the output \ncv2.imshow('facial recognition', img) \ncv2<<.wait>>key() \n``` \n\nin this code, we first load the face cascade classifier\n\nClassify only the single Example 0 above. Return exactly [1] or [0], with no additional text.",
+      "highlighted_tokens": [
+        {
+          "highlight": ",",
+          "following": "h) in faces: \n  cv2.rectangle(img, (x, y), (x + w, y + h), (",
+          "next_character": "h",
+          "matches_before_K": false,
+          "subject_token_position": 3,
+          "measured_gate": 0.62109375
+        },
+        {
+          "highlight": " +",
+          "following": "h), (255, 0, 0), 2) \n\n#display the output \ncv2.imshow('facia",
+          "next_character": "h",
+          "matches_before_K": false,
+          "subject_token_position": 27,
+          "measured_gate": 0.6015625
+        },
+        {
+          "highlight": ".wait",
+          "following": "key() \n``` \n\nin this code, we first load the face cascade cl",
+          "next_character": "k",
+          "matches_before_K": true,
+          "subject_token_position": 63,
+          "measured_gate": 1.8984375
+        }
+      ],
+      "all_highlights_fit_before_K": false,
+      "subject_positive_label": true,
+      "recorded_response": "[0]",
+      "request_sha256": "c8fdd2553aae1819943f41de6ffbf6a2fa8e20612a244492d227db19ecf1c601",
+      "finish_reason": "stop",
+      "prompt_tokens": 1032,
+      "output_tokens": 4
+    }
+  ],
+  "finding": "One of three failed windows includes two additional marked tokens not covered by the before-K pattern. The two others have only before-K highlights. Saved binary responses do not identify their internal reason."
+}

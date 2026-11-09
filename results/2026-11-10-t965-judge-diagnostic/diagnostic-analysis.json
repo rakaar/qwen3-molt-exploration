@@ -1,0 +1,155 @@
+{
+  "verified_utc": "2026-11-09T22:31:59.533633+00:00",
+  "feature": "L34-T965",
+  "valid_queries": 22,
+  "candidate_explanation_unchanged": true,
+  "posthoc": true,
+  "all_original_repeats_match": true,
+  "repeats": [
+    {
+      "id": "row-13-repeat_original",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true
+    },
+    {
+      "id": "row-17-repeat_original",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true
+    },
+    {
+      "id": "row-20-repeat_original",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true
+    },
+    {
+      "id": "henry-positive-repeat",
+      "previous": "[1]",
+      "fresh": "[1]",
+      "matched": true
+    }
+  ],
+  "cases": {
+    "13": {
+      "repeat_original": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": true
+      },
+      "single_peak": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": true
+      },
+      "single_peak_no_fewshot": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": true
+      },
+      "literal_all_highlights": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "literal_single_peak": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "minimal_positive": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "minimal_negative": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": false
+      }
+    },
+    "17": {
+      "repeat_original": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": true
+      },
+      "single_peak": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "single_peak_no_fewshot": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "literal_all_highlights": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "literal_single_peak": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "minimal_positive": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": true
+      },
+      "minimal_negative": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": false
+      }
+    },
+    "20": {
+      "repeat_original": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": false
+      },
+      "single_peak": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "single_peak_no_fewshot": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": true
+      },
+      "literal_all_highlights": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": false
+      },
+      "literal_single_peak": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": true
+      },
+      "minimal_positive": {
+        "prediction": true,
+        "response": "[1]",
+        "literal_pattern_expectation": true
+      },
+      "minimal_negative": {
+        "prediction": false,
+        "response": "[0]",
+        "literal_pattern_expectation": false
+      }
+    }
+  },
+  "runtime_matched": true,
+  "source_hashes": {
+    "audit.jsonl": "87d809990b72838a6ef8ef05643989817024a49f8beb220ac7c25283282bf636",
+    "plan.json": "3d8bb85c354b6adf32aa0aae2b1c2caaeea82b237d7426b865b8d31becd95b30",
+    "runtime.json": "ecf8069485ebcee0a6d1a4193e8aa37db36bbcc66c42ffa44a32ba1cae152d9c",
+    "analyze.py": "96ac4c8e664d8c1d25f4910cb96c311fe36f232036bc290f157548d40b18a350"
+  },
+  "warning": "This diagnoses prompt behavior. Literal tasks and rewritten minimal examples are not held-out feature scores or fresh subject activation labels."
+}
