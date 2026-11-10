@@ -1,0 +1,123 @@
+{
+  "verified_at_utc": "2026-11-10T15:47:18.003629+00:00",
+  "queries": 12,
+  "historical_controls": 9,
+  "all_historical_controls_match": true,
+  "controls": [
+    {
+      "id": "row-13-all_original-baseline",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    },
+    {
+      "id": "row-13-all_original-candidate",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    },
+    {
+      "id": "row-13-final_only-candidate",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    },
+    {
+      "id": "row-17-all_original-baseline",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    },
+    {
+      "id": "row-17-all_original-candidate",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    },
+    {
+      "id": "row-17-final_only-candidate",
+      "previous": "[1]",
+      "fresh": "[1]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    },
+    {
+      "id": "row-20-all_original-baseline",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    },
+    {
+      "id": "row-20-all_original-candidate",
+      "previous": "[0]",
+      "fresh": "[0]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    },
+    {
+      "id": "row-20-final_only-candidate",
+      "previous": "[1]",
+      "fresh": "[1]",
+      "matched": true,
+      "exact_messages_tokens_and_request_hash_match": true
+    }
+  ],
+  "unchanged_descriptions": true,
+  "unchanged_example_text": true,
+  "original_fewshots_retained": true,
+  "runtime_matched": true,
+  "cases": [
+    {
+      "original_fuzz_row": 13,
+      "title": "Development \u2192 Kit",
+      "conditions": {
+        "all_original": {
+          "baseline": false,
+          "candidate": false
+        },
+        "final_only": {
+          "baseline": false,
+          "candidate": false
+        }
+      }
+    },
+    {
+      "original_fuzz_row": 17,
+      "title": "Ton / ton \u2192 katsu",
+      "conditions": {
+        "all_original": {
+          "baseline": false,
+          "candidate": false
+        },
+        "final_only": {
+          "baseline": false,
+          "candidate": true
+        }
+      }
+    },
+    {
+      "original_fuzz_row": 20,
+      "title": ".wait \u2192 key",
+      "conditions": {
+        "all_original": {
+          "baseline": false,
+          "candidate": false
+        },
+        "final_only": {
+          "baseline": false,
+          "candidate": true
+        }
+      }
+    }
+  ],
+  "plan_sha256": "b2eaeea9cbc8fd7d8baa8f051cb0017d5c8e048e4698a0e24ee0aa633061a3a5",
+  "audit_sha256": "b0790847410c748a84e32b8ee6ccb58ea8ce16d5616d27abc251b015bc76029c",
+  "posthoc": true,
+  "scope": "Three selected previously inspected extended positive cases; not a new held-out score or MOLT intervention."
+}
