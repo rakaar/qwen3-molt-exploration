@@ -1,0 +1,919 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "molt_checkpoint_sha256": "3b89660603200ca2f9eabd898f144eacc14c4e183bc148681e414b5f35db7581",
+  "feature_sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+  "enable_thinking": false,
+  "decode": "greedy",
+  "max_new_tokens": 32,
+  "experiment": "Counterbalanced month codewords, native capability first then L29 T2375 natural-contribution removal",
+  "date": "2026-11-12",
+  "feature": {
+    "layer": 29,
+    "transform": 2375
+  },
+  "maximum_runtime_minutes": 20,
+  "design": [
+    "All twenty revised fifth/twelfth-word requests are retained: five word orders x two formats x two requested positions. No selection on steering outputs.",
+    "At the two frozen chat-prefix newline positions, replace the post-JumpReLU scalar with a fixed target from 2,5,10,20,40. This is absolute scalar replacement, not multiplication and not copying a donor operator.",
+    "Add (target - natural_gate) * ((z @ V @ U) * output_std) at each selected input position. z is the recipient residual standardized before the native post-attention RMSNorm. Native MLPs and attention remain intact.",
+    "Only those two input tokens are edited. All other input positions, including the numbered-list newline before printed 11., and all generated/candidate-scoring positions remain unedited.",
+    "Use native and zero-strength edit runs as exact replay controls against saved baseline outputs, selected probabilities, every decoding-logit hash, and terminal unused-logit hash.",
+    "Score canonical complete lowercase words at positions 5,11,12 by cached teacher forcing; retain both word-only and word-then-EOS probabilities.",
+    "Two baseline twelfth-word cases already return the eleventh word. Show but never count those as newly induced successes. Retain other baseline failures, full high-gain outputs, truncations and formatting failures.",
+    "Report strict EOS-terminated word-only eleventh answers separately from merely mentioning that word; no incomplete or incoherent high-gain response counts as a strict success.",
+    "Report native requested-word competence and the saved native eleventh-word question control per case."
+  ],
+  "cases": [
+    {
+      "id": "mapping-1-raw-11",
+      "mapping_id": "mapping-1",
+      "prompt_format": "raw",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nJanuary: comet\nJune: brick\nNovember: maple\nDecember: marble\nFebruary: cedar\nJuly: tulip\nAugust: ribbon\nMarch: violin\nSeptember: pebble\nMay: linen\nApril: lantern\nOctober: velvet\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "maple",
+      "code_11": "maple",
+      "code_12": "marble",
+      "mapping": {
+        "January": "comet",
+        "February": "cedar",
+        "March": "violin",
+        "April": "lantern",
+        "May": "linen",
+        "June": "brick",
+        "July": "tulip",
+        "August": "ribbon",
+        "September": "pebble",
+        "October": "velvet",
+        "November": "maple",
+        "December": "marble"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-1-raw-12",
+      "mapping_id": "mapping-1",
+      "prompt_format": "raw",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nJanuary: comet\nJune: brick\nNovember: maple\nDecember: marble\nFebruary: cedar\nJuly: tulip\nAugust: ribbon\nMarch: violin\nSeptember: pebble\nMay: linen\nApril: lantern\nOctober: velvet\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "marble",
+      "code_11": "maple",
+      "code_12": "marble",
+      "mapping": {
+        "January": "comet",
+        "February": "cedar",
+        "March": "violin",
+        "April": "lantern",
+        "May": "linen",
+        "June": "brick",
+        "July": "tulip",
+        "August": "ribbon",
+        "September": "pebble",
+        "October": "velvet",
+        "November": "maple",
+        "December": "marble"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-1-chat-11",
+      "mapping_id": "mapping-1",
+      "prompt_format": "chat",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nJanuary: comet\nJune: brick\nNovember: maple\nDecember: marble\nFebruary: cedar\nJuly: tulip\nAugust: ribbon\nMarch: violin\nSeptember: pebble\nMay: linen\nApril: lantern\nOctober: velvet\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "maple",
+      "code_11": "maple",
+      "code_12": "marble",
+      "mapping": {
+        "January": "comet",
+        "February": "cedar",
+        "March": "violin",
+        "April": "lantern",
+        "May": "linen",
+        "June": "brick",
+        "July": "tulip",
+        "August": "ribbon",
+        "September": "pebble",
+        "October": "velvet",
+        "November": "maple",
+        "December": "marble"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-1-chat-12",
+      "mapping_id": "mapping-1",
+      "prompt_format": "chat",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nJanuary: comet\nJune: brick\nNovember: maple\nDecember: marble\nFebruary: cedar\nJuly: tulip\nAugust: ribbon\nMarch: violin\nSeptember: pebble\nMay: linen\nApril: lantern\nOctober: velvet\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "marble",
+      "code_11": "maple",
+      "code_12": "marble",
+      "mapping": {
+        "January": "comet",
+        "February": "cedar",
+        "March": "violin",
+        "April": "lantern",
+        "May": "linen",
+        "June": "brick",
+        "July": "tulip",
+        "August": "ribbon",
+        "September": "pebble",
+        "October": "velvet",
+        "November": "maple",
+        "December": "marble"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-2-raw-11",
+      "mapping_id": "mapping-2",
+      "prompt_format": "raw",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nDecember: velvet\nMarch: comet\nFebruary: pebble\nOctober: cedar\nAugust: marble\nApril: maple\nJune: brick\nNovember: lantern\nMay: ribbon\nJanuary: tulip\nSeptember: linen\nJuly: violin\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "lantern",
+      "code_11": "lantern",
+      "code_12": "velvet",
+      "mapping": {
+        "January": "tulip",
+        "February": "pebble",
+        "March": "comet",
+        "April": "maple",
+        "May": "ribbon",
+        "June": "brick",
+        "July": "violin",
+        "August": "marble",
+        "September": "linen",
+        "October": "cedar",
+        "November": "lantern",
+        "December": "velvet"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-2-raw-12",
+      "mapping_id": "mapping-2",
+      "prompt_format": "raw",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nDecember: velvet\nMarch: comet\nFebruary: pebble\nOctober: cedar\nAugust: marble\nApril: maple\nJune: brick\nNovember: lantern\nMay: ribbon\nJanuary: tulip\nSeptember: linen\nJuly: violin\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "velvet",
+      "code_11": "lantern",
+      "code_12": "velvet",
+      "mapping": {
+        "January": "tulip",
+        "February": "pebble",
+        "March": "comet",
+        "April": "maple",
+        "May": "ribbon",
+        "June": "brick",
+        "July": "violin",
+        "August": "marble",
+        "September": "linen",
+        "October": "cedar",
+        "November": "lantern",
+        "December": "velvet"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-2-chat-11",
+      "mapping_id": "mapping-2",
+      "prompt_format": "chat",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nDecember: velvet\nMarch: comet\nFebruary: pebble\nOctober: cedar\nAugust: marble\nApril: maple\nJune: brick\nNovember: lantern\nMay: ribbon\nJanuary: tulip\nSeptember: linen\nJuly: violin\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "lantern",
+      "code_11": "lantern",
+      "code_12": "velvet",
+      "mapping": {
+        "January": "tulip",
+        "February": "pebble",
+        "March": "comet",
+        "April": "maple",
+        "May": "ribbon",
+        "June": "brick",
+        "July": "violin",
+        "August": "marble",
+        "September": "linen",
+        "October": "cedar",
+        "November": "lantern",
+        "December": "velvet"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-2-chat-12",
+      "mapping_id": "mapping-2",
+      "prompt_format": "chat",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nDecember: velvet\nMarch: comet\nFebruary: pebble\nOctober: cedar\nAugust: marble\nApril: maple\nJune: brick\nNovember: lantern\nMay: ribbon\nJanuary: tulip\nSeptember: linen\nJuly: violin\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "velvet",
+      "code_11": "lantern",
+      "code_12": "velvet",
+      "mapping": {
+        "January": "tulip",
+        "February": "pebble",
+        "March": "comet",
+        "April": "maple",
+        "May": "ribbon",
+        "June": "brick",
+        "July": "violin",
+        "August": "marble",
+        "September": "linen",
+        "October": "cedar",
+        "November": "lantern",
+        "December": "velvet"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-3-raw-11",
+      "mapping_id": "mapping-3",
+      "prompt_format": "raw",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nJune: maple\nOctober: velvet\nNovember: violin\nFebruary: pebble\nDecember: tulip\nMay: linen\nApril: ribbon\nJanuary: marble\nMarch: comet\nAugust: brick\nJuly: cedar\nSeptember: lantern\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "violin",
+      "code_11": "violin",
+      "code_12": "tulip",
+      "mapping": {
+        "January": "marble",
+        "February": "pebble",
+        "March": "comet",
+        "April": "ribbon",
+        "May": "linen",
+        "June": "maple",
+        "July": "cedar",
+        "August": "brick",
+        "September": "lantern",
+        "October": "velvet",
+        "November": "violin",
+        "December": "tulip"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-3-raw-12",
+      "mapping_id": "mapping-3",
+      "prompt_format": "raw",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nJune: maple\nOctober: velvet\nNovember: violin\nFebruary: pebble\nDecember: tulip\nMay: linen\nApril: ribbon\nJanuary: marble\nMarch: comet\nAugust: brick\nJuly: cedar\nSeptember: lantern\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "tulip",
+      "code_11": "violin",
+      "code_12": "tulip",
+      "mapping": {
+        "January": "marble",
+        "February": "pebble",
+        "March": "comet",
+        "April": "ribbon",
+        "May": "linen",
+        "June": "maple",
+        "July": "cedar",
+        "August": "brick",
+        "September": "lantern",
+        "October": "velvet",
+        "November": "violin",
+        "December": "tulip"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-3-chat-11",
+      "mapping_id": "mapping-3",
+      "prompt_format": "chat",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nJune: maple\nOctober: velvet\nNovember: violin\nFebruary: pebble\nDecember: tulip\nMay: linen\nApril: ribbon\nJanuary: marble\nMarch: comet\nAugust: brick\nJuly: cedar\nSeptember: lantern\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "violin",
+      "code_11": "violin",
+      "code_12": "tulip",
+      "mapping": {
+        "January": "marble",
+        "February": "pebble",
+        "March": "comet",
+        "April": "ribbon",
+        "May": "linen",
+        "June": "maple",
+        "July": "cedar",
+        "August": "brick",
+        "September": "lantern",
+        "October": "velvet",
+        "November": "violin",
+        "December": "tulip"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-3-chat-12",
+      "mapping_id": "mapping-3",
+      "prompt_format": "chat",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nJune: maple\nOctober: velvet\nNovember: violin\nFebruary: pebble\nDecember: tulip\nMay: linen\nApril: ribbon\nJanuary: marble\nMarch: comet\nAugust: brick\nJuly: cedar\nSeptember: lantern\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "tulip",
+      "code_11": "violin",
+      "code_12": "tulip",
+      "mapping": {
+        "January": "marble",
+        "February": "pebble",
+        "March": "comet",
+        "April": "ribbon",
+        "May": "linen",
+        "June": "maple",
+        "July": "cedar",
+        "August": "brick",
+        "September": "lantern",
+        "October": "velvet",
+        "November": "violin",
+        "December": "tulip"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-4-raw-11",
+      "mapping_id": "mapping-4",
+      "prompt_format": "raw",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nDecember: violin\nJanuary: linen\nSeptember: cedar\nAugust: pebble\nFebruary: maple\nMay: brick\nJuly: lantern\nNovember: velvet\nJune: marble\nApril: tulip\nOctober: comet\nMarch: ribbon\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "velvet",
+      "code_11": "velvet",
+      "code_12": "violin",
+      "mapping": {
+        "January": "linen",
+        "February": "maple",
+        "March": "ribbon",
+        "April": "tulip",
+        "May": "brick",
+        "June": "marble",
+        "July": "lantern",
+        "August": "pebble",
+        "September": "cedar",
+        "October": "comet",
+        "November": "velvet",
+        "December": "violin"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-4-raw-12",
+      "mapping_id": "mapping-4",
+      "prompt_format": "raw",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nDecember: violin\nJanuary: linen\nSeptember: cedar\nAugust: pebble\nFebruary: maple\nMay: brick\nJuly: lantern\nNovember: velvet\nJune: marble\nApril: tulip\nOctober: comet\nMarch: ribbon\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "violin",
+      "code_11": "velvet",
+      "code_12": "violin",
+      "mapping": {
+        "January": "linen",
+        "February": "maple",
+        "March": "ribbon",
+        "April": "tulip",
+        "May": "brick",
+        "June": "marble",
+        "July": "lantern",
+        "August": "pebble",
+        "September": "cedar",
+        "October": "comet",
+        "November": "velvet",
+        "December": "violin"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-4-chat-11",
+      "mapping_id": "mapping-4",
+      "prompt_format": "chat",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nDecember: violin\nJanuary: linen\nSeptember: cedar\nAugust: pebble\nFebruary: maple\nMay: brick\nJuly: lantern\nNovember: velvet\nJune: marble\nApril: tulip\nOctober: comet\nMarch: ribbon\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "velvet",
+      "code_11": "velvet",
+      "code_12": "violin",
+      "mapping": {
+        "January": "linen",
+        "February": "maple",
+        "March": "ribbon",
+        "April": "tulip",
+        "May": "brick",
+        "June": "marble",
+        "July": "lantern",
+        "August": "pebble",
+        "September": "cedar",
+        "October": "comet",
+        "November": "velvet",
+        "December": "violin"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-4-chat-12",
+      "mapping_id": "mapping-4",
+      "prompt_format": "chat",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nDecember: violin\nJanuary: linen\nSeptember: cedar\nAugust: pebble\nFebruary: maple\nMay: brick\nJuly: lantern\nNovember: velvet\nJune: marble\nApril: tulip\nOctober: comet\nMarch: ribbon\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "violin",
+      "code_11": "velvet",
+      "code_12": "violin",
+      "mapping": {
+        "January": "linen",
+        "February": "maple",
+        "March": "ribbon",
+        "April": "tulip",
+        "May": "brick",
+        "June": "marble",
+        "July": "lantern",
+        "August": "pebble",
+        "September": "cedar",
+        "October": "comet",
+        "November": "velvet",
+        "December": "violin"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-5-raw-11",
+      "mapping_id": "mapping-5",
+      "prompt_format": "raw",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nAugust: tulip\nApril: cedar\nNovember: brick\nJune: velvet\nDecember: lantern\nFebruary: pebble\nOctober: comet\nMay: ribbon\nJuly: marble\nMarch: violin\nJanuary: maple\nSeptember: linen\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "brick",
+      "code_11": "brick",
+      "code_12": "lantern",
+      "mapping": {
+        "January": "maple",
+        "February": "pebble",
+        "March": "violin",
+        "April": "cedar",
+        "May": "ribbon",
+        "June": "velvet",
+        "July": "marble",
+        "August": "tulip",
+        "September": "linen",
+        "October": "comet",
+        "November": "brick",
+        "December": "lantern"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-5-raw-12",
+      "mapping_id": "mapping-5",
+      "prompt_format": "raw",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nAugust: tulip\nApril: cedar\nNovember: brick\nJune: velvet\nDecember: lantern\nFebruary: pebble\nOctober: comet\nMay: ribbon\nJuly: marble\nMarch: violin\nJanuary: maple\nSeptember: linen\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "lantern",
+      "code_11": "brick",
+      "code_12": "lantern",
+      "mapping": {
+        "January": "maple",
+        "February": "pebble",
+        "March": "violin",
+        "April": "cedar",
+        "May": "ribbon",
+        "June": "velvet",
+        "July": "marble",
+        "August": "tulip",
+        "September": "linen",
+        "October": "comet",
+        "November": "brick",
+        "December": "lantern"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-5-chat-11",
+      "mapping_id": "mapping-5",
+      "prompt_format": "chat",
+      "ordinal": 11,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nAugust: tulip\nApril: cedar\nNovember: brick\nJune: velvet\nDecember: lantern\nFebruary: pebble\nOctober: comet\nMay: ribbon\nJuly: marble\nMarch: violin\nJanuary: maple\nSeptember: linen\n\nthe eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        324,
+        357
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "brick",
+      "code_11": "brick",
+      "code_12": "lantern",
+      "mapping": {
+        "January": "maple",
+        "February": "pebble",
+        "March": "violin",
+        "April": "cedar",
+        "May": "ribbon",
+        "June": "velvet",
+        "July": "marble",
+        "August": "tulip",
+        "September": "linen",
+        "October": "comet",
+        "November": "brick",
+        "December": "lantern"
+      },
+      "calibration": false
+    },
+    {
+      "id": "mapping-5-chat-12",
+      "mapping_id": "mapping-5",
+      "prompt_format": "chat",
+      "ordinal": 12,
+      "prompt": "Use the codebook below. Identify the month requested, then reply with its codeword only. Do not reply with the month name or a number.\n\nCodebook:\nAugust: tulip\nApril: cedar\nNovember: brick\nJune: velvet\nDecember: lantern\nFebruary: pebble\nOctober: comet\nMay: ribbon\nJuly: marble\nMarch: violin\nJanuary: maple\nSeptember: linen\n\nthe twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        324,
+        356
+      ],
+      "codebook_span": [
+        146,
+        322
+      ],
+      "expected": "lantern",
+      "code_11": "brick",
+      "code_12": "lantern",
+      "mapping": {
+        "January": "maple",
+        "February": "pebble",
+        "March": "violin",
+        "April": "cedar",
+        "May": "ribbon",
+        "June": "velvet",
+        "July": "marble",
+        "August": "tulip",
+        "September": "linen",
+        "October": "comet",
+        "November": "brick",
+        "December": "lantern"
+      },
+      "calibration": false
+    },
+    {
+      "id": "plain-month-11",
+      "mapping_id": "plain",
+      "prompt_format": "raw",
+      "ordinal": 11,
+      "prompt": "the eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        0,
+        33
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "November",
+      "code_11": "November",
+      "code_12": "December",
+      "calibration": true
+    },
+    {
+      "id": "plain-month-12",
+      "mapping_id": "plain",
+      "prompt_format": "raw",
+      "ordinal": 12,
+      "prompt": "the twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        0,
+        32
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "December",
+      "code_11": "November",
+      "code_12": "December",
+      "calibration": true
+    }
+  ],
+  "mappings": [
+    {
+      "id": "mapping-1",
+      "mapping": {
+        "January": "comet",
+        "February": "cedar",
+        "March": "violin",
+        "April": "lantern",
+        "May": "linen",
+        "June": "brick",
+        "July": "tulip",
+        "August": "ribbon",
+        "September": "pebble",
+        "October": "velvet",
+        "November": "maple",
+        "December": "marble"
+      },
+      "line_order": [
+        "January",
+        "June",
+        "November",
+        "December",
+        "February",
+        "July",
+        "August",
+        "March",
+        "September",
+        "May",
+        "April",
+        "October"
+      ]
+    },
+    {
+      "id": "mapping-2",
+      "mapping": {
+        "January": "tulip",
+        "February": "pebble",
+        "March": "comet",
+        "April": "maple",
+        "May": "ribbon",
+        "June": "brick",
+        "July": "violin",
+        "August": "marble",
+        "September": "linen",
+        "October": "cedar",
+        "November": "lantern",
+        "December": "velvet"
+      },
+      "line_order": [
+        "December",
+        "March",
+        "February",
+        "October",
+        "August",
+        "April",
+        "June",
+        "November",
+        "May",
+        "January",
+        "September",
+        "July"
+      ]
+    },
+    {
+      "id": "mapping-3",
+      "mapping": {
+        "January": "marble",
+        "February": "pebble",
+        "March": "comet",
+        "April": "ribbon",
+        "May": "linen",
+        "June": "maple",
+        "July": "cedar",
+        "August": "brick",
+        "September": "lantern",
+        "October": "velvet",
+        "November": "violin",
+        "December": "tulip"
+      },
+      "line_order": [
+        "June",
+        "October",
+        "November",
+        "February",
+        "December",
+        "May",
+        "April",
+        "January",
+        "March",
+        "August",
+        "July",
+        "September"
+      ]
+    },
+    {
+      "id": "mapping-4",
+      "mapping": {
+        "January": "linen",
+        "February": "maple",
+        "March": "ribbon",
+        "April": "tulip",
+        "May": "brick",
+        "June": "marble",
+        "July": "lantern",
+        "August": "pebble",
+        "September": "cedar",
+        "October": "comet",
+        "November": "velvet",
+        "December": "violin"
+      },
+      "line_order": [
+        "December",
+        "January",
+        "September",
+        "August",
+        "February",
+        "May",
+        "July",
+        "November",
+        "June",
+        "April",
+        "October",
+        "March"
+      ]
+    },
+    {
+      "id": "mapping-5",
+      "mapping": {
+        "January": "maple",
+        "February": "pebble",
+        "March": "violin",
+        "April": "cedar",
+        "May": "ribbon",
+        "June": "velvet",
+        "July": "marble",
+        "August": "tulip",
+        "September": "linen",
+        "October": "comet",
+        "November": "brick",
+        "December": "lantern"
+      },
+      "line_order": [
+        "August",
+        "April",
+        "November",
+        "June",
+        "December",
+        "February",
+        "October",
+        "May",
+        "July",
+        "March",
+        "January",
+        "September"
+      ]
+    }
+  ],
+  "random_seed": 237512,
+  "scopes": {
+    "off-is": "Query-final space+is only; identical to final supplied token in raw completion.",
+    "off-last": "Final supplied chat-prefix token only (chat cases).",
+    "off-all": "Every supplied input token, including codebook/query/wrappers. No generated-token edits."
+  },
+  "eligibility": "A mapping/format is eligible only if native eleventh and twelfth responses both equal their codewords after whitespace, case, quote/markdown wrapper and terminal .!? normalization. No selection based on ablation outcomes. Retain all failed pairs and do not interpret their missing ablations as negative effects.",
+  "probabilities": "For each target code/month, sum the probabilities of four disjoint exact output-token prefixes: lowercase/titlecase with zero/one leading space, deduplicated by token sequence. Preserve full multi-token scores and separate word-plus-EOS scores. Tokenization of each candidate is fixed independently as an output continuation; input tokens are never retokenized.",
+  "baseline_order": "Run native and zero/observer for every case, freeze baseline results and eligibility before any nonzero edit.",
+  "intervention": "Native L29 MLP output minus natural T2375 gate times local UVx in native output units, FP32 subtraction then one BF16 cast; all native later layers retained. No full MOLT MLP replacement.",
+  "controls": "Plain eleventh/twelfth raw completions as calibration. Native vs zero exact. No claims of feature specificity without separate matched-active-transform controls; not included in this pilot."
+}

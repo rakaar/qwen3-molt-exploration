@@ -1,0 +1,40 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 101.44it/s]
+{"phase": "baseline", "case": "mapping-1-raw-11", "response": "\n\nNovember\nOkay, let's see. The user is asking for the eleventh month of the year. First, I need to recall the order of the", "correct": false}
+{"phase": "baseline", "case": "mapping-1-raw-12", "response": "\n\nDecember\nmarble\nOkay, let's see. The user is asking for the twelfth month of the year. I need to use the codebook", "correct": false}
+{"phase": "baseline", "case": "mapping-1-chat-11", "response": "November", "correct": false}
+{"phase": "baseline", "case": "mapping-1-chat-12", "response": "marble", "correct": true}
+{"phase": "baseline", "case": "mapping-2-raw-11", "response": "\nAnswer:\nlantern\nAnswer: lantern\n\nThe eleventh month of the year is November, and according to the codebook, November is coded as \"", "correct": false}
+{"phase": "baseline", "case": "mapping-2-raw-12", "response": "\nAnswer:\nvelvet\n\nThe twelfth month of the year is December, and according to the codebook, December is coded as \"velvet\". Therefore", "correct": false}
+{"phase": "baseline", "case": "mapping-2-chat-11", "response": "lantern", "correct": true}
+{"phase": "baseline", "case": "mapping-2-chat-12", "response": "velvet", "correct": true}
+{"phase": "baseline", "case": "mapping-3-raw-11", "response": "\nOkay, let's see. The user is asking for the eleventh month of the year. First, I need to figure out which month that is.", "correct": false}
+{"phase": "baseline", "case": "mapping-3-raw-12", "response": "\n\nDecember\ntulip\nOkay, let's see. The user is asking for the twelfth month of the year. First, I need to recall", "correct": false}
+{"phase": "baseline", "case": "mapping-3-chat-11", "response": "November", "correct": false}
+{"phase": "baseline", "case": "mapping-3-chat-12", "response": "tulip", "correct": true}
+{"phase": "baseline", "case": "mapping-4-raw-11", "response": "\nAnswer:\nvelvet\nAnswer: velvet\n\nThe eleventh month of the year is November, and according to the codebook, November is coded as \"", "correct": false}
+{"phase": "baseline", "case": "mapping-4-raw-12", "response": "\nAnswer:\nAnswer: violin\nThe twelfth month of the year is December, and according to the codebook, December is associated with the codeword", "correct": false}
+{"phase": "baseline", "case": "mapping-4-chat-11", "response": "velvet", "correct": true}
+{"phase": "baseline", "case": "mapping-4-chat-12", "response": "violin", "correct": true}
+{"phase": "baseline", "case": "mapping-5-raw-11", "response": "\n\nOkay, let's see. The user is asking for the eleventh month of the year. First, I need to figure out which month that is.", "correct": false}
+{"phase": "baseline", "case": "mapping-5-raw-12", "response": "\n\nDecember\nAnswer:\nlantern\nAnswer: lantern\n\nThe twelfth month of the year is December, and according to the codebook, December is coded", "correct": false}
+{"phase": "baseline", "case": "mapping-5-chat-11", "response": "November", "correct": false}
+{"phase": "baseline", "case": "mapping-5-chat-12", "response": "lantern", "correct": true}
+{"phase": "baseline", "case": "plain-month-11", "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month", "correct": true}
+{"phase": "baseline", "case": "plain-month-12", "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.", "correct": true}
+{"phase": "intervention", "case": "mapping-2-chat-11", "scope": "off-is", "response": "lantern", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "mapping-2-chat-11", "scope": "off-last", "response": "lantern", "edited_input_tokens": 1}
+{"phase": "intervention", "case": "mapping-2-chat-11", "scope": "off-all", "response": "lantern", "edited_input_tokens": 2}
+{"phase": "intervention", "case": "mapping-2-chat-12", "scope": "off-is", "response": "velvet", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "mapping-2-chat-12", "scope": "off-last", "response": "velvet", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "mapping-2-chat-12", "scope": "off-all", "response": "velvet", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "mapping-4-chat-11", "scope": "off-is", "response": "velvet", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "mapping-4-chat-11", "scope": "off-last", "response": "velvet", "edited_input_tokens": 1}
+{"phase": "intervention", "case": "mapping-4-chat-11", "scope": "off-all", "response": "velvet", "edited_input_tokens": 2}
+{"phase": "intervention", "case": "mapping-4-chat-12", "scope": "off-is", "response": "violin", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "mapping-4-chat-12", "scope": "off-last", "response": "violin", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "mapping-4-chat-12", "scope": "off-all", "response": "violin", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "plain-month-11", "scope": "off-is", "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month", "edited_input_tokens": 1}
+{"phase": "intervention", "case": "plain-month-11", "scope": "off-all", "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month", "edited_input_tokens": 1}
+{"phase": "intervention", "case": "plain-month-12", "scope": "off-is", "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.", "edited_input_tokens": 0}
+{"phase": "intervention", "case": "plain-month-12", "scope": "off-all", "response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.", "edited_input_tokens": 0}
+{"status": "complete", "cases": 22, "runtime_seconds": 97.188174885232}
