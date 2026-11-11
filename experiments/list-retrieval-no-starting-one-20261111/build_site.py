@@ -40,6 +40,7 @@ for name in ['index.html', 'comparison.js', 'comparison.css']:
     text = text.replace('__ALL_INPUT_BOOST__', (OUT / 'all-input-boost/section.html').read_text())
     text = text.replace('__MONTH_CODEWORDS__', (OUT.parent / '2026-11-12-month-codewords/section.html').read_text())
     text = text.replace('__WATER_ICE__', (OUT.parent / '2026-11-12-water-ice-probe/section.html').read_text())
+    text = text.replace('__FLASK_BINDING__', (OUT.parent / '2026-11-12-flask-binding/section.html').read_text())
     (OUT / name).write_text(text)
 source = OUT / 'without-starting-one/source'
 source.mkdir(exist_ok=True)
