@@ -1,0 +1,338 @@
+{
+  "prompt": "Dax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.",
+  "formatted_prompt": "<|im_start|>user\nDax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "input_tokens": 39,
+  "native_positive": [
+    {
+      "position": 15,
+      "token": " water",
+      "gate": 0.8252673745155334
+    }
+  ],
+  "rows": [
+    {
+      "condition": "native",
+      "target_gate": null,
+      "response": "Oil.",
+      "stop_reason": "eos",
+      "p_water": 2.88232008399629e-13,
+      "p_oil": 0.9999920833699694,
+      "clean_water_answer": false,
+      "clean_oil_answer": true,
+      "edited_input_positions": 0,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 76909,
+          "token": "Oil",
+          "probability": 0.9999768733978271
+        },
+        {
+          "token_id": 73813,
+          "token": "oil",
+          "probability": 1.3006996596232057e-05
+        },
+        {
+          "token_id": 99318,
+          "token": "油",
+          "probability": 7.88914167060284e-06
+        },
+        {
+          "token_id": 5590,
+          "token": " oil",
+          "probability": 1.370927407151612e-06
+        },
+        {
+          "token_id": 15526,
+          "token": " Oil",
+          "probability": 8.315095101352199e-07
+        }
+      ]
+    },
+    {
+      "condition": "gate-64",
+      "target_gate": 64.0,
+      "response": "Oil.",
+      "stop_reason": "eos",
+      "p_water": 9.22564055811077e-09,
+      "p_oil": 0.999723042898062,
+      "clean_water_answer": false,
+      "clean_oil_answer": true,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 76909,
+          "token": "Oil",
+          "probability": 0.9985295534133911
+        },
+        {
+          "token_id": 73813,
+          "token": "oil",
+          "probability": 0.001169157912954688
+        },
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.00013963600213173777
+        },
+        {
+          "token_id": 46,
+          "token": "O",
+          "probability": 0.00010874863073695451
+        },
+        {
+          "token_id": 99318,
+          "token": "油",
+          "probability": 2.4265098545583896e-05
+        }
+      ]
+    },
+    {
+      "condition": "gate-80",
+      "target_gate": 80.0,
+      "response": "Oil.",
+      "stop_reason": "eos",
+      "p_water": 6.111924962615234e-07,
+      "p_oil": 0.8921283061716101,
+      "clean_water_answer": false,
+      "clean_oil_answer": true,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 76909,
+          "token": "Oil",
+          "probability": 0.8860846757888794
+        },
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.10582772642374039
+        },
+        {
+          "token_id": 73813,
+          "token": "oil",
+          "probability": 0.005970391444861889
+        },
+        {
+          "token_id": 46,
+          "token": "O",
+          "probability": 0.0015095515409484506
+        },
+        {
+          "token_id": 99318,
+          "token": "油",
+          "probability": 0.00010935153841273859
+        }
+      ]
+    },
+    {
+      "condition": "gate-96",
+      "target_gate": 96.0,
+      "response": "Bottle.",
+      "stop_reason": "eos",
+      "p_water": 2.310200895592839e-06,
+      "p_oil": 0.038636902284198915,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.9589426517486572
+        },
+        {
+          "token_id": 76909,
+          "token": "Oil",
+          "probability": 0.037182241678237915
+        },
+        {
+          "token_id": 73813,
+          "token": "oil",
+          "probability": 0.0014417119091376662
+        },
+        {
+          "token_id": 46,
+          "token": "O",
+          "probability": 0.0005303762154653668
+        },
+        {
+          "token_id": 50,
+          "token": "S",
+          "probability": 0.00036452189669944346
+        }
+      ]
+    },
+    {
+      "condition": "gate-112",
+      "target_gate": 112.0,
+      "response": "Bottle.",
+      "stop_reason": "eos",
+      "p_water": 1.6520967873714294e-06,
+      "p_oil": 0.001347462573049706,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.9964807629585266
+        },
+        {
+          "token_id": 76909,
+          "token": "Oil",
+          "probability": 0.0011667589424178004
+        },
+        {
+          "token_id": 10674,
+          "token": "Stop",
+          "probability": 0.0004292266385164112
+        },
+        {
+          "token_id": 50,
+          "token": "S",
+          "probability": 0.00026033908943645656
+        },
+        {
+          "token_id": 73813,
+          "token": "oil",
+          "probability": 0.00017892828327603638
+        }
+      ]
+    },
+    {
+      "condition": "gate-144",
+      "target_gate": 144.0,
+      "response": "Bottle.",
+      "stop_reason": "eos",
+      "p_water": 1.7593647055968584e-06,
+      "p_oil": 3.890689090992191e-05,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.9925915002822876
+        },
+        {
+          "token_id": 10674,
+          "token": "Stop",
+          "probability": 0.0031592012383043766
+        },
+        {
+          "token_id": 7671,
+          "token": "-B",
+          "probability": 0.0002938514808192849
+        },
+        {
+          "token_id": 334,
+          "token": "**",
+          "probability": 0.00022885175712872297
+        },
+        {
+          "token_id": 16,
+          "token": "1",
+          "probability": 0.00020196096738800406
+        }
+      ]
+    },
+    {
+      "condition": "gate-160",
+      "target_gate": 160.0,
+      "response": "Bottle.",
+      "stop_reason": "eos",
+      "p_water": 2.2425142027522358e-06,
+      "p_oil": 2.3784059260691428e-05,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.9773536920547485
+        },
+        {
+          "token_id": 10674,
+          "token": "Stop",
+          "probability": 0.010857419110834599
+        },
+        {
+          "token_id": 7671,
+          "token": "-B",
+          "probability": 0.001144363428466022
+        },
+        {
+          "token_id": 16,
+          "token": "1",
+          "probability": 0.0008912311750464141
+        },
+        {
+          "token_id": 334,
+          "token": "**",
+          "probability": 0.0003715204366017133
+        }
+      ]
+    },
+    {
+      "condition": "gate-192",
+      "target_gate": 192.0,
+      "response": "Bottle.",
+      "stop_reason": "eos",
+      "p_water": 5.106538224864741e-06,
+      "p_oil": 5.343187691221119e-05,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.763283371925354
+        },
+        {
+          "token_id": 10674,
+          "token": "Stop",
+          "probability": 0.09116119891405106
+        },
+        {
+          "token_id": 16,
+          "token": "1",
+          "probability": 0.013980023562908173
+        },
+        {
+          "token_id": 7671,
+          "token": "-B",
+          "probability": 0.009608319960534573
+        },
+        {
+          "token_id": 25,
+          "token": ":",
+          "probability": 0.004263666458427906
+        }
+      ]
+    }
+  ],
+  "audit": {
+    "native_zero_exact": true,
+    "previous_native_reproduced_exactly": true,
+    "previous_gate64_reproduced_exactly": true,
+    "source_hash_verified": true,
+    "baseline_locked_before_sweep": true,
+    "independent_vector_positions": 273,
+    "bf16_rounding_exact": true,
+    "all_input_positions_verified": true,
+    "generated_tokens_edited": 0
+  },
+  "results_sha256": "142996973fda7b6e7a2634c39964a6a29bff2509c4edcc01d9e476e975dc764b"
+}

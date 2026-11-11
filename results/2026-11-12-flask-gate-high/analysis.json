@@ -1,0 +1,260 @@
+{
+  "prompt": "Dax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.",
+  "formatted_prompt": "<|im_start|>user\nDax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "input_tokens": 39,
+  "native_positive": [
+    {
+      "position": 15,
+      "token": " water",
+      "gate": 0.8252673745155334
+    }
+  ],
+  "rows": [
+    {
+      "condition": "native",
+      "target_gate": null,
+      "response": "Oil.",
+      "stop_reason": "eos",
+      "p_water": 2.88232008399629e-13,
+      "p_oil": 0.9999920833699694,
+      "clean_water_answer": false,
+      "clean_oil_answer": true,
+      "edited_input_positions": 0,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 76909,
+          "token": "Oil",
+          "probability": 0.9999768733978271
+        },
+        {
+          "token_id": 73813,
+          "token": "oil",
+          "probability": 1.3006996596232057e-05
+        },
+        {
+          "token_id": 99318,
+          "token": "油",
+          "probability": 7.88914167060284e-06
+        },
+        {
+          "token_id": 5590,
+          "token": " oil",
+          "probability": 1.370927407151612e-06
+        },
+        {
+          "token_id": 15526,
+          "token": " Oil",
+          "probability": 8.315095101352199e-07
+        }
+      ]
+    },
+    {
+      "condition": "gate-64",
+      "target_gate": 64.0,
+      "response": "Oil.",
+      "stop_reason": "eos",
+      "p_water": 9.22564055811077e-09,
+      "p_oil": 0.999723042898062,
+      "clean_water_answer": false,
+      "clean_oil_answer": true,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 76909,
+          "token": "Oil",
+          "probability": 0.9985295534133911
+        },
+        {
+          "token_id": 73813,
+          "token": "oil",
+          "probability": 0.001169157912954688
+        },
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.00013963600213173777
+        },
+        {
+          "token_id": 46,
+          "token": "O",
+          "probability": 0.00010874863073695451
+        },
+        {
+          "token_id": 99318,
+          "token": "油",
+          "probability": 2.4265098545583896e-05
+        }
+      ]
+    },
+    {
+      "condition": "gate-128",
+      "target_gate": 128.0,
+      "response": "Bottle.",
+      "stop_reason": "eos",
+      "p_water": 1.5548593965663108e-06,
+      "p_oil": 0.0001228754876074562,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.9969005584716797
+        },
+        {
+          "token_id": 10674,
+          "token": "Stop",
+          "probability": 0.000909055641386658
+        },
+        {
+          "token_id": 40,
+          "token": "I",
+          "probability": 0.0001579701784066856
+        },
+        {
+          "token_id": 334,
+          "token": "**",
+          "probability": 0.00013940820645075291
+        },
+        {
+          "token_id": 50,
+          "token": "S",
+          "probability": 0.00013940820645075291
+        }
+      ]
+    },
+    {
+      "condition": "gate-256",
+      "target_gate": 256.0,
+      "response": "Stop. I cannot provide that answer. I am an AI assistant designed to help and support users in a safe and respectful manner. If you have any questions or",
+      "stop_reason": "token_limit",
+      "p_water": 7.486892381465404e-06,
+      "p_oil": 5.578182856523328e-05,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 10674,
+          "token": "Stop",
+          "probability": 0.1306513398885727
+        },
+        {
+          "token_id": 9495,
+          "token": "stop",
+          "probability": 0.07444288581609726
+        },
+        {
+          "token_id": 299,
+          "token": "ro",
+          "probability": 0.031032413244247437
+        },
+        {
+          "token_id": 119303,
+          "token": "皿",
+          "probability": 0.02270379662513733
+        },
+        {
+          "token_id": 33,
+          "token": "B",
+          "probability": 0.021328244358301163
+        }
+      ]
+    },
+    {
+      "condition": "gate-512",
+      "target_gate": 512.0,
+      "response": "stop\nThe question is asking what Dax's flask contains, and the information given is that Dax's flask contains oil, and Neri's flask contains",
+      "stop_reason": "token_limit",
+      "p_water": 4.3646704222196287e-07,
+      "p_oil": 8.884849065277942e-07,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 9495,
+          "token": "stop",
+          "probability": 0.144137904047966
+        },
+        {
+          "token_id": 119303,
+          "token": "皿",
+          "probability": 0.02076503448188305
+        },
+        {
+          "token_id": 2936,
+          "token": " stop",
+          "probability": 0.01617182418704033
+        },
+        {
+          "token_id": 26064,
+          "token": " Buck",
+          "probability": 0.013406912796199322
+        },
+        {
+          "token_id": 299,
+          "token": "ro",
+          "probability": 0.013406912796199322
+        }
+      ]
+    },
+    {
+      "condition": "gate-1024",
+      "target_gate": 1024.0,
+      "response": "stop\nThe question is asking what Dax's flask contains, and it's already stated in the first sentence: \"Dax's flask contains oil.\" So",
+      "stop_reason": "token_limit",
+      "p_water": 2.4912915023110697e-08,
+      "p_oil": 3.2039400221817603e-07,
+      "clean_water_answer": false,
+      "clean_oil_answer": false,
+      "edited_input_positions": 39,
+      "generated_positions_edited": 0,
+      "top5": [
+        {
+          "token_id": 9495,
+          "token": "stop",
+          "probability": 0.10021501779556274
+        },
+        {
+          "token_id": 25374,
+          "token": " cups",
+          "probability": 0.03686704859137535
+        },
+        {
+          "token_id": 100025,
+          "token": "基金",
+          "probability": 0.021006209775805473
+        },
+        {
+          "token_id": 10861,
+          "token": " Cup",
+          "probability": 0.0174147579818964
+        },
+        {
+          "token_id": 93,
+          "token": "~",
+          "probability": 0.01635965146124363
+        }
+      ]
+    }
+  ],
+  "audit": {
+    "native_zero_exact": true,
+    "previous_native_reproduced_exactly": true,
+    "previous_gate64_reproduced_exactly": true,
+    "source_hash_verified": true,
+    "baseline_locked_before_sweep": true,
+    "independent_vector_positions": 195,
+    "bf16_rounding_exact": true,
+    "all_input_positions_verified": true,
+    "generated_tokens_edited": 0
+  },
+  "results_sha256": "4e509838ed48773fb5fd7e25c96f6a34deba426aa6ab948962d46b9ab20966b1"
+}
