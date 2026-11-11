@@ -1,0 +1,66 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "molt_checkpoint_sha256": "3b89660603200ca2f9eabd898f144eacc14c4e183bc148681e414b5f35db7581",
+  "feature_sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+  "experiment": "One fixed oil-flask prompt: all-input T2375 fixed-gate dose sweep",
+  "date": "2026-11-12",
+  "frozen_at_utc": "2026-11-11T23:03:39.856909+00:00",
+  "feature": {
+    "layer": 29,
+    "transform": 2375
+  },
+  "cases": [
+    {
+      "id": "swapped-dax-first-ask-dax",
+      "kind": "binding",
+      "pair_id": "swapped-dax-first",
+      "query_owner": "Dax",
+      "water_owner": "Neri",
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "prompt_format": "chat",
+      "prompt": "Dax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "query": "What does Dax's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        107
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "oil",
+      "calibration": false
+    }
+  ],
+  "maximum_runtime_minutes": 12,
+  "max_new_tokens": 32,
+  "enable_thinking": false,
+  "decode": "greedy",
+  "scopes": [
+    "gate-0",
+    "gate-2",
+    "gate-4",
+    "gate-8",
+    "gate-16",
+    "gate-32",
+    "gate-64"
+  ],
+  "eligibility": "The single fixed prompt must answer oil natively and pass exact native/zero observer identity before all nonzero edits. No alternate prompts or outcome-based exclusions.",
+  "intervention": "At every supplied input position including special/template tokens replace the natural scalar T2375 gate by s, adding (s - natural gate) times the local operator to native MLP output in FP32, then one BF16 cast. Generated and candidate continuation tokens are not edited; all later native computation remains.",
+  "probabilities": "Sum disjoint exact complete water/oil output-token prefixes over lowercase/titlecase with zero/one leading space, deduplicated by token sequence. Input is never retokenized. Preserve word-plus-EOS separately. A water prefix can be followed by more text; do not interpret it as semantic water or a word-boundary event in lexical controls.",
+  "controls": "Native and exact zero/observer identity, same-prompt gate-zero ablation. No prompt search, full MLP replacement, matched active-transform control or output steering."
+}
