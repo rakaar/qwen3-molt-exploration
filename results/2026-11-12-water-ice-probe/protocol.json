@@ -1,0 +1,157 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "molt_checkpoint_sha256": "3b89660603200ca2f9eabd898f144eacc14c4e183bc148681e414b5f35db7581",
+  "feature_sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+  "experiment": "Water/ice activation timing and natural T2375 contribution removal",
+  "date": "2026-11-12",
+  "feature": {
+    "layer": 29,
+    "transform": 2375
+  },
+  "cases": [
+    {
+      "id": "ice-chat",
+      "prompt_format": "chat",
+      "prompt": "When ice melts, what does it become? Reply with one word.",
+      "query": "When ice melts, what does it become? Reply with one word.",
+      "query_span": [
+        0,
+        57
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "ice-liquid-chat",
+      "prompt_format": "chat",
+      "prompt": "What liquid does ice turn into when it melts? Reply with one word.",
+      "query": "What liquid does ice turn into when it melts? Reply with one word.",
+      "query_span": [
+        0,
+        66
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "ice-raw",
+      "prompt_format": "raw",
+      "prompt": "when ice melts, it becomes",
+      "query": "when ice melts, it becomes",
+      "query_span": [
+        0,
+        26
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "water-mentioned-chat",
+      "prompt_format": "chat",
+      "prompt": "Water freezes into ice. When that ice melts, what does it become? Reply with one word.",
+      "query": "Water freezes into ice. When that ice melts, what does it become? Reply with one word.",
+      "query_span": [
+        0,
+        86
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "freezing-reverse-chat",
+      "prompt_format": "chat",
+      "prompt": "When water freezes, what does it become? Reply with one word.",
+      "query": "When water freezes, what does it become? Reply with one word.",
+      "query_span": [
+        0,
+        61
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "ice",
+      "calibration": false
+    },
+    {
+      "id": "unrelated-chat",
+      "prompt_format": "chat",
+      "prompt": "What does a caterpillar become after metamorphosis? Reply with one word.",
+      "query": "What does a caterpillar become after metamorphosis? Reply with one word.",
+      "query_span": [
+        0,
+        72
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "butterfly",
+      "calibration": false
+    },
+    {
+      "id": "month-calibration-11",
+      "prompt_format": "raw",
+      "prompt": "the eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        0,
+        33
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "November",
+      "calibration": true
+    },
+    {
+      "id": "month-calibration-12",
+      "prompt_format": "raw",
+      "prompt": "the twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        0,
+        32
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "expected": "December",
+      "calibration": true
+    }
+  ],
+  "maximum_runtime_minutes": 10,
+  "max_new_tokens": 32,
+  "enable_thinking": false,
+  "decode": "greedy",
+  "scopes": [
+    "off-last",
+    "off-all"
+  ],
+  "eligibility": "Freeze native plus zero/observer results for all cases before any nonzero edit. Chat competence requires the expected one-word answer after whitespace/case/quote/markdown and terminal punctuation normalization, with EOS. Raw completion competence requires a correct complete initial answer word; preserve the full continuation. Native failures remain visible without interpreted ablations.",
+  "activation_timing": "Distinguish supplied-input gate activity, activity while processing subword tokens of an answer, and activity on the already-completed water word. A gate processing an already-selected token cannot cause selection of that same token. Candidate-teacher-forcing traces are not native generation traces.",
+  "intervention": "Subtract natural T2375 gate times current recipient low-rank operator from native L29 MLP output at the final supplied input token or all supplied input positions. FP32 edit followed by one BF16 cast. Preserve all native subsequent computation. No generated-token edits.",
+  "probabilities": "Complete exact word-prefix probabilities for lowercase/titlecase, with zero/one leading space, deduplicated by token sequence. Sum disjoint prescribed token prefixes; save word-plus-EOS separately. Do not retokenize the supplied input prefix.",
+  "controls": "No-edit/zero exact replay, reverse water-to-ice question, unrelated butterfly question, and original raw eleventh/twelfth-month positive references. No matched active-transform specificity controls in this small pilot."
+}
