@@ -1,0 +1,552 @@
+{
+  "pilot_cases": 30,
+  "lists": 5,
+  "formats": 2,
+  "requested_positions": [
+    5,
+    11,
+    12
+  ],
+  "strict_correct": 20,
+  "first_word_correct": 20,
+  "truncated": 0,
+  "observer_exact_cases": 31,
+  "interventions": 0,
+  "groups": [
+    {
+      "format": "numbered",
+      "ordinal": 5,
+      "cases": 5,
+      "strict_correct": 3,
+      "first_word_correct": 3,
+      "truncated": 0,
+      "active_cases": {
+        "list": 5,
+        "question": 0,
+        "answer_prefix": 0,
+        "response": 0
+      },
+      "final_input_active_cases": 0
+    },
+    {
+      "format": "numbered",
+      "ordinal": 11,
+      "cases": 5,
+      "strict_correct": 5,
+      "first_word_correct": 5,
+      "truncated": 0,
+      "active_cases": {
+        "list": 5,
+        "question": 0,
+        "answer_prefix": 5,
+        "response": 0
+      },
+      "final_input_active_cases": 5
+    },
+    {
+      "format": "numbered",
+      "ordinal": 12,
+      "cases": 5,
+      "strict_correct": 5,
+      "first_word_correct": 5,
+      "truncated": 0,
+      "active_cases": {
+        "list": 5,
+        "question": 0,
+        "answer_prefix": 1,
+        "response": 0
+      },
+      "final_input_active_cases": 1
+    },
+    {
+      "format": "bullets",
+      "ordinal": 5,
+      "cases": 5,
+      "strict_correct": 3,
+      "first_word_correct": 3,
+      "truncated": 0,
+      "active_cases": {
+        "list": 0,
+        "question": 0,
+        "answer_prefix": 0,
+        "response": 0
+      },
+      "final_input_active_cases": 0
+    },
+    {
+      "format": "bullets",
+      "ordinal": 11,
+      "cases": 5,
+      "strict_correct": 2,
+      "first_word_correct": 2,
+      "truncated": 0,
+      "active_cases": {
+        "list": 0,
+        "question": 0,
+        "answer_prefix": 5,
+        "response": 0
+      },
+      "final_input_active_cases": 5
+    },
+    {
+      "format": "bullets",
+      "ordinal": 12,
+      "cases": 5,
+      "strict_correct": 2,
+      "first_word_correct": 2,
+      "truncated": 0,
+      "active_cases": {
+        "list": 0,
+        "question": 0,
+        "answer_prefix": 2,
+        "response": 0
+      },
+      "final_input_active_cases": 2
+    }
+  ],
+  "shared_prefix_checks": [
+    {
+      "list_id": "list-1",
+      "format": "numbered",
+      "shared_input_prefix_tokens": 81,
+      "max_raw_difference": 0.09763309359550476,
+      "gates_exact": false,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-1",
+      "format": "bullets",
+      "shared_input_prefix_tokens": 60,
+      "max_raw_difference": 0.04348134994506836,
+      "gates_exact": true,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-2",
+      "format": "numbered",
+      "shared_input_prefix_tokens": 81,
+      "max_raw_difference": 0.025524914264678955,
+      "gates_exact": false,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-2",
+      "format": "bullets",
+      "shared_input_prefix_tokens": 60,
+      "max_raw_difference": 0.019821226596832275,
+      "gates_exact": true,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-3",
+      "format": "numbered",
+      "shared_input_prefix_tokens": 81,
+      "max_raw_difference": 0.164825439453125,
+      "gates_exact": false,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-3",
+      "format": "bullets",
+      "shared_input_prefix_tokens": 60,
+      "max_raw_difference": 0.033438414335250854,
+      "gates_exact": true,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-4",
+      "format": "numbered",
+      "shared_input_prefix_tokens": 81,
+      "max_raw_difference": 0.10400676727294922,
+      "gates_exact": false,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-4",
+      "format": "bullets",
+      "shared_input_prefix_tokens": 60,
+      "max_raw_difference": 0.01814168691635132,
+      "gates_exact": true,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-5",
+      "format": "numbered",
+      "shared_input_prefix_tokens": 81,
+      "max_raw_difference": 0.17310452461242676,
+      "gates_exact": false,
+      "active_locations_exact": true
+    },
+    {
+      "list_id": "list-5",
+      "format": "bullets",
+      "shared_input_prefix_tokens": 60,
+      "max_raw_difference": 0.019269585609436035,
+      "gates_exact": true,
+      "active_locations_exact": true
+    }
+  ],
+  "calibration": {
+    "prompt": "the eleventh month of the year is",
+    "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+    "final_input_gate": 1.1585536003112793,
+    "observer_exact": true
+  },
+  "max_pilot_gate": 2.153693199157715,
+  "max_shared_prefix_raw_difference": 0.17310452461242676,
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "native_dtype": "BF16",
+    "observer_dtype": "FP32",
+    "attention": "eager",
+    "TF32": false,
+    "threshold": 0.5448488593101501,
+    "model_checkpoint_verified": true,
+    "full_molt_checkpoint_verified": true
+  },
+  "results_sha256": "53319a3d91ad235544259d8a5e9e01566ba2a3865f6064bb8fabcfa42a1b52c2",
+  "protocol_sha256": "d68da70f62dfcf82826d4b3832000d17b78c829e0ca3e39b266a2fb6ee1e8334",
+  "question_active_events": [],
+  "list_active_events": [
+    {
+      "case": "list-1-numbered-5",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        132,
+        133
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 2.153693199157715,
+      "gate": 2.153693199157715,
+      "operator_norm": 29.78900909423828,
+      "contribution_norm": 64.15638732910156,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-1-numbered-11",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        132,
+        133
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 2.12520694732666,
+      "gate": 2.12520694732666,
+      "operator_norm": 29.628498077392578,
+      "contribution_norm": 62.96669006347656,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-1-numbered-12",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        132,
+        133
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 2.12520694732666,
+      "gate": 2.12520694732666,
+      "operator_norm": 29.628498077392578,
+      "contribution_norm": 62.96669006347656,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-2-numbered-5",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        133,
+        134
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 1.8489089012145996,
+      "gate": 1.8489089012145996,
+      "operator_norm": 27.84247589111328,
+      "contribution_norm": 51.47820281982422,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-2-numbered-11",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        133,
+        134
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 1.8358972072601318,
+      "gate": 1.8358972072601318,
+      "operator_norm": 27.73273277282715,
+      "contribution_norm": 50.91444778442383,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-2-numbered-12",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        133,
+        134
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 1.8358972072601318,
+      "gate": 1.8358972072601318,
+      "operator_norm": 27.73273277282715,
+      "contribution_norm": 50.91444778442383,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-3-numbered-5",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        134,
+        135
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 2.1468300819396973,
+      "gate": 2.1468300819396973,
+      "operator_norm": 28.50142478942871,
+      "contribution_norm": 61.18771743774414,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-3-numbered-11",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        134,
+        135
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 2.135186195373535,
+      "gate": 2.135186195373535,
+      "operator_norm": 28.489011764526367,
+      "contribution_norm": 60.829345703125,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-3-numbered-12",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        134,
+        135
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 2.135186195373535,
+      "gate": 2.135186195373535,
+      "operator_norm": 28.489011764526367,
+      "contribution_norm": 60.829345703125,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-4-numbered-5",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        132,
+        133
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 1.9623894691467285,
+      "gate": 1.9623894691467285,
+      "operator_norm": 28.138023376464844,
+      "contribution_norm": 55.2177619934082,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-4-numbered-11",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        132,
+        133
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 1.9545085430145264,
+      "gate": 1.9545085430145264,
+      "operator_norm": 28.098318099975586,
+      "contribution_norm": 54.91840362548828,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-4-numbered-12",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        132,
+        133
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 1.9545085430145264,
+      "gate": 1.9545085430145264,
+      "operator_norm": 28.098318099975586,
+      "contribution_norm": 54.91840362548828,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-5-numbered-5",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        131,
+        132
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 1.9981162548065186,
+      "gate": 1.9981162548065186,
+      "operator_norm": 29.139820098876953,
+      "contribution_norm": 58.22474670410156,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-5-numbered-11",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        131,
+        132
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 2.0550432205200195,
+      "gate": 2.0550432205200195,
+      "operator_norm": 29.344757080078125,
+      "contribution_norm": 60.304744720458984,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    },
+    {
+      "case": "list-5-numbered-12",
+      "position": 52,
+      "phase": "input",
+      "token_id": 198,
+      "token": "\n",
+      "offset": [
+        131,
+        132
+      ],
+      "region": "list",
+      "item": null,
+      "word_item": null,
+      "special": false,
+      "final_input": false,
+      "raw": 2.0550432205200195,
+      "gate": 2.0550432205200195,
+      "operator_norm": 29.344757080078125,
+      "contribution_norm": 60.304744720458984,
+      "trace_only_terminal": false,
+      "followed_by": "1"
+    }
+  ],
+  "comparison": {
+    "original_protocol_sha256": "1ebe8dc9cd9ff82dddf151b5632a9c951889e4e845e6fbe356aaf4c907f77ae1",
+    "original_results_sha256": "96ef45b757430cff63acb07959c0472f8f4c3b13cd5b5ad423a1a0a4263c7ec0",
+    "only_prompt_change": "Delete the exact substring \" starting from 1\"; retain its following period.",
+    "runner_identical_to_original": true,
+    "paired_case_ids_and_order_identical": true,
+    "all_30_cases_retained": true
+  }
+}

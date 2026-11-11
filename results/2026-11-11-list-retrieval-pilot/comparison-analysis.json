@@ -1,0 +1,3537 @@
+{
+  "paired_cases": 30,
+  "native_observer_exact_runs": 62,
+  "interventions": 0,
+  "only_prompt_change": "Delete \" starting from 1\"; preserve all other prompt text, word orders and settings.",
+  "original_results_sha256": "96ef45b757430cff63acb07959c0472f8f4c3b13cd5b5ad423a1a0a4263c7ec0",
+  "revised_results_sha256": "53319a3d91ad235544259d8a5e9e01566ba2a3865f6064bb8fabcfa42a1b52c2",
+  "summaries": {
+    "original": {
+      "pilot_cases": 30,
+      "lists": 5,
+      "formats": 2,
+      "requested_positions": [
+        5,
+        11,
+        12
+      ],
+      "strict_correct": 20,
+      "first_word_correct": 21,
+      "truncated": 0,
+      "observer_exact_cases": 31,
+      "interventions": 0,
+      "groups": [
+        {
+          "format": "numbered",
+          "ordinal": 5,
+          "cases": 5,
+          "strict_correct": 4,
+          "first_word_correct": 4,
+          "truncated": 0,
+          "active_cases": {
+            "list": 5,
+            "question": 0,
+            "answer_prefix": 0,
+            "response": 0
+          },
+          "final_input_active_cases": 0
+        },
+        {
+          "format": "numbered",
+          "ordinal": 11,
+          "cases": 5,
+          "strict_correct": 5,
+          "first_word_correct": 5,
+          "truncated": 0,
+          "active_cases": {
+            "list": 5,
+            "question": 5,
+            "answer_prefix": 5,
+            "response": 0
+          },
+          "final_input_active_cases": 5
+        },
+        {
+          "format": "numbered",
+          "ordinal": 12,
+          "cases": 5,
+          "strict_correct": 4,
+          "first_word_correct": 5,
+          "truncated": 0,
+          "active_cases": {
+            "list": 5,
+            "question": 1,
+            "answer_prefix": 1,
+            "response": 0
+          },
+          "final_input_active_cases": 1
+        },
+        {
+          "format": "bullets",
+          "ordinal": 5,
+          "cases": 5,
+          "strict_correct": 3,
+          "first_word_correct": 3,
+          "truncated": 0,
+          "active_cases": {
+            "list": 0,
+            "question": 0,
+            "answer_prefix": 0,
+            "response": 0
+          },
+          "final_input_active_cases": 0
+        },
+        {
+          "format": "bullets",
+          "ordinal": 11,
+          "cases": 5,
+          "strict_correct": 2,
+          "first_word_correct": 2,
+          "truncated": 0,
+          "active_cases": {
+            "list": 0,
+            "question": 5,
+            "answer_prefix": 5,
+            "response": 0
+          },
+          "final_input_active_cases": 5
+        },
+        {
+          "format": "bullets",
+          "ordinal": 12,
+          "cases": 5,
+          "strict_correct": 2,
+          "first_word_correct": 2,
+          "truncated": 0,
+          "active_cases": {
+            "list": 0,
+            "question": 5,
+            "answer_prefix": 2,
+            "response": 0
+          },
+          "final_input_active_cases": 2
+        }
+      ],
+      "shared_prefix_checks": [
+        {
+          "list_id": "list-1",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.043568313121795654,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-1",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.015214771032333374,
+          "gates_exact": true,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-2",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.06876850128173828,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-2",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.09124630689620972,
+          "gates_exact": true,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-3",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.18677163124084473,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-3",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.010072290897369385,
+          "gates_exact": true,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-4",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.18126368522644043,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-4",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.01328587532043457,
+          "gates_exact": true,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-5",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.11524546146392822,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-5",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.005478620529174805,
+          "gates_exact": true,
+          "active_locations_exact": true
+        }
+      ],
+      "calibration": {
+        "prompt": "the eleventh month of the year is",
+        "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+        "final_input_gate": 1.1585536003112793,
+        "observer_exact": true
+      },
+      "max_pilot_gate": 2.1534810066223145,
+      "max_shared_prefix_raw_difference": 0.18677163124084473,
+      "runtime": {
+        "torch": "2.14.0+cu126",
+        "transformers": "4.57.6",
+        "gpu": "NVIDIA GeForce RTX 3090",
+        "native_dtype": "BF16",
+        "observer_dtype": "FP32",
+        "attention": "eager",
+        "TF32": false,
+        "threshold": 0.5448488593101501,
+        "model_checkpoint_verified": true,
+        "full_molt_checkpoint_verified": true
+      },
+      "results_sha256": "96ef45b757430cff63acb07959c0472f8f4c3b13cd5b5ad423a1a0a4263c7ec0",
+      "protocol_sha256": "1ebe8dc9cd9ff82dddf151b5632a9c951889e4e845e6fbe356aaf4c907f77ae1",
+      "prefix_numerical_diagnostic": {
+        "posthoc_numerical_diagnostic": true,
+        "purpose": "Check shared-prefix numerical invariance at equal GEMM/prefill lengths; no generated answers or gate edits.",
+        "checks": [
+          {
+            "list_id": "list-1",
+            "format": "numbered",
+            "padded_length": 112,
+            "shared_prefix_tokens": 81,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-1",
+            "format": "bullets",
+            "padded_length": 91,
+            "shared_prefix_tokens": 60,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-2",
+            "format": "numbered",
+            "padded_length": 112,
+            "shared_prefix_tokens": 81,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-2",
+            "format": "bullets",
+            "padded_length": 91,
+            "shared_prefix_tokens": 60,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-3",
+            "format": "numbered",
+            "padded_length": 112,
+            "shared_prefix_tokens": 81,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-3",
+            "format": "bullets",
+            "padded_length": 91,
+            "shared_prefix_tokens": 60,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-4",
+            "format": "numbered",
+            "padded_length": 112,
+            "shared_prefix_tokens": 81,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-4",
+            "format": "bullets",
+            "padded_length": 91,
+            "shared_prefix_tokens": 60,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-5",
+            "format": "numbered",
+            "padded_length": 112,
+            "shared_prefix_tokens": 81,
+            "max_shared_prefix_raw_difference": 0.0
+          },
+          {
+            "list_id": "list-5",
+            "format": "bullets",
+            "padded_length": 91,
+            "shared_prefix_tokens": 60,
+            "max_shared_prefix_raw_difference": 0.0
+          }
+        ],
+        "maximum_raw_difference": 0.0,
+        "all_equal": true,
+        "generated_tokens": 0,
+        "interventions": 0,
+        "source_sha256": "8413d08c0ad3651f155681e7a7f5e2f1d0c68f3390c92d049adc392a219da2cb"
+      },
+      "shared_prefix_active_locations_exact": true,
+      "question_active_tokens_are_spaces_before_1": true,
+      "question_active_events": 16,
+      "list_active_tokens_are_newlines_before_label11": true,
+      "list_active_events": 15
+    },
+    "revised": {
+      "pilot_cases": 30,
+      "lists": 5,
+      "formats": 2,
+      "requested_positions": [
+        5,
+        11,
+        12
+      ],
+      "strict_correct": 20,
+      "first_word_correct": 20,
+      "truncated": 0,
+      "observer_exact_cases": 31,
+      "interventions": 0,
+      "groups": [
+        {
+          "format": "numbered",
+          "ordinal": 5,
+          "cases": 5,
+          "strict_correct": 3,
+          "first_word_correct": 3,
+          "truncated": 0,
+          "active_cases": {
+            "list": 5,
+            "question": 0,
+            "answer_prefix": 0,
+            "response": 0
+          },
+          "final_input_active_cases": 0
+        },
+        {
+          "format": "numbered",
+          "ordinal": 11,
+          "cases": 5,
+          "strict_correct": 5,
+          "first_word_correct": 5,
+          "truncated": 0,
+          "active_cases": {
+            "list": 5,
+            "question": 0,
+            "answer_prefix": 5,
+            "response": 0
+          },
+          "final_input_active_cases": 5
+        },
+        {
+          "format": "numbered",
+          "ordinal": 12,
+          "cases": 5,
+          "strict_correct": 5,
+          "first_word_correct": 5,
+          "truncated": 0,
+          "active_cases": {
+            "list": 5,
+            "question": 0,
+            "answer_prefix": 1,
+            "response": 0
+          },
+          "final_input_active_cases": 1
+        },
+        {
+          "format": "bullets",
+          "ordinal": 5,
+          "cases": 5,
+          "strict_correct": 3,
+          "first_word_correct": 3,
+          "truncated": 0,
+          "active_cases": {
+            "list": 0,
+            "question": 0,
+            "answer_prefix": 0,
+            "response": 0
+          },
+          "final_input_active_cases": 0
+        },
+        {
+          "format": "bullets",
+          "ordinal": 11,
+          "cases": 5,
+          "strict_correct": 2,
+          "first_word_correct": 2,
+          "truncated": 0,
+          "active_cases": {
+            "list": 0,
+            "question": 0,
+            "answer_prefix": 5,
+            "response": 0
+          },
+          "final_input_active_cases": 5
+        },
+        {
+          "format": "bullets",
+          "ordinal": 12,
+          "cases": 5,
+          "strict_correct": 2,
+          "first_word_correct": 2,
+          "truncated": 0,
+          "active_cases": {
+            "list": 0,
+            "question": 0,
+            "answer_prefix": 2,
+            "response": 0
+          },
+          "final_input_active_cases": 2
+        }
+      ],
+      "shared_prefix_checks": [
+        {
+          "list_id": "list-1",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.09763309359550476,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-1",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.04348134994506836,
+          "gates_exact": true,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-2",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.025524914264678955,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-2",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.019821226596832275,
+          "gates_exact": true,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-3",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.164825439453125,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-3",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.033438414335250854,
+          "gates_exact": true,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-4",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.10400676727294922,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-4",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.01814168691635132,
+          "gates_exact": true,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-5",
+          "format": "numbered",
+          "shared_input_prefix_tokens": 81,
+          "max_raw_difference": 0.17310452461242676,
+          "gates_exact": false,
+          "active_locations_exact": true
+        },
+        {
+          "list_id": "list-5",
+          "format": "bullets",
+          "shared_input_prefix_tokens": 60,
+          "max_raw_difference": 0.019269585609436035,
+          "gates_exact": true,
+          "active_locations_exact": true
+        }
+      ],
+      "calibration": {
+        "prompt": "the eleventh month of the year is",
+        "response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+        "final_input_gate": 1.1585536003112793,
+        "observer_exact": true
+      },
+      "max_pilot_gate": 2.153693199157715,
+      "max_shared_prefix_raw_difference": 0.17310452461242676,
+      "runtime": {
+        "torch": "2.14.0+cu126",
+        "transformers": "4.57.6",
+        "gpu": "NVIDIA GeForce RTX 3090",
+        "native_dtype": "BF16",
+        "observer_dtype": "FP32",
+        "attention": "eager",
+        "TF32": false,
+        "threshold": 0.5448488593101501,
+        "model_checkpoint_verified": true,
+        "full_molt_checkpoint_verified": true
+      },
+      "results_sha256": "53319a3d91ad235544259d8a5e9e01566ba2a3865f6064bb8fabcfa42a1b52c2",
+      "protocol_sha256": "d68da70f62dfcf82826d4b3832000d17b78c829e0ca3e39b266a2fb6ee1e8334",
+      "question_active_events": [],
+      "list_active_events": [
+        {
+          "case": "list-1-numbered-5",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            132,
+            133
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 2.153693199157715,
+          "gate": 2.153693199157715,
+          "operator_norm": 29.78900909423828,
+          "contribution_norm": 64.15638732910156,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-1-numbered-11",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            132,
+            133
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 2.12520694732666,
+          "gate": 2.12520694732666,
+          "operator_norm": 29.628498077392578,
+          "contribution_norm": 62.96669006347656,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-1-numbered-12",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            132,
+            133
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 2.12520694732666,
+          "gate": 2.12520694732666,
+          "operator_norm": 29.628498077392578,
+          "contribution_norm": 62.96669006347656,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-2-numbered-5",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            133,
+            134
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 1.8489089012145996,
+          "gate": 1.8489089012145996,
+          "operator_norm": 27.84247589111328,
+          "contribution_norm": 51.47820281982422,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-2-numbered-11",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            133,
+            134
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 1.8358972072601318,
+          "gate": 1.8358972072601318,
+          "operator_norm": 27.73273277282715,
+          "contribution_norm": 50.91444778442383,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-2-numbered-12",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            133,
+            134
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 1.8358972072601318,
+          "gate": 1.8358972072601318,
+          "operator_norm": 27.73273277282715,
+          "contribution_norm": 50.91444778442383,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-3-numbered-5",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            134,
+            135
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 2.1468300819396973,
+          "gate": 2.1468300819396973,
+          "operator_norm": 28.50142478942871,
+          "contribution_norm": 61.18771743774414,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-3-numbered-11",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            134,
+            135
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 2.135186195373535,
+          "gate": 2.135186195373535,
+          "operator_norm": 28.489011764526367,
+          "contribution_norm": 60.829345703125,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-3-numbered-12",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            134,
+            135
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 2.135186195373535,
+          "gate": 2.135186195373535,
+          "operator_norm": 28.489011764526367,
+          "contribution_norm": 60.829345703125,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-4-numbered-5",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            132,
+            133
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 1.9623894691467285,
+          "gate": 1.9623894691467285,
+          "operator_norm": 28.138023376464844,
+          "contribution_norm": 55.2177619934082,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-4-numbered-11",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            132,
+            133
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 1.9545085430145264,
+          "gate": 1.9545085430145264,
+          "operator_norm": 28.098318099975586,
+          "contribution_norm": 54.91840362548828,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-4-numbered-12",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            132,
+            133
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 1.9545085430145264,
+          "gate": 1.9545085430145264,
+          "operator_norm": 28.098318099975586,
+          "contribution_norm": 54.91840362548828,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-5-numbered-5",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            131,
+            132
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 1.9981162548065186,
+          "gate": 1.9981162548065186,
+          "operator_norm": 29.139820098876953,
+          "contribution_norm": 58.22474670410156,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-5-numbered-11",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            131,
+            132
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 2.0550432205200195,
+          "gate": 2.0550432205200195,
+          "operator_norm": 29.344757080078125,
+          "contribution_norm": 60.304744720458984,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        },
+        {
+          "case": "list-5-numbered-12",
+          "position": 52,
+          "phase": "input",
+          "token_id": 198,
+          "token": "\n",
+          "offset": [
+            131,
+            132
+          ],
+          "region": "list",
+          "item": null,
+          "word_item": null,
+          "special": false,
+          "final_input": false,
+          "raw": 2.0550432205200195,
+          "gate": 2.0550432205200195,
+          "operator_norm": 29.344757080078125,
+          "contribution_norm": 60.304744720458984,
+          "trace_only_terminal": false,
+          "followed_by": "1"
+        }
+      ],
+      "comparison": {
+        "original_protocol_sha256": "1ebe8dc9cd9ff82dddf151b5632a9c951889e4e845e6fbe356aaf4c907f77ae1",
+        "original_results_sha256": "96ef45b757430cff63acb07959c0472f8f4c3b13cd5b5ad423a1a0a4263c7ec0",
+        "only_prompt_change": "Delete the exact substring \" starting from 1\"; retain its following period.",
+        "runner_identical_to_original": true,
+        "paired_case_ids_and_order_identical": true,
+        "all_30_cases_retained": true
+      }
+    }
+  },
+  "groups": [
+    {
+      "format": "numbered",
+      "ordinal": 5,
+      "original": {
+        "format": "numbered",
+        "ordinal": 5,
+        "cases": 5,
+        "strict_correct": 4,
+        "first_word_correct": 4,
+        "truncated": 0,
+        "active_cases": {
+          "list": 5,
+          "question": 0,
+          "answer_prefix": 0,
+          "response": 0
+        },
+        "final_input_active_cases": 0
+      },
+      "revised": {
+        "format": "numbered",
+        "ordinal": 5,
+        "cases": 5,
+        "strict_correct": 3,
+        "first_word_correct": 3,
+        "truncated": 0,
+        "active_cases": {
+          "list": 5,
+          "question": 0,
+          "answer_prefix": 0,
+          "response": 0
+        },
+        "final_input_active_cases": 0
+      }
+    },
+    {
+      "format": "numbered",
+      "ordinal": 11,
+      "original": {
+        "format": "numbered",
+        "ordinal": 11,
+        "cases": 5,
+        "strict_correct": 5,
+        "first_word_correct": 5,
+        "truncated": 0,
+        "active_cases": {
+          "list": 5,
+          "question": 5,
+          "answer_prefix": 5,
+          "response": 0
+        },
+        "final_input_active_cases": 5
+      },
+      "revised": {
+        "format": "numbered",
+        "ordinal": 11,
+        "cases": 5,
+        "strict_correct": 5,
+        "first_word_correct": 5,
+        "truncated": 0,
+        "active_cases": {
+          "list": 5,
+          "question": 0,
+          "answer_prefix": 5,
+          "response": 0
+        },
+        "final_input_active_cases": 5
+      }
+    },
+    {
+      "format": "numbered",
+      "ordinal": 12,
+      "original": {
+        "format": "numbered",
+        "ordinal": 12,
+        "cases": 5,
+        "strict_correct": 4,
+        "first_word_correct": 5,
+        "truncated": 0,
+        "active_cases": {
+          "list": 5,
+          "question": 1,
+          "answer_prefix": 1,
+          "response": 0
+        },
+        "final_input_active_cases": 1
+      },
+      "revised": {
+        "format": "numbered",
+        "ordinal": 12,
+        "cases": 5,
+        "strict_correct": 5,
+        "first_word_correct": 5,
+        "truncated": 0,
+        "active_cases": {
+          "list": 5,
+          "question": 0,
+          "answer_prefix": 1,
+          "response": 0
+        },
+        "final_input_active_cases": 1
+      }
+    },
+    {
+      "format": "bullets",
+      "ordinal": 5,
+      "original": {
+        "format": "bullets",
+        "ordinal": 5,
+        "cases": 5,
+        "strict_correct": 3,
+        "first_word_correct": 3,
+        "truncated": 0,
+        "active_cases": {
+          "list": 0,
+          "question": 0,
+          "answer_prefix": 0,
+          "response": 0
+        },
+        "final_input_active_cases": 0
+      },
+      "revised": {
+        "format": "bullets",
+        "ordinal": 5,
+        "cases": 5,
+        "strict_correct": 3,
+        "first_word_correct": 3,
+        "truncated": 0,
+        "active_cases": {
+          "list": 0,
+          "question": 0,
+          "answer_prefix": 0,
+          "response": 0
+        },
+        "final_input_active_cases": 0
+      }
+    },
+    {
+      "format": "bullets",
+      "ordinal": 11,
+      "original": {
+        "format": "bullets",
+        "ordinal": 11,
+        "cases": 5,
+        "strict_correct": 2,
+        "first_word_correct": 2,
+        "truncated": 0,
+        "active_cases": {
+          "list": 0,
+          "question": 5,
+          "answer_prefix": 5,
+          "response": 0
+        },
+        "final_input_active_cases": 5
+      },
+      "revised": {
+        "format": "bullets",
+        "ordinal": 11,
+        "cases": 5,
+        "strict_correct": 2,
+        "first_word_correct": 2,
+        "truncated": 0,
+        "active_cases": {
+          "list": 0,
+          "question": 0,
+          "answer_prefix": 5,
+          "response": 0
+        },
+        "final_input_active_cases": 5
+      }
+    },
+    {
+      "format": "bullets",
+      "ordinal": 12,
+      "original": {
+        "format": "bullets",
+        "ordinal": 12,
+        "cases": 5,
+        "strict_correct": 2,
+        "first_word_correct": 2,
+        "truncated": 0,
+        "active_cases": {
+          "list": 0,
+          "question": 5,
+          "answer_prefix": 2,
+          "response": 0
+        },
+        "final_input_active_cases": 2
+      },
+      "revised": {
+        "format": "bullets",
+        "ordinal": 12,
+        "cases": 5,
+        "strict_correct": 2,
+        "first_word_correct": 2,
+        "truncated": 0,
+        "active_cases": {
+          "list": 0,
+          "question": 0,
+          "answer_prefix": 2,
+          "response": 0
+        },
+        "final_input_active_cases": 2
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "id": "list-1-numbered-5",
+      "list_id": "list-1",
+      "format": "numbered",
+      "ordinal": 5,
+      "expected": "wheel",
+      "original_response": "wheel",
+      "revised_response": "wheel",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-1-numbered-11",
+      "list_id": "list-1",
+      "format": "numbered",
+      "ordinal": 11,
+      "expected": "pencil",
+      "original_response": "pencil",
+      "revised_response": "pencil",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-1-numbered-12",
+      "list_id": "list-1",
+      "format": "numbered",
+      "ordinal": 12,
+      "expected": "drum",
+      "original_response": "drum",
+      "revised_response": "drum",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-1-bullets-5",
+      "list_id": "list-1",
+      "format": "bullets",
+      "ordinal": 5,
+      "expected": "wheel",
+      "original_response": "wheel",
+      "revised_response": "wheel",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-1-bullets-11",
+      "list_id": "list-1",
+      "format": "bullets",
+      "ordinal": 11,
+      "expected": "pencil",
+      "original_response": "pencil",
+      "revised_response": "pencil",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-1-bullets-12",
+      "list_id": "list-1",
+      "format": "bullets",
+      "ordinal": 12,
+      "expected": "drum",
+      "original_response": "pencil",
+      "revised_response": "pencil",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-2-numbered-5",
+      "list_id": "list-2",
+      "format": "numbered",
+      "ordinal": 5,
+      "expected": "ring",
+      "original_response": "ring",
+      "revised_response": "ring",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-2-numbered-11",
+      "list_id": "list-2",
+      "format": "numbered",
+      "ordinal": 11,
+      "expected": "shoe",
+      "original_response": "shoe",
+      "revised_response": "shoe",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-2-numbered-12",
+      "list_id": "list-2",
+      "format": "numbered",
+      "ordinal": 12,
+      "expected": "hammer",
+      "original_response": "12. hammer",
+      "revised_response": "hammer",
+      "response_changed": true,
+      "strict_improved": true,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-2-bullets-5",
+      "list_id": "list-2",
+      "format": "bullets",
+      "ordinal": 5,
+      "expected": "ring",
+      "original_response": "ring",
+      "revised_response": "ring",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-2-bullets-11",
+      "list_id": "list-2",
+      "format": "bullets",
+      "ordinal": 11,
+      "expected": "shoe",
+      "original_response": "spoon",
+      "revised_response": "spoon",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-2-bullets-12",
+      "list_id": "list-2",
+      "format": "bullets",
+      "ordinal": 12,
+      "expected": "hammer",
+      "original_response": "hammer",
+      "revised_response": "hammer",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-3-numbered-5",
+      "list_id": "list-3",
+      "format": "numbered",
+      "ordinal": 5,
+      "expected": "ticket",
+      "original_response": "ticket",
+      "revised_response": "kite",
+      "response_changed": true,
+      "strict_improved": false,
+      "strict_worsened": true,
+      "first_word_improved": false,
+      "first_word_worsened": true
+    },
+    {
+      "id": "list-3-numbered-11",
+      "list_id": "list-3",
+      "format": "numbered",
+      "ordinal": 11,
+      "expected": "ring",
+      "original_response": "ring",
+      "revised_response": "ring",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-3-numbered-12",
+      "list_id": "list-3",
+      "format": "numbered",
+      "ordinal": 12,
+      "expected": "apple",
+      "original_response": "apple",
+      "revised_response": "apple",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-3-bullets-5",
+      "list_id": "list-3",
+      "format": "bullets",
+      "ordinal": 5,
+      "expected": "ticket",
+      "original_response": "wheel",
+      "revised_response": "wheel",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-3-bullets-11",
+      "list_id": "list-3",
+      "format": "bullets",
+      "ordinal": 11,
+      "expected": "ring",
+      "original_response": "lamp",
+      "revised_response": "lamp",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-3-bullets-12",
+      "list_id": "list-3",
+      "format": "bullets",
+      "ordinal": 12,
+      "expected": "apple",
+      "original_response": "ring",
+      "revised_response": "bell",
+      "response_changed": true,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-4-numbered-5",
+      "list_id": "list-4",
+      "format": "numbered",
+      "ordinal": 5,
+      "expected": "fork",
+      "original_response": "fork",
+      "revised_response": "fork",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-4-numbered-11",
+      "list_id": "list-4",
+      "format": "numbered",
+      "ordinal": 11,
+      "expected": "ticket",
+      "original_response": "ticket",
+      "revised_response": "ticket",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-4-numbered-12",
+      "list_id": "list-4",
+      "format": "numbered",
+      "ordinal": 12,
+      "expected": "spoon",
+      "original_response": "spoon",
+      "revised_response": "spoon",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-4-bullets-5",
+      "list_id": "list-4",
+      "format": "bullets",
+      "ordinal": 5,
+      "expected": "fork",
+      "original_response": "fork",
+      "revised_response": "fork",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-4-bullets-11",
+      "list_id": "list-4",
+      "format": "bullets",
+      "ordinal": 11,
+      "expected": "ticket",
+      "original_response": "shoe",
+      "revised_response": "shoe",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-4-bullets-12",
+      "list_id": "list-4",
+      "format": "bullets",
+      "ordinal": 12,
+      "expected": "spoon",
+      "original_response": "spoon",
+      "revised_response": "spoon",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-5-numbered-5",
+      "list_id": "list-5",
+      "format": "numbered",
+      "ordinal": 5,
+      "expected": "lamp",
+      "original_response": "drum",
+      "revised_response": "drum",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-5-numbered-11",
+      "list_id": "list-5",
+      "format": "numbered",
+      "ordinal": 11,
+      "expected": "hammer",
+      "original_response": "hammer",
+      "revised_response": "hammer",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-5-numbered-12",
+      "list_id": "list-5",
+      "format": "numbered",
+      "ordinal": 12,
+      "expected": "ticket",
+      "original_response": "ticket",
+      "revised_response": "ticket",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-5-bullets-5",
+      "list_id": "list-5",
+      "format": "bullets",
+      "ordinal": 5,
+      "expected": "lamp",
+      "original_response": "wheel",
+      "revised_response": "wheel",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-5-bullets-11",
+      "list_id": "list-5",
+      "format": "bullets",
+      "ordinal": 11,
+      "expected": "hammer",
+      "original_response": "hammer",
+      "revised_response": "hammer",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    },
+    {
+      "id": "list-5-bullets-12",
+      "list_id": "list-5",
+      "format": "bullets",
+      "ordinal": 12,
+      "expected": "ticket",
+      "original_response": "hammer",
+      "revised_response": "hammer",
+      "response_changed": false,
+      "strict_improved": false,
+      "strict_worsened": false,
+      "first_word_improved": false,
+      "first_word_worsened": false
+    }
+  ],
+  "response_changed": 3,
+  "strict_improved": 1,
+  "strict_worsened": 1,
+  "first_word_improved": 0,
+  "first_word_worsened": 1,
+  "active_events": {
+    "original": [
+      {
+        "case": "list-1-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.1497440338134766,
+        "gate": 2.1497440338134766,
+        "operator_norm": 29.677146911621094,
+        "contribution_norm": 63.79827117919922,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-1-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.131105422973633,
+        "gate": 2.131105422973633,
+        "operator_norm": 29.651939392089844,
+        "contribution_norm": 63.191410064697266,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-1-numbered-11",
+        "position": 94,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          258,
+          259
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.9789475798606873,
+        "gate": 0.9789475798606873,
+        "operator_norm": 16.062271118164062,
+        "contribution_norm": 15.72412109375,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-1-numbered-11",
+        "position": 104,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          298,
+          299
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.2328472137451172,
+        "gate": 1.2328472137451172,
+        "operator_norm": 18.63824462890625,
+        "contribution_norm": 22.978107452392578,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-1-numbered-11",
+        "position": 111,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          338,
+          340
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.830545425415039,
+        "gate": 1.830545425415039,
+        "operator_norm": 19.135908126831055,
+        "contribution_norm": 35.02914810180664,
+        "trace_only_terminal": false,
+        "followed_by": "p"
+      },
+      {
+        "case": "list-1-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.131105422973633,
+        "gate": 2.131105422973633,
+        "operator_norm": 29.651939392089844,
+        "contribution_norm": 63.191410064697266,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-1-bullets-11",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          237,
+          238
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.5794987678527832,
+        "gate": 1.5794987678527832,
+        "operator_norm": 17.433420181274414,
+        "contribution_norm": 27.53606605529785,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-1-bullets-11",
+        "position": 83,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          277,
+          278
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.666934072971344,
+        "gate": 0.666934072971344,
+        "operator_norm": 14.938880920410156,
+        "contribution_norm": 9.963248252868652,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-1-bullets-11",
+        "position": 90,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          317,
+          319
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.3167104721069336,
+        "gate": 1.3167104721069336,
+        "operator_norm": 16.380298614501953,
+        "contribution_norm": 21.568111419677734,
+        "trace_only_terminal": false,
+        "followed_by": "p"
+      },
+      {
+        "case": "list-1-bullets-12",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          236,
+          237
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.1829705238342285,
+        "gate": 1.1829705238342285,
+        "operator_norm": 17.01348114013672,
+        "contribution_norm": 20.126445770263672,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          133,
+          134
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.8814151287078857,
+        "gate": 1.8814151287078857,
+        "operator_norm": 27.971925735473633,
+        "contribution_norm": 52.62680435180664,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          133,
+          134
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.8494977951049805,
+        "gate": 1.8494977951049805,
+        "operator_norm": 27.832029342651367,
+        "contribution_norm": 51.475276947021484,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-numbered-11",
+        "position": 94,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          258,
+          259
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.1785564422607422,
+        "gate": 1.1785564422607422,
+        "operator_norm": 17.20001983642578,
+        "contribution_norm": 20.271194458007812,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-numbered-11",
+        "position": 104,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          298,
+          299
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.9221861958503723,
+        "gate": 0.9221861958503723,
+        "operator_norm": 16.102262496948242,
+        "contribution_norm": 14.849284172058105,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-2-numbered-11",
+        "position": 111,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          338,
+          340
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.468156337738037,
+        "gate": 1.468156337738037,
+        "operator_norm": 17.40727996826172,
+        "contribution_norm": 25.556608200073242,
+        "trace_only_terminal": false,
+        "followed_by": "sh"
+      },
+      {
+        "case": "list-2-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          133,
+          134
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.8494977951049805,
+        "gate": 1.8494977951049805,
+        "operator_norm": 27.832029342651367,
+        "contribution_norm": 51.475276947021484,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-bullets-11",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          237,
+          238
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.5018267631530762,
+        "gate": 1.5018267631530762,
+        "operator_norm": 17.23659896850586,
+        "contribution_norm": 25.886384963989258,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-bullets-11",
+        "position": 83,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          277,
+          278
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.5638650059700012,
+        "gate": 0.5638650059700012,
+        "operator_norm": 13.948782920837402,
+        "contribution_norm": 7.865230560302734,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-2-bullets-11",
+        "position": 90,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          317,
+          319
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.9452760815620422,
+        "gate": 0.9452760815620422,
+        "operator_norm": 14.6521577835083,
+        "contribution_norm": 13.850334167480469,
+        "trace_only_terminal": false,
+        "followed_by": "sp"
+      },
+      {
+        "case": "list-2-bullets-12",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          236,
+          237
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.9531744122505188,
+        "gate": 0.9531744122505188,
+        "operator_norm": 15.812994003295898,
+        "contribution_norm": 15.072541236877441,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          134,
+          135
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.1116201877593994,
+        "gate": 2.1116201877593994,
+        "operator_norm": 28.4262638092041,
+        "contribution_norm": 60.02547073364258,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          134,
+          135
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.1534810066223145,
+        "gate": 2.1534810066223145,
+        "operator_norm": 28.56906509399414,
+        "contribution_norm": 61.5229377746582,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-11",
+        "position": 94,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          258,
+          259
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.0998668670654297,
+        "gate": 1.0998668670654297,
+        "operator_norm": 16.518226623535156,
+        "contribution_norm": 18.167850494384766,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-11",
+        "position": 104,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          298,
+          299
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.8189709782600403,
+        "gate": 0.8189709782600403,
+        "operator_norm": 15.280451774597168,
+        "contribution_norm": 12.514246940612793,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-3-numbered-11",
+        "position": 111,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          338,
+          340
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.5284245014190674,
+        "gate": 1.5284245014190674,
+        "operator_norm": 16.799785614013672,
+        "contribution_norm": 25.677204132080078,
+        "trace_only_terminal": false,
+        "followed_by": "ring"
+      },
+      {
+        "case": "list-3-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          134,
+          135
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.1534810066223145,
+        "gate": 2.1534810066223145,
+        "operator_norm": 28.56906509399414,
+        "contribution_norm": 61.5229377746582,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-12",
+        "position": 94,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          257,
+          258
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.6250479817390442,
+        "gate": 0.6250479817390442,
+        "operator_norm": 14.833328247070312,
+        "contribution_norm": 9.271541595458984,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-12",
+        "position": 111,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          337,
+          339
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.0334863662719727,
+        "gate": 1.0334863662719727,
+        "operator_norm": 13.190757751464844,
+        "contribution_norm": 13.632468223571777,
+        "trace_only_terminal": false,
+        "followed_by": "apple"
+      },
+      {
+        "case": "list-3-bullets-11",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          237,
+          238
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.6287336349487305,
+        "gate": 1.6287336349487305,
+        "operator_norm": 17.809823989868164,
+        "contribution_norm": 29.00745964050293,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-bullets-11",
+        "position": 83,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          277,
+          278
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.9721494317054749,
+        "gate": 0.9721494317054749,
+        "operator_norm": 16.7343692779541,
+        "contribution_norm": 16.268306732177734,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-3-bullets-11",
+        "position": 90,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          317,
+          319
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.243729591369629,
+        "gate": 1.243729591369629,
+        "operator_norm": 15.702430725097656,
+        "contribution_norm": 19.529577255249023,
+        "trace_only_terminal": false,
+        "followed_by": "lamp"
+      },
+      {
+        "case": "list-3-bullets-12",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          236,
+          237
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.131659746170044,
+        "gate": 1.131659746170044,
+        "operator_norm": 16.776796340942383,
+        "contribution_norm": 18.985624313354492,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-bullets-12",
+        "position": 90,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          316,
+          318
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.7139100432395935,
+        "gate": 0.7139100432395935,
+        "operator_norm": 13.020467758178711,
+        "contribution_norm": 9.295442581176758,
+        "trace_only_terminal": false,
+        "followed_by": "ring"
+      },
+      {
+        "case": "list-4-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.9529469013214111,
+        "gate": 1.9529469013214111,
+        "operator_norm": 28.042327880859375,
+        "contribution_norm": 54.76517868041992,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.9511919021606445,
+        "gate": 1.9511919021606445,
+        "operator_norm": 28.12395668029785,
+        "contribution_norm": 54.87523651123047,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-numbered-11",
+        "position": 94,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          258,
+          259
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.077136754989624,
+        "gate": 1.077136754989624,
+        "operator_norm": 16.121864318847656,
+        "contribution_norm": 17.36545181274414,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-numbered-11",
+        "position": 104,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          298,
+          299
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.2910547256469727,
+        "gate": 1.2910547256469727,
+        "operator_norm": 17.277511596679688,
+        "contribution_norm": 22.30621337890625,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-4-numbered-11",
+        "position": 111,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          338,
+          340
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.4560108184814453,
+        "gate": 1.4560108184814453,
+        "operator_norm": 16.457298278808594,
+        "contribution_norm": 23.962003707885742,
+        "trace_only_terminal": false,
+        "followed_by": "ticket"
+      },
+      {
+        "case": "list-4-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.9511919021606445,
+        "gate": 1.9511919021606445,
+        "operator_norm": 28.12395668029785,
+        "contribution_norm": 54.87523651123047,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-bullets-11",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          237,
+          238
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.7176713943481445,
+        "gate": 1.7176713943481445,
+        "operator_norm": 18.46502685546875,
+        "contribution_norm": 31.716848373413086,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-bullets-11",
+        "position": 90,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          317,
+          319
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.8426631093025208,
+        "gate": 0.8426631093025208,
+        "operator_norm": 13.673863410949707,
+        "contribution_norm": 11.522459983825684,
+        "trace_only_terminal": false,
+        "followed_by": "sh"
+      },
+      {
+        "case": "list-4-bullets-12",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          236,
+          237
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.319270372390747,
+        "gate": 1.319270372390747,
+        "operator_norm": 17.720277786254883,
+        "contribution_norm": 23.377838134765625,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-bullets-12",
+        "position": 90,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          316,
+          318
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.5516923069953918,
+        "gate": 0.5516923069953918,
+        "operator_norm": 12.83381462097168,
+        "contribution_norm": 7.08031702041626,
+        "trace_only_terminal": false,
+        "followed_by": "sp"
+      },
+      {
+        "case": "list-5-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          131,
+          132
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.0264015197753906,
+        "gate": 2.0264015197753906,
+        "operator_norm": 29.200748443603516,
+        "contribution_norm": 59.17243957519531,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-5-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          131,
+          132
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.019836902618408,
+        "gate": 2.019836902618408,
+        "operator_norm": 29.252294540405273,
+        "contribution_norm": 59.08486557006836,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-5-numbered-11",
+        "position": 94,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          258,
+          259
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.7904865145683289,
+        "gate": 0.7904865145683289,
+        "operator_norm": 14.925161361694336,
+        "contribution_norm": 11.798138618469238,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-5-numbered-11",
+        "position": 104,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          298,
+          299
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.8223034739494324,
+        "gate": 0.8223034739494324,
+        "operator_norm": 14.8506498336792,
+        "contribution_norm": 12.211740493774414,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-5-numbered-11",
+        "position": 111,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          338,
+          340
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.6754693984985352,
+        "gate": 1.6754693984985352,
+        "operator_norm": 18.3641414642334,
+        "contribution_norm": 30.768556594848633,
+        "trace_only_terminal": false,
+        "followed_by": "hammer"
+      },
+      {
+        "case": "list-5-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          131,
+          132
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.019836902618408,
+        "gate": 2.019836902618408,
+        "operator_norm": 29.252294540405273,
+        "contribution_norm": 59.08486557006836,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-5-bullets-11",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          237,
+          238
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.6706290245056152,
+        "gate": 1.6706290245056152,
+        "operator_norm": 17.95775604248047,
+        "contribution_norm": 30.000747680664062,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-5-bullets-11",
+        "position": 90,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          317,
+          319
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.8005977272987366,
+        "gate": 0.8005977272987366,
+        "operator_norm": 13.453911781311035,
+        "contribution_norm": 10.771171569824219,
+        "trace_only_terminal": false,
+        "followed_by": "hammer"
+      },
+      {
+        "case": "list-5-bullets-12",
+        "position": 73,
+        "phase": "input",
+        "token_id": 220,
+        "token": " ",
+        "offset": [
+          236,
+          237
+        ],
+        "region": "question",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.2762761116027832,
+        "gate": 1.2762761116027832,
+        "operator_norm": 17.435522079467773,
+        "contribution_norm": 22.252540588378906,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      }
+    ],
+    "revised": [
+      {
+        "case": "list-1-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.153693199157715,
+        "gate": 2.153693199157715,
+        "operator_norm": 29.78900909423828,
+        "contribution_norm": 64.15638732910156,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-1-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.12520694732666,
+        "gate": 2.12520694732666,
+        "operator_norm": 29.628498077392578,
+        "contribution_norm": 62.96669006347656,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-1-numbered-11",
+        "position": 100,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          282,
+          283
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.1967580318450928,
+        "gate": 1.1967580318450928,
+        "operator_norm": 18.705623626708984,
+        "contribution_norm": 22.386104583740234,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-1-numbered-11",
+        "position": 107,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          322,
+          324
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.9780750274658203,
+        "gate": 1.9780750274658203,
+        "operator_norm": 20.015478134155273,
+        "contribution_norm": 39.59211730957031,
+        "trace_only_terminal": false,
+        "followed_by": "p"
+      },
+      {
+        "case": "list-1-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.12520694732666,
+        "gate": 2.12520694732666,
+        "operator_norm": 29.628498077392578,
+        "contribution_norm": 62.96669006347656,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-1-bullets-11",
+        "position": 79,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          261,
+          262
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.8111588358879089,
+        "gate": 0.8111588358879089,
+        "operator_norm": 15.549662590026855,
+        "contribution_norm": 12.613245964050293,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-1-bullets-11",
+        "position": 86,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          301,
+          303
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.4235186576843262,
+        "gate": 1.4235186576843262,
+        "operator_norm": 16.650894165039062,
+        "contribution_norm": 23.702857971191406,
+        "trace_only_terminal": false,
+        "followed_by": "p"
+      },
+      {
+        "case": "list-2-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          133,
+          134
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.8489089012145996,
+        "gate": 1.8489089012145996,
+        "operator_norm": 27.84247589111328,
+        "contribution_norm": 51.47820281982422,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          133,
+          134
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.8358972072601318,
+        "gate": 1.8358972072601318,
+        "operator_norm": 27.73273277282715,
+        "contribution_norm": 50.91444778442383,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-numbered-11",
+        "position": 100,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          282,
+          283
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.9048827290534973,
+        "gate": 0.9048827290534973,
+        "operator_norm": 16.075746536254883,
+        "contribution_norm": 14.54666519165039,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-2-numbered-11",
+        "position": 107,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          322,
+          324
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.5463900566101074,
+        "gate": 1.5463900566101074,
+        "operator_norm": 17.52954864501953,
+        "contribution_norm": 27.107519149780273,
+        "trace_only_terminal": false,
+        "followed_by": "sh"
+      },
+      {
+        "case": "list-2-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          133,
+          134
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.8358972072601318,
+        "gate": 1.8358972072601318,
+        "operator_norm": 27.73273277282715,
+        "contribution_norm": 50.91444778442383,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-2-bullets-11",
+        "position": 79,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          261,
+          262
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.5793668627738953,
+        "gate": 0.5793668627738953,
+        "operator_norm": 13.972233772277832,
+        "contribution_norm": 8.095048904418945,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-2-bullets-11",
+        "position": 86,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          301,
+          303
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.0596108436584473,
+        "gate": 1.0596108436584473,
+        "operator_norm": 15.335659980773926,
+        "contribution_norm": 16.249832153320312,
+        "trace_only_terminal": false,
+        "followed_by": "sp"
+      },
+      {
+        "case": "list-3-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          134,
+          135
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.1468300819396973,
+        "gate": 2.1468300819396973,
+        "operator_norm": 28.50142478942871,
+        "contribution_norm": 61.18771743774414,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          134,
+          135
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.135186195373535,
+        "gate": 2.135186195373535,
+        "operator_norm": 28.489011764526367,
+        "contribution_norm": 60.829345703125,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-11",
+        "position": 100,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          282,
+          283
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.8574935793876648,
+        "gate": 0.8574935793876648,
+        "operator_norm": 15.572647094726562,
+        "contribution_norm": 13.353445053100586,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-3-numbered-11",
+        "position": 107,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          322,
+          324
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.5957283973693848,
+        "gate": 1.5957283973693848,
+        "operator_norm": 16.97167205810547,
+        "contribution_norm": 27.082178115844727,
+        "trace_only_terminal": false,
+        "followed_by": "ring"
+      },
+      {
+        "case": "list-3-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          134,
+          135
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.135186195373535,
+        "gate": 2.135186195373535,
+        "operator_norm": 28.489011764526367,
+        "contribution_norm": 60.829345703125,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-3-numbered-12",
+        "position": 107,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          321,
+          323
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.8956133723258972,
+        "gate": 0.8956133723258972,
+        "operator_norm": 12.188666343688965,
+        "contribution_norm": 10.916332244873047,
+        "trace_only_terminal": false,
+        "followed_by": "apple"
+      },
+      {
+        "case": "list-3-bullets-11",
+        "position": 79,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          261,
+          262
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.110086441040039,
+        "gate": 1.110086441040039,
+        "operator_norm": 17.360700607299805,
+        "contribution_norm": 19.271879196166992,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-3-bullets-11",
+        "position": 86,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          301,
+          303
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.3506667613983154,
+        "gate": 1.3506667613983154,
+        "operator_norm": 16.065683364868164,
+        "contribution_norm": 21.699384689331055,
+        "trace_only_terminal": false,
+        "followed_by": "lamp"
+      },
+      {
+        "case": "list-3-bullets-12",
+        "position": 86,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          300,
+          302
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.690841019153595,
+        "gate": 0.690841019153595,
+        "operator_norm": 12.878548622131348,
+        "contribution_norm": 8.897029876708984,
+        "trace_only_terminal": false,
+        "followed_by": "bell"
+      },
+      {
+        "case": "list-4-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.9623894691467285,
+        "gate": 1.9623894691467285,
+        "operator_norm": 28.138023376464844,
+        "contribution_norm": 55.2177619934082,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.9545085430145264,
+        "gate": 1.9545085430145264,
+        "operator_norm": 28.098318099975586,
+        "contribution_norm": 54.91840362548828,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-numbered-11",
+        "position": 100,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          282,
+          283
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.0709099769592285,
+        "gate": 1.0709099769592285,
+        "operator_norm": 16.074386596679688,
+        "contribution_norm": 17.21422004699707,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-4-numbered-11",
+        "position": 107,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          322,
+          324
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.7273094654083252,
+        "gate": 1.7273094654083252,
+        "operator_norm": 17.753389358520508,
+        "contribution_norm": 30.665597915649414,
+        "trace_only_terminal": false,
+        "followed_by": "ticket"
+      },
+      {
+        "case": "list-4-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          132,
+          133
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.9545085430145264,
+        "gate": 1.9545085430145264,
+        "operator_norm": 28.098318099975586,
+        "contribution_norm": 54.91840362548828,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-4-bullets-11",
+        "position": 79,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          261,
+          262
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.6295040249824524,
+        "gate": 0.6295040249824524,
+        "operator_norm": 13.956757545471191,
+        "contribution_norm": 8.785835266113281,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-4-bullets-11",
+        "position": 86,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          301,
+          303
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.948890745639801,
+        "gate": 0.948890745639801,
+        "operator_norm": 13.945125579833984,
+        "contribution_norm": 13.232400894165039,
+        "trace_only_terminal": false,
+        "followed_by": "sh"
+      },
+      {
+        "case": "list-4-bullets-12",
+        "position": 86,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          300,
+          302
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.5494683384895325,
+        "gate": 0.5494683384895325,
+        "operator_norm": 12.529431343078613,
+        "contribution_norm": 6.884525775909424,
+        "trace_only_terminal": false,
+        "followed_by": "sp"
+      },
+      {
+        "case": "list-5-numbered-5",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          131,
+          132
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 1.9981162548065186,
+        "gate": 1.9981162548065186,
+        "operator_norm": 29.139820098876953,
+        "contribution_norm": 58.22474670410156,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-5-numbered-11",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          131,
+          132
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.0550432205200195,
+        "gate": 2.0550432205200195,
+        "operator_norm": 29.344757080078125,
+        "contribution_norm": 60.304744720458984,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-5-numbered-11",
+        "position": 100,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          282,
+          283
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 0.8153756260871887,
+        "gate": 0.8153756260871887,
+        "operator_norm": 14.50635051727295,
+        "contribution_norm": 11.828125,
+        "trace_only_terminal": false,
+        "followed_by": "<|im_start|>"
+      },
+      {
+        "case": "list-5-numbered-11",
+        "position": 107,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          322,
+          324
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 1.880906105041504,
+        "gate": 1.880906105041504,
+        "operator_norm": 19.38625144958496,
+        "contribution_norm": 36.46371841430664,
+        "trace_only_terminal": false,
+        "followed_by": "hammer"
+      },
+      {
+        "case": "list-5-numbered-12",
+        "position": 52,
+        "phase": "input",
+        "token_id": 198,
+        "token": "\n",
+        "offset": [
+          131,
+          132
+        ],
+        "region": "list",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": false,
+        "raw": 2.0550432205200195,
+        "gate": 2.0550432205200195,
+        "operator_norm": 29.344757080078125,
+        "contribution_norm": 60.304744720458984,
+        "trace_only_terminal": false,
+        "followed_by": "1"
+      },
+      {
+        "case": "list-5-bullets-11",
+        "position": 86,
+        "phase": "input",
+        "token_id": 271,
+        "token": "\n\n",
+        "offset": [
+          301,
+          303
+        ],
+        "region": "answer_prefix",
+        "item": null,
+        "word_item": null,
+        "special": false,
+        "final_input": true,
+        "raw": 0.9212059378623962,
+        "gate": 0.9212059378623962,
+        "operator_norm": 14.086884498596191,
+        "contribution_norm": 12.976922035217285,
+        "trace_only_terminal": false,
+        "followed_by": "hammer"
+      }
+    ]
+  },
+  "paired_prefix_numerical_check": {
+    "posthoc_numerical_diagnostic": true,
+    "purpose": "Check shared-prefix numerical invariance at equal GEMM/prefill lengths; original/revised prompt prefixes; no generated answers or gate edits.",
+    "checks": [
+      {
+        "list_id": "list-1",
+        "format": "numbered",
+        "padded_length": 112,
+        "shared_prefix_tokens": 81,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-1",
+        "format": "bullets",
+        "padded_length": 91,
+        "shared_prefix_tokens": 60,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-2",
+        "format": "numbered",
+        "padded_length": 112,
+        "shared_prefix_tokens": 81,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-2",
+        "format": "bullets",
+        "padded_length": 91,
+        "shared_prefix_tokens": 60,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-3",
+        "format": "numbered",
+        "padded_length": 112,
+        "shared_prefix_tokens": 81,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-3",
+        "format": "bullets",
+        "padded_length": 91,
+        "shared_prefix_tokens": 60,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-4",
+        "format": "numbered",
+        "padded_length": 112,
+        "shared_prefix_tokens": 81,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-4",
+        "format": "bullets",
+        "padded_length": 91,
+        "shared_prefix_tokens": 60,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-5",
+        "format": "numbered",
+        "padded_length": 112,
+        "shared_prefix_tokens": 81,
+        "max_shared_prefix_raw_difference": 0.0
+      },
+      {
+        "list_id": "list-5",
+        "format": "bullets",
+        "padded_length": 91,
+        "shared_prefix_tokens": 60,
+        "max_shared_prefix_raw_difference": 0.0
+      }
+    ],
+    "maximum_raw_difference": 0.0,
+    "all_equal": true,
+    "generated_tokens": 0,
+    "interventions": 0,
+    "source_sha256": "a164eb8410c7c3c4c8c5d705cbbdd3a6bc08d966459c6f673b6bcda677398ede"
+  }
+}
