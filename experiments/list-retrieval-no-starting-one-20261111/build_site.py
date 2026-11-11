@@ -37,6 +37,7 @@ for name in ['index.html', 'comparison.js', 'comparison.css']:
     text = (HERE / 'web' / name).read_text().replace('__VERSION__', version).replace('__PREFIX_COUNTS__', prefix_counts)
     text = text.replace('__ALL_TOKEN_OFF__', (OUT / 'all-token-off/section.html').read_text())
     text = text.replace('__PREFIX_BOOST__', (OUT / 'prefix-boost/section.html').read_text())
+    text = text.replace('__ALL_INPUT_BOOST__', (OUT / 'all-input-boost/section.html').read_text())
     (OUT / name).write_text(text)
 source = OUT / 'without-starting-one/source'
 source.mkdir(exist_ok=True)

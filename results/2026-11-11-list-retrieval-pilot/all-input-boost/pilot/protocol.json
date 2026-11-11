@@ -1,0 +1,2586 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "molt_checkpoint_sha256": "3b89660603200ca2f9eabd898f144eacc14c4e183bc148681e414b5f35db7581",
+  "feature_sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+  "enable_thinking": false,
+  "decode": "greedy",
+  "max_new_tokens": 32,
+  "experiment": "Adaptive fixed T2375 gate at every supplied input token, pilot",
+  "date": "2026-11-12",
+  "feature": {
+    "layer": 29,
+    "transform": 2375
+  },
+  "strengths": [
+    2.0,
+    4.0,
+    8.0,
+    16.0,
+    24.0,
+    32.0,
+    40.0,
+    48.0,
+    56.0,
+    64.0
+  ],
+  "maximum_runtime_minutes": 20,
+  "source_results_sha256": "53319a3d91ad235544259d8a5e9e01566ba2a3865f6064bb8fabcfa42a1b52c2",
+  "source_protocol_sha256": "d68da70f62dfcf82826d4b3832000d17b78c829e0ca3e39b266a2fb6ee1e8334",
+  "cases": [
+    {
+      "id": "list-1-numbered-5",
+      "list_id": "list-1",
+      "format": "numbered",
+      "ordinal": 5,
+      "words": [
+        "kite",
+        "fork",
+        "glove",
+        "chair",
+        "wheel",
+        "spoon",
+        "bell",
+        "shoe",
+        "hammer",
+        "apple",
+        "pencil",
+        "drum",
+        "lamp",
+        "ring",
+        "ticket"
+      ],
+      "expected": "wheel",
+      "prompt": "Here are 15 words in order:\n1. kite\n2. fork\n3. glove\n4. chair\n5. wheel\n6. spoon\n7. bell\n8. shoe\n9. hammer\n10. apple\n11. pencil\n12. drum\n13. lamp\n14. ring\n15. ticket\n\nWhat is the fifth word in the list? Count the listed words. Reply with only that word.",
+      "formatted_prompt": "<|im_start|>user\nHere are 15 words in order:\n1. kite\n2. fork\n3. glove\n4. chair\n5. wheel\n6. spoon\n7. bell\n8. shoe\n9. hammer\n10. apple\n11. pencil\n12. drum\n13. lamp\n14. ring\n15. ticket\n\nWhat is the fifth word in the list? Count the listed words. Reply with only that word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "input_token_ids": [
+        151644,
+        872,
+        198,
+        8420,
+        525,
+        220,
+        16,
+        20,
+        4244,
+        304,
+        1973,
+        510,
+        16,
+        13,
+        98119,
+        198,
+        17,
+        13,
+        22435,
+        198,
+        18,
+        13,
+        55420,
+        198,
+        19,
+        13,
+        10496,
+        198,
+        20,
+        13,
+        13284,
+        198,
+        21,
+        13,
+        45505,
+        198,
+        22,
+        13,
+        28419,
+        198,
+        23,
+        13,
+        28977,
+        198,
+        24,
+        13,
+        23457,
+        198,
+        16,
+        15,
+        13,
+        23268,
+        198,
+        16,
+        16,
+        13,
+        46118,
+        198,
+        16,
+        17,
+        13,
+        23196,
+        198,
+        16,
+        18,
+        13,
+        27962,
+        198,
+        16,
+        19,
+        13,
+        10058,
+        198,
+        16,
+        20,
+        13,
+        11727,
+        271,
+        3838,
+        374,
+        279,
+        17702,
+        3409,
+        304,
+        279,
+        1140,
+        30,
+        4504,
+        279,
+        10007,
+        4244,
+        13,
+        17841,
+        448,
+        1172,
+        429,
+        3409,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "list_span": [
+        28,
+        164
+      ],
+      "question_span": [
+        166,
+        252
+      ],
+      "item_spans": [
+        {
+          "item": 1,
+          "start": 28,
+          "end": 35,
+          "word_start": 31,
+          "word_end": 35
+        },
+        {
+          "item": 2,
+          "start": 36,
+          "end": 43,
+          "word_start": 39,
+          "word_end": 43
+        },
+        {
+          "item": 3,
+          "start": 44,
+          "end": 52,
+          "word_start": 47,
+          "word_end": 52
+        },
+        {
+          "item": 4,
+          "start": 53,
+          "end": 61,
+          "word_start": 56,
+          "word_end": 61
+        },
+        {
+          "item": 5,
+          "start": 62,
+          "end": 70,
+          "word_start": 65,
+          "word_end": 70
+        },
+        {
+          "item": 6,
+          "start": 71,
+          "end": 79,
+          "word_start": 74,
+          "word_end": 79
+        },
+        {
+          "item": 7,
+          "start": 80,
+          "end": 87,
+          "word_start": 83,
+          "word_end": 87
+        },
+        {
+          "item": 8,
+          "start": 88,
+          "end": 95,
+          "word_start": 91,
+          "word_end": 95
+        },
+        {
+          "item": 9,
+          "start": 96,
+          "end": 105,
+          "word_start": 99,
+          "word_end": 105
+        },
+        {
+          "item": 10,
+          "start": 106,
+          "end": 115,
+          "word_start": 110,
+          "word_end": 115
+        },
+        {
+          "item": 11,
+          "start": 116,
+          "end": 126,
+          "word_start": 120,
+          "word_end": 126
+        },
+        {
+          "item": 12,
+          "start": 127,
+          "end": 135,
+          "word_start": 131,
+          "word_end": 135
+        },
+        {
+          "item": 13,
+          "start": 136,
+          "end": 144,
+          "word_start": 140,
+          "word_end": 144
+        },
+        {
+          "item": 14,
+          "start": 145,
+          "end": 153,
+          "word_start": 149,
+          "word_end": 153
+        },
+        {
+          "item": 15,
+          "start": 154,
+          "end": 164,
+          "word_start": 158,
+          "word_end": 164
+        }
+      ],
+      "prompt_format": "chat",
+      "native": {
+        "output_token_ids": [
+          38590,
+          151645
+        ],
+        "response": "wheel",
+        "stop_reason": "eos",
+        "steps": [
+          {
+            "token_id": 38590,
+            "token": "wheel",
+            "probability": 0.9999901056289673,
+            "logits_sha256": "199b0f61a23ec67f15cbda3eae29a478f9ba4599066b1347a4a4fbddebbeb524",
+            "top5": [
+              {
+                "token_id": 38590,
+                "token": "wheel",
+                "probability": 0.9999901056289673
+              },
+              {
+                "token_id": 13284,
+                "token": " wheel",
+                "probability": 5.422194590209983e-06
+              },
+              {
+                "token_id": 20,
+                "token": "5",
+                "probability": 2.902291953432723e-06
+              },
+              {
+                "token_id": 44207,
+                "token": "Wheel",
+                "probability": 1.3709455970456474e-06
+              },
+              {
+                "token_id": 82012,
+                "token": "_wheel",
+                "probability": 6.023514487196735e-08
+              }
+            ]
+          },
+          {
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "probability": 0.9999916553497314,
+            "logits_sha256": "09f2a263ea01c3159206e1781dedf57566796d5d6b9367662f471f8038f3dc38"
+          }
+        ],
+        "unused_terminal_logits_sha256": "f3e7d31a8fd1e6e65697efd787f7991a7ccb4642f1533e08905e65d06780432a"
+      },
+      "native_requested_correct": true,
+      "eleventh_word": "pencil",
+      "native_already_eleventh": false,
+      "native_eleventh_question_control": {
+        "id": "list-1-numbered-11",
+        "response": "pencil",
+        "strict_correct": true
+      },
+      "prefix_positions": [
+        {
+          "position": 99,
+          "token": "\n",
+          "location": "after_im_end",
+          "natural_gate": 0.0
+        },
+        {
+          "position": 106,
+          "token": "\n\n",
+          "location": "after_think",
+          "natural_gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "list-1-numbered-12",
+      "list_id": "list-1",
+      "format": "numbered",
+      "ordinal": 12,
+      "words": [
+        "kite",
+        "fork",
+        "glove",
+        "chair",
+        "wheel",
+        "spoon",
+        "bell",
+        "shoe",
+        "hammer",
+        "apple",
+        "pencil",
+        "drum",
+        "lamp",
+        "ring",
+        "ticket"
+      ],
+      "expected": "drum",
+      "prompt": "Here are 15 words in order:\n1. kite\n2. fork\n3. glove\n4. chair\n5. wheel\n6. spoon\n7. bell\n8. shoe\n9. hammer\n10. apple\n11. pencil\n12. drum\n13. lamp\n14. ring\n15. ticket\n\nWhat is the twelfth word in the list? Count the listed words. Reply with only that word.",
+      "formatted_prompt": "<|im_start|>user\nHere are 15 words in order:\n1. kite\n2. fork\n3. glove\n4. chair\n5. wheel\n6. spoon\n7. bell\n8. shoe\n9. hammer\n10. apple\n11. pencil\n12. drum\n13. lamp\n14. ring\n15. ticket\n\nWhat is the twelfth word in the list? Count the listed words. Reply with only that word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "input_token_ids": [
+        151644,
+        872,
+        198,
+        8420,
+        525,
+        220,
+        16,
+        20,
+        4244,
+        304,
+        1973,
+        510,
+        16,
+        13,
+        98119,
+        198,
+        17,
+        13,
+        22435,
+        198,
+        18,
+        13,
+        55420,
+        198,
+        19,
+        13,
+        10496,
+        198,
+        20,
+        13,
+        13284,
+        198,
+        21,
+        13,
+        45505,
+        198,
+        22,
+        13,
+        28419,
+        198,
+        23,
+        13,
+        28977,
+        198,
+        24,
+        13,
+        23457,
+        198,
+        16,
+        15,
+        13,
+        23268,
+        198,
+        16,
+        16,
+        13,
+        46118,
+        198,
+        16,
+        17,
+        13,
+        23196,
+        198,
+        16,
+        18,
+        13,
+        27962,
+        198,
+        16,
+        19,
+        13,
+        10058,
+        198,
+        16,
+        20,
+        13,
+        11727,
+        271,
+        3838,
+        374,
+        279,
+        4384,
+        87698,
+        3409,
+        304,
+        279,
+        1140,
+        30,
+        4504,
+        279,
+        10007,
+        4244,
+        13,
+        17841,
+        448,
+        1172,
+        429,
+        3409,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "list_span": [
+        28,
+        164
+      ],
+      "question_span": [
+        166,
+        254
+      ],
+      "item_spans": [
+        {
+          "item": 1,
+          "start": 28,
+          "end": 35,
+          "word_start": 31,
+          "word_end": 35
+        },
+        {
+          "item": 2,
+          "start": 36,
+          "end": 43,
+          "word_start": 39,
+          "word_end": 43
+        },
+        {
+          "item": 3,
+          "start": 44,
+          "end": 52,
+          "word_start": 47,
+          "word_end": 52
+        },
+        {
+          "item": 4,
+          "start": 53,
+          "end": 61,
+          "word_start": 56,
+          "word_end": 61
+        },
+        {
+          "item": 5,
+          "start": 62,
+          "end": 70,
+          "word_start": 65,
+          "word_end": 70
+        },
+        {
+          "item": 6,
+          "start": 71,
+          "end": 79,
+          "word_start": 74,
+          "word_end": 79
+        },
+        {
+          "item": 7,
+          "start": 80,
+          "end": 87,
+          "word_start": 83,
+          "word_end": 87
+        },
+        {
+          "item": 8,
+          "start": 88,
+          "end": 95,
+          "word_start": 91,
+          "word_end": 95
+        },
+        {
+          "item": 9,
+          "start": 96,
+          "end": 105,
+          "word_start": 99,
+          "word_end": 105
+        },
+        {
+          "item": 10,
+          "start": 106,
+          "end": 115,
+          "word_start": 110,
+          "word_end": 115
+        },
+        {
+          "item": 11,
+          "start": 116,
+          "end": 126,
+          "word_start": 120,
+          "word_end": 126
+        },
+        {
+          "item": 12,
+          "start": 127,
+          "end": 135,
+          "word_start": 131,
+          "word_end": 135
+        },
+        {
+          "item": 13,
+          "start": 136,
+          "end": 144,
+          "word_start": 140,
+          "word_end": 144
+        },
+        {
+          "item": 14,
+          "start": 145,
+          "end": 153,
+          "word_start": 149,
+          "word_end": 153
+        },
+        {
+          "item": 15,
+          "start": 154,
+          "end": 164,
+          "word_start": 158,
+          "word_end": 164
+        }
+      ],
+      "prompt_format": "chat",
+      "native": {
+        "output_token_ids": [
+          3612,
+          372,
+          151645
+        ],
+        "response": "drum",
+        "stop_reason": "eos",
+        "steps": [
+          {
+            "token_id": 3612,
+            "token": "dr",
+            "probability": 0.9753376245498657,
+            "logits_sha256": "e6023c9106bdcb4e573edbc755aa704a3e6934c9c56bf3c1f144eb86a098ec02",
+            "top5": [
+              {
+                "token_id": 3612,
+                "token": "dr",
+                "probability": 0.9753376245498657
+              },
+              {
+                "token_id": 23196,
+                "token": " drum",
+                "probability": 0.022937742993235588
+              },
+              {
+                "token_id": 8847,
+                "token": "Dr",
+                "probability": 0.001142002991400659
+              },
+              {
+                "token_id": 16,
+                "token": "1",
+                "probability": 0.00042011940968222916
+              },
+              {
+                "token_id": 785,
+                "token": "The",
+                "probability": 6.442739686463028e-05
+              }
+            ]
+          },
+          {
+            "token_id": 372,
+            "token": "um",
+            "probability": 1.0,
+            "logits_sha256": "c6c9b3593dee63349176e3ef70540265f5d48b6e37187942c193eb4b48f9a8b7"
+          },
+          {
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "probability": 0.9999972581863403,
+            "logits_sha256": "308b03fc76c1273810d48c55c638834d3b52e12818efba60b6ff2b381f56cbf7"
+          }
+        ],
+        "unused_terminal_logits_sha256": "a662cb829e1f9fb7630658761d432677793a2b570e3cfd18933f0c47c7c666ab"
+      },
+      "native_requested_correct": true,
+      "eleventh_word": "pencil",
+      "native_already_eleventh": false,
+      "native_eleventh_question_control": {
+        "id": "list-1-numbered-11",
+        "response": "pencil",
+        "strict_correct": true
+      },
+      "prefix_positions": [
+        {
+          "position": 100,
+          "token": "\n",
+          "location": "after_im_end",
+          "natural_gate": 0.0
+        },
+        {
+          "position": 107,
+          "token": "\n\n",
+          "location": "after_think",
+          "natural_gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "list-1-bullets-5",
+      "list_id": "list-1",
+      "format": "bullets",
+      "ordinal": 5,
+      "words": [
+        "kite",
+        "fork",
+        "glove",
+        "chair",
+        "wheel",
+        "spoon",
+        "bell",
+        "shoe",
+        "hammer",
+        "apple",
+        "pencil",
+        "drum",
+        "lamp",
+        "ring",
+        "ticket"
+      ],
+      "expected": "wheel",
+      "prompt": "Here are 15 words in order:\n- kite\n- fork\n- glove\n- chair\n- wheel\n- spoon\n- bell\n- shoe\n- hammer\n- apple\n- pencil\n- drum\n- lamp\n- ring\n- ticket\n\nWhat is the fifth word in the list? Count the listed words. Reply with only that word.",
+      "formatted_prompt": "<|im_start|>user\nHere are 15 words in order:\n- kite\n- fork\n- glove\n- chair\n- wheel\n- spoon\n- bell\n- shoe\n- hammer\n- apple\n- pencil\n- drum\n- lamp\n- ring\n- ticket\n\nWhat is the fifth word in the list? Count the listed words. Reply with only that word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "input_token_ids": [
+        151644,
+        872,
+        198,
+        8420,
+        525,
+        220,
+        16,
+        20,
+        4244,
+        304,
+        1973,
+        510,
+        12,
+        98119,
+        198,
+        12,
+        22435,
+        198,
+        12,
+        55420,
+        198,
+        12,
+        10496,
+        198,
+        12,
+        13284,
+        198,
+        12,
+        45505,
+        198,
+        12,
+        28419,
+        198,
+        12,
+        28977,
+        198,
+        12,
+        23457,
+        198,
+        12,
+        23268,
+        198,
+        12,
+        46118,
+        198,
+        12,
+        23196,
+        198,
+        12,
+        27962,
+        198,
+        12,
+        10058,
+        198,
+        12,
+        11727,
+        271,
+        3838,
+        374,
+        279,
+        17702,
+        3409,
+        304,
+        279,
+        1140,
+        30,
+        4504,
+        279,
+        10007,
+        4244,
+        13,
+        17841,
+        448,
+        1172,
+        429,
+        3409,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "list_span": [
+        28,
+        143
+      ],
+      "question_span": [
+        145,
+        231
+      ],
+      "item_spans": [
+        {
+          "item": 1,
+          "start": 28,
+          "end": 34,
+          "word_start": 30,
+          "word_end": 34
+        },
+        {
+          "item": 2,
+          "start": 35,
+          "end": 41,
+          "word_start": 37,
+          "word_end": 41
+        },
+        {
+          "item": 3,
+          "start": 42,
+          "end": 49,
+          "word_start": 44,
+          "word_end": 49
+        },
+        {
+          "item": 4,
+          "start": 50,
+          "end": 57,
+          "word_start": 52,
+          "word_end": 57
+        },
+        {
+          "item": 5,
+          "start": 58,
+          "end": 65,
+          "word_start": 60,
+          "word_end": 65
+        },
+        {
+          "item": 6,
+          "start": 66,
+          "end": 73,
+          "word_start": 68,
+          "word_end": 73
+        },
+        {
+          "item": 7,
+          "start": 74,
+          "end": 80,
+          "word_start": 76,
+          "word_end": 80
+        },
+        {
+          "item": 8,
+          "start": 81,
+          "end": 87,
+          "word_start": 83,
+          "word_end": 87
+        },
+        {
+          "item": 9,
+          "start": 88,
+          "end": 96,
+          "word_start": 90,
+          "word_end": 96
+        },
+        {
+          "item": 10,
+          "start": 97,
+          "end": 104,
+          "word_start": 99,
+          "word_end": 104
+        },
+        {
+          "item": 11,
+          "start": 105,
+          "end": 113,
+          "word_start": 107,
+          "word_end": 113
+        },
+        {
+          "item": 12,
+          "start": 114,
+          "end": 120,
+          "word_start": 116,
+          "word_end": 120
+        },
+        {
+          "item": 13,
+          "start": 121,
+          "end": 127,
+          "word_start": 123,
+          "word_end": 127
+        },
+        {
+          "item": 14,
+          "start": 128,
+          "end": 134,
+          "word_start": 130,
+          "word_end": 134
+        },
+        {
+          "item": 15,
+          "start": 135,
+          "end": 143,
+          "word_start": 137,
+          "word_end": 143
+        }
+      ],
+      "prompt_format": "chat",
+      "native": {
+        "output_token_ids": [
+          38590,
+          151645
+        ],
+        "response": "wheel",
+        "stop_reason": "eos",
+        "steps": [
+          {
+            "token_id": 38590,
+            "token": "wheel",
+            "probability": 0.9999960660934448,
+            "logits_sha256": "4ecdc48f2d6a50f8d94abb764303fd0e0800a1dce1959c48d7eb49f687f3a86c",
+            "top5": [
+              {
+                "token_id": 38590,
+                "token": "wheel",
+                "probability": 0.9999960660934448
+              },
+              {
+                "token_id": 13284,
+                "token": " wheel",
+                "probability": 2.561278733992367e-06
+              },
+              {
+                "token_id": 44207,
+                "token": "Wheel",
+                "probability": 1.2098623756173765e-06
+              },
+              {
+                "token_id": 34196,
+                "token": "chair",
+                "probability": 6.023550724876259e-08
+              },
+              {
+                "token_id": 45334,
+                "token": "hammer",
+                "probability": 3.2241739944538494e-08
+              }
+            ]
+          },
+          {
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "probability": 0.9999940395355225,
+            "logits_sha256": "7d6ce65d564be9aca13ee9072bbbcf84db46585b02a24fddcc8130afb22c9889"
+          }
+        ],
+        "unused_terminal_logits_sha256": "5eb5396d48eab044514418c6ac6e4c5a8cd44b46e390ecd66839fbe78efdef6e"
+      },
+      "native_requested_correct": true,
+      "eleventh_word": "pencil",
+      "native_already_eleventh": false,
+      "native_eleventh_question_control": {
+        "id": "list-1-bullets-11",
+        "response": "pencil",
+        "strict_correct": true
+      },
+      "prefix_positions": [
+        {
+          "position": 78,
+          "token": "\n",
+          "location": "after_im_end",
+          "natural_gate": 0.0
+        },
+        {
+          "position": 85,
+          "token": "\n\n",
+          "location": "after_think",
+          "natural_gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "list-1-bullets-12",
+      "list_id": "list-1",
+      "format": "bullets",
+      "ordinal": 12,
+      "words": [
+        "kite",
+        "fork",
+        "glove",
+        "chair",
+        "wheel",
+        "spoon",
+        "bell",
+        "shoe",
+        "hammer",
+        "apple",
+        "pencil",
+        "drum",
+        "lamp",
+        "ring",
+        "ticket"
+      ],
+      "expected": "drum",
+      "prompt": "Here are 15 words in order:\n- kite\n- fork\n- glove\n- chair\n- wheel\n- spoon\n- bell\n- shoe\n- hammer\n- apple\n- pencil\n- drum\n- lamp\n- ring\n- ticket\n\nWhat is the twelfth word in the list? Count the listed words. Reply with only that word.",
+      "formatted_prompt": "<|im_start|>user\nHere are 15 words in order:\n- kite\n- fork\n- glove\n- chair\n- wheel\n- spoon\n- bell\n- shoe\n- hammer\n- apple\n- pencil\n- drum\n- lamp\n- ring\n- ticket\n\nWhat is the twelfth word in the list? Count the listed words. Reply with only that word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "input_token_ids": [
+        151644,
+        872,
+        198,
+        8420,
+        525,
+        220,
+        16,
+        20,
+        4244,
+        304,
+        1973,
+        510,
+        12,
+        98119,
+        198,
+        12,
+        22435,
+        198,
+        12,
+        55420,
+        198,
+        12,
+        10496,
+        198,
+        12,
+        13284,
+        198,
+        12,
+        45505,
+        198,
+        12,
+        28419,
+        198,
+        12,
+        28977,
+        198,
+        12,
+        23457,
+        198,
+        12,
+        23268,
+        198,
+        12,
+        46118,
+        198,
+        12,
+        23196,
+        198,
+        12,
+        27962,
+        198,
+        12,
+        10058,
+        198,
+        12,
+        11727,
+        271,
+        3838,
+        374,
+        279,
+        4384,
+        87698,
+        3409,
+        304,
+        279,
+        1140,
+        30,
+        4504,
+        279,
+        10007,
+        4244,
+        13,
+        17841,
+        448,
+        1172,
+        429,
+        3409,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "list_span": [
+        28,
+        143
+      ],
+      "question_span": [
+        145,
+        233
+      ],
+      "item_spans": [
+        {
+          "item": 1,
+          "start": 28,
+          "end": 34,
+          "word_start": 30,
+          "word_end": 34
+        },
+        {
+          "item": 2,
+          "start": 35,
+          "end": 41,
+          "word_start": 37,
+          "word_end": 41
+        },
+        {
+          "item": 3,
+          "start": 42,
+          "end": 49,
+          "word_start": 44,
+          "word_end": 49
+        },
+        {
+          "item": 4,
+          "start": 50,
+          "end": 57,
+          "word_start": 52,
+          "word_end": 57
+        },
+        {
+          "item": 5,
+          "start": 58,
+          "end": 65,
+          "word_start": 60,
+          "word_end": 65
+        },
+        {
+          "item": 6,
+          "start": 66,
+          "end": 73,
+          "word_start": 68,
+          "word_end": 73
+        },
+        {
+          "item": 7,
+          "start": 74,
+          "end": 80,
+          "word_start": 76,
+          "word_end": 80
+        },
+        {
+          "item": 8,
+          "start": 81,
+          "end": 87,
+          "word_start": 83,
+          "word_end": 87
+        },
+        {
+          "item": 9,
+          "start": 88,
+          "end": 96,
+          "word_start": 90,
+          "word_end": 96
+        },
+        {
+          "item": 10,
+          "start": 97,
+          "end": 104,
+          "word_start": 99,
+          "word_end": 104
+        },
+        {
+          "item": 11,
+          "start": 105,
+          "end": 113,
+          "word_start": 107,
+          "word_end": 113
+        },
+        {
+          "item": 12,
+          "start": 114,
+          "end": 120,
+          "word_start": 116,
+          "word_end": 120
+        },
+        {
+          "item": 13,
+          "start": 121,
+          "end": 127,
+          "word_start": 123,
+          "word_end": 127
+        },
+        {
+          "item": 14,
+          "start": 128,
+          "end": 134,
+          "word_start": 130,
+          "word_end": 134
+        },
+        {
+          "item": 15,
+          "start": 135,
+          "end": 143,
+          "word_start": 137,
+          "word_end": 143
+        }
+      ],
+      "prompt_format": "chat",
+      "native": {
+        "output_token_ids": [
+          79,
+          17005,
+          151645
+        ],
+        "response": "pencil",
+        "stop_reason": "eos",
+        "steps": [
+          {
+            "token_id": 79,
+            "token": "p",
+            "probability": 0.9972977042198181,
+            "logits_sha256": "cc242483013de69e5e8c363374b03d73f1b639a41d97d335d05181ad2c1b0e12",
+            "top5": [
+              {
+                "token_id": 79,
+                "token": "p",
+                "probability": 0.9972977042198181
+              },
+              {
+                "token_id": 3612,
+                "token": "dr",
+                "probability": 0.0024720539804548025
+              },
+              {
+                "token_id": 15560,
+                "token": "tw",
+                "probability": 0.00012307631550356746
+              },
+              {
+                "token_id": 23196,
+                "token": " drum",
+                "probability": 8.458902448182926e-05
+              },
+              {
+                "token_id": 26534,
+                "token": "ticket",
+                "probability": 4.7721869123051874e-06
+              }
+            ]
+          },
+          {
+            "token_id": 17005,
+            "token": "encil",
+            "probability": 0.9999879598617554,
+            "logits_sha256": "9caf7c634020405a472e11c0ffe974853562f33bb73544d8d8db2d4a6bb04f7d"
+          },
+          {
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "probability": 0.9999978542327881,
+            "logits_sha256": "33745c75ed0b16097d36fad28317955f863cad3108f4d5a52a87f4970f5ef0b9"
+          }
+        ],
+        "unused_terminal_logits_sha256": "dd25ccc96332b5509e122d3295f478c60e47059fd6e3b21506803da8140a852a"
+      },
+      "native_requested_correct": false,
+      "eleventh_word": "pencil",
+      "native_already_eleventh": true,
+      "native_eleventh_question_control": {
+        "id": "list-1-bullets-11",
+        "response": "pencil",
+        "strict_correct": true
+      },
+      "prefix_positions": [
+        {
+          "position": 79,
+          "token": "\n",
+          "location": "after_im_end",
+          "natural_gate": 0.0
+        },
+        {
+          "position": 86,
+          "token": "\n\n",
+          "location": "after_think",
+          "natural_gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "list-2-numbered-5",
+      "list_id": "list-2",
+      "format": "numbered",
+      "ordinal": 5,
+      "words": [
+        "ticket",
+        "fork",
+        "glove",
+        "bell",
+        "ring",
+        "pencil",
+        "wheel",
+        "drum",
+        "apple",
+        "spoon",
+        "shoe",
+        "hammer",
+        "kite",
+        "lamp",
+        "chair"
+      ],
+      "expected": "ring",
+      "prompt": "Here are 15 words in order:\n1. ticket\n2. fork\n3. glove\n4. bell\n5. ring\n6. pencil\n7. wheel\n8. drum\n9. apple\n10. spoon\n11. shoe\n12. hammer\n13. kite\n14. lamp\n15. chair\n\nWhat is the fifth word in the list? Count the listed words. Reply with only that word.",
+      "formatted_prompt": "<|im_start|>user\nHere are 15 words in order:\n1. ticket\n2. fork\n3. glove\n4. bell\n5. ring\n6. pencil\n7. wheel\n8. drum\n9. apple\n10. spoon\n11. shoe\n12. hammer\n13. kite\n14. lamp\n15. chair\n\nWhat is the fifth word in the list? Count the listed words. Reply with only that word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "input_token_ids": [
+        151644,
+        872,
+        198,
+        8420,
+        525,
+        220,
+        16,
+        20,
+        4244,
+        304,
+        1973,
+        510,
+        16,
+        13,
+        11727,
+        198,
+        17,
+        13,
+        22435,
+        198,
+        18,
+        13,
+        55420,
+        198,
+        19,
+        13,
+        28419,
+        198,
+        20,
+        13,
+        10058,
+        198,
+        21,
+        13,
+        46118,
+        198,
+        22,
+        13,
+        13284,
+        198,
+        23,
+        13,
+        23196,
+        198,
+        24,
+        13,
+        23268,
+        198,
+        16,
+        15,
+        13,
+        45505,
+        198,
+        16,
+        16,
+        13,
+        28977,
+        198,
+        16,
+        17,
+        13,
+        23457,
+        198,
+        16,
+        18,
+        13,
+        98119,
+        198,
+        16,
+        19,
+        13,
+        27962,
+        198,
+        16,
+        20,
+        13,
+        10496,
+        271,
+        3838,
+        374,
+        279,
+        17702,
+        3409,
+        304,
+        279,
+        1140,
+        30,
+        4504,
+        279,
+        10007,
+        4244,
+        13,
+        17841,
+        448,
+        1172,
+        429,
+        3409,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "list_span": [
+        28,
+        164
+      ],
+      "question_span": [
+        166,
+        252
+      ],
+      "item_spans": [
+        {
+          "item": 1,
+          "start": 28,
+          "end": 37,
+          "word_start": 31,
+          "word_end": 37
+        },
+        {
+          "item": 2,
+          "start": 38,
+          "end": 45,
+          "word_start": 41,
+          "word_end": 45
+        },
+        {
+          "item": 3,
+          "start": 46,
+          "end": 54,
+          "word_start": 49,
+          "word_end": 54
+        },
+        {
+          "item": 4,
+          "start": 55,
+          "end": 62,
+          "word_start": 58,
+          "word_end": 62
+        },
+        {
+          "item": 5,
+          "start": 63,
+          "end": 70,
+          "word_start": 66,
+          "word_end": 70
+        },
+        {
+          "item": 6,
+          "start": 71,
+          "end": 80,
+          "word_start": 74,
+          "word_end": 80
+        },
+        {
+          "item": 7,
+          "start": 81,
+          "end": 89,
+          "word_start": 84,
+          "word_end": 89
+        },
+        {
+          "item": 8,
+          "start": 90,
+          "end": 97,
+          "word_start": 93,
+          "word_end": 97
+        },
+        {
+          "item": 9,
+          "start": 98,
+          "end": 106,
+          "word_start": 101,
+          "word_end": 106
+        },
+        {
+          "item": 10,
+          "start": 107,
+          "end": 116,
+          "word_start": 111,
+          "word_end": 116
+        },
+        {
+          "item": 11,
+          "start": 117,
+          "end": 125,
+          "word_start": 121,
+          "word_end": 125
+        },
+        {
+          "item": 12,
+          "start": 126,
+          "end": 136,
+          "word_start": 130,
+          "word_end": 136
+        },
+        {
+          "item": 13,
+          "start": 137,
+          "end": 145,
+          "word_start": 141,
+          "word_end": 145
+        },
+        {
+          "item": 14,
+          "start": 146,
+          "end": 154,
+          "word_start": 150,
+          "word_end": 154
+        },
+        {
+          "item": 15,
+          "start": 155,
+          "end": 164,
+          "word_start": 159,
+          "word_end": 164
+        }
+      ],
+      "prompt_format": "chat",
+      "native": {
+        "output_token_ids": [
+          12640,
+          151645
+        ],
+        "response": "ring",
+        "stop_reason": "eos",
+        "steps": [
+          {
+            "token_id": 12640,
+            "token": "ring",
+            "probability": 0.9986417889595032,
+            "logits_sha256": "bb92808f0d3c577274d200fef24e6fecdbc2ee0c92e7385aca4d4dc70b2948da",
+            "top5": [
+              {
+                "token_id": 12640,
+                "token": "ring",
+                "probability": 0.9986417889595032
+              },
+              {
+                "token_id": 17250,
+                "token": "bell",
+                "probability": 0.0008036399958655238
+              },
+              {
+                "token_id": 20,
+                "token": "5",
+                "probability": 0.00037961266934871674
+              },
+              {
+                "token_id": 10058,
+                "token": " ring",
+                "probability": 0.00015824609727133065
+              },
+              {
+                "token_id": 43466,
+                "token": "Ring",
+                "probability": 8.927634553401731e-06
+              }
+            ]
+          },
+          {
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "probability": 0.999991774559021,
+            "logits_sha256": "d338739cc87d418d645ba4a7bd2790b710aa25f5dadf9efac6d96820eecba901"
+          }
+        ],
+        "unused_terminal_logits_sha256": "ea3b350cef1d69154475347100a4b1618660432add5c5e395ee18afa5363782c"
+      },
+      "native_requested_correct": true,
+      "eleventh_word": "shoe",
+      "native_already_eleventh": false,
+      "native_eleventh_question_control": {
+        "id": "list-2-numbered-11",
+        "response": "shoe",
+        "strict_correct": true
+      },
+      "prefix_positions": [
+        {
+          "position": 99,
+          "token": "\n",
+          "location": "after_im_end",
+          "natural_gate": 0.0
+        },
+        {
+          "position": 106,
+          "token": "\n\n",
+          "location": "after_think",
+          "natural_gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "list-2-numbered-12",
+      "list_id": "list-2",
+      "format": "numbered",
+      "ordinal": 12,
+      "words": [
+        "ticket",
+        "fork",
+        "glove",
+        "bell",
+        "ring",
+        "pencil",
+        "wheel",
+        "drum",
+        "apple",
+        "spoon",
+        "shoe",
+        "hammer",
+        "kite",
+        "lamp",
+        "chair"
+      ],
+      "expected": "hammer",
+      "prompt": "Here are 15 words in order:\n1. ticket\n2. fork\n3. glove\n4. bell\n5. ring\n6. pencil\n7. wheel\n8. drum\n9. apple\n10. spoon\n11. shoe\n12. hammer\n13. kite\n14. lamp\n15. chair\n\nWhat is the twelfth word in the list? Count the listed words. Reply with only that word.",
+      "formatted_prompt": "<|im_start|>user\nHere are 15 words in order:\n1. ticket\n2. fork\n3. glove\n4. bell\n5. ring\n6. pencil\n7. wheel\n8. drum\n9. apple\n10. spoon\n11. shoe\n12. hammer\n13. kite\n14. lamp\n15. chair\n\nWhat is the twelfth word in the list? Count the listed words. Reply with only that word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "input_token_ids": [
+        151644,
+        872,
+        198,
+        8420,
+        525,
+        220,
+        16,
+        20,
+        4244,
+        304,
+        1973,
+        510,
+        16,
+        13,
+        11727,
+        198,
+        17,
+        13,
+        22435,
+        198,
+        18,
+        13,
+        55420,
+        198,
+        19,
+        13,
+        28419,
+        198,
+        20,
+        13,
+        10058,
+        198,
+        21,
+        13,
+        46118,
+        198,
+        22,
+        13,
+        13284,
+        198,
+        23,
+        13,
+        23196,
+        198,
+        24,
+        13,
+        23268,
+        198,
+        16,
+        15,
+        13,
+        45505,
+        198,
+        16,
+        16,
+        13,
+        28977,
+        198,
+        16,
+        17,
+        13,
+        23457,
+        198,
+        16,
+        18,
+        13,
+        98119,
+        198,
+        16,
+        19,
+        13,
+        27962,
+        198,
+        16,
+        20,
+        13,
+        10496,
+        271,
+        3838,
+        374,
+        279,
+        4384,
+        87698,
+        3409,
+        304,
+        279,
+        1140,
+        30,
+        4504,
+        279,
+        10007,
+        4244,
+        13,
+        17841,
+        448,
+        1172,
+        429,
+        3409,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "list_span": [
+        28,
+        164
+      ],
+      "question_span": [
+        166,
+        254
+      ],
+      "item_spans": [
+        {
+          "item": 1,
+          "start": 28,
+          "end": 37,
+          "word_start": 31,
+          "word_end": 37
+        },
+        {
+          "item": 2,
+          "start": 38,
+          "end": 45,
+          "word_start": 41,
+          "word_end": 45
+        },
+        {
+          "item": 3,
+          "start": 46,
+          "end": 54,
+          "word_start": 49,
+          "word_end": 54
+        },
+        {
+          "item": 4,
+          "start": 55,
+          "end": 62,
+          "word_start": 58,
+          "word_end": 62
+        },
+        {
+          "item": 5,
+          "start": 63,
+          "end": 70,
+          "word_start": 66,
+          "word_end": 70
+        },
+        {
+          "item": 6,
+          "start": 71,
+          "end": 80,
+          "word_start": 74,
+          "word_end": 80
+        },
+        {
+          "item": 7,
+          "start": 81,
+          "end": 89,
+          "word_start": 84,
+          "word_end": 89
+        },
+        {
+          "item": 8,
+          "start": 90,
+          "end": 97,
+          "word_start": 93,
+          "word_end": 97
+        },
+        {
+          "item": 9,
+          "start": 98,
+          "end": 106,
+          "word_start": 101,
+          "word_end": 106
+        },
+        {
+          "item": 10,
+          "start": 107,
+          "end": 116,
+          "word_start": 111,
+          "word_end": 116
+        },
+        {
+          "item": 11,
+          "start": 117,
+          "end": 125,
+          "word_start": 121,
+          "word_end": 125
+        },
+        {
+          "item": 12,
+          "start": 126,
+          "end": 136,
+          "word_start": 130,
+          "word_end": 136
+        },
+        {
+          "item": 13,
+          "start": 137,
+          "end": 145,
+          "word_start": 141,
+          "word_end": 145
+        },
+        {
+          "item": 14,
+          "start": 146,
+          "end": 154,
+          "word_start": 150,
+          "word_end": 154
+        },
+        {
+          "item": 15,
+          "start": 155,
+          "end": 164,
+          "word_start": 159,
+          "word_end": 164
+        }
+      ],
+      "prompt_format": "chat",
+      "native": {
+        "output_token_ids": [
+          45334,
+          151645
+        ],
+        "response": "hammer",
+        "stop_reason": "eos",
+        "steps": [
+          {
+            "token_id": 45334,
+            "token": "hammer",
+            "probability": 0.9565854668617249,
+            "logits_sha256": "5d472deefcfac32449c443a0b30ef266cc4ff6e805cc5d47bae76d0eb0ff042a",
+            "top5": [
+              {
+                "token_id": 45334,
+                "token": "hammer",
+                "probability": 0.9565854668617249
+              },
+              {
+                "token_id": 16,
+                "token": "1",
+                "probability": 0.04202943295240402
+              },
+              {
+                "token_id": 23457,
+                "token": " hammer",
+                "probability": 0.0008722930797375739
+              },
+              {
+                "token_id": 39941,
+                "token": "Ham",
+                "probability": 0.0002205502096330747
+              },
+              {
+                "token_id": 785,
+                "token": "The",
+                "probability": 0.00011805202666437253
+              }
+            ]
+          },
+          {
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "probability": 0.9999948740005493,
+            "logits_sha256": "c93da0073358708fb0553c133ceda003e952cf93e46fd7c6fd89fee2a07082b2"
+          }
+        ],
+        "unused_terminal_logits_sha256": "b36e5729bdecc31d8a5066747fe51d31e5ab2b56da1a0eb2e12afa234e6964fe"
+      },
+      "native_requested_correct": true,
+      "eleventh_word": "shoe",
+      "native_already_eleventh": false,
+      "native_eleventh_question_control": {
+        "id": "list-2-numbered-11",
+        "response": "shoe",
+        "strict_correct": true
+      },
+      "prefix_positions": [
+        {
+          "position": 100,
+          "token": "\n",
+          "location": "after_im_end",
+          "natural_gate": 0.0
+        },
+        {
+          "position": 107,
+          "token": "\n\n",
+          "location": "after_think",
+          "natural_gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "list-2-bullets-5",
+      "list_id": "list-2",
+      "format": "bullets",
+      "ordinal": 5,
+      "words": [
+        "ticket",
+        "fork",
+        "glove",
+        "bell",
+        "ring",
+        "pencil",
+        "wheel",
+        "drum",
+        "apple",
+        "spoon",
+        "shoe",
+        "hammer",
+        "kite",
+        "lamp",
+        "chair"
+      ],
+      "expected": "ring",
+      "prompt": "Here are 15 words in order:\n- ticket\n- fork\n- glove\n- bell\n- ring\n- pencil\n- wheel\n- drum\n- apple\n- spoon\n- shoe\n- hammer\n- kite\n- lamp\n- chair\n\nWhat is the fifth word in the list? Count the listed words. Reply with only that word.",
+      "formatted_prompt": "<|im_start|>user\nHere are 15 words in order:\n- ticket\n- fork\n- glove\n- bell\n- ring\n- pencil\n- wheel\n- drum\n- apple\n- spoon\n- shoe\n- hammer\n- kite\n- lamp\n- chair\n\nWhat is the fifth word in the list? Count the listed words. Reply with only that word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "input_token_ids": [
+        151644,
+        872,
+        198,
+        8420,
+        525,
+        220,
+        16,
+        20,
+        4244,
+        304,
+        1973,
+        510,
+        12,
+        11727,
+        198,
+        12,
+        22435,
+        198,
+        12,
+        55420,
+        198,
+        12,
+        28419,
+        198,
+        12,
+        10058,
+        198,
+        12,
+        46118,
+        198,
+        12,
+        13284,
+        198,
+        12,
+        23196,
+        198,
+        12,
+        23268,
+        198,
+        12,
+        45505,
+        198,
+        12,
+        28977,
+        198,
+        12,
+        23457,
+        198,
+        12,
+        98119,
+        198,
+        12,
+        27962,
+        198,
+        12,
+        10496,
+        271,
+        3838,
+        374,
+        279,
+        17702,
+        3409,
+        304,
+        279,
+        1140,
+        30,
+        4504,
+        279,
+        10007,
+        4244,
+        13,
+        17841,
+        448,
+        1172,
+        429,
+        3409,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "list_span": [
+        28,
+        143
+      ],
+      "question_span": [
+        145,
+        231
+      ],
+      "item_spans": [
+        {
+          "item": 1,
+          "start": 28,
+          "end": 36,
+          "word_start": 30,
+          "word_end": 36
+        },
+        {
+          "item": 2,
+          "start": 37,
+          "end": 43,
+          "word_start": 39,
+          "word_end": 43
+        },
+        {
+          "item": 3,
+          "start": 44,
+          "end": 51,
+          "word_start": 46,
+          "word_end": 51
+        },
+        {
+          "item": 4,
+          "start": 52,
+          "end": 58,
+          "word_start": 54,
+          "word_end": 58
+        },
+        {
+          "item": 5,
+          "start": 59,
+          "end": 65,
+          "word_start": 61,
+          "word_end": 65
+        },
+        {
+          "item": 6,
+          "start": 66,
+          "end": 74,
+          "word_start": 68,
+          "word_end": 74
+        },
+        {
+          "item": 7,
+          "start": 75,
+          "end": 82,
+          "word_start": 77,
+          "word_end": 82
+        },
+        {
+          "item": 8,
+          "start": 83,
+          "end": 89,
+          "word_start": 85,
+          "word_end": 89
+        },
+        {
+          "item": 9,
+          "start": 90,
+          "end": 97,
+          "word_start": 92,
+          "word_end": 97
+        },
+        {
+          "item": 10,
+          "start": 98,
+          "end": 105,
+          "word_start": 100,
+          "word_end": 105
+        },
+        {
+          "item": 11,
+          "start": 106,
+          "end": 112,
+          "word_start": 108,
+          "word_end": 112
+        },
+        {
+          "item": 12,
+          "start": 113,
+          "end": 121,
+          "word_start": 115,
+          "word_end": 121
+        },
+        {
+          "item": 13,
+          "start": 122,
+          "end": 128,
+          "word_start": 124,
+          "word_end": 128
+        },
+        {
+          "item": 14,
+          "start": 129,
+          "end": 135,
+          "word_start": 131,
+          "word_end": 135
+        },
+        {
+          "item": 15,
+          "start": 136,
+          "end": 143,
+          "word_start": 138,
+          "word_end": 143
+        }
+      ],
+      "prompt_format": "chat",
+      "native": {
+        "output_token_ids": [
+          12640,
+          151645
+        ],
+        "response": "ring",
+        "stop_reason": "eos",
+        "steps": [
+          {
+            "token_id": 12640,
+            "token": "ring",
+            "probability": 0.9999531507492065,
+            "logits_sha256": "e75dbee646677b834f4358c955d055eafaaea638eca73df42c4d51bab39825cd",
+            "top5": [
+              {
+                "token_id": 12640,
+                "token": "ring",
+                "probability": 0.9999531507492065
+              },
+              {
+                "token_id": 10058,
+                "token": " ring",
+                "probability": 4.5397802750812843e-05
+              },
+              {
+                "token_id": 17250,
+                "token": "bell",
+                "probability": 7.337871466006618e-07
+              },
+              {
+                "token_id": 43466,
+                "token": "Ring",
+                "probability": 3.466165310328506e-07
+              },
+              {
+                "token_id": 38590,
+                "token": "wheel",
+                "probability": 1.6373003575154144e-07
+              }
+            ]
+          },
+          {
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "probability": 0.9999935626983643,
+            "logits_sha256": "702e96a7984f95b34aaccf79239509718cbeaaf7330f07494a591b093eb4d36d"
+          }
+        ],
+        "unused_terminal_logits_sha256": "40790f974efeccebf152aab30d5f00a98f40abc0a2651e67ad28a3ef410206ca"
+      },
+      "native_requested_correct": true,
+      "eleventh_word": "shoe",
+      "native_already_eleventh": false,
+      "native_eleventh_question_control": {
+        "id": "list-2-bullets-11",
+        "response": "spoon",
+        "strict_correct": false
+      },
+      "prefix_positions": [
+        {
+          "position": 78,
+          "token": "\n",
+          "location": "after_im_end",
+          "natural_gate": 0.0
+        },
+        {
+          "position": 85,
+          "token": "\n\n",
+          "location": "after_think",
+          "natural_gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "list-2-bullets-12",
+      "list_id": "list-2",
+      "format": "bullets",
+      "ordinal": 12,
+      "words": [
+        "ticket",
+        "fork",
+        "glove",
+        "bell",
+        "ring",
+        "pencil",
+        "wheel",
+        "drum",
+        "apple",
+        "spoon",
+        "shoe",
+        "hammer",
+        "kite",
+        "lamp",
+        "chair"
+      ],
+      "expected": "hammer",
+      "prompt": "Here are 15 words in order:\n- ticket\n- fork\n- glove\n- bell\n- ring\n- pencil\n- wheel\n- drum\n- apple\n- spoon\n- shoe\n- hammer\n- kite\n- lamp\n- chair\n\nWhat is the twelfth word in the list? Count the listed words. Reply with only that word.",
+      "formatted_prompt": "<|im_start|>user\nHere are 15 words in order:\n- ticket\n- fork\n- glove\n- bell\n- ring\n- pencil\n- wheel\n- drum\n- apple\n- spoon\n- shoe\n- hammer\n- kite\n- lamp\n- chair\n\nWhat is the twelfth word in the list? Count the listed words. Reply with only that word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "input_token_ids": [
+        151644,
+        872,
+        198,
+        8420,
+        525,
+        220,
+        16,
+        20,
+        4244,
+        304,
+        1973,
+        510,
+        12,
+        11727,
+        198,
+        12,
+        22435,
+        198,
+        12,
+        55420,
+        198,
+        12,
+        28419,
+        198,
+        12,
+        10058,
+        198,
+        12,
+        46118,
+        198,
+        12,
+        13284,
+        198,
+        12,
+        23196,
+        198,
+        12,
+        23268,
+        198,
+        12,
+        45505,
+        198,
+        12,
+        28977,
+        198,
+        12,
+        23457,
+        198,
+        12,
+        98119,
+        198,
+        12,
+        27962,
+        198,
+        12,
+        10496,
+        271,
+        3838,
+        374,
+        279,
+        4384,
+        87698,
+        3409,
+        304,
+        279,
+        1140,
+        30,
+        4504,
+        279,
+        10007,
+        4244,
+        13,
+        17841,
+        448,
+        1172,
+        429,
+        3409,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "list_span": [
+        28,
+        143
+      ],
+      "question_span": [
+        145,
+        233
+      ],
+      "item_spans": [
+        {
+          "item": 1,
+          "start": 28,
+          "end": 36,
+          "word_start": 30,
+          "word_end": 36
+        },
+        {
+          "item": 2,
+          "start": 37,
+          "end": 43,
+          "word_start": 39,
+          "word_end": 43
+        },
+        {
+          "item": 3,
+          "start": 44,
+          "end": 51,
+          "word_start": 46,
+          "word_end": 51
+        },
+        {
+          "item": 4,
+          "start": 52,
+          "end": 58,
+          "word_start": 54,
+          "word_end": 58
+        },
+        {
+          "item": 5,
+          "start": 59,
+          "end": 65,
+          "word_start": 61,
+          "word_end": 65
+        },
+        {
+          "item": 6,
+          "start": 66,
+          "end": 74,
+          "word_start": 68,
+          "word_end": 74
+        },
+        {
+          "item": 7,
+          "start": 75,
+          "end": 82,
+          "word_start": 77,
+          "word_end": 82
+        },
+        {
+          "item": 8,
+          "start": 83,
+          "end": 89,
+          "word_start": 85,
+          "word_end": 89
+        },
+        {
+          "item": 9,
+          "start": 90,
+          "end": 97,
+          "word_start": 92,
+          "word_end": 97
+        },
+        {
+          "item": 10,
+          "start": 98,
+          "end": 105,
+          "word_start": 100,
+          "word_end": 105
+        },
+        {
+          "item": 11,
+          "start": 106,
+          "end": 112,
+          "word_start": 108,
+          "word_end": 112
+        },
+        {
+          "item": 12,
+          "start": 113,
+          "end": 121,
+          "word_start": 115,
+          "word_end": 121
+        },
+        {
+          "item": 13,
+          "start": 122,
+          "end": 128,
+          "word_start": 124,
+          "word_end": 128
+        },
+        {
+          "item": 14,
+          "start": 129,
+          "end": 135,
+          "word_start": 131,
+          "word_end": 135
+        },
+        {
+          "item": 15,
+          "start": 136,
+          "end": 143,
+          "word_start": 138,
+          "word_end": 143
+        }
+      ],
+      "prompt_format": "chat",
+      "native": {
+        "output_token_ids": [
+          45334,
+          151645
+        ],
+        "response": "hammer",
+        "stop_reason": "eos",
+        "steps": [
+          {
+            "token_id": 45334,
+            "token": "hammer",
+            "probability": 0.5995783805847168,
+            "logits_sha256": "34f4e47d4deb2dc787d0a36509fdbd1f8677b6053cba6d30d3207e4810755930",
+            "top5": [
+              {
+                "token_id": 45334,
+                "token": "hammer",
+                "probability": 0.5995783805847168
+              },
+              {
+                "token_id": 38590,
+                "token": "wheel",
+                "probability": 0.24994143843650818
+              },
+              {
+                "token_id": 2154,
+                "token": "sp",
+                "probability": 0.11806397140026093
+              },
+              {
+                "token_id": 927,
+                "token": "sh",
+                "probability": 0.014100732281804085
+              },
+              {
+                "token_id": 3612,
+                "token": "dr",
+                "probability": 0.00754757784307003
+              }
+            ]
+          },
+          {
+            "token_id": 151645,
+            "token": "<|im_end|>",
+            "probability": 0.9999923706054688,
+            "logits_sha256": "a2fa920f156bf09a46204feb89ebc3eea241fa83adaa13f8f332936fab8a61d1"
+          }
+        ],
+        "unused_terminal_logits_sha256": "22f9b52d4c840a4261630984738f78f7076602d68b84dd4322cfbf3587beac0e"
+      },
+      "native_requested_correct": true,
+      "eleventh_word": "shoe",
+      "native_already_eleventh": false,
+      "native_eleventh_question_control": {
+        "id": "list-2-bullets-11",
+        "response": "spoon",
+        "strict_correct": false
+      },
+      "prefix_positions": [
+        {
+          "position": 79,
+          "token": "\n",
+          "location": "after_im_end",
+          "natural_gate": 0.0
+        },
+        {
+          "position": 86,
+          "token": "\n\n",
+          "location": "after_think",
+          "natural_gate": 0.0
+        }
+      ]
+    }
+  ],
+  "design": [
+    "All twenty revised fifth/twelfth-word requests are retained: five word orders x two formats x two requested positions. No selection on steering outputs.",
+    "At the two frozen chat-prefix newline positions, replace the post-JumpReLU scalar with a fixed target from 2,5,10,20,40. This is absolute scalar replacement, not multiplication and not copying a donor operator.",
+    "Add (target - natural_gate) * ((z @ V @ U) * output_std) at each selected input position. z is the recipient residual standardized before the native post-attention RMSNorm. Native MLPs and attention remain intact.",
+    "Only those two input tokens are edited. All other input positions, including the numbered-list newline before printed 11., and all generated/candidate-scoring positions remain unedited.",
+    "Use native and zero-strength edit runs as exact replay controls against saved baseline outputs, selected probabilities, every decoding-logit hash, and terminal unused-logit hash.",
+    "Score canonical complete lowercase words at positions 5,11,12 by cached teacher forcing; retain both word-only and word-then-EOS probabilities.",
+    "Two baseline twelfth-word cases already return the eleventh word. Show but never count those as newly induced successes. Retain other baseline failures, full high-gain outputs, truncations and formatting failures.",
+    "Report strict EOS-terminated word-only eleventh answers separately from merely mentioning that word; no incomplete or incoherent high-gain response counts as a strict success.",
+    "Report native requested-word competence and the saved native eleventh-word question control per case."
+  ],
+  "scope": "Every supplied input token, including chat wrapper/list/question/assistant prefix. No generated, candidate or terminal tokens edited.",
+  "adaptive_plan": {
+    "pilot_lists": [
+      1,
+      2
+    ],
+    "followup_lists": [
+      3,
+      4,
+      5
+    ],
+    "formats": [
+      "numbered",
+      "bullets"
+    ],
+    "questions": [
+      5,
+      12
+    ],
+    "range_selection": "Prioritize the lowest pilot gate producing a completed response containing only item 11 among listed words in a previously non-item-11 case, first with both native controls correct, then requested control correct, then any. Review these candidates for coherent affirmative answers. If none, choose the gate with highest mean direct item-11 probability among pilot cases passing both native controls. Freeze the follow-up grid before running remaining lists. Use the neighboring pilot gates as endpoints and their midpoints plus selected gate as the finer grid. Keep all responses, baseline failures and negatives visible. Selection is exploratory, not confirmatory.",
+    "generation_limit": 32,
+    "audit": "Store all-position gate and delta norms, trace all tokens, and independently reconstruct gates/operators/BF16 rounding on six predetermined positions per run."
+  }
+}
