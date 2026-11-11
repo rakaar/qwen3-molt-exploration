@@ -24,13 +24,21 @@ original_page = OUT / 'initial-pilot.html'
 if not original_page.exists():
     assert 'comparison.js' not in (OUT / 'index.html').read_text()
     shutil.copy2(OUT / 'index.html', original_page)
-version = hashlib.sha256((OUT / 'comparison-data.json').read_bytes()).hexdigest()[:12]
+plot = json.loads((OUT / 'prefix-active-means.json').read_text())
+assert plot['source_results_sha256'] == hashlib.sha256((OUT / 'without-starting-one/results.json').read_bytes()).hexdigest()
+prefix_counts = ''
+for ordinal in [5, 11, 12]:
+    groups = [g for g in plot['groups'] if g['ordinal'] == ordinal]
+    counts = [sum(g[key] for g in groups) for key in ['after_im_end_active_cases', 'after_think_active_cases', 'active_cases']]
+    prefix_counts += '<tr><td>' + {5: '5th', 11: '11th', 12: '12th'}[ordinal] + '</td>' + ''.join(f'<td>{n}/10</td>' for n in counts) + '</tr>'
+asset_bytes = b''.join((HERE / 'web' / n).read_bytes() for n in ['index.html', 'comparison.js', 'comparison.css'])
+version = hashlib.sha256((OUT / 'comparison-data.json').read_bytes() + asset_bytes).hexdigest()[:12]
 for name in ['index.html', 'comparison.js', 'comparison.css']:
-    text = (HERE / 'web' / name).read_text().replace('__VERSION__', version)
+    text = (HERE / 'web' / name).read_text().replace('__VERSION__', version).replace('__PREFIX_COUNTS__', prefix_counts)
     (OUT / name).write_text(text)
 source = OUT / 'without-starting-one/source'
 source.mkdir(exist_ok=True)
-for name in ['prepare.py', 'run.py', 'analyze.py', 'compare.py', 'build_site.py', 'prefix_check.py']:
+for name in ['prepare.py', 'run.py', 'analyze.py', 'compare.py', 'build_site.py', 'prefix_check.py', 'plot_prefix_means.py']:
     shutil.copy2(HERE / name, source / name)
 files = [dict(path=str(f.relative_to(OUT)), bytes=f.stat().st_size, sha256=hashlib.sha256(f.read_bytes()).hexdigest())
          for f in sorted(OUT.rglob('*')) if f.is_file() and f.name != 'site-manifest.json']
