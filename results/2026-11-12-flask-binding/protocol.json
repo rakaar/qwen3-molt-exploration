@@ -1,0 +1,420 @@
+{
+  "base_repo": "Qwen/Qwen3-4B",
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_repo": "georglange/qwen3-4b-molt",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "molt_checkpoint_sha256": "3b89660603200ca2f9eabd898f144eacc14c4e183bc148681e414b5f35db7581",
+  "feature_sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+  "experiment": "Water/oil flask binding, all-input T2375 removal, and lexical activation controls",
+  "date": "2026-11-12",
+  "frozen_at_utc": "2026-11-11T22:31:55.636296+00:00",
+  "feature": {
+    "layer": 29,
+    "transform": 2375
+  },
+  "cases": [
+    {
+      "id": "original-dax-first-ask-dax",
+      "kind": "binding",
+      "pair_id": "original-dax-first",
+      "query_owner": "Dax",
+      "water_owner": "Dax",
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "assignment": {
+        "Dax": "water",
+        "Neri": "oil"
+      },
+      "prompt_format": "chat",
+      "prompt": "Dax's flask contains water.\nNeri's flask contains oil.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "query": "What does Dax's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        107
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "original-dax-first-ask-neri",
+      "kind": "binding",
+      "pair_id": "original-dax-first",
+      "query_owner": "Neri",
+      "water_owner": "Dax",
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "assignment": {
+        "Dax": "water",
+        "Neri": "oil"
+      },
+      "prompt_format": "chat",
+      "prompt": "Dax's flask contains water.\nNeri's flask contains oil.\n\nWhat does Neri's flask contain? Reply with one word.",
+      "query": "What does Neri's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        108
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "oil",
+      "calibration": false
+    },
+    {
+      "id": "original-neri-first-ask-dax",
+      "kind": "binding",
+      "pair_id": "original-neri-first",
+      "query_owner": "Dax",
+      "water_owner": "Dax",
+      "fact_order": [
+        "Neri",
+        "Dax"
+      ],
+      "assignment": {
+        "Dax": "water",
+        "Neri": "oil"
+      },
+      "prompt_format": "chat",
+      "prompt": "Neri's flask contains oil.\nDax's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "query": "What does Dax's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        107
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "original-neri-first-ask-neri",
+      "kind": "binding",
+      "pair_id": "original-neri-first",
+      "query_owner": "Neri",
+      "water_owner": "Dax",
+      "fact_order": [
+        "Neri",
+        "Dax"
+      ],
+      "assignment": {
+        "Dax": "water",
+        "Neri": "oil"
+      },
+      "prompt_format": "chat",
+      "prompt": "Neri's flask contains oil.\nDax's flask contains water.\n\nWhat does Neri's flask contain? Reply with one word.",
+      "query": "What does Neri's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        108
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "oil",
+      "calibration": false
+    },
+    {
+      "id": "swapped-dax-first-ask-dax",
+      "kind": "binding",
+      "pair_id": "swapped-dax-first",
+      "query_owner": "Dax",
+      "water_owner": "Neri",
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "prompt_format": "chat",
+      "prompt": "Dax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "query": "What does Dax's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        107
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "oil",
+      "calibration": false
+    },
+    {
+      "id": "swapped-dax-first-ask-neri",
+      "kind": "binding",
+      "pair_id": "swapped-dax-first",
+      "query_owner": "Neri",
+      "water_owner": "Neri",
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "prompt_format": "chat",
+      "prompt": "Dax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Neri's flask contain? Reply with one word.",
+      "query": "What does Neri's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        108
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "swapped-neri-first-ask-dax",
+      "kind": "binding",
+      "pair_id": "swapped-neri-first",
+      "query_owner": "Dax",
+      "water_owner": "Neri",
+      "fact_order": [
+        "Neri",
+        "Dax"
+      ],
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "prompt_format": "chat",
+      "prompt": "Neri's flask contains water.\nDax's flask contains oil.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "query": "What does Dax's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        107
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "oil",
+      "calibration": false
+    },
+    {
+      "id": "swapped-neri-first-ask-neri",
+      "kind": "binding",
+      "pair_id": "swapped-neri-first",
+      "query_owner": "Neri",
+      "water_owner": "Neri",
+      "fact_order": [
+        "Neri",
+        "Dax"
+      ],
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "prompt_format": "chat",
+      "prompt": "Neri's flask contains water.\nDax's flask contains oil.\n\nWhat does Neri's flask contain? Reply with one word.",
+      "query": "What does Neri's flask contain? Reply with one word.",
+      "query_span": [
+        56,
+        108
+      ],
+      "codebook_span": [
+        0,
+        54
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "lexical-water",
+      "kind": "lexical_observation",
+      "pair_id": "lexical-water",
+      "prompt_format": "chat",
+      "prompt": "The word is water. Repeat that word, and nothing else.",
+      "query": "The word is water. Repeat that word, and nothing else.",
+      "query_span": [
+        0,
+        54
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "probe_span": [
+        12,
+        17
+      ],
+      "probe_word": "water",
+      "expected": "water",
+      "calibration": false
+    },
+    {
+      "id": "lexical-watermelon",
+      "kind": "lexical_observation",
+      "pair_id": "lexical-watermelon",
+      "prompt_format": "chat",
+      "prompt": "The word is watermelon. Repeat that word, and nothing else.",
+      "query": "The word is watermelon. Repeat that word, and nothing else.",
+      "query_span": [
+        0,
+        59
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "probe_span": [
+        12,
+        22
+      ],
+      "probe_word": "watermelon",
+      "expected": "watermelon",
+      "calibration": false
+    },
+    {
+      "id": "lexical-Waterloo",
+      "kind": "lexical_observation",
+      "pair_id": "lexical-Waterloo",
+      "prompt_format": "chat",
+      "prompt": "The word is Waterloo. Repeat that word, and nothing else.",
+      "query": "The word is Waterloo. Repeat that word, and nothing else.",
+      "query_span": [
+        0,
+        57
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "probe_span": [
+        12,
+        20
+      ],
+      "probe_word": "Waterloo",
+      "expected": "Waterloo",
+      "calibration": false
+    },
+    {
+      "id": "lexical-waterloo",
+      "kind": "lexical_observation",
+      "pair_id": "lexical-waterloo",
+      "prompt_format": "chat",
+      "prompt": "The word is waterloo. Repeat that word, and nothing else.",
+      "query": "The word is waterloo. Repeat that word, and nothing else.",
+      "query_span": [
+        0,
+        57
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "probe_span": [
+        12,
+        20
+      ],
+      "probe_word": "waterloo",
+      "expected": "waterloo",
+      "calibration": false
+    },
+    {
+      "id": "month-calibration-11",
+      "kind": "calibration",
+      "pair_id": "month-calibration",
+      "prompt_format": "raw",
+      "prompt": "the eleventh month of the year is",
+      "query": "the eleventh month of the year is",
+      "query_span": [
+        0,
+        33
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "November",
+      "calibration": true
+    },
+    {
+      "id": "month-calibration-12",
+      "kind": "calibration",
+      "pair_id": "month-calibration",
+      "prompt_format": "raw",
+      "prompt": "the twelfth month of the year is",
+      "query": "the twelfth month of the year is",
+      "query_span": [
+        0,
+        32
+      ],
+      "codebook_span": [
+        0,
+        0
+      ],
+      "probe_span": [
+        0,
+        0
+      ],
+      "expected": "December",
+      "calibration": true
+    }
+  ],
+  "maximum_runtime_minutes": 10,
+  "max_new_tokens": 32,
+  "enable_thinking": false,
+  "decode": "greedy",
+  "scopes": [
+    "off-all"
+  ],
+  "eligibility": "Freeze all native/zero observations before any nonzero edit. A binding layout is eligible only when the model answers both Dax and Neri correctly in the native codeword-only format (whitespace/case/terminal punctuation/quote-markdown normalization, EOS). Preserve failed pairs and no-activation cases. Lexical cases are observation-only, not causal tests.",
+  "intervention": "At every supplied input token, subtract the natural L29 T2375 gate times the local operator from the native MLP output. Preserve all supplied text and all other native computation. Generated/candidate-continuation tokens unedited. FP32 edit followed by one BF16 cast.",
+  "probabilities": "Sum disjoint exact complete water/oil output-token prefixes over lowercase/titlecase with zero/one leading space, deduplicated by token sequence. Input is never retokenized. Preserve word-plus-EOS separately. A water prefix can be followed by more text; do not interpret it as semantic water or a word-boundary event in lexical controls.",
+  "controls": "Counterbalance fluid assignment and fact order; ask both names natively before eligibility; water/watermelon/Waterloo/waterloo same-carrier observation with input token spans; original raw month 11/12 technical calibration. No matched active-transform specificity control in this pilot."
+}

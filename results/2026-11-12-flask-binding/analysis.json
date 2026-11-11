@@ -1,0 +1,1333 @@
+{
+  "binding_cases": 8,
+  "binding_native_correct": 8,
+  "eligible_binding_pairs": 4,
+  "lexical_cases": 4,
+  "binding_off_correct": 8,
+  "shared_prefix_check": {
+    "same_causal_input_prefix_verified": true,
+    "shared_token_id": 3015,
+    "shared_gate": 2.03216552734375,
+    "examples": [
+      {
+        "id": "lexical-water",
+        "active_token_position": 6,
+        "active_token_id": 3015,
+        "token": " water",
+        "gate": 2.03216552734375,
+        "input_prefix_ids": [
+          151644,
+          872,
+          198,
+          785,
+          3409,
+          374,
+          3015
+        ]
+      },
+      {
+        "id": "lexical-watermelon",
+        "active_token_position": 6,
+        "active_token_id": 3015,
+        "token": " water",
+        "gate": 2.03216552734375,
+        "input_prefix_ids": [
+          151644,
+          872,
+          198,
+          785,
+          3409,
+          374,
+          3015
+        ]
+      },
+      {
+        "id": "lexical-waterloo",
+        "active_token_position": 6,
+        "active_token_id": 3015,
+        "token": " water",
+        "gate": 2.03216552734375,
+        "input_prefix_ids": [
+          151644,
+          872,
+          198,
+          785,
+          3409,
+          374,
+          3015
+        ]
+      }
+    ],
+    "interpretation": "At the input water piece, the causal model has identical token history; later melon/loo cannot influence this activation. This equality does not show semantic equivalence of the completed words."
+  },
+  "cases": [
+    {
+      "id": "original-dax-first-ask-dax",
+      "prompt": "Dax's flask contains water.\nNeri's flask contains oil.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "original-dax-first",
+      "query_owner": "Dax",
+      "water_owner": "Dax",
+      "assignment": {
+        "Dax": "water",
+        "Neri": "oil"
+      },
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": "Water.",
+      "native_stop": "eos",
+      "query_final_position": 29,
+      "input_positive": [
+        {
+          "position": 8,
+          "token": " water",
+          "gate": 0.6042167544364929,
+          "region": "facts"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 1.000000056401575,
+        "word_then_eos": 7.946585839232514e-06,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_water_score": {
+        "probability": 1.000000056401575,
+        "word_then_eos": 7.946585839232514e-06,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": {
+        "probability": 5.677807644015743e-14,
+        "word_then_eos": 1.067656908052417e-16,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "original-dax-first-ask-neri",
+      "prompt": "Dax's flask contains water.\nNeri's flask contains oil.\n\nWhat does Neri's flask contain? Reply with one word.",
+      "format": "chat",
+      "expected": "oil",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "original-dax-first",
+      "query_owner": "Neri",
+      "water_owner": "Dax",
+      "assignment": {
+        "Dax": "water",
+        "Neri": "oil"
+      },
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": "Oil.",
+      "native_stop": "eos",
+      "query_final_position": 29,
+      "input_positive": [
+        {
+          "position": 8,
+          "token": " water",
+          "gate": 0.6042167544364929,
+          "region": "facts"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.9969013040912897,
+        "word_then_eos": 0.023436116265118663,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "native_water_score": {
+        "probability": 1.6524473818288356e-10,
+        "word_then_eos": 5.250038951313117e-13,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": {
+        "probability": 0.9969013040912897,
+        "word_then_eos": 0.023436116265118663,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "original-neri-first-ask-dax",
+      "prompt": "Neri's flask contains oil.\nDax's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "original-neri-first",
+      "query_owner": "Dax",
+      "water_owner": "Dax",
+      "assignment": {
+        "Dax": "water",
+        "Neri": "oil"
+      },
+      "fact_order": [
+        "Neri",
+        "Dax"
+      ],
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": "Water.",
+      "native_stop": "eos",
+      "query_final_position": 29,
+      "input_positive": [
+        {
+          "position": 15,
+          "token": " water",
+          "gate": 0.6428969502449036,
+          "region": "facts"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.9999926182708478,
+        "word_then_eos": 0.07587808820269545,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_water_score": {
+        "probability": 0.9999926182708478,
+        "word_then_eos": 0.07587808820269545,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": {
+        "probability": 1.1696667406128529e-09,
+        "word_then_eos": 1.4434239747884817e-11,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "original-neri-first-ask-neri",
+      "prompt": "Neri's flask contains oil.\nDax's flask contains water.\n\nWhat does Neri's flask contain? Reply with one word.",
+      "format": "chat",
+      "expected": "oil",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "original-neri-first",
+      "query_owner": "Neri",
+      "water_owner": "Dax",
+      "assignment": {
+        "Dax": "water",
+        "Neri": "oil"
+      },
+      "fact_order": [
+        "Neri",
+        "Dax"
+      ],
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": "Oil.",
+      "native_stop": "eos",
+      "query_final_position": 29,
+      "input_positive": [
+        {
+          "position": 15,
+          "token": " water",
+          "gate": 0.6428969502449036,
+          "region": "facts"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.9999251307806096,
+        "word_then_eos": 0.00021356438036676206,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "native_water_score": {
+        "probability": 9.542790857430753e-12,
+        "word_then_eos": 6.821517940439553e-16,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": {
+        "probability": 0.9999251307806096,
+        "word_then_eos": 0.00021356438036676206,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "swapped-dax-first-ask-dax",
+      "prompt": "Dax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "format": "chat",
+      "expected": "oil",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "swapped-dax-first",
+      "query_owner": "Dax",
+      "water_owner": "Neri",
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": "Oil.",
+      "native_stop": "eos",
+      "query_final_position": 29,
+      "input_positive": [
+        {
+          "position": 15,
+          "token": " water",
+          "gate": 0.8252673745155334,
+          "region": "facts"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.9999920833699694,
+        "word_then_eos": 1.4400033440646698e-05,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "native_water_score": {
+        "probability": 2.88232008399629e-13,
+        "word_then_eos": 4.032539264027949e-18,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": {
+        "probability": 0.9999920833699694,
+        "word_then_eos": 1.4400033440646698e-05,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "swapped-dax-first-ask-neri",
+      "prompt": "Dax's flask contains oil.\nNeri's flask contains water.\n\nWhat does Neri's flask contain? Reply with one word.",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "swapped-dax-first",
+      "query_owner": "Neri",
+      "water_owner": "Neri",
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "fact_order": [
+        "Dax",
+        "Neri"
+      ],
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": "Water.",
+      "native_stop": "eos",
+      "query_final_position": 29,
+      "input_positive": [
+        {
+          "position": 15,
+          "token": " water",
+          "gate": 0.8252673745155334,
+          "region": "facts"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.9999937290058408,
+        "word_then_eos": 0.0229879406955554,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_water_score": {
+        "probability": 0.9999937290058408,
+        "word_then_eos": 0.0229879406955554,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": {
+        "probability": 1.943726233489161e-13,
+        "word_then_eos": 8.836943956007499e-16,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "swapped-neri-first-ask-dax",
+      "prompt": "Neri's flask contains water.\nDax's flask contains oil.\n\nWhat does Dax's flask contain? Reply with one word.",
+      "format": "chat",
+      "expected": "oil",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "swapped-neri-first",
+      "query_owner": "Dax",
+      "water_owner": "Neri",
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "fact_order": [
+        "Neri",
+        "Dax"
+      ],
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": "Oil.",
+      "native_stop": "eos",
+      "query_final_position": 29,
+      "input_positive": [
+        {
+          "position": 8,
+          "token": " water",
+          "gate": 0.754751980304718,
+          "region": "facts"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.9971304223908543,
+        "word_then_eos": 0.09579377956524289,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "native_water_score": {
+        "probability": 6.085345519271669e-10,
+        "word_then_eos": 5.229956272386735e-12,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": {
+        "probability": 0.9971304223908543,
+        "word_then_eos": 0.09579377956524289,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "swapped-neri-first-ask-neri",
+      "prompt": "Neri's flask contains water.\nDax's flask contains oil.\n\nWhat does Neri's flask contain? Reply with one word.",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "swapped-neri-first",
+      "query_owner": "Neri",
+      "water_owner": "Neri",
+      "assignment": {
+        "Dax": "oil",
+        "Neri": "water"
+      },
+      "fact_order": [
+        "Neri",
+        "Dax"
+      ],
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": "Water.",
+      "native_stop": "eos",
+      "query_final_position": 29,
+      "input_positive": [
+        {
+          "position": 8,
+          "token": " water",
+          "gate": 0.754751980304718,
+          "region": "facts"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.9999998641131717,
+        "word_then_eos": 7.504606750472344e-05,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_water_score": {
+        "probability": 0.9999998641131717,
+        "word_then_eos": 7.504606750472344e-05,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": {
+        "probability": 1.2028512633617674e-13,
+        "word_then_eos": 1.6117688980256096e-16,
+        "variants": [
+          "oil",
+          "Oil",
+          " oil",
+          " Oil"
+        ]
+      },
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "lexical-water",
+      "prompt": "The word is water. Repeat that word, and nothing else.",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "lexical_observation",
+      "pair_id": "lexical-water",
+      "query_owner": null,
+      "water_owner": null,
+      "assignment": null,
+      "fact_order": null,
+      "probe_word": "water",
+      "eligible": false,
+      "native_correct": true,
+      "native_response": "water",
+      "native_stop": "eos",
+      "query_final_position": 15,
+      "input_positive": [
+        {
+          "position": 6,
+          "token": " water",
+          "gate": 2.03216552734375,
+          "region": "query"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.9999998689396659,
+        "word_then_eos": 0.8723359230824939,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_water_score": {
+        "probability": 0.9999998689396659,
+        "word_then_eos": 0.8723359230824939,
+        "variants": [
+          "water",
+          "Water",
+          " water",
+          " Water"
+        ]
+      },
+      "native_oil_score": null,
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": [
+        {
+          "position": 6,
+          "token": " water",
+          "token_id": 3015,
+          "raw": 2.03216552734375,
+          "gate": 2.03216552734375
+        }
+      ]
+    },
+    {
+      "id": "lexical-watermelon",
+      "prompt": "The word is watermelon. Repeat that word, and nothing else.",
+      "format": "chat",
+      "expected": "watermelon",
+      "calibration": false,
+      "kind": "lexical_observation",
+      "pair_id": "lexical-watermelon",
+      "query_owner": null,
+      "water_owner": null,
+      "assignment": null,
+      "fact_order": null,
+      "probe_word": "watermelon",
+      "eligible": false,
+      "native_correct": false,
+      "native_response": "watermelonwatermelon",
+      "native_stop": "eos",
+      "query_final_position": 16,
+      "input_positive": [
+        {
+          "position": 6,
+          "token": " water",
+          "gate": 2.03216552734375,
+          "region": "query"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 1,
+      "native_expected_score": {
+        "probability": 0.9999966197841449,
+        "word_then_eos": 0.0021320336761403093,
+        "variants": [
+          "watermelon",
+          "Watermelon",
+          " watermelon",
+          " Watermelon"
+        ]
+      },
+      "native_water_score": null,
+      "native_oil_score": null,
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": [
+        {
+          "position": 6,
+          "token": " water",
+          "token_id": 3015,
+          "raw": 2.03216552734375,
+          "gate": 2.03216552734375
+        },
+        {
+          "position": 7,
+          "token": "melon",
+          "token_id": 71118,
+          "raw": -1.320918083190918,
+          "gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "lexical-Waterloo",
+      "prompt": "The word is Waterloo. Repeat that word, and nothing else.",
+      "format": "chat",
+      "expected": "Waterloo",
+      "calibration": false,
+      "kind": "lexical_observation",
+      "pair_id": "lexical-Waterloo",
+      "query_owner": null,
+      "water_owner": null,
+      "assignment": null,
+      "fact_order": null,
+      "probe_word": "Waterloo",
+      "eligible": false,
+      "native_correct": true,
+      "native_response": "Waterloo.",
+      "native_stop": "eos",
+      "query_final_position": 15,
+      "input_positive": [],
+      "response_positive": [
+        {
+          "position": 25,
+          "response_index": 0,
+          "token": "Water",
+          "gate": 2.107834577560425
+        }
+      ],
+      "expected_word_complete_at_response_index": 1,
+      "native_expected_score": {
+        "probability": 0.9999771180782218,
+        "word_then_eos": 0.009708050707070589,
+        "variants": [
+          "waterloo",
+          "Waterloo",
+          " waterloo",
+          " Waterloo"
+        ]
+      },
+      "native_water_score": null,
+      "native_oil_score": null,
+      "response_activity_before_expected_word_complete": [
+        {
+          "position": 25,
+          "response_index": 0,
+          "token": "Water",
+          "gate": 2.107834577560425
+        }
+      ],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": [
+        {
+          "position": 6,
+          "token": " Waterloo",
+          "token_id": 76375,
+          "raw": -0.19002765417099,
+          "gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "lexical-waterloo",
+      "prompt": "The word is waterloo. Repeat that word, and nothing else.",
+      "format": "chat",
+      "expected": "waterloo",
+      "calibration": false,
+      "kind": "lexical_observation",
+      "pair_id": "lexical-waterloo",
+      "query_owner": null,
+      "water_owner": null,
+      "assignment": null,
+      "fact_order": null,
+      "probe_word": "waterloo",
+      "eligible": false,
+      "native_correct": false,
+      "native_response": "waterloowaterloo",
+      "native_stop": "eos",
+      "query_final_position": 16,
+      "input_positive": [
+        {
+          "position": 6,
+          "token": " water",
+          "gate": 2.03216552734375,
+          "region": "query"
+        }
+      ],
+      "response_positive": [
+        {
+          "position": 26,
+          "response_index": 0,
+          "token": "water",
+          "gate": 0.9846280217170715
+        }
+      ],
+      "expected_word_complete_at_response_index": 1,
+      "native_expected_score": {
+        "probability": 0.9999931917613707,
+        "word_then_eos": 0.013327045058079095,
+        "variants": [
+          "waterloo",
+          "Waterloo",
+          " waterloo",
+          " Waterloo"
+        ]
+      },
+      "native_water_score": null,
+      "native_oil_score": null,
+      "response_activity_before_expected_word_complete": [
+        {
+          "position": 26,
+          "response_index": 0,
+          "token": "water",
+          "gate": 0.9846280217170715
+        }
+      ],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": [
+        {
+          "position": 6,
+          "token": " water",
+          "token_id": 3015,
+          "raw": 2.03216552734375,
+          "gate": 2.03216552734375
+        },
+        {
+          "position": 7,
+          "token": "loo",
+          "token_id": 47133,
+          "raw": -0.8053652048110962,
+          "gate": 0.0
+        }
+      ]
+    },
+    {
+      "id": "month-calibration-11",
+      "prompt": "the eleventh month of the year is",
+      "format": "raw",
+      "expected": "November",
+      "calibration": true,
+      "kind": "calibration",
+      "pair_id": "month-calibration",
+      "query_owner": null,
+      "water_owner": null,
+      "assignment": null,
+      "fact_order": null,
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "native_stop": "token_limit",
+      "query_final_position": 7,
+      "input_positive": [
+        {
+          "position": 7,
+          "token": " is",
+          "gate": 1.1585536003112793,
+          "region": "query"
+        }
+      ],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.6688598258481012,
+        "word_then_eos": 2.0377579763220521e-10,
+        "variants": [
+          "november",
+          "November",
+          " november",
+          " November"
+        ]
+      },
+      "native_water_score": null,
+      "native_oil_score": null,
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    },
+    {
+      "id": "month-calibration-12",
+      "prompt": "the twelfth month of the year is",
+      "format": "raw",
+      "expected": "December",
+      "calibration": true,
+      "kind": "calibration",
+      "pair_id": "month-calibration",
+      "query_owner": null,
+      "water_owner": null,
+      "assignment": null,
+      "fact_order": null,
+      "probe_word": null,
+      "eligible": true,
+      "native_correct": true,
+      "native_response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.",
+      "native_stop": "token_limit",
+      "query_final_position": 7,
+      "input_positive": [],
+      "response_positive": [],
+      "expected_word_complete_at_response_index": 0,
+      "native_expected_score": {
+        "probability": 0.8805524318906984,
+        "word_then_eos": 6.714378928950715e-11,
+        "variants": [
+          "december",
+          "December",
+          " december",
+          " December"
+        ]
+      },
+      "native_water_score": null,
+      "native_oil_score": null,
+      "response_activity_before_expected_word_complete": [],
+      "response_activity_on_or_after_completed_expected_word": [],
+      "probe_word_tokens": []
+    }
+  ],
+  "rows": [
+    {
+      "id": "original-dax-first-ask-dax",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "original-dax-first",
+      "query_owner": "Dax",
+      "water_owner": "Dax",
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": "Water.",
+      "off_response": "Water.",
+      "off_stop": "eos",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        8
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 1.000000056401575,
+      "native_p_expected_eos": 7.946585839232514e-06,
+      "native_p_water": 1.000000056401575,
+      "native_p_water_eos": 7.946585839232514e-06,
+      "native_p_oil": 5.677807644015743e-14,
+      "native_p_oil_eos": 1.067656908052417e-16,
+      "off_p_expected": 1.000000056401575,
+      "off_p_expected_eos": 7.958010579304262e-06,
+      "off_p_water": 1.000000056401575,
+      "off_p_water_eos": 7.958010579304262e-06,
+      "off_p_oil": 6.433790053369996e-14,
+      "off_p_oil_eos": 1.4826103057565303e-16,
+      "native_log_water_over_oil": 30.49962617826014,
+      "off_log_water_over_oil": 30.374627560843535,
+      "delta_log_water_over_oil": -0.12499861741660467,
+      "off_correct": true,
+      "delta_expected_percentage_points": 0.0
+    },
+    {
+      "id": "original-dax-first-ask-neri",
+      "format": "chat",
+      "expected": "oil",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "original-dax-first",
+      "query_owner": "Neri",
+      "water_owner": "Dax",
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": "Oil.",
+      "off_response": "Oil.",
+      "off_stop": "eos",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        8
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 0.9969013040912897,
+      "native_p_expected_eos": 0.023436116265118663,
+      "native_p_water": 1.6524473818288356e-10,
+      "native_p_water_eos": 5.250038951313117e-13,
+      "native_p_oil": 0.9969013040912897,
+      "native_p_oil_eos": 0.023436116265118663,
+      "off_p_expected": 0.9975851019554199,
+      "off_p_expected_eos": 0.02343804356307134,
+      "off_p_water": 1.4592813608862836e-10,
+      "off_p_water_eos": 4.635603739922898e-13,
+      "off_p_oil": 0.9975851019554199,
+      "off_p_oil_eos": 0.02343804356307134,
+      "native_log_water_over_oil": -22.520489972451838,
+      "off_log_water_over_oil": -22.645489015356848,
+      "delta_log_water_over_oil": -0.12499904290501007,
+      "off_correct": true,
+      "delta_expected_percentage_points": 0.06837978641301978
+    },
+    {
+      "id": "original-neri-first-ask-dax",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "original-neri-first",
+      "query_owner": "Dax",
+      "water_owner": "Dax",
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": "Water.",
+      "off_response": "Water.",
+      "off_stop": "eos",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        15
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 0.9999926182708478,
+      "native_p_expected_eos": 0.07587808820269545,
+      "native_p_water": 0.9999926182708478,
+      "native_p_water_eos": 0.07587808820269545,
+      "native_p_oil": 1.1696667406128529e-09,
+      "native_p_oil_eos": 1.4434239747884817e-11,
+      "off_p_expected": 0.9999908296634379,
+      "off_p_expected_eos": 0.11922265478065955,
+      "off_p_water": 0.9999908296634379,
+      "off_p_water_eos": 0.11922265478065955,
+      "off_p_oil": 1.433774818287636e-09,
+      "off_p_oil_eos": 1.998737542731853e-11,
+      "native_log_water_over_oil": 20.56653958403717,
+      "off_log_water_over_oil": 20.36294596720377,
+      "delta_log_water_over_oil": -0.20359361683339827,
+      "off_correct": true,
+      "delta_expected_percentage_points": -0.00017886074099582316
+    },
+    {
+      "id": "original-neri-first-ask-neri",
+      "format": "chat",
+      "expected": "oil",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "original-neri-first",
+      "query_owner": "Neri",
+      "water_owner": "Dax",
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": "Oil.",
+      "off_response": "Oil.",
+      "off_stop": "eos",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        15
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 0.9999251307806096,
+      "native_p_expected_eos": 0.00021356438036676206,
+      "native_p_water": 9.542790857430753e-12,
+      "native_p_water_eos": 6.821517940439553e-16,
+      "native_p_oil": 0.9999251307806096,
+      "native_p_oil_eos": 0.00021356438036676206,
+      "off_p_expected": 0.9999039195301892,
+      "off_p_expected_eos": 0.00021356777516473875,
+      "off_p_water": 1.0813135953743034e-11,
+      "off_p_water_eos": 7.158698397407289e-16,
+      "off_p_oil": 0.9999039195301892,
+      "off_p_oil_eos": 0.00021356777516473875,
+      "native_log_water_over_oil": -25.375160258520772,
+      "off_log_water_over_oil": -25.250163343783193,
+      "delta_log_water_over_oil": 0.12499691473757935,
+      "off_correct": true,
+      "delta_expected_percentage_points": -0.0021211250420427596
+    },
+    {
+      "id": "swapped-dax-first-ask-dax",
+      "format": "chat",
+      "expected": "oil",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "swapped-dax-first",
+      "query_owner": "Dax",
+      "water_owner": "Neri",
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": "Oil.",
+      "off_response": "Oil.",
+      "off_stop": "eos",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        15
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 0.9999920833699694,
+      "native_p_expected_eos": 1.4400033440646698e-05,
+      "native_p_water": 2.88232008399629e-13,
+      "native_p_water_eos": 4.032539264027949e-18,
+      "native_p_oil": 0.9999920833699694,
+      "native_p_oil_eos": 1.4400033440646698e-05,
+      "off_p_expected": 0.9999920730078731,
+      "off_p_expected_eos": 1.4099687095119006e-05,
+      "off_p_water": 2.2447567937833582e-13,
+      "off_p_water_eos": 3.6182537391403544e-18,
+      "off_p_oil": 0.9999920730078731,
+      "off_p_oil_eos": 1.4099687095119006e-05,
+      "native_log_water_over_oil": -28.87500273770165,
+      "off_log_water_over_oil": -29.125001098963693,
+      "delta_log_water_over_oil": -0.249998361262044,
+      "off_correct": true,
+      "delta_expected_percentage_points": -1.0362096292126921e-06
+    },
+    {
+      "id": "swapped-dax-first-ask-neri",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "swapped-dax-first",
+      "query_owner": "Neri",
+      "water_owner": "Neri",
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": "Water.",
+      "off_response": "Water.",
+      "off_stop": "eos",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        15
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 0.9999937290058408,
+      "native_p_expected_eos": 0.0229879406955554,
+      "native_p_water": 0.9999937290058408,
+      "native_p_water_eos": 0.0229879406955554,
+      "native_p_oil": 1.943726233489161e-13,
+      "native_p_oil_eos": 8.836943956007499e-16,
+      "off_p_expected": 0.9999937290058408,
+      "off_p_expected_eos": 0.0229879406955554,
+      "off_p_water": 0.9999937290058408,
+      "off_p_water_eos": 0.0229879406955554,
+      "off_p_oil": 2.2030734123795187e-13,
+      "off_p_oil_eos": 1.0642996875194695e-15,
+      "native_log_water_over_oil": 29.268993068181956,
+      "off_log_water_over_oil": 29.14374654682195,
+      "delta_log_water_over_oil": -0.1252465213600047,
+      "off_correct": true,
+      "delta_expected_percentage_points": 0.0
+    },
+    {
+      "id": "swapped-neri-first-ask-dax",
+      "format": "chat",
+      "expected": "oil",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "swapped-neri-first",
+      "query_owner": "Dax",
+      "water_owner": "Neri",
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": "Oil.",
+      "off_response": "Oil.",
+      "off_stop": "eos",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        8
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 0.9971304223908543,
+      "native_p_expected_eos": 0.09579377956524289,
+      "native_p_water": 6.085345519271669e-10,
+      "native_p_water_eos": 5.229956272386735e-12,
+      "native_p_oil": 0.9971304223908543,
+      "native_p_oil_eos": 0.09579377956524289,
+      "off_p_expected": 0.9971304223908543,
+      "off_p_expected_eos": 0.09579377766248647,
+      "off_p_water": 7.832774563927859e-10,
+      "off_p_water_eos": 8.618984820240378e-12,
+      "off_p_oil": 0.9971304223908543,
+      "off_p_oil_eos": 0.09579377766248647,
+      "native_log_water_over_oil": -21.21709372024081,
+      "off_log_water_over_oil": -20.964660429526795,
+      "delta_log_water_over_oil": 0.2524332907140163,
+      "off_correct": true,
+      "delta_expected_percentage_points": 0.0
+    },
+    {
+      "id": "swapped-neri-first-ask-neri",
+      "format": "chat",
+      "expected": "water",
+      "calibration": false,
+      "kind": "binding",
+      "pair_id": "swapped-neri-first",
+      "query_owner": "Neri",
+      "water_owner": "Neri",
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": "Water.",
+      "off_response": "Water.",
+      "off_stop": "eos",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        8
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 0.9999998641131717,
+      "native_p_expected_eos": 7.504606750472344e-05,
+      "native_p_water": 0.9999998641131717,
+      "native_p_water_eos": 7.504606750472344e-05,
+      "native_p_oil": 1.2028512633617674e-13,
+      "native_p_oil_eos": 1.6117688980256096e-16,
+      "off_p_expected": 0.9999998639245664,
+      "off_p_expected_eos": 7.50709583277237e-05,
+      "off_p_water": 0.9999998639245664,
+      "off_p_water_eos": 7.50709583277237e-05,
+      "off_p_oil": 1.202762315455128e-13,
+      "off_p_oil_eos": 1.5229416603898259e-16,
+      "native_log_water_over_oil": 29.748911281790303,
+      "off_log_water_over_oil": 29.7489852318882,
+      "delta_log_water_over_oil": 7.39500978959029e-05,
+      "off_correct": true,
+      "delta_expected_percentage_points": -1.886052425348339e-08
+    },
+    {
+      "id": "month-calibration-11",
+      "format": "raw",
+      "expected": "November",
+      "calibration": true,
+      "kind": "calibration",
+      "pair_id": "month-calibration",
+      "query_owner": null,
+      "water_owner": null,
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": " november. the twelfth month is december. the first month is january. the second month is february. the third month is march. the fourth month",
+      "off_response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth month is july. the seventh month",
+      "off_stop": "token_limit",
+      "edited_input_tokens": 1,
+      "edited_positions": [
+        7
+      ],
+      "generated_tokens_edited": 0,
+      "response_changed": true,
+      "native_p_expected": 0.6688598258481012,
+      "native_p_expected_eos": 2.0377579763220521e-10,
+      "native_p_water": null,
+      "native_p_water_eos": null,
+      "native_p_oil": null,
+      "native_p_oil_eos": null,
+      "off_p_expected": 0.0883280519078916,
+      "off_p_expected_eos": 2.8955869141652585e-11,
+      "off_p_water": null,
+      "off_p_water_eos": null,
+      "off_p_oil": null,
+      "off_p_oil_eos": null,
+      "native_log_water_over_oil": null,
+      "off_log_water_over_oil": null,
+      "delta_log_water_over_oil": null,
+      "off_correct": false,
+      "delta_expected_percentage_points": -58.05317739402096
+    },
+    {
+      "id": "month-calibration-12",
+      "format": "raw",
+      "expected": "December",
+      "calibration": true,
+      "kind": "calibration",
+      "pair_id": "month-calibration",
+      "query_owner": null,
+      "water_owner": null,
+      "scope": "off-all",
+      "native_correct": true,
+      "native_response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.",
+      "off_response": " december. the twelfth month of the year is december. the twelfth month of the year is december. the twelfth month of the year is december.",
+      "off_stop": "token_limit",
+      "edited_input_tokens": 0,
+      "edited_positions": [],
+      "generated_tokens_edited": 0,
+      "response_changed": false,
+      "native_p_expected": 0.8805524318906984,
+      "native_p_expected_eos": 6.714378928950715e-11,
+      "native_p_water": null,
+      "native_p_water_eos": null,
+      "native_p_oil": null,
+      "native_p_oil_eos": null,
+      "off_p_expected": 0.8805524318906984,
+      "off_p_expected_eos": 6.714378928950715e-11,
+      "off_p_water": null,
+      "off_p_water_eos": null,
+      "off_p_oil": null,
+      "off_p_oil_eos": null,
+      "native_log_water_over_oil": null,
+      "off_log_water_over_oil": null,
+      "delta_log_water_over_oil": null,
+      "off_correct": true,
+      "delta_expected_percentage_points": 0.0
+    }
+  ],
+  "audit": {
+    "source_hash_verified": true,
+    "baseline_lock_verified": true,
+    "native_zero_exact": true,
+    "independent_vector_samples": 26,
+    "positive_input_contributions_removed": 9,
+    "generated_positions_edited": 0,
+    "bf16_rounding_exact": true
+  },
+  "source_sha256": "3904cebeb6293c52f911d3b476c267da0f963374fd975fd74731a3d00aa19a0b",
+  "results_sha256": "16397df190f51b48e4d3e38807e71f56d5b2ea7705d5fe76161649d88011035b"
+}
