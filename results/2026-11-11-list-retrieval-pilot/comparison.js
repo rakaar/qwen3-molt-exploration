@@ -64,4 +64,4 @@ function inspect(e) {
 ['pointerover','focusin','click'].forEach(event=>document.addEventListener(event,inspect));
 document.getElementById('close-modal').addEventListener('click',()=>modal.close());
 modal.addEventListener('click',e=>{if(e.target===modal)modal.close();});
-fetch('comparison-data.json?v=9203b3406621').then(r=>{if(!r.ok)throw Error('Data unavailable');return r.json();}).then(x=>{data=x;init();}).catch(e=>{document.getElementById('headline').textContent='Could not load the results. Please reload.';console.error(e);});
+fetch('comparison-data.json?v=8b269e649130').then(r=>{if(!r.ok)throw Error('Data unavailable');return r.json();}).then(x=>{data=x;init();}).catch(e=>{document.getElementById('headline').textContent='Could not load the results. Please reload.';console.error(e);});
