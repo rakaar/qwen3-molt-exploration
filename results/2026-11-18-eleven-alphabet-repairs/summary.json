@@ -1,0 +1,161 @@
+{
+  "prompt": "the eleventh letter of the english alphabet is",
+  "edited_input_token": " is",
+  "position": 8,
+  "rows": [
+    {
+      "condition": "native",
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.710745245218277,
+        "L": 0.010285762138664722
+      },
+      "edited_sites": [],
+      "delta_log_K_over_L_vs_off": 6.751077686130197
+    },
+    {
+      "condition": "T2375-off",
+      "first_token": " l",
+      "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.026466616429388523,
+        "L": 0.3274739235639572
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 0.0
+    },
+    {
+      "condition": "L33-T14",
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.7149098813533783,
+        "L": 0.017397229559719563
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 33.50059509277344
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 6.23136976959787
+    },
+    {
+      "condition": "L34-T965",
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.27666284143924713,
+        "L": 0.14226068183779716
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L34-T965",
+          "token_position": 8,
+          "delta_l2": 49.18452072143555
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 3.180662671461501
+    },
+    {
+      "condition": "L35-T760",
+      "first_token": " l",
+      "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.031763503327965736,
+        "L": 0.2914288491010666
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L35-T760",
+          "token_position": 8,
+          "delta_l2": 23.397554397583008
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 0.2990462937620535
+    },
+    {
+      "condition": "L34-T1440",
+      "first_token": " '",
+      "response": " 'k'. What is the eleventh letter from the end of the English alphabet?\n\nTo determine the eleventh letter from",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.07391821593046188,
+        "L": 0.2276841327548027
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L34-T1440",
+          "token_position": 8,
+          "delta_l2": 40.225826263427734
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 1.3905242538825682
+    },
+    {
+      "condition": "L35-T2117",
+      "first_token": " l",
+      "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.025835854932665825,
+        "L": 0.32959508150815964
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L35-T2117",
+          "token_position": 8,
+          "delta_l2": 15.616103172302246
+        }
+      ],
+      "delta_log_K_over_L_vs_off": -0.030577374340343688
+    }
+  ],
+  "verification": {
+    "native_reference_logits_exact": true,
+    "native_reference_logit_max_abs_diff": 0.0,
+    "off_reference_logits_exact": true,
+    "off_reference_logit_max_abs_diff": 0.0
+  },
+  "independently_checked_feature_observations": 54,
+  "exact_bf16_edit_arithmetic": true,
+  "probability_definition": "First-token probabilities for leading-space uppercase and lowercase variants added together."
+}

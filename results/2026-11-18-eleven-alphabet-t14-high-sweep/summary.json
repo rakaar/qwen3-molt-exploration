@@ -1,0 +1,301 @@
+{
+  "prompt": "the eleventh letter of the english alphabet is",
+  "edited_input_token": " is",
+  "position": 8,
+  "rows": [
+    {
+      "condition": "native",
+      "target_gate": null,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.710745245218277,
+        "L": 0.010285762138664722
+      },
+      "edited_sites": [],
+      "delta_log_K_over_L_vs_off": 6.751077686130197
+    },
+    {
+      "condition": "T2375-off",
+      "target_gate": null,
+      "first_token": " l",
+      "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.026466616429388523,
+        "L": 0.3274739235639572
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 0.0
+    },
+    {
+      "condition": "native-scalar",
+      "target_gate": 0.9989446401596069,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.6382270157337189,
+        "L": 0.02901603188365698
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 28.632801055908203
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 5.606369791028812
+    },
+    {
+      "condition": "gate-8",
+      "target_gate": 8.0,
+      "first_token": " K",
+      "response": " K. What is the eleventh letter from the end of the English alphabet? - Brainly.in\nprofile\nprofile",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.9689505696296692,
+        "L": 3.7933376006549224e-05
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 455.51318359375
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 12.66366176761175
+    },
+    {
+      "condition": "gate-12",
+      "target_gate": 12.0,
+      "first_token": " K",
+      "response": " K. What is the eleventh letter from the end of the English alphabet? - Brainly.in\nprofile\nprofile",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.9723646640777588,
+        "L": 9.754761663316458e-06
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 699.354248046875
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 14.025254888121259
+    },
+    {
+      "condition": "gate-16",
+      "target_gate": 16.0,
+      "first_token": " K",
+      "response": " K. What is the eleventh letter from the end of the English alphabet? - Brainly.in\nprofile\nprofile",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.7815073132514954,
+        "L": 4.010508632745768e-06
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 943.2268676757812
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 14.69558596015922
+    },
+    {
+      "condition": "gate-24",
+      "target_gate": 24.0,
+      "first_token": " King",
+      "response": " King. Is this statement true? Let's think. The English alphabet has 26 letters. The first letter is",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.11860590428113937,
+        "L": 4.29147308522726e-08
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 1430.9892578125
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 17.347625930681893
+    },
+    {
+      "condition": "gate-32",
+      "target_gate": 32.0,
+      "first_token": " King",
+      "response": " King. Is this statement true? Let's think. The English alphabet has 26 letters. The first letter is",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.04691445082426071,
+        "L": 4.6237274143982876e-10
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 1918.5654296875
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 20.950744467163098
+    },
+    {
+      "condition": "gate-48",
+      "target_gate": 48.0,
+      "first_token": "_k",
+      "response": "_k\nThe eleventh letter of the English alphabet is **K**. \n\nLet me know if you need more help",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.03398950304836035,
+        "L": 1.283400117713248e-12
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 2894.163330078125
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 26.51532892971912
+    },
+    {
+      "condition": "gate-64",
+      "target_gate": 64.0,
+      "first_token": "_k",
+      "response": "_k\nThe eleventh letter of the English alphabet is **K**. \n\nLet me know if you need more help",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.023181922268122435,
+        "L": 3.267609720883653e-14
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 3869.502197265625
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 29.803274287620567
+    }
+  ],
+  "verification": {
+    "native_reference_logits_exact": true,
+    "native_reference_logit_max_abs_diff": 0.0,
+    "off_reference_logits_exact": true,
+    "off_reference_logit_max_abs_diff": 0.0
+  },
+  "independently_checked_feature_observations": 24,
+  "exact_bf16_edit_arithmetic": true,
+  "probability_definition": "First-token probabilities for leading-space uppercase and lowercase variants added together.",
+  "native_T14_gate": 0.9989446401596069,
+  "natural_T14_gate_with_T2375_off": 0.5293245315551758,
+  "previous_controls_and_native_scalar_reproduced_exactly": true,
+  "uses_exact_ablated_operator_at_every_target": true,
+  "p_k_non_decreasing_at_sampled_targets": false,
+  "p_k_decreases": [
+    {
+      "from_gate": 12.0,
+      "to_gate": 16.0,
+      "from_p_k": 0.9723646640777588,
+      "to_p_k": 0.7815073132514954
+    },
+    {
+      "from_gate": 16.0,
+      "to_gate": 24.0,
+      "from_p_k": 0.7815073132514954,
+      "to_p_k": 0.11860590428113937
+    },
+    {
+      "from_gate": 24.0,
+      "to_gate": 32.0,
+      "from_p_k": 0.11860590428113937,
+      "to_p_k": 0.04691445082426071
+    },
+    {
+      "from_gate": 32.0,
+      "to_gate": 48.0,
+      "from_p_k": 0.04691445082426071,
+      "to_p_k": 0.03398950304836035
+    },
+    {
+      "from_gate": 48.0,
+      "to_gate": 64.0,
+      "from_p_k": 0.03398950304836035,
+      "to_p_k": 0.023181922268122435
+    }
+  ],
+  "highest_measured_p_k": {
+    "condition": "gate-12",
+    "target_gate": 12.0,
+    "first_token": " K",
+    "response": " K. What is the eleventh letter from the end of the English alphabet? - Brainly.in\nprofile\nprofile",
+    "stop_reason": "token_limit",
+    "probabilities": {
+      "K": 0.9723646640777588,
+      "L": 9.754761663316458e-06
+    },
+    "edited_sites": [
+      {
+        "feature": "L29-T2375",
+        "token_position": 8,
+        "delta_l2": 41.28384017944336
+      },
+      {
+        "feature": "L33-T14",
+        "token_position": 8,
+        "delta_l2": 699.354248046875
+      }
+    ],
+    "delta_log_K_over_L_vs_off": 14.025254888121259
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "status": "complete",
+  "protocol": {
+    "prompt": "the eleventh letter of the english alphabet is",
+    "input_ids": [
+      1782,
+      10510,
+      44607,
+      6524,
+      315,
+      279,
+      28963,
+      27790,
+      374
+    ],
+    "position": 8,
+    "answer_spellings": {
+      "K": [
+        " k",
+        " K"
+      ],
+      "L": [
+        " l",
+        " L"
+      ]
+    },
+    "max_new_tokens": 24,
+    "source": {
+      "layer": 29,
+      "transform": 2375
+    },
+    "repairs": [
+      [
+        33,
+        14
+      ]
+    ],
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "references_sha256": "65de703e90d582580cb8e0f2454bd5c2ef6c35350da4d2982fa4e5556cbc31e4",
+    "intervention": "At final input position 8, subtract natural L29-T2375 contribution. In the same run, at L33 add (native T14 gate - current T14 gate) times current T14 operator, in FP32 before one BF16 cast. No generated-position edits.",
+    "prior_runner_sha256": "6bb02df733fb0fac1fd12584f02687b141f5d55ba393996f4c3d9006a6e55924"
+  },
+  "runs": [
+    {
+      "condition": "native",
+      "repair": null,
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "first_token": " k",
+      "output_ids": [
+        595,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        342,
+        10726,
+        27790,
+        374,
+        83995,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        63145,
+        27790,
+        374,
+        8839
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.710745245218277,
+        "L": 0.010285762138664722
+      },
+      "top5": [
+        {
+          "id": 595,
+          "token": " k",
+          "probability": 0.46294736862182617
+        },
+        {
+          "id": 730,
+          "token": " K",
+          "probability": 0.2477978765964508
+        },
+        {
+          "id": 364,
+          "token": " '",
+          "probability": 0.06265310943126678
+        },
+        {
+          "id": 6524,
+          "token": " letter",
+          "probability": 0.03353579714894295
+        },
+        {
+          "id": 330,
+          "token": " \"",
+          "probability": 0.03353579714894295
+        }
+      ],
+      "probability_token_ids": {
+        "K": [
+          595,
+          730
+        ],
+        "L": [
+          326,
+          444
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.9065866470336914,
+        "L33-T14": 0.9989446401596069
+      },
+      "edited_sites": [],
+      "generated_positions_edited": [],
+      "file": "native.npz",
+      "sha256": "a702ed7705b3913d4afc839a44bd970a78d73a96e0c4b484df0021dfe1745da5"
+    },
+    {
+      "condition": "native-unhooked",
+      "repair": null,
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "first_token": " k",
+      "output_ids": [
+        595,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        342,
+        10726,
+        27790,
+        374,
+        83995,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        63145,
+        27790,
+        374,
+        8839
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.710745245218277,
+        "L": 0.010285762138664722
+      },
+      "top5": [
+        {
+          "id": 595,
+          "token": " k",
+          "probability": 0.46294736862182617
+        },
+        {
+          "id": 730,
+          "token": " K",
+          "probability": 0.2477978765964508
+        },
+        {
+          "id": 364,
+          "token": " '",
+          "probability": 0.06265310943126678
+        },
+        {
+          "id": 6524,
+          "token": " letter",
+          "probability": 0.03353579714894295
+        },
+        {
+          "id": 330,
+          "token": " \"",
+          "probability": 0.03353579714894295
+        }
+      ],
+      "probability_token_ids": {
+        "K": [
+          595,
+          730
+        ],
+        "L": [
+          326,
+          444
+        ]
+      },
+      "observed_gates": {},
+      "edited_sites": [],
+      "generated_positions_edited": [],
+      "file": "native-unhooked.npz",
+      "sha256": "56f1e0b3fe50b54b6d22474482df452032486d2ca0e5e47fce41d37459a5eba8"
+    },
+    {
+      "condition": "zero-strength",
+      "repair": null,
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "first_token": " k",
+      "output_ids": [
+        595,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        342,
+        10726,
+        27790,
+        374,
+        83995,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        63145,
+        27790,
+        374,
+        8839
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.710745245218277,
+        "L": 0.010285762138664722
+      },
+      "top5": [
+        {
+          "id": 595,
+          "token": " k",
+          "probability": 0.46294736862182617
+        },
+        {
+          "id": 730,
+          "token": " K",
+          "probability": 0.2477978765964508
+        },
+        {
+          "id": 364,
+          "token": " '",
+          "probability": 0.06265310943126678
+        },
+        {
+          "id": 6524,
+          "token": " letter",
+          "probability": 0.03353579714894295
+        },
+        {
+          "id": 330,
+          "token": " \"",
+          "probability": 0.03353579714894295
+        }
+      ],
+      "probability_token_ids": {
+        "K": [
+          595,
+          730
+        ],
+        "L": [
+          326,
+          444
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.9065866470336914,
+        "L33-T14": 0.9989446401596069
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 0.0
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "zero-strength.npz",
+      "sha256": "76326ea3d372459e703fa5fd4d289477018a73e45fcfb80977e2a159686244c1"
+    },
+    {
+      "condition": "T2375-off",
+      "repair": null,
+      "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+      "first_token": " l",
+      "output_ids": [
+        326,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        28963,
+        27790,
+        374,
+        326,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        28963,
+        27790,
+        374,
+        326,
+        13
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.026466616429388523,
+        "L": 0.3274739235639572
+      },
+      "top5": [
+        {
+          "id": 326,
+          "token": " l",
+          "probability": 0.1940828561782837
+        },
+        {
+          "id": 364,
+          "token": " '",
+          "probability": 0.1511518806219101
+        },
+        {
+          "id": 444,
+          "token": " L",
+          "probability": 0.13339106738567352
+        },
+        {
+          "id": 6524,
+          "token": " letter",
+          "probability": 0.10388506948947906
+        },
+        {
+          "id": 330,
+          "token": " \"",
+          "probability": 0.07139910012483597
+        }
+      ],
+      "probability_token_ids": {
+        "K": [
+          595,
+          730
+        ],
+        "L": [
+          326,
+          444
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.9065866470336914,
+        "L33-T14": 0.5293245315551758
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "T2375-off.npz",
+      "sha256": "352c3849f80a97d4da8f2406ef5d5f2fa4cae63c36a8447f89b32651b7b50b4b"
+    },
+    {
+      "condition": "T2375-off-repeat",
+      "repair": null,
+      "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+      "first_token": " l",
+      "output_ids": [
+        326,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        28963,
+        27790,
+        374,
+        326,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        28963,
+        27790,
+        374,
+        326,
+        13
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.026466616429388523,
+        "L": 0.3274739235639572
+      },
+      "top5": [
+        {
+          "id": 326,
+          "token": " l",
+          "probability": 0.1940828561782837
+        },
+        {
+          "id": 364,
+          "token": " '",
+          "probability": 0.1511518806219101
+        },
+        {
+          "id": 444,
+          "token": " L",
+          "probability": 0.13339106738567352
+        },
+        {
+          "id": 6524,
+          "token": " letter",
+          "probability": 0.10388506948947906
+        },
+        {
+          "id": 330,
+          "token": " \"",
+          "probability": 0.07139910012483597
+        }
+      ],
+      "probability_token_ids": {
+        "K": [
+          595,
+          730
+        ],
+        "L": [
+          326,
+          444
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.9065866470336914,
+        "L33-T14": 0.5293245315551758
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "T2375-off-repeat.npz",
+      "sha256": "352c3849f80a97d4da8f2406ef5d5f2fa4cae63c36a8447f89b32651b7b50b4b"
+    },
+    {
+      "condition": "L33-T14-scalar-repair",
+      "repair": "L33-T14",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "first_token": " k",
+      "output_ids": [
+        595,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        342,
+        10726,
+        27790,
+        374,
+        83995,
+        13,
+        279,
+        10510,
+        44607,
+        6524,
+        315,
+        279,
+        63145,
+        27790,
+        374,
+        8839
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.6382270157337189,
+        "L": 0.02901603188365698
+      },
+      "top5": [
+        {
+          "id": 595,
+          "token": " k",
+          "probability": 0.4504510760307312
+        },
+        {
+          "id": 730,
+          "token": " K",
+          "probability": 0.18777593970298767
+        },
+        {
+          "id": 364,
+          "token": " '",
+          "probability": 0.10050922632217407
+        },
+        {
+          "id": 330,
+          "token": " \"",
+          "probability": 0.04189847409725189
+        },
+        {
+          "id": 6524,
+          "token": " letter",
+          "probability": 0.036975275725126266
+        }
+      ],
+      "probability_token_ids": {
+        "K": [
+          595,
+          730
+        ],
+        "L": [
+          326,
+          444
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.9065866470336914,
+        "L33-T14": 0.5293245315551758
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 28.632801055908203
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "L33-T14-scalar-repair.npz",
+      "sha256": "72b7f5b032f0494aa42b2701f8b3bb4a2984df5b580edfd455e703a16c55dfe4"
+    }
+  ],
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "base_hashes_verified": true,
+    "weights_hashes_verified": true,
+    "attention": "eager",
+    "tf32": false
+  },
+  "baseline_checks": {
+    "native_reference_logits_exact": true,
+    "native_reference_logit_max_abs_diff": 0.0,
+    "off_reference_logits_exact": true,
+    "off_reference_logit_max_abs_diff": 0.0
+  },
+  "runtime_seconds": 5.880790994968265
+}

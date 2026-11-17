@@ -1,0 +1,83 @@
+{
+  "prompt": "the eleventh letter of the english alphabet is",
+  "edited_input_token": " is",
+  "position": 8,
+  "rows": [
+    {
+      "condition": "native",
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.710745245218277,
+        "L": 0.010285762138664722
+      },
+      "edited_sites": [],
+      "delta_log_K_over_L_vs_off": 6.751077686130197
+    },
+    {
+      "condition": "T2375-off",
+      "first_token": " l",
+      "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.026466616429388523,
+        "L": 0.3274739235639572
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 0.0
+    },
+    {
+      "condition": "L33-T14-scalar-repair",
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.6382270157337189,
+        "L": 0.02901603188365698
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 28.632801055908203
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 5.606369791028812
+    }
+  ],
+  "verification": {
+    "native_reference_logits_exact": true,
+    "native_reference_logit_max_abs_diff": 0.0,
+    "off_reference_logits_exact": true,
+    "off_reference_logit_max_abs_diff": 0.0
+  },
+  "independently_checked_feature_observations": 10,
+  "exact_bf16_edit_arithmetic": true,
+  "probability_definition": "First-token probabilities for leading-space uppercase and lowercase variants added together.",
+  "native_T14_gate": 0.9989446401596069,
+  "ablated_T14_gate": 0.5293245315551758,
+  "scalar_delta": 0.46962010860443115,
+  "scalar_uses_exact_ablated_operator": true,
+  "scalar_matches_native_generated_tokens": true,
+  "prior_full_repair": {
+    "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+    "probabilities": {
+      "K": 0.7149098813533783,
+      "L": 0.017397229559719563
+    },
+    "first_token": " k",
+    "stop_reason": "token_limit"
+  }
+}

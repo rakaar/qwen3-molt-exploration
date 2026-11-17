@@ -1,0 +1,366 @@
+{
+  "prompt": "the eleventh letter of the english alphabet is",
+  "edited_input_token": " is",
+  "position": 8,
+  "rows": [
+    {
+      "condition": "native",
+      "target_gate": null,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.710745245218277,
+        "L": 0.010285762138664722
+      },
+      "edited_sites": [],
+      "delta_log_K_over_L_vs_off": 6.751077686130197
+    },
+    {
+      "condition": "T2375-off",
+      "target_gate": null,
+      "first_token": " l",
+      "response": " l. the eleventh letter of the english alphabet is l. the eleventh letter of the english alphabet is l.",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.026466616429388523,
+        "L": 0.3274739235639572
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 0.0
+    },
+    {
+      "condition": "native-scalar",
+      "target_gate": 0.9989446401596069,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.6382270157337189,
+        "L": 0.02901603188365698
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 28.632801055908203
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 5.606369791028812
+    },
+    {
+      "condition": "gate-1.1",
+      "target_gate": 1.1,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.7325633764266968,
+        "L": 0.014380702283233404
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 34.80644989013672
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 6.446186917018858
+    },
+    {
+      "condition": "gate-1.2",
+      "target_gate": 1.2,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.7898093461990356,
+        "L": 0.007780939340591431
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 40.892417907714844
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 7.1356387613933165
+    },
+    {
+      "condition": "gate-1.35",
+      "target_gate": 1.35,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.8501205444335938,
+        "L": 0.0035949593875557184
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 50.03577423095703
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 7.981369709976013
+    },
+    {
+      "condition": "gate-1.5",
+      "target_gate": 1.5,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.8546133041381836,
+        "L": 0.0019467722158879042
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 59.176239013671875
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 8.600000611325433
+    },
+    {
+      "condition": "gate-1.75",
+      "target_gate": 1.75,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.874711811542511,
+        "L": 0.0009498730942141265
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 74.42533874511719
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 9.340845609969268
+    },
+    {
+      "condition": "gate-2",
+      "target_gate": 2.0,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.892575740814209,
+        "L": 0.0004939820064464584
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 89.67052459716797
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 10.014891808116031
+    },
+    {
+      "condition": "gate-2.5",
+      "target_gate": 2.5,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.8955322504043579,
+        "L": 0.0002826586060109548
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 120.13750457763672
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 10.576457931190319
+    },
+    {
+      "condition": "gate-3",
+      "target_gate": 3.0,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.910333901643753,
+        "L": 0.0001971700694411993
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 150.64584350585938
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 10.953024330858746
+    },
+    {
+      "condition": "gate-4",
+      "target_gate": 4.0,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.9185027778148651,
+        "L": 0.00014554716835846193
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 211.60118103027344
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 11.265524240444172
+    },
+    {
+      "condition": "gate-6",
+      "target_gate": 6.0,
+      "first_token": " k",
+      "response": " k. the eleventh letter of the greek alphabet is kappa. the eleventh letter of the russian alphabet is �",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.9426838755607605,
+        "L": 8.285767034976743e-05
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 333.54217529296875
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 11.85488619970457
+    },
+    {
+      "condition": "gate-8",
+      "target_gate": 8.0,
+      "first_token": " K",
+      "response": " K. What is the eleventh letter from the end of the English alphabet? - Brainly.in\nprofile\nprofile",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "K": 0.9689505696296692,
+        "L": 3.7933376006549224e-05
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 8,
+          "delta_l2": 41.28384017944336
+        },
+        {
+          "feature": "L33-T14",
+          "token_position": 8,
+          "delta_l2": 455.51318359375
+        }
+      ],
+      "delta_log_K_over_L_vs_off": 12.66366176761175
+    }
+  ],
+  "verification": {
+    "native_reference_logits_exact": true,
+    "native_reference_logit_max_abs_diff": 0.0,
+    "off_reference_logits_exact": true,
+    "off_reference_logit_max_abs_diff": 0.0
+  },
+  "independently_checked_feature_observations": 32,
+  "exact_bf16_edit_arithmetic": true,
+  "probability_definition": "First-token probabilities for leading-space uppercase and lowercase variants added together.",
+  "native_T14_gate": 0.9989446401596069,
+  "natural_T14_gate_with_T2375_off": 0.5293245315551758,
+  "previous_controls_and_native_scalar_reproduced_exactly": true,
+  "uses_exact_ablated_operator_at_every_target": true,
+  "p_k_non_decreasing_at_sampled_targets": true,
+  "p_k_decreases": [],
+  "highest_measured_p_k": {
+    "condition": "gate-8",
+    "target_gate": 8.0,
+    "first_token": " K",
+    "response": " K. What is the eleventh letter from the end of the English alphabet? - Brainly.in\nprofile\nprofile",
+    "stop_reason": "token_limit",
+    "probabilities": {
+      "K": 0.9689505696296692,
+      "L": 3.7933376006549224e-05
+    },
+    "edited_sites": [
+      {
+        "feature": "L29-T2375",
+        "token_position": 8,
+        "delta_l2": 41.28384017944336
+      },
+      {
+        "feature": "L33-T14",
+        "token_position": 8,
+        "delta_l2": 455.51318359375
+      }
+    ],
+    "delta_log_K_over_L_vs_off": 12.66366176761175
+  }
+}

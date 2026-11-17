@@ -1,0 +1,53 @@
+{
+  "prompt": "the eleventh letter of the english alphabet is",
+  "input_ids": [
+    1782,
+    10510,
+    44607,
+    6524,
+    315,
+    279,
+    28963,
+    27790,
+    374
+  ],
+  "position": 8,
+  "answer_spellings": {
+    "K": [
+      " k",
+      " K"
+    ],
+    "L": [
+      " l",
+      " L"
+    ]
+  },
+  "max_new_tokens": 24,
+  "source": {
+    "layer": 29,
+    "transform": 2375
+  },
+  "repairs": [
+    [
+      33,
+      14
+    ]
+  ],
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "references_sha256": "65de703e90d582580cb8e0f2454bd5c2ef6c35350da4d2982fa4e5556cbc31e4",
+  "intervention": "At final input position 8, subtract natural L29-T2375 contribution. At the same position in L33, add (target T14 gate - current T14 gate) times current T14 operator. Edit FP32 before one BF16 cast. Generated positions have no hooks.",
+  "prior_runner_sha256": "6bb02df733fb0fac1fd12584f02687b141f5d55ba393996f4c3d9006a6e55924",
+  "sweep_targets": [
+    8.0,
+    12.0,
+    16.0,
+    24.0,
+    32.0,
+    48.0,
+    64.0
+  ],
+  "reference_target": "native T14 gate, measured in the unablated run",
+  "adaptation_source_sha256": "d9b6e76041c96e1cd3328315db1d94caf0c2d1ad09be163339c2df4e3dadd9a8",
+  "extension_reason": "Extend after checking the first sweep through 8. Repeat value 8 verbatim for cross-run verification."
+}
