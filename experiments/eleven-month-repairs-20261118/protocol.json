@@ -1,0 +1,436 @@
+{
+  "prompt": "the eleventh month of the year is",
+  "input_ids": [
+    1782,
+    10510,
+    44607,
+    2254,
+    315,
+    279,
+    1042,
+    374
+  ],
+  "position": 7,
+  "answer_spellings": {
+    "November": [
+      " november",
+      " November"
+    ],
+    "December": [
+      " december",
+      " December"
+    ]
+  },
+  "max_new_tokens": 24,
+  "source": {
+    "layer": 29,
+    "transform": 2375
+  },
+  "repairs": [
+    [
+      30,
+      15
+    ],
+    [
+      30,
+      433
+    ],
+    [
+      30,
+      858
+    ],
+    [
+      30,
+      949
+    ],
+    [
+      30,
+      1724
+    ],
+    [
+      31,
+      135
+    ],
+    [
+      31,
+      760
+    ],
+    [
+      31,
+      797
+    ],
+    [
+      31,
+      949
+    ],
+    [
+      31,
+      2294
+    ],
+    [
+      32,
+      15
+    ],
+    [
+      32,
+      224
+    ],
+    [
+      32,
+      335
+    ],
+    [
+      32,
+      962
+    ],
+    [
+      32,
+      1181
+    ],
+    [
+      33,
+      422
+    ],
+    [
+      33,
+      587
+    ],
+    [
+      33,
+      795
+    ],
+    [
+      33,
+      909
+    ],
+    [
+      33,
+      968
+    ],
+    [
+      34,
+      65
+    ],
+    [
+      34,
+      84
+    ],
+    [
+      34,
+      90
+    ],
+    [
+      34,
+      159
+    ],
+    [
+      34,
+      391
+    ],
+    [
+      34,
+      666
+    ],
+    [
+      34,
+      1267
+    ],
+    [
+      34,
+      1468
+    ],
+    [
+      34,
+      1593
+    ],
+    [
+      35,
+      111
+    ],
+    [
+      35,
+      253
+    ],
+    [
+      35,
+      1716
+    ]
+  ],
+  "candidates": [
+    {
+      "layer": 30,
+      "transform": 15,
+      "label": "User Token Newline Gate",
+      "native_gate": 1.104525870972665,
+      "off_gate": 1.1049294893555728,
+      "change": "increased"
+    },
+    {
+      "layer": 30,
+      "transform": 433,
+      "label": "Temporal and Calendar Token Gate",
+      "native_gate": 0.5658266525110913,
+      "off_gate": 0.0,
+      "change": "newly_off"
+    },
+    {
+      "layer": 30,
+      "transform": 858,
+      "label": "Prepositions framing temporal and spatial contexts",
+      "native_gate": 0.9721991492897291,
+      "off_gate": 0.9358170479600281,
+      "change": "decreased"
+    },
+    {
+      "layer": 30,
+      "transform": 949,
+      "label": "Temporal and Spatial Prepositions",
+      "native_gate": 0.5559702681449179,
+      "off_gate": 0.5448689380098173,
+      "change": "decreased"
+    },
+    {
+      "layer": 30,
+      "transform": 1724,
+      "label": "Range Hyphens and Sentence Punctuation",
+      "native_gate": 0.9450587892941458,
+      "off_gate": 0.8934375411086541,
+      "change": "decreased"
+    },
+    {
+      "layer": 31,
+      "transform": 135,
+      "label": "User Prompt and Response Start",
+      "native_gate": 1.321259981324854,
+      "off_gate": 1.3216211338241537,
+      "change": "increased"
+    },
+    {
+      "layer": 31,
+      "transform": 760,
+      "label": "Final Token of Titles and Headers",
+      "native_gate": 0.5286761894069265,
+      "off_gate": 0.5305031768413582,
+      "change": "increased"
+    },
+    {
+      "layer": 31,
+      "transform": 797,
+      "label": "Winter Weather Context Gate",
+      "native_gate": 0.0,
+      "off_gate": 0.655308568680516,
+      "change": "newly_on"
+    },
+    {
+      "layer": 31,
+      "transform": 949,
+      "label": "Temporal and Financial Timeframe Prepositions",
+      "native_gate": 0.0,
+      "off_gate": 0.5623121046828405,
+      "change": "newly_on"
+    },
+    {
+      "layer": 31,
+      "transform": 2294,
+      "label": "Temporal and Spatial Context Prepositions",
+      "native_gate": 2.0226155302974416,
+      "off_gate": 2.0329693360990833,
+      "change": "increased"
+    },
+    {
+      "layer": 32,
+      "transform": 15,
+      "label": "End-of-Turn Token Detection",
+      "native_gate": 1.1233413276557087,
+      "off_gate": 1.114247590782333,
+      "change": "decreased"
+    },
+    {
+      "layer": 32,
+      "transform": 224,
+      "label": "Prepositions Introducing Specific Entities",
+      "native_gate": 0.7048999020271782,
+      "off_gate": 0.7068830406177489,
+      "change": "increased"
+    },
+    {
+      "layer": 32,
+      "transform": 335,
+      "label": "Temporal Reference Token Activation",
+      "native_gate": 3.2679227579848087,
+      "off_gate": 3.2508032076146414,
+      "change": "decreased"
+    },
+    {
+      "layer": 32,
+      "transform": 962,
+      "label": "Food Ingredient and Substitute Nouns",
+      "native_gate": 1.0684419501181814,
+      "off_gate": 1.190826613182546,
+      "change": "increased"
+    },
+    {
+      "layer": 32,
+      "transform": 1181,
+      "label": "Seasonal Holiday Token Activation",
+      "native_gate": 0.828868054665882,
+      "off_gate": 0.7845393989265956,
+      "change": "decreased"
+    },
+    {
+      "layer": 33,
+      "transform": 422,
+      "label": "Temporal Marker Gate",
+      "native_gate": 1.5898356020667284,
+      "off_gate": 1.579859128559499,
+      "change": "decreased"
+    },
+    {
+      "layer": 33,
+      "transform": 587,
+      "label": "List and Sequence Token Activation",
+      "native_gate": 1.1252140368535253,
+      "off_gate": 0.944743824556725,
+      "change": "decreased"
+    },
+    {
+      "layer": 33,
+      "transform": 795,
+      "label": "Multi-word phrase and idiom detection",
+      "native_gate": 1.1873279924218103,
+      "off_gate": 1.2034226167047222,
+      "change": "increased"
+    },
+    {
+      "layer": 33,
+      "transform": 909,
+      "label": "Proper Noun and Entity Token Activation",
+      "native_gate": 1.2506119181556188,
+      "off_gate": 1.173310208184358,
+      "change": "decreased"
+    },
+    {
+      "layer": 33,
+      "transform": 968,
+      "label": "Copula Verb Gate Activation",
+      "native_gate": 0.8921778805373035,
+      "off_gate": 0.8623657203467694,
+      "change": "decreased"
+    },
+    {
+      "layer": 34,
+      "transform": 65,
+      "label": "Punctuation and Format Nouns Trigger",
+      "native_gate": 0.7949034302004376,
+      "off_gate": 0.7627038979690686,
+      "change": "decreased"
+    },
+    {
+      "layer": 34,
+      "transform": 84,
+      "label": "Connector Tokens in Compounds and Idioms",
+      "native_gate": 0.0,
+      "off_gate": 0.5874034839018321,
+      "change": "newly_on"
+    },
+    {
+      "layer": 34,
+      "transform": 90,
+      "label": "Proper Noun and Entity Reference Gate",
+      "native_gate": 1.5516508230158093,
+      "off_gate": 1.496386267836089,
+      "change": "decreased"
+    },
+    {
+      "layer": 34,
+      "transform": 159,
+      "label": "Creative Writing and Content Generation Requests",
+      "native_gate": 1.8447060661819488,
+      "off_gate": 1.8362292165170058,
+      "change": "decreased"
+    },
+    {
+      "layer": 34,
+      "transform": 391,
+      "label": "Temporal Phrase Trigger",
+      "native_gate": 1.4453080120423771,
+      "off_gate": 1.454027541307799,
+      "change": "increased"
+    },
+    {
+      "layer": 34,
+      "transform": 666,
+      "label": "Copula Verb Main Clause Trigger",
+      "native_gate": 0.794434177134163,
+      "off_gate": 0.7367581990983321,
+      "change": "decreased"
+    },
+    {
+      "layer": 34,
+      "transform": 1267,
+      "label": "Unique Identifier and Proper Noun Gate",
+      "native_gate": 0.7106765441873242,
+      "off_gate": 0.681521365260674,
+      "change": "decreased"
+    },
+    {
+      "layer": 34,
+      "transform": 1468,
+      "label": "Article \"An\" Preceding Noun",
+      "native_gate": 1.2899934431890387,
+      "off_gate": 0.7175988701755696,
+      "change": "decreased"
+    },
+    {
+      "layer": 34,
+      "transform": 1593,
+      "label": "Temporal Marker Detection",
+      "native_gate": 2.086922212333345,
+      "off_gate": 2.118846519124975,
+      "change": "increased"
+    },
+    {
+      "layer": 35,
+      "transform": 111,
+      "label": "Temporal Preposition and Date Gate",
+      "native_gate": 1.1074531221913493,
+      "off_gate": 1.1014261280677757,
+      "change": "decreased"
+    },
+    {
+      "layer": 35,
+      "transform": 253,
+      "label": "Prompt Start Token Detection",
+      "native_gate": 1.7233376390916249,
+      "off_gate": 1.7202563749193225,
+      "change": "decreased"
+    },
+    {
+      "layer": 35,
+      "transform": 1716,
+      "label": "Proper Noun and Location Gate",
+      "native_gate": 1.2660332828696585,
+      "off_gate": 1.2833079268381482,
+      "change": "increased"
+    }
+  ],
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "references_sha256": "ba84067edb2fb88a97a62a9b8ef6d1dc32a3e0f38ad978124ac5cabfc9e6659a",
+  "selection": "All transforms active in either the native or T2375-off month run whose scalar changes at final is. Includes newly off, newly on, and continuously active transforms.",
+  "interventions": [
+    "restore native scalar with the ablated operator",
+    "restore full native contribution"
+  ],
+  "candidates_source_sha256": "1d22d6943214381431ee0ff87e9f371b11c1caf1d422c1d3fc4a23299135e1a9",
+  "references_provenance": {
+    "native-observed": {
+      "file": "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/month--native-observed.npz",
+      "sha256": "6cf6944149818e639971013d0a89846b909ef53465ea21884e281c599a22f5e3"
+    },
+    "gate-off": {
+      "file": "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/month--gate-off.npz",
+      "sha256": "8989bf44e0484aa1259c6f376edbb46c2ea16f61dc93999c7cf66634ad3a9e86"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "prompt": "the eleventh month of the year is",
+  "input_ids": [
+    1782,
+    10510,
+    44607,
+    2254,
+    315,
+    279,
+    1042,
+    374
+  ],
+  "position": 7,
+  "answer_spellings": {
+    "November": [
+      " november",
+      " November"
+    ],
+    "December": [
+      " december",
+      " December"
+    ]
+  },
+  "max_new_tokens": 24,
+  "source": {
+    "layer": 29,
+    "transform": 2375
+  },
+  "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "references_sha256": "ba84067edb2fb88a97a62a9b8ef6d1dc32a3e0f38ad978124ac5cabfc9e6659a",
+  "repairs": [
+    [
+      34,
+      1468
+    ]
+  ],
+  "sweep_targets": [
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0,
+    6.0,
+    8.0,
+    12.0,
+    16.0,
+    24.0,
+    32.0,
+    48.0,
+    64.0
+  ],
+  "intervention": "At the final input token in L29 subtract the natural T2375 contribution. In L34 add (target T1468 gate − current T1468 gate) × current T1468 operator at the same token, with the operator from the T2375-off run. Generated positions have no hooks.",
+  "adaptation_source_sha256": "9c8616c1a7b6d2594eeb9e603c584abecea00cb15f464321b30d14953fe17f25"
+}

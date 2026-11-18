@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question-only T2375 ablation · Eleventh-word list retrieval</title>
+<style>
+:root { color-scheme: light; --ink:#1b3834; --muted:#52685e; --paper:#f8f8f1; --line:#d5dfd4; --wash:#edf1e7; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.55 system-ui,sans-serif; }
+main { max-width:1350px; margin:auto; padding:20px 30px 42px; }
+a, summary { color:#205f4b; text-underline-offset:.2em; }
+nav { display:flex; flex-wrap:wrap; gap:8px 18px; font-size:.9rem; }
+header { padding:36px 0 24px; }
+h1,h2 { font-family:Georgia,serif; margin:0; line-height:1.16; font-weight:600; }
+h1 { font-size:clamp(2.25rem,5vw,4rem); letter-spacing:-.04em; }
+h2 { font-size:clamp(1.45rem,3.2vw,2rem); letter-spacing:-.02em; }
+p { margin:.7em 0; max-width:90ch; }
+.lede { font-size:1.1rem; max-width:74ch; }
+.scope { margin:15px 0 0; display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:13px; }
+.scope > div { background:#fffefa; border:1px solid var(--line); border-radius:8px; padding:12px 15px; }
+dt { font-weight:650; }
+dd { margin:.45em 0 0; }
+u { text-decoration-color:#418a94; text-decoration-thickness:2px; text-underline-offset:.16em; }
+code,pre { font-family:ui-monospace,monospace; font-size:.93em; }
+pre { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; }
+section { border-top:1px solid var(--line); padding:24px 0; }
+.table-scroll { overflow-x:auto; border:1px solid var(--line); border-radius:7px; background:#fffefa; }
+.table-scroll:focus-visible { outline:2px solid #205f4b; outline-offset:3px; }
+table { width:100%; border-collapse:collapse; font-size:.9rem; font-variant-numeric:tabular-nums; }
+table.results { min-width:1000px; }
+th,td { padding:12px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
+thead { background:var(--wash); }
+tbody tr:last-child > * { border-bottom:0; }
+.note { color:var(--muted); font-size:.88rem; }
+details { margin:7px 0; }
+summary { cursor:pointer; width:fit-content; padding:3px 0; }
+details .table-scroll { max-width:800px; }
+@media(max-width:680px) { main { padding:16px 14px 30px; } .scope { grid-template-columns:1fr; } th,td { padding:8px; } }
+</style>
+</head>
+<body>
+<main>
+<nav aria-label="Source and data"><a href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-11-list-retrieval-pilot/?v=0663557#comparison">Original all-token ablation</a> <a href="results.json">Raw replay results</a> <a href="probabilities.csv" download>Download probabilities</a></nav>
+<header>
+  <h1>T2375 off on the question only</h1>
+  <p class="lede">All seven answers and decoding logits matched native. T2375 was already zero on the 147 underlined question tokens.</p>
+  <dl class="scope">
+    <div><dt>Set T2375 to zero only here</dt><dd><u>What is the eleventh word in the list? Count the listed words. Reply with only that word.</u></dd></div>
+    <div><dt>Chat prefix kept at its native values</dt><dd><pre>&lt;|im_end|&gt;↵
+&lt;|im_start|&gt;assistant↵
+&lt;think&gt;↵
+↵
+&lt;/think&gt;↵
+↵</pre></dd></div>
+  </dl>
+  <p class="note">The intervention targeted L29–T2375. The list, template, answer prefix and generated positions followed the native forward pass. The prefix retained 13 positive gates across the seven cases.</p>
+</header>
+<section aria-labelledby="comparison-title">
+  <h2 id="comparison-title">Native vs. question-only gate-off</h2>
+  <p>P11 and P12 are full-word probabilities for the exact lowercase targets. Question edits count positive contributions removed out of the 21 eligible tokens in each case.</p>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="Seven list ablation comparisons">
+  <table class="results"><thead><tr><th scope="col">Case</th><th scope="col">11th / 12th target</th><th scope="col">Native response</th><th scope="col">Gate-off response</th><th scope="col">P11 native → off (%)</th><th scope="col">P12 native → off (%)</th><th scope="col">Question edits</th><th scope="col">Max prefix gate</th></tr></thead>
+  <tbody><tr><th scope="row">List 1 · numbered</th><td>pencil / drum</td><td><code>pencil</code></td>
+      <td><code>pencil</code></td><td>99.998248 → 99.998248</td><td>2.141e-15 → 2.141e-15</td><td>0 / 21</td><td>1.978</td></tr>
+<tr><th scope="row">List 1 · bullets †</th><td>pencil / drum</td><td><code>pencil</code></td>
+      <td><code>pencil</code></td><td>99.999380 → 99.999380</td><td>2.343e-13 → 2.343e-13</td><td>0 / 21</td><td>1.424</td></tr>
+<tr><th scope="row">List 2 · numbered</th><td>shoe / hammer</td><td><code>shoe</code></td>
+      <td><code>shoe</code></td><td>99.916530 → 99.916530</td><td>5.785e-10 → 5.785e-10</td><td>0 / 21</td><td>1.546</td></tr>
+<tr><th scope="row">List 3 · numbered</th><td>ring / apple</td><td><code>ring</code></td>
+      <td><code>ring</code></td><td>99.989462 → 99.989462</td><td>7.991e-09 → 7.991e-09</td><td>0 / 21</td><td>1.596</td></tr>
+<tr><th scope="row">List 4 · numbered</th><td>ticket / spoon</td><td><code>ticket</code></td>
+      <td><code>ticket</code></td><td>99.992740 → 99.992740</td><td>9.357e-12 → 9.357e-12</td><td>0 / 21</td><td>1.727</td></tr>
+<tr><th scope="row">List 5 · numbered</th><td>hammer / ticket</td><td><code>hammer</code></td>
+      <td><code>hammer</code></td><td>99.251336 → 99.251336</td><td>3.822e-07 → 3.822e-07</td><td>0 / 21</td><td>1.881</td></tr>
+<tr><th scope="row">List 5 · bullets †</th><td>hammer / ticket</td><td><code>hammer</code></td>
+      <td><code>hammer</code></td><td>99.974757 → 99.974757</td><td>6.757e-07 → 6.757e-07</td><td>0 / 21</td><td>0.921</td></tr></tbody></table>
+  </div>
+  <p class="note">† List 1 and List 5 in bullet format failed the separate native twelfth-word check. All five numbered-list controls passed.</p>
+</section>
+<section aria-labelledby="tokens-title">
+  <h2 id="tokens-title">Top five next tokens by case</h2>
+  <p>The ranked tokens and percentages matched exactly for every question-only replay. <code>␠</code> marks a space.</p>
+  <details><summary>List 1 · numbered</summary>
+  <div class="table-scroll"><table class="ranks"><thead><tr><th scope="col">Rank</th><th scope="col">Native token</th><th scope="col">Probability</th><th scope="col">Question-only off token</th><th scope="col">Probability</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><code>p</code></td><td>99.999559%</td><td><code>p</code></td><td>99.999559%</td></tr><tr><th scope="row">2</th><td><code>1</code></td><td>0.0001995%</td><td><code>1</code></td><td>0.0001995%</td></tr><tr><th scope="row">3</th><td><code>Ele</code></td><td>0.0001068%</td><td><code>Ele</code></td><td>0.0001068%</td></tr><tr><th scope="row">4</th><td><code>P</code></td><td>6.476e-05%</td><td><code>P</code></td><td>6.476e-05%</td></tr><tr><th scope="row">5</th><td><code>ele</code></td><td>3.928e-05%</td><td><code>ele</code></td><td>3.928e-05%</td></tr></tbody></table></div></details>
+<details><summary>List 1 · bullets †</summary>
+  <div class="table-scroll"><table class="ranks"><thead><tr><th scope="col">Rank</th><th scope="col">Native token</th><th scope="col">Probability</th><th scope="col">Question-only off token</th><th scope="col">Probability</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><code>p</code></td><td>99.999928%</td><td><code>p</code></td><td>99.999928%</td></tr><tr><th scope="row">2</th><td><code>ele</code></td><td>2.7e-05%</td><td><code>ele</code></td><td>2.7e-05%</td></tr><tr><th scope="row">3</th><td><code>Ele</code></td><td>1.855e-05%</td><td><code>Ele</code></td><td>1.855e-05%</td></tr><tr><th scope="row">4</th><td><code>␠pencil</code></td><td>7.734e-06%</td><td><code>␠pencil</code></td><td>7.734e-06%</td></tr><tr><th scope="row">5</th><td><code>The</code></td><td>5.316e-06%</td><td><code>The</code></td><td>5.316e-06%</td></tr></tbody></table></div></details>
+<details><summary>List 2 · numbered</summary>
+  <div class="table-scroll"><table class="ranks"><thead><tr><th scope="col">Rank</th><th scope="col">Native token</th><th scope="col">Probability</th><th scope="col">Question-only off token</th><th scope="col">Probability</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><code>sh</code></td><td>99.916899%</td><td><code>sh</code></td><td>99.916899%</td></tr><tr><th scope="row">2</th><td><code>1</code></td><td>0.07096%</td><td><code>1</code></td><td>0.07096%</td></tr><tr><th scope="row">3</th><td><code>Sh</code></td><td>0.004003%</td><td><code>Sh</code></td><td>0.004003%</td></tr><tr><th scope="row">4</th><td><code>Ele</code></td><td>0.002143%</td><td><code>Ele</code></td><td>0.002143%</td></tr><tr><th scope="row">5</th><td><code>sp</code></td><td>0.0013%</td><td><code>sp</code></td><td>0.0013%</td></tr></tbody></table></div></details>
+<details><summary>List 3 · numbered</summary>
+  <div class="table-scroll"><table class="ranks"><thead><tr><th scope="col">Rank</th><th scope="col">Native token</th><th scope="col">Probability</th><th scope="col">Question-only off token</th><th scope="col">Probability</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><code>ring</code></td><td>99.989462%</td><td><code>ring</code></td><td>99.989462%</td></tr><tr><th scope="row">2</th><td><code>1</code></td><td>0.005829%</td><td><code>1</code></td><td>0.005829%</td></tr><tr><th scope="row">3</th><td><code>␠ring</code></td><td>0.004006%</td><td><code>␠ring</code></td><td>0.004006%</td></tr><tr><th scope="row">4</th><td><code>Ring</code></td><td>0.0002561%</td><td><code>Ring</code></td><td>0.0002561%</td></tr><tr><th scope="row">5</th><td><code>The</code></td><td>0.0001371%</td><td><code>The</code></td><td>0.0001371%</td></tr></tbody></table></div></details>
+<details><summary>List 4 · numbered</summary>
+  <div class="table-scroll"><table class="ranks"><thead><tr><th scope="col">Rank</th><th scope="col">Native token</th><th scope="col">Probability</th><th scope="col">Question-only off token</th><th scope="col">Probability</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><code>ticket</code></td><td>99.992740%</td><td><code>ticket</code></td><td>99.992740%</td></tr><tr><th scope="row">2</th><td><code>Ticket</code></td><td>0.003535%</td><td><code>Ticket</code></td><td>0.003535%</td></tr><tr><th scope="row">3</th><td><code>␠ticket</code></td><td>0.002753%</td><td><code>␠ticket</code></td><td>0.002753%</td></tr><tr><th scope="row">4</th><td><code>1</code></td><td>0.0006962%</td><td><code>1</code></td><td>0.0006962%</td></tr><tr><th scope="row">5</th><td><code>(ticket</code></td><td>8.315e-05%</td><td><code>(ticket</code></td><td>8.315e-05%</td></tr></tbody></table></div></details>
+<details><summary>List 5 · numbered</summary>
+  <div class="table-scroll"><table class="ranks"><thead><tr><th scope="col">Rank</th><th scope="col">Native token</th><th scope="col">Probability</th><th scope="col">Question-only off token</th><th scope="col">Probability</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><code>hammer</code></td><td>99.251336%</td><td><code>hammer</code></td><td>99.251336%</td></tr><tr><th scope="row">2</th><td><code>1</code></td><td>0.4596%</td><td><code>1</code></td><td>0.4596%</td></tr><tr><th scope="row">3</th><td><code>␠hammer</code></td><td>0.1162%</td><td><code>␠hammer</code></td><td>0.1162%</td></tr><tr><th scope="row">4</th><td><code>Ele</code></td><td>0.0622%</td><td><code>Ele</code></td><td>0.0622%</td></tr><tr><th scope="row">5</th><td><code>ele</code></td><td>0.04844%</td><td><code>ele</code></td><td>0.04844%</td></tr></tbody></table></div></details>
+<details><summary>List 5 · bullets †</summary>
+  <div class="table-scroll"><table class="ranks"><thead><tr><th scope="col">Rank</th><th scope="col">Native token</th><th scope="col">Probability</th><th scope="col">Question-only off token</th><th scope="col">Probability</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><code>hammer</code></td><td>99.974757%</td><td><code>hammer</code></td><td>99.974757%</td></tr><tr><th scope="row">2</th><td><code>␠hammer</code></td><td>0.01234%</td><td><code>␠hammer</code></td><td>0.01234%</td></tr><tr><th scope="row">3</th><td><code>ham</code></td><td>0.005828%</td><td><code>ham</code></td><td>0.005828%</td></tr><tr><th scope="row">4</th><td><code>锤</code></td><td>0.004539%</td><td><code>锤</code></td><td>0.004539%</td></tr><tr><th scope="row">5</th><td><code>The</code></td><td>0.0007887%</td><td><code>The</code></td><td>0.0007887%</td></tr></tbody></table></div></details>
+</section>
+</main>
+</body>
+</html>

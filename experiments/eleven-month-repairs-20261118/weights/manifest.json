@@ -1,0 +1,943 @@
+{
+  "revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+  "features": [
+    {
+      "layer": 29,
+      "transform": 2375,
+      "rank": 32,
+      "label": "High-Activation Water Token",
+      "file": "L29-T2375.npz",
+      "bytes": 629672,
+      "sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+      "source_config_sha256": "a3b31645cc4b12f99d88034a5ccca986f3db96178029ea1327d310c429720c28",
+      "source_header_sha256": "a3234d84caec3f85caa2cc8cf9c2e7c3d95052f70aa68c3e8ddaa3df09fc0024",
+      "records": [
+        {
+          "source_tensor": "e.weight",
+          "source_shape": [
+            2480,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 6080000,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4218635640,
+            4218645879
+          ],
+          "slice_sha256": "a2bc1191abd7a007f45da314ff232dbf9c62eae180f6386a24b91212b1103215"
+        },
+        {
+          "source_tensor": "e.bias",
+          "source_shape": [
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2375,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4194315220,
+            4194315223
+          ],
+          "slice_sha256": "4ec20f5edb46a6898b6db96c2b30fb2df6469f36ed6a7684b25b81c3aaf0592b"
+        },
+        {
+          "source_tensor": "nonlinearity.theta",
+          "source_shape": [
+            1,
+            2480
+          ],
+          "source_dtype": "F32",
+          "flat_start": 2375,
+          "elements": 1,
+          "byte_range_inclusive": [
+            4220457624,
+            4220457627
+          ],
+          "slice_sha256": "df1c8e5d730da9298297b899cd9a6ef4399f817ef3085428795234fdd19322ce"
+        },
+        {
+          "source_tensor": "input_standardizer.mean",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220007800,
+            4220018039
+          ],
+          "slice_sha256": "bf5d8a2c2c1cce409dbbffd845de3edeb608c001eebc8f98721ef01df8b50852"
+        },
+        {
+          "source_tensor": "input_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4220376440,
+            4220386679
+          ],
+          "slice_sha256": "077b27b6eb7815fc5ccd4a141436798863c276cd68156593fc03923cb8ee96c5"
+        },
+        {
+          "source_tensor": "output_standardizer.std",
+          "source_shape": [
+            36,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 74240,
+          "elements": 2560,
+          "byte_range_inclusive": [
+            4221123644,
+            4221133883
+          ],
+          "slice_sha256": "70ccc5f47d88527f9199e166795f4be1dab0c3b89168b0ca7b2da5c1ccdab9ca"
+        },
+        {
+          "source_tensor": "Us.4",
+          "source_shape": [
+            1280,
+            32,
+            2560
+          ],
+          "source_dtype": "F32",
+          "flat_start": 96256000,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            2062747320,
+            2063074999
+          ],
+          "slice_sha256": "843e3e8b4635c7426230bbaf37b5615fb3b17c6a7c4b98546cdc1df9f194f1d4"
+        },
+        {
+          "source_tensor": "Vs.4",
+          "source_shape": [
+            1280,
+            2560,
+            32
+          ],
+          "source_dtype": "F32",
+          "flat_start": 96256000,
+          "elements": 81920,
+          "byte_range_inclusive": [
+            4159899320,
+            4160226999
+          ],
+          "slice_sha256": "854521e17cb253943d5cdf5e2c75c9a74439cd72c04407bed96314aa6e0ead6b"
+        }
+      ],
+      "theta": 0.5448488593101501,
+      "checkpoint_url": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-29/checkpoint.safetensors",
+      "whole_checkpoint_lfs_sha256": "3b89660603200ca2f9eabd898f144eacc14c4e183bc148681e414b5f35db7581",
+      "whole_checkpoint_bytes": 4221195324
+    },
+    {
+      "layer": 30,
+      "transform": 15,
+      "rank": 512,
+      "file": "L30-T15.npz",
+      "sha256": "165062389274a0b14d0d4f9a779e833a96b78fd69331283ffb87ed1d38fb149f",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-30/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.0",
+          "index": 15,
+          "start": 78644920,
+          "bytes": 5242880,
+          "sha256": "57f50a43d5f2f66acffb14f56613669726a48a7870910849e71c931cb0561628"
+        },
+        {
+          "tensor": "Vs.0",
+          "index": 15,
+          "start": 2175796920,
+          "bytes": 5242880,
+          "sha256": "22e917e44022418e0e2d3764f693edf5d4257624c1a156649535365cfef881dc"
+        }
+      ],
+      "gate_cache_sha256": "24feda98f79cc39d4a54d2bee97489bec3c4578bd32d8d7335181759e4ce8636"
+    },
+    {
+      "layer": 30,
+      "transform": 433,
+      "rank": 128,
+      "file": "L30-T433.npz",
+      "sha256": "a9b6d1ff1d4455ae34f87ae6ed37fd20524c684573417bc727e7a053968c6067",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-30/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.2",
+          "index": 193,
+          "start": 1091831480,
+          "bytes": 1310720,
+          "sha256": "f3456e57726888ac813562c07e5684e8a57e6f474e7c17424b0f1bb151ce37bf"
+        },
+        {
+          "tensor": "Vs.2",
+          "index": 193,
+          "start": 3188983480,
+          "bytes": 1310720,
+          "sha256": "221668448a968a23de0a9b37e4ae821cabadfa712b95f879553f82bfb9b17cde"
+        }
+      ],
+      "gate_cache_sha256": "24feda98f79cc39d4a54d2bee97489bec3c4578bd32d8d7335181759e4ce8636"
+    },
+    {
+      "layer": 30,
+      "transform": 858,
+      "rank": 64,
+      "file": "L30-T858.npz",
+      "sha256": "d7c54574d88661746dd368772a0f1121bd8c877589ec6269e2d61bcd4ede2e04",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-30/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 298,
+          "start": 1453590200,
+          "bytes": 655360,
+          "sha256": "12ab3a79c2a740d2b3639b9c32c2641362313bf4fb89f923a188ea31a5a0e839"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 298,
+          "start": 3550742200,
+          "bytes": 655360,
+          "sha256": "b48a5bfdd7af3f606ff5df08a0f1221080280a13795af83e07c2fbfe1c187f30"
+        }
+      ],
+      "gate_cache_sha256": "24feda98f79cc39d4a54d2bee97489bec3c4578bd32d8d7335181759e4ce8636"
+    },
+    {
+      "layer": 30,
+      "transform": 949,
+      "rank": 64,
+      "file": "L30-T949.npz",
+      "sha256": "3a1cdf1cb04f79cf332fe2296c4b28d301d5c20cad1efd054812e25043ad1854",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-30/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 389,
+          "start": 1513227960,
+          "bytes": 655360,
+          "sha256": "2d7e44c3e92ffccca7847300ee23768f9b3ecf51a51d95b3c143ef0b2c18fe8a"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 389,
+          "start": 3610379960,
+          "bytes": 655360,
+          "sha256": "496b3d4b2c42cd4e42227550a762ada1071af09ef010cd3ad641cd07ec07ab8a"
+        }
+      ],
+      "gate_cache_sha256": "24feda98f79cc39d4a54d2bee97489bec3c4578bd32d8d7335181759e4ce8636"
+    },
+    {
+      "layer": 30,
+      "transform": 1724,
+      "rank": 32,
+      "file": "L30-T1724.npz",
+      "sha256": "b0fc4ef7e937cbacfa3d17ec387abf5d1ce3315c091cc986f980cd0eae9178b5",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-30/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.4",
+          "index": 524,
+          "start": 1849427640,
+          "bytes": 327680,
+          "sha256": "890017c221b999c166c356351d8c798569454bcb711c26c3fd71cdf9b1aa8916"
+        },
+        {
+          "tensor": "Vs.4",
+          "index": 524,
+          "start": 3946579640,
+          "bytes": 327680,
+          "sha256": "999fb5e793df8539b201e95c98326a66478ea75ecf709e8c8899fa60972d82e9"
+        }
+      ],
+      "gate_cache_sha256": "24feda98f79cc39d4a54d2bee97489bec3c4578bd32d8d7335181759e4ce8636"
+    },
+    {
+      "layer": 31,
+      "transform": 135,
+      "rank": 256,
+      "file": "L31-T135.npz",
+      "sha256": "47362a29ced059de96e5d659e08e143838d88ff80048c8ecfb9eac719e401047",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-31/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.1",
+          "index": 55,
+          "start": 563611328,
+          "bytes": 2621440,
+          "sha256": "2fca5489e56560bf7bdfecfbd41e5e7d06dd0eef9f10ef68d82f1f6ccf63631d"
+        },
+        {
+          "tensor": "Vs.1",
+          "index": 55,
+          "start": 2660763328,
+          "bytes": 2621440,
+          "sha256": "e52d04fe3156a5149d5732b857ff65121e67352c3e580b1b950b2d2bb1ff2530"
+        }
+      ],
+      "gate_cache_sha256": "02812880e2eee160db13c5e204926829486f8f9cc3cc27730c5c5364d8d8b515"
+    },
+    {
+      "layer": 31,
+      "transform": 760,
+      "rank": 64,
+      "file": "L31-T760.npz",
+      "sha256": "370cfb1893ee63f2c99ff178b42d107b1255cf2432a6468b4beb78bbc065347b",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-31/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 200,
+          "start": 1389364928,
+          "bytes": 655360,
+          "sha256": "01e5c69dcc2505dbe4772a91e4baa199fc0f56bd6f52ca6df70fa8c5248864ea"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 200,
+          "start": 3486516928,
+          "bytes": 655360,
+          "sha256": "466e48bfc19c4392dd6e55e1d118f208ee2007c843ca26a172df2ede9e1f5d77"
+        }
+      ],
+      "gate_cache_sha256": "02812880e2eee160db13c5e204926829486f8f9cc3cc27730c5c5364d8d8b515"
+    },
+    {
+      "layer": 31,
+      "transform": 797,
+      "rank": 64,
+      "file": "L31-T797.npz",
+      "sha256": "00c1e1293326829782acedc0c3e51f590e1f1a5d3c7c561ef34387d95d13a45a",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-31/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 237,
+          "start": 1413613248,
+          "bytes": 655360,
+          "sha256": "cae333b7b7a6f5b78665927404132a9099bc12c10022b92aec7e10334c415d0c"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 237,
+          "start": 3510765248,
+          "bytes": 655360,
+          "sha256": "5ebbea0ab6f2a1e6b947c3a78b31b4cbe0c763fc94b94c3df8a2e127255f1511"
+        }
+      ],
+      "gate_cache_sha256": "02812880e2eee160db13c5e204926829486f8f9cc3cc27730c5c5364d8d8b515"
+    },
+    {
+      "layer": 31,
+      "transform": 949,
+      "rank": 64,
+      "file": "L31-T949.npz",
+      "sha256": "507c1e9e8dca6c2ae003ed8af48c6e0e9390d4e19b17a8fd8fd8139c934194ee",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-31/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 389,
+          "start": 1513227968,
+          "bytes": 655360,
+          "sha256": "08a12847bf2b5184778ae3349969ba204eab52a16cb5874d136f7effb1906b40"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 389,
+          "start": 3610379968,
+          "bytes": 655360,
+          "sha256": "4f289d9e6b6194afbaaf1b1bd2ec93d7a433cad786ed4249881fe4bf4c9ebc9e"
+        }
+      ],
+      "gate_cache_sha256": "02812880e2eee160db13c5e204926829486f8f9cc3cc27730c5c5364d8d8b515"
+    },
+    {
+      "layer": 31,
+      "transform": 2294,
+      "rank": 32,
+      "file": "L31-T2294.npz",
+      "sha256": "7aecd19dc0cb3d08018efc22d41ecb3cd7b67757cd4fe5d259a16dce85a62c09",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-31/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.4",
+          "index": 1094,
+          "start": 2036205248,
+          "bytes": 327680,
+          "sha256": "b0414219bc0081bd1216202585673f10f32b509748e26ae350868ea24d4beda4"
+        },
+        {
+          "tensor": "Vs.4",
+          "index": 1094,
+          "start": 4133357248,
+          "bytes": 327680,
+          "sha256": "0604fae92d808381da849353c1426a3dc098a7025b06178c788c16827cd5a8a1"
+        }
+      ],
+      "gate_cache_sha256": "02812880e2eee160db13c5e204926829486f8f9cc3cc27730c5c5364d8d8b515"
+    },
+    {
+      "layer": 32,
+      "transform": 15,
+      "rank": 512,
+      "file": "L32-T15.npz",
+      "sha256": "eda37d8ab101a27c0137e5d4090d33cc31d6cdff42be6875eb2491391de87fdf",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-32/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.0",
+          "index": 15,
+          "start": 78644928,
+          "bytes": 5242880,
+          "sha256": "28aac6dc0e26bca9c89708e27216a49e43ed486ae3eb6e2b440b028c54e26d2b"
+        },
+        {
+          "tensor": "Vs.0",
+          "index": 15,
+          "start": 2175796928,
+          "bytes": 5242880,
+          "sha256": "d7ebf7fa5d4a1d43518ff589b3433f099a64c02d51711d5eadcf8353e4cd20e5"
+        }
+      ],
+      "gate_cache_sha256": "5c8708cb67e4e45e82c20ff7b28de59a70e91ef8ab84afeca138ec49c96274e4"
+    },
+    {
+      "layer": 32,
+      "transform": 224,
+      "rank": 256,
+      "file": "L32-T224.npz",
+      "sha256": "101db9833a868572de2487e6cfb972941b4a3fcc7a2e169817b8890e531e6ac4",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-32/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.1",
+          "index": 144,
+          "start": 796919488,
+          "bytes": 2621440,
+          "sha256": "1ccca88b238004acf409b3310355743eea31c68f04810fde7ee04e07534a2ff8"
+        },
+        {
+          "tensor": "Vs.1",
+          "index": 144,
+          "start": 2894071488,
+          "bytes": 2621440,
+          "sha256": "b5e46c19531464a788a7235098835dacd52dc1afa2991ae182445cf08ca848a7"
+        }
+      ],
+      "gate_cache_sha256": "5c8708cb67e4e45e82c20ff7b28de59a70e91ef8ab84afeca138ec49c96274e4"
+    },
+    {
+      "layer": 32,
+      "transform": 335,
+      "rank": 128,
+      "file": "L32-T335.npz",
+      "sha256": "3bd16292b94d4f20534bf9ef54b01528a87bdc479e8ee05fd46e2d45e1336a50",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-32/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.2",
+          "index": 95,
+          "start": 963380928,
+          "bytes": 1310720,
+          "sha256": "64c43f7c665c3ab6d887d73583a26ddb0ff50bb18e5a10cbfb002b9e063f41c6"
+        },
+        {
+          "tensor": "Vs.2",
+          "index": 95,
+          "start": 3060532928,
+          "bytes": 1310720,
+          "sha256": "db90114550982c0195c5a8f8ae58ad65d1755e10f9784c8f4c3bb219b331c36b"
+        }
+      ],
+      "gate_cache_sha256": "5c8708cb67e4e45e82c20ff7b28de59a70e91ef8ab84afeca138ec49c96274e4"
+    },
+    {
+      "layer": 32,
+      "transform": 962,
+      "rank": 64,
+      "file": "L32-T962.npz",
+      "sha256": "f21221a9e2210f5891b5c857ebea71cd43f6e96986c9656b1e7b77cbe485ec03",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-32/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 402,
+          "start": 1521747648,
+          "bytes": 655360,
+          "sha256": "ce8dd04b51a2ab1bd87634ab2565da8646f4cb7a148fd965b22afd6a2d6375e7"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 402,
+          "start": 3618899648,
+          "bytes": 655360,
+          "sha256": "68de4910d471a62b08ebf7dcb45ce2de22e6252ebf1fe151f38bddf8453cc140"
+        }
+      ],
+      "gate_cache_sha256": "5c8708cb67e4e45e82c20ff7b28de59a70e91ef8ab84afeca138ec49c96274e4"
+    },
+    {
+      "layer": 32,
+      "transform": 1181,
+      "rank": 64,
+      "file": "L32-T1181.npz",
+      "sha256": "91168d8e0bb2f56ce4d61defdfdd9996713680243fd02fe317f42ae9d2ec2360",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-32/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 621,
+          "start": 1665271488,
+          "bytes": 655360,
+          "sha256": "7082f7acca46d7e2e875801312072dd580659170a54cfa7c1d55f2903bac56ef"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 621,
+          "start": 3762423488,
+          "bytes": 655360,
+          "sha256": "cce835b1412c71283aa9bb6354d42cb1e22bbbf17b0b0912387482defb556892"
+        }
+      ],
+      "gate_cache_sha256": "5c8708cb67e4e45e82c20ff7b28de59a70e91ef8ab84afeca138ec49c96274e4"
+    },
+    {
+      "layer": 33,
+      "transform": 422,
+      "rank": 128,
+      "file": "L33-T422.npz",
+      "sha256": "55c1211b0e94637898d54e4182eb03ec1981974fbda6567fbcdeb0b7ce824570",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-33/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.2",
+          "index": 182,
+          "start": 1077413568,
+          "bytes": 1310720,
+          "sha256": "c436490acb6b889611970bfcb8fb0ef47a198a51510223fe7eed8e6476820397"
+        },
+        {
+          "tensor": "Vs.2",
+          "index": 182,
+          "start": 3174565568,
+          "bytes": 1310720,
+          "sha256": "e9aa6d7074dd0ad68248a0b5e6607b076d3c2cdccbc7d8982a7fb50c6ee1e905"
+        }
+      ],
+      "gate_cache_sha256": "7da8a1516a45a0d5ef2bb9f734b70b860dc701f578c25c2f43549588db3ffab4"
+    },
+    {
+      "layer": 33,
+      "transform": 587,
+      "rank": 64,
+      "file": "L33-T587.npz",
+      "sha256": "a38e749a0766dd0d0831fe7bce39765bcc7e1c21a5d945350cf203e7b2e979e8",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-33/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 27,
+          "start": 1275987648,
+          "bytes": 655360,
+          "sha256": "8e6d5f88cac3c853d8186e312eb36dd363e0b001896af36990d6ff0c2d2419d3"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 27,
+          "start": 3373139648,
+          "bytes": 655360,
+          "sha256": "489ab9ae9452a114902b2e0e7bd8aa089bb7b17daf30976ecd2d54741ad72e20"
+        }
+      ],
+      "gate_cache_sha256": "7da8a1516a45a0d5ef2bb9f734b70b860dc701f578c25c2f43549588db3ffab4"
+    },
+    {
+      "layer": 33,
+      "transform": 795,
+      "rank": 64,
+      "file": "L33-T795.npz",
+      "sha256": "2d944ab0b0a805123b68b70ab972b0c74e67f3d7d1b10bf5351ffe435ebd273e",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-33/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 235,
+          "start": 1412302528,
+          "bytes": 655360,
+          "sha256": "d7c5a3bd241211b88ac677f7d50e36a5402cbdf92f2bb28b84dc9b37d19d54e3"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 235,
+          "start": 3509454528,
+          "bytes": 655360,
+          "sha256": "1c607a3916ca31656f60989a628d75d00f4d711ee82e44a208d40f5561cb54d9"
+        }
+      ],
+      "gate_cache_sha256": "7da8a1516a45a0d5ef2bb9f734b70b860dc701f578c25c2f43549588db3ffab4"
+    },
+    {
+      "layer": 33,
+      "transform": 909,
+      "rank": 64,
+      "file": "L33-T909.npz",
+      "sha256": "065a5cd8c85f6e14be0afbc1df4880cf05cf3a27944e47c03a165ddb95c8f3c5",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-33/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 349,
+          "start": 1487013568,
+          "bytes": 655360,
+          "sha256": "eb7ac33d84d93901489725bedaad22e591f6f82340510dcbe56165e8eeffd0c6"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 349,
+          "start": 3584165568,
+          "bytes": 655360,
+          "sha256": "fd5b69a6b60ef59dad23aef9053cbfadd1da090ef7cbca807b6d322327f608c6"
+        }
+      ],
+      "gate_cache_sha256": "7da8a1516a45a0d5ef2bb9f734b70b860dc701f578c25c2f43549588db3ffab4"
+    },
+    {
+      "layer": 33,
+      "transform": 968,
+      "rank": 64,
+      "file": "L33-T968.npz",
+      "sha256": "f10bb9b85bac387df81dadae0fbfdd86a86e63fc41a261ea0f179a530b3914da",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-33/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 408,
+          "start": 1525679808,
+          "bytes": 655360,
+          "sha256": "b3f73cf8524bb8d58eb2e582001e29f6b76252c8831cf7a505087abdad3c90b2"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 408,
+          "start": 3622831808,
+          "bytes": 655360,
+          "sha256": "2c562682906c6288101b4b55e0f9a55baefb0f9d3dd1bd6de3fdd62e87a328fa"
+        }
+      ],
+      "gate_cache_sha256": "7da8a1516a45a0d5ef2bb9f734b70b860dc701f578c25c2f43549588db3ffab4"
+    },
+    {
+      "layer": 34,
+      "transform": 65,
+      "rank": 512,
+      "file": "L34-T65.npz",
+      "sha256": "91564f27b22ae1c0fa9a8a994d2ee024b494b515b8d6120c14bd50d175bdebba",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.0",
+          "index": 65,
+          "start": 340788928,
+          "bytes": 5242880,
+          "sha256": "02b35b3826892a2bac0f849befd049d183e03bfbbfcc08f3ee16821c5c02b814"
+        },
+        {
+          "tensor": "Vs.0",
+          "index": 65,
+          "start": 2437940928,
+          "bytes": 5242880,
+          "sha256": "6d9097551168e3ee21aa525892cb070ac68315e33b59436c553355c4321914ec"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 34,
+      "transform": 84,
+      "rank": 256,
+      "file": "L34-T84.npz",
+      "sha256": "017dc6e351e1342d2fb5b6c8c8981dbbd6a40a433004ec4decb8fbfae4601bf4",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.1",
+          "index": 4,
+          "start": 429917888,
+          "bytes": 2621440,
+          "sha256": "847c44c9de3656e704276b0c31d0a5ce51b6f3608c97e07518106564b99ad918"
+        },
+        {
+          "tensor": "Vs.1",
+          "index": 4,
+          "start": 2527069888,
+          "bytes": 2621440,
+          "sha256": "ce67d7003ed48e8b4aa4e3e955c49d4263e8b0979a7c4fc4fd966e952a6c60fc"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 34,
+      "transform": 90,
+      "rank": 256,
+      "file": "L34-T90.npz",
+      "sha256": "68465fe5425b767453b956b4ac14219aea1ba10bf759259050ff5eb923fd8d78",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.1",
+          "index": 10,
+          "start": 445646528,
+          "bytes": 2621440,
+          "sha256": "48cd79927f50fef7ed2a9ee5deac4f31da74a9aa46adb9cbf32ab90cb1566aaf"
+        },
+        {
+          "tensor": "Vs.1",
+          "index": 10,
+          "start": 2542798528,
+          "bytes": 2621440,
+          "sha256": "4d10b5e8a8a77310031e4f0f9cd870438c88a8f8ac083e65dd458a461afc253a"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 34,
+      "transform": 159,
+      "rank": 256,
+      "file": "L34-T159.npz",
+      "sha256": "a280a4e4883c3f123ed5bd80afe1a3557f185532a99ea749e52deb65a412d0de",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.1",
+          "index": 79,
+          "start": 626525888,
+          "bytes": 2621440,
+          "sha256": "4d992bfef7d3f7d6da9228f945fc0406362a217f1c268b7d25b1854f4f4281a3"
+        },
+        {
+          "tensor": "Vs.1",
+          "index": 79,
+          "start": 2723677888,
+          "bytes": 2621440,
+          "sha256": "20d826b61da09d686cdf8113040d7c068595620fbef76583484081a7e824bc81"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 34,
+      "transform": 391,
+      "rank": 128,
+      "file": "L34-T391.npz",
+      "sha256": "5d146808427d894c99faf2f38a7105f4ee3382b9eedc8ac230cd7fe81df5dad7",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.2",
+          "index": 151,
+          "start": 1036781248,
+          "bytes": 1310720,
+          "sha256": "5295fdd871a8e55e688fd9ce7639275c25c116f0b18698ccb354d79eeb99ce8a"
+        },
+        {
+          "tensor": "Vs.2",
+          "index": 151,
+          "start": 3133933248,
+          "bytes": 1310720,
+          "sha256": "5774cf53021f6d1d5da42d8a6003bf1689167d04b472ce322261c591ad5c164c"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 34,
+      "transform": 666,
+      "rank": 64,
+      "file": "L34-T666.npz",
+      "sha256": "7780082a5771f05b578bffd1b968e25de56585742d0226adf9f38d67b3f3d71b",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.3",
+          "index": 106,
+          "start": 1327761088,
+          "bytes": 655360,
+          "sha256": "0b90c5e467326b91db29aebaabd6efdcb6c0d2b24dd72b2a8e0d8cc192173125"
+        },
+        {
+          "tensor": "Vs.3",
+          "index": 106,
+          "start": 3424913088,
+          "bytes": 655360,
+          "sha256": "01e3dbe7b6a7895394214596ad2ec2ca1e7b899f51d210fc770d5c69cdf88570"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 34,
+      "transform": 1267,
+      "rank": 32,
+      "file": "L34-T1267.npz",
+      "sha256": "d65488f7851edb00b0e10826ee8329ae7981fe5d4cfb6cea21151f4c5e084001",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.4",
+          "index": 67,
+          "start": 1699677888,
+          "bytes": 327680,
+          "sha256": "0cd28921e65f8099eeae5b274907efcd273ed528a257c240124d8bc6474db3e4"
+        },
+        {
+          "tensor": "Vs.4",
+          "index": 67,
+          "start": 3796829888,
+          "bytes": 327680,
+          "sha256": "1cff4b7502e8c8050fc46809987f6767fc040636cb1edb3e0978a95db730175b"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 34,
+      "transform": 1468,
+      "rank": 32,
+      "file": "L34-T1468.npz",
+      "sha256": "4bb5bfc43a9e18bf7dc9f0d55d59a8e7d7d774951dd1e43d998e9f26442d57c9",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.4",
+          "index": 268,
+          "start": 1765541568,
+          "bytes": 327680,
+          "sha256": "7d147342ca5c215c680d0e05e8f3ceef46c0a3bf340542f2da9ef3a4c0c32702"
+        },
+        {
+          "tensor": "Vs.4",
+          "index": 268,
+          "start": 3862693568,
+          "bytes": 327680,
+          "sha256": "902f6194875a7628ccc7cf2c3707929c08260e4598a5496205bca3ae64b4f888"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 34,
+      "transform": 1593,
+      "rank": 32,
+      "file": "L34-T1593.npz",
+      "sha256": "dff22890449079a69129ca60339c7615524ca592a25df67cbfd2ac41f693753b",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-34/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.4",
+          "index": 393,
+          "start": 1806501568,
+          "bytes": 327680,
+          "sha256": "a4c7564f13f3d886f2f67bbb82ae9bd10a3c4d810fee80f9b177d920a2b8dd1d"
+        },
+        {
+          "tensor": "Vs.4",
+          "index": 393,
+          "start": 3903653568,
+          "bytes": 327680,
+          "sha256": "987c684df3a294db375115b2785c0573f34e2afd39549d299b0efa700ae81347"
+        }
+      ],
+      "gate_cache_sha256": "7f8f32722e93e65b31183349d3155921a0bc5ea2416cc749dea85b41b57861c9"
+    },
+    {
+      "layer": 35,
+      "transform": 111,
+      "rank": 256,
+      "file": "L35-T111.npz",
+      "sha256": "628cfbe1bb6ec1788f42a893e17a289807d7a24bb6908ab33ee8a5ea85394911",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-35/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.1",
+          "index": 31,
+          "start": 500696768,
+          "bytes": 2621440,
+          "sha256": "65323fe997951cffcb130a662734d43260ef8dc14b5d5ce80acbe49fc418c400"
+        },
+        {
+          "tensor": "Vs.1",
+          "index": 31,
+          "start": 2597848768,
+          "bytes": 2621440,
+          "sha256": "251e8dab83a9920390d693ce1676ee9cdc912f282fd5e85fbf89b57cd4e934ac"
+        }
+      ],
+      "gate_cache_sha256": "8fb65b5db0d50c65d55674011bf28f307bcc889c6afea83c5e94443086fa23b7"
+    },
+    {
+      "layer": 35,
+      "transform": 253,
+      "rank": 128,
+      "file": "L35-T253.npz",
+      "sha256": "d74ba471fc2e86184ae3515e34cf7078c29bd48e6f3dcec7db427852c79caabe",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-35/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.2",
+          "index": 13,
+          "start": 855901888,
+          "bytes": 1310720,
+          "sha256": "fcdcc8259de96a852c5648edff572d7f41d4d8d810138277c4aaccecfde8dc04"
+        },
+        {
+          "tensor": "Vs.2",
+          "index": 13,
+          "start": 2953053888,
+          "bytes": 1310720,
+          "sha256": "812e7474a9bc4922b8a47d28017c1e396b2a9ad4ad01940e83b00f65bcbef6b5"
+        }
+      ],
+      "gate_cache_sha256": "8fb65b5db0d50c65d55674011bf28f307bcc889c6afea83c5e94443086fa23b7"
+    },
+    {
+      "layer": 35,
+      "transform": 1716,
+      "rank": 32,
+      "file": "L35-T1716.npz",
+      "sha256": "a070695e22d2f68ef907cbfc39b5313940886d5d2dc7493d10686dc8cd92e27c",
+      "source": "https://huggingface.co/georglange/qwen3-4b-molt/resolve/081ce901b090b64aeecf9bc8709b57c10411e32a/layer-35/checkpoint.safetensors",
+      "slices": [
+        {
+          "tensor": "Us.4",
+          "index": 516,
+          "start": 1846806208,
+          "bytes": 327680,
+          "sha256": "d04371634df2f828652ec5f78a47a5ca4fb036f2d93bf7019af9815173267648"
+        },
+        {
+          "tensor": "Vs.4",
+          "index": 516,
+          "start": 3943958208,
+          "bytes": 327680,
+          "sha256": "113748c648224e68a0647ab96b66073c699770bf257d7a38b77d31184acb12cd"
+        }
+      ],
+      "gate_cache_sha256": "8fb65b5db0d50c65d55674011bf28f307bcc889c6afea83c5e94443086fa23b7"
+    }
+  ]
+}

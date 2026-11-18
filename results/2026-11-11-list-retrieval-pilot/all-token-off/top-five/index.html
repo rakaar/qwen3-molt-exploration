@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Native and T2375-off first-token rankings for the seven eleventh-word list cases.">
+  <title>List retrieval · Native and T2375-off top five</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav aria-label="Source links"><a href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-11-list-retrieval-pilot/?v=0663557#comparison">Original list comparison</a><a href="top-five.csv" download>Download token probabilities</a></nav>
+  <header>
+    <h1>Top five next tokens</h1>
+    <p class="intro">Seven eleventh-word list prompts, with native Qwen3-4B beside the run with L29–T2375 off across the input and generation.</p>
+    <dl class="overview">
+      <div><dt>Same top token</dt><dd>7/7</dd></div>
+      <div><dt>Different top-five membership</dt><dd>4/7</dd></div>
+      <div><dt>12th word’s first token in top five</dt><dd>0/14</dd></div>
+    </dl>
+    <p class="note">Probabilities are for the first token after the prompt. A token can be a word fragment, such as <code>p</code> in <code>pencil</code>. <code>␠</code> marks a space. The 12th-word check uses the exact lowercase target. Equal probabilities keep the saved ranking order.</p>
+  </header>
+  <div class="cases"><section class="case" id="list-1-numbered-11" aria-labelledby="title-list-1-numbered-11">
+  <h2 id="title-list-1-numbered-11">List 1 · numbered</h2>
+  <p class="targets">11th <code>pencil</code> <span aria-hidden="true">·</span> 12th <code>drum</code></p>
+  <table aria-label="Top five next tokens for List 1 · numbered">
+    <thead><tr><th scope="col">Rank</th><th scope="col">Native</th><th scope="col">T2375 off</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><div class="token-entry"><code title="Token ID 79">p</code><span class="probability">99.999559%</span></div></td><td><div class="token-entry"><code title="Token ID 79">p</code><span class="probability">99.999952%</span></div></td></tr>
+<tr><th scope="row">2</th><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.00019947%</span></div></td><td><div class="token-entry"><code title="Token ID 47">P</code><span class="probability">1.8554e-05%</span></div></td></tr>
+<tr><th scope="row">3</th><td><div class="token-entry"><code title="Token ID 45339">Ele</code><span class="probability">0.00010677%</span></div></td><td><div class="token-entry"><code title="Token ID 45339">Ele</code><span class="probability">7.7344e-06%</span></div></td></tr>
+<tr><th scope="row">4</th><td><div class="token-entry"><code title="Token ID 47">P</code><span class="probability">6.4759e-05%</span></div></td><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">6.8256e-06%</span></div></td></tr>
+<tr><th scope="row">5</th><td><div class="token-entry"><code title="Token ID 10068">ele</code><span class="probability">3.9278e-05%</span></div></td><td><div class="token-entry"><code title="Token ID 785">The</code><span class="probability">4.6912e-06%</span></div></td></tr></tbody>
+  </table>
+  <p class="response">Full answer <code>pencil</code> → <code>pencil</code></p>
+  <details><summary>View the list and prompt</summary><pre>Here are 15 words in order:
+1. kite
+2. fork
+3. glove
+4. chair
+5. wheel
+6. spoon
+7. bell
+8. shoe
+9. hammer
+10. apple
+11. pencil
+12. drum
+13. lamp
+14. ring
+15. ticket
+
+What is the eleventh word in the list? Count the listed words. Reply with only that word.</pre></details>
+</section>
+<section class="case" id="list-1-bullets-11" aria-labelledby="title-list-1-bullets-11">
+  <h2 id="title-list-1-bullets-11">List 1 · bullets</h2>
+  <p class="targets">11th <code>pencil</code> <span aria-hidden="true">·</span> 12th <code>drum</code></p>
+  <table aria-label="Top five next tokens for List 1 · bullets">
+    <thead><tr><th scope="col">Rank</th><th scope="col">Native</th><th scope="col">T2375 off</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><div class="token-entry"><code title="Token ID 79">p</code><span class="probability">99.999928%</span></div></td><td><div class="token-entry"><code title="Token ID 79">p</code><span class="probability">99.999976%</span></div></td></tr>
+<tr><th scope="row">2</th><td><div class="token-entry"><code title="Token ID 10068">ele</code><span class="probability">2.6996e-05%</span></div></td><td><div class="token-entry"><code title="Token ID 46118">␠pencil</code><span class="probability">4.1399e-06%</span></div></td></tr>
+<tr><th scope="row">3</th><td><div class="token-entry"><code title="Token ID 45339">Ele</code><span class="probability">1.8554e-05%</span></div></td><td><div class="token-entry"><code title="Token ID 45339">Ele</code><span class="probability">4.1399e-06%</span></div></td></tr>
+<tr><th scope="row">4</th><td><div class="token-entry"><code title="Token ID 46118">␠pencil</code><span class="probability">7.7344e-06%</span></div></td><td><div class="token-entry"><code title="Token ID 785">The</code><span class="probability">3.2242e-06%</span></div></td></tr>
+<tr><th scope="row">5</th><td><div class="token-entry"><code title="Token ID 785">The</code><span class="probability">5.3158e-06%</span></div></td><td><div class="token-entry"><code title="Token ID 47">P</code><span class="probability">3.2242e-06%</span></div></td></tr></tbody>
+  </table>
+  <p class="response">Full answer <code>pencil</code> → <code>pencil</code></p>
+  <details><summary>View the list and prompt</summary><pre>Here are 15 words in order:
+- kite
+- fork
+- glove
+- chair
+- wheel
+- spoon
+- bell
+- shoe
+- hammer
+- apple
+- pencil
+- drum
+- lamp
+- ring
+- ticket
+
+What is the eleventh word in the list? Count the listed words. Reply with only that word.</pre></details>
+</section>
+<section class="case" id="list-2-numbered-11" aria-labelledby="title-list-2-numbered-11">
+  <h2 id="title-list-2-numbered-11">List 2 · numbered</h2>
+  <p class="targets">11th <code>shoe</code> <span aria-hidden="true">·</span> 12th <code>hammer</code></p>
+  <table aria-label="Top five next tokens for List 2 · numbered">
+    <thead><tr><th scope="col">Rank</th><th scope="col">Native</th><th scope="col">T2375 off</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><div class="token-entry"><code title="Token ID 927">sh</code><span class="probability">99.916899%</span></div></td><td><div class="token-entry"><code title="Token ID 927">sh</code><span class="probability">99.983084%</span></div></td></tr>
+<tr><th scope="row">2</th><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.070958%</span></div></td><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.010889%</span></div></td></tr>
+<tr><th scope="row">3</th><td><div class="token-entry"><code title="Token ID 2016">Sh</code><span class="probability">0.0040032%</span></div></td><td><div class="token-entry"><code title="Token ID 2016">Sh</code><span class="probability">0.0031198%</span></div></td></tr>
+<tr><th scope="row">4</th><td><div class="token-entry"><code title="Token ID 45339">Ele</code><span class="probability">0.0021428%</span></div></td><td><div class="token-entry"><code title="Token ID 2154">sp</code><span class="probability">0.00054213%</span></div></td></tr>
+<tr><th scope="row">5</th><td><div class="token-entry"><code title="Token ID 2154">sp</code><span class="probability">0.0012996%</span></div></td><td><div class="token-entry"><code title="Token ID 82">s</code><span class="probability">0.00054213%</span></div></td></tr></tbody>
+  </table>
+  <p class="response">Full answer <code>shoe</code> → <code>shoe</code></p>
+  <details><summary>View the list and prompt</summary><pre>Here are 15 words in order:
+1. ticket
+2. fork
+3. glove
+4. bell
+5. ring
+6. pencil
+7. wheel
+8. drum
+9. apple
+10. spoon
+11. shoe
+12. hammer
+13. kite
+14. lamp
+15. chair
+
+What is the eleventh word in the list? Count the listed words. Reply with only that word.</pre></details>
+</section>
+<section class="case" id="list-3-numbered-11" aria-labelledby="title-list-3-numbered-11">
+  <h2 id="title-list-3-numbered-11">List 3 · numbered</h2>
+  <p class="targets">11th <code>ring</code> <span aria-hidden="true">·</span> 12th <code>apple</code></p>
+  <table aria-label="Top five next tokens for List 3 · numbered">
+    <thead><tr><th scope="col">Rank</th><th scope="col">Native</th><th scope="col">T2375 off</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><div class="token-entry"><code title="Token ID 12640">ring</code><span class="probability">99.989462%</span></div></td><td><div class="token-entry"><code title="Token ID 12640">ring</code><span class="probability">99.992394%</span></div></td></tr>
+<tr><th scope="row">2</th><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.0058289%</span></div></td><td><div class="token-entry"><code title="Token ID 10058">␠ring</code><span class="probability">0.0066051%</span></div></td></tr>
+<tr><th scope="row">3</th><td><div class="token-entry"><code title="Token ID 10058">␠ring</code><span class="probability">0.0040061%</span></div></td><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.00069618%</span></div></td></tr>
+<tr><th scope="row">4</th><td><div class="token-entry"><code title="Token ID 43466">Ring</code><span class="probability">0.0002561%</span></div></td><td><div class="token-entry"><code title="Token ID 43466">Ring</code><span class="probability">0.00015534%</span></div></td></tr>
+<tr><th scope="row">5</th><td><div class="token-entry"><code title="Token ID 785">The</code><span class="probability">0.00013708%</span></div></td><td><div class="token-entry"><code title="Token ID 785">The</code><span class="probability">3.9276e-05%</span></div></td></tr></tbody>
+  </table>
+  <p class="response">Full answer <code>ring</code> → <code>ring</code></p>
+  <details><summary>View the list and prompt</summary><pre>Here are 15 words in order:
+1. chair
+2. wheel
+3. hammer
+4. glove
+5. ticket
+6. kite
+7. pencil
+8. drum
+9. shoe
+10. lamp
+11. ring
+12. apple
+13. spoon
+14. bell
+15. fork
+
+What is the eleventh word in the list? Count the listed words. Reply with only that word.</pre></details>
+</section>
+<section class="case" id="list-4-numbered-11" aria-labelledby="title-list-4-numbered-11">
+  <h2 id="title-list-4-numbered-11">List 4 · numbered</h2>
+  <p class="targets">11th <code>ticket</code> <span aria-hidden="true">·</span> 12th <code>spoon</code></p>
+  <table aria-label="Top five next tokens for List 4 · numbered">
+    <thead><tr><th scope="col">Rank</th><th scope="col">Native</th><th scope="col">T2375 off</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><div class="token-entry"><code title="Token ID 26534">ticket</code><span class="probability">99.992740%</span></div></td><td><div class="token-entry"><code title="Token ID 26534">ticket</code><span class="probability">99.991524%</span></div></td></tr>
+<tr><th scope="row">2</th><td><div class="token-entry"><code title="Token ID 34058">Ticket</code><span class="probability">0.0035355%</span></div></td><td><div class="token-entry"><code title="Token ID 34058">Ticket</code><span class="probability">0.0040062%</span></div></td></tr>
+<tr><th scope="row">3</th><td><div class="token-entry"><code title="Token ID 11727">␠ticket</code><span class="probability">0.0027534%</span></div></td><td><div class="token-entry"><code title="Token ID 11727">␠ticket</code><span class="probability">0.0040062%</span></div></td></tr>
+<tr><th scope="row">4</th><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.00069618%</span></div></td><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.00022601%</span></div></td></tr>
+<tr><th scope="row">5</th><td><div class="token-entry"><code title="Token ID 81439">(ticket</code><span class="probability">8.3147e-05%</span></div></td><td><div class="token-entry"><code title="Token ID 81439">(ticket</code><span class="probability">0.00012098%</span></div></td></tr></tbody>
+  </table>
+  <p class="response">Full answer <code>ticket</code> → <code>ticket</code></p>
+  <details><summary>View the list and prompt</summary><pre>Here are 15 words in order:
+1. glove
+2. kite
+3. hammer
+4. ring
+5. fork
+6. drum
+7. apple
+8. pencil
+9. chair
+10. shoe
+11. ticket
+12. spoon
+13. lamp
+14. wheel
+15. bell
+
+What is the eleventh word in the list? Count the listed words. Reply with only that word.</pre></details>
+</section>
+<section class="case" id="list-5-numbered-11" aria-labelledby="title-list-5-numbered-11">
+  <h2 id="title-list-5-numbered-11">List 5 · numbered</h2>
+  <p class="targets">11th <code>hammer</code> <span aria-hidden="true">·</span> 12th <code>ticket</code></p>
+  <table aria-label="Top five next tokens for List 5 · numbered">
+    <thead><tr><th scope="col">Rank</th><th scope="col">Native</th><th scope="col">T2375 off</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><div class="token-entry"><code title="Token ID 45334">hammer</code><span class="probability">99.251336%</span></div></td><td><div class="token-entry"><code title="Token ID 45334">hammer</code><span class="probability">99.563885%</span></div></td></tr>
+<tr><th scope="row">2</th><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.45962%</span></div></td><td><div class="token-entry"><code title="Token ID 23457">␠hammer</code><span class="probability">0.14969%</span></div></td></tr>
+<tr><th scope="row">3</th><td><div class="token-entry"><code title="Token ID 23457">␠hammer</code><span class="probability">0.11621%</span></div></td><td><div class="token-entry"><code title="Token ID 16">1</code><span class="probability">0.14969%</span></div></td></tr>
+<tr><th scope="row">4</th><td><div class="token-entry"><code title="Token ID 45339">Ele</code><span class="probability">0.062203%</span></div></td><td><div class="token-entry"><code title="Token ID 109428">锤</code><span class="probability">0.042886%</span></div></td></tr>
+<tr><th scope="row">5</th><td><div class="token-entry"><code title="Token ID 10068">ele</code><span class="probability">0.048444%</span></div></td><td><div class="token-entry"><code title="Token ID 45339">Ele</code><span class="probability">0.037847%</span></div></td></tr></tbody>
+  </table>
+  <p class="response">Full answer <code>hammer</code> → <code>hammer</code></p>
+  <details><summary>View the list and prompt</summary><pre>Here are 15 words in order:
+1. fork
+2. glove
+3. wheel
+4. drum
+5. lamp
+6. pencil
+7. shoe
+8. ring
+9. chair
+10. apple
+11. hammer
+12. ticket
+13. kite
+14. spoon
+15. bell
+
+What is the eleventh word in the list? Count the listed words. Reply with only that word.</pre></details>
+</section>
+<section class="case" id="list-5-bullets-11" aria-labelledby="title-list-5-bullets-11">
+  <h2 id="title-list-5-bullets-11">List 5 · bullets</h2>
+  <p class="targets">11th <code>hammer</code> <span aria-hidden="true">·</span> 12th <code>ticket</code></p>
+  <table aria-label="Top five next tokens for List 5 · bullets">
+    <thead><tr><th scope="col">Rank</th><th scope="col">Native</th><th scope="col">T2375 off</th></tr></thead>
+    <tbody><tr><th scope="row">1</th><td><div class="token-entry"><code title="Token ID 45334">hammer</code><span class="probability">99.974757%</span></div></td><td><div class="token-entry"><code title="Token ID 45334">hammer</code><span class="probability">99.975246%</span></div></td></tr>
+<tr><th scope="row">2</th><td><div class="token-entry"><code title="Token ID 23457">␠hammer</code><span class="probability">0.012338%</span></div></td><td><div class="token-entry"><code title="Token ID 23457">␠hammer</code><span class="probability">0.012338%</span></div></td></tr>
+<tr><th scope="row">3</th><td><div class="token-entry"><code title="Token ID 5604">ham</code><span class="probability">0.005828%</span></div></td><td><div class="token-entry"><code title="Token ID 109428">锤</code><span class="probability">0.0051432%</span></div></td></tr>
+<tr><th scope="row">4</th><td><div class="token-entry"><code title="Token ID 109428">锤</code><span class="probability">0.0045388%</span></div></td><td><div class="token-entry"><code title="Token ID 5604">ham</code><span class="probability">0.0051432%</span></div></td></tr>
+<tr><th scope="row">5</th><td><div class="token-entry"><code title="Token ID 785">The</code><span class="probability">0.00078873%</span></div></td><td><div class="token-entry"><code title="Token ID 785">The</code><span class="probability">0.00069606%</span></div></td></tr></tbody>
+  </table>
+  <p class="response">Full answer <code>hammer</code> → <code>hammer</code></p>
+  <details><summary>View the list and prompt</summary><pre>Here are 15 words in order:
+- fork
+- glove
+- wheel
+- drum
+- lamp
+- pencil
+- shoe
+- ring
+- chair
+- apple
+- hammer
+- ticket
+- kite
+- spoon
+- bell
+
+What is the eleventh word in the list? Count the listed words. Reply with only that word.</pre></details>
+</section></div>
+  <footer>
+    <p>The native model answered all seven eleventh-word prompts correctly. The two bullet-format cases failed their separate native twelfth-word checks.</p>
+    <p>The 14 rankings were checked against the saved logits. <a href="../results.json">Raw results JSON</a></p>
+  </footer>
+</main>
+</body>
+</html>

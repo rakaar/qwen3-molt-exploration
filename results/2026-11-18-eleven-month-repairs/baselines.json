@@ -1,0 +1,1010 @@
+{
+  "status": "running",
+  "protocol": {
+    "prompt": "the eleventh month of the year is",
+    "input_ids": [
+      1782,
+      10510,
+      44607,
+      2254,
+      315,
+      279,
+      1042,
+      374
+    ],
+    "position": 7,
+    "answer_spellings": {
+      "November": [
+        " november",
+        " November"
+      ],
+      "December": [
+        " december",
+        " December"
+      ]
+    },
+    "max_new_tokens": 24,
+    "source": {
+      "layer": 29,
+      "transform": 2375
+    },
+    "repairs": [
+      [
+        30,
+        15
+      ],
+      [
+        30,
+        433
+      ],
+      [
+        30,
+        858
+      ],
+      [
+        30,
+        949
+      ],
+      [
+        30,
+        1724
+      ],
+      [
+        31,
+        135
+      ],
+      [
+        31,
+        760
+      ],
+      [
+        31,
+        797
+      ],
+      [
+        31,
+        949
+      ],
+      [
+        31,
+        2294
+      ],
+      [
+        32,
+        15
+      ],
+      [
+        32,
+        224
+      ],
+      [
+        32,
+        335
+      ],
+      [
+        32,
+        962
+      ],
+      [
+        32,
+        1181
+      ],
+      [
+        33,
+        422
+      ],
+      [
+        33,
+        587
+      ],
+      [
+        33,
+        795
+      ],
+      [
+        33,
+        909
+      ],
+      [
+        33,
+        968
+      ],
+      [
+        34,
+        65
+      ],
+      [
+        34,
+        84
+      ],
+      [
+        34,
+        90
+      ],
+      [
+        34,
+        159
+      ],
+      [
+        34,
+        391
+      ],
+      [
+        34,
+        666
+      ],
+      [
+        34,
+        1267
+      ],
+      [
+        34,
+        1468
+      ],
+      [
+        34,
+        1593
+      ],
+      [
+        35,
+        111
+      ],
+      [
+        35,
+        253
+      ],
+      [
+        35,
+        1716
+      ]
+    ],
+    "candidates": [
+      {
+        "layer": 30,
+        "transform": 15,
+        "label": "User Token Newline Gate",
+        "native_gate": 1.104525870972665,
+        "off_gate": 1.1049294893555728,
+        "change": "increased"
+      },
+      {
+        "layer": 30,
+        "transform": 433,
+        "label": "Temporal and Calendar Token Gate",
+        "native_gate": 0.5658266525110913,
+        "off_gate": 0.0,
+        "change": "newly_off"
+      },
+      {
+        "layer": 30,
+        "transform": 858,
+        "label": "Prepositions framing temporal and spatial contexts",
+        "native_gate": 0.9721991492897291,
+        "off_gate": 0.9358170479600281,
+        "change": "decreased"
+      },
+      {
+        "layer": 30,
+        "transform": 949,
+        "label": "Temporal and Spatial Prepositions",
+        "native_gate": 0.5559702681449179,
+        "off_gate": 0.5448689380098173,
+        "change": "decreased"
+      },
+      {
+        "layer": 30,
+        "transform": 1724,
+        "label": "Range Hyphens and Sentence Punctuation",
+        "native_gate": 0.9450587892941458,
+        "off_gate": 0.8934375411086541,
+        "change": "decreased"
+      },
+      {
+        "layer": 31,
+        "transform": 135,
+        "label": "User Prompt and Response Start",
+        "native_gate": 1.321259981324854,
+        "off_gate": 1.3216211338241537,
+        "change": "increased"
+      },
+      {
+        "layer": 31,
+        "transform": 760,
+        "label": "Final Token of Titles and Headers",
+        "native_gate": 0.5286761894069265,
+        "off_gate": 0.5305031768413582,
+        "change": "increased"
+      },
+      {
+        "layer": 31,
+        "transform": 797,
+        "label": "Winter Weather Context Gate",
+        "native_gate": 0.0,
+        "off_gate": 0.655308568680516,
+        "change": "newly_on"
+      },
+      {
+        "layer": 31,
+        "transform": 949,
+        "label": "Temporal and Financial Timeframe Prepositions",
+        "native_gate": 0.0,
+        "off_gate": 0.5623121046828405,
+        "change": "newly_on"
+      },
+      {
+        "layer": 31,
+        "transform": 2294,
+        "label": "Temporal and Spatial Context Prepositions",
+        "native_gate": 2.0226155302974416,
+        "off_gate": 2.0329693360990833,
+        "change": "increased"
+      },
+      {
+        "layer": 32,
+        "transform": 15,
+        "label": "End-of-Turn Token Detection",
+        "native_gate": 1.1233413276557087,
+        "off_gate": 1.114247590782333,
+        "change": "decreased"
+      },
+      {
+        "layer": 32,
+        "transform": 224,
+        "label": "Prepositions Introducing Specific Entities",
+        "native_gate": 0.7048999020271782,
+        "off_gate": 0.7068830406177489,
+        "change": "increased"
+      },
+      {
+        "layer": 32,
+        "transform": 335,
+        "label": "Temporal Reference Token Activation",
+        "native_gate": 3.2679227579848087,
+        "off_gate": 3.2508032076146414,
+        "change": "decreased"
+      },
+      {
+        "layer": 32,
+        "transform": 962,
+        "label": "Food Ingredient and Substitute Nouns",
+        "native_gate": 1.0684419501181814,
+        "off_gate": 1.190826613182546,
+        "change": "increased"
+      },
+      {
+        "layer": 32,
+        "transform": 1181,
+        "label": "Seasonal Holiday Token Activation",
+        "native_gate": 0.828868054665882,
+        "off_gate": 0.7845393989265956,
+        "change": "decreased"
+      },
+      {
+        "layer": 33,
+        "transform": 422,
+        "label": "Temporal Marker Gate",
+        "native_gate": 1.5898356020667284,
+        "off_gate": 1.579859128559499,
+        "change": "decreased"
+      },
+      {
+        "layer": 33,
+        "transform": 587,
+        "label": "List and Sequence Token Activation",
+        "native_gate": 1.1252140368535253,
+        "off_gate": 0.944743824556725,
+        "change": "decreased"
+      },
+      {
+        "layer": 33,
+        "transform": 795,
+        "label": "Multi-word phrase and idiom detection",
+        "native_gate": 1.1873279924218103,
+        "off_gate": 1.2034226167047222,
+        "change": "increased"
+      },
+      {
+        "layer": 33,
+        "transform": 909,
+        "label": "Proper Noun and Entity Token Activation",
+        "native_gate": 1.2506119181556188,
+        "off_gate": 1.173310208184358,
+        "change": "decreased"
+      },
+      {
+        "layer": 33,
+        "transform": 968,
+        "label": "Copula Verb Gate Activation",
+        "native_gate": 0.8921778805373035,
+        "off_gate": 0.8623657203467694,
+        "change": "decreased"
+      },
+      {
+        "layer": 34,
+        "transform": 65,
+        "label": "Punctuation and Format Nouns Trigger",
+        "native_gate": 0.7949034302004376,
+        "off_gate": 0.7627038979690686,
+        "change": "decreased"
+      },
+      {
+        "layer": 34,
+        "transform": 84,
+        "label": "Connector Tokens in Compounds and Idioms",
+        "native_gate": 0.0,
+        "off_gate": 0.5874034839018321,
+        "change": "newly_on"
+      },
+      {
+        "layer": 34,
+        "transform": 90,
+        "label": "Proper Noun and Entity Reference Gate",
+        "native_gate": 1.5516508230158093,
+        "off_gate": 1.496386267836089,
+        "change": "decreased"
+      },
+      {
+        "layer": 34,
+        "transform": 159,
+        "label": "Creative Writing and Content Generation Requests",
+        "native_gate": 1.8447060661819488,
+        "off_gate": 1.8362292165170058,
+        "change": "decreased"
+      },
+      {
+        "layer": 34,
+        "transform": 391,
+        "label": "Temporal Phrase Trigger",
+        "native_gate": 1.4453080120423771,
+        "off_gate": 1.454027541307799,
+        "change": "increased"
+      },
+      {
+        "layer": 34,
+        "transform": 666,
+        "label": "Copula Verb Main Clause Trigger",
+        "native_gate": 0.794434177134163,
+        "off_gate": 0.7367581990983321,
+        "change": "decreased"
+      },
+      {
+        "layer": 34,
+        "transform": 1267,
+        "label": "Unique Identifier and Proper Noun Gate",
+        "native_gate": 0.7106765441873242,
+        "off_gate": 0.681521365260674,
+        "change": "decreased"
+      },
+      {
+        "layer": 34,
+        "transform": 1468,
+        "label": "Article \"An\" Preceding Noun",
+        "native_gate": 1.2899934431890387,
+        "off_gate": 0.7175988701755696,
+        "change": "decreased"
+      },
+      {
+        "layer": 34,
+        "transform": 1593,
+        "label": "Temporal Marker Detection",
+        "native_gate": 2.086922212333345,
+        "off_gate": 2.118846519124975,
+        "change": "increased"
+      },
+      {
+        "layer": 35,
+        "transform": 111,
+        "label": "Temporal Preposition and Date Gate",
+        "native_gate": 1.1074531221913493,
+        "off_gate": 1.1014261280677757,
+        "change": "decreased"
+      },
+      {
+        "layer": 35,
+        "transform": 253,
+        "label": "Prompt Start Token Detection",
+        "native_gate": 1.7233376390916249,
+        "off_gate": 1.7202563749193225,
+        "change": "decreased"
+      },
+      {
+        "layer": 35,
+        "transform": 1716,
+        "label": "Proper Noun and Location Gate",
+        "native_gate": 1.2660332828696585,
+        "off_gate": 1.2833079268381482,
+        "change": "increased"
+      }
+    ],
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "references_sha256": "ba84067edb2fb88a97a62a9b8ef6d1dc32a3e0f38ad978124ac5cabfc9e6659a",
+    "selection": "All transforms active in either the native or T2375-off month run whose scalar changes at final is. Includes newly off, newly on, and continuously active transforms.",
+    "interventions": [
+      "restore native scalar with the ablated operator",
+      "restore full native contribution"
+    ],
+    "candidates_source_sha256": "1d22d6943214381431ee0ff87e9f371b11c1caf1d422c1d3fc4a23299135e1a9",
+    "references_provenance": {
+      "native-observed": {
+        "file": "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/month--native-observed.npz",
+        "sha256": "6cf6944149818e639971013d0a89846b909ef53465ea21884e281c599a22f5e3"
+      },
+      "gate-off": {
+        "file": "comparisons/2026-11-03-eleven-downstream-gates/remote-export/eleven-downstream-gates-20261103/artifacts/month--gate-off.npz",
+        "sha256": "8989bf44e0484aa1259c6f376edbb46c2ea16f61dc93999c7cf66634ad3a9e86"
+      }
+    }
+  },
+  "runs": [
+    {
+      "condition": "native",
+      "repair": null,
+      "repair_mode": null,
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+      "first_token": " november",
+      "output_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.6686863750219345,
+        "December": 0.24365518987178802
+      },
+      "top5": [
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.48884889483451843
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.17983748018741608
+        },
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.15870599448680878
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.08494919538497925
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.01476195827126503
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L30-T15": 1.1045259237289429,
+        "L30-T433": 0.5658267736434937,
+        "L30-T858": 0.9721990823745728,
+        "L30-T949": 0.5559702515602112,
+        "L30-T1724": 0.9450588822364807,
+        "L31-T135": 1.3212599754333496,
+        "L31-T760": 0.5286760330200195,
+        "L31-T797": 0.0,
+        "L31-T949": 0.0,
+        "L31-T2294": 2.022615432739258,
+        "L32-T15": 1.1233413219451904,
+        "L32-T224": 0.7048999071121216,
+        "L32-T335": 3.2679226398468018,
+        "L32-T962": 1.0684421062469482,
+        "L32-T1181": 0.82886803150177,
+        "L33-T422": 1.5898357629776,
+        "L33-T587": 1.1252139806747437,
+        "L33-T795": 1.1873277425765991,
+        "L33-T909": 1.2506117820739746,
+        "L33-T968": 0.892177939414978,
+        "L34-T65": 0.7949033975601196,
+        "L34-T84": 0.0,
+        "L34-T90": 1.5516506433486938,
+        "L34-T159": 1.8447060585021973,
+        "L34-T391": 1.4453078508377075,
+        "L34-T666": 0.7944340705871582,
+        "L34-T1267": 0.7106767296791077,
+        "L34-T1468": 1.2899932861328125,
+        "L34-T1593": 2.0869221687316895,
+        "L35-T111": 1.1074529886245728,
+        "L35-T253": 1.7233376502990723,
+        "L35-T1716": 1.2660331726074219
+      },
+      "edited_sites": [],
+      "generated_positions_edited": [],
+      "file": "native.npz",
+      "sha256": "d8820f9f9d9409c48edfec1385772075559cbc6e014f8adf24a31f9d340b3ff0"
+    },
+    {
+      "condition": "native-unhooked",
+      "repair": null,
+      "repair_mode": null,
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+      "first_token": " november",
+      "output_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.6686863750219345,
+        "December": 0.24365518987178802
+      },
+      "top5": [
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.48884889483451843
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.17983748018741608
+        },
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.15870599448680878
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.08494919538497925
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.01476195827126503
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {},
+      "edited_sites": [],
+      "generated_positions_edited": [],
+      "file": "native-unhooked.npz",
+      "sha256": "ce2159f0fa7897606b459281b5320185474232842db7839d578de4cfef9b6140"
+    },
+    {
+      "condition": "zero-strength",
+      "repair": null,
+      "repair_mode": null,
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+      "first_token": " november",
+      "output_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.6686863750219345,
+        "December": 0.24365518987178802
+      },
+      "top5": [
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.48884889483451843
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.17983748018741608
+        },
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.15870599448680878
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.08494919538497925
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.01476195827126503
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L30-T15": 1.1045259237289429,
+        "L30-T433": 0.5658267736434937,
+        "L30-T858": 0.9721990823745728,
+        "L30-T949": 0.5559702515602112,
+        "L30-T1724": 0.9450588822364807,
+        "L31-T135": 1.3212599754333496,
+        "L31-T760": 0.5286760330200195,
+        "L31-T797": 0.0,
+        "L31-T949": 0.0,
+        "L31-T2294": 2.022615432739258,
+        "L32-T15": 1.1233413219451904,
+        "L32-T224": 0.7048999071121216,
+        "L32-T335": 3.2679226398468018,
+        "L32-T962": 1.0684421062469482,
+        "L32-T1181": 0.82886803150177,
+        "L33-T422": 1.5898357629776,
+        "L33-T587": 1.1252139806747437,
+        "L33-T795": 1.1873277425765991,
+        "L33-T909": 1.2506117820739746,
+        "L33-T968": 0.892177939414978,
+        "L34-T65": 0.7949033975601196,
+        "L34-T84": 0.0,
+        "L34-T90": 1.5516506433486938,
+        "L34-T159": 1.8447060585021973,
+        "L34-T391": 1.4453078508377075,
+        "L34-T666": 0.7944340705871582,
+        "L34-T1267": 0.7106767296791077,
+        "L34-T1468": 1.2899932861328125,
+        "L34-T1593": 2.0869221687316895,
+        "L35-T111": 1.1074529886245728,
+        "L35-T253": 1.7233376502990723,
+        "L35-T1716": 1.2660331726074219
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 0.0
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "zero-strength.npz",
+      "sha256": "fe2a313ffd4d0b0d53d7525e554ef68a3dff10a24112442c53913952843d4754"
+    },
+    {
+      "condition": "T2375-off",
+      "repair": null,
+      "repair_mode": null,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08831333927810192,
+        "December": 0.8367752730846405
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5208585858345032
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.31591668725013733
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.07049053907394409
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.022884929552674294
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.01782280020415783
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L30-T15": 1.1049294471740723,
+        "L30-T433": 0.0,
+        "L30-T858": 0.9358170032501221,
+        "L30-T949": 0.5448688864707947,
+        "L30-T1724": 0.8934376835823059,
+        "L31-T135": 1.321621060371399,
+        "L31-T760": 0.5305032730102539,
+        "L31-T797": 0.6553085446357727,
+        "L31-T949": 0.5623121857643127,
+        "L31-T2294": 2.0329692363739014,
+        "L32-T15": 1.1142475605010986,
+        "L32-T224": 0.7068829536437988,
+        "L32-T335": 3.250802755355835,
+        "L32-T962": 1.190826654434204,
+        "L32-T1181": 0.7845393419265747,
+        "L33-T422": 1.5798588991165161,
+        "L33-T587": 0.9447438716888428,
+        "L33-T795": 1.2034226655960083,
+        "L33-T909": 1.1733102798461914,
+        "L33-T968": 0.8623658418655396,
+        "L34-T65": 0.7627040147781372,
+        "L34-T84": 0.5874035358428955,
+        "L34-T90": 1.496386170387268,
+        "L34-T159": 1.8362292051315308,
+        "L34-T391": 1.454027771949768,
+        "L34-T666": 0.7367581129074097,
+        "L34-T1267": 0.6815213561058044,
+        "L34-T1468": 0.7175989151000977,
+        "L34-T1593": 2.1188464164733887,
+        "L35-T111": 1.1014260053634644,
+        "L35-T253": 1.7202563285827637,
+        "L35-T1716": 1.2833077907562256
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "T2375-off.npz",
+      "sha256": "b1d0ad8e09edfcd66e81d7975176748b654a3a1de568852f51607520daa6a69a"
+    },
+    {
+      "condition": "T2375-off-repeat",
+      "repair": null,
+      "repair_mode": null,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08831333927810192,
+        "December": 0.8367752730846405
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5208585858345032
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.31591668725013733
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.07049053907394409
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.022884929552674294
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.01782280020415783
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L30-T15": 1.1049294471740723,
+        "L30-T433": 0.0,
+        "L30-T858": 0.9358170032501221,
+        "L30-T949": 0.5448688864707947,
+        "L30-T1724": 0.8934376835823059,
+        "L31-T135": 1.321621060371399,
+        "L31-T760": 0.5305032730102539,
+        "L31-T797": 0.6553085446357727,
+        "L31-T949": 0.5623121857643127,
+        "L31-T2294": 2.0329692363739014,
+        "L32-T15": 1.1142475605010986,
+        "L32-T224": 0.7068829536437988,
+        "L32-T335": 3.250802755355835,
+        "L32-T962": 1.190826654434204,
+        "L32-T1181": 0.7845393419265747,
+        "L33-T422": 1.5798588991165161,
+        "L33-T587": 0.9447438716888428,
+        "L33-T795": 1.2034226655960083,
+        "L33-T909": 1.1733102798461914,
+        "L33-T968": 0.8623658418655396,
+        "L34-T65": 0.7627040147781372,
+        "L34-T84": 0.5874035358428955,
+        "L34-T90": 1.496386170387268,
+        "L34-T159": 1.8362292051315308,
+        "L34-T391": 1.454027771949768,
+        "L34-T666": 0.7367581129074097,
+        "L34-T1267": 0.6815213561058044,
+        "L34-T1468": 0.7175989151000977,
+        "L34-T1593": 2.1188464164733887,
+        "L35-T111": 1.1014260053634644,
+        "L35-T253": 1.7202563285827637,
+        "L35-T1716": 1.2833077907562256
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "T2375-off-repeat.npz",
+      "sha256": "b1d0ad8e09edfcd66e81d7975176748b654a3a1de568852f51607520daa6a69a"
+    }
+  ],
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "base_hashes_verified": true,
+    "weights_hashes_verified": true,
+    "attention": "eager",
+    "tf32": false
+  },
+  "baseline_checks": {
+    "native_reference_logits_exact": true,
+    "native_reference_logit_max_abs_diff": 0.0,
+    "off_reference_logits_exact": true,
+    "off_reference_logit_max_abs_diff": 0.0
+  }
+}
