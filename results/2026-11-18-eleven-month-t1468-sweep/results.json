@@ -1,0 +1,2012 @@
+{
+  "status": "complete",
+  "protocol": {
+    "prompt": "the eleventh month of the year is",
+    "input_ids": [
+      1782,
+      10510,
+      44607,
+      2254,
+      315,
+      279,
+      1042,
+      374
+    ],
+    "position": 7,
+    "answer_spellings": {
+      "November": [
+        " november",
+        " November"
+      ],
+      "December": [
+        " december",
+        " December"
+      ]
+    },
+    "max_new_tokens": 24,
+    "source": {
+      "layer": 29,
+      "transform": 2375
+    },
+    "base_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "molt_revision": "081ce901b090b64aeecf9bc8709b57c10411e32a",
+    "references_sha256": "ba84067edb2fb88a97a62a9b8ef6d1dc32a3e0f38ad978124ac5cabfc9e6659a",
+    "repairs": [
+      [
+        34,
+        1468
+      ]
+    ],
+    "sweep_targets": [
+      0.25,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0,
+      6.0,
+      8.0,
+      12.0,
+      16.0,
+      24.0,
+      32.0,
+      48.0,
+      64.0
+    ],
+    "intervention": "At the final input token in L29 subtract the natural T2375 contribution. In L34 add (target T1468 gate − current T1468 gate) × current T1468 operator at the same token, with the operator from the T2375-off run. Generated positions have no hooks.",
+    "adaptation_source_sha256": "9c8616c1a7b6d2594eeb9e603c584abecea00cb15f464321b30d14953fe17f25"
+  },
+  "runs": [
+    {
+      "condition": "native",
+      "repair": null,
+      "target_gate": null,
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+      "first_token": " november",
+      "output_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.6686863750219345,
+        "December": 0.24365518987178802
+      },
+      "top5": [
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.48884889483451843
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.17983748018741608
+        },
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.15870599448680878
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.08494919538497925
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.01476195827126503
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 1.2899932861328125
+      },
+      "edited_sites": [],
+      "generated_positions_edited": [],
+      "file": "native.npz",
+      "sha256": "794fa2d7e118681c9a84201e87060b3a48bf63bd1c7d2350b4514abd31ecc677"
+    },
+    {
+      "condition": "native-unhooked",
+      "repair": null,
+      "target_gate": null,
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+      "first_token": " november",
+      "output_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.6686863750219345,
+        "December": 0.24365518987178802
+      },
+      "top5": [
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.48884889483451843
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.17983748018741608
+        },
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.15870599448680878
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.08494919538497925
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.01476195827126503
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {},
+      "edited_sites": [],
+      "generated_positions_edited": [],
+      "file": "native-unhooked.npz",
+      "sha256": "ce2159f0fa7897606b459281b5320185474232842db7839d578de4cfef9b6140"
+    },
+    {
+      "condition": "zero-strength",
+      "repair": null,
+      "target_gate": null,
+      "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+      "first_token": " november",
+      "output_ids": [
+        84223,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        89011,
+        13,
+        279,
+        1156,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        2086,
+        2254,
+        374,
+        1152,
+        6812,
+        13,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.6686863750219345,
+        "December": 0.24365518987178802
+      },
+      "top5": [
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.48884889483451843
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.17983748018741608
+        },
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.15870599448680878
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.08494919538497925
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.01476195827126503
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 1.2899932861328125
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 0.0
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "zero-strength.npz",
+      "sha256": "d087ce768354f1ac5f4ce75ff08bd3cf80d429b4bf7367753dce560725e754b5"
+    },
+    {
+      "condition": "T2375-off",
+      "repair": null,
+      "target_gate": null,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08831333927810192,
+        "December": 0.8367752730846405
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5208585858345032
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.31591668725013733
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.07049053907394409
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.022884929552674294
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.01782280020415783
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "T2375-off.npz",
+      "sha256": "aca1a08371f3b87e43e408c78b9fe58cea8d5711783c1a6412848b3fcce0b119"
+    },
+    {
+      "condition": "T2375-off-repeat",
+      "repair": null,
+      "target_gate": null,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08831333927810192,
+        "December": 0.8367752730846405
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5208585858345032
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.31591668725013733
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.07049053907394409
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.022884929552674294
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.01782280020415783
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "T2375-off-repeat.npz",
+      "sha256": "aca1a08371f3b87e43e408c78b9fe58cea8d5711783c1a6412848b3fcce0b119"
+    },
+    {
+      "condition": "native-scalar",
+      "repair": "L34-T1468",
+      "target_gate": 1.2899932861328125,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.07834631763398647,
+        "December": 0.8411779701709747
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5235990881919861
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.31757888197898865
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.06253499537706375
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.02300533838570118
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.015811322256922722
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 7.998230934143066
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "native-scalar.npz",
+      "sha256": "4b27bf3ca5305bbe993f3ce6a3abded6ac68a369ceeafb0e309155974a19acff"
+    },
+    {
+      "condition": "gate-0.25",
+      "repair": "L34-T1468",
+      "target_gate": 0.25,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.0795899648219347,
+        "December": 0.8545306026935577
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5319105386734009
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.32262006402015686
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.0635276585817337
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.02062441036105156
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.016062306240200996
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 6.521119117736816
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-0.25.npz",
+      "sha256": "a3edbc543fec907ba1fcf3489359dfb152c8e12c504281568304663f9f4461ba"
+    },
+    {
+      "condition": "gate-0.5",
+      "repair": "L34-T1468",
+      "target_gate": 0.5,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08260920830070972,
+        "December": 0.8476002812385559
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5520885586738586
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.29551172256469727
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.0659375786781311
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.02140679582953453
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.01667162962257862
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 3.0487911701202393
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-0.5.npz",
+      "sha256": "e1a199ceacbf18ddb9ca2bb4c71d4b39ea9d11e6feee6376c8f5230322b3aaac"
+    },
+    {
+      "condition": "gate-1",
+      "repair": "L34-T1468",
+      "target_gate": 1.0,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08599956333637238,
+        "December": 0.8346445858478546
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.519532322883606
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.31511226296424866
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.0703110471367836
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.022826656699180603
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.015688516199588776
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 3.947934150695801
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-1.npz",
+      "sha256": "e4e8feb0ba11db279829ac00ea12da9d2a2198e1f2c67dea2d05f0a8e8d87f10"
+    },
+    {
+      "condition": "gate-1.5",
+      "repair": "L34-T1468",
+      "target_gate": 1.5,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.07941408455371857,
+        "December": 0.834608793258667
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5436264872550964
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.29098230600357056
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.06492692977190018
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.02388528175652027
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.01448715478181839
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 10.927229881286621
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-1.5.npz",
+      "sha256": "e3b54de41b4c8db9dea7d2d3e88a5126d52fea70944978bfd2459f1f15b8e578"
+    },
+    {
+      "condition": "gate-2",
+      "repair": "L34-T1468",
+      "target_gate": 2.0,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.07887973356992006,
+        "December": 0.8289929926395416
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5399686098098755
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.28902438282966614
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.06449005752801895
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.023724565282464027
+        },
+        {
+          "id": 6702,
+          "token": " November",
+          "probability": 0.014389676041901112
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 17.910425186157227
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-2.npz",
+      "sha256": "989ea31c8cd94c912ab55c7423811fdbc7132684f8adce6fb9d96ffe48469c64"
+    },
+    {
+      "condition": "gate-3",
+      "repair": "L34-T1468",
+      "target_gate": 3.0,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.0703256856650114,
+        "December": 0.8207868933677673
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5574609637260437
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.26332592964172363
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.05875595286488533
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.024493126198649406
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.01683386228978634
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 31.862882614135742
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-3.npz",
+      "sha256": "1dbfcfe102ab725a8cf33eee69b8b780f8a154b77115df229aa24561c5b76f73"
+    },
+    {
+      "condition": "gate-4",
+      "repair": "L34-T1468",
+      "target_gate": 4.0,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.06928503420203924,
+        "December": 0.793496698141098
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5600380897521973
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.23345860838890076
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.05902757868170738
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.024606356397271156
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.024606356397271156
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 45.82754898071289
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-4.npz",
+      "sha256": "a3dd25f0b67a1611e4779cf2d4b119b13e2e8380b1a203fd326a86b736b2525a"
+    },
+    {
+      "condition": "gate-6",
+      "repair": "L34-T1468",
+      "target_gate": 6.0,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.06272428436204791,
+        "December": 0.7170047014951706
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.5241724252700806
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.19283227622509003
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.055247366428375244
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.04875562712550163
+        },
+        {
+          "id": 1622,
+          "token": " dec",
+          "probability": 0.02303052879869938
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 73.75142669677734
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-6.npz",
+      "sha256": "d527678e833ed6f9baf82513333b32a7f5202e93bb29f6bc4ff75365341f1af3"
+    },
+    {
+      "condition": "gate-8",
+      "repair": "L34-T1468",
+      "target_gate": 8.0,
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "first_token": " december",
+      "output_ids": [
+        89011,
+        13,
+        279,
+        4384,
+        87698,
+        2254,
+        374,
+        32862,
+        3536,
+        13,
+        279,
+        55666,
+        2254,
+        374,
+        83649,
+        13,
+        279,
+        42541,
+        2254,
+        374,
+        70619,
+        13,
+        279,
+        36377
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.05279769655317068,
+        "December": 0.6121069639921188
+      },
+      "top5": [
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.4474860429763794
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.16462092101573944
+        },
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.08811521530151367
+        },
+        {
+          "id": 84223,
+          "token": " november",
+          "probability": 0.0471646785736084
+        },
+        {
+          "id": 198,
+          "token": "\n",
+          "probability": 0.02227901667356491
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 101.6451644897461
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-8.npz",
+      "sha256": "8335a3f4716e5976aec89145cde53aea93bdb06f6fdf77e2410ace337aa696cd"
+    },
+    {
+      "condition": "gate-12",
+      "repair": "L34-T1468",
+      "target_gate": 12.0,
+      "response": " 11th month of the year, which is November. The 11th month of the year is November",
+      "first_token": " ",
+      "output_ids": [
+        220,
+        16,
+        16,
+        339,
+        2254,
+        315,
+        279,
+        1042,
+        11,
+        892,
+        374,
+        6702,
+        13,
+        576,
+        220,
+        16,
+        16,
+        339,
+        2254,
+        315,
+        279,
+        1042,
+        374,
+        6702
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.02533909131307155,
+        "December": 0.25972119718790054
+      },
+      "top5": [
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.2852764129638672
+        },
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.1960674226284027
+        },
+        {
+          "id": 6652,
+          "token": " December",
+          "probability": 0.06365377455949783
+        },
+        {
+          "id": 32671,
+          "token": " ______",
+          "probability": 0.03860796242952347
+        },
+        {
+          "id": 1304,
+          "token": " __",
+          "probability": 0.03860796242952347
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 157.50030517578125
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-12.npz",
+      "sha256": "6411f7176ddeb56f8ef93b73eb9daa75aae41a42ff3ee0494b2ed0c3a3a8a27b"
+    },
+    {
+      "condition": "gate-16",
+      "repair": "L34-T1468",
+      "target_gate": 16.0,
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "first_token": " ",
+      "output_ids": [
+        220,
+        16,
+        16,
+        339,
+        2254,
+        315,
+        279,
+        1042,
+        11,
+        892,
+        374,
+        6702,
+        13,
+        576,
+        220,
+        16,
+        16,
+        339,
+        2254,
+        374,
+        6702,
+        13,
+        2055,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.008455517265247181,
+        "December": 0.059801957570016384
+      },
+      "top5": [
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.49975067377090454
+        },
+        {
+          "id": 89011,
+          "token": " december",
+          "probability": 0.04648405313491821
+        },
+        {
+          "id": 1304,
+          "token": " __",
+          "probability": 0.04648405313491821
+        },
+        {
+          "id": 32671,
+          "token": " ______",
+          "probability": 0.041022032499313354
+        },
+        {
+          "id": 198,
+          "token": "\n",
+          "probability": 0.024881120771169662
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 213.3397674560547
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-16.npz",
+      "sha256": "b30615a349954f272d9fc12eb59f483d8b3af1f817d97ff2631936c75ec48185"
+    },
+    {
+      "condition": "gate-24",
+      "repair": "L34-T1468",
+      "target_gate": 24.0,
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "first_token": " ",
+      "output_ids": [
+        220,
+        16,
+        16,
+        339,
+        2254,
+        315,
+        279,
+        1042,
+        11,
+        892,
+        374,
+        6702,
+        13,
+        576,
+        220,
+        16,
+        16,
+        339,
+        2254,
+        374,
+        6702,
+        13,
+        2055,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.0004950100301357452,
+        "December": 0.001830694789532572
+      },
+      "top5": [
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.6725291609764099
+        },
+        {
+          "id": 458,
+          "token": " an",
+          "probability": 0.03348325192928314
+        },
+        {
+          "id": 1304,
+          "token": " __",
+          "probability": 0.029548868536949158
+        },
+        {
+          "id": 32671,
+          "token": " ______",
+          "probability": 0.029548868536949158
+        },
+        {
+          "id": 42344,
+          "token": " （",
+          "probability": 0.01792229525744915
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 324.9997253417969
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-24.npz",
+      "sha256": "3d682e1bad2e154d260b879dc990adfd4fdf0d1b40960b547041e4231c0ad945"
+    },
+    {
+      "condition": "gate-32",
+      "repair": "L34-T1468",
+      "target_gate": 32.0,
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "first_token": " ",
+      "output_ids": [
+        220,
+        16,
+        16,
+        339,
+        2254,
+        315,
+        279,
+        1042,
+        11,
+        892,
+        374,
+        6702,
+        13,
+        576,
+        220,
+        16,
+        16,
+        339,
+        2254,
+        374,
+        6702,
+        13,
+        2055,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 4.3679965187948255e-05,
+        "December": 0.00010733188173617236
+      },
+      "top5": [
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.6358157396316528
+        },
+        {
+          "id": 458,
+          "token": " an",
+          "probability": 0.11048819869756699
+        },
+        {
+          "id": 1304,
+          "token": " __",
+          "probability": 0.019199971109628677
+        },
+        {
+          "id": 32671,
+          "token": " ______",
+          "probability": 0.019199971109628677
+        },
+        {
+          "id": 42344,
+          "token": " （",
+          "probability": 0.013195933774113655
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 436.6322937011719
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-32.npz",
+      "sha256": "18b37e42a0ebe92aa5c832c2b71a0084028d3f70acca783f07b2fee0a68ca580"
+    },
+    {
+      "condition": "gate-48",
+      "repair": "L34-T1468",
+      "target_gate": 48.0,
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "first_token": " ",
+      "output_ids": [
+        220,
+        16,
+        16,
+        339,
+        2254,
+        315,
+        279,
+        1042,
+        11,
+        892,
+        374,
+        6702,
+        13,
+        576,
+        220,
+        16,
+        16,
+        339,
+        2254,
+        374,
+        6702,
+        13,
+        2055,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 8.275432819004891e-07,
+        "December": 1.4779768946482363e-06
+      },
+      "top5": [
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.4844205379486084
+        },
+        {
+          "id": 458,
+          "token": " an",
+          "probability": 0.22882407903671265
+        },
+        {
+          "id": 16,
+          "token": "1",
+          "probability": 0.03296523168683052
+        },
+        {
+          "id": 537,
+          "token": " not",
+          "probability": 0.018783023580908775
+        },
+        {
+          "id": 1152,
+          "token": " fe",
+          "probability": 0.008872471749782562
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 660.0364379882812
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-48.npz",
+      "sha256": "a87aba4a6d0c856176a39e76aafc654ebe16f2e855cccce28b3479b2887b8d1e"
+    },
+    {
+      "condition": "gate-64",
+      "repair": "L34-T1468",
+      "target_gate": 64.0,
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "first_token": " ",
+      "output_ids": [
+        220,
+        16,
+        16,
+        339,
+        2254,
+        315,
+        279,
+        1042,
+        11,
+        892,
+        374,
+        6702,
+        13,
+        576,
+        220,
+        16,
+        16,
+        339,
+        2254,
+        374,
+        6702,
+        13,
+        2055,
+        279
+      ],
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 4.7142280079626175e-08,
+        "December": 8.775894322354816e-08
+      },
+      "top5": [
+        {
+          "id": 220,
+          "token": " ",
+          "probability": 0.29118141531944275
+        },
+        {
+          "id": 458,
+          "token": " an",
+          "probability": 0.21303285658359528
+        },
+        {
+          "id": 16,
+          "token": "1",
+          "probability": 0.0736221894621849
+        },
+        {
+          "id": 537,
+          "token": " not",
+          "probability": 0.01543204952031374
+        },
+        {
+          "id": 104324,
+          "token": "展开",
+          "probability": 0.008792917244136333
+        }
+      ],
+      "probability_token_ids": {
+        "November": [
+          84223,
+          6702
+        ],
+        "December": [
+          89011,
+          6652
+        ]
+      },
+      "observed_gates": {
+        "L29-T2375": 1.1585536003112793,
+        "L34-T1468": 0.7175989151000977
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 883.4219360351562
+        }
+      ],
+      "generated_positions_edited": [],
+      "file": "gate-64.npz",
+      "sha256": "a66aec74b65049b61143ed97a32e9d36eaf270ab60efac6f2ef02d2b15d606d2"
+    }
+  ],
+  "runtime": {
+    "torch": "2.14.0+cu126",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "base_hashes_verified": true,
+    "weights_hashes_verified": true,
+    "attention": "eager",
+    "tf32": false
+  },
+  "baseline_checks": {
+    "native_reference_logits_exact": true,
+    "native_reference_logit_max_abs_diff": 0.0,
+    "off_reference_logits_exact": true,
+    "off_reference_logit_max_abs_diff": 0.0
+  },
+  "runtime_seconds": 48.31627096584998
+}

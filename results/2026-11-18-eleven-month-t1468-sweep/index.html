@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A scalar sweep of L34–T1468 on the eleventh-month prompt, comparing immediate probabilities with November mentions in full completions.">
+  <title>When does November return? · L34–T1468</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav aria-label="On this page">
+    <a href="#activation">Gate activation</a>
+    <a href="#examples">Activation examples</a>
+    <a href="#sweep">Scalar sweep</a>
+    <a href="#responses">Model responses</a>
+  </nav>
+
+  <header>
+    <h1>When does November return?</h1>
+    <p class="lede">With L29–T2375 off, increasing L34–T1468 made the model restate the ordinal and then name November at every tested scalar from 12 through 64.</p>
+    <p class="prompt"><span>Qwen3-4B completion prompt</span> <code>the eleventh month of the year<mark> is</mark></code></p>
+  </header>
+
+  <section id="activation" aria-labelledby="activation-title">
+    <h2 id="activation-title">T2375 ablation weakens T1468</h2>
+    <p>Both measurements are at the final <code> is</code> token. L34–T1468 stayed active after we removed L29–T2375’s contribution there.</p>
+    <dl class="measurements">
+      <div><dt>Native T1468 gate</dt><dd>1.290</dd></div>
+      <div><dt>With T2375 off</dt><dd>0.718</dd></div>
+      <div><dt>Change</dt><dd>−44.4%</dd></div>
+    </dl>
+  </section>
+
+  <section id="examples" aria-labelledby="examples-title">
+    <h2 id="examples-title">Where T1468 activates</h2>
+    <div class="examples">
+      <div class="description">
+        <p class="label">Dashboard description</p>
+        <h3>Article “An” Preceding Noun</h3>
+        <blockquote>The article "an" or "An" preceding a noun, often at the start of a sentence or list item.</blockquote>
+        <p>All 18 strongest and medium examples in the audit peak on <code>an</code> or <code>An</code>, including word fragments. Some windows also contain active tokens just before <code>11</code>.</p>
+        <a href="https://amsterdam.taild80f17.ts.net/layers/layer-34/features/1468.html">Original activation dashboard</a>
+      </div>
+      <div>
+        <h3>Examples just before <code>11</code></h3>
+        <p class="note">Highlight marks the active token. <code>·</code> represents a space.</p>
+        <table class="example-table">
+          <thead><tr><th scope="col">Saved text excerpt</th><th scope="col">Gate</th></tr></thead>
+          <tbody>
+            <tr><td><code>about an<mark aria-label="space">·</mark>11-year-old</code></td><td>4.438</td></tr>
+            <tr><td><code>rate is at<mark aria-label="space">·</mark>11.4 percent</code></td><td>0.617</td></tr>
+            <tr><td><code>dynasty in 1<mark>9</mark>11</code></td><td>0.602</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="sweep" aria-labelledby="sweep-title">
+    <h2 id="sweep-title">Immediate answer and full completion</h2>
+    <p>We kept T2375 off at the final <code> is</code>, then varied T1468’s scalar at that position while keeping its operator output, <code>UVx</code>, fixed to the T2375-off run. The dotted line marks the original ablated scalar, <strong>0.718</strong>.</p>
+    <div class="charts">
+      <figure>
+        <h3>First-token probability</h3>
+        <img src="next-token.svg" width="555" height="345" alt="November peaks at 8.83 percent at scalar 0.718. December falls steeply at high scalar values. Native November is 66.87 percent.">
+        <figcaption>November and December combine the probabilities of their leading-space uppercase and lowercase tokens.</figcaption>
+      </figure>
+      <figure>
+        <h3>Does the completion mention November?</h3>
+        <img src="november-mention.svg" width="555" height="345" alt="Eleven settings through scalar 8 have no November mention. All six tested settings from 12 through 64 contain November.">
+        <figcaption>Each dot is one greedy completion. A dot is 1 if the word <em>November</em> appears anywhere in its saved text, ignoring case, and 0 otherwise.</figcaption>
+      </figure>
+    </div>
+    <p class="note"><a href="t1468-comparison.png" download>Download both plots as one figure</a></p>
+  </section>
+
+  <section id="responses" aria-labelledby="responses-title">
+    <h2 id="responses-title">What the model says</h2>
+    <p>At scalar 12, the first generated token is a space. The first sentence then restates the ordinal and names November, even though immediate P(November) is just <strong>2.53%</strong>.</p>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Example model responses across scalar settings">
+      <table class="response-table">
+        <thead><tr><th scope="col">T1468 scalar</th><th scope="col">P(November) next</th><th scope="col">P(December) next</th><th scope="col">Beginning of generated completion</th><th scope="col">November mentioned?</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">0.718 <small>Baseline</small></th><td>8.83%</td><td>83.68%</td><td><code>december. the twelfth month is january.</code></td><td>No</td></tr>
+          <tr><th scope="row">1.290 <small>Native scalar</small></th><td>7.83%</td><td>84.12%</td><td><code>december. the twelfth month is january.</code></td><td>No</td></tr>
+          <tr><th scope="row">8</th><td>5.28%</td><td>61.21%</td><td><code>december. the twelfth month is january.</code></td><td>No</td></tr>
+          <tr><th scope="row">12</th><td>2.53%</td><td>25.97%</td><td><code>11th month of the year, which is November.</code></td><td class="yes">Yes</td></tr>
+          <tr><th scope="row">16</th><td>0.85%</td><td>5.98%</td><td><code>11th month of the year, which is November.</code></td><td class="yes">Yes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">The six November completions share the same opening sentence shown above. Each generation was capped at 24 new tokens.</p>
+  </section>
+  <footer>
+    <a href="probabilities.csv">All settings and complete saved responses (CSV)</a>
+    <a href="https://rakaar.github.io/qwen3-molt-exploration/results/2026-11-18-alphabet-t14/">Related alphabet T14 experiment</a>
+  </footer>
+</main>
+</body>
+</html>

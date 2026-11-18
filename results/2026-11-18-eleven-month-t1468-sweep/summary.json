@@ -1,0 +1,435 @@
+{
+  "prompt": "the eleventh month of the year is",
+  "position": 7,
+  "edited_input_token": " is",
+  "native": {
+    "condition": "native",
+    "target_gate": 1.2899932861328125,
+    "first_token": " november",
+    "response": " november. the twelfth month is december. the first month is january. the second month is february. the",
+    "stop_reason": "token_limit",
+    "probabilities": {
+      "November": 0.6686863750219345,
+      "December": 0.24365518987178802
+    },
+    "edited_sites": []
+  },
+  "sweep": [
+    {
+      "condition": "gate-0.25",
+      "target_gate": 0.25,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.0795899648219347,
+        "December": 0.8545306026935577
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 6.521119117736816
+        }
+      ]
+    },
+    {
+      "condition": "gate-0.5",
+      "target_gate": 0.5,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08260920830070972,
+        "December": 0.8476002812385559
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 3.0487911701202393
+        }
+      ]
+    },
+    {
+      "condition": "T2375-off",
+      "target_gate": 0.7175989151000977,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08831333927810192,
+        "December": 0.8367752730846405
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        }
+      ]
+    },
+    {
+      "condition": "gate-1",
+      "target_gate": 1.0,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.08599956333637238,
+        "December": 0.8346445858478546
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 3.947934150695801
+        }
+      ]
+    },
+    {
+      "condition": "native-scalar",
+      "target_gate": 1.2899932861328125,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.07834631763398647,
+        "December": 0.8411779701709747
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 7.998230934143066
+        }
+      ]
+    },
+    {
+      "condition": "gate-1.5",
+      "target_gate": 1.5,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.07941408455371857,
+        "December": 0.834608793258667
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 10.927229881286621
+        }
+      ]
+    },
+    {
+      "condition": "gate-2",
+      "target_gate": 2.0,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.07887973356992006,
+        "December": 0.8289929926395416
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 17.910425186157227
+        }
+      ]
+    },
+    {
+      "condition": "gate-3",
+      "target_gate": 3.0,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.0703256856650114,
+        "December": 0.8207868933677673
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 31.862882614135742
+        }
+      ]
+    },
+    {
+      "condition": "gate-4",
+      "target_gate": 4.0,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.06928503420203924,
+        "December": 0.793496698141098
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 45.82754898071289
+        }
+      ]
+    },
+    {
+      "condition": "gate-6",
+      "target_gate": 6.0,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.06272428436204791,
+        "December": 0.7170047014951706
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 73.75142669677734
+        }
+      ]
+    },
+    {
+      "condition": "gate-8",
+      "target_gate": 8.0,
+      "first_token": " december",
+      "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.05279769655317068,
+        "December": 0.6121069639921188
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 101.6451644897461
+        }
+      ]
+    },
+    {
+      "condition": "gate-12",
+      "target_gate": 12.0,
+      "first_token": " ",
+      "response": " 11th month of the year, which is November. The 11th month of the year is November",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.02533909131307155,
+        "December": 0.25972119718790054
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 157.50030517578125
+        }
+      ]
+    },
+    {
+      "condition": "gate-16",
+      "target_gate": 16.0,
+      "first_token": " ",
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.008455517265247181,
+        "December": 0.059801957570016384
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 213.3397674560547
+        }
+      ]
+    },
+    {
+      "condition": "gate-24",
+      "target_gate": 24.0,
+      "first_token": " ",
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 0.0004950100301357452,
+        "December": 0.001830694789532572
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 324.9997253417969
+        }
+      ]
+    },
+    {
+      "condition": "gate-32",
+      "target_gate": 32.0,
+      "first_token": " ",
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 4.3679965187948255e-05,
+        "December": 0.00010733188173617236
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 436.6322937011719
+        }
+      ]
+    },
+    {
+      "condition": "gate-48",
+      "target_gate": 48.0,
+      "first_token": " ",
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 8.275432819004891e-07,
+        "December": 1.4779768946482363e-06
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 660.0364379882812
+        }
+      ]
+    },
+    {
+      "condition": "gate-64",
+      "target_gate": 64.0,
+      "first_token": " ",
+      "response": " 11th month of the year, which is November. The 11th month is November. So the",
+      "stop_reason": "token_limit",
+      "probabilities": {
+        "November": 4.7142280079626175e-08,
+        "December": 8.775894322354816e-08
+      },
+      "edited_sites": [
+        {
+          "feature": "L29-T2375",
+          "token_position": 7,
+          "delta_l2": 17.35955047607422
+        },
+        {
+          "feature": "L34-T1468",
+          "token_position": 7,
+          "delta_l2": 883.4219360351562
+        }
+      ]
+    }
+  ],
+  "natural_scalar_after_t2375_off": 0.7175989151000977,
+  "best_measured_november": {
+    "condition": "T2375-off",
+    "target_gate": 0.7175989151000977,
+    "first_token": " december",
+    "response": " december. the twelfth month is january. the tenth month is september. the ninth month is august. the eighth",
+    "stop_reason": "token_limit",
+    "probabilities": {
+      "November": 0.08831333927810192,
+      "December": 0.8367752730846405
+    },
+    "edited_sites": [
+      {
+        "feature": "L29-T2375",
+        "token_position": 7,
+        "delta_l2": 17.35955047607422
+      }
+    ]
+  },
+  "november_first_at": [],
+  "probability_definition": "First-token probabilities summed over leading-space uppercase and lowercase variants.",
+  "observed_gates_checked": 40,
+  "exact_bf16_edit_arithmetic": true,
+  "month_repair_baselines_and_native_scalar_reproduced_exactly": true,
+  "reference_checks": {
+    "native_reference_logits_exact": true,
+    "native_reference_logit_max_abs_diff": 0.0,
+    "off_reference_logits_exact": true,
+    "off_reference_logit_max_abs_diff": 0.0
+  }
+}
