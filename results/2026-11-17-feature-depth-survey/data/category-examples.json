@@ -1,0 +1,122 @@
+[
+  {
+    "group": "structural",
+    "title": "Structural",
+    "categories": "S + G",
+    "examples": [
+      {
+        "sample_id": "Q01108",
+        "title": "Newlines between text sections",
+        "why_this_category": "The defining cue is a newline separating paragraphs, list items or dialogue turns.",
+        "source": "molt",
+        "layer": 0,
+        "feature": 1609,
+        "category": "S",
+        "description": "The gate activates on newline tokens that separate distinct sections of text, such as paragraphs, list items, or dialogue turns, often following punctuation or specific formatting markers.",
+        "url": "https://amsterdam.taild80f17.ts.net/layers/layer-0/autointerp-layer/features/1609.html"
+      },
+      {
+        "sample_id": "Q00741",
+        "title": "Punctuation at text boundaries",
+        "why_this_category": "Dashes, parentheses and periods mark boundaries, including news-dateline formatting.",
+        "source": "molt",
+        "layer": 8,
+        "feature": 351,
+        "category": "S",
+        "description": "The gate activates on punctuation and symbols that delimit or separate text segments, such as dashes, parentheses, and periods. It frequently fires on the specific formatting of news datelines (e.g., \"CITY, State (AP) —\") and citation markers, indicating a sensitivity to structural boundaries and source attribution syntax rather than semantic content.",
+        "url": "https://amsterdam.taild80f17.ts.net/layers/layer-8/autointerp-layer/features/351.html"
+      },
+      {
+        "sample_id": "R01143",
+        "title": "Possessive pronouns",
+        "why_this_category": "A grammatical class such as possessive pronouns belongs to syntax, rather than a topic.",
+        "source": "transcoder",
+        "layer": 8,
+        "feature": 98940,
+        "category": "G",
+        "description": "possessive pronouns",
+        "url": "https://www.neuronpedia.org/qwen3-4b/8-transcoder-hp/98940"
+      }
+    ]
+  },
+  {
+    "group": "content",
+    "title": "Semantic content / topics",
+    "categories": "C",
+    "examples": [
+      {
+        "sample_id": "Q01383",
+        "title": "Animals and wildlife",
+        "why_this_category": "The description groups animals and biological entities by their subject matter.",
+        "source": "molt",
+        "layer": 10,
+        "feature": 48,
+        "category": "C",
+        "description": "The gate activates on tokens related to animals, wildlife, or biological entities, particularly when discussing their adaptations, behaviors, or ecological roles.",
+        "url": "https://amsterdam.taild80f17.ts.net/layers/layer-10/autointerp-layer/features/48.html"
+      },
+      {
+        "sample_id": "Q00457",
+        "title": "Culinary ingredients",
+        "why_this_category": "Wine, chicken, shrimp and lemon form a food-ingredient content class.",
+        "source": "molt",
+        "layer": 11,
+        "feature": 629,
+        "category": "C",
+        "description": "The gate activates on tokens representing specific food ingredients, beverages, or culinary items, such as wine, chicken, apple cider, shrimp, and lemon, often appearing in recipe lists or cooking instructions.",
+        "url": "https://amsterdam.taild80f17.ts.net/layers/layer-11/autointerp-layer/features/629.html"
+      },
+      {
+        "sample_id": "R01304",
+        "title": "Cities",
+        "why_this_category": "The label names a class of geographic entities; this is a semantic topic.",
+        "source": "transcoder",
+        "layer": 1,
+        "feature": 109622,
+        "category": "C",
+        "description": "cities",
+        "url": "https://www.neuronpedia.org/qwen3-4b/1-transcoder-hp/109622"
+      }
+    ]
+  },
+  {
+    "group": "abstract",
+    "title": "Abstract / relational / pragmatic",
+    "categories": "A",
+    "examples": [
+      {
+        "sample_id": "Q01192",
+        "title": "Task completion and success",
+        "why_this_category": "Completion and successful outcomes describe an abstract evaluation of a process.",
+        "source": "molt",
+        "layer": 0,
+        "feature": 723,
+        "category": "A",
+        "description": "The gate activates on tokens indicating the successful conclusion, completion, or positive outcome of a task, project, or process, such as \"completed,\" \"success,\" \"successful,\" or \"clients.\"",
+        "url": "https://amsterdam.taild80f17.ts.net/layers/layer-0/autointerp-layer/features/723.html"
+      },
+      {
+        "sample_id": "Q00100",
+        "title": "Expressing opinions and beliefs",
+        "why_this_category": "The description concerns personal beliefs and opinions used to introduce a critique.",
+        "source": "molt",
+        "layer": 22,
+        "feature": 2003,
+        "category": "A",
+        "description": "The gate activates on verbs expressing personal opinion, belief, or feeling (e.g., \"think,\" \"believe,\" \"feel\"), particularly when used by the user to introduce a critique, question, or subjective assessment following a compliment or statement.",
+        "url": "https://amsterdam.taild80f17.ts.net/layers/layer-22/autointerp-layer/features/2003.html"
+      },
+      {
+        "sample_id": "R00525",
+        "title": "Empathy and compassion",
+        "why_this_category": "The label names emotional and social concepts, so the rubric assigns it to A.",
+        "source": "transcoder",
+        "layer": 5,
+        "feature": 160381,
+        "category": "A",
+        "description": "Empathy/compassion",
+        "url": "https://www.neuronpedia.org/qwen3-4b/5-transcoder-hp/160381"
+      }
+    ]
+  }
+]
