@@ -1,0 +1,14 @@
+{
+  "time_utc": "2026-11-21T15:19:55.818742+00:00",
+  "cases": 179,
+  "gate_zero_controls": 22,
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "weights_sha256": "8ae225a36fcfd920adf9cd06aacfbcc53011343b0fbb4e8880cc7ff97111e57c",
+  "input_sha256": "e4999389c31c988323582cba49a268043ba35afcfee5edeb455e1982414fff04",
+  "paired_sha256": "8062d030f8cdd9b5272611f9c102db9cc70d07b6e568a5fa1a026fc5f5bee0d6",
+  "torch": "2.9.1+cu126",
+  "transformers": "4.57.6",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "scope": "native MLP output minus the learned transform contribution at the water position only; subsequent tokens use the resulting KV cache",
+  "score": "Probability of the observed or intact-greedy token path through its first word, including any leading punctuation; no terminal boundary token, no marginalization over other tokenizations."
+}

@@ -1,0 +1,164 @@
+{
+  "all": {
+    "actual": {
+      "n": 179,
+      "conversations": 141,
+      "intact_mean": 0.6589517984402049,
+      "off_mean": 0.6585507765844085,
+      "mean_delta_pp": -0.040102185579642076,
+      "median_delta_pp": 0.0,
+      "mean_delta_pp_ci95": [
+        -0.31807356363087935,
+        0.25679796365042273
+      ],
+      "off_lower": 89,
+      "off_higher": 65,
+      "exact_tie": 25,
+      "abs_change_ge_1pp": 40,
+      "largest_decrease": {
+        "id": 167,
+        "delta_pp": -7.572276551036583
+      },
+      "largest_increase": {
+        "id": 885,
+        "delta_pp": 13.05664168852833
+      }
+    },
+    "predicted": {
+      "n": 179,
+      "conversations": 141,
+      "intact_mean": 0.8375470940090071,
+      "off_mean": 0.8335434440491255,
+      "mean_delta_pp": -0.4003649959881538,
+      "median_delta_pp": 0.0,
+      "mean_delta_pp_ci95": [
+        -0.880428213000178,
+        0.03719116718553432
+      ],
+      "off_lower": 84,
+      "off_higher": 70,
+      "exact_tie": 25,
+      "abs_change_ge_1pp": 52,
+      "largest_decrease": {
+        "id": 885,
+        "delta_pp": -21.037758475534712
+      },
+      "largest_increase": {
+        "id": 814,
+        "delta_pp": 8.258784349798443
+      }
+    }
+  },
+  "active_only": {
+    "actual": {
+      "n": 157,
+      "conversations": 123,
+      "intact_mean": 0.6862508172563521,
+      "off_mean": 0.6857936012551574,
+      "mean_delta_pp": -0.04572160011946456,
+      "median_delta_pp": -0.00042914073238309314,
+      "mean_delta_pp_ci95": [
+        -0.36592421326996993,
+        0.3037964146860361
+      ],
+      "off_lower": 89,
+      "off_higher": 65,
+      "exact_tie": 3,
+      "abs_change_ge_1pp": 40,
+      "largest_decrease": {
+        "id": 167,
+        "delta_pp": -7.572276551036583
+      },
+      "largest_increase": {
+        "id": 885,
+        "delta_pp": 13.05664168852833
+      }
+    },
+    "predicted": {
+      "n": 157,
+      "conversations": 123,
+      "intact_mean": 0.8548611362792424,
+      "off_mean": 0.8502964653058742,
+      "mean_delta_pp": -0.45646709733681223,
+      "median_delta_pp": -0.0003695331127095969,
+      "mean_delta_pp_ci95": [
+        -1.0161062616779482,
+        0.037371514718908365
+      ],
+      "off_lower": 84,
+      "off_higher": 70,
+      "exact_tie": 3,
+      "abs_change_ge_1pp": 52,
+      "largest_decrease": {
+        "id": 885,
+        "delta_pp": -21.037758475534712
+      },
+      "largest_increase": {
+        "id": 814,
+        "delta_pp": 8.258784349798443
+      }
+    }
+  },
+  "strict_adjacent": {
+    "actual": {
+      "n": 175,
+      "conversations": 137,
+      "intact_mean": 0.6671269368477694,
+      "off_mean": 0.666969228886796,
+      "mean_delta_pp": -0.01577079609733557,
+      "median_delta_pp": 0.0,
+      "mean_delta_pp_ci95": [
+        -0.30471755015326357,
+        0.2954001313293019
+      ],
+      "off_lower": 87,
+      "off_higher": 63,
+      "exact_tie": 25,
+      "abs_change_ge_1pp": 38,
+      "largest_decrease": {
+        "id": 167,
+        "delta_pp": -7.572276551036583
+      },
+      "largest_increase": {
+        "id": 885,
+        "delta_pp": 13.05664168852833
+      }
+    },
+    "predicted": {
+      "n": 175,
+      "conversations": 137,
+      "intact_mean": 0.8411917716152835,
+      "off_mean": 0.8377382208463593,
+      "mean_delta_pp": -0.3453550768924232,
+      "median_delta_pp": 0.0,
+      "mean_delta_pp_ci95": [
+        -0.7992963174738902,
+        0.06578932383811799
+      ],
+      "off_lower": 82,
+      "off_higher": 68,
+      "exact_tie": 25,
+      "abs_change_ge_1pp": 49,
+      "largest_decrease": {
+        "id": 885,
+        "delta_pp": -21.037758475534712
+      },
+      "largest_increase": {
+        "id": 814,
+        "delta_pp": 8.258784349798443
+      }
+    }
+  },
+  "n": 179,
+  "conversations": 141,
+  "zero_controls": 22,
+  "first_top_changed": 5,
+  "greedy_word_changed": 5,
+  "actual_matches_intact_greedy": 123,
+  "pred_nonwords": 0,
+  "pred_multitoken": 18,
+  "actual_multitoken": 17,
+  "bootstrap": "10,000 conversation-cluster bootstrap resamples. Delta is off minus intact in percentage points.",
+  "first_top_flips_with_ties": 3,
+  "first_top_flips_unique_both": 2
+}

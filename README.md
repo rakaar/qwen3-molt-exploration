@@ -4,6 +4,10 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 **[Explore the four selected results](https://rakaar.github.io/qwen3-molt-exploration/)** — large → cold, spider → ant / eight → six, passage-grounded abstention, and refusal despite authorization. Each panel links to its full report. [Earlier research notebook](exploration.html).
 
+## When does T2375 fire on “water”?
+
+In a random sample of 1,000 UltraChat occurrences, T2375 fired on 157/179 noun-modifier cases and 78/497 standalone nouns. Removing its contribution at “water” changed the recorded continuation’s probability by −0.04 percentage points on average across the 179 modifier cases. The report includes all observations, gate distributions, and paired probability plots. [Open the interactive report](https://rakaar.github.io/qwen3-molt-exploration/sites/t2375-water-cards/) · [Analysis and data](results/2026-11-21-water-modifier-ablation/) · [Website source](sites/t2375-water-cards/)
+
 ## New findings: 3 November 2026
 
 - [Eleventh-answer MOLTs and T1181 controls](results/2026-11-03-eleventh-molt/) — token-level input gate maps, three selected 11→12 ablations, cross-domain/language cosine comparisons and negative controls, scalar/operator transfer sweeps, and the four-condition T1181/T2375 month experiment. Joint removal restores November (46.61%) over December (40.80%). Exact prompts, full responses, probabilities and source hashes are included. [Site source](sites/eleventh-molt/README.md).

@@ -1,0 +1,27 @@
+{
+  "seed": 2026112102,
+  "population": 5912,
+  "eligible_conversations": 1935,
+  "sample_size": 1000,
+  "sampled_conversations": 689,
+  "excluded_original_rows": 11345,
+  "excluded_previous_random_conversations": 199,
+  "corpus": {
+    "collected_at_utc": "2026-11-09T20:07:12.110219+00:00",
+    "dataset": "HuggingFaceH4/ultrachat_200k",
+    "revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+    "split": "test_sft",
+    "dataset_url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k/resolve/8049631c405ae6576f93f445c6b8166f76f5505a/data/test_sft-00000-of-00001-f7dfac4afe5b93f4.parquet",
+    "dataset_file": "test_sft-00000-of-00001-f7dfac4afe5b93f4.parquet",
+    "dataset_bytes": 81176553,
+    "dataset_sha256": "c18fd6e77395577652bdefbc5a87044ea799e989451ecfca5c6cf977ae5c6f70",
+    "tokenizer_config_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/tokenizer_config.json",
+    "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "tokenizer_file": "comparisons/2026-11-02-eleven-contribution-readout/tokenizer.json",
+    "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "note": "Current pinned public corpus; exact token matching to saved evaluation windows is required before classifying any continuation."
+  },
+  "frame": "All case-insensitive ASCII water occurrences with final r in the first 1024 rendered tokens. Includes compounds, proper names, hyphenated forms and inflections. Gate is read at the token containing the final r, which can already contain more letters. Uniform occurrence sampling without replacement.",
+  "sample_sha256": "55cacce51aa73a3efcf802728f38b56f387c5335f80823a0d744eae7b6881fa0",
+  "time": "2026-11-21T14:37:54.923425+00:00"
+}

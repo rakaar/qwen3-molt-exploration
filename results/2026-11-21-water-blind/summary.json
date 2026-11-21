@@ -1,0 +1,46 @@
+{
+  "modifier": {
+    "n": 73,
+    "conversations": 60,
+    "fires": 64,
+    "rate": 0.8767123287671232,
+    "mean": 1.441652187745865,
+    "median": 1.5006215572357178,
+    "mean_when_firing": 1.6443845266476274,
+    "median_when_firing": 1.6298528909683228
+  },
+  "other": {
+    "n": 167,
+    "conversations": 152,
+    "fires": 33,
+    "rate": 0.19760479041916168,
+    "mean": 0.19561037367689396,
+    "median": 0.0,
+    "mean_when_firing": 0.9899070425467058,
+    "median_when_firing": 0.9269214272499084
+  },
+  "differences": {
+    "rate": {
+      "estimate": 0.6791075383479616,
+      "lower": 0.5738089709568038,
+      "upper": 0.7750367953775683
+    },
+    "mean": {
+      "estimate": 1.246041814068971,
+      "lower": 1.0511954586876744,
+      "upper": 1.4282139399643519
+    },
+    "mean_when_firing": {
+      "estimate": 0.6544774841009215,
+      "lower": 0.47856070567095144,
+      "upper": 0.8172868614838904
+    }
+  },
+  "bootstrap": {
+    "unit": "conversation",
+    "resamples": 10000,
+    "seed": 20261121,
+    "interval": "95% percentile",
+    "conversations": 199
+  }
+}
