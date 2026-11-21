@@ -1,0 +1,8 @@
+{
+  "cases": 310,
+  "scope": "All positive frozen gates among the 1,000 original occurrences; token containing the final r of water.",
+  "intervention": "Independently subtract one natural transform contribution at the last position from the layer 29 MLP output. All earlier tokens and all other transforms are native.",
+  "control": "Among the other strictly active layer 29 transforms on the identical intact prefix, select the closest gate value in absolute units. Break exact ties by lowest transform ID. Record an unmatched case if none are active. Select before comparing any logits.",
+  "metric": "Forward KL(intact || one transform off), FP64 log-softmax across the entire final output vocabulary. Only the next token after the indexed token.",
+  "case_sha256": "e2a8366513606c6d0da67121c139fd103e900c72c281320edd78c0640570cded"
+}

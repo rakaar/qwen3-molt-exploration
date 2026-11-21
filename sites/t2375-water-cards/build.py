@@ -2,6 +2,7 @@
 import csv
 import json
 import re
+import shutil
 from dataclasses import dataclass
 from decimal import Decimal, ROUND_HALF_UP
 from html import escape
@@ -243,7 +244,6 @@ def ablation_table(rows):
             + '</tr></thead><tbody>' + ''.join(entries) + '</tbody></table></div>')
 
 def ablation_section():
-    import shutil
     import xml.etree.ElementTree as ET
 
     rows = read_json(ABLATION/'paired.json')
@@ -322,6 +322,107 @@ def ablation_section():
             disclosure('Inspect all 179 paired predictions',method+ablation_table(rows))+'</section>')
 
 
+def kl_tail_comparison(folder):
+    tails = read_json(folder / 'tails.json')
+    with (folder / 'paired.csv').open() as stream:
+        measured = {r['id']: r for r in csv.DictReader(stream)}
+    with (ABLATION / 'cases.csv').open() as stream:
+        predictions = {r['id']: r for r in csv.DictReader(stream)}
+
+    def fraction(k, n):
+        return f'{k}/{n} ({k/n:.0%})'
+
+    cards = []
+    for band, threshold, ident, prefix in [
+        ('low', 'Below 0.0001 nats', '24', 'Turn off the water'),
+        ('high', 'At least 0.01 nats', '885', 'Sydney’s water'),
+    ]:
+        group = tails['target'][band]
+        n = group['n']
+        pred = predictions[ident]
+        case = measured[ident]
+        assert case['conversation'] == pred['conversation'] and case['position'] == pred['position']
+        tokens = [('supply', 'actual_first_on', 'actual_first_off')]
+        assert pred['actual_sequence'].strip() == 'supply'
+        if pred['on_top_token'] != pred['actual_sequence']:
+            tokens.append((pred['on_top_token'].strip(), 'on_top_first_on', 'on_top_first_off'))
+        probs = ''.join(f'<tr><th scope="row">{escape(token)}</th><td>{float(pred[on]):.2%}</td>'
+                        f'<td>{float(pred[off]):.2%}</td></tr>' for token, on, off in tokens)
+        cards.append(
+            f'<article><h4>{band.capitalize()} KL <span>{threshold}</span></h4>'
+            f'<p class="tail-size"><b>{n} / {tails["total"]}</b> occurrences ({n/tails["total"]:.1%})</p>'
+            '<dl><div><dt>Intact model correctly predicted the next token</dt>'
+            f'<dd>{fraction(group["correct"], n)}</dd></div>'
+            '<div><dt>The same two tokens occurred consecutively, in this order, earlier in the conversation</dt>'
+            f'<dd>{fraction(group["repeated"], n)}</dd></div>'
+            f'<div><dt>Median T2375 gate</dt><dd>{group["median_gate"]:.2f}</dd></div></dl>'
+            f'<h5>“{prefix}”</h5><p class="tail-context">Recorded next token <b>supply</b>'
+            f' · KL {float(case["target_kl"]):.7f} nats</p>'
+            f'<table aria-label="Next-token probabilities after {prefix}"><thead><tr>'
+            f'<th scope="col">Next token</th><th scope="col">T2375 on</th><th scope="col">T2375 off</th>'
+            f'</tr></thead><tbody>{probs}</tbody></table></article>'
+        )
+    low, high = tails['control']['low'], tails['control']['high']
+    middle = tails['total'] - sum(g['n'] for g in tails['target'].values())
+    return (
+        '<div id="kl-high-low" class="kl-tails"><h3>When did switching off T2375 change the prediction most?</h3>'
+        '<p>The intact model predicted the recorded next token more often in low-KL cases. '
+        f'The cards compare the two ends of the distribution. The middle range contains {middle} occurrences.</p>'
+        '<div class="tail-grid">' + ''.join(cards) + '</div>'
+        '<p>The matched controls showed a similar pattern. The intact model predicted the recorded token in '
+        f'{fraction(low["correct"], low["n"])} low-control-KL cases and {fraction(high["correct"], high["n"])} '
+        'high-control-KL cases.</p></div>'
+    )
+
+
+def kl_section():
+    folder = RESULTS / '2026-11-21-water-active-kl-control'
+    if not (folder / 'summary.json').is_file():
+        return ''
+    summary = read_json(folder / 'summary.json')
+    target, control = summary['target'], summary['control']
+    assets = SITE / 'kl'
+    assets.mkdir(exist_ok=True)
+    for name in ('active-control-kl.svg', 'paired.csv'):
+        shutil.copyfile(folder / name, assets / name)
+    n = target['n']
+    m = control['n']
+    coverage = (f'Every occurrence has one matched control.' if m == n else
+                f'{m} occurrences had another active layer-29 MOLT and supplied a control.')
+    control_larger = m - summary['target_larger'] - summary['ties']
+    rows = ''.join(
+        f'<tr><th scope="row">{label}</th><td>{values["n"]}</td>'
+        f'<td>{values["median"]:.5f}</td><td>{values["mean"]:.5f}</td></tr>'
+        for label, values in [('T2375 off', target), ('Active control off', control)]
+    )
+    return (
+        '<section id="modifier-kl" class="ablation"><div class="head">'
+        '<h2>How much does switching off one active MOLT change the prediction after “water”?</h2>'
+        f'<p>T2375 fired in {n} of the 1,000 sampled occurrences. Each occurrence contributes one green observation. '
+        'We switched off T2375 only at the indexed token and compared the model’s final next-token probabilities with the intact run. '
+        'For the orange observations, we switched off a different MOLT that fired at the same layer on the same token, leaving T2375 intact. '
+        f'{coverage}</p></div>'
+        '<figure class="ablation-figure"><img src="kl/active-control-kl.svg" '
+        'style="display:block;margin:auto;width:100%;max-width:880px;height:auto" '
+        'alt="Two distributions of immediate next-token KL divergence, grouped into five ranges from below 0.0001 to 0.1 nats or higher.">'
+        '<figcaption>Read left to right for larger changes in prediction. Each bar counts occurrences in that KL range. '
+        'Zero means the ablated and intact runs predicted identical probabilities for every token. '
+        'A value on a bin boundary is counted in the bin to its right.</figcaption></figure>'
+        + kl_tail_comparison(folder) +
+        '<div class="scroll paired-stats"><table><thead><tr><th>Ablation at “water”</th><th>Occurrences</th>'
+        '<th>Median KL (nats)</th><th>Mean KL (nats)</th></tr></thead><tbody>'
+        + rows + '</tbody></table></div>'
+        f'<p class="note">Switching off the matched control changed the prediction more in <b>{control_larger} of {m} paired occurrences</b> '
+        f'({control_larger/m:.1%}).</p>'
+        '<p class="method">We chose the other active layer-29 MOLT whose gate was closest to T2375’s gate before comparing predictions. '
+        f'This selected {summary["distinct_controls"]} distinct control MOLTs. Both comparisons use KL(intact ‖ ablated) over the whole output vocabulary. '
+        'The sample includes joined and inflected words. In those examples the indexed token is the one containing the final “r” of “water”, '
+        'and the prediction is for the token immediately after it.</p>'
+        '<p class="plot-links"><a href="kl/paired.csv" download>Download occurrence-level KL and control IDs (CSV)</a>'
+        '<a href="kl/active-control-kl.svg">Open full-size figure</a></p></section>'
+    )
+
+
 def build():
     initial,initial_table = initial_section()
     pilot,pilot_table = pilot_section()
@@ -331,7 +432,7 @@ def build():
     if (EXTENDED/'summary.json').exists():
         large, large_table, broad_methods = extended_section()
         followup = ablation_section() if (ABLATION/'scatter.svg').is_file() and (ABLATION/'summary.json').is_file() and (ABLATION/'cases.csv').is_file() else ''
-        body = large + followup + initial + pilot
+        body = large + followup + kl_section() + initial + pilot
         notes = large_table + initial_table + pilot_table + broad_methods + methods
     page='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>When does T2375 fire on water?</title><style>'''+(SITE/'cards.css').read_text()+'''</style></head><body><main><header><h1>When does T2375 fire on “water”?</h1><span>Qwen3-4B &nbsp;·&nbsp; Layer 29</span></header><p class="legend">Highlighted tokens carry the gate values beside each excerpt. Histogram heights show the percentage of cases in each card. The gray bar counts exact zeros. Green bars cover positive gates in steps of 0.5, and the numbers above the bars are counts.</p>'''+body+'<div class="notes">'+notes+'</div></main></body></html>'
     tmp=SITE/'index.html.tmp'

@@ -1,0 +1,15 @@
+{
+  "kl_direction": "KL(intact || off)",
+  "units": "nats",
+  "horizon": 32,
+  "source": "Original UltraChat continuation; stop before next chat special token. Prefix includes water at offset 0; offset k includes k following recorded tokens. Both arms see identical token IDs.",
+  "feature": "L29-T2375",
+  "intervention": "Subtract naturally gated transform from native MLP output only at water. Preserve new KV cache and run all later positions without any additional edits.",
+  "cases": 179,
+  "conversations": 141,
+  "gate_zero": 22,
+  "primary": "mean per-case forward KL at each offset, including zero gates; 95% pointwise percentile bands by resampling conversations; median and raw per-case curves; complete-window and active-only sensitivities",
+  "case_sha256": "d07c63d4c290221c2bde3068af8bef4cafd28d99467f908da6b15a47c59cb966",
+  "source_cases_sha256": "e4999389c31c988323582cba49a268043ba35afcfee5edeb455e1982414fff04",
+  "previous_pairs_sha256": "8062d030f8cdd9b5272611f9c102db9cc70d07b6e568a5fa1a026fc5f5bee0d6"
+}

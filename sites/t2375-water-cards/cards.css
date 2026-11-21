@@ -68,3 +68,19 @@
 .paired-stats td { white-space:nowrap; }
 @media(max-width:760px) { .plot-scroll svg { min-width:710px; } }
 .ablation-example { max-width:90ch; margin:10px 0; padding:8px 12px; border-left:3px solid #318778; background:#e8f2ef; color:#294a51; font-size:15px; }
+.kl-tails { max-width:1120px; margin:18px 0; }
+.kl-tails > p,.tail-context { color:#435e65; font-size:14px; margin:5px 0; }
+.tail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:10px 0; }
+.tail-grid h4 { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin:0; font-size:20px; }
+.tail-grid h4 span { font-size:14px; font-weight:500; color:#476068; }
+.tail-size { margin:6px 0; color:#34555a; font-size:15px; }
+.tail-size b { font-size:21px; color:#12574f; }
+.tail-grid dl { margin:8px 0 12px; font-size:14px; }
+.tail-grid dl div { display:grid; grid-template-columns:1fr auto; gap:12px; border-top:1px solid #dfebeb; padding:5px 0; }
+.tail-grid dd,.tail-grid td { font-variant-numeric:tabular-nums; }
+.tail-grid dd { margin:0; font-weight:650; }
+.tail-grid h5 { font-size:17px; margin:0; }
+.tail-grid th,.tail-grid td { position:static; padding:5px 9px; }
+.tail-grid tbody th { font-weight:500; background:white; }
+.tail-grid th:not(:first-child),.tail-grid td { text-align:right; }
+@media(max-width:680px) { .tail-grid { grid-template-columns:1fr; } }

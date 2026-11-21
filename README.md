@@ -6,7 +6,7 @@ Results, figures, and code from exploratory Qwen3-4B experiments. The original 2
 
 ## When does T2375 fire on “water”?
 
-In a random sample of 1,000 UltraChat occurrences, T2375 fired on 157/179 noun-modifier cases and 78/497 standalone nouns. Removing its contribution at “water” changed the recorded continuation’s probability by −0.04 percentage points on average across the 179 modifier cases. The report includes all observations, gate distributions, and paired probability plots. [Open the interactive report](https://rakaar.github.io/qwen3-molt-exploration/sites/t2375-water-cards/) · [Analysis and data](results/2026-11-21-water-modifier-ablation/) · [Website source](sites/t2375-water-cards/)
+In a random sample of 1,000 UltraChat occurrences, T2375 fired on 157/179 noun-modifier cases and 78/497 standalone nouns. Removing its contribution at “water” changed the recorded continuation’s probability by −0.04 percentage points on average across the 179 modifier cases. Across all 310 firing occurrences, the matched active control changed the next-token distribution more than T2375 in 206 cases. [Paired KL measurements](results/2026-11-21-water-active-kl-control/) show the full comparison. [Open the interactive report](https://rakaar.github.io/qwen3-molt-exploration/sites/t2375-water-cards/) · [Analysis and data](results/2026-11-21-water-modifier-ablation/) · [Website source](sites/t2375-water-cards/)
 
 ## New findings: 3 November 2026
 
